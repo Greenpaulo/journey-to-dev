@@ -14,7 +14,7 @@ class RoadmapCourseController extends Controller
    */
   public function index()
   {
-    return RoadmapCourse::all();
+    return RoadmapCourse::where('user_id', auth()->user()->id)->get();
   }
 
   /**
