@@ -73,7 +73,7 @@ class RoadmapCourseController extends Controller
       'completed' => 'required|boolean'
     ]);
 
-    $roadmapcourse->update($data);
+    // $roadmapcourse->update($data);
 
     return response($roadmapcourse, 200);
   }
