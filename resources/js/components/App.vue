@@ -1,8 +1,8 @@
 <template>
   <div>
     <Navbar></Navbar>
-    <Welcome></Welcome>
     <div class="container">
+      <Welcome></Welcome>
     </div>
   </div>
 </template>

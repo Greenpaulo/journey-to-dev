@@ -2,6 +2,17 @@
 @import url('https://fonts.googleapis.com/css?family=Heebo&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
+
+// Bootswatch Variables for your cyborg theme
+@import "node_modules/bootswatch/dist/cyborg/variables";
+
+// Bootstrap's SCSS
+@import "bootstrap/scss/bootstrap";
+
+// Bootswatch theme main CSS files
+@import "node_modules/bootswatch/dist/cyborg/bootswatch";
+
+
 // @import 'variables';
 // @import 'bootstrap.min.css';
 // @import 'bootswatch';
