@@ -1,9 +1,7 @@
 <template>
   <div>
     <Navbar></Navbar>
-    <div class="container">
-      <Welcome></Welcome>
-    </div>
+    <router-view></router-view>
   </div>
 </template>
 
@@ -23,5 +21,9 @@
 </script>
 
 <style>
+
+body {
+  background-color: rgb(19, 18, 18);
+}
 
 </style>

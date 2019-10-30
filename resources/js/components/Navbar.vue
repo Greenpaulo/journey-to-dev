@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-      <a class="navbar-brand" href="#">JourneyToDev</a>
+      <router-link class="navbar-brand" to="/">JourneyToDev</router-link>
       
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -10,17 +10,17 @@
       <div class="collapse navbar-collapse" id="navbarColor02">
         
         <ul class="navbar-nav mr-auto px-3">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          <li class="nav-item">
+            <router-link class="nav-link" to="/">Home</router-link>
           </li>
           <li class="nav-item">
-            <a class="nav-link roadmap-link" href="#">Roadmap</a>
+            <router-link class="nav-link roadmap-link" to="roadmap">Roadmap</router-link>
           </li>
           <li class="nav-item">
-            <a class="nav-link about-link" href="#">About</a>
+            <router-link class="nav-link about-link" to="about">About</router-link>
           </li>
           <li class="nav-item">
-            <a class="nav-link login-link" href="#">Login</a>
+            <router-link class="nav-link login-link" to="login">Login</router-link>
           </li>
         </ul>
         
@@ -49,6 +49,10 @@
 
 @import 'node_modules/bootswatch/dist/cyborg/variables';
 
+.navbar-brand {
+  font-size: 1.5rem !important;
+}
+
 .roadmap-link {
   &:hover {
     color: yellow !important;
@@ -69,7 +73,5 @@
     font-weight: bolder;
   }
 }
-
-
 
 </style>
