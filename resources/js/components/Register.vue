@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <form>
       <fieldset>
       <h2 class="my-4">Register</h2>

@@ -332,6 +332,18 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Welcome'
 });
@@ -369,7 +381,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".welcome[data-v-51777872] {\n  max-height: 90vh;\n}\n.lead[data-v-51777872] {\n  font-size: 1.5rem !important;\n}\n#welcome-carousel[data-v-51777872] {\n  max-height: 90%;\n}\n.carousel-inner[data-v-51777872] {\n  max-height: 93vh;\n}\n.carousel-caption[data-v-51777872] {\n  bottom: 45%;\n}\n#slide2 .img[data-v-51777872] {\n  bottom: -400px;\n}", ""]);
+exports.push([module.i, ".welcome[data-v-51777872] {\n  max-height: 90vh;\n}\n.lead[data-v-51777872] {\n  font-size: 1.5rem !important;\n}\n#welcome-carousel[data-v-51777872] {\n  max-height: 90%;\n}\n.carousel-inner[data-v-51777872] {\n  max-height: 93vh;\n}\n.carousel-caption[data-v-51777872] {\n  bottom: 40%;\n}\n#slide2 .img[data-v-51777872] {\n  bottom: -400px;\n}", ""]);
 
 // exports
 
@@ -388,7 +400,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\nbody {\n  background-color: rgb(19, 18, 18);\n}\n\n", ""]);
+exports.push([module.i, "\nbody {\n  background-color: rgb(19, 18, 18);\n}\n.text-orangered {\n  color: orangered;\n}\n.text-orange {\n  color: orange;\n}\n\n", ""]);
 
 // exports
 
@@ -1648,7 +1660,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", [
+    return _c("div", { staticClass: "container" }, [
       _c("form", [
         _c("fieldset", [
           _c("h2", { staticClass: "my-4" }, [_vm._v("Login")]),
@@ -1884,7 +1896,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", [
+    return _c("div", { staticClass: "container" }, [
       _c("form", [
         _c("fieldset", [
           _c("h2", { staticClass: "my-4" }, [_vm._v("Register")]),
@@ -1979,170 +1991,226 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("section", { staticClass: "welcome" }, [
+    _c(
+      "div",
+      {
+        staticClass: "carousel slide",
+        attrs: { id: "welcome-carousel", "data-ride": "carousel" }
+      },
+      [
+        _vm._m(0),
+        _vm._v(" "),
+        _c("div", { staticClass: "carousel-inner" }, [
+          _c(
+            "div",
+            { staticClass: "carousel-item active", attrs: { id: "slide1" } },
+            [
+              _c("img", {
+                staticClass: "d-block w-100",
+                attrs: { src: "/images/1.jpg", alt: "laptop with code" }
+              }),
+              _vm._v(" "),
+              _c("div", { staticClass: "carousel-caption d-none d-md-block" }, [
+                _c("h1", { staticClass: "my-3" }, [
+                  _vm._v("Welcome To Your Journey To Dev!")
+                ]),
+                _vm._v(" "),
+                _c("p", { staticClass: "lead py-4" }, [
+                  _vm._v(
+                    "Journey To Dev is a guide for learning full stack web development. It was born out of the need for a online curriculum for self-taught prospective developers."
+                  )
+                ]),
+                _vm._v(" "),
+                _c(
+                  "p",
+                  { staticClass: "lead" },
+                  [
+                    _c(
+                      "router-link",
+                      {
+                        staticClass: "btn btn-info btn-lg",
+                        attrs: { to: "/login", role: "button" }
+                      },
+                      [_vm._v("Login")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "router-link",
+                      {
+                        staticClass: "btn btn-primary btn-lg",
+                        attrs: { to: "/register", role: "button" }
+                      },
+                      [_vm._v("Register")]
+                    )
+                  ],
+                  1
+                )
+              ])
+            ]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "carousel-item", attrs: { id: "slide2" } }, [
+            _c("img", {
+              staticClass: "d-block w-100",
+              attrs: { src: "/images/2.jpg", alt: "road with sunset" }
+            }),
+            _vm._v(" "),
+            _c("div", { staticClass: "carousel-caption d-none d-md-block" }, [
+              _c("h1", { staticClass: "my-3" }, [_vm._v("Build Your Roadmap")]),
+              _vm._v(" "),
+              _c("p", { staticClass: "lead py-4" }, [
+                _vm._v(
+                  'Make a "Roadmap" to plan you own journey to becoming a web developer!'
+                )
+              ]),
+              _vm._v(" "),
+              _c(
+                "p",
+                { staticClass: "lead" },
+                [
+                  _c(
+                    "router-link",
+                    {
+                      staticClass: "btn btn-info btn-lg",
+                      attrs: { to: "/login", role: "button" }
+                    },
+                    [_vm._v("Login")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "router-link",
+                    {
+                      staticClass: "btn btn-primary btn-lg",
+                      attrs: { to: "/register", role: "button" }
+                    },
+                    [_vm._v("Register")]
+                  )
+                ],
+                1
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "carousel-item", attrs: { id: "slide3" } }, [
+            _c("img", {
+              staticClass: "d-block w-100",
+              attrs: { src: "/images/3.jpg", alt: "student with a laptop" }
+            }),
+            _vm._v(" "),
+            _c("div", { staticClass: "carousel-caption d-none d-md-block" }, [
+              _c("h1", { staticClass: "my-3" }, [
+                _vm._v("Get Straight To Learning!")
+              ]),
+              _vm._v(" "),
+              _c("p", { staticClass: "lead py-4" }, [
+                _vm._v(
+                  "Benefit from other student's past research, build yourself a custom roadmap and get straight to learning!"
+                )
+              ]),
+              _vm._v(" "),
+              _c(
+                "p",
+                { staticClass: "lead" },
+                [
+                  _c(
+                    "router-link",
+                    {
+                      staticClass: "btn btn-info btn-lg",
+                      attrs: { to: "/login", role: "button" }
+                    },
+                    [_vm._v("Login")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "router-link",
+                    {
+                      staticClass: "btn btn-primary btn-lg",
+                      attrs: { to: "/register", role: "button" }
+                    },
+                    [_vm._v("Register")]
+                  )
+                ],
+                1
+              )
+            ])
+          ])
+        ]),
+        _vm._v(" "),
+        _vm._m(1),
+        _vm._v(" "),
+        _vm._m(2)
+      ]
+    )
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("section", { staticClass: "welcome" }, [
-      _c(
-        "div",
-        {
-          staticClass: "carousel slide",
-          attrs: { id: "welcome-carousel", "data-ride": "carousel" }
-        },
-        [
-          _c("ol", { staticClass: "carousel-indicators" }, [
-            _c("li", {
-              staticClass: "active",
-              attrs: {
-                "data-target": "#welcome-carousel",
-                "data-slide-to": "0"
-              }
-            }),
-            _vm._v(" "),
-            _c("li", {
-              attrs: {
-                "data-target": "#welcome-carousel",
-                "data-slide-to": "1"
-              }
-            }),
-            _vm._v(" "),
-            _c("li", {
-              attrs: {
-                "data-target": "#welcome-carousel",
-                "data-slide-to": "2"
-              }
-            })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "carousel-inner" }, [
-            _c(
-              "div",
-              { staticClass: "carousel-item active", attrs: { id: "slide1" } },
-              [
-                _c("img", {
-                  staticClass: "d-block w-100",
-                  attrs: { src: "/images/1.jpg", alt: "..." }
-                }),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  { staticClass: "carousel-caption d-none d-md-block" },
-                  [
-                    _c("h1", { staticClass: "my-3" }, [
-                      _vm._v("Welcome To Your Journey To Dev!")
-                    ]),
-                    _vm._v(" "),
-                    _c("p", { staticClass: "lead py-4" }, [
-                      _vm._v(
-                        "Journey To Dev is a guide for learning full stack web development. It was born out of the need for a online curriculum for self-taught prospective developers."
-                      )
-                    ])
-                  ]
-                )
-              ]
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              { staticClass: "carousel-item", attrs: { id: "slide2" } },
-              [
-                _c("img", {
-                  staticClass: "d-block w-100",
-                  attrs: { src: "/images/2.jpg", alt: "..." }
-                }),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  { staticClass: "carousel-caption d-none d-md-block" },
-                  [
-                    _c("h1", { staticClass: "my-3" }, [
-                      _vm._v("Build Your Roadmap")
-                    ]),
-                    _vm._v(" "),
-                    _c("p", { staticClass: "lead py-4" }, [
-                      _vm._v(
-                        'Make a "Roadmap" to plan you own journey to becoming a web developer!'
-                      )
-                    ])
-                  ]
-                )
-              ]
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              { staticClass: "carousel-item", attrs: { id: "slide3" } },
-              [
-                _c("img", {
-                  staticClass: "d-block w-100",
-                  attrs: { src: "/images/3.jpg", alt: "..." }
-                }),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  { staticClass: "carousel-caption d-none d-md-block" },
-                  [
-                    _c("h1", { staticClass: "my-3" }, [
-                      _vm._v("Get Straight To Learning!")
-                    ]),
-                    _vm._v(" "),
-                    _c("p", { staticClass: "lead py-4" }, [
-                      _vm._v(
-                        "In the past, students would have to spend time trying to figure out what to learn to become a developer. Now, you can benefit from their past research, build yourself a custom roadmap and get straight to learning!"
-                      )
-                    ])
-                  ]
-                )
-              ]
-            )
-          ]),
-          _vm._v(" "),
-          _c(
-            "a",
-            {
-              staticClass: "carousel-control-prev",
-              attrs: {
-                href: "#welcome-carousel",
-                role: "button",
-                "data-slide": "prev"
-              }
-            },
-            [
-              _c("span", {
-                staticClass: "carousel-control-prev-icon",
-                attrs: { "aria-hidden": "true" }
-              }),
-              _vm._v(" "),
-              _c("span", { staticClass: "sr-only" }, [_vm._v("Previous")])
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "a",
-            {
-              staticClass: "carousel-control-next",
-              attrs: {
-                href: "#welcome-carousel",
-                role: "button",
-                "data-slide": "next"
-              }
-            },
-            [
-              _c("span", {
-                staticClass: "carousel-control-next-icon",
-                attrs: { "aria-hidden": "true" }
-              }),
-              _vm._v(" "),
-              _c("span", { staticClass: "sr-only" }, [_vm._v("Next")])
-            ]
-          )
-        ]
-      )
+    return _c("ol", { staticClass: "carousel-indicators" }, [
+      _c("li", {
+        staticClass: "active",
+        attrs: { "data-target": "#welcome-carousel", "data-slide-to": "0" }
+      }),
+      _vm._v(" "),
+      _c("li", {
+        attrs: { "data-target": "#welcome-carousel", "data-slide-to": "1" }
+      }),
+      _vm._v(" "),
+      _c("li", {
+        attrs: { "data-target": "#welcome-carousel", "data-slide-to": "2" }
+      })
     ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "a",
+      {
+        staticClass: "carousel-control-prev",
+        attrs: {
+          href: "#welcome-carousel",
+          role: "button",
+          "data-slide": "prev"
+        }
+      },
+      [
+        _c("span", {
+          staticClass: "carousel-control-prev-icon",
+          attrs: { "aria-hidden": "true" }
+        }),
+        _vm._v(" "),
+        _c("span", { staticClass: "sr-only" }, [_vm._v("Previous")])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "a",
+      {
+        staticClass: "carousel-control-next",
+        attrs: {
+          href: "#welcome-carousel",
+          role: "button",
+          "data-slide": "next"
+        }
+      },
+      [
+        _c("span", {
+          staticClass: "carousel-control-next-icon",
+          attrs: { "aria-hidden": "true" }
+        }),
+        _vm._v(" "),
+        _c("span", { staticClass: "sr-only" }, [_vm._v("Next")])
+      ]
+    )
   }
 ]
 render._withStripped = true

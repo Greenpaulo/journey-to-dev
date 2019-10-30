@@ -26,4 +26,12 @@ body {
   background-color: rgb(19, 18, 18);
 }
 
+.text-orangered {
+  color: orangered;
+}
+
+.text-orange {
+  color: orange;
+}
+
 </style>

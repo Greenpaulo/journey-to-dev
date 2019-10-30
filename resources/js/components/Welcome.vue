@@ -8,24 +8,36 @@
       </ol>
       <div class="carousel-inner">
         <div class="carousel-item active" id="slide1">
-          <img src="/images/1.jpg" class="d-block w-100" alt="...">
+          <img src="/images/1.jpg" class="d-block w-100" alt="laptop with code">
           <div class="carousel-caption d-none d-md-block">
             <h1 class="my-3">Welcome To Your Journey To Dev!</h1>
             <p class="lead py-4">Journey To Dev is a guide for learning full stack web development. It was born out of the need for a online curriculum for self-taught prospective developers.</p>
+            <p class="lead">
+              <router-link class="btn btn-info btn-lg" to="/login" role="button">Login</router-link>
+              <router-link class="btn btn-primary btn-lg" to="/register" role="button">Register</router-link>
+            </p>
           </div>
         </div>
         <div class="carousel-item" id="slide2">
-          <img src="/images/2.jpg" class="d-block w-100" alt="...">
+          <img src="/images/2.jpg" class="d-block w-100" alt="road with sunset">
           <div class="carousel-caption d-none d-md-block">
             <h1 class="my-3">Build Your Roadmap</h1>
             <p class="lead py-4">Make a "Roadmap" to plan you own journey to becoming a web developer!</p>
+            <p class="lead">
+              <router-link class="btn btn-info btn-lg" to="/login" role="button">Login</router-link>
+              <router-link class="btn btn-primary btn-lg" to="/register" role="button">Register</router-link>
+            </p>
           </div>
         </div>
         <div class="carousel-item" id="slide3">
-          <img src="/images/3.jpg" class="d-block w-100" alt="...">
+          <img src="/images/3.jpg" class="d-block w-100" alt="student with a laptop">
           <div class="carousel-caption d-none d-md-block">
             <h1 class="my-3">Get Straight To Learning!</h1>
-            <p class="lead py-4">In the past, students would have to spend time trying to figure out what to learn to become a developer. Now, you can benefit from their past research, build yourself a custom roadmap and get straight to learning!</p>
+            <p class="lead py-4">Benefit from other student's past research, build yourself a custom roadmap and get straight to learning!</p>
+            <p class="lead">
+              <router-link class="btn btn-info btn-lg" to="/login" role="button">Login</router-link>
+              <router-link class="btn btn-primary btn-lg" to="/register" role="button">Register</router-link>
+            </p>
           </div>
         </div>
       </div>
@@ -67,7 +79,7 @@ export default {
 }
 
 .carousel-caption {
-  bottom: 45%;
+  bottom: 40%;
 }
 
 #slide2 .img {
