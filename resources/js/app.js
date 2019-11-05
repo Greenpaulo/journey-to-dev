@@ -4,8 +4,9 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
 import App from './components/App';
-import Navbar from './components/Navbar';
 import Welcome from './components/Welcome';
+import TheJourney from './components/TheJourney';
+import Roadmap from './components/Roadmap';
 import Register from './components/Register';
 import Login from './components/Login';
 
@@ -15,6 +16,14 @@ const router = new VueRouter({
     {
       path: '/',
       component: Welcome
+    },
+    {
+      path: '/thejourney',
+      component: TheJourney
+    },
+    {
+      path: '/roadmap',
+      component: Roadmap
     },
     {
       path: '/register',

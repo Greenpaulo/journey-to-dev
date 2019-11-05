@@ -7,31 +7,42 @@
 
 <script>
   import Navbar from './Navbar';
-  import Welcome from './Welcome';
-  import Intro from './Intro'
   
   export default {
     name: "App",
     components: {
-      Navbar,
-      Welcome,
-      Intro
+      Navbar
     }
   }
 </script>
 
-<style>
+<style lang="scss">
+
+@import 'resources/sass/variables';
 
 body {
   background-color: rgb(19, 18, 18);
+  /* background-color: #100e17; */
 }
 
 .text-orangered {
-  color: orangered;
+  color: orangered !important;
 }
 
 .text-orange {
-  color: orange;
+  color: orange !important;
+}
+
+.text-purple {
+  color: $purple !important;
+}
+
+.text-teal {
+  color: $teal !important;
+}
+
+.text-pink {
+  color: $pink !important;
 }
 
 </style>

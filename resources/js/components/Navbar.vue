@@ -14,6 +14,9 @@
             <router-link class="nav-link" to="/">Home</router-link>
           </li>
           <li class="nav-item">
+            <router-link class="nav-link" to="/thejourney">The Journey</router-link>
+          </li>
+          <li class="nav-item">
             <router-link class="nav-link roadmap-link" to="roadmap">Roadmap</router-link>
           </li>
           <li class="nav-item">
@@ -21,6 +24,9 @@
           </li>
           <li class="nav-item">
             <router-link class="nav-link login-link" to="login">Login</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link class="nav-link register-link" to="register">Register</router-link>
           </li>
         </ul>
         
@@ -70,6 +76,13 @@
 .login-link {
   &:hover {
     color: #9933CC !important;
+    font-weight: bolder;
+  }
+}
+
+.register-link {
+  &:hover {
+    color: #2A9FD6 !important;
     font-weight: bolder;
   }
 }
