@@ -12,10 +12,14 @@ class RoadmapCourseController extends Controller
    *
    * @return \Illuminate\Http\Response
    */
-  public function index()
-  {
-    return RoadmapCourse::where('user_id', auth()->user()->id)->get();
-  }
+  // public function index()
+  // {
+  //   return RoadmapCourse::where('user_id', auth()->user()->id)->get();
+  // }
+  // public function index($id)
+  // {
+  //   return RoadmapCourse::where('user_id', $id)->get();
+  // }
 
   /**
    * Store a newly created resource in storage.

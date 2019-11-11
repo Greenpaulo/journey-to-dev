@@ -23,13 +23,18 @@
 
 <script>
 import Course from './Course';
+import { mapActions } from 'vuex';
 
 export default {
   name: "CourseList",
   components: {
     Course
+  },
+  methods: mapActions(['retrieveList', 'retrieveRoadmap']),
+  created() {
   }
 }
+
 </script>
 
 <style lang="scss" scoped>

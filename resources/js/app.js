@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import store from './store';
 
 Vue.use(VueRouter)
 
@@ -10,7 +11,7 @@ import Roadmap from './components/Roadmap';
 import Register from './components/Register';
 import Login from './components/Login';
 
-const router = new VueRouter({
+export const router = new VueRouter({
   mode: 'history',
   routes: [
     {
@@ -40,6 +41,7 @@ const app = new Vue({
   el: '#app',
   components: { App },
   router,
+  store
 });
 
 

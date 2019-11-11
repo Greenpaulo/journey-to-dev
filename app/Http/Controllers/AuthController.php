@@ -27,6 +27,7 @@ class AuthController extends Controller
         ]
       ]);
 
+      // return auth()->user()->id;
       return $response->getBody();
 
     } catch (\GuzzleHttp\Exception\BadResponseException $e) {

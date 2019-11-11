@@ -33,7 +33,8 @@ export default {
   components: {
     CourseList
   }
-}
+};
+
 </script>
 
 <style lang="scss" scoped>

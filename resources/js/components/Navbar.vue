@@ -22,11 +22,14 @@
           <li class="nav-item">
             <router-link class="nav-link about-link" to="about">About</router-link>
           </li>
-          <li class="nav-item">
+          <li v-if="isLoggedIn === false" class="nav-item">
             <router-link class="nav-link login-link" to="login">Login</router-link>
           </li>
-          <li class="nav-item">
+          <li v-if="isLoggedIn === false" class="nav-item">
             <router-link class="nav-link register-link" to="register">Register</router-link>
+          </li>
+          <li v-if="isLoggedIn" class="nav-item">
+            <a class="nav-link logout-link" href="#" @click="logout">Logout</a>
           </li>
         </ul>
         
@@ -41,12 +44,16 @@
 </template>
 
 <script>
+
+import { mapActions, mapGetters } from 'vuex';
+
   export default {
     name: 'Navbar',
+    computed: {
+      ...mapGetters(['isLoggedIn'])
+    },
     methods: {
-      onLoginClick() {
-        console.log('login');
-      }
+      ...mapActions(['logout'])
     }
   }
 </script>
