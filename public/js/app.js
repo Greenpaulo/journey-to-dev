@@ -22463,6 +22463,21 @@ var getters = {
       course.stage === stage;
     });
     console.log(getters.getCoursesByStage(1));
+  },
+  createUserCourseList: function createUserCourseList(state) {
+    // Get the roadmap ids from the roadmap module
+    var ids = _roadmap__WEBPACK_IMPORTED_MODULE_1__["default"].state.ids; // We need to get the courseList and filter out the courses which are in the user's roadmap (filter by course_id) 
+
+    var userCourseList = [];
+    state.courseList.forEach(function (course) {
+      // For each course we need to check that the id isn't contained within the ids variable
+      if (!ids.includes(course.id)) {
+        userCourseList.push(course);
+      }
+
+      ;
+    });
+    return userCourseList;
   }
 };
 var mutations = {
@@ -22476,28 +22491,20 @@ var mutations = {
 var actions = {
   getUserCourseList: function getUserCourseList(_ref) {
     var commit = _ref.commit,
-        state = _ref.state;
+        getters = _ref.getters;
     // Get the full list of courses from the API
     axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('/api/courses').then(function (res) {
       // Call mutations to set the courseList state
-      commit('setCourseList', res.data); // Get the roadmap from user's roadmap module
+      commit('setCourseList', res.data); // // Get the roadmap from user's roadmap module
+      // const userRoadmap = user_roadmap.state.roadmap;
+      // // Get an array of the roadmap course id's
+      // const ids = [];
+      // userRoadmap.forEach(course => {
+      //   ids.push(course.course_id);
+      // });
+      // Call a getter to create the userCourseList passing in the roadmap id's
 
-      var userRoadmap = _roadmap__WEBPACK_IMPORTED_MODULE_1__["default"].state.roadmap; // Get an array of the roadmap course id's
-
-      var ids = [];
-      userRoadmap.forEach(function (course) {
-        ids.push(course.course_id);
-      }); // We need to get the courseList and filter out the courses which are in the user's roadmap (filter by course_id)
-
-      var userCourseList = [];
-      state.courseList.forEach(function (course) {
-        // For each course we need to check that the id isn't contained within the ids variable
-        if (!ids.includes(course.id)) {
-          userCourseList.push(course);
-        }
-
-        ;
-      }); // Call mutation to set the userCourseList in state
+      var userCourseList = getters.createUserCourseList; // Call mutation to set the userCourseList in state
 
       commit('setUserCourseList', userCourseList);
     });
@@ -22527,23 +22534,39 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var state = {
-  roadmap: []
+  roadmap: [],
+  ids: []
 };
-var getters = {};
+var getters = {
+  createIdArray: function createIdArray(state) {
+    var ids = [];
+    state.roadmap.forEach(function (course) {
+      ids.push(course.course_id);
+    });
+    return ids;
+  }
+};
 var mutations = {
   setRoadmap: function setRoadmap(state, roadmap) {
     state.roadmap = roadmap;
+  },
+  setIds: function setIds(state, ids) {
+    state.ids = ids;
   }
 };
 var actions = {
   retrieveRoadmap: function retrieveRoadmap(_ref) {
     var commit = _ref.commit,
         dispatch = _ref.dispatch,
-        state = _ref.state;
+        getters = _ref.getters;
     axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/roadmap/".concat(_auth__WEBPACK_IMPORTED_MODULE_1__["default"].state.user_id)).then(function (res) {
       var roadmap = res.data; // Call mutation to set roadmap
 
-      commit('setRoadmap', roadmap); // Retrieve the user's course list
+      commit('setRoadmap', roadmap); // Call getter to create id array
+
+      var ids = getters.createIdArray; // Call mutation to set ids in state
+
+      commit('setIds', ids); // Retrieve the user's course list
 
       dispatch('getUserCourseList');
     });

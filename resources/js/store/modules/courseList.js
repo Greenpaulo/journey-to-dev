@@ -12,6 +12,22 @@ const getters = {
       course.stage === stage
     })
     console.log(getters.getCoursesByStage(1));
+  },
+  createUserCourseList: (state) => {
+    // Get the roadmap ids from the roadmap module
+    const ids = user_roadmap.state.ids;
+
+    // We need to get the courseList and filter out the courses which are in the user's roadmap (filter by course_id) 
+    const userCourseList = [];
+
+    state.courseList.forEach((course) => {
+      // For each course we need to check that the id isn't contained within the ids variable
+      if (!(ids.includes(course.id))) {
+        userCourseList.push(course);
+      };
+    });
+    
+    return userCourseList;
   }
 };
 
@@ -26,7 +42,7 @@ const mutations = {
 };
 
 const actions = {
-  getUserCourseList: ({commit, state}) => {
+  getUserCourseList: ({commit, getters}) => {
 
     // Get the full list of courses from the API
     axios.get('/api/courses')
@@ -34,25 +50,18 @@ const actions = {
         // Call mutations to set the courseList state
         commit('setCourseList', res.data);
       
-        // Get the roadmap from user's roadmap module
-        const userRoadmap = user_roadmap.state.roadmap;
+        // // Get the roadmap from user's roadmap module
+        // const userRoadmap = user_roadmap.state.roadmap;
 
-        // Get an array of the roadmap course id's
-        const ids = [];
-        userRoadmap.forEach(course => {
-          ids.push(course.course_id);
-        });
+        // // Get an array of the roadmap course id's
+        // const ids = [];
+        // userRoadmap.forEach(course => {
+        //   ids.push(course.course_id);
+        // });
 
-        // We need to get the courseList and filter out the courses which are in the user's roadmap (filter by course_id)
-        const userCourseList = [];
+        // Call a getter to create the userCourseList passing in the roadmap id's
+        const userCourseList = getters.createUserCourseList;
         
-        state.courseList.forEach((course) => {
-          // For each course we need to check that the id isn't contained within the ids variable
-          if (!(ids.includes(course.id))) {
-            userCourseList.push(course);
-          };
-        });
-
         // Call mutation to set the userCourseList in state
         commit('setUserCourseList', userCourseList);
       })
