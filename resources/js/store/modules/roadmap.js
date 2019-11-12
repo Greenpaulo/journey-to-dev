@@ -40,11 +40,9 @@ const actions = {
           // Call mutation to set ids in state
           commit('setIds', ids);
 
-          // Retrieve the user's course list
-          dispatch('getUserCourseList');
-        });
-    
-        
+          // Retrieve the course list from the API and create a user course list
+          dispatch('retrieveCourseList');
+        });    
    }
 };
 

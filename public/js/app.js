@@ -2132,6 +2132,21 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Roadmap",
@@ -2506,7 +2521,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, "#select-menu-links[data-v-04effda1] {\n  display: flex;\n  justify-content: space-between;\n}\n.select-links[data-v-04effda1] {\n  list-style: none;\n  cursor: pointer;\n}", ""]);
 
 // exports
 
@@ -4406,7 +4421,7 @@ var render = function() {
     _vm._v(" "),
     _c(
       "section",
-      { staticClass: "course-selector" },
+      { staticClass: "course-selector mt-5" },
       [_vm._m(0), _vm._v(" "), _c("CourseList")],
       1
     )
@@ -4417,39 +4432,45 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      { staticClass: "form-group", attrs: { id: "stage-selector" } },
-      [
-        _c(
-          "select",
-          { attrs: { id: "stage-select", name: "stage-selector" } },
-          [
-            _c("option", { attrs: { selected: "" } }, [
-              _vm._v("Choose Stage ...")
-            ]),
-            _vm._v(" "),
-            _c("option", { attrs: { value: "1" } }, [_vm._v("One")]),
-            _vm._v(" "),
-            _c("option", { attrs: { value: "2" } }, [_vm._v("Two")]),
-            _vm._v(" "),
-            _c("option", { attrs: { value: "3" } }, [_vm._v("Three")]),
-            _vm._v(" "),
-            _c("option", { attrs: { value: "4" } }, [_vm._v("Four")]),
-            _vm._v(" "),
-            _c("option", { attrs: { value: "5" } }, [_vm._v("Five")]),
-            _vm._v(" "),
-            _c("option", { attrs: { value: "6" } }, [_vm._v("Six")]),
-            _vm._v(" "),
-            _c("option", { attrs: { value: "7" } }, [_vm._v("Seven")]),
-            _vm._v(" "),
-            _c("option", { attrs: { value: "8" } }, [_vm._v("Eight")]),
-            _vm._v(" "),
-            _c("option", { attrs: { value: "9" } }, [_vm._v("Nine")])
-          ]
-        )
-      ]
-    )
+    return _c("div", { attrs: { id: "select-menu" } }, [
+      _c("ul", { attrs: { id: "select-menu-links" } }, [
+        _c("li", { staticClass: "select-links btn btn-info" }, [
+          _vm._v("Stage 1")
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "select-links btn btn-info" }, [
+          _vm._v("Stage 2")
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "select-links btn btn-info" }, [
+          _vm._v("Stage 3")
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "select-links btn btn-info" }, [
+          _vm._v("Stage 4")
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "select-links btn btn-info" }, [
+          _vm._v("Stage 5")
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "select-links btn btn-info" }, [
+          _vm._v("Stage 6")
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "select-links btn btn-info" }, [
+          _vm._v("Stage 7")
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "select-links btn btn-info" }, [
+          _vm._v("Stage 8")
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "select-links btn btn-info" }, [
+          _vm._v("Stage 9")
+        ])
+      ])
+    ])
   }
 ]
 render._withStripped = true
@@ -22458,12 +22479,14 @@ var state = {
   userCourseList: []
 };
 var getters = {
-  getCoursesByStage: function getCoursesByStage(state, stage) {
-    state.userCourseList.filter(function (course) {
-      course.stage === stage;
-    });
-    console.log(getters.getCoursesByStage(1));
+  getCoursesByStage: function getCoursesByStage(state) {
+    return function (stage) {
+      state.userCourseList.filter(function (course) {
+        course.stage === stage;
+      });
+    };
   },
+  // Takes the CourseList state and the roadmap ids's state and returns a userCourseList
   createUserCourseList: function createUserCourseList(state) {
     // Get the roadmap ids from the roadmap module
     var ids = _roadmap__WEBPACK_IMPORTED_MODULE_1__["default"].state.ids; // We need to get the courseList and filter out the courses which are in the user's roadmap (filter by course_id) 
@@ -22489,25 +22512,26 @@ var mutations = {
   }
 };
 var actions = {
-  getUserCourseList: function getUserCourseList(_ref) {
+  // Makes an API to get the original course list and sets the inital state for courseList and userCourseList 
+  retrieveCourseList: function retrieveCourseList(_ref) {
     var commit = _ref.commit,
-        getters = _ref.getters;
+        dispatch = _ref.dispatch;
     // Get the full list of courses from the API
     axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('/api/courses').then(function (res) {
       // Call mutations to set the courseList state
-      commit('setCourseList', res.data); // // Get the roadmap from user's roadmap module
-      // const userRoadmap = user_roadmap.state.roadmap;
-      // // Get an array of the roadmap course id's
-      // const ids = [];
-      // userRoadmap.forEach(course => {
-      //   ids.push(course.course_id);
-      // });
-      // Call a getter to create the userCourseList passing in the roadmap id's
+      commit('setCourseList', res.data); // Call action to set the initial userCourseList
 
-      var userCourseList = getters.createUserCourseList; // Call mutation to set the userCourseList in state
-
-      commit('setUserCourseList', userCourseList);
+      dispatch('getUserCourseList');
     });
+  },
+  // After login - any intial action to get the userCourseList can be done here
+  getUserCourseList: function getUserCourseList(_ref2) {
+    var commit = _ref2.commit,
+        getters = _ref2.getters;
+    // Call a getter to create the userCourseList
+    var userCourseList = getters.createUserCourseList; // Call mutation to set the userCourseList in state
+
+    commit('setUserCourseList', userCourseList);
   }
 };
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -22566,9 +22590,9 @@ var actions = {
 
       var ids = getters.createIdArray; // Call mutation to set ids in state
 
-      commit('setIds', ids); // Retrieve the user's course list
+      commit('setIds', ids); // Retrieve the course list from the API and create a user course list
 
-      dispatch('getUserCourseList');
+      dispatch('retrieveCourseList');
     });
   }
 };
