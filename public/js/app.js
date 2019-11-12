@@ -4444,37 +4444,109 @@ var render = function() {
               [_vm._v("Stage 1")]
             ),
             _vm._v(" "),
-            _c("li", { staticClass: "select-links btn btn-info" }, [
-              _vm._v("Stage 2")
-            ]),
+            _c(
+              "li",
+              {
+                staticClass: "select-links btn btn-info",
+                on: {
+                  click: function($event) {
+                    return _vm.getCoursesByStage(2)
+                  }
+                }
+              },
+              [_vm._v("Stage 2")]
+            ),
             _vm._v(" "),
-            _c("li", { staticClass: "select-links btn btn-info" }, [
-              _vm._v("Stage 3")
-            ]),
+            _c(
+              "li",
+              {
+                staticClass: "select-links btn btn-info",
+                on: {
+                  click: function($event) {
+                    return _vm.getCoursesByStage(3)
+                  }
+                }
+              },
+              [_vm._v("Stage 3")]
+            ),
             _vm._v(" "),
-            _c("li", { staticClass: "select-links btn btn-info" }, [
-              _vm._v("Stage 4")
-            ]),
+            _c(
+              "li",
+              {
+                staticClass: "select-links btn btn-info",
+                on: {
+                  click: function($event) {
+                    return _vm.getCoursesByStage(4)
+                  }
+                }
+              },
+              [_vm._v("Stage 4")]
+            ),
             _vm._v(" "),
-            _c("li", { staticClass: "select-links btn btn-info" }, [
-              _vm._v("Stage 5")
-            ]),
+            _c(
+              "li",
+              {
+                staticClass: "select-links btn btn-info",
+                on: {
+                  click: function($event) {
+                    return _vm.getCoursesByStage(5)
+                  }
+                }
+              },
+              [_vm._v("Stage 5")]
+            ),
             _vm._v(" "),
-            _c("li", { staticClass: "select-links btn btn-info" }, [
-              _vm._v("Stage 6")
-            ]),
+            _c(
+              "li",
+              {
+                staticClass: "select-links btn btn-info",
+                on: {
+                  click: function($event) {
+                    return _vm.getCoursesByStage(6)
+                  }
+                }
+              },
+              [_vm._v("Stage 6")]
+            ),
             _vm._v(" "),
-            _c("li", { staticClass: "select-links btn btn-info" }, [
-              _vm._v("Stage 7")
-            ]),
+            _c(
+              "li",
+              {
+                staticClass: "select-links btn btn-info",
+                on: {
+                  click: function($event) {
+                    return _vm.getCoursesByStage(7)
+                  }
+                }
+              },
+              [_vm._v("Stage 7")]
+            ),
             _vm._v(" "),
-            _c("li", { staticClass: "select-links btn btn-info" }, [
-              _vm._v("Stage 8")
-            ]),
+            _c(
+              "li",
+              {
+                staticClass: "select-links btn btn-info",
+                on: {
+                  click: function($event) {
+                    return _vm.getCoursesByStage(8)
+                  }
+                }
+              },
+              [_vm._v("Stage 8")]
+            ),
             _vm._v(" "),
-            _c("li", { staticClass: "select-links btn btn-info" }, [
-              _vm._v("Stage 9")
-            ])
+            _c(
+              "li",
+              {
+                staticClass: "select-links btn btn-info",
+                on: {
+                  click: function($event) {
+                    return _vm.getCoursesByStage(9)
+                  }
+                }
+              },
+              [_vm._v("Stage 9")]
+            )
           ])
         ]),
         _vm._v(" "),
