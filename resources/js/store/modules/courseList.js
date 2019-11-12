@@ -1,17 +1,21 @@
 import axios from 'axios';
+import auth from './auth';
 import user_roadmap from './roadmap';
 
 const state = {
   courseList: [],
-  userCourseList: []
+  userCourseList: [],
+  coursesByStage: []
 };
 
 const getters = {
 
-  getCoursesByStage: (state) => (stage) => {
-    state.userCourseList.filter(course => {
-      course.stage === stage
+  // Takes the userCourseList from state and filters by stage
+  filterCoursesByStage: (state) => (stage) => {
+    const coursesByStage = state.userCourseList.filter(course => {
+      return course.stage === stage
     })
+    return coursesByStage;
   },
 
   // Takes the CourseList state and the roadmap ids's state and returns a userCourseList
@@ -40,10 +44,29 @@ const mutations = {
   },
   setUserCourseList: (state, userCourseList) => {
     state.userCourseList = userCourseList;
+  },
+  setCoursesByStage: (state, courses) => {
+    state.coursesByStage = courses;
   }
 };
 
 const actions = {
+  // Retrieves all user data
+  loadInitialUserData :({ commit, dispatch }) => {
+    console.log('userdata action fired');
+    // Retrieve the user's id
+    axios({ method: 'get', url: '/api/user', headers: { Authorization: `Bearer ${auth.state.token}` } })
+      .then(res => {
+        const id = res.data.id;
+
+        // Call mutation to set user_id in state
+        commit('setUserId', id);
+
+        //Retrieve the user's roadmap   - show a 'loading' spinner in UI
+        dispatch('retrieveRoadmap');
+
+      });
+  },
 
   // Makes an API to get the original course list and sets the inital state for courseList and userCourseList 
   retrieveCourseList: ({ commit, dispatch }) => {
@@ -66,6 +89,14 @@ const actions = {
 
     // Call mutation to set the userCourseList in state
     commit('setUserCourseList', userCourseList);
+  },
+
+  getCoursesByStage: ({ commit, getters}, stage) => {
+    // Call getter to get the coursesByStage array
+    const courses = getters.filterCoursesByStage(stage);
+
+    // Call mutation to set the coursesByStage state
+    commit('setCoursesByStage', courses);
   }
 };
 

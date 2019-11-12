@@ -26,7 +26,8 @@ const actions = {
     console.log(credentials);
   },
 
-  retrieveToken({ commit, dispatch }, credentials){
+  // Retrieves a token from the API
+  login({ commit, dispatch }, credentials){
     axios.post('/api/login', {
       username: credentials.username,
       password: credentials.password
@@ -40,20 +41,8 @@ const actions = {
       // Set token to local storage
       window.localStorage.setItem('access_token', token);
 
-      // Retrieve the user's id
-      axios({ method: 'get', url: '/api/user', headers: { Authorization: `Bearer ${state.token}` } })
-        .then(res => {
-          const id = res.data.id;
-
-          // Call mutation to set user_id in state
-          commit('setUserId', id);
-
-          //Retrieve the user's roadmap   - show a 'loading' spinner in UI
-          dispatch('retrieveRoadmap');
-
-          //Redirect to Roadmap
-          router.push('/roadmap');
-        });
+      //Redirect to Roadmap
+      router.push('/roadmap');
 
     })
     .catch(error => {

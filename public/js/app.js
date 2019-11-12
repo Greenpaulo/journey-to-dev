@@ -1960,7 +1960,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     login: function login() {
-      this.$store.dispatch('retrieveToken', {
+      this.$store.dispatch('login', {
         username: this.email,
         password: this.password
       });
@@ -2105,6 +2105,7 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _CourseList__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./CourseList */ "./resources/js/components/CourseList.vue");
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
 //
 //
 //
@@ -2148,10 +2149,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 
+
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Roadmap",
+  methods: Object(vuex__WEBPACK_IMPORTED_MODULE_1__["mapActions"])(['loadInitialUserData', 'getCoursesByStage']),
   components: {
     CourseList: _CourseList__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
+  created: function created() {
+    this.$store.dispatch('loadInitialUserData');
   }
 });
 
@@ -4422,57 +4428,63 @@ var render = function() {
     _c(
       "section",
       { staticClass: "course-selector mt-5" },
-      [_vm._m(0), _vm._v(" "), _c("CourseList")],
+      [
+        _c("div", { attrs: { id: "select-menu" } }, [
+          _c("ul", { attrs: { id: "select-menu-links" } }, [
+            _c(
+              "li",
+              {
+                staticClass: "select-links btn btn-info",
+                on: {
+                  click: function($event) {
+                    return _vm.getCoursesByStage(1)
+                  }
+                }
+              },
+              [_vm._v("Stage 1")]
+            ),
+            _vm._v(" "),
+            _c("li", { staticClass: "select-links btn btn-info" }, [
+              _vm._v("Stage 2")
+            ]),
+            _vm._v(" "),
+            _c("li", { staticClass: "select-links btn btn-info" }, [
+              _vm._v("Stage 3")
+            ]),
+            _vm._v(" "),
+            _c("li", { staticClass: "select-links btn btn-info" }, [
+              _vm._v("Stage 4")
+            ]),
+            _vm._v(" "),
+            _c("li", { staticClass: "select-links btn btn-info" }, [
+              _vm._v("Stage 5")
+            ]),
+            _vm._v(" "),
+            _c("li", { staticClass: "select-links btn btn-info" }, [
+              _vm._v("Stage 6")
+            ]),
+            _vm._v(" "),
+            _c("li", { staticClass: "select-links btn btn-info" }, [
+              _vm._v("Stage 7")
+            ]),
+            _vm._v(" "),
+            _c("li", { staticClass: "select-links btn btn-info" }, [
+              _vm._v("Stage 8")
+            ]),
+            _vm._v(" "),
+            _c("li", { staticClass: "select-links btn btn-info" }, [
+              _vm._v("Stage 9")
+            ])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("CourseList")
+      ],
       1
     )
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { attrs: { id: "select-menu" } }, [
-      _c("ul", { attrs: { id: "select-menu-links" } }, [
-        _c("li", { staticClass: "select-links btn btn-info" }, [
-          _vm._v("Stage 1")
-        ]),
-        _vm._v(" "),
-        _c("li", { staticClass: "select-links btn btn-info" }, [
-          _vm._v("Stage 2")
-        ]),
-        _vm._v(" "),
-        _c("li", { staticClass: "select-links btn btn-info" }, [
-          _vm._v("Stage 3")
-        ]),
-        _vm._v(" "),
-        _c("li", { staticClass: "select-links btn btn-info" }, [
-          _vm._v("Stage 4")
-        ]),
-        _vm._v(" "),
-        _c("li", { staticClass: "select-links btn btn-info" }, [
-          _vm._v("Stage 5")
-        ]),
-        _vm._v(" "),
-        _c("li", { staticClass: "select-links btn btn-info" }, [
-          _vm._v("Stage 6")
-        ]),
-        _vm._v(" "),
-        _c("li", { staticClass: "select-links btn btn-info" }, [
-          _vm._v("Stage 7")
-        ]),
-        _vm._v(" "),
-        _c("li", { staticClass: "select-links btn btn-info" }, [
-          _vm._v("Stage 8")
-        ]),
-        _vm._v(" "),
-        _c("li", { staticClass: "select-links btn btn-info" }, [
-          _vm._v("Stage 9")
-        ])
-      ])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -22401,7 +22413,8 @@ var actions = {
   register: function register(context, credentials) {
     console.log(credentials);
   },
-  retrieveToken: function retrieveToken(_ref, credentials) {
+  // Retrieves a token from the API
+  login: function login(_ref, credentials) {
     var commit = _ref.commit,
         dispatch = _ref.dispatch;
     axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('/api/login', {
@@ -22412,23 +22425,9 @@ var actions = {
 
       commit('setToken', token); // Set token to local storage
 
-      window.localStorage.setItem('access_token', token); // Retrieve the user's id
+      window.localStorage.setItem('access_token', token); //Redirect to Roadmap
 
-      axios__WEBPACK_IMPORTED_MODULE_0___default()({
-        method: 'get',
-        url: '/api/user',
-        headers: {
-          Authorization: "Bearer ".concat(state.token)
-        }
-      }).then(function (res) {
-        var id = res.data.id; // Call mutation to set user_id in state
-
-        commit('setUserId', id); //Retrieve the user's roadmap   - show a 'loading' spinner in UI
-
-        dispatch('retrieveRoadmap'); //Redirect to Roadmap
-
-        _app__WEBPACK_IMPORTED_MODULE_1__["router"].push('/roadmap');
-      });
+      _app__WEBPACK_IMPORTED_MODULE_1__["router"].push('/roadmap');
     })["catch"](function (error) {
       console.log(error);
     });
@@ -22471,25 +22470,30 @@ var actions = {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _roadmap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./roadmap */ "./resources/js/store/modules/roadmap.js");
+/* harmony import */ var _auth__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./auth */ "./resources/js/store/modules/auth.js");
+/* harmony import */ var _roadmap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./roadmap */ "./resources/js/store/modules/roadmap.js");
+
 
 
 var state = {
   courseList: [],
-  userCourseList: []
+  userCourseList: [],
+  coursesByStage: []
 };
 var getters = {
-  getCoursesByStage: function getCoursesByStage(state) {
+  // Takes the userCourseList from state and filters by stage
+  filterCoursesByStage: function filterCoursesByStage(state) {
     return function (stage) {
-      state.userCourseList.filter(function (course) {
-        course.stage === stage;
+      var coursesByStage = state.userCourseList.filter(function (course) {
+        return course.stage === stage;
       });
+      return coursesByStage;
     };
   },
   // Takes the CourseList state and the roadmap ids's state and returns a userCourseList
   createUserCourseList: function createUserCourseList(state) {
     // Get the roadmap ids from the roadmap module
-    var ids = _roadmap__WEBPACK_IMPORTED_MODULE_1__["default"].state.ids; // We need to get the courseList and filter out the courses which are in the user's roadmap (filter by course_id) 
+    var ids = _roadmap__WEBPACK_IMPORTED_MODULE_2__["default"].state.ids; // We need to get the courseList and filter out the courses which are in the user's roadmap (filter by course_id) 
 
     var userCourseList = [];
     state.courseList.forEach(function (course) {
@@ -22509,13 +22513,36 @@ var mutations = {
   },
   setUserCourseList: function setUserCourseList(state, userCourseList) {
     state.userCourseList = userCourseList;
+  },
+  setCoursesByStage: function setCoursesByStage(state, courses) {
+    state.coursesByStage = courses;
   }
 };
 var actions = {
-  // Makes an API to get the original course list and sets the inital state for courseList and userCourseList 
-  retrieveCourseList: function retrieveCourseList(_ref) {
+  // Retrieves all user data
+  loadInitialUserData: function loadInitialUserData(_ref) {
     var commit = _ref.commit,
         dispatch = _ref.dispatch;
+    console.log('userdata action fired'); // Retrieve the user's id
+
+    axios__WEBPACK_IMPORTED_MODULE_0___default()({
+      method: 'get',
+      url: '/api/user',
+      headers: {
+        Authorization: "Bearer ".concat(_auth__WEBPACK_IMPORTED_MODULE_1__["default"].state.token)
+      }
+    }).then(function (res) {
+      var id = res.data.id; // Call mutation to set user_id in state
+
+      commit('setUserId', id); //Retrieve the user's roadmap   - show a 'loading' spinner in UI
+
+      dispatch('retrieveRoadmap');
+    });
+  },
+  // Makes an API to get the original course list and sets the inital state for courseList and userCourseList 
+  retrieveCourseList: function retrieveCourseList(_ref2) {
+    var commit = _ref2.commit,
+        dispatch = _ref2.dispatch;
     // Get the full list of courses from the API
     axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('/api/courses').then(function (res) {
       // Call mutations to set the courseList state
@@ -22525,13 +22552,21 @@ var actions = {
     });
   },
   // After login - any intial action to get the userCourseList can be done here
-  getUserCourseList: function getUserCourseList(_ref2) {
-    var commit = _ref2.commit,
-        getters = _ref2.getters;
+  getUserCourseList: function getUserCourseList(_ref3) {
+    var commit = _ref3.commit,
+        getters = _ref3.getters;
     // Call a getter to create the userCourseList
     var userCourseList = getters.createUserCourseList; // Call mutation to set the userCourseList in state
 
     commit('setUserCourseList', userCourseList);
+  },
+  getCoursesByStage: function getCoursesByStage(_ref4, stage) {
+    var commit = _ref4.commit,
+        getters = _ref4.getters;
+    // Call getter to get the coursesByStage array
+    var courses = getters.filterCoursesByStage(stage); // Call mutation to set the coursesByStage state
+
+    commit('setCoursesByStage', courses);
   }
 };
 /* harmony default export */ __webpack_exports__["default"] = ({

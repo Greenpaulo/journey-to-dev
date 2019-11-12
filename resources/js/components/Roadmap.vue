@@ -5,7 +5,7 @@
     <section class="course-selector mt-5">
       <div id="select-menu">
         <ul id ="select-menu-links">
-          <li class="select-links btn btn-info">Stage 1</li>
+          <li class="select-links btn btn-info" @click="getCoursesByStage(1)">Stage 1</li>
           <li class="select-links btn btn-info">Stage 2</li>
           <li class="select-links btn btn-info">Stage 3</li>
           <li class="select-links btn btn-info">Stage 4</li>
@@ -42,11 +42,16 @@
 
 <script>
 import CourseList from './CourseList';
+import { mapActions } from 'vuex';
 
 export default {
   name: "Roadmap",
+  methods: mapActions(['loadInitialUserData', 'getCoursesByStage']),
   components: {
     CourseList
+  },
+  created () {
+    this.$store.dispatch('loadInitialUserData');
   }
 };
 
