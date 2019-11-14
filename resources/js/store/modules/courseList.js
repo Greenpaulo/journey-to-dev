@@ -10,11 +10,11 @@ const state = {
 
 const getters = {
 
+  getCourseList: state => state.courseList,
+
   // Takes the userCourseList from state and filters by stage
   filterCoursesByStage: (state) => (stage) => {
-    const coursesByStage = state.userCourseList.filter(course => {
-      return course.stage === stage
-    })
+    const coursesByStage = state.userCourseList.filter(course => course.stage === stage);
     return coursesByStage;
   },
 
@@ -23,15 +23,8 @@ const getters = {
     // Get the roadmap ids from the roadmap module
     const ids = user_roadmap.state.ids;
 
-    // We need to get the courseList and filter out the courses which are in the user's roadmap (filter by course_id) 
-    const userCourseList = [];
-
-    state.courseList.forEach((course) => {
-      // For each course we need to check that the id isn't contained within the ids variable
-      if (!(ids.includes(course.id))) {
-        userCourseList.push(course);
-      };
-    });
+    // Get the courseList and filter out the courses by course_id, which are in the user's roadmap
+    const userCourseList = state.courseList.filter(course => !(ids.includes(course.id)));
     
     return userCourseList;
   }

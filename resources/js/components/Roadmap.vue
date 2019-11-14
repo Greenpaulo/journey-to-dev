@@ -16,43 +16,39 @@
           <li class="select-links btn btn-info" @click="getCoursesByStage(9)">Stage 9</li>
         </ul>
       </div>
-
-
-      <!-- <div class="form-group" id="stage-selector">
-        <select id="stage-select" name="stage-selector">
-          <option selected="">Choose Stage ...</option>
-          <option value="1">One</option>
-          <option value="2">Two</option>
-          <option value="3">Three</option>
-          <option value="4">Four</option>
-          <option value="5">Five</option>
-          <option value="6">Six</option>
-          <option value="7">Seven</option>
-          <option value="8">Eight</option>
-          <option value="9">Nine</option>
-        </select>
-      </div> -->
-
+      
       <CourseList></CourseList>
     </section>
 
+    <Stage :stage="1"></Stage> 
+    <Stage :stage="2"></Stage> 
+    <Stage :stage="3"></Stage> 
+    <Stage :stage="4"></Stage> 
+    <Stage :stage="5"></Stage> 
+    <Stage :stage="6"></Stage> 
+    <Stage :stage="7"></Stage> 
+    <Stage :stage="8"></Stage> 
+    <Stage :stage="9"></Stage> 
 
   </div>
 </template>
 
 <script>
 import CourseList from './CourseList';
+import Stage from './Stage';
 import { mapActions } from 'vuex';
 
 export default {
   name: "Roadmap",
+  created () {
+    console.log('parent fired');
+    this.loadInitialUserData();
+  },
   methods: mapActions(['loadInitialUserData', 'getCoursesByStage']),
   components: {
-    CourseList
+    CourseList,
+    Stage
   },
-  created () {
-    this.$store.dispatch('loadInitialUserData');
-  }
 };
 
 </script>

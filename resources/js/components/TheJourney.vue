@@ -176,36 +176,9 @@
           </div>
         </div>
       </div>
-      
-      
-        
-        
+         
     </section>
   </div>
-
-      
-      <!-- <div class="icon-text-group my-4">
-        <i class="fas fa-laptop-code fa-3x text-orangered py-2"></i>
-        <p class="lead px-4">Journey To Dev is a guide for learning full stack web development. It was born out of the need for a online curriculum for self-taught prospective developers.
-        </p>
-      </div>
-      
-      <div class="icon-text-group my-4">
-        <i class="fas fa-road fa-3x text-orange"></i>
-        <p class="lead px-4">On this site you will be able to make your own "Roadmap" to plan you own journey to becoming a web developer! 
-        </p>
-      </div>
-      
-      <div class="icon-text-group my-4">
-        <i class="fas fa-graduation-cap fa-3x text-success py-2"></i>
-        <p class="lead px-4">In the past, students would have to spend time trying to figure out what to learn to become a developer. Now, you can benefit from their past research, build yourself a custom roadmap and get straight to learning!
-        </p>
-      </div>
-
-      <p class="lead my-5 welcome-btn">
-        <router-link class="btn btn-info btn-lg" to="/login" role="button">Login</router-link>
-        <router-link class="btn btn-primary btn-lg" to="/register" role="button">Register</router-link>
-      </p> -->
 </template>
 
 <script>

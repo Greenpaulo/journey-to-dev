@@ -7,13 +7,21 @@ const state = {
 };
 
 const getters = {
+  getRoadmap: state => state.roadmap,
+  
   createIdArray: (state) => {
     const ids = [];
     state.roadmap.forEach(course => {
       ids.push(course.course_id);
     });  
     return ids;
-  }
+  },
+
+  // Takes the roadmap from state and filters by stage
+  filterRoadmapByStage: (state) => (stage) => {
+    const roadmapByStage = state.roadmap.filter(course => course.stage === stage);
+    return roadmapByStage;
+  },
 };
 
 const mutations = {
@@ -22,7 +30,7 @@ const mutations = {
   },
   setIds: (state, ids) => {
     state.ids = ids;
-  }
+  },
 };
 
 const actions = {
@@ -43,7 +51,13 @@ const actions = {
           // Retrieve the course list from the API and create a user course list
           dispatch('retrieveCourseList');
         });    
-   }
+   },
+  
+   getRoadmapByStage: ({ getters }, stage) => {
+    // Call getter to get the roadmapByStage array
+    const courses = getters.filterRoadmapByStage(stage);
+    return courses;
+  }
 };
 
 export default {
