@@ -2228,7 +2228,16 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   props: ['stage'],
   computed: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_1__["mapGetters"])({
     courseList: 'getCourseList'
-  })),
+  }), {
+    totalHours: function totalHours() {
+      var courses = this.courses;
+      var total = 0;
+      courses.forEach(function (course) {
+        total += course.hours;
+      });
+      return total;
+    }
+  }),
   created: function created() {
     var _this = this;
 
@@ -5507,21 +5516,14 @@ var render = function() {
         )
       }),
       _vm._v(" "),
-      _vm._m(0)
+      _c("div", { staticClass: "stage-total" }, [
+        _c("h3", [_vm._v("Total Hrs: " + _vm._s(_vm.totalHours))])
+      ])
     ],
     2
   )
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "stage-total" }, [
-      _c("h3", [_vm._v("Total Hrs: ")])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 

@@ -14,7 +14,7 @@
       </div>
       
       <div class="stage-total">
-        <h3>Total Hrs: </h3>
+        <h3>Total Hrs: {{totalHours}}</h3>
       </div>
     </section>
 </template>
@@ -31,7 +31,15 @@ export default {
   },
   props: ['stage'],
   computed: {
-    ...mapGetters({courseList: 'getCourseList'})
+    ...mapGetters({courseList: 'getCourseList'}),
+    totalHours() {
+      const { courses } = this;
+      let total = 0;
+      courses.forEach(course => {
+        total += course.hours
+      })
+      return total;
+    }
   },
   created(){
     // Get the roadmap by stage only after the initial data has been loaded
