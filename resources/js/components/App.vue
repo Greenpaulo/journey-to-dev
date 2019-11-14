@@ -19,6 +19,7 @@
 <style lang="scss">
 
 @import 'resources/sass/variables';
+@import 'resources/sass/colors';
 
 body {
   background-color: rgb(19, 18, 18);

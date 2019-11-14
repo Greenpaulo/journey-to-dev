@@ -1,43 +1,49 @@
 <template>
   <div class="course-list">
-    <div class="course-card">
-      <h2>Card 1</h2>
-    </div>
-    <div class="course-card">
-      <h2>Card 2</h2>
-    </div>
-    <div class="course-card">
-      <h2>Card 3</h2>
-    </div>
-    <div class="course-card">
-      <h2>Card 4</h2>
-    </div>
-    <div class="course-card">
-      <h2>Card 5</h2>
-    </div>
-    <div class="course-card">
-      <h2>Card 6</h2>
+
+    <!-- <div class="course-card" v-for="course in courses" :key="course.id"> -->
+    <div class="course-card" :class='bgClass[course.stage]' v-for="course in courses" :key="course.id">
+      <div class="card-header">Stage {{course.stage}}</div>
+      <div class="card-body">
+        <h5 class="card-title">{{course.title}}</h5>
+        <p class="card-text">{{course.creator}}</p>
+        <p class="card-text">{{course.hours}} Hours</p>
+        </div>
     </div>
   </div>
+
 </template>
 
 <script>
-import Course from './Course';
-import { mapActions } from 'vuex';
+import { mapActions, mapGetters } from 'vuex';
 
 export default {
   name: "CourseList",
-  components: {
-    Course
+  data() {
+    return {
+      bgClass: {
+        '1' : 'border-stage1',
+        '2' : 'border-stage2',
+        '3' : 'border-stage3',
+        '4' : 'border-stage4',
+        '5' : 'border-stage5',
+        '6' : 'border-stage6',
+        '7' : 'border-stage7',
+        '8' : 'border-stage8',
+        '9' : 'border-stage9',
+      }
+    }
   },
-  methods: mapActions(['retrieveList', 'retrieveRoadmap']),
-  created() {
-  }
+  computed: mapGetters({courses: 'getUserCoursesByStage'}),
 }
 
 </script>
 
 <style lang="scss" scoped>
+
+@import 'resources/sass/variables';
+
+
 
 .course-list{
   display: flex;
@@ -48,9 +54,11 @@ export default {
 
 .course-card {
   background-color: #17141d;
-  min-width: 300px;
+  // min-width: 300px;
+  width: 300px;
   min-height: 350px;
   box-shadow: -1rem 0 3rem #000;
+  border-width: 4px;
   border-radius: 16px;
   padding: 1.5rem;
   transition-property: all;

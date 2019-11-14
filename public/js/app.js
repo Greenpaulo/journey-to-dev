@@ -1868,25 +1868,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Course.vue?vue&type=script&lang=js&":
-/*!*****************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Course.vue?vue&type=script&lang=js& ***!
-  \*****************************************************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-//
-//
-//
-//
-/* harmony default export */ __webpack_exports__["default"] = ({
-  name: "Course"
-});
-
-/***/ }),
-
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/CourseList.vue?vue&type=script&lang=js&":
 /*!*********************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/CourseList.vue?vue&type=script&lang=js& ***!
@@ -1896,8 +1877,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Course__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Course */ "./resources/js/components/Course.vue");
-/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
 //
 //
 //
@@ -1914,22 +1894,27 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "CourseList",
-  components: {
-    Course: _Course__WEBPACK_IMPORTED_MODULE_0__["default"]
+  data: function data() {
+    return {
+      bgClass: {
+        '1': 'border-stage1',
+        '2': 'border-stage2',
+        '3': 'border-stage3',
+        '4': 'border-stage4',
+        '5': 'border-stage5',
+        '6': 'border-stage6',
+        '7': 'border-stage7',
+        '8': 'border-stage8',
+        '9': 'border-stage9'
+      }
+    };
   },
-  methods: Object(vuex__WEBPACK_IMPORTED_MODULE_1__["mapActions"])(['retrieveList', 'retrieveRoadmap']),
-  created: function created() {}
+  computed: Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapGetters"])({
+    courses: 'getUserCoursesByStage'
+  })
 });
 
 /***/ }),
@@ -2154,16 +2139,27 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Roadmap",
   created: function created() {
-    console.log('parent fired');
     this.loadInitialUserData();
   },
-  methods: Object(vuex__WEBPACK_IMPORTED_MODULE_2__["mapActions"])(['loadInitialUserData', 'getCoursesByStage']),
+  computed: {
+    calcTotalHours: function calcTotalHours() {
+      var roadmap = this.$store.state.roadmap.roadmap;
+      var total = 0;
+      roadmap.forEach(function (course) {
+        total += course.hours;
+      });
+      return total;
+    }
+  },
+  methods: Object(vuex__WEBPACK_IMPORTED_MODULE_2__["mapActions"])(['loadInitialUserData', 'getUserCoursesByStage']),
   components: {
     CourseList: _CourseList__WEBPACK_IMPORTED_MODULE_0__["default"],
     Stage: _Stage__WEBPACK_IMPORTED_MODULE_1__["default"]
@@ -2196,7 +2192,6 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-//
 //
 //
 //
@@ -2566,7 +2561,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "body {\n  background-color: #131212;\n  /* background-color: #100e17; */\n}\n.text-orangered {\n  color: orangered !important;\n}\n.text-orange {\n  color: orange !important;\n}\n.text-purple {\n  color: #6f42c1 !important;\n}\n.text-teal {\n  color: #20c997 !important;\n}\n.text-pink {\n  color: #e83e8c !important;\n}", ""]);
+exports.push([module.i, ".bg-stage1 {\n  background-color: #CC0000;\n}\n.bg-stage2 {\n  background-color: orange;\n}\n.bg-stage3 {\n  background-color: orangered;\n}\n.bg-stage4 {\n  background-color: #77B300;\n}\n.bg-stage5 {\n  background-color: #2A9FD6;\n}\n.bg-stage6 {\n  background-color: #20c997;\n}\n.bg-stage7 {\n  background-color: #e83e8c;\n}\n.bg-stage8 {\n  background-color: #9933CC;\n}\n.bg-stage9 {\n  background-color: #fff;\n}\n.border-stage1 {\n  border-top: 8px solid #CC0000;\n  border-right: 8px solid #CC0000;\n}\n.border-stage2 {\n  border-top: 8px solid orange;\n  border-right: 8px solid orange;\n}\n.border-stage3 {\n  border-top: 8px solid orangered;\n  border-right: 8px solid orangered;\n}\n.border-stage4 {\n  border-top: 8px solid #77B300;\n  border-right: 8px solid #77B300;\n}\n.border-stage5 {\n  border-top: 8px solid #2A9FD6;\n  border-right: 8px solid #2A9FD6;\n}\n.border-stage6 {\n  border-top: 8px solid #20c997;\n  border-right: 8px solid #20c997;\n}\n.border-stage7 {\n  border-top: 8px solid #e83e8c;\n  border-right: 8px solid #e83e8c;\n}\n.border-stage8 {\n  border-top: 8px solid #9933CC;\n  border-right: 8px solid #9933CC;\n}\n.border-stage9 {\n  border-top: 8px solid #fff;\n  border-right: 8px solid #ffff;\n}\nbody {\n  background-color: #131212;\n  /* background-color: #100e17; */\n}\n.text-orangered {\n  color: orangered !important;\n}\n.text-orange {\n  color: orange !important;\n}\n.text-purple {\n  color: #6f42c1 !important;\n}\n.text-teal {\n  color: #20c997 !important;\n}\n.text-pink {\n  color: #e83e8c !important;\n}", ""]);
 
 // exports
 
@@ -2585,7 +2580,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".course-list[data-v-9d6850f8] {\n  display: flex;\n  padding: 3rem;\n  overflow-x: scroll;\n  -webkit-overflow-scrolling: touch;\n}\n.course-card[data-v-9d6850f8] {\n  background-color: #17141d;\n  min-width: 300px;\n  min-height: 350px;\n  box-shadow: -1rem 0 3rem #000;\n  border-radius: 16px;\n  padding: 1.5rem;\n  transition-property: all;\n  transition-duration: 0.2s;\n  transition-timing-function: ease;\n  transition-delay: 0s;\n}\n.course-card[data-v-9d6850f8]:not(:first-child) {\n  margin-left: -130px;\n}\n.course-card h2[data-v-9d6850f8] {\n  color: white;\n}\n.course-card[data-v-9d6850f8]:hover {\n  transform: translate(0, -1rem);\n}\n.course-card:hover ~ .course-card[data-v-9d6850f8] {\n  transform: translateX(130px);\n}\n.course-list[data-v-9d6850f8]::-webkit-scrollbar {\n  width: 10px;\n  height: 15px;\n}\n.course-list[data-v-9d6850f8]::-webkit-scrollbar-thumb {\n  background: #201c29;\n  border-radius: 10px;\n  box-shadow: inset 2px 2px 2px rgba(255, 255, 255, 0.25), inset -2px -2px 2px rgba(0, 0, 0, 0.25);\n}\n.course-list[data-v-9d6850f8]::-webkit-scrollbar-track {\n  background: linear-gradient(to right, #201c29, #201c29 1px, #17141d 1px, #17141d);\n}", ""]);
+exports.push([module.i, ".course-list[data-v-9d6850f8] {\n  display: flex;\n  padding: 3rem;\n  overflow-x: scroll;\n  -webkit-overflow-scrolling: touch;\n}\n.course-card[data-v-9d6850f8] {\n  background-color: #17141d;\n  width: 300px;\n  min-height: 350px;\n  box-shadow: -1rem 0 3rem #000;\n  border-width: 4px;\n  border-radius: 16px;\n  padding: 1.5rem;\n  transition-property: all;\n  transition-duration: 0.2s;\n  transition-timing-function: ease;\n  transition-delay: 0s;\n}\n.course-card[data-v-9d6850f8]:not(:first-child) {\n  margin-left: -130px;\n}\n.course-card h2[data-v-9d6850f8] {\n  color: white;\n}\n.course-card[data-v-9d6850f8]:hover {\n  transform: translate(0, -1rem);\n}\n.course-card:hover ~ .course-card[data-v-9d6850f8] {\n  transform: translateX(130px);\n}\n.course-list[data-v-9d6850f8]::-webkit-scrollbar {\n  width: 10px;\n  height: 15px;\n}\n.course-list[data-v-9d6850f8]::-webkit-scrollbar-thumb {\n  background: #201c29;\n  border-radius: 10px;\n  box-shadow: inset 2px 2px 2px rgba(255, 255, 255, 0.25), inset -2px -2px 2px rgba(0, 0, 0, 0.25);\n}\n.course-list[data-v-9d6850f8]::-webkit-scrollbar-track {\n  background: linear-gradient(to right, #201c29, #201c29 1px, #17141d 1px, #17141d);\n}", ""]);
 
 // exports
 
@@ -2642,7 +2637,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".stage[data-v-3fd38ca3] {\n  display: flex;\n}\n.stage-courses[data-v-3fd38ca3] {\n  max-width: 20rem;\n}", ""]);
+exports.push([module.i, ".stage[data-v-3fd38ca3] {\n  display: flex;\n}\n.stage-heading[data-v-3fd38ca3] {\n  padding: 2rem;\n  align-self: center;\n}\n.stage-heading h6[data-v-3fd38ca3] {\n  font-size: 1rem;\n}\n.stage-courses[data-v-3fd38ca3] {\n  height: 240px;\n  width: 280px;\n}", ""]);
 
 // exports
 
@@ -2661,7 +2656,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".welcome-btn[data-v-3c0a633a] {\n  text-align: center;\n}\n.icon-text-group[data-v-3c0a633a] {\n  display: flex;\n  margin: 1.7rem 0;\n}\n.lead[data-v-3c0a633a] {\n  font-size: 1.25rem !important;\n}\n.card-header h3[data-v-3c0a633a] {\n  color: white;\n}\nh3[data-v-3c0a633a], h5[data-v-3c0a633a] {\n  display: inline;\n}\nimg[data-v-3c0a633a] {\n  max-height: 70px;\n}\nimg[src=\"/images/angular.png\"][data-v-3c0a633a] {\n  padding: 0 0 0.5rem 0.5rem;\n}\nimg[src=\"/images/php.png\"][data-v-3c0a633a] {\n  max-height: 50px;\n  margin-top: 0.5rem;\n}\na[href=\"https://angularjs.org/\"] + p[data-v-3c0a633a] {\n  padding: 0 1.5rem 0 1.8rem;\n}\na[href=\"https://www.python.org/\"] + p[data-v-3c0a633a] {\n  padding: 0 1.5rem 0 2rem;\n}\na[href=\"https://www.w3schools.com/sql/\"] + p[data-v-3c0a633a] {\n  margin-left: 0.75rem;\n}\n#materialize-logo[data-v-3c0a633a] {\n  max-width: 70px;\n  max-height: 30px;\n}\n.stage-section[data-v-3c0a633a] {\n  background-color: #201e1e;\n  border-radius: 0 20px 0 20px;\n  box-shadow: -5px 5px 10px -2px #010101;\n}\n.header[data-v-3c0a633a] {\n  border-bottom: 2px solid #202020;\n}\n.text-lighter[data-v-3c0a633a] {\n  color: #d9d9d9;\n}\n#stage-one[data-v-3c0a633a] {\n  border-top: 8px solid #CC0000;\n  border-right: 8px solid #CC0000;\n}\n#stage-two[data-v-3c0a633a] {\n  border-top: 8px solid orange;\n  border-right: 8px solid orange;\n}\n#stage-three[data-v-3c0a633a] {\n  border-top: 8px solid orangered;\n  border-right: 8px solid orangered;\n}\n#stage-four[data-v-3c0a633a] {\n  border-top: 8px solid #77B300;\n  border-right: 8px solid #77B300;\n}\n#stage-five[data-v-3c0a633a] {\n  border-top: 8px solid #2A9FD6;\n  border-right: 8px solid #2A9FD6;\n}\n#stage-six[data-v-3c0a633a] {\n  border-top: 8px solid #20c997;\n  border-right: 8px solid #20c997;\n}\n#stage-seven[data-v-3c0a633a] {\n  border-top: 8px solid #e83e8c;\n  border-right: 8px solid #e83e8c;\n}\n#stage-eight[data-v-3c0a633a] {\n  border-top: 8px solid #9933CC;\n  border-right: 8px solid #9933CC;\n}\n#stage-nine[data-v-3c0a633a] {\n  border-top: 8px solid #fff;\n  border-right: 8px solid #ffff;\n}", ""]);
+exports.push([module.i, ".welcome-btn[data-v-3c0a633a] {\n  text-align: center;\n}\n.icon-text-group[data-v-3c0a633a] {\n  display: flex;\n  margin: 1.7rem 0;\n}\n.lead[data-v-3c0a633a] {\n  font-size: 1.25rem !important;\n}\n.card-header h3[data-v-3c0a633a] {\n  color: white;\n}\nh3[data-v-3c0a633a], h5[data-v-3c0a633a] {\n  display: inline;\n}\nimg[data-v-3c0a633a] {\n  max-height: 70px;\n}\nimg[src=\"/images/angular.png\"][data-v-3c0a633a] {\n  padding: 0 0 0.5rem 0.5rem;\n}\nimg[src=\"/images/php.png\"][data-v-3c0a633a] {\n  max-height: 50px;\n  margin-top: 0.5rem;\n}\na[href=\"https://angularjs.org/\"] + p[data-v-3c0a633a] {\n  padding: 0 1.5rem 0 1.8rem;\n}\na[href=\"https://www.python.org/\"] + p[data-v-3c0a633a] {\n  padding: 0 1.5rem 0 2rem;\n}\na[href=\"https://www.w3schools.com/sql/\"] + p[data-v-3c0a633a] {\n  margin-left: 0.75rem;\n}\n#materialize-logo[data-v-3c0a633a] {\n  max-width: 70px;\n  max-height: 30px;\n}\n.stage-section[data-v-3c0a633a] {\n  background-color: #201e1e;\n  border-radius: 0 20px 0 20px;\n  box-shadow: -5px 5px 10px -2px #010101;\n}\n.header[data-v-3c0a633a] {\n  border-bottom: 2px solid #202020;\n}\n.text-lighter[data-v-3c0a633a] {\n  color: #d9d9d9;\n}", ""]);
 
 // exports
 
@@ -4744,30 +4739,6 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Course.vue?vue&type=template&id=0ef708c6&scoped=true&":
-/*!*********************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Course.vue?vue&type=template&id=0ef708c6&scoped=true& ***!
-  \*********************************************************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("h4", [_vm._v("Course")])
-}
-var staticRenderFns = []
-render._withStripped = true
-
-
-
-/***/ }),
-
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/CourseList.vue?vue&type=template&id=9d6850f8&scoped=true&":
 /*!*************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/CourseList.vue?vue&type=template&id=9d6850f8&scoped=true& ***!
@@ -4783,28 +4754,42 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c(
+    "div",
+    { staticClass: "course-list" },
+    _vm._l(_vm.courses, function(course) {
+      return _c(
+        "div",
+        {
+          key: course.id,
+          staticClass: "course-card",
+          class: _vm.bgClass[course.stage]
+        },
+        [
+          _c("div", { staticClass: "card-header" }, [
+            _vm._v("Stage " + _vm._s(course.stage))
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "card-body" }, [
+            _c("h5", { staticClass: "card-title" }, [
+              _vm._v(_vm._s(course.title))
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "card-text" }, [
+              _vm._v(_vm._s(course.creator))
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "card-text" }, [
+              _vm._v(_vm._s(course.hours) + " Hours")
+            ])
+          ])
+        ]
+      )
+    }),
+    0
+  )
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "course-list" }, [
-      _c("div", { staticClass: "course-card" }, [_c("h2", [_vm._v("Card 1")])]),
-      _vm._v(" "),
-      _c("div", { staticClass: "course-card" }, [_c("h2", [_vm._v("Card 2")])]),
-      _vm._v(" "),
-      _c("div", { staticClass: "course-card" }, [_c("h2", [_vm._v("Card 3")])]),
-      _vm._v(" "),
-      _c("div", { staticClass: "course-card" }, [_c("h2", [_vm._v("Card 4")])]),
-      _vm._v(" "),
-      _c("div", { staticClass: "course-card" }, [_c("h2", [_vm._v("Card 5")])]),
-      _vm._v(" "),
-      _c("div", { staticClass: "course-card" }, [_c("h2", [_vm._v("Card 6")])])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -5322,7 +5307,7 @@ var render = function() {
                   staticClass: "select-links btn btn-info",
                   on: {
                     click: function($event) {
-                      return _vm.getCoursesByStage(1)
+                      return _vm.getUserCoursesByStage(1)
                     }
                   }
                 },
@@ -5335,7 +5320,7 @@ var render = function() {
                   staticClass: "select-links btn btn-info",
                   on: {
                     click: function($event) {
-                      return _vm.getCoursesByStage(2)
+                      return _vm.getUserCoursesByStage(2)
                     }
                   }
                 },
@@ -5348,7 +5333,7 @@ var render = function() {
                   staticClass: "select-links btn btn-info",
                   on: {
                     click: function($event) {
-                      return _vm.getCoursesByStage(3)
+                      return _vm.getUserCoursesByStage(3)
                     }
                   }
                 },
@@ -5361,7 +5346,7 @@ var render = function() {
                   staticClass: "select-links btn btn-info",
                   on: {
                     click: function($event) {
-                      return _vm.getCoursesByStage(4)
+                      return _vm.getUserCoursesByStage(4)
                     }
                   }
                 },
@@ -5374,7 +5359,7 @@ var render = function() {
                   staticClass: "select-links btn btn-info",
                   on: {
                     click: function($event) {
-                      return _vm.getCoursesByStage(5)
+                      return _vm.getUserCoursesByStage(5)
                     }
                   }
                 },
@@ -5387,7 +5372,7 @@ var render = function() {
                   staticClass: "select-links btn btn-info",
                   on: {
                     click: function($event) {
-                      return _vm.getCoursesByStage(6)
+                      return _vm.getUserCoursesByStage(6)
                     }
                   }
                 },
@@ -5400,7 +5385,7 @@ var render = function() {
                   staticClass: "select-links btn btn-info",
                   on: {
                     click: function($event) {
-                      return _vm.getCoursesByStage(7)
+                      return _vm.getUserCoursesByStage(7)
                     }
                   }
                 },
@@ -5413,7 +5398,7 @@ var render = function() {
                   staticClass: "select-links btn btn-info",
                   on: {
                     click: function($event) {
-                      return _vm.getCoursesByStage(8)
+                      return _vm.getUserCoursesByStage(8)
                     }
                   }
                 },
@@ -5426,7 +5411,7 @@ var render = function() {
                   staticClass: "select-links btn btn-info",
                   on: {
                     click: function($event) {
-                      return _vm.getCoursesByStage(9)
+                      return _vm.getUserCoursesByStage(9)
                     }
                   }
                 },
@@ -5456,7 +5441,9 @@ var render = function() {
       _vm._v(" "),
       _c("Stage", { attrs: { stage: 8 } }),
       _vm._v(" "),
-      _c("Stage", { attrs: { stage: 9 } })
+      _c("Stage", { attrs: { stage: 9 } }),
+      _vm._v(" "),
+      _c("h3", [_vm._v("Total Hours: " + _vm._s(_vm.calcTotalHours))])
     ],
     1
   )
@@ -5488,7 +5475,13 @@ var render = function() {
     { staticClass: "stage my-5" },
     [
       _c("div", { staticClass: "stage-heading" }, [
-        _c("h3", [_vm._v("Stage " + _vm._s(_vm.stage))])
+        _c("h3", { staticClass: "stage-number mb-4" }, [
+          _vm._v("Stage " + _vm._s(_vm.stage))
+        ]),
+        _vm._v(" "),
+        _c("h6", { staticClass: "stage-hrs" }, [
+          _vm._v("Total Hrs: " + _vm._s(_vm.totalHours))
+        ])
       ]),
       _vm._v(" "),
       _vm._l(_vm.courses, function(course) {
@@ -5510,15 +5503,15 @@ var render = function() {
               _vm._v(" "),
               _c("p", { staticClass: "card-text" }, [
                 _vm._v(_vm._s(course.creator))
+              ]),
+              _vm._v(" "),
+              _c("p", { staticClass: "card-text" }, [
+                _vm._v(_vm._s(course.hours) + " Hours")
               ])
             ])
           ]
         )
-      }),
-      _vm._v(" "),
-      _c("div", { staticClass: "stage-total" }, [
-        _c("h3", [_vm._v("Total Hrs: " + _vm._s(_vm.totalHours))])
-      ])
+      })
     ],
     2
   )
@@ -5559,7 +5552,7 @@ var staticRenderFns = [
         _c(
           "div",
           {
-            staticClass: "card stage-section p-4 mb-5",
+            staticClass: "card stage-section border-stage1 p-4 mb-5",
             attrs: { id: "stage-one" }
           },
           [
@@ -5626,7 +5619,7 @@ var staticRenderFns = [
         _c(
           "div",
           {
-            staticClass: "card stage-section p-4 mb-5",
+            staticClass: "card stage-section border-stage2 p-4 mb-5",
             attrs: { id: "stage-two" }
           },
           [
@@ -5704,7 +5697,7 @@ var staticRenderFns = [
         _c(
           "div",
           {
-            staticClass: "card stage-section p-4 mb-5",
+            staticClass: "card stage-section border-stage3 p-4 mb-5",
             attrs: { id: "stage-three" }
           },
           [
@@ -5753,7 +5746,7 @@ var staticRenderFns = [
         _c(
           "div",
           {
-            staticClass: "card stage-section p-4 mb-5",
+            staticClass: "card stage-section border-stage4 p-4 mb-5",
             attrs: { id: "stage-four" }
           },
           [
@@ -5839,7 +5832,7 @@ var staticRenderFns = [
         _c(
           "div",
           {
-            staticClass: "card stage-section p-4 mb-5",
+            staticClass: "card stage-section border-stage5 p-4 mb-5",
             attrs: { id: "stage-five" }
           },
           [
@@ -5955,7 +5948,7 @@ var staticRenderFns = [
         _c(
           "div",
           {
-            staticClass: "card stage-section p-4 mb-5",
+            staticClass: "card stage-section border-stage6 p-4 mb-5",
             attrs: { id: "stage-six" }
           },
           [
@@ -6048,7 +6041,7 @@ var staticRenderFns = [
         _c(
           "div",
           {
-            staticClass: "card stage-section p-4 mb-5",
+            staticClass: "card stage-section border-stage7 p-4 mb-5",
             attrs: { id: "stage-seven" }
           },
           [
@@ -6162,7 +6155,7 @@ var staticRenderFns = [
         _c(
           "div",
           {
-            staticClass: "card stage-section p-4 mb-5",
+            staticClass: "card stage-section border-stage8 p-4 mb-5",
             attrs: { id: "stage-eight" }
           },
           [
@@ -6220,7 +6213,7 @@ var staticRenderFns = [
         _c(
           "div",
           {
-            staticClass: "card stage-section p-4 mb-5",
+            staticClass: "card stage-section border-stage9 p-4 mb-5",
             attrs: { id: "stage-nine" }
           },
           [
@@ -22742,75 +22735,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/components/Course.vue":
-/*!********************************************!*\
-  !*** ./resources/js/components/Course.vue ***!
-  \********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Course_vue_vue_type_template_id_0ef708c6_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Course.vue?vue&type=template&id=0ef708c6&scoped=true& */ "./resources/js/components/Course.vue?vue&type=template&id=0ef708c6&scoped=true&");
-/* harmony import */ var _Course_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Course.vue?vue&type=script&lang=js& */ "./resources/js/components/Course.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-
-
-/* normalize component */
-
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _Course_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _Course_vue_vue_type_template_id_0ef708c6_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _Course_vue_vue_type_template_id_0ef708c6_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  "0ef708c6",
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/components/Course.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/components/Course.vue?vue&type=script&lang=js&":
-/*!*********************************************************************!*\
-  !*** ./resources/js/components/Course.vue?vue&type=script&lang=js& ***!
-  \*********************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Course_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./Course.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Course.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Course_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./resources/js/components/Course.vue?vue&type=template&id=0ef708c6&scoped=true&":
-/*!***************************************************************************************!*\
-  !*** ./resources/js/components/Course.vue?vue&type=template&id=0ef708c6&scoped=true& ***!
-  \***************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Course_vue_vue_type_template_id_0ef708c6_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./Course.vue?vue&type=template&id=0ef708c6&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Course.vue?vue&type=template&id=0ef708c6&scoped=true&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Course_vue_vue_type_template_id_0ef708c6_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Course_vue_vue_type_template_id_0ef708c6_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-
-
-/***/ }),
-
 /***/ "./resources/js/components/CourseList.vue":
 /*!************************************************!*\
   !*** ./resources/js/components/CourseList.vue ***!
@@ -23604,19 +23528,22 @@ __webpack_require__.r(__webpack_exports__);
 var state = {
   courseList: [],
   userCourseList: [],
-  coursesByStage: []
+  userCoursesByStage: []
 };
 var getters = {
   getCourseList: function getCourseList(state) {
     return state.courseList;
   },
+  getUserCoursesByStage: function getUserCoursesByStage(state) {
+    return state.userCoursesByStage;
+  },
   // Takes the userCourseList from state and filters by stage
-  filterCoursesByStage: function filterCoursesByStage(state) {
+  filterUserCoursesByStage: function filterUserCoursesByStage(state) {
     return function (stage) {
-      var coursesByStage = state.userCourseList.filter(function (course) {
+      var userCoursesByStage = state.userCourseList.filter(function (course) {
         return course.stage === stage;
       });
-      return coursesByStage;
+      return userCoursesByStage;
     };
   },
   // Takes the CourseList state and the roadmap ids's state and returns a userCourseList
@@ -23637,8 +23564,8 @@ var mutations = {
   setUserCourseList: function setUserCourseList(state, userCourseList) {
     state.userCourseList = userCourseList;
   },
-  setCoursesByStage: function setCoursesByStage(state, courses) {
-    state.coursesByStage = courses;
+  setUserCoursesByStage: function setUserCoursesByStage(state, courses) {
+    state.userCoursesByStage = courses;
   }
 };
 var actions = {
@@ -23683,13 +23610,13 @@ var actions = {
 
     commit('setUserCourseList', userCourseList);
   },
-  getCoursesByStage: function getCoursesByStage(_ref4, stage) {
+  getUserCoursesByStage: function getUserCoursesByStage(_ref4, stage) {
     var commit = _ref4.commit,
         getters = _ref4.getters;
     // Call getter to get the coursesByStage array
-    var courses = getters.filterCoursesByStage(stage); // Call mutation to set the coursesByStage state
+    var courses = getters.filterUserCoursesByStage(stage); // Call mutation to set the coursesByStage state
 
-    commit('setCoursesByStage', courses);
+    commit('setUserCoursesByStage', courses);
   }
 };
 /* harmony default export */ __webpack_exports__["default"] = ({

@@ -5,15 +5,15 @@
     <section class="course-selector mt-5">
       <div id="select-menu">
         <ul id ="select-menu-links">
-          <li class="select-links btn btn-info" @click="getCoursesByStage(1)">Stage 1</li>
-          <li class="select-links btn btn-info" @click="getCoursesByStage(2)">Stage 2</li>
-          <li class="select-links btn btn-info" @click="getCoursesByStage(3)">Stage 3</li>
-          <li class="select-links btn btn-info" @click="getCoursesByStage(4)">Stage 4</li>
-          <li class="select-links btn btn-info" @click="getCoursesByStage(5)">Stage 5</li>
-          <li class="select-links btn btn-info" @click="getCoursesByStage(6)">Stage 6</li>
-          <li class="select-links btn btn-info" @click="getCoursesByStage(7)">Stage 7</li>
-          <li class="select-links btn btn-info" @click="getCoursesByStage(8)">Stage 8</li>
-          <li class="select-links btn btn-info" @click="getCoursesByStage(9)">Stage 9</li>
+          <li class="select-links btn btn-info" @click="getUserCoursesByStage(1)">Stage 1</li>
+          <li class="select-links btn btn-info" @click="getUserCoursesByStage(2)">Stage 2</li>
+          <li class="select-links btn btn-info" @click="getUserCoursesByStage(3)">Stage 3</li>
+          <li class="select-links btn btn-info" @click="getUserCoursesByStage(4)">Stage 4</li>
+          <li class="select-links btn btn-info" @click="getUserCoursesByStage(5)">Stage 5</li>
+          <li class="select-links btn btn-info" @click="getUserCoursesByStage(6)">Stage 6</li>
+          <li class="select-links btn btn-info" @click="getUserCoursesByStage(7)">Stage 7</li>
+          <li class="select-links btn btn-info" @click="getUserCoursesByStage(8)">Stage 8</li>
+          <li class="select-links btn btn-info" @click="getUserCoursesByStage(9)">Stage 9</li>
         </ul>
       </div>
       
@@ -28,7 +28,9 @@
     <Stage :stage="6"></Stage> 
     <Stage :stage="7"></Stage> 
     <Stage :stage="8"></Stage> 
-    <Stage :stage="9"></Stage> 
+    <Stage :stage="9"></Stage>
+
+    <h3>Total Hours: {{calcTotalHours}}</h3>
 
   </div>
 </template>
@@ -41,10 +43,19 @@ import { mapActions } from 'vuex';
 export default {
   name: "Roadmap",
   created () {
-    console.log('parent fired');
     this.loadInitialUserData();
   },
-  methods: mapActions(['loadInitialUserData', 'getCoursesByStage']),
+  computed: {
+    calcTotalHours() {
+      const { roadmap } = this.$store.state.roadmap;
+      let total = 0;
+      roadmap.forEach(course => {
+        total += course.hours
+      });
+      return total;
+    }
+  },
+  methods: mapActions(['loadInitialUserData', 'getUserCoursesByStage']),
   components: {
     CourseList,
     Stage

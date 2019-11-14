@@ -5,17 +5,18 @@ import user_roadmap from './roadmap';
 const state = {
   courseList: [],
   userCourseList: [],
-  coursesByStage: []
+  userCoursesByStage: [],
 };
 
 const getters = {
 
   getCourseList: state => state.courseList,
+  getUserCoursesByStage: state => state.userCoursesByStage,
 
   // Takes the userCourseList from state and filters by stage
-  filterCoursesByStage: (state) => (stage) => {
-    const coursesByStage = state.userCourseList.filter(course => course.stage === stage);
-    return coursesByStage;
+  filterUserCoursesByStage: (state) => (stage) => {
+    const userCoursesByStage = state.userCourseList.filter(course => course.stage === stage);
+    return userCoursesByStage;
   },
 
   // Takes the CourseList state and the roadmap ids's state and returns a userCourseList
@@ -25,7 +26,7 @@ const getters = {
 
     // Get the courseList and filter out the courses by course_id, which are in the user's roadmap
     const userCourseList = state.courseList.filter(course => !(ids.includes(course.id)));
-    
+
     return userCourseList;
   }
 };
@@ -38,14 +39,14 @@ const mutations = {
   setUserCourseList: (state, userCourseList) => {
     state.userCourseList = userCourseList;
   },
-  setCoursesByStage: (state, courses) => {
-    state.coursesByStage = courses;
+  setUserCoursesByStage: (state, courses) => {
+    state.userCoursesByStage = courses;
   }
 };
 
 const actions = {
   // Retrieves all user data
-  loadInitialUserData :({ commit, dispatch }) => {
+  loadInitialUserData: ({ commit, dispatch }) => {
     console.log('userdata action fired');
     // Retrieve the user's id
     axios({ method: 'get', url: '/api/user', headers: { Authorization: `Bearer ${auth.state.token}` } })
@@ -74,7 +75,7 @@ const actions = {
         dispatch('getUserCourseList');
       })
   },
-  
+
   // After login - any intial action to get the userCourseList can be done here
   getUserCourseList: ({ commit, getters }) => {
     // Call a getter to create the userCourseList
@@ -84,18 +85,18 @@ const actions = {
     commit('setUserCourseList', userCourseList);
   },
 
-  getCoursesByStage: ({ commit, getters}, stage) => {
+  getUserCoursesByStage: ({ commit, getters }, stage) => {
     // Call getter to get the coursesByStage array
-    const courses = getters.filterCoursesByStage(stage);
+    const courses = getters.filterUserCoursesByStage(stage);
 
     // Call mutation to set the coursesByStage state
-    commit('setCoursesByStage', courses);
+    commit('setUserCoursesByStage', courses);
   }
 };
 
 export default {
   state,
-  getters, 
-  mutations, 
+  getters,
+  mutations,
   actions
 };

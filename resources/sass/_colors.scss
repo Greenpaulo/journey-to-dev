@@ -1,3 +1,85 @@
-// Colours
-$primary-color: #230244;
-$secondary-color: rgb(8, 218, 100);
+// Stage colours
+$stage1: $red;
+$stage2: orange;
+$stage3: orangered;
+$stage4: $green;
+$stage5: $blue;
+$stage6: $teal;
+$stage7: $pink;
+$stage8: $info;
+$stage9: $white;
+
+//Stage backgrounds
+.bg-stage1 {
+  background-color: $stage1;
+}
+.bg-stage2 {
+  background-color: $stage2;
+}
+.bg-stage3 {
+  background-color: $stage3;
+}
+.bg-stage4 {
+  background-color: $stage4;
+}
+.bg-stage5 {
+  background-color: $stage5;
+}
+.bg-stage6 {
+  background-color: $stage6;
+}
+.bg-stage7 {
+  background-color: $stage7;
+}
+.bg-stage8 {
+  background-color: $stage8;
+}
+.bg-stage9 {
+  background-color: $stage9;
+}
+
+// Stage borders
+.border-stage1 {
+  border-top: 8px solid $red;
+  border-right: 8px solid $red; 
+}
+
+.border-stage2 {
+  border-top: 8px solid orange;
+  border-right: 8px solid orange;
+}
+
+.border-stage3 {
+  border-top: 8px solid orangered;
+  border-right: 8px solid orangered;
+}
+
+.border-stage4 {
+  border-top: 8px solid $green;
+  border-right: 8px solid $green;
+}
+
+.border-stage5 {
+  border-top: 8px solid $blue;
+  border-right: 8px solid $blue;
+}
+
+.border-stage6 {
+  border-top: 8px solid $teal;
+  border-right: 8px solid $teal;
+}
+
+.border-stage7 {
+  border-top: 8px solid $pink;
+  border-right: 8px solid $pink;
+}
+
+.border-stage8 {
+  border-top: 8px solid $info;
+  border-right: 8px solid $info;
+}
+
+.border-stage9 {
+  border-top: 8px solid #fff;
+  border-right: 8px solid #ffff;
+}

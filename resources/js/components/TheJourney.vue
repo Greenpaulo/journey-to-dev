@@ -3,7 +3,7 @@
     <h1 class="display-4">The Journey</h1>
     <section class="p-3 my-4">
 
-      <div class="card stage-section p-4 mb-5" id="stage-one">
+      <div class="card stage-section border-stage1 p-4 mb-5" id="stage-one">
         <div class="card-header"><h3>Stage One</h3><h5 class="stage-heading text-danger mx-3 py-2">HTML & CSS</h5></div>
         <div class=" card-body">
           <div class="icon-text-group my-4">
@@ -19,7 +19,7 @@
         </div>
       </div>
       
-      <div class="card stage-section p-4 mb-5" id="stage-two">
+      <div class="card stage-section border-stage2 p-4 mb-5" id="stage-two">
         <div class="card-header"><h3>Stage Two</h3><h5 class="stage-heading text-orange mx-3 py-2">CSS Frameworks</h5></div>
         <div class=" card-body">
           <div class="icon-text-group my-4">
@@ -35,7 +35,7 @@
         </div>
       </div>
 
-      <div class="card stage-section p-4 mb-5" id="stage-three">
+      <div class="card stage-section border-stage3 p-4 mb-5" id="stage-three">
         <div class="card-header"><h3>Stage Three</h3><h5 class="stage-heading text-orangered mx-3 py-2">JavaScript</h5></div>
         <div class=" card-body">
           <div class="icon-text-group my-4">
@@ -46,7 +46,7 @@
         </div>
       </div>
 
-      <div class="card stage-section p-4 mb-5" id="stage-four">
+      <div class="card stage-section border-stage4 p-4 mb-5" id="stage-four">
         <div class="card-header"><h3>Stage Four</h3><h5 class="stage-heading text-success mx-3 py-2">Front-end JS Frameworks</h5></div>
         <div class=" card-body">
           <div class="icon-text-group my-4">
@@ -67,7 +67,7 @@
         </div>
       </div>
 
-      <div class="card stage-section p-4 mb-5" id="stage-five">
+      <div class="card stage-section border-stage5 p-4 mb-5" id="stage-five">
         <div class="card-header"><h3>Stage Five</h3><h5 class="stage-heading text-primary mx-3 py-2">Server Side Languages</h5></div>
         <div class=" card-body">
           <div class="icon-text-group my-4">
@@ -93,7 +93,7 @@
         </div>
       </div>
 
-      <div class="card stage-section p-4 mb-5" id="stage-six">
+      <div class="card stage-section border-stage6 p-4 mb-5" id="stage-six">
         <div class="card-header"><h3>Stage Six</h3><h5 class="stage-heading text-teal mx-3 py-2">Databases </h5></div>
         <div class=" card-body">
           <div class="icon-text-group my-4">
@@ -114,7 +114,7 @@
         </div>
       </div>
 
-      <div class="card stage-section p-4 mb-5" id="stage-seven">
+      <div class="card stage-section border-stage7 p-4 mb-5" id="stage-seven">
         <div class="card-header"><h3>Stage Seven</h3><h5 class="stage-heading text-pink mx-3 py-2">Server Side Frameworks </h5></div>
         <div class=" card-body">
           <div class="icon-text-group my-4">
@@ -140,7 +140,7 @@
         </div>
       </div>
 
-      <div class="card stage-section p-4 mb-5" id="stage-eight">
+      <div class="card stage-section border-stage8 p-4 mb-5" id="stage-eight">
         <div class="card-header"><h3>Stage Eight</h3><h5 class="stage-heading text-info mx-3 py-2">Version Control </h5></div>
         <div class=" card-body">
           <div class="icon-text-group my-4">
@@ -156,7 +156,7 @@
         </div>
       </div>
 
-      <div class="card stage-section p-4 mb-5" id="stage-nine">
+      <div class="card stage-section border-stage9 p-4 mb-5" id="stage-nine">
         <div class="card-header"><h3>Stage Nine</h3><h5 class="stage-heading text-white mx-3 py-2">Deployment</h5></div>
         <div class=" card-body">
           <div class="icon-text-group my-4">
@@ -256,48 +256,4 @@ a[href="https://www.w3schools.com/sql/"] + p {
   color: darken(#fff, 15%);
 }
 
-#stage-one {
-  border-top: 8px solid $red;
-  border-right: 8px solid $red; 
-}
-
-#stage-two {
-  border-top: 8px solid orange;
-  border-right: 8px solid orange;
-}
-
-#stage-three {
-  border-top: 8px solid orangered;
-  border-right: 8px solid orangered;
-}
-
-#stage-four {
-  border-top: 8px solid $green;
-  border-right: 8px solid $green;
-}
-
-#stage-five {
-  border-top: 8px solid $blue;
-  border-right: 8px solid $blue;
-}
-
-#stage-six {
-  border-top: 8px solid $teal;
-  border-right: 8px solid $teal;
-}
-
-#stage-seven {
-  border-top: 8px solid $pink;
-  border-right: 8px solid $pink;
-}
-
-#stage-eight {
-  border-top: 8px solid $info;
-  border-right: 8px solid $info;
-}
-
-#stage-nine {
-  border-top: 8px solid #fff;
-  border-right: 8px solid #ffff;
-}
 </style>
