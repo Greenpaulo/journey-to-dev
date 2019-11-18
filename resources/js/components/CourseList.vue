@@ -1,13 +1,14 @@
 <template>
   <div class="course-list">
 
-    <!-- <div class="course-card" v-for="course in courses" :key="course.id"> -->
-    <div class="course-card" :class='bgClass[course.stage]' v-for="course in courses" :key="course.id">
+      <div class="course-card" v-for="course in courses" :key="course.id" :class="`border-stage${course.stage}`">
       <div class="card-header">Stage {{course.stage}}</div>
       <div class="card-body">
         <h5 class="card-title">{{course.title}}</h5>
         <p class="card-text">{{course.creator}}</p>
         <p class="card-text">{{course.hours}} Hours</p>
+        <div class="add-btn" :class="`bg-stage${course.stage}`" @click="addCourseToRoadmap(course)">
+          <i class="fas fa-plus fa-2x"></i></div>
         </div>
     </div>
   </div>
@@ -21,20 +22,11 @@ export default {
   name: "CourseList",
   data() {
     return {
-      bgClass: {
-        '1' : 'border-stage1',
-        '2' : 'border-stage2',
-        '3' : 'border-stage3',
-        '4' : 'border-stage4',
-        '5' : 'border-stage5',
-        '6' : 'border-stage6',
-        '7' : 'border-stage7',
-        '8' : 'border-stage8',
-        '9' : 'border-stage9',
-      }
+      stage: "1"
     }
   },
-  computed: mapGetters({courses: 'getUserCoursesByStage'}),
+  computed: mapGetters({userCourseList: 'retrieveUserCourseList', courses: 'retrieveUserCoursesByStage'}),
+  methods: mapActions(['addCourseToRoadmap', 'getUserCoursesByStage'])
 }
 
 </script>
@@ -42,6 +34,7 @@ export default {
 <style lang="scss" scoped>
 
 @import 'resources/sass/variables';
+@import 'resources/sass/colors';
 
 
 
@@ -98,5 +91,27 @@ export default {
 
 .course-list::-webkit-scrollbar-track {
     background: linear-gradient(to right,#201c29,#201c29 1px,#17141d 1px,#17141d);
+}
+
+
+// Add button
+
+.add-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.bg-stage9 i.fa-plus {
+  color: black;
+}
+
+i.fa-plus {
+  padding-top: 11px;
+  padding-left: 13px;
+  width: 50px;
+  height: 50px;
+  color: white;
 }
 </style>

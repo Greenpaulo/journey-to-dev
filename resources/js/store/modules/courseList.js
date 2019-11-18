@@ -11,7 +11,8 @@ const state = {
 const getters = {
 
   getCourseList: state => state.courseList,
-  getUserCoursesByStage: state => state.userCoursesByStage,
+  retrieveUserCourseList: state => state.userCourseList,
+  retrieveUserCoursesByStage: state => state.userCoursesByStage,
 
   // Takes the userCourseList from state and filters by stage
   filterUserCoursesByStage: (state) => (stage) => {
@@ -47,7 +48,6 @@ const mutations = {
 const actions = {
   // Retrieves all user data
   loadInitialUserData: ({ commit, dispatch }) => {
-    console.log('userdata action fired');
     // Retrieve the user's id
     axios({ method: 'get', url: '/api/user', headers: { Authorization: `Bearer ${auth.state.token}` } })
       .then(res => {
@@ -76,7 +76,7 @@ const actions = {
       })
   },
 
-  // After login - any intial action to get the userCourseList can be done here
+  // After login - any subsequent action to get the userCourseList can be done here
   getUserCourseList: ({ commit, getters }) => {
     // Call a getter to create the userCourseList
     const userCourseList = getters.createUserCourseList;

@@ -6,7 +6,7 @@
         <h6 class="stage-hrs">Total Hrs: {{totalHours}}</h6>
       </div>
         
-      <div class="stage-courses card text-white bg-info mb-3" v-for="course in courses" :key="course.id">
+      <div class="stage-courses card text-white bg-info mb-3" v-for="course in currentRoadmap" :key="course.id">
         <div class="card-header">Stage {{course.stage}}</div>
         <div class="card-body">
           <h5 class="card-title">{{course.title}}</h5>
@@ -25,12 +25,17 @@ export default {
   name: "Stage",
   data() {
     return {
-      courses: []
+      courses: []   // This needs to update any time the roadmap is changed
     }
   },
   props: ['stage'],
   computed: {
     ...mapGetters({courseList: 'getCourseList'}),
+    currentRoadmap() {
+      // now we'll pass in your 'stage' prop to get the appropriate map
+      // this will re-render the component as that prop changes
+      return this.$store.getters.getRoadmapByStage(this.stage);
+    },
     totalHours() {
       const { courses } = this;
       let total = 0;
@@ -51,9 +56,8 @@ export default {
     }
   },
   methods: {
-    async callGetByStage(stage){
-      const courses = await this.$store.dispatch('getRoadmapByStage', stage);
-      this.courses = courses;
+    callGetByStage(stage){
+      this.$store.dispatch('getRoadmapByStage', stage);
     }
   }
 }

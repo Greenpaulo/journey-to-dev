@@ -1894,27 +1894,20 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "CourseList",
   data: function data() {
     return {
-      bgClass: {
-        '1': 'border-stage1',
-        '2': 'border-stage2',
-        '3': 'border-stage3',
-        '4': 'border-stage4',
-        '5': 'border-stage5',
-        '6': 'border-stage6',
-        '7': 'border-stage7',
-        '8': 'border-stage8',
-        '9': 'border-stage9'
-      }
+      stage: "1"
     };
   },
   computed: Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapGetters"])({
-    courses: 'getUserCoursesByStage'
-  })
+    userCourseList: 'retrieveUserCourseList',
+    courses: 'retrieveUserCoursesByStage'
+  }),
+  methods: Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapActions"])(['addCourseToRoadmap', 'getUserCoursesByStage'])
 });
 
 /***/ }),
@@ -2104,6 +2097,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _CourseList__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./CourseList */ "./resources/js/components/CourseList.vue");
 /* harmony import */ var _Stage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Stage */ "./resources/js/components/Stage.vue");
 /* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(source, true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(source).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -2149,7 +2157,29 @@ __webpack_require__.r(__webpack_exports__);
   created: function created() {
     this.loadInitialUserData();
   },
-  computed: {
+  mounted: function mounted() {
+    var _this = this;
+
+    // Intialise bootstrap tooltip
+    $('[data-toggle="tooltip"]').tooltip(); // Render the courseList stage 1 default only after the initial data has been loaded
+
+    var initialLoad = function initialLoad() {
+      if (_this.userCourseList.length === 0) {
+        setTimeout(function () {
+          initialLoad();
+        }, 1000);
+      } else {
+        _this.getUserCoursesByStage(1);
+      }
+
+      ;
+    };
+
+    initialLoad();
+  },
+  computed: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_2__["mapGetters"])({
+    userCourseList: 'retrieveUserCourseList'
+  }), {
     calcTotalHours: function calcTotalHours() {
       var roadmap = this.$store.state.roadmap.roadmap;
       var total = 0;
@@ -2158,7 +2188,7 @@ __webpack_require__.r(__webpack_exports__);
       });
       return total;
     }
-  },
+  }),
   methods: Object(vuex__WEBPACK_IMPORTED_MODULE_2__["mapActions"])(['loadInitialUserData', 'getUserCoursesByStage']),
   components: {
     CourseList: _CourseList__WEBPACK_IMPORTED_MODULE_0__["default"],
@@ -2177,15 +2207,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
-
-
-function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
-
-function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
-
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(source, true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(source).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -2217,13 +2239,19 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   name: "Stage",
   data: function data() {
     return {
-      courses: []
+      courses: [] // This needs to update any time the roadmap is changed
+
     };
   },
   props: ['stage'],
-  computed: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_1__["mapGetters"])({
+  computed: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapGetters"])({
     courseList: 'getCourseList'
   }), {
+    currentRoadmap: function currentRoadmap() {
+      // now we'll pass in your 'stage' prop to get the appropriate map
+      // this will re-render the component as that prop changes
+      return this.$store.getters.getRoadmapByStage(this.stage);
+    },
     totalHours: function totalHours() {
       var courses = this.courses;
       var total = 0;
@@ -2246,36 +2274,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     }
   },
   methods: {
-    callGetByStage: function () {
-      var _callGetByStage = _asyncToGenerator(
-      /*#__PURE__*/
-      _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(stage) {
-        var courses;
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
-          while (1) {
-            switch (_context.prev = _context.next) {
-              case 0:
-                _context.next = 2;
-                return this.$store.dispatch('getRoadmapByStage', stage);
-
-              case 2:
-                courses = _context.sent;
-                this.courses = courses;
-
-              case 4:
-              case "end":
-                return _context.stop();
-            }
-          }
-        }, _callee, this);
-      }));
-
-      function callGetByStage(_x) {
-        return _callGetByStage.apply(this, arguments);
-      }
-
-      return callGetByStage;
-    }()
+    callGetByStage: function callGetByStage(stage) {
+      this.$store.dispatch('getRoadmapByStage', stage);
+    }
   }
 });
 
@@ -2580,7 +2581,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".course-list[data-v-9d6850f8] {\n  display: flex;\n  padding: 3rem;\n  overflow-x: scroll;\n  -webkit-overflow-scrolling: touch;\n}\n.course-card[data-v-9d6850f8] {\n  background-color: #17141d;\n  width: 300px;\n  min-height: 350px;\n  box-shadow: -1rem 0 3rem #000;\n  border-width: 4px;\n  border-radius: 16px;\n  padding: 1.5rem;\n  transition-property: all;\n  transition-duration: 0.2s;\n  transition-timing-function: ease;\n  transition-delay: 0s;\n}\n.course-card[data-v-9d6850f8]:not(:first-child) {\n  margin-left: -130px;\n}\n.course-card h2[data-v-9d6850f8] {\n  color: white;\n}\n.course-card[data-v-9d6850f8]:hover {\n  transform: translate(0, -1rem);\n}\n.course-card:hover ~ .course-card[data-v-9d6850f8] {\n  transform: translateX(130px);\n}\n.course-list[data-v-9d6850f8]::-webkit-scrollbar {\n  width: 10px;\n  height: 15px;\n}\n.course-list[data-v-9d6850f8]::-webkit-scrollbar-thumb {\n  background: #201c29;\n  border-radius: 10px;\n  box-shadow: inset 2px 2px 2px rgba(255, 255, 255, 0.25), inset -2px -2px 2px rgba(0, 0, 0, 0.25);\n}\n.course-list[data-v-9d6850f8]::-webkit-scrollbar-track {\n  background: linear-gradient(to right, #201c29, #201c29 1px, #17141d 1px, #17141d);\n}", ""]);
+exports.push([module.i, ".bg-stage1[data-v-9d6850f8] {\n  background-color: #CC0000;\n}\n.bg-stage2[data-v-9d6850f8] {\n  background-color: orange;\n}\n.bg-stage3[data-v-9d6850f8] {\n  background-color: orangered;\n}\n.bg-stage4[data-v-9d6850f8] {\n  background-color: #77B300;\n}\n.bg-stage5[data-v-9d6850f8] {\n  background-color: #2A9FD6;\n}\n.bg-stage6[data-v-9d6850f8] {\n  background-color: #20c997;\n}\n.bg-stage7[data-v-9d6850f8] {\n  background-color: #e83e8c;\n}\n.bg-stage8[data-v-9d6850f8] {\n  background-color: #9933CC;\n}\n.bg-stage9[data-v-9d6850f8] {\n  background-color: #fff;\n}\n.border-stage1[data-v-9d6850f8] {\n  border-top: 8px solid #CC0000;\n  border-right: 8px solid #CC0000;\n}\n.border-stage2[data-v-9d6850f8] {\n  border-top: 8px solid orange;\n  border-right: 8px solid orange;\n}\n.border-stage3[data-v-9d6850f8] {\n  border-top: 8px solid orangered;\n  border-right: 8px solid orangered;\n}\n.border-stage4[data-v-9d6850f8] {\n  border-top: 8px solid #77B300;\n  border-right: 8px solid #77B300;\n}\n.border-stage5[data-v-9d6850f8] {\n  border-top: 8px solid #2A9FD6;\n  border-right: 8px solid #2A9FD6;\n}\n.border-stage6[data-v-9d6850f8] {\n  border-top: 8px solid #20c997;\n  border-right: 8px solid #20c997;\n}\n.border-stage7[data-v-9d6850f8] {\n  border-top: 8px solid #e83e8c;\n  border-right: 8px solid #e83e8c;\n}\n.border-stage8[data-v-9d6850f8] {\n  border-top: 8px solid #9933CC;\n  border-right: 8px solid #9933CC;\n}\n.border-stage9[data-v-9d6850f8] {\n  border-top: 8px solid #fff;\n  border-right: 8px solid #ffff;\n}\n.course-list[data-v-9d6850f8] {\n  display: flex;\n  padding: 3rem;\n  overflow-x: scroll;\n  -webkit-overflow-scrolling: touch;\n}\n.course-card[data-v-9d6850f8] {\n  background-color: #17141d;\n  width: 300px;\n  min-height: 350px;\n  box-shadow: -1rem 0 3rem #000;\n  border-width: 4px;\n  border-radius: 16px;\n  padding: 1.5rem;\n  transition-property: all;\n  transition-duration: 0.2s;\n  transition-timing-function: ease;\n  transition-delay: 0s;\n}\n.course-card[data-v-9d6850f8]:not(:first-child) {\n  margin-left: -130px;\n}\n.course-card h2[data-v-9d6850f8] {\n  color: white;\n}\n.course-card[data-v-9d6850f8]:hover {\n  transform: translate(0, -1rem);\n}\n.course-card:hover ~ .course-card[data-v-9d6850f8] {\n  transform: translateX(130px);\n}\n.course-list[data-v-9d6850f8]::-webkit-scrollbar {\n  width: 10px;\n  height: 15px;\n}\n.course-list[data-v-9d6850f8]::-webkit-scrollbar-thumb {\n  background: #201c29;\n  border-radius: 10px;\n  box-shadow: inset 2px 2px 2px rgba(255, 255, 255, 0.25), inset -2px -2px 2px rgba(0, 0, 0, 0.25);\n}\n.course-list[data-v-9d6850f8]::-webkit-scrollbar-track {\n  background: linear-gradient(to right, #201c29, #201c29 1px, #17141d 1px, #17141d);\n}\n.add-btn[data-v-9d6850f8] {\n  width: 50px;\n  height: 50px;\n  border-radius: 50%;\n  cursor: pointer;\n}\n.bg-stage9 i.fa-plus[data-v-9d6850f8] {\n  color: black;\n}\ni.fa-plus[data-v-9d6850f8] {\n  padding-top: 11px;\n  padding-left: 13px;\n  width: 50px;\n  height: 50px;\n  color: white;\n}", ""]);
 
 // exports
 
@@ -2618,7 +2619,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "#select-menu-links[data-v-04effda1] {\n  display: flex;\n  justify-content: space-between;\n}\n.select-links[data-v-04effda1] {\n  list-style: none;\n  cursor: pointer;\n}", ""]);
+exports.push([module.i, "#select-menu-links[data-v-04effda1] {\n  display: flex;\n  justify-content: space-between;\n}\n.select-links[data-v-04effda1] {\n  list-style: none;\n  cursor: pointer;\n}\n.btn-stage9[data-v-04effda1] {\n  color: black;\n}", ""]);
 
 // exports
 
@@ -4763,7 +4764,7 @@ var render = function() {
         {
           key: course.id,
           staticClass: "course-card",
-          class: _vm.bgClass[course.stage]
+          class: "border-stage" + course.stage
         },
         [
           _c("div", { staticClass: "card-header" }, [
@@ -4781,7 +4782,21 @@ var render = function() {
             _vm._v(" "),
             _c("p", { staticClass: "card-text" }, [
               _vm._v(_vm._s(course.hours) + " Hours")
-            ])
+            ]),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass: "add-btn",
+                class: "bg-stage" + course.stage,
+                on: {
+                  click: function($event) {
+                    return _vm.addCourseToRoadmap(course)
+                  }
+                }
+              },
+              [_c("i", { staticClass: "fas fa-plus fa-2x" })]
+            )
           ])
         ]
       )
@@ -5304,7 +5319,12 @@ var render = function() {
               _c(
                 "li",
                 {
-                  staticClass: "select-links btn btn-info",
+                  staticClass: "select-links btn bg-stage1 text-white",
+                  attrs: {
+                    "data-toggle": "tooltip",
+                    "data-placement": "top",
+                    title: "HTML & CSS"
+                  },
                   on: {
                     click: function($event) {
                       return _vm.getUserCoursesByStage(1)
@@ -5317,7 +5337,12 @@ var render = function() {
               _c(
                 "li",
                 {
-                  staticClass: "select-links btn btn-info",
+                  staticClass: "select-links btn bg-stage2 text-white",
+                  attrs: {
+                    "data-toggle": "tooltip",
+                    "data-placement": "top",
+                    title: "CSS Frameworks"
+                  },
                   on: {
                     click: function($event) {
                       return _vm.getUserCoursesByStage(2)
@@ -5330,7 +5355,12 @@ var render = function() {
               _c(
                 "li",
                 {
-                  staticClass: "select-links btn btn-info",
+                  staticClass: "select-links btn bg-stage3 text-white",
+                  attrs: {
+                    "data-toggle": "tooltip",
+                    "data-placement": "top",
+                    title: "JavaScript"
+                  },
                   on: {
                     click: function($event) {
                       return _vm.getUserCoursesByStage(3)
@@ -5343,7 +5373,12 @@ var render = function() {
               _c(
                 "li",
                 {
-                  staticClass: "select-links btn btn-info",
+                  staticClass: "select-links btn bg-stage4 text-white",
+                  attrs: {
+                    "data-toggle": "tooltip",
+                    "data-placement": "top",
+                    title: "Front-End JS Frameworks"
+                  },
                   on: {
                     click: function($event) {
                       return _vm.getUserCoursesByStage(4)
@@ -5356,7 +5391,12 @@ var render = function() {
               _c(
                 "li",
                 {
-                  staticClass: "select-links btn btn-info",
+                  staticClass: "select-links btn bg-stage5 text-white",
+                  attrs: {
+                    "data-toggle": "tooltip",
+                    "data-placement": "top",
+                    title: "Server Side Languages"
+                  },
                   on: {
                     click: function($event) {
                       return _vm.getUserCoursesByStage(5)
@@ -5369,7 +5409,12 @@ var render = function() {
               _c(
                 "li",
                 {
-                  staticClass: "select-links btn btn-info",
+                  staticClass: "select-links btn bg-stage6 text-white",
+                  attrs: {
+                    "data-toggle": "tooltip",
+                    "data-placement": "top",
+                    title: "Databases"
+                  },
                   on: {
                     click: function($event) {
                       return _vm.getUserCoursesByStage(6)
@@ -5382,7 +5427,12 @@ var render = function() {
               _c(
                 "li",
                 {
-                  staticClass: "select-links btn btn-info",
+                  staticClass: "select-links btn bg-stage7 text-white",
+                  attrs: {
+                    "data-toggle": "tooltip",
+                    "data-placement": "top",
+                    title: "Server Side Frameworks"
+                  },
                   on: {
                     click: function($event) {
                       return _vm.getUserCoursesByStage(7)
@@ -5395,7 +5445,12 @@ var render = function() {
               _c(
                 "li",
                 {
-                  staticClass: "select-links btn btn-info",
+                  staticClass: "select-links btn bg-stage8 text-white",
+                  attrs: {
+                    "data-toggle": "tooltip",
+                    "data-placement": "top",
+                    title: "Version Control"
+                  },
                   on: {
                     click: function($event) {
                       return _vm.getUserCoursesByStage(8)
@@ -5408,7 +5463,12 @@ var render = function() {
               _c(
                 "li",
                 {
-                  staticClass: "select-links btn btn-info",
+                  staticClass: "select-links btn btn-stage9 bg-stage9",
+                  attrs: {
+                    "data-toggle": "tooltip",
+                    "data-placement": "top",
+                    title: "Deployment"
+                  },
                   on: {
                     click: function($event) {
                       return _vm.getUserCoursesByStage(9)
@@ -5484,7 +5544,7 @@ var render = function() {
         ])
       ]),
       _vm._v(" "),
-      _vm._l(_vm.courses, function(course) {
+      _vm._l(_vm.currentRoadmap, function(course) {
         return _c(
           "div",
           {
@@ -5755,7 +5815,7 @@ var staticRenderFns = [
               _c(
                 "h5",
                 { staticClass: "stage-heading text-success mx-3 py-2" },
-                [_vm._v("Front-end JS Frameworks")]
+                [_vm._v("Front-End JS Frameworks")]
               )
             ]),
             _vm._v(" "),
@@ -23534,7 +23594,10 @@ var getters = {
   getCourseList: function getCourseList(state) {
     return state.courseList;
   },
-  getUserCoursesByStage: function getUserCoursesByStage(state) {
+  retrieveUserCourseList: function retrieveUserCourseList(state) {
+    return state.userCourseList;
+  },
+  retrieveUserCoursesByStage: function retrieveUserCoursesByStage(state) {
     return state.userCoursesByStage;
   },
   // Takes the userCourseList from state and filters by stage
@@ -23573,8 +23636,7 @@ var actions = {
   loadInitialUserData: function loadInitialUserData(_ref) {
     var commit = _ref.commit,
         dispatch = _ref.dispatch;
-    console.log('userdata action fired'); // Retrieve the user's id
-
+    // Retrieve the user's id
     axios__WEBPACK_IMPORTED_MODULE_0___default()({
       method: 'get',
       url: '/api/user',
@@ -23601,7 +23663,7 @@ var actions = {
       dispatch('getUserCourseList');
     });
   },
-  // After login - any intial action to get the userCourseList can be done here
+  // After login - any subsequent action to get the userCourseList can be done here
   getUserCourseList: function getUserCourseList(_ref3) {
     var commit = _ref3.commit,
         getters = _ref3.getters;
@@ -23637,18 +23699,40 @@ var actions = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _auth__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./auth */ "./resources/js/store/modules/auth.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _auth__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./auth */ "./resources/js/store/modules/auth.js");
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
 
 
 var state = {
   roadmap: [],
-  ids: []
+  ids: [],
+  roadmapStage1: [],
+  roadmapStage2: [],
+  roadmapStage3: [],
+  roadmapStage4: [],
+  roadmapStage5: [],
+  roadmapStage6: [],
+  roadmapStage7: [],
+  roadmapStage8: [],
+  roadmapStage9: []
 };
 var getters = {
   getRoadmap: function getRoadmap(state) {
     return state.roadmap;
+  },
+  getRoadmapByStage: function getRoadmapByStage(state) {
+    return function (stage) {
+      return state["roadmapStage" + stage];
+    };
   },
   createIdArray: function createIdArray(state) {
     var ids = [];
@@ -23673,31 +23757,138 @@ var mutations = {
   },
   setIds: function setIds(state, ids) {
     state.ids = ids;
+  },
+  setRoadmapByStage: function setRoadmapByStage(state, _ref) {
+    var courses = _ref.courses,
+        stage = _ref.stage;
+
+    switch (stage) {
+      case 1:
+        state.roadmapStage1 = courses;
+        break;
+
+      case 2:
+        state.roadmapStage2 = courses;
+        break;
+
+      case 3:
+        state.roadmapStage3 = courses;
+        break;
+
+      case 4:
+        state.roadmapStage4 = courses;
+        break;
+
+      case 5:
+        state.roadmapStage5 = courses;
+        break;
+
+      case 6:
+        state.roadmapStage6 = courses;
+        break;
+
+      case 7:
+        state.roadmapStage7 = courses;
+        break;
+
+      case 8:
+        state.roadmapStage8 = courses;
+        break;
+
+      case 9:
+        state.roadmapStage9 = courses;
+        break;
+    }
+  },
+  addToRoadmap: function addToRoadmap(state, course) {
+    state.roadmap.push(course);
   }
 };
 var actions = {
-  retrieveRoadmap: function retrieveRoadmap(_ref) {
-    var commit = _ref.commit,
-        dispatch = _ref.dispatch,
-        getters = _ref.getters;
-    axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/roadmap/".concat(_auth__WEBPACK_IMPORTED_MODULE_1__["default"].state.user_id)).then(function (res) {
+  retrieveRoadmap: function retrieveRoadmap(_ref2) {
+    var commit = _ref2.commit,
+        dispatch = _ref2.dispatch,
+        getters = _ref2.getters;
+    axios__WEBPACK_IMPORTED_MODULE_1___default.a.get("/api/roadmap/".concat(_auth__WEBPACK_IMPORTED_MODULE_2__["default"].state.user_id)).then(function (res) {
       var roadmap = res.data; // Call mutation to set roadmap
 
-      commit('setRoadmap', roadmap); // Call getter to create id array
+      commit('setRoadmap', roadmap); // Get an Id array from the roadmap
 
-      var ids = getters.createIdArray; // Call mutation to set ids in state
-
-      commit('setIds', ids); // Retrieve the course list from the API and create a user course list
+      dispatch('getRoadmapIds'); // Retrieve the course list from the API and create a user course list
 
       dispatch('retrieveCourseList');
     });
   },
-  getRoadmapByStage: function getRoadmapByStage(_ref2, stage) {
-    var getters = _ref2.getters;
+  getRoadmapIds: function getRoadmapIds(_ref3) {
+    var getters = _ref3.getters,
+        commit = _ref3.commit;
+    // Call getter to create id array
+    var ids = getters.createIdArray; // Call mutation to set ids in state
+
+    commit('setIds', ids);
+  },
+  getRoadmapByStage: function getRoadmapByStage(_ref4, stage) {
+    var getters = _ref4.getters,
+        commit = _ref4.commit;
     // Call getter to get the roadmapByStage array
-    var courses = getters.filterRoadmapByStage(stage);
+    var courses = getters.filterRoadmapByStage(stage); //Call mutation to set the roadmapByStage
+
+    commit('setRoadmapByStage', {
+      courses: courses,
+      stage: stage
+    });
     return courses;
-  }
+  },
+  addCourseToRoadmap: function () {
+    var _addCourseToRoadmap = _asyncToGenerator(
+    /*#__PURE__*/
+    _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(_ref5, course) {
+      var commit, dispatch, response, newCourse;
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              commit = _ref5.commit, dispatch = _ref5.dispatch;
+              _context.next = 3;
+              return axios__WEBPACK_IMPORTED_MODULE_1___default.a.post('/api/roadmap', {
+                user_id: _auth__WEBPACK_IMPORTED_MODULE_2__["default"].state.user_id,
+                course_id: course.id,
+                stage: course.stage,
+                title: course.title,
+                creator: course.creator,
+                url: course.url,
+                hours: course.hours,
+                completed: false
+              });
+
+            case 3:
+              response = _context.sent;
+              newCourse = response.data; // Update the roadmap in state
+
+              commit('addToRoadmap', newCourse); // Update the roadmap ID array
+
+              dispatch('getRoadmapIds'); // Update the userCourseList using the updated Ids
+
+              dispatch('getUserCourseList'); // Update the courseList component by updating the userCoursesByStage state in courseList module
+
+              dispatch('getUserCoursesByStage', course.stage); // Update the corresponding Stage component to show the course now in the roadmap - so we do need access to the roadmap by stage arrays outside of the Stage component
+
+              dispatch('getRoadmapByStage', course.stage);
+
+            case 10:
+            case "end":
+              return _context.stop();
+          }
+        }
+      }, _callee);
+    }));
+
+    function addCourseToRoadmap(_x, _x2) {
+      return _addCourseToRoadmap.apply(this, arguments);
+    }
+
+    return addCourseToRoadmap;
+  }()
 };
 /* harmony default export */ __webpack_exports__["default"] = ({
   state: state,

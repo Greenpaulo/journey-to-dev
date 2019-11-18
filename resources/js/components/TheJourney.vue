@@ -47,7 +47,7 @@
       </div>
 
       <div class="card stage-section border-stage4 p-4 mb-5" id="stage-four">
-        <div class="card-header"><h3>Stage Four</h3><h5 class="stage-heading text-success mx-3 py-2">Front-end JS Frameworks</h5></div>
+        <div class="card-header"><h3>Stage Four</h3><h5 class="stage-heading text-success mx-3 py-2">Front-End JS Frameworks</h5></div>
         <div class=" card-body">
           <div class="icon-text-group my-4">
             <a href="https://reactjs.org/" target="_blank"><img src="/images/react.png" alt="react.js logo"></a>
