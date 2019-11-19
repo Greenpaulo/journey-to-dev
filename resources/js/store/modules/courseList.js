@@ -22,11 +22,17 @@ const getters = {
 
   // Takes the CourseList state and the roadmap ids's state and returns a userCourseList
   createUserCourseList: (state) => {
-    // Get the roadmap ids from the roadmap module
-    const ids = user_roadmap.state.ids;
+    // // Get the roadmap ids from the roadmap module
+    // const ids = user_roadmap.state.ids;
+    // console.log('ids', ids)
+    // Get the roadmap titles from the roadmap module
+    const titles = user_roadmap.state.titles;
+    console.log('titles from createUserCourseList', titles)
 
     // Get the courseList and filter out the courses by course_id, which are in the user's roadmap
-    const userCourseList = state.courseList.filter(course => !(ids.includes(course.id)));
+    // const userCourseList = state.courseList.filter(course => !(ids.includes(course.id)));
+    // Get the courseList and filter out the courses by course_id, which are in the user's roadmap
+    const userCourseList = state.courseList.filter(course => !(titles.includes(course.title)));
 
     return userCourseList;
   }

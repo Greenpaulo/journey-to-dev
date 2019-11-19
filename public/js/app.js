@@ -23656,11 +23656,17 @@ var getters = {
   },
   // Takes the CourseList state and the roadmap ids's state and returns a userCourseList
   createUserCourseList: function createUserCourseList(state) {
-    // Get the roadmap ids from the roadmap module
-    var ids = _roadmap__WEBPACK_IMPORTED_MODULE_2__["default"].state.ids; // Get the courseList and filter out the courses by course_id, which are in the user's roadmap
+    // // Get the roadmap ids from the roadmap module
+    // const ids = user_roadmap.state.ids;
+    // console.log('ids', ids)
+    // Get the roadmap titles from the roadmap module
+    var titles = _roadmap__WEBPACK_IMPORTED_MODULE_2__["default"].state.titles;
+    console.log('titles from createUserCourseList', titles); // Get the courseList and filter out the courses by course_id, which are in the user's roadmap
+    // const userCourseList = state.courseList.filter(course => !(ids.includes(course.id)));
+    // Get the courseList and filter out the courses by course_id, which are in the user's roadmap
 
     var userCourseList = state.courseList.filter(function (course) {
-      return !ids.includes(course.id);
+      return !titles.includes(course.title);
     });
     return userCourseList;
   }
@@ -23770,6 +23776,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 var state = {
   roadmap: [],
   ids: [],
+  titles: [],
   roadmapStage1: [],
   roadmapStage2: [],
   roadmapStage3: [],
@@ -23789,12 +23796,21 @@ var getters = {
       return state["roadmapStage" + stage];
     };
   },
+  // Creates an array of course_id's from the roadmap
   createIdArray: function createIdArray(state) {
     var ids = [];
     state.roadmap.forEach(function (course) {
       ids.push(course.course_id);
     });
     return ids;
+  },
+  // Creates an array of course_id's from the roadmap
+  createTitleArray: function createTitleArray(state) {
+    var titles = [];
+    state.roadmap.forEach(function (course) {
+      titles.push(course.title);
+    });
+    return titles;
   },
   // Takes the roadmap from state and filters by stage
   filterRoadmapByStage: function filterRoadmapByStage(state) {
@@ -23812,6 +23828,9 @@ var mutations = {
   },
   setIds: function setIds(state, ids) {
     state.ids = ids;
+  },
+  setTitles: function setTitles(state, titles) {
+    state.titles = titles;
   },
   setRoadmapByStage: function setRoadmapByStage(state, _ref) {
     var courses = _ref.courses,
@@ -23835,9 +23854,11 @@ var actions = {
       axios__WEBPACK_IMPORTED_MODULE_1___default.a.get("/api/roadmap/".concat(_auth__WEBPACK_IMPORTED_MODULE_2__["default"].state.user_id)).then(function (res) {
         var roadmap = res.data; // Call mutation to set roadmap
 
-        commit('setRoadmap', roadmap); // Get an Id array from the roadmap
+        commit('setRoadmap', roadmap); // // Get an Id array from the roadmap
+        // dispatch('getRoadmapIds');
+        // Get an Id array from the roadmap
 
-        dispatch('getRoadmapIds');
+        dispatch('getRoadmapTitles');
         resolve();
       });
     });
@@ -23850,9 +23871,18 @@ var actions = {
 
     commit('setIds', ids);
   },
-  getRoadmapByStage: function getRoadmapByStage(_ref4, stage) {
+  getRoadmapTitles: function getRoadmapTitles(_ref4) {
     var getters = _ref4.getters,
         commit = _ref4.commit;
+    // Call getter to create id array
+    var titles = getters.createTitleArray;
+    console.log('titles from inside getRoadmapTitles', titles); // Call mutation to set ids in state
+
+    commit('setTitles', titles);
+  },
+  getRoadmapByStage: function getRoadmapByStage(_ref5, stage) {
+    var getters = _ref5.getters,
+        commit = _ref5.commit;
     // Call getter to get the roadmapByStage array
     var courses = getters.filterRoadmapByStage(stage); //Call mutation to set the roadmapByStage
 
@@ -23865,13 +23895,13 @@ var actions = {
   addCourseToRoadmap: function () {
     var _addCourseToRoadmap = _asyncToGenerator(
     /*#__PURE__*/
-    _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(_ref5, course) {
+    _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(_ref6, course) {
       var commit, dispatch, response, newCourse;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
-              commit = _ref5.commit, dispatch = _ref5.dispatch;
+              commit = _ref6.commit, dispatch = _ref6.dispatch;
               _context.next = 3;
               return axios__WEBPACK_IMPORTED_MODULE_1___default.a.post('/api/roadmap', {
                 user_id: _auth__WEBPACK_IMPORTED_MODULE_2__["default"].state.user_id,
@@ -23889,8 +23919,9 @@ var actions = {
               newCourse = response.data; // Update the roadmap in state
 
               commit('addToRoadmap', newCourse); // Update the roadmap ID array
+              // dispatch('getRoadmapIds');
 
-              dispatch('getRoadmapIds'); // Update the userCourseList using the updated Ids
+              dispatch('getRoadmapTitles'); // Update the userCourseList using the updated Ids
 
               dispatch('getUserCourseList'); // Update the courseList component by updating the userCoursesByStage state in courseList module
 
@@ -23915,30 +23946,35 @@ var actions = {
   deleteCourseFromRoadmap: function () {
     var _deleteCourseFromRoadmap = _asyncToGenerator(
     /*#__PURE__*/
-    _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2(_ref6, course) {
+    _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2(_ref7, course) {
       var commit, dispatch, response;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee2$(_context2) {
         while (1) {
           switch (_context2.prev = _context2.next) {
             case 0:
-              commit = _ref6.commit, dispatch = _ref6.dispatch;
+              commit = _ref7.commit, dispatch = _ref7.dispatch;
               _context2.next = 3;
               return axios__WEBPACK_IMPORTED_MODULE_1___default.a["delete"]("/api/roadmap/".concat(course.id));
 
             case 3:
               response = _context2.sent;
-              // Update the roadmap in state
-              commit('removeCourseFromRoadmap', course.id); // Update the roadmap ID array
+              // // Update the roadmap in state
+              // commit('removeCourseFromRoadmap', course.id) 
+              // // Update the roadmap ID array
+              // dispatch('getRoadmapIds');
+              // Fetch the updated roadmap
+              dispatch('retrieveRoadmap').then(function (res) {
+                // Call getRoadmapByStage action to get an updated stage roadmap, which will update the computed property in the stage component to update the UI
+                // dispatch('getRoadmapByStage', course.stage);
+                // Update the userCourseList using the updated Ids
+                dispatch('getUserCourseList'); // Update the courseList component by updating the userCoursesByStage state in courseList module
 
-              dispatch('getRoadmapIds'); // Update the userCourseList using the updated Ids
+                dispatch('getUserCoursesByStage', course.stage); // Update the corresponding Stage component
 
-              dispatch('getUserCourseList'); // Update the courseList component by updating the userCoursesByStage state in courseList module
+                dispatch('getRoadmapByStage', course.stage);
+              });
 
-              dispatch('getUserCoursesByStage', course.stage); // Update the corresponding Stage component
-
-              dispatch('getRoadmapByStage', course.stage);
-
-            case 9:
+            case 5:
             case "end":
               return _context2.stop();
           }
@@ -23952,14 +23988,14 @@ var actions = {
 
     return deleteCourseFromRoadmap;
   }(),
-  moveCourse: function moveCourse(_ref7, _ref8) {
-    var state = _ref7.state,
-        dispatch = _ref7.dispatch;
+  moveCourse: function moveCourse(_ref8, _ref9) {
+    var state = _ref8.state,
+        dispatch = _ref8.dispatch;
 
-    var _ref9 = _slicedToArray(_ref8, 3),
-        course = _ref9[0],
-        index = _ref9[1],
-        positionChange = _ref9[2];
+    var _ref10 = _slicedToArray(_ref9, 3),
+        course = _ref10[0],
+        index = _ref10[1],
+        positionChange = _ref10[2];
 
     // Get the corresponding roadmap for the stage
     var array = state['roadmapStage' + course.stage];
@@ -23995,6 +24031,8 @@ var actions = {
         dispatch('retrieveRoadmap').then(function (res) {
           // Call getRoadmapByStage action to get an updated stage roadmap, which will update the computed property in the stage component to update the UI
           dispatch('getRoadmapByStage', course.stage);
+          dispatch('getUserCourseList');
+          dispatch('getUserCoursesByStage', course.stage);
         });
       });
     });

@@ -4,6 +4,7 @@ import auth from './auth';
 const state = {
   roadmap: [],
   ids: [],
+  titles: [],
   roadmapStage1: [], 
   roadmapStage2: [],
   roadmapStage3: [], 
@@ -19,12 +20,21 @@ const getters = {
   getRoadmap: state => state.roadmap,
   getRoadmapByStage: (state) => (stage) => state["roadmapStage" + stage],
   
+  // Creates an array of course_id's from the roadmap
   createIdArray: (state) => {
     const ids = [];
     state.roadmap.forEach(course => {
       ids.push(course.course_id);
     });  
     return ids;
+  },
+  // Creates an array of course_id's from the roadmap
+  createTitleArray: (state) => {
+    const titles = [];
+    state.roadmap.forEach(course => {
+      titles.push(course.title);
+    });  
+    return titles;
   },
 
   // Takes the roadmap from state and filters by stage
@@ -40,6 +50,9 @@ const mutations = {
   },
   setIds: (state, ids) => {
     state.ids = ids;
+  },
+  setTitles: (state, titles) => {
+    state.titles = titles;
   },
   setRoadmapByStage: (state, {courses, stage}) => {
     state["roadmapStage" + stage] = courses;
@@ -65,8 +78,10 @@ const actions = {
           // Call mutation to set roadmap
           commit('setRoadmap', roadmap);
 
+          // // Get an Id array from the roadmap
+          // dispatch('getRoadmapIds');
           // Get an Id array from the roadmap
-          dispatch('getRoadmapIds');
+          dispatch('getRoadmapTitles');
 
           resolve();
 
@@ -79,6 +94,14 @@ const actions = {
 
      // Call mutation to set ids in state
      commit('setIds', ids);
+   },
+   getRoadmapTitles: ({getters, commit}) => {
+     // Call getter to create id array
+     const titles = getters.createTitleArray;
+     console.log('titles from inside getRoadmapTitles', titles);
+
+     // Call mutation to set ids in state
+     commit('setTitles', titles);
    },
   
    getRoadmapByStage: ({ getters, commit }, stage) => {
@@ -108,7 +131,8 @@ const actions = {
         // Update the roadmap in state
         commit('addToRoadmap', newCourse);
         // Update the roadmap ID array
-        dispatch('getRoadmapIds');
+        // dispatch('getRoadmapIds');
+        dispatch('getRoadmapTitles');
         // Update the userCourseList using the updated Ids
         dispatch('getUserCourseList');
         // Update the courseList component by updating the userCoursesByStage state in courseList module
@@ -118,19 +142,26 @@ const actions = {
     },
    
     async deleteCourseFromRoadmap ({commit, dispatch}, course){
-     // Add the course to the roadmap table in DB
+     // Delete the course in the roadmap table in DB
      const response = await axios.delete(`/api/roadmap/${course.id}`);
 
-      // Update the roadmap in state
-      commit('removeCourseFromRoadmap', course.id) 
-      // Update the roadmap ID array
-      dispatch('getRoadmapIds');
-      // Update the userCourseList using the updated Ids
-      dispatch('getUserCourseList');
-      // Update the courseList component by updating the userCoursesByStage state in courseList module
-      dispatch('getUserCoursesByStage', course.stage);
-      // Update the corresponding Stage component
-      dispatch('getRoadmapByStage', course.stage)
+      // // Update the roadmap in state
+      // commit('removeCourseFromRoadmap', course.id) 
+      // // Update the roadmap ID array
+      // dispatch('getRoadmapIds');
+      
+      // Fetch the updated roadmap
+      dispatch('retrieveRoadmap')
+        .then(res => {
+          // Call getRoadmapByStage action to get an updated stage roadmap, which will update the computed property in the stage component to update the UI
+          // dispatch('getRoadmapByStage', course.stage);
+          // Update the userCourseList using the updated Ids
+          dispatch('getUserCourseList');
+          // Update the courseList component by updating the userCoursesByStage state in courseList module
+          dispatch('getUserCoursesByStage', course.stage);
+          // Update the corresponding Stage component
+          dispatch('getRoadmapByStage', course.stage)
+        })
     },
    
     moveCourse: ({state, dispatch}, [course, index, positionChange]) => {
@@ -174,6 +205,8 @@ const actions = {
               .then(res => {
                 // Call getRoadmapByStage action to get an updated stage roadmap, which will update the computed property in the stage component to update the UI
                 dispatch('getRoadmapByStage', course.stage);
+                dispatch('getUserCourseList');
+                dispatch('getUserCoursesByStage', course.stage);
               })
           })
         })
