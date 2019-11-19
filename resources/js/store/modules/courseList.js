@@ -59,6 +59,9 @@ const actions = {
         //Retrieve the user's roadmap   - show a 'loading' spinner in UI
         dispatch('retrieveRoadmap');
 
+        // Retrieve the course list from the API and create a user course list
+        dispatch('retrieveCourseList');
+
       });
   },
 

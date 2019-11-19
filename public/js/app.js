@@ -2234,26 +2234,33 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Stage",
-  data: function data() {
-    return {
-      courses: [] // This needs to update any time the roadmap is changed
-
-    };
-  },
   props: ['stage'],
   computed: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapGetters"])({
     courseList: 'getCourseList'
   }), {
+    // Returns the current stage roadmap
     currentRoadmap: function currentRoadmap() {
-      // now we'll pass in your 'stage' prop to get the appropriate map
-      // this will re-render the component as that prop changes
       return this.$store.getters.getRoadmapByStage(this.stage);
     },
+    // Calculate the total course hours for the stage
     totalHours: function totalHours() {
-      var courses = this.courses;
+      var courses = this.currentRoadmap;
       var total = 0;
       courses.forEach(function (course) {
         total += course.hours;
@@ -2273,11 +2280,11 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       this.callGetByStage(this.stage);
     }
   },
-  methods: {
+  methods: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapActions"])(['deleteCourseFromRoadmap', 'moveCourse']), {
     callGetByStage: function callGetByStage(stage) {
       this.$store.dispatch('getRoadmapByStage', stage);
     }
-  }
+  })
 });
 
 /***/ }),
@@ -2562,7 +2569,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".bg-stage1 {\n  background-color: #CC0000;\n}\n.bg-stage2 {\n  background-color: orange;\n}\n.bg-stage3 {\n  background-color: orangered;\n}\n.bg-stage4 {\n  background-color: #77B300;\n}\n.bg-stage5 {\n  background-color: #2A9FD6;\n}\n.bg-stage6 {\n  background-color: #20c997;\n}\n.bg-stage7 {\n  background-color: #e83e8c;\n}\n.bg-stage8 {\n  background-color: #9933CC;\n}\n.bg-stage9 {\n  background-color: #fff;\n}\n.border-stage1 {\n  border-top: 8px solid #CC0000;\n  border-right: 8px solid #CC0000;\n}\n.border-stage2 {\n  border-top: 8px solid orange;\n  border-right: 8px solid orange;\n}\n.border-stage3 {\n  border-top: 8px solid orangered;\n  border-right: 8px solid orangered;\n}\n.border-stage4 {\n  border-top: 8px solid #77B300;\n  border-right: 8px solid #77B300;\n}\n.border-stage5 {\n  border-top: 8px solid #2A9FD6;\n  border-right: 8px solid #2A9FD6;\n}\n.border-stage6 {\n  border-top: 8px solid #20c997;\n  border-right: 8px solid #20c997;\n}\n.border-stage7 {\n  border-top: 8px solid #e83e8c;\n  border-right: 8px solid #e83e8c;\n}\n.border-stage8 {\n  border-top: 8px solid #9933CC;\n  border-right: 8px solid #9933CC;\n}\n.border-stage9 {\n  border-top: 8px solid #fff;\n  border-right: 8px solid #ffff;\n}\nbody {\n  background-color: #131212;\n  /* background-color: #100e17; */\n}\n.text-orangered {\n  color: orangered !important;\n}\n.text-orange {\n  color: orange !important;\n}\n.text-purple {\n  color: #6f42c1 !important;\n}\n.text-teal {\n  color: #20c997 !important;\n}\n.text-pink {\n  color: #e83e8c !important;\n}", ""]);
+exports.push([module.i, ".bg-stage1 {\n  background-color: #CC0000;\n}\n.bg-stage2 {\n  background-color: orange;\n}\n.bg-stage3 {\n  background-color: orangered;\n}\n.bg-stage4 {\n  background-color: #77B300;\n}\n.bg-stage5 {\n  background-color: #2A9FD6;\n}\n.bg-stage6 {\n  background-color: #20c997;\n}\n.bg-stage7 {\n  background-color: #e83e8c;\n}\n.bg-stage8 {\n  background-color: #9933CC;\n}\n.bg-stage9 {\n  background-color: #fff;\n  color: black !important;\n}\n.border-stage1 {\n  border-top: 8px solid #CC0000;\n  border-right: 8px solid #CC0000;\n}\n.border-stage2 {\n  border-top: 8px solid orange;\n  border-right: 8px solid orange;\n}\n.border-stage3 {\n  border-top: 8px solid orangered;\n  border-right: 8px solid orangered;\n}\n.border-stage4 {\n  border-top: 8px solid #77B300;\n  border-right: 8px solid #77B300;\n}\n.border-stage5 {\n  border-top: 8px solid #2A9FD6;\n  border-right: 8px solid #2A9FD6;\n}\n.border-stage6 {\n  border-top: 8px solid #20c997;\n  border-right: 8px solid #20c997;\n}\n.border-stage7 {\n  border-top: 8px solid #e83e8c;\n  border-right: 8px solid #e83e8c;\n}\n.border-stage8 {\n  border-top: 8px solid #9933CC;\n  border-right: 8px solid #9933CC;\n}\n.border-stage9 {\n  border-top: 8px solid #fff;\n  border-right: 8px solid #ffff;\n}\nbody {\n  background-color: #131212;\n  /* background-color: #100e17; */\n}\n.text-orangered {\n  color: orangered !important;\n}\n.text-orange {\n  color: orange !important;\n}\n.text-purple {\n  color: #6f42c1 !important;\n}\n.text-teal {\n  color: #20c997 !important;\n}\n.text-pink {\n  color: #e83e8c !important;\n}", ""]);
 
 // exports
 
@@ -2581,7 +2588,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".bg-stage1[data-v-9d6850f8] {\n  background-color: #CC0000;\n}\n.bg-stage2[data-v-9d6850f8] {\n  background-color: orange;\n}\n.bg-stage3[data-v-9d6850f8] {\n  background-color: orangered;\n}\n.bg-stage4[data-v-9d6850f8] {\n  background-color: #77B300;\n}\n.bg-stage5[data-v-9d6850f8] {\n  background-color: #2A9FD6;\n}\n.bg-stage6[data-v-9d6850f8] {\n  background-color: #20c997;\n}\n.bg-stage7[data-v-9d6850f8] {\n  background-color: #e83e8c;\n}\n.bg-stage8[data-v-9d6850f8] {\n  background-color: #9933CC;\n}\n.bg-stage9[data-v-9d6850f8] {\n  background-color: #fff;\n}\n.border-stage1[data-v-9d6850f8] {\n  border-top: 8px solid #CC0000;\n  border-right: 8px solid #CC0000;\n}\n.border-stage2[data-v-9d6850f8] {\n  border-top: 8px solid orange;\n  border-right: 8px solid orange;\n}\n.border-stage3[data-v-9d6850f8] {\n  border-top: 8px solid orangered;\n  border-right: 8px solid orangered;\n}\n.border-stage4[data-v-9d6850f8] {\n  border-top: 8px solid #77B300;\n  border-right: 8px solid #77B300;\n}\n.border-stage5[data-v-9d6850f8] {\n  border-top: 8px solid #2A9FD6;\n  border-right: 8px solid #2A9FD6;\n}\n.border-stage6[data-v-9d6850f8] {\n  border-top: 8px solid #20c997;\n  border-right: 8px solid #20c997;\n}\n.border-stage7[data-v-9d6850f8] {\n  border-top: 8px solid #e83e8c;\n  border-right: 8px solid #e83e8c;\n}\n.border-stage8[data-v-9d6850f8] {\n  border-top: 8px solid #9933CC;\n  border-right: 8px solid #9933CC;\n}\n.border-stage9[data-v-9d6850f8] {\n  border-top: 8px solid #fff;\n  border-right: 8px solid #ffff;\n}\n.course-list[data-v-9d6850f8] {\n  display: flex;\n  padding: 3rem;\n  overflow-x: scroll;\n  -webkit-overflow-scrolling: touch;\n}\n.course-card[data-v-9d6850f8] {\n  background-color: #17141d;\n  width: 300px;\n  min-height: 350px;\n  box-shadow: -1rem 0 3rem #000;\n  border-width: 4px;\n  border-radius: 16px;\n  padding: 1.5rem;\n  transition-property: all;\n  transition-duration: 0.2s;\n  transition-timing-function: ease;\n  transition-delay: 0s;\n}\n.course-card[data-v-9d6850f8]:not(:first-child) {\n  margin-left: -130px;\n}\n.course-card h2[data-v-9d6850f8] {\n  color: white;\n}\n.course-card[data-v-9d6850f8]:hover {\n  transform: translate(0, -1rem);\n}\n.course-card:hover ~ .course-card[data-v-9d6850f8] {\n  transform: translateX(130px);\n}\n.course-list[data-v-9d6850f8]::-webkit-scrollbar {\n  width: 10px;\n  height: 15px;\n}\n.course-list[data-v-9d6850f8]::-webkit-scrollbar-thumb {\n  background: #201c29;\n  border-radius: 10px;\n  box-shadow: inset 2px 2px 2px rgba(255, 255, 255, 0.25), inset -2px -2px 2px rgba(0, 0, 0, 0.25);\n}\n.course-list[data-v-9d6850f8]::-webkit-scrollbar-track {\n  background: linear-gradient(to right, #201c29, #201c29 1px, #17141d 1px, #17141d);\n}\n.add-btn[data-v-9d6850f8] {\n  width: 50px;\n  height: 50px;\n  border-radius: 50%;\n  cursor: pointer;\n}\n.bg-stage9 i.fa-plus[data-v-9d6850f8] {\n  color: black;\n}\ni.fa-plus[data-v-9d6850f8] {\n  padding-top: 11px;\n  padding-left: 13px;\n  width: 50px;\n  height: 50px;\n  color: white;\n}", ""]);
+exports.push([module.i, ".bg-stage1[data-v-9d6850f8] {\n  background-color: #CC0000;\n}\n.bg-stage2[data-v-9d6850f8] {\n  background-color: orange;\n}\n.bg-stage3[data-v-9d6850f8] {\n  background-color: orangered;\n}\n.bg-stage4[data-v-9d6850f8] {\n  background-color: #77B300;\n}\n.bg-stage5[data-v-9d6850f8] {\n  background-color: #2A9FD6;\n}\n.bg-stage6[data-v-9d6850f8] {\n  background-color: #20c997;\n}\n.bg-stage7[data-v-9d6850f8] {\n  background-color: #e83e8c;\n}\n.bg-stage8[data-v-9d6850f8] {\n  background-color: #9933CC;\n}\n.bg-stage9[data-v-9d6850f8] {\n  background-color: #fff;\n  color: black !important;\n}\n.border-stage1[data-v-9d6850f8] {\n  border-top: 8px solid #CC0000;\n  border-right: 8px solid #CC0000;\n}\n.border-stage2[data-v-9d6850f8] {\n  border-top: 8px solid orange;\n  border-right: 8px solid orange;\n}\n.border-stage3[data-v-9d6850f8] {\n  border-top: 8px solid orangered;\n  border-right: 8px solid orangered;\n}\n.border-stage4[data-v-9d6850f8] {\n  border-top: 8px solid #77B300;\n  border-right: 8px solid #77B300;\n}\n.border-stage5[data-v-9d6850f8] {\n  border-top: 8px solid #2A9FD6;\n  border-right: 8px solid #2A9FD6;\n}\n.border-stage6[data-v-9d6850f8] {\n  border-top: 8px solid #20c997;\n  border-right: 8px solid #20c997;\n}\n.border-stage7[data-v-9d6850f8] {\n  border-top: 8px solid #e83e8c;\n  border-right: 8px solid #e83e8c;\n}\n.border-stage8[data-v-9d6850f8] {\n  border-top: 8px solid #9933CC;\n  border-right: 8px solid #9933CC;\n}\n.border-stage9[data-v-9d6850f8] {\n  border-top: 8px solid #fff;\n  border-right: 8px solid #ffff;\n}\n.course-list[data-v-9d6850f8] {\n  display: flex;\n  padding: 3rem;\n  overflow-x: scroll;\n  -webkit-overflow-scrolling: touch;\n}\n.course-card[data-v-9d6850f8] {\n  background-color: #17141d;\n  width: 300px;\n  min-height: 350px;\n  box-shadow: -1rem 0 3rem #000;\n  border-width: 4px;\n  border-radius: 16px;\n  padding: 1.5rem;\n  transition-property: all;\n  transition-duration: 0.2s;\n  transition-timing-function: ease;\n  transition-delay: 0s;\n}\n.course-card[data-v-9d6850f8]:not(:first-child) {\n  margin-left: -130px;\n}\n.course-card h2[data-v-9d6850f8] {\n  color: white;\n}\n.course-card[data-v-9d6850f8]:hover {\n  transform: translate(0, -1rem);\n}\n.course-card:hover ~ .course-card[data-v-9d6850f8] {\n  transform: translateX(130px);\n}\n.course-list[data-v-9d6850f8]::-webkit-scrollbar {\n  width: 10px;\n  height: 15px;\n}\n.course-list[data-v-9d6850f8]::-webkit-scrollbar-thumb {\n  background: #201c29;\n  border-radius: 10px;\n  box-shadow: inset 2px 2px 2px rgba(255, 255, 255, 0.25), inset -2px -2px 2px rgba(0, 0, 0, 0.25);\n}\n.course-list[data-v-9d6850f8]::-webkit-scrollbar-track {\n  background: linear-gradient(to right, #201c29, #201c29 1px, #17141d 1px, #17141d);\n}\n.add-btn[data-v-9d6850f8] {\n  width: 50px;\n  height: 50px;\n  border-radius: 50%;\n  cursor: pointer;\n}\n.bg-stage9 i.fa-plus[data-v-9d6850f8] {\n  color: black;\n}\ni.fa-plus[data-v-9d6850f8] {\n  padding-top: 11px;\n  padding-left: 13px;\n  width: 50px;\n  height: 50px;\n  color: white;\n}", ""]);
 
 // exports
 
@@ -2638,7 +2645,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".stage[data-v-3fd38ca3] {\n  display: flex;\n}\n.stage-heading[data-v-3fd38ca3] {\n  padding: 2rem;\n  align-self: center;\n}\n.stage-heading h6[data-v-3fd38ca3] {\n  font-size: 1rem;\n}\n.stage-courses[data-v-3fd38ca3] {\n  height: 240px;\n  width: 280px;\n}", ""]);
+exports.push([module.i, ".stage[data-v-3fd38ca3] {\n  display: flex;\n}\n.stage-heading[data-v-3fd38ca3] {\n  padding: 2rem 2rem 2rem 0;\n  align-self: center;\n}\n.stage-heading h5[data-v-3fd38ca3] {\n  font-size: 0.8rem;\n}\n.stage-courses[data-v-3fd38ca3] {\n  display: flex;\n  flex-wrap: wrap;\n}\n.stage-courses > .stage-course[data-v-3fd38ca3] {\n  min-height: 240px;\n  min-width: 260px;\n  max-width: 260px;\n}\n.stage-courses > .stage-course .card-body > h5[data-v-3fd38ca3] {\n  font-size: 1.4rem;\n}\n.card-footer[data-v-3fd38ca3] {\n  display: flex;\n  justify-content: space-between;\n}\n.left-arrow[data-v-3fd38ca3], .right-arrow[data-v-3fd38ca3] {\n  cursor: pointer;\n}\n.delete-btn[data-v-3fd38ca3] {\n  cursor: pointer;\n}", ""]);
 
 // exports
 
@@ -5530,26 +5537,27 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "section",
-    { staticClass: "stage my-5" },
-    [
-      _c("div", { staticClass: "stage-heading" }, [
-        _c("h3", { staticClass: "stage-number mb-4" }, [
-          _vm._v("Stage " + _vm._s(_vm.stage))
-        ]),
-        _vm._v(" "),
-        _c("h6", { staticClass: "stage-hrs" }, [
-          _vm._v("Total Hrs: " + _vm._s(_vm.totalHours))
-        ])
+  return _c("section", { staticClass: "stage my-5" }, [
+    _c("div", { staticClass: "stage-heading" }, [
+      _c("h3", { staticClass: "stage-number mb-4 pr-5" }, [
+        _vm._v("Stage " + _vm._s(_vm.stage))
       ]),
       _vm._v(" "),
-      _vm._l(_vm.currentRoadmap, function(course) {
+      _c("h6", { staticClass: "stage-hrs" }, [
+        _vm._v("Total Hrs: " + _vm._s(_vm.totalHours))
+      ])
+    ]),
+    _vm._v(" "),
+    _c(
+      "div",
+      { staticClass: "stage-courses ml-3" },
+      _vm._l(_vm.currentRoadmap, function(course, index) {
         return _c(
           "div",
           {
             key: course.id,
-            staticClass: "stage-courses card text-white bg-info mb-3"
+            staticClass: "stage-course card text-white mb-3 mx-2",
+            class: "bg-stage" + course.stage
           },
           [
             _c("div", { staticClass: "card-header" }, [
@@ -5568,13 +5576,50 @@ var render = function() {
               _c("p", { staticClass: "card-text" }, [
                 _vm._v(_vm._s(course.hours) + " Hours")
               ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "card-footer" }, [
+              _c("div", { staticClass: "left-arrow" }, [
+                _c("i", {
+                  staticClass: "fas fa-arrow-left fa-2x",
+                  on: {
+                    click: function($event) {
+                      return _vm.moveCourse([course, index, -1])
+                    }
+                  }
+                })
+              ]),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass: "delete-btn",
+                  on: {
+                    click: function($event) {
+                      return _vm.deleteCourseFromRoadmap(course)
+                    }
+                  }
+                },
+                [_c("i", { staticClass: "fas fa-times fa-2x" })]
+              ),
+              _vm._v(" "),
+              _c("div", { staticClass: "right-arrow" }, [
+                _c("i", {
+                  staticClass: "fas fa-arrow-right fa-2x",
+                  on: {
+                    click: function($event) {
+                      return _vm.moveCourse([course, index, 1])
+                    }
+                  }
+                })
+              ])
             ])
           ]
         )
-      })
-    ],
-    2
-  )
+      }),
+      0
+    )
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -23648,7 +23693,9 @@ var actions = {
 
       commit('setUserId', id); //Retrieve the user's roadmap   - show a 'loading' spinner in UI
 
-      dispatch('retrieveRoadmap');
+      dispatch('retrieveRoadmap'); // Retrieve the course list from the API and create a user course list
+
+      dispatch('retrieveCourseList');
     });
   },
   // Makes an API to get the original course list and sets the inital state for courseList and userCourseList 
@@ -23706,6 +23753,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _auth__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./auth */ "./resources/js/store/modules/auth.js");
 
 
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) { return; } var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
@@ -23761,62 +23816,30 @@ var mutations = {
   setRoadmapByStage: function setRoadmapByStage(state, _ref) {
     var courses = _ref.courses,
         stage = _ref.stage;
-
-    switch (stage) {
-      case 1:
-        state.roadmapStage1 = courses;
-        break;
-
-      case 2:
-        state.roadmapStage2 = courses;
-        break;
-
-      case 3:
-        state.roadmapStage3 = courses;
-        break;
-
-      case 4:
-        state.roadmapStage4 = courses;
-        break;
-
-      case 5:
-        state.roadmapStage5 = courses;
-        break;
-
-      case 6:
-        state.roadmapStage6 = courses;
-        break;
-
-      case 7:
-        state.roadmapStage7 = courses;
-        break;
-
-      case 8:
-        state.roadmapStage8 = courses;
-        break;
-
-      case 9:
-        state.roadmapStage9 = courses;
-        break;
-    }
+    state["roadmapStage" + stage] = courses;
   },
   addToRoadmap: function addToRoadmap(state, course) {
     state.roadmap.push(course);
+  },
+  removeCourseFromRoadmap: function removeCourseFromRoadmap(state, id) {
+    state.roadmap = state.roadmap.filter(function (course) {
+      return course.id !== id;
+    });
   }
 };
 var actions = {
   retrieveRoadmap: function retrieveRoadmap(_ref2) {
     var commit = _ref2.commit,
-        dispatch = _ref2.dispatch,
-        getters = _ref2.getters;
-    axios__WEBPACK_IMPORTED_MODULE_1___default.a.get("/api/roadmap/".concat(_auth__WEBPACK_IMPORTED_MODULE_2__["default"].state.user_id)).then(function (res) {
-      var roadmap = res.data; // Call mutation to set roadmap
+        dispatch = _ref2.dispatch;
+    return new Promise(function (resolve) {
+      axios__WEBPACK_IMPORTED_MODULE_1___default.a.get("/api/roadmap/".concat(_auth__WEBPACK_IMPORTED_MODULE_2__["default"].state.user_id)).then(function (res) {
+        var roadmap = res.data; // Call mutation to set roadmap
 
-      commit('setRoadmap', roadmap); // Get an Id array from the roadmap
+        commit('setRoadmap', roadmap); // Get an Id array from the roadmap
 
-      dispatch('getRoadmapIds'); // Retrieve the course list from the API and create a user course list
-
-      dispatch('retrieveCourseList');
+        dispatch('getRoadmapIds');
+        resolve();
+      });
     });
   },
   getRoadmapIds: function getRoadmapIds(_ref3) {
@@ -23888,7 +23911,94 @@ var actions = {
     }
 
     return addCourseToRoadmap;
-  }()
+  }(),
+  deleteCourseFromRoadmap: function () {
+    var _deleteCourseFromRoadmap = _asyncToGenerator(
+    /*#__PURE__*/
+    _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2(_ref6, course) {
+      var commit, dispatch, response;
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee2$(_context2) {
+        while (1) {
+          switch (_context2.prev = _context2.next) {
+            case 0:
+              commit = _ref6.commit, dispatch = _ref6.dispatch;
+              _context2.next = 3;
+              return axios__WEBPACK_IMPORTED_MODULE_1___default.a["delete"]("/api/roadmap/".concat(course.id));
+
+            case 3:
+              response = _context2.sent;
+              // Update the roadmap in state
+              commit('removeCourseFromRoadmap', course.id); // Update the roadmap ID array
+
+              dispatch('getRoadmapIds'); // Update the userCourseList using the updated Ids
+
+              dispatch('getUserCourseList'); // Update the courseList component by updating the userCoursesByStage state in courseList module
+
+              dispatch('getUserCoursesByStage', course.stage); // Update the corresponding Stage component
+
+              dispatch('getRoadmapByStage', course.stage);
+
+            case 9:
+            case "end":
+              return _context2.stop();
+          }
+        }
+      }, _callee2);
+    }));
+
+    function deleteCourseFromRoadmap(_x3, _x4) {
+      return _deleteCourseFromRoadmap.apply(this, arguments);
+    }
+
+    return deleteCourseFromRoadmap;
+  }(),
+  moveCourse: function moveCourse(_ref7, _ref8) {
+    var state = _ref7.state,
+        dispatch = _ref7.dispatch;
+
+    var _ref9 = _slicedToArray(_ref8, 3),
+        course = _ref9[0],
+        index = _ref9[1],
+        positionChange = _ref9[2];
+
+    // Get the corresponding roadmap for the stage
+    var array = state['roadmapStage' + course.stage];
+    var adjacentCourseId = 0;
+    var adjacentId = 0; // Get the adjacent course's course_id
+    // We can use the roadmapStage array, clone it and pull the course out to get its id.
+
+    if (index !== 0 && positionChange === -1) {
+      // Then get the course id of the course to the left
+      adjacentCourseId = array[index - 1].course_id; // And the id of the course to the left
+
+      adjacentId = array[index - 1].id;
+    } else if (index !== array.length - 1 && positionChange === 1) {
+      // The get the course id of the course to the right
+      adjacentCourseId = array[index + 1].course_id; // And the id of the course to the left
+
+      adjacentId = array[index + 1].id;
+    } else {
+      return;
+    } // Now we need to swap the course id with the id of the adjacent course, and update these in the roadmap table
+    // Swap the course_id's in the database
+
+
+    axios__WEBPACK_IMPORTED_MODULE_1___default.a.patch("/api/roadmap/".concat(course.id), {
+      course_id: adjacentCourseId,
+      completed: course.completed
+    }).then(function (res) {
+      axios__WEBPACK_IMPORTED_MODULE_1___default.a.patch("/api/roadmap/".concat(adjacentId), {
+        course_id: course.course_id,
+        completed: course.completed
+      }).then(function (res) {
+        // Fetch an updated roadmap from the DB
+        dispatch('retrieveRoadmap').then(function (res) {
+          // Call getRoadmapByStage action to get an updated stage roadmap, which will update the computed property in the stage component to update the UI
+          dispatch('getRoadmapByStage', course.stage);
+        });
+      });
+    });
+  }
 };
 /* harmony default export */ __webpack_exports__["default"] = ({
   state: state,

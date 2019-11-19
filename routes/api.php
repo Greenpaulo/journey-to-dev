@@ -42,7 +42,8 @@ Route::get('courses/{id}', function ($id) {
 
 // Get request for users roadmap, by id
 Route::get('roadmap/{id}', function ($user_id) {
-  return RoadmapCourse::where('user_id', $user_id)->get();
+  return RoadmapCourse::where('user_id', $user_id)->orderBy('course_id', 'asc')->get();
+  
 });
 Route::post('roadmap', 'RoadmapCourseController@store');
 Route::patch('roadmap/{roadmapcourse}', 'RoadmapCourseController@update');

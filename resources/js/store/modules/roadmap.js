@@ -42,43 +42,22 @@ const mutations = {
     state.ids = ids;
   },
   setRoadmapByStage: (state, {courses, stage}) => {
-    switch (stage) {
-      case 1: 
-        state.roadmapStage1 = courses;
-        break;
-      case 2: 
-        state.roadmapStage2 = courses;
-        break;
-      case 3: 
-        state.roadmapStage3 = courses;
-        break;
-      case 4: 
-        state.roadmapStage4 = courses;
-        break;
-      case 5: 
-        state.roadmapStage5 = courses;
-        break;
-      case 6: 
-        state.roadmapStage6 = courses;
-        break;
-      case 7: 
-        state.roadmapStage7 = courses;
-        break;
-      case 8: 
-        state.roadmapStage8 = courses;
-        break;
-      case 9: 
-        state.roadmapStage9 = courses;
-        break;
-    }
+    state["roadmapStage" + stage] = courses;
   },
   addToRoadmap: (state, course) => {
     state.roadmap.push(course);
-  }
+  },
+  removeCourseFromRoadmap: (state, id) => {
+    state.roadmap = state.roadmap.filter(course => course.id !== id);
+  },
+  
 };
 
+
 const actions = {
-   retrieveRoadmap: ({ commit, dispatch, getters }) => {
+   retrieveRoadmap: ({ commit, dispatch }) => {
+    return new Promise((resolve) => {
+
       axios.get(`/api/roadmap/${auth.state.user_id}`)
         .then(res => {
           const roadmap = res.data;
@@ -89,9 +68,10 @@ const actions = {
           // Get an Id array from the roadmap
           dispatch('getRoadmapIds');
 
-          // Retrieve the course list from the API and create a user course list
-          dispatch('retrieveCourseList');
+          resolve();
+
         });    
+    })
    },
    getRoadmapIds: ({getters, commit}) => {
      // Call getter to create id array
@@ -135,10 +115,70 @@ const actions = {
          dispatch('getUserCoursesByStage', course.stage);
         // Update the corresponding Stage component to show the course now in the roadmap - so we do need access to the roadmap by stage arrays outside of the Stage component
         dispatch('getRoadmapByStage', course.stage)
-       
-
     },
    
+    async deleteCourseFromRoadmap ({commit, dispatch}, course){
+     // Add the course to the roadmap table in DB
+     const response = await axios.delete(`/api/roadmap/${course.id}`);
+
+      // Update the roadmap in state
+      commit('removeCourseFromRoadmap', course.id) 
+      // Update the roadmap ID array
+      dispatch('getRoadmapIds');
+      // Update the userCourseList using the updated Ids
+      dispatch('getUserCourseList');
+      // Update the courseList component by updating the userCoursesByStage state in courseList module
+      dispatch('getUserCoursesByStage', course.stage);
+      // Update the corresponding Stage component
+      dispatch('getRoadmapByStage', course.stage)
+    },
+   
+    moveCourse: ({state, dispatch}, [course, index, positionChange]) => {
+
+        // Get the corresponding roadmap for the stage
+        const array = state['roadmapStage' + course.stage];
+
+        let adjacentCourseId = 0;
+        let adjacentId = 0;
+
+        // Get the adjacent course's course_id
+        // We can use the roadmapStage array, clone it and pull the course out to get its id.
+        if (index !== 0 && positionChange === -1) {
+          // Then get the course id of the course to the left
+          adjacentCourseId = array[index - 1].course_id;
+          // And the id of the course to the left
+          adjacentId = array[index - 1].id;
+
+        } else if (index !== (array.length - 1) && positionChange === 1) {
+          // The get the course id of the course to the right
+          adjacentCourseId = array[index + 1].course_id;
+          // And the id of the course to the left
+          adjacentId = array[index + 1].id;
+        } else {
+
+          return;
+        }
+
+        // Now we need to swap the course id with the id of the adjacent course, and update these in the roadmap table
+        // Swap the course_id's in the database
+        axios.patch(`/api/roadmap/${course.id}`, {
+          course_id: adjacentCourseId,
+          completed: course.completed
+        }).then(res => {
+          axios.patch(`/api/roadmap/${adjacentId}`, {
+            course_id: course.course_id,
+            completed: course.completed
+          }).then(res => {
+            // Fetch an updated roadmap from the DB
+            dispatch('retrieveRoadmap')
+              .then(res => {
+                // Call getRoadmapByStage action to get an updated stage roadmap, which will update the computed property in the stage component to update the UI
+                dispatch('getRoadmapByStage', course.stage);
+              })
+          })
+        })
+    }
+    
 };
 
 export default {

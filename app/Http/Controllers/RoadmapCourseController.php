@@ -67,17 +67,18 @@ class RoadmapCourseController extends Controller
   public function update(Request $request, RoadmapCourse $roadmapcourse)
   {
     $data = $request->validate([
-      'user_id' => 'required|integer',
-      'course_id' => 'required|integer',
-      'stage' => 'required|integer',
-      'title' => 'required|string',
-      'creator' => 'required|string',
-      'url' => 'required|string',
-      'hours' => 'required',
+      // 'user_id' => 'required|integer',
+      // 'course_id' => 'required|integer',
+      // 'stage' => 'required|integer',
+      // 'title' => 'required|string',
+      // 'creator' => 'required|string',
+      // 'url' => 'required|string',
+      // 'hours' => 'required',
+      'course_id' => 'required',
       'completed' => 'required|boolean'
     ]);
 
-    // $roadmapcourse->update($data);
+    $roadmapcourse->update($data);
 
     return response($roadmapcourse, 200);
   }
