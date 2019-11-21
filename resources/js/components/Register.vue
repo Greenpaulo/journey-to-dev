@@ -16,6 +16,10 @@
         <label for="password" class="lead text-success">Password</label>
         <input type="password" class="form-control" id="password" placeholder="Password" v-model="password">
       </div>
+      <div class="form-group">
+        <label for="password_confirmation" class="lead text-purple">Confirm password</label>
+        <input type="password" class="form-control" id="password_confirmation" placeholder="Password" v-model="password_confirmation">
+      </div>
       <button type="submit" class="btn btn-primary my-3">Submit</button>
     </fieldset>
   </form>
@@ -29,7 +33,8 @@ export default {
     return {
       name: '',
       email: '',
-      password: ''
+      password: '',
+      password_confirmation: ''
     }
   },
   methods: {
@@ -37,7 +42,8 @@ export default {
       this.$store.dispatch('register', {
         name: this.name,
         email: this.email,
-        password: this.password
+        password: this.password,
+        password_confirmation: this.password_confirmation
       });
     }
   }

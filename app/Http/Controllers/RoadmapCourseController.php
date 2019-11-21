@@ -12,14 +12,10 @@ class RoadmapCourseController extends Controller
    *
    * @return \Illuminate\Http\Response
    */
-  // public function index()
-  // {
-  //   return RoadmapCourse::where('user_id', auth()->user()->id)->get();
-  // }
-  // public function index($id)
-  // {
-  //   return RoadmapCourse::where('user_id', $id)->get();
-  // }
+  public function index()
+  {
+
+  }
 
   /**
    * Store a newly created resource in storage.
@@ -66,14 +62,12 @@ class RoadmapCourseController extends Controller
    */
   public function update(Request $request, RoadmapCourse $roadmapcourse)
   {
+    // Check that the roadmapcourse belongs to the user
+    if ($roadmapcourse->user_id !== auth()->user()->id){
+      return response()->json('Unauthorised', 401);
+    }
+
     $data = $request->validate([
-      // 'user_id' => 'required|integer',
-      // 'course_id' => 'required|integer',
-      // 'stage' => 'required|integer',
-      // 'title' => 'required|string',
-      // 'creator' => 'required|string',
-      // 'url' => 'required|string',
-      // 'hours' => 'required',
       'course_id' => 'required',
       'completed' => 'required|boolean'
     ]);
@@ -82,7 +76,6 @@ class RoadmapCourseController extends Controller
 
     return response($roadmapcourse, 200);
   }
-
   /**
    * Remove the specified resource from storage.
    *
@@ -91,6 +84,11 @@ class RoadmapCourseController extends Controller
    */
   public function destroy(RoadmapCourse $roadmapcourse)
   {
+    // Check that the roadmapcourse belongs to the user
+    if ($roadmapcourse->user_id !== auth()->user()->id) {
+      return response()->json('Unauthorised', 401);
+    }
+
     $roadmapcourse->delete();
 
     return response('Deleted Roadmap Course', 200);

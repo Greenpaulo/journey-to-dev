@@ -84,3 +84,24 @@ $stage9: $white;
   border-top: 8px solid #fff;
   border-right: 8px solid #ffff;
 }
+
+// Text colors
+.text-orangered {
+  color: orangered !important;
+}
+
+.text-orange {
+  color: orange !important;
+}
+
+.text-purple {
+  color: $purple !important;
+}
+
+.text-teal {
+  color: $teal !important;
+}
+
+.text-pink {
+  color: $pink !important;
+}

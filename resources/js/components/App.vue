@@ -26,24 +26,4 @@ body {
   /* background-color: #100e17; */
 }
 
-.text-orangered {
-  color: orangered !important;
-}
-
-.text-orange {
-  color: orange !important;
-}
-
-.text-purple {
-  color: $purple !important;
-}
-
-.text-teal {
-  color: $teal !important;
-}
-
-.text-pink {
-  color: $pink !important;
-}
-
 </style>

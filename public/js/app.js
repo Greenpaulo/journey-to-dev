@@ -2016,11 +2016,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Navbar',
@@ -2063,13 +2058,18 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Register',
   data: function data() {
     return {
       name: '',
       email: '',
-      password: ''
+      password: '',
+      password_confirmation: ''
     };
   },
   methods: {
@@ -2077,7 +2077,8 @@ __webpack_require__.r(__webpack_exports__);
       this.$store.dispatch('register', {
         name: this.name,
         email: this.email,
-        password: this.password
+        password: this.password,
+        password_confirmation: this.password_confirmation
       });
     }
   }
@@ -2178,7 +2179,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     initialLoad();
   },
   computed: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_2__["mapGetters"])({
-    userCourseList: 'retrieveUserCourseList'
+    userCourseList: 'retrieveUserCourseList',
+    name: 'getName'
   }), {
     calcTotalHours: function calcTotalHours() {
       var roadmap = this.$store.state.roadmap.roadmap;
@@ -2569,7 +2571,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".bg-stage1 {\n  background-color: #CC0000;\n}\n.bg-stage2 {\n  background-color: orange;\n}\n.bg-stage3 {\n  background-color: orangered;\n}\n.bg-stage4 {\n  background-color: #77B300;\n}\n.bg-stage5 {\n  background-color: #2A9FD6;\n}\n.bg-stage6 {\n  background-color: #20c997;\n}\n.bg-stage7 {\n  background-color: #e83e8c;\n}\n.bg-stage8 {\n  background-color: #9933CC;\n}\n.bg-stage9 {\n  background-color: #fff;\n  color: black !important;\n}\n.border-stage1 {\n  border-top: 8px solid #CC0000;\n  border-right: 8px solid #CC0000;\n}\n.border-stage2 {\n  border-top: 8px solid orange;\n  border-right: 8px solid orange;\n}\n.border-stage3 {\n  border-top: 8px solid orangered;\n  border-right: 8px solid orangered;\n}\n.border-stage4 {\n  border-top: 8px solid #77B300;\n  border-right: 8px solid #77B300;\n}\n.border-stage5 {\n  border-top: 8px solid #2A9FD6;\n  border-right: 8px solid #2A9FD6;\n}\n.border-stage6 {\n  border-top: 8px solid #20c997;\n  border-right: 8px solid #20c997;\n}\n.border-stage7 {\n  border-top: 8px solid #e83e8c;\n  border-right: 8px solid #e83e8c;\n}\n.border-stage8 {\n  border-top: 8px solid #9933CC;\n  border-right: 8px solid #9933CC;\n}\n.border-stage9 {\n  border-top: 8px solid #fff;\n  border-right: 8px solid #ffff;\n}\nbody {\n  background-color: #131212;\n  /* background-color: #100e17; */\n}\n.text-orangered {\n  color: orangered !important;\n}\n.text-orange {\n  color: orange !important;\n}\n.text-purple {\n  color: #6f42c1 !important;\n}\n.text-teal {\n  color: #20c997 !important;\n}\n.text-pink {\n  color: #e83e8c !important;\n}", ""]);
+exports.push([module.i, ".bg-stage1 {\n  background-color: #CC0000;\n}\n.bg-stage2 {\n  background-color: orange;\n}\n.bg-stage3 {\n  background-color: orangered;\n}\n.bg-stage4 {\n  background-color: #77B300;\n}\n.bg-stage5 {\n  background-color: #2A9FD6;\n}\n.bg-stage6 {\n  background-color: #20c997;\n}\n.bg-stage7 {\n  background-color: #e83e8c;\n}\n.bg-stage8 {\n  background-color: #9933CC;\n}\n.bg-stage9 {\n  background-color: #fff;\n  color: black !important;\n}\n.border-stage1 {\n  border-top: 8px solid #CC0000;\n  border-right: 8px solid #CC0000;\n}\n.border-stage2 {\n  border-top: 8px solid orange;\n  border-right: 8px solid orange;\n}\n.border-stage3 {\n  border-top: 8px solid orangered;\n  border-right: 8px solid orangered;\n}\n.border-stage4 {\n  border-top: 8px solid #77B300;\n  border-right: 8px solid #77B300;\n}\n.border-stage5 {\n  border-top: 8px solid #2A9FD6;\n  border-right: 8px solid #2A9FD6;\n}\n.border-stage6 {\n  border-top: 8px solid #20c997;\n  border-right: 8px solid #20c997;\n}\n.border-stage7 {\n  border-top: 8px solid #e83e8c;\n  border-right: 8px solid #e83e8c;\n}\n.border-stage8 {\n  border-top: 8px solid #9933CC;\n  border-right: 8px solid #9933CC;\n}\n.border-stage9 {\n  border-top: 8px solid #fff;\n  border-right: 8px solid #ffff;\n}\n.text-orangered {\n  color: orangered !important;\n}\n.text-orange {\n  color: orange !important;\n}\n.text-purple {\n  color: #6f42c1 !important;\n}\n.text-teal {\n  color: #20c997 !important;\n}\n.text-pink {\n  color: #e83e8c !important;\n}\nbody {\n  background-color: #131212;\n  /* background-color: #100e17; */\n}", ""]);
 
 // exports
 
@@ -2588,7 +2590,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".bg-stage1[data-v-9d6850f8] {\n  background-color: #CC0000;\n}\n.bg-stage2[data-v-9d6850f8] {\n  background-color: orange;\n}\n.bg-stage3[data-v-9d6850f8] {\n  background-color: orangered;\n}\n.bg-stage4[data-v-9d6850f8] {\n  background-color: #77B300;\n}\n.bg-stage5[data-v-9d6850f8] {\n  background-color: #2A9FD6;\n}\n.bg-stage6[data-v-9d6850f8] {\n  background-color: #20c997;\n}\n.bg-stage7[data-v-9d6850f8] {\n  background-color: #e83e8c;\n}\n.bg-stage8[data-v-9d6850f8] {\n  background-color: #9933CC;\n}\n.bg-stage9[data-v-9d6850f8] {\n  background-color: #fff;\n  color: black !important;\n}\n.border-stage1[data-v-9d6850f8] {\n  border-top: 8px solid #CC0000;\n  border-right: 8px solid #CC0000;\n}\n.border-stage2[data-v-9d6850f8] {\n  border-top: 8px solid orange;\n  border-right: 8px solid orange;\n}\n.border-stage3[data-v-9d6850f8] {\n  border-top: 8px solid orangered;\n  border-right: 8px solid orangered;\n}\n.border-stage4[data-v-9d6850f8] {\n  border-top: 8px solid #77B300;\n  border-right: 8px solid #77B300;\n}\n.border-stage5[data-v-9d6850f8] {\n  border-top: 8px solid #2A9FD6;\n  border-right: 8px solid #2A9FD6;\n}\n.border-stage6[data-v-9d6850f8] {\n  border-top: 8px solid #20c997;\n  border-right: 8px solid #20c997;\n}\n.border-stage7[data-v-9d6850f8] {\n  border-top: 8px solid #e83e8c;\n  border-right: 8px solid #e83e8c;\n}\n.border-stage8[data-v-9d6850f8] {\n  border-top: 8px solid #9933CC;\n  border-right: 8px solid #9933CC;\n}\n.border-stage9[data-v-9d6850f8] {\n  border-top: 8px solid #fff;\n  border-right: 8px solid #ffff;\n}\n.course-list[data-v-9d6850f8] {\n  display: flex;\n  padding: 3rem;\n  overflow-x: scroll;\n  -webkit-overflow-scrolling: touch;\n}\n.course-card[data-v-9d6850f8] {\n  background-color: #17141d;\n  width: 300px;\n  min-height: 350px;\n  box-shadow: -1rem 0 3rem #000;\n  border-width: 4px;\n  border-radius: 16px;\n  padding: 1.5rem;\n  transition-property: all;\n  transition-duration: 0.2s;\n  transition-timing-function: ease;\n  transition-delay: 0s;\n}\n.course-card[data-v-9d6850f8]:not(:first-child) {\n  margin-left: -130px;\n}\n.course-card h2[data-v-9d6850f8] {\n  color: white;\n}\n.course-card[data-v-9d6850f8]:hover {\n  transform: translate(0, -1rem);\n}\n.course-card:hover ~ .course-card[data-v-9d6850f8] {\n  transform: translateX(130px);\n}\n.course-list[data-v-9d6850f8]::-webkit-scrollbar {\n  width: 10px;\n  height: 15px;\n}\n.course-list[data-v-9d6850f8]::-webkit-scrollbar-thumb {\n  background: #201c29;\n  border-radius: 10px;\n  box-shadow: inset 2px 2px 2px rgba(255, 255, 255, 0.25), inset -2px -2px 2px rgba(0, 0, 0, 0.25);\n}\n.course-list[data-v-9d6850f8]::-webkit-scrollbar-track {\n  background: linear-gradient(to right, #201c29, #201c29 1px, #17141d 1px, #17141d);\n}\n.add-btn[data-v-9d6850f8] {\n  width: 50px;\n  height: 50px;\n  border-radius: 50%;\n  cursor: pointer;\n}\n.bg-stage9 i.fa-plus[data-v-9d6850f8] {\n  color: black;\n}\ni.fa-plus[data-v-9d6850f8] {\n  padding-top: 11px;\n  padding-left: 13px;\n  width: 50px;\n  height: 50px;\n  color: white;\n}", ""]);
+exports.push([module.i, ".bg-stage1[data-v-9d6850f8] {\n  background-color: #CC0000;\n}\n.bg-stage2[data-v-9d6850f8] {\n  background-color: orange;\n}\n.bg-stage3[data-v-9d6850f8] {\n  background-color: orangered;\n}\n.bg-stage4[data-v-9d6850f8] {\n  background-color: #77B300;\n}\n.bg-stage5[data-v-9d6850f8] {\n  background-color: #2A9FD6;\n}\n.bg-stage6[data-v-9d6850f8] {\n  background-color: #20c997;\n}\n.bg-stage7[data-v-9d6850f8] {\n  background-color: #e83e8c;\n}\n.bg-stage8[data-v-9d6850f8] {\n  background-color: #9933CC;\n}\n.bg-stage9[data-v-9d6850f8] {\n  background-color: #fff;\n  color: black !important;\n}\n.border-stage1[data-v-9d6850f8] {\n  border-top: 8px solid #CC0000;\n  border-right: 8px solid #CC0000;\n}\n.border-stage2[data-v-9d6850f8] {\n  border-top: 8px solid orange;\n  border-right: 8px solid orange;\n}\n.border-stage3[data-v-9d6850f8] {\n  border-top: 8px solid orangered;\n  border-right: 8px solid orangered;\n}\n.border-stage4[data-v-9d6850f8] {\n  border-top: 8px solid #77B300;\n  border-right: 8px solid #77B300;\n}\n.border-stage5[data-v-9d6850f8] {\n  border-top: 8px solid #2A9FD6;\n  border-right: 8px solid #2A9FD6;\n}\n.border-stage6[data-v-9d6850f8] {\n  border-top: 8px solid #20c997;\n  border-right: 8px solid #20c997;\n}\n.border-stage7[data-v-9d6850f8] {\n  border-top: 8px solid #e83e8c;\n  border-right: 8px solid #e83e8c;\n}\n.border-stage8[data-v-9d6850f8] {\n  border-top: 8px solid #9933CC;\n  border-right: 8px solid #9933CC;\n}\n.border-stage9[data-v-9d6850f8] {\n  border-top: 8px solid #fff;\n  border-right: 8px solid #ffff;\n}\n.text-orangered[data-v-9d6850f8] {\n  color: orangered !important;\n}\n.text-orange[data-v-9d6850f8] {\n  color: orange !important;\n}\n.text-purple[data-v-9d6850f8] {\n  color: #6f42c1 !important;\n}\n.text-teal[data-v-9d6850f8] {\n  color: #20c997 !important;\n}\n.text-pink[data-v-9d6850f8] {\n  color: #e83e8c !important;\n}\n.course-list[data-v-9d6850f8] {\n  display: flex;\n  padding: 3rem;\n  overflow-x: scroll;\n  -webkit-overflow-scrolling: touch;\n}\n.course-card[data-v-9d6850f8] {\n  background-color: #17141d;\n  width: 300px;\n  min-height: 350px;\n  box-shadow: -1rem 0 3rem #000;\n  border-width: 4px;\n  border-radius: 16px;\n  padding: 1.5rem;\n  transition-property: all;\n  transition-duration: 0.2s;\n  transition-timing-function: ease;\n  transition-delay: 0s;\n}\n.course-card[data-v-9d6850f8]:not(:first-child) {\n  margin-left: -130px;\n}\n.course-card h2[data-v-9d6850f8] {\n  color: white;\n}\n.course-card[data-v-9d6850f8]:hover {\n  transform: translate(0, -1rem);\n}\n.course-card:hover ~ .course-card[data-v-9d6850f8] {\n  transform: translateX(130px);\n}\n.course-list[data-v-9d6850f8]::-webkit-scrollbar {\n  width: 10px;\n  height: 15px;\n}\n.course-list[data-v-9d6850f8]::-webkit-scrollbar-thumb {\n  background: #201c29;\n  border-radius: 10px;\n  box-shadow: inset 2px 2px 2px rgba(255, 255, 255, 0.25), inset -2px -2px 2px rgba(0, 0, 0, 0.25);\n}\n.course-list[data-v-9d6850f8]::-webkit-scrollbar-track {\n  background: linear-gradient(to right, #201c29, #201c29 1px, #17141d 1px, #17141d);\n}\n.add-btn[data-v-9d6850f8] {\n  width: 50px;\n  height: 50px;\n  border-radius: 50%;\n  cursor: pointer;\n}\n.bg-stage9 i.fa-plus[data-v-9d6850f8] {\n  color: black;\n}\ni.fa-plus[data-v-9d6850f8] {\n  padding-top: 11px;\n  padding-left: 13px;\n  width: 50px;\n  height: 50px;\n  color: white;\n}", ""]);
 
 // exports
 
@@ -4972,7 +4974,7 @@ var render = function() {
               attrs: { id: "navbarColor02" }
             },
             [
-              _c("ul", { staticClass: "navbar-nav mr-auto px-3" }, [
+              _c("ul", { staticClass: "navbar-nav ml-auto px-3" }, [
                 _c(
                   "li",
                   { staticClass: "nav-item" },
@@ -5080,9 +5082,7 @@ var render = function() {
                       )
                     ])
                   : _vm._e()
-              ]),
-              _vm._v(" "),
-              _vm._m(1)
+              ])
             ]
           )
         ],
@@ -5111,26 +5111,6 @@ var staticRenderFns = [
       },
       [_c("span", { staticClass: "navbar-toggler-icon" })]
     )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("form", { staticClass: "form-inline my-2 my-lg-0" }, [
-      _c("input", {
-        staticClass: "form-control mr-sm-2",
-        attrs: { type: "text", placeholder: "Search" }
-      }),
-      _vm._v(" "),
-      _c(
-        "button",
-        {
-          staticClass: "btn btn-secondary my-2 my-sm-0",
-          attrs: { type: "submit" }
-        },
-        [_vm._v("Search")]
-      )
-    ])
   }
 ]
 render._withStripped = true
@@ -5279,6 +5259,43 @@ var render = function() {
             })
           ]),
           _vm._v(" "),
+          _c("div", { staticClass: "form-group" }, [
+            _c(
+              "label",
+              {
+                staticClass: "lead text-purple",
+                attrs: { for: "password_confirmation" }
+              },
+              [_vm._v("Confirm password")]
+            ),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.password_confirmation,
+                  expression: "password_confirmation"
+                }
+              ],
+              staticClass: "form-control",
+              attrs: {
+                type: "password",
+                id: "password_confirmation",
+                placeholder: "Password"
+              },
+              domProps: { value: _vm.password_confirmation },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.password_confirmation = $event.target.value
+                }
+              }
+            })
+          ]),
+          _vm._v(" "),
           _c(
             "button",
             { staticClass: "btn btn-primary my-3", attrs: { type: "submit" } },
@@ -5315,7 +5332,9 @@ var render = function() {
     "div",
     { staticClass: "container my-5" },
     [
-      _c("h1", { staticClass: "display-4" }, [_vm._v("Your Roadmap")]),
+      _c("h1", { staticClass: "display-4" }, [
+        _vm._v(_vm._s(_vm.name) + "'s Roadmap")
+      ]),
       _vm._v(" "),
       _c(
         "section",
@@ -23543,17 +23562,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _app__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../app */ "./resources/js/app.js");
-/* harmony import */ var _roadmap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./roadmap */ "./resources/js/store/modules/roadmap.js");
-
 
 
 var state = {
   token: window.localStorage.getItem('access_token') || null,
-  user_id: ""
+  user_id: "",
+  name: "Your"
 };
 var getters = {
   isLoggedIn: function isLoggedIn(state) {
     return !!state.token;
+  },
+  getName: function getName(state) {
+    return state.name;
   }
 };
 var mutations = {
@@ -23562,11 +23583,21 @@ var mutations = {
   },
   setUserId: function setUserId(state, id) {
     state.user_id = id;
+  },
+  setName: function setName(state, name) {
+    state.name = name;
   }
 };
 var actions = {
   register: function register(context, credentials) {
-    console.log(credentials);
+    axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('/api/register', {
+      name: credentials.name,
+      email: credentials.email,
+      password: credentials.password,
+      password_confirmation: credentials.password_confirmation
+    }).then(function (res) {
+      console.log(res.data);
+    });
   },
   // Retrieves a token from the API
   login: function login(_ref, credentials) {
@@ -23587,22 +23618,35 @@ var actions = {
       console.log(error);
     });
   },
-  retrieveUserId: function retrieveUserId(_ref2) {
-    var commit = _ref2.commit;
-    axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('/user').then(function (res) {
-      return console.log(res.data);
+  // retrieveUserId: ({ commit }) => {
+  //   axios.get('/user')
+  //     .then(res => console.log(res.data));
+  // },
+  logout: function logout(_ref2) {
+    var commit = _ref2.commit,
+        state = _ref2.state;
+    // This API is authenticated - Pass through the token in the header
+    axios__WEBPACK_IMPORTED_MODULE_0___default.a.defaults.headers.common['Authorization'] = 'Bearer ' + state.token; // Clear the access tokens in the DB
+
+    axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('/api/logout').then(function (res) {
+      // Set token to null in the state
+      commit('setToken', null); // Remove token from local storage
+
+      window.localStorage.clear(); // Redirect to home page
+
+      if (window.location.pathname !== "/") {
+        _app__WEBPACK_IMPORTED_MODULE_1__["router"].push('/');
+      } //Refresh the browser to clear the state
+
+
+      window.location.reload();
     });
   },
-  logout: function logout(_ref3) {
+  getUserFirstName: function getUserFirstName(_ref3, fullname) {
     var commit = _ref3.commit;
-    // Set token to null in the state
-    commit('setToken', null); // Remove token from local storage
+    var firstname = fullname.replace(/ .*/, ''); // Call the mutation to set the name
 
-    window.localStorage.clear(); // Redirect to home page
-
-    if (window.location.pathname !== "/") {
-      _app__WEBPACK_IMPORTED_MODULE_1__["router"].push('/');
-    }
+    commit('setName', firstname);
   }
 };
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -23654,16 +23698,10 @@ var getters = {
       return userCoursesByStage;
     };
   },
-  // Takes the CourseList state and the roadmap ids's state and returns a userCourseList
+  // Takes the CourseList state and the roadmap titles's state and returns a userCourseList
   createUserCourseList: function createUserCourseList(state) {
-    // // Get the roadmap ids from the roadmap module
-    // const ids = user_roadmap.state.ids;
-    // console.log('ids', ids)
     // Get the roadmap titles from the roadmap module
-    var titles = _roadmap__WEBPACK_IMPORTED_MODULE_2__["default"].state.titles;
-    console.log('titles from createUserCourseList', titles); // Get the courseList and filter out the courses by course_id, which are in the user's roadmap
-    // const userCourseList = state.courseList.filter(course => !(ids.includes(course.id)));
-    // Get the courseList and filter out the courses by course_id, which are in the user's roadmap
+    var titles = _roadmap__WEBPACK_IMPORTED_MODULE_2__["default"].state.titles; // Get the courseList and filter out the courses by title, which are in the user's roadmap
 
     var userCourseList = state.courseList.filter(function (course) {
       return !titles.includes(course.title);
@@ -23687,7 +23725,7 @@ var actions = {
   loadInitialUserData: function loadInitialUserData(_ref) {
     var commit = _ref.commit,
         dispatch = _ref.dispatch;
-    // Retrieve the user's id
+    // Retrieve the user's id and name
     axios__WEBPACK_IMPORTED_MODULE_0___default()({
       method: 'get',
       url: '/api/user',
@@ -23695,20 +23733,26 @@ var actions = {
         Authorization: "Bearer ".concat(_auth__WEBPACK_IMPORTED_MODULE_1__["default"].state.token)
       }
     }).then(function (res) {
-      var id = res.data.id; // Call mutation to set user_id in state
+      var id = res.data.id;
+      var fullname = res.data.name; // Call mutation to set user_id in state
 
-      commit('setUserId', id); //Retrieve the user's roadmap   - show a 'loading' spinner in UI
+      commit('setUserId', id); // Call action to get the user's first name
 
-      dispatch('retrieveRoadmap'); // Retrieve the course list from the API and create a user course list
+      dispatch('getUserFirstName', fullname); //Retrieve the user's roadmap
 
-      dispatch('retrieveCourseList');
+      dispatch('retrieveRoadmap').then(function (res) {
+        // Retrieve the course list from the API and create a user course list
+        dispatch('retrieveCourseList');
+      });
     });
   },
   // Makes an API to get the original course list and sets the inital state for courseList and userCourseList 
   retrieveCourseList: function retrieveCourseList(_ref2) {
     var commit = _ref2.commit,
         dispatch = _ref2.dispatch;
-    // Get the full list of courses from the API
+    // This API is authenticated - Pass through the token in the header
+    axios__WEBPACK_IMPORTED_MODULE_0___default.a.defaults.headers.common['Authorization'] = 'Bearer ' + _auth__WEBPACK_IMPORTED_MODULE_1__["default"].state.token; // Get the full list of courses from the API
+
     axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('/api/courses').then(function (res) {
       // Call mutations to set the courseList state
       commit('setCourseList', res.data); // Call action to set the initial userCourseList
@@ -23775,7 +23819,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 var state = {
   roadmap: [],
-  ids: [],
   titles: [],
   roadmapStage1: [],
   roadmapStage2: [],
@@ -23795,14 +23838,6 @@ var getters = {
     return function (stage) {
       return state["roadmapStage" + stage];
     };
-  },
-  // Creates an array of course_id's from the roadmap
-  createIdArray: function createIdArray(state) {
-    var ids = [];
-    state.roadmap.forEach(function (course) {
-      ids.push(course.course_id);
-    });
-    return ids;
   },
   // Creates an array of course_id's from the roadmap
   createTitleArray: function createTitleArray(state) {
@@ -23826,9 +23861,6 @@ var mutations = {
   setRoadmap: function setRoadmap(state, roadmap) {
     state.roadmap = roadmap;
   },
-  setIds: function setIds(state, ids) {
-    state.ids = ids;
-  },
   setTitles: function setTitles(state, titles) {
     state.titles = titles;
   },
@@ -23851,38 +23883,29 @@ var actions = {
     var commit = _ref2.commit,
         dispatch = _ref2.dispatch;
     return new Promise(function (resolve) {
+      // This API is authenticated - Pass through the token in the header
+      axios__WEBPACK_IMPORTED_MODULE_1___default.a.defaults.headers.common['Authorization'] = 'Bearer ' + _auth__WEBPACK_IMPORTED_MODULE_2__["default"].state.token;
       axios__WEBPACK_IMPORTED_MODULE_1___default.a.get("/api/roadmap/".concat(_auth__WEBPACK_IMPORTED_MODULE_2__["default"].state.user_id)).then(function (res) {
         var roadmap = res.data; // Call mutation to set roadmap
 
-        commit('setRoadmap', roadmap); // // Get an Id array from the roadmap
-        // dispatch('getRoadmapIds');
-        // Get an Id array from the roadmap
+        commit('setRoadmap', roadmap); // Get a titles array from the roadmap
 
         dispatch('getRoadmapTitles');
         resolve();
       });
     });
   },
-  getRoadmapIds: function getRoadmapIds(_ref3) {
+  getRoadmapTitles: function getRoadmapTitles(_ref3) {
     var getters = _ref3.getters,
         commit = _ref3.commit;
     // Call getter to create id array
-    var ids = getters.createIdArray; // Call mutation to set ids in state
-
-    commit('setIds', ids);
-  },
-  getRoadmapTitles: function getRoadmapTitles(_ref4) {
-    var getters = _ref4.getters,
-        commit = _ref4.commit;
-    // Call getter to create id array
-    var titles = getters.createTitleArray;
-    console.log('titles from inside getRoadmapTitles', titles); // Call mutation to set ids in state
+    var titles = getters.createTitleArray; // Call mutation to set ids in state
 
     commit('setTitles', titles);
   },
-  getRoadmapByStage: function getRoadmapByStage(_ref5, stage) {
-    var getters = _ref5.getters,
-        commit = _ref5.commit;
+  getRoadmapByStage: function getRoadmapByStage(_ref4, stage) {
+    var getters = _ref4.getters,
+        commit = _ref4.commit;
     // Call getter to get the roadmapByStage array
     var courses = getters.filterRoadmapByStage(stage); //Call mutation to set the roadmapByStage
 
@@ -23895,14 +23918,17 @@ var actions = {
   addCourseToRoadmap: function () {
     var _addCourseToRoadmap = _asyncToGenerator(
     /*#__PURE__*/
-    _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(_ref6, course) {
+    _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(_ref5, course) {
       var commit, dispatch, response, newCourse;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
-              commit = _ref6.commit, dispatch = _ref6.dispatch;
-              _context.next = 3;
+              commit = _ref5.commit, dispatch = _ref5.dispatch;
+              // This API is authenticated - Pass through the token in the header
+              axios__WEBPACK_IMPORTED_MODULE_1___default.a.defaults.headers.common['Authorization'] = 'Bearer ' + _auth__WEBPACK_IMPORTED_MODULE_2__["default"].state.token; // Add the course to the roadmap table in DB
+
+              _context.next = 4;
               return axios__WEBPACK_IMPORTED_MODULE_1___default.a.post('/api/roadmap', {
                 user_id: _auth__WEBPACK_IMPORTED_MODULE_2__["default"].state.user_id,
                 course_id: course.id,
@@ -23914,12 +23940,11 @@ var actions = {
                 completed: false
               });
 
-            case 3:
+            case 4:
               response = _context.sent;
               newCourse = response.data; // Update the roadmap in state
 
               commit('addToRoadmap', newCourse); // Update the roadmap ID array
-              // dispatch('getRoadmapIds');
 
               dispatch('getRoadmapTitles'); // Update the userCourseList using the updated Ids
 
@@ -23929,7 +23954,7 @@ var actions = {
 
               dispatch('getRoadmapByStage', course.stage);
 
-            case 10:
+            case 11:
             case "end":
               return _context.stop();
           }
@@ -23946,27 +23971,24 @@ var actions = {
   deleteCourseFromRoadmap: function () {
     var _deleteCourseFromRoadmap = _asyncToGenerator(
     /*#__PURE__*/
-    _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2(_ref7, course) {
+    _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2(_ref6, course) {
       var commit, dispatch, response;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee2$(_context2) {
         while (1) {
           switch (_context2.prev = _context2.next) {
             case 0:
-              commit = _ref7.commit, dispatch = _ref7.dispatch;
-              _context2.next = 3;
+              commit = _ref6.commit, dispatch = _ref6.dispatch;
+              // This API is authenticated - Pass through the token in the header
+              axios__WEBPACK_IMPORTED_MODULE_1___default.a.defaults.headers.common['Authorization'] = 'Bearer ' + _auth__WEBPACK_IMPORTED_MODULE_2__["default"].state.token; // Delete the course in the roadmap table in DB
+
+              _context2.next = 4;
               return axios__WEBPACK_IMPORTED_MODULE_1___default.a["delete"]("/api/roadmap/".concat(course.id));
 
-            case 3:
+            case 4:
               response = _context2.sent;
-              // // Update the roadmap in state
-              // commit('removeCourseFromRoadmap', course.id) 
-              // // Update the roadmap ID array
-              // dispatch('getRoadmapIds');
               // Fetch the updated roadmap
               dispatch('retrieveRoadmap').then(function (res) {
-                // Call getRoadmapByStage action to get an updated stage roadmap, which will update the computed property in the stage component to update the UI
-                // dispatch('getRoadmapByStage', course.stage);
-                // Update the userCourseList using the updated Ids
+                // Update the userCourseList using the updated titles
                 dispatch('getUserCourseList'); // Update the courseList component by updating the userCoursesByStage state in courseList module
 
                 dispatch('getUserCoursesByStage', course.stage); // Update the corresponding Stage component
@@ -23974,7 +23996,7 @@ var actions = {
                 dispatch('getRoadmapByStage', course.stage);
               });
 
-            case 5:
+            case 6:
             case "end":
               return _context2.stop();
           }
@@ -23988,14 +24010,14 @@ var actions = {
 
     return deleteCourseFromRoadmap;
   }(),
-  moveCourse: function moveCourse(_ref8, _ref9) {
-    var state = _ref8.state,
-        dispatch = _ref8.dispatch;
+  moveCourse: function moveCourse(_ref7, _ref8) {
+    var state = _ref7.state,
+        dispatch = _ref7.dispatch;
 
-    var _ref10 = _slicedToArray(_ref9, 3),
-        course = _ref10[0],
-        index = _ref10[1],
-        positionChange = _ref10[2];
+    var _ref9 = _slicedToArray(_ref8, 3),
+        course = _ref9[0],
+        index = _ref9[1],
+        positionChange = _ref9[2];
 
     // Get the corresponding roadmap for the stage
     var array = state['roadmapStage' + course.stage];
@@ -24017,8 +24039,10 @@ var actions = {
       return;
     } // Now we need to swap the course id with the id of the adjacent course, and update these in the roadmap table
     // Swap the course_id's in the database
+    // This API is authenticated - Pass through the token in the header
 
 
+    axios__WEBPACK_IMPORTED_MODULE_1___default.a.defaults.headers.common['Authorization'] = 'Bearer ' + _auth__WEBPACK_IMPORTED_MODULE_2__["default"].state.token;
     axios__WEBPACK_IMPORTED_MODULE_1___default.a.patch("/api/roadmap/".concat(course.id), {
       course_id: adjacentCourseId,
       completed: course.completed

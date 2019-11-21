@@ -3,7 +3,6 @@ import auth from './auth';
 
 const state = {
   roadmap: [],
-  ids: [],
   titles: [],
   roadmapStage1: [], 
   roadmapStage2: [],
@@ -20,14 +19,6 @@ const getters = {
   getRoadmap: state => state.roadmap,
   getRoadmapByStage: (state) => (stage) => state["roadmapStage" + stage],
   
-  // Creates an array of course_id's from the roadmap
-  createIdArray: (state) => {
-    const ids = [];
-    state.roadmap.forEach(course => {
-      ids.push(course.course_id);
-    });  
-    return ids;
-  },
   // Creates an array of course_id's from the roadmap
   createTitleArray: (state) => {
     const titles = [];
@@ -48,9 +39,6 @@ const mutations = {
   setRoadmap: (state, roadmap) => {
     state.roadmap = roadmap;
   },
-  setIds: (state, ids) => {
-    state.ids = ids;
-  },
   setTitles: (state, titles) => {
     state.titles = titles;
   },
@@ -70,7 +58,8 @@ const mutations = {
 const actions = {
    retrieveRoadmap: ({ commit, dispatch }) => {
     return new Promise((resolve) => {
-
+      // This API is authenticated - Pass through the token in the header
+      axios.defaults.headers.common['Authorization'] = 'Bearer ' + auth.state.token
       axios.get(`/api/roadmap/${auth.state.user_id}`)
         .then(res => {
           const roadmap = res.data;
@@ -78,9 +67,7 @@ const actions = {
           // Call mutation to set roadmap
           commit('setRoadmap', roadmap);
 
-          // // Get an Id array from the roadmap
-          // dispatch('getRoadmapIds');
-          // Get an Id array from the roadmap
+          // Get a titles array from the roadmap
           dispatch('getRoadmapTitles');
 
           resolve();
@@ -88,17 +75,10 @@ const actions = {
         });    
     })
    },
-   getRoadmapIds: ({getters, commit}) => {
-     // Call getter to create id array
-     const ids = getters.createIdArray;
 
-     // Call mutation to set ids in state
-     commit('setIds', ids);
-   },
    getRoadmapTitles: ({getters, commit}) => {
      // Call getter to create id array
      const titles = getters.createTitleArray;
-     console.log('titles from inside getRoadmapTitles', titles);
 
      // Call mutation to set ids in state
      commit('setTitles', titles);
@@ -114,6 +94,8 @@ const actions = {
   },
 
    async addCourseToRoadmap ({commit, dispatch}, course){
+     // This API is authenticated - Pass through the token in the header
+     axios.defaults.headers.common['Authorization'] = 'Bearer ' + auth.state.token
      // Add the course to the roadmap table in DB
      const response = await axios.post('/api/roadmap', {
        user_id: auth.state.user_id,
@@ -131,7 +113,6 @@ const actions = {
         // Update the roadmap in state
         commit('addToRoadmap', newCourse);
         // Update the roadmap ID array
-        // dispatch('getRoadmapIds');
         dispatch('getRoadmapTitles');
         // Update the userCourseList using the updated Ids
         dispatch('getUserCourseList');
@@ -142,20 +123,15 @@ const actions = {
     },
    
     async deleteCourseFromRoadmap ({commit, dispatch}, course){
+      // This API is authenticated - Pass through the token in the header
+      axios.defaults.headers.common['Authorization'] = 'Bearer ' + auth.state.token
      // Delete the course in the roadmap table in DB
      const response = await axios.delete(`/api/roadmap/${course.id}`);
 
-      // // Update the roadmap in state
-      // commit('removeCourseFromRoadmap', course.id) 
-      // // Update the roadmap ID array
-      // dispatch('getRoadmapIds');
-      
       // Fetch the updated roadmap
       dispatch('retrieveRoadmap')
         .then(res => {
-          // Call getRoadmapByStage action to get an updated stage roadmap, which will update the computed property in the stage component to update the UI
-          // dispatch('getRoadmapByStage', course.stage);
-          // Update the userCourseList using the updated Ids
+          // Update the userCourseList using the updated titles
           dispatch('getUserCourseList');
           // Update the courseList component by updating the userCoursesByStage state in courseList module
           dispatch('getUserCoursesByStage', course.stage);
@@ -192,6 +168,8 @@ const actions = {
 
         // Now we need to swap the course id with the id of the adjacent course, and update these in the roadmap table
         // Swap the course_id's in the database
+      // This API is authenticated - Pass through the token in the header
+      axios.defaults.headers.common['Authorization'] = 'Bearer ' + auth.state.token
         axios.patch(`/api/roadmap/${course.id}`, {
           course_id: adjacentCourseId,
           completed: course.completed

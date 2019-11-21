@@ -20,18 +20,13 @@ const getters = {
     return userCoursesByStage;
   },
 
-  // Takes the CourseList state and the roadmap ids's state and returns a userCourseList
+  // Takes the CourseList state and the roadmap titles's state and returns a userCourseList
   createUserCourseList: (state) => {
-    // // Get the roadmap ids from the roadmap module
-    // const ids = user_roadmap.state.ids;
-    // console.log('ids', ids)
+  
     // Get the roadmap titles from the roadmap module
     const titles = user_roadmap.state.titles;
-    console.log('titles from createUserCourseList', titles)
 
-    // Get the courseList and filter out the courses by course_id, which are in the user's roadmap
-    // const userCourseList = state.courseList.filter(course => !(ids.includes(course.id)));
-    // Get the courseList and filter out the courses by course_id, which are in the user's roadmap
+    // Get the courseList and filter out the courses by title, which are in the user's roadmap
     const userCourseList = state.courseList.filter(course => !(titles.includes(course.title)));
 
     return userCourseList;
@@ -54,26 +49,31 @@ const mutations = {
 const actions = {
   // Retrieves all user data
   loadInitialUserData: ({ commit, dispatch }) => {
-    // Retrieve the user's id
+    // Retrieve the user's id and name
     axios({ method: 'get', url: '/api/user', headers: { Authorization: `Bearer ${auth.state.token}` } })
       .then(res => {
         const id = res.data.id;
+        const fullname = res.data.name;
 
         // Call mutation to set user_id in state
         commit('setUserId', id);
 
-        //Retrieve the user's roadmap   - show a 'loading' spinner in UI
-        dispatch('retrieveRoadmap');
+        // Call action to get the user's first name
+        dispatch('getUserFirstName', fullname);
 
-        // Retrieve the course list from the API and create a user course list
-        dispatch('retrieveCourseList');
-
+        //Retrieve the user's roadmap
+        dispatch('retrieveRoadmap')
+          .then(res => {
+            // Retrieve the course list from the API and create a user course list
+            dispatch('retrieveCourseList');
+          })
       });
   },
 
   // Makes an API to get the original course list and sets the inital state for courseList and userCourseList 
   retrieveCourseList: ({ commit, dispatch }) => {
-
+    // This API is authenticated - Pass through the token in the header
+    axios.defaults.headers.common['Authorization'] = 'Bearer ' + auth.state.token
     // Get the full list of courses from the API
     axios.get('/api/courses')
       .then(res => {

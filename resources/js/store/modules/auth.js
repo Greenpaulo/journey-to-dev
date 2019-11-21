@@ -1,14 +1,15 @@
 import axios from "axios"
 import { router } from '../../app';
-import roadmap from './roadmap';
 
 const state = {
   token: window.localStorage.getItem('access_token') || null,
-  user_id: ""
+  user_id: "",
+  name: "Your"
 };
 
 const getters = {
-  isLoggedIn: state => !!state.token
+  isLoggedIn: state => !!state.token,
+  getName: state => state.name
 };
 
 const mutations = {
@@ -17,13 +18,24 @@ const mutations = {
   },
   setUserId: (state, id) => {
     state.user_id = id
+  },
+  setName: (state, name) => {
+    state.name = name;
   }
 };
 
 const actions = {
 
   register(context, credentials){
-    console.log(credentials);
+    axios.post('/api/register', {
+      name: credentials.name,
+      email: credentials.email,
+      password: credentials.password,
+      password_confirmation: credentials.password_confirmation
+    })
+    .then(res => {
+      console.log(res.data);
+    })
   },
 
   // Retrieves a token from the API
@@ -50,20 +62,36 @@ const actions = {
     })
   },
 
-  retrieveUserId: ({ commit }) => {
-    axios.get('/user')
-      .then(res => console.log(res.data));
+  // retrieveUserId: ({ commit }) => {
+  //   axios.get('/user')
+  //     .then(res => console.log(res.data));
+  // },
+
+  logout: ({ commit, state }) => {
+    // This API is authenticated - Pass through the token in the header
+    axios.defaults.headers.common['Authorization'] = 'Bearer ' + state.token
+    // Clear the access tokens in the DB
+    axios.post('/api/logout')
+      .then(res => {
+        // Set token to null in the state
+        commit('setToken', null);
+        // Remove token from local storage
+        window.localStorage.clear();
+        // Redirect to home page
+        if (window.location.pathname !== "/"){
+          router.push('/');
+        }
+        //Refresh the browser to clear the state
+        window.location.reload();
+      })
   },
 
-  logout: ({ commit }) => {
-    // Set token to null in the state
-    commit('setToken', null);
-    // Remove token from local storage
-    window.localStorage.clear();
-    // Redirect to home page
-    if (window.location.pathname !== "/"){
-      router.push('/');
-    }
+  getUserFirstName: ({ commit }, fullname) => {
+    
+    var firstname = fullname.replace(/ .*/, '');
+
+    // Call the mutation to set the name
+    commit('setName', firstname);
   }
 };
 

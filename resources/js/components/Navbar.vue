@@ -9,7 +9,7 @@
 
       <div class="collapse navbar-collapse" id="navbarColor02">
         
-        <ul class="navbar-nav mr-auto px-3">
+        <ul class="navbar-nav ml-auto px-3">
           <li class="nav-item">
             <router-link class="nav-link" to="/">Home</router-link>
           </li>
@@ -32,11 +32,6 @@
             <a class="nav-link logout-link" href="#" @click="logout">Logout</a>
           </li>
         </ul>
-        
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="text" placeholder="Search">
-          <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-        </form>
       
       </div>
     </div>

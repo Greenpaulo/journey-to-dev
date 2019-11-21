@@ -1,6 +1,6 @@
 <template>
   <div class="container my-5">
-    <h1 class="display-4">Your Roadmap</h1>
+    <h1 class="display-4">{{name}}'s Roadmap</h1>
 
     <section class="course-selector mt-5">
       <div id="select-menu">
@@ -73,7 +73,7 @@ export default {
     initialLoad()
   },
   computed: {
-    ...mapGetters({userCourseList: 'retrieveUserCourseList'}),
+    ...mapGetters({userCourseList: 'retrieveUserCourseList', name: 'getName'}),
     calcTotalHours() {
       const { roadmap } = this.$store.state.roadmap;
       let total = 0;
