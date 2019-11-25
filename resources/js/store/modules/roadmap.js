@@ -140,6 +140,7 @@ const actions = {
         })
     },
    
+    // Change the position of the course in the roadmap
     moveCourse: ({state, dispatch}, [course, index, positionChange]) => {
 
         // Get the corresponding roadmap for the stage
@@ -188,8 +189,22 @@ const actions = {
               })
           })
         })
+  },
+
+    async toggleCourseCompleted ({dispatch}, [$event, course]) {
+      // Update the completed status in the DB entry
+      axios.defaults.headers.common['Authorization'] = 'Bearer ' + auth.state.token
+      await axios.patch(`/api/roadmap/${course.id}`, {
+        course_id: course.course_id,
+        completed: !course.completed
+      });
+      // Update the UI (instantly instead of waiting for API requests)
+      const currentCourse = document.getElementById(course.id);
+      currentCourse.classList.toggle('course-completed');
+      // Fetch the new roadmap and stage roadmap to update the state
+      await dispatch('retrieveRoadmap');
+      dispatch('getRoadmapByStage', course.stage);
     }
-    
 };
 
 export default {

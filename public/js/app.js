@@ -2169,6 +2169,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
 
 
 
@@ -2206,6 +2207,16 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       var total = 0;
       roadmap.forEach(function (course) {
         total += course.hours;
+      });
+      return total;
+    },
+    calcTotalHoursRemaining: function calcTotalHoursRemaining() {
+      var roadmap = this.$store.state.roadmap.roadmap;
+      var total = 0;
+      roadmap.forEach(function (course) {
+        if (course.completed === 0) {
+          total += course.hours;
+        }
       });
       return total;
     }
@@ -2268,6 +2279,14 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Stage",
@@ -2284,7 +2303,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       var courses = this.currentRoadmap;
       var total = 0;
       courses.forEach(function (course) {
-        total += course.hours;
+        if (course.completed === 0) {
+          total += course.hours;
+        }
       });
       return total;
     }
@@ -2301,7 +2322,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       this.callGetByStage(this.stage);
     }
   },
-  methods: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapActions"])(['deleteCourseFromRoadmap', 'moveCourse']), {
+  methods: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapActions"])(['deleteCourseFromRoadmap', 'moveCourse', 'toggleCourseCompleted']), {
     callGetByStage: function callGetByStage(stage) {
       this.$store.dispatch('getRoadmapByStage', stage);
     }
@@ -2666,7 +2687,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".stage[data-v-3fd38ca3] {\n  display: flex;\n}\n.stage-heading[data-v-3fd38ca3] {\n  padding: 2rem 2rem 2rem 0;\n  align-self: center;\n}\n.stage-heading h5[data-v-3fd38ca3] {\n  font-size: 0.8rem;\n}\n.stage-courses[data-v-3fd38ca3] {\n  display: flex;\n  flex-wrap: wrap;\n}\n.stage-courses > .stage-course[data-v-3fd38ca3] {\n  min-height: 240px;\n  min-width: 260px;\n  max-width: 260px;\n}\n.stage-courses > .stage-course .card-body > h5[data-v-3fd38ca3] {\n  font-size: 1.4rem;\n}\n.card-footer[data-v-3fd38ca3] {\n  display: flex;\n  justify-content: space-between;\n}\n.left-arrow[data-v-3fd38ca3], .right-arrow[data-v-3fd38ca3] {\n  cursor: pointer;\n}\n.delete-btn[data-v-3fd38ca3] {\n  cursor: pointer;\n}", ""]);
+exports.push([module.i, ".stage[data-v-3fd38ca3] {\n  display: flex;\n}\n.stage-heading[data-v-3fd38ca3] {\n  padding: 2rem 2rem 2rem 0;\n  align-self: center;\n}\n.stage-heading h5[data-v-3fd38ca3] {\n  font-size: 0.8rem;\n}\n.stage-courses[data-v-3fd38ca3] {\n  display: flex;\n  flex-wrap: wrap;\n}\n.stage-courses > .stage-course[data-v-3fd38ca3] {\n  min-height: 240px;\n  min-width: 260px;\n  max-width: 260px;\n}\n.stage-courses > .stage-course .card-body > h5[data-v-3fd38ca3] {\n  font-size: 1.4rem;\n}\n.course-completed[data-v-3fd38ca3] {\n  background-color: silver;\n  opacity: 0.8;\n}\n.card-footer[data-v-3fd38ca3] {\n  display: flex;\n  justify-content: space-between;\n}\n.left-arrow[data-v-3fd38ca3], .right-arrow[data-v-3fd38ca3] {\n  cursor: pointer;\n}\n.delete-btn[data-v-3fd38ca3] {\n  cursor: pointer;\n}", ""]);
 
 // exports
 
@@ -5633,7 +5654,11 @@ var render = function() {
       _vm._v(" "),
       _c("Stage", { attrs: { stage: 9 } }),
       _vm._v(" "),
-      _c("h3", [_vm._v("Total Hours: " + _vm._s(_vm.calcTotalHours))])
+      _c("h3", [_vm._v("Total Hours: " + _vm._s(_vm.calcTotalHours))]),
+      _vm._v(" "),
+      _c("h5", [
+        _vm._v("Hours Remaining: " + _vm._s(_vm.calcTotalHoursRemaining))
+      ])
     ],
     1
   )
@@ -5680,7 +5705,16 @@ var render = function() {
           {
             key: course.id,
             staticClass: "stage-course card text-white mb-3 mx-2",
-            class: "bg-stage" + course.stage
+            class: [
+              "bg-stage" + course.stage,
+              course.completed ? "course-completed" : null
+            ],
+            attrs: { id: course.id },
+            on: {
+              dblclick: function($event) {
+                return _vm.toggleCourseCompleted([$event, course])
+              }
+            }
           },
           [
             _c("div", { staticClass: "card-header" }, [
@@ -23742,7 +23776,6 @@ var actions = {
         timeout: 3000
       });
     })["catch"](function (error) {
-      // console.log('Error:', error.response.data.errors)
       //Show error message
       vue__WEBPACK_IMPORTED_MODULE_2___default.a.prototype.$flashStorage.flash('The email is already taken.', 'error', {
         timeout: 3000
@@ -23771,10 +23804,6 @@ var actions = {
       });
     });
   },
-  // retrieveUserId: ({ commit }) => {
-  //   axios.get('/user')
-  //     .then(res => console.log(res.data));
-  // },
   logout: function logout(_ref2) {
     var commit = _ref2.commit,
         state = _ref2.state;
@@ -23782,8 +23811,7 @@ var actions = {
     axios__WEBPACK_IMPORTED_MODULE_0___default.a.defaults.headers.common['Authorization'] = 'Bearer ' + state.token; // Clear the access tokens in the DB
 
     axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('/api/logout').then(function (res) {
-      console.log(res); // Set token to null in the state
-
+      // Set token to null in the state
       commit('setToken', null); // Remove token from local storage
 
       window.localStorage.clear(); // Redirect to home page
@@ -24163,6 +24191,7 @@ var actions = {
 
     return deleteCourseFromRoadmap;
   }(),
+  // Change the position of the course in the roadmap
   moveCourse: function moveCourse(_ref7, _ref8) {
     var state = _ref7.state,
         dispatch = _ref7.dispatch;
@@ -24213,7 +24242,52 @@ var actions = {
         });
       });
     });
-  }
+  },
+  toggleCourseCompleted: function () {
+    var _toggleCourseCompleted = _asyncToGenerator(
+    /*#__PURE__*/
+    _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee3(_ref10, _ref11) {
+      var dispatch, _ref12, $event, course, currentCourse;
+
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee3$(_context3) {
+        while (1) {
+          switch (_context3.prev = _context3.next) {
+            case 0:
+              dispatch = _ref10.dispatch;
+              _ref12 = _slicedToArray(_ref11, 2), $event = _ref12[0], course = _ref12[1];
+              // Update the completed status in the DB entry
+              axios__WEBPACK_IMPORTED_MODULE_1___default.a.defaults.headers.common['Authorization'] = 'Bearer ' + _auth__WEBPACK_IMPORTED_MODULE_2__["default"].state.token;
+              _context3.next = 5;
+              return axios__WEBPACK_IMPORTED_MODULE_1___default.a.patch("/api/roadmap/".concat(course.id), {
+                course_id: course.course_id,
+                completed: !course.completed
+              });
+
+            case 5:
+              // Update the UI (instantly instead of waiting for API requests)
+              currentCourse = document.getElementById(course.id);
+              currentCourse.classList.toggle('course-completed'); // Fetch the new roadmap and stage roadmap to update the state
+
+              _context3.next = 9;
+              return dispatch('retrieveRoadmap');
+
+            case 9:
+              dispatch('getRoadmapByStage', course.stage);
+
+            case 10:
+            case "end":
+              return _context3.stop();
+          }
+        }
+      }, _callee3);
+    }));
+
+    function toggleCourseCompleted(_x5, _x6) {
+      return _toggleCourseCompleted.apply(this, arguments);
+    }
+
+    return toggleCourseCompleted;
+  }()
 };
 /* harmony default export */ __webpack_exports__["default"] = ({
   state: state,

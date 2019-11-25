@@ -7,7 +7,15 @@
       </div>
         
       <div class="stage-courses ml-3"> 
-        <div class="stage-course card text-white mb-3 mx-2" :class="`bg-stage${course.stage}`" v-for="(course, index) in currentRoadmap" :key="course.id">
+        <div 
+          class="stage-course card text-white mb-3 mx-2" 
+          :class="[
+          `bg-stage${course.stage}`,
+           course.completed ? 'course-completed' : null 
+           ]" 
+          v-for="(course, index) in currentRoadmap" 
+          :key="course.id" @dblclick='toggleCourseCompleted([$event, course])'
+          :id="course.id">
           <div class="card-header">Stage {{course.stage}}</div>
           <div class="card-body">
             <h5 class="card-title">{{course.title}}</h5>
@@ -48,7 +56,9 @@ export default {
       const courses = this.currentRoadmap;
       let total = 0;
       courses.forEach(course => {
-        total += course.hours
+        if (course.completed === 0){
+          total += course.hours
+        }
       })
       return total;
     }
@@ -64,7 +74,7 @@ export default {
     }
   },
   methods: {
-    ...mapActions(['deleteCourseFromRoadmap', 'moveCourse']),
+    ...mapActions(['deleteCourseFromRoadmap', 'moveCourse', 'toggleCourseCompleted']),
     callGetByStage(stage){
       this.$store.dispatch('getRoadmapByStage', stage);
     }
@@ -101,6 +111,11 @@ export default {
   .card-body > h5 {
     font-size: 1.4rem;
   }
+}
+
+.course-completed {
+  background-color: silver;
+  opacity: 0.8;
 }
 
 .card-footer {

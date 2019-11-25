@@ -44,7 +44,6 @@ const actions = {
       });
     })
     .catch(error => {
-      // console.log('Error:', error.response.data.errors)
       //Show error message
       Vue.prototype.$flashStorage.flash('The email is already taken.', 'error',
         {
@@ -81,18 +80,12 @@ const actions = {
     })
   },
 
-  // retrieveUserId: ({ commit }) => {
-  //   axios.get('/user')
-  //     .then(res => console.log(res.data));
-  // },
-
   logout: ({ commit, state }) => {
     // This API is authenticated - Pass through the token in the header
     axios.defaults.headers.common['Authorization'] = 'Bearer ' + state.token
     // Clear the access tokens in the DB
     axios.post('/api/logout')
       .then(res => {
-        console.log(res);
         // Set token to null in the state
         commit('setToken', null);
         // Remove token from local storage

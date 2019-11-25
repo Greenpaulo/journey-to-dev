@@ -40,6 +40,7 @@
     <Stage :stage="9"></Stage>
 
     <h3>Total Hours: {{calcTotalHours}}</h3>
+    <h5>Hours Remaining: {{calcTotalHoursRemaining}}</h5>
 
   </div>
 </template>
@@ -78,7 +79,17 @@ export default {
       const { roadmap } = this.$store.state.roadmap;
       let total = 0;
       roadmap.forEach(course => {
-        total += course.hours
+          total += course.hours
+      });
+      return total;
+    },
+    calcTotalHoursRemaining() {
+      const { roadmap } = this.$store.state.roadmap;
+      let total = 0;
+      roadmap.forEach(course => {
+        if (course.completed === 0){
+          total += course.hours
+        }
       });
       return total;
     }
