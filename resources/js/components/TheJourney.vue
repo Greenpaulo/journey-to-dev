@@ -1,8 +1,15 @@
 <template>
   <div class="container my-5">
     <h1 class="display-4">The Journey</h1>
-    <section class="p-3 my-4">
 
+    <section id="intro">
+      <p class="lead pt-4 pb-2">Journey To Dev is a guide for learning full stack web development. It was born out of the need for a online curriculum for self-taught prospective developers.</p>
+      <p class="lead pt-4 pb-2">On this site you will be able to make your own "Roadmap" to plan you own journey to becoming a web developer!</p>
+      <p class="lead pt-4 pb-2">The journey from beginner to full stack web developer comprises of 9 Stages. Details of each stage and the technologies you will need to learn are listed below.</p>
+      <p class="lead pt-4 pb-2"><strong>NOTE:</strong> You don't need to learn everything contained in every stage! (See stage for details)</p>
+    </section>
+    
+    <section class="p-3 my-4">
       <div class="card stage-section border-stage1 p-4 mb-5" id="stage-one">
         <div class="card-header"><h3>Stage One</h3><h5 class="stage-heading text-danger mx-3 py-2">HTML & CSS</h5></div>
         <div class=" card-body">
@@ -22,6 +29,7 @@
       <div class="card stage-section border-stage2 p-4 mb-5" id="stage-two">
         <div class="card-header"><h3>Stage Two</h3><h5 class="stage-heading text-orange mx-3 py-2">CSS Frameworks</h5></div>
         <div class=" card-body">
+          <h5>Choose One:</h5>
           <div class="icon-text-group my-4">
             <a href="https://getbootstrap.com/" target="_blank"><img src="/images/bootstrap.png" alt="bootstrap logo"></a>
             <p class="lead px-4 my-2"><span class="text-lighter">Bootstrap</span>, a sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.
@@ -49,6 +57,7 @@
       <div class="card stage-section border-stage4 p-4 mb-5" id="stage-four">
         <div class="card-header"><h3>Stage Four</h3><h5 class="stage-heading text-success mx-3 py-2">Front-End JS Frameworks</h5></div>
         <div class=" card-body">
+          <h5>Choose One:</h5>
           <div class="icon-text-group my-4">
             <a href="https://reactjs.org/" target="_blank"><img src="/images/react.png" alt="react.js logo"></a>
             <p class="lead px-4 my-2"><span class="text-lighter">React</span> is a JavaScript library for building user interfaces. It is maintained by Facebook and a community of individual developers and companies.
@@ -70,6 +79,7 @@
       <div class="card stage-section border-stage5 p-4 mb-5" id="stage-five">
         <div class="card-header"><h3>Stage Five</h3><h5 class="stage-heading text-primary mx-3 py-2">Server Side Languages</h5></div>
         <div class=" card-body">
+          <h5>Choose One:</h5>
           <div class="icon-text-group my-4">
             <a href="https://nodejs.org/en/" target="_blank"><img src="/images/Node.png" alt="node.js logo"></a>
             <p class="lead px-4 my-2"><span class="text-lighter">Node.js</span> is an open-source, cross-platform, JavaScript runtime environment that executes JavaScript code outside of a browser. Node.js lets developers use JavaScript on the server-side.
@@ -117,6 +127,7 @@
       <div class="card stage-section border-stage7 p-4 mb-5" id="stage-seven">
         <div class="card-header"><h3>Stage Seven</h3><h5 class="stage-heading text-pink mx-3 py-2">Server Side Frameworks </h5></div>
         <div class=" card-body">
+          <h5>Choose One:</h5>
           <div class="icon-text-group my-4">
             <a href="https://expressjs.com/" target="_blank"><img src="/images/express.png" alt="express logo"></a>
             <p class="lead px-4 my-2"><span class="text-lighter">Express</span> is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.

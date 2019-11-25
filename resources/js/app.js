@@ -11,6 +11,7 @@ import App from './components/App';
 import Welcome from './components/Welcome';
 import TheJourney from './components/TheJourney';
 import Roadmap from './components/Roadmap';
+import About from './components/About';
 import Register from './components/Register';
 import Login from './components/Login';
 
@@ -36,6 +37,10 @@ export const router = new VueRouter({
           next('/login');
         }
       }
+    },
+    {
+      path: '/about',
+      component: About
     },
     {
       path: '/register',
