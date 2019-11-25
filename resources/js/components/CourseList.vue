@@ -1,6 +1,5 @@
 <template>
   <div class="course-list">
-
       <div class="course-card" v-for="course in courses" :key="course.id" :class="`border-stage${course.stage}`">
       <div class="card-header">Stage {{course.stage}}</div>
       <div class="card-body">
@@ -25,8 +24,8 @@ export default {
       stage: "1"
     }
   },
-  computed: mapGetters({userCourseList: 'retrieveUserCourseList', courses: 'retrieveUserCoursesByStage'}),
-  methods: mapActions(['addCourseToRoadmap', 'getUserCoursesByStage'])
+  computed: mapGetters({userCourseList: 'getUserCourseList', courses: 'getUserCoursesByStage'}),
+  methods: mapActions(['addCourseToRoadmap', 'retrieveUserCoursesByStage'])
 }
 
 </script>

@@ -1894,7 +1894,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "CourseList",
@@ -1904,10 +1903,10 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   computed: Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapGetters"])({
-    userCourseList: 'retrieveUserCourseList',
-    courses: 'retrieveUserCoursesByStage'
+    userCourseList: 'getUserCourseList',
+    courses: 'getUserCoursesByStage'
   }),
-  methods: Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapActions"])(['addCourseToRoadmap', 'getUserCoursesByStage'])
+  methods: Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapActions"])(['addCourseToRoadmap', 'retrieveUserCoursesByStage'])
 });
 
 /***/ }),
@@ -2170,11 +2169,18 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
 
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Roadmap",
+  data: function data() {
+    return {
+      stageTitle: "HTML & CSS"
+    };
+  },
   created: function created() {
     this.loadInitialUserData();
   },
@@ -2190,7 +2196,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
           initialLoad();
         }, 1000);
       } else {
-        _this.getUserCoursesByStage(1);
+        _this.retrieveUserCoursesByStage(1);
       }
 
       ;
@@ -2199,9 +2205,43 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     initialLoad();
   },
   computed: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_2__["mapGetters"])({
-    userCourseList: 'retrieveUserCourseList',
-    name: 'getName'
+    userCourseList: 'getUserCourseList',
+    name: 'getName',
+    stage: 'getCurrentStage'
   }), {
+    getStageTitle: function getStageTitle() {
+      switch (this.stage) {
+        case 1:
+          return "HTML & CSS";
+
+        case 2:
+          return "CSS Frameworks";
+
+        case 3:
+          return "JavaScript";
+
+        case 4:
+          return "Front-End JS Frameworks";
+
+        case 5:
+          return "Server Side Languages";
+
+        case 6:
+          return "Databases";
+
+        case 7:
+          return "Server Side Frameworks";
+
+        case 8:
+          return "Version Control";
+
+        case 9:
+          return "Deployment";
+
+        default:
+          break;
+      }
+    },
     calcTotalHours: function calcTotalHours() {
       var roadmap = this.$store.state.roadmap.roadmap;
       var total = 0;
@@ -2221,7 +2261,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       return total;
     }
   }),
-  methods: Object(vuex__WEBPACK_IMPORTED_MODULE_2__["mapActions"])(['loadInitialUserData', 'getUserCoursesByStage']),
+  methods: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_2__["mapActions"])(['loadInitialUserData', 'retrieveUserCoursesByStage'])),
   components: {
     CourseList: _CourseList__WEBPACK_IMPORTED_MODULE_0__["default"],
     Stage: _Stage__WEBPACK_IMPORTED_MODULE_1__["default"]
@@ -2324,7 +2364,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   },
   methods: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapActions"])(['deleteCourseFromRoadmap', 'moveCourse', 'toggleCourseCompleted']), {
     callGetByStage: function callGetByStage(stage) {
-      this.$store.dispatch('getRoadmapByStage', stage);
+      this.$store.dispatch('retrieveRoadmapByStage', stage);
     }
   })
 });
@@ -5478,7 +5518,7 @@ var render = function() {
                   },
                   on: {
                     click: function($event) {
-                      return _vm.getUserCoursesByStage(1)
+                      return _vm.retrieveUserCoursesByStage(1)
                     }
                   }
                 },
@@ -5496,7 +5536,7 @@ var render = function() {
                   },
                   on: {
                     click: function($event) {
-                      return _vm.getUserCoursesByStage(2)
+                      return _vm.retrieveUserCoursesByStage(2)
                     }
                   }
                 },
@@ -5514,7 +5554,7 @@ var render = function() {
                   },
                   on: {
                     click: function($event) {
-                      return _vm.getUserCoursesByStage(3)
+                      return _vm.retrieveUserCoursesByStage(3)
                     }
                   }
                 },
@@ -5532,7 +5572,7 @@ var render = function() {
                   },
                   on: {
                     click: function($event) {
-                      return _vm.getUserCoursesByStage(4)
+                      return _vm.retrieveUserCoursesByStage(4)
                     }
                   }
                 },
@@ -5550,7 +5590,7 @@ var render = function() {
                   },
                   on: {
                     click: function($event) {
-                      return _vm.getUserCoursesByStage(5)
+                      return _vm.retrieveUserCoursesByStage(5)
                     }
                   }
                 },
@@ -5568,7 +5608,7 @@ var render = function() {
                   },
                   on: {
                     click: function($event) {
-                      return _vm.getUserCoursesByStage(6)
+                      return _vm.retrieveUserCoursesByStage(6)
                     }
                   }
                 },
@@ -5586,7 +5626,7 @@ var render = function() {
                   },
                   on: {
                     click: function($event) {
-                      return _vm.getUserCoursesByStage(7)
+                      return _vm.retrieveUserCoursesByStage(7)
                     }
                   }
                 },
@@ -5604,7 +5644,7 @@ var render = function() {
                   },
                   on: {
                     click: function($event) {
-                      return _vm.getUserCoursesByStage(8)
+                      return _vm.retrieveUserCoursesByStage(8)
                     }
                   }
                 },
@@ -5622,7 +5662,7 @@ var render = function() {
                   },
                   on: {
                     click: function($event) {
-                      return _vm.getUserCoursesByStage(9)
+                      return _vm.retrieveUserCoursesByStage(9)
                     }
                   }
                 },
@@ -5630,6 +5670,16 @@ var render = function() {
               )
             ])
           ]),
+          _vm._v(" "),
+          _c(
+            "h4",
+            { staticClass: "my-5", attrs: { id: "stage-description" } },
+            [
+              _vm._v(
+                "Stage " + _vm._s(_vm.stage) + " - " + _vm._s(_vm.getStageTitle)
+              )
+            ]
+          ),
           _vm._v(" "),
           _c("CourseList")
         ],
@@ -23858,17 +23908,22 @@ __webpack_require__.r(__webpack_exports__);
 var state = {
   courseList: [],
   userCourseList: [],
-  userCoursesByStage: []
+  // An array of the current selected stage's courses
+  userCoursesByStage: [],
+  currentStage: "1"
 };
 var getters = {
   getCourseList: function getCourseList(state) {
     return state.courseList;
   },
-  retrieveUserCourseList: function retrieveUserCourseList(state) {
+  getUserCourseList: function getUserCourseList(state) {
     return state.userCourseList;
   },
-  retrieveUserCoursesByStage: function retrieveUserCoursesByStage(state) {
+  getUserCoursesByStage: function getUserCoursesByStage(state) {
     return state.userCoursesByStage;
+  },
+  getCurrentStage: function getCurrentStage(state) {
+    return state.currentStage;
   },
   // Takes the userCourseList from state and filters by stage
   filterUserCoursesByStage: function filterUserCoursesByStage(state) {
@@ -23899,6 +23954,9 @@ var mutations = {
   },
   setUserCoursesByStage: function setUserCoursesByStage(state, courses) {
     state.userCoursesByStage = courses;
+  },
+  setCurrentStage: function setCurrentStage(state, stage) {
+    state.currentStage = stage;
   }
 };
 var actions = {
@@ -23938,11 +23996,11 @@ var actions = {
       // Call mutations to set the courseList state
       commit('setCourseList', res.data); // Call action to set the initial userCourseList
 
-      dispatch('getUserCourseList');
+      dispatch('retrieveUserCourseList');
     });
   },
   // After login - any subsequent action to get the userCourseList can be done here
-  getUserCourseList: function getUserCourseList(_ref3) {
+  retrieveUserCourseList: function retrieveUserCourseList(_ref3) {
     var commit = _ref3.commit,
         getters = _ref3.getters;
     // Call a getter to create the userCourseList
@@ -23950,13 +24008,15 @@ var actions = {
 
     commit('setUserCourseList', userCourseList);
   },
-  getUserCoursesByStage: function getUserCoursesByStage(_ref4, stage) {
+  retrieveUserCoursesByStage: function retrieveUserCoursesByStage(_ref4, stage) {
     var commit = _ref4.commit,
         getters = _ref4.getters;
     // Call getter to get the coursesByStage array
     var courses = getters.filterUserCoursesByStage(stage); // Call mutation to set the coursesByStage state
 
-    commit('setUserCoursesByStage', courses);
+    commit('setUserCoursesByStage', courses); // Call mutation to set the current stage
+
+    commit('setCurrentStage', stage);
   }
 };
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -24071,12 +24131,12 @@ var actions = {
 
         commit('setRoadmap', roadmap); // Get a titles array from the roadmap
 
-        dispatch('getRoadmapTitles');
+        dispatch('retrieveRoadmapTitles');
         resolve();
       });
     });
   },
-  getRoadmapTitles: function getRoadmapTitles(_ref3) {
+  retrieveRoadmapTitles: function retrieveRoadmapTitles(_ref3) {
     var getters = _ref3.getters,
         commit = _ref3.commit;
     // Call getter to create id array
@@ -24084,7 +24144,7 @@ var actions = {
 
     commit('setTitles', titles);
   },
-  getRoadmapByStage: function getRoadmapByStage(_ref4, stage) {
+  retrieveRoadmapByStage: function retrieveRoadmapByStage(_ref4, stage) {
     var getters = _ref4.getters,
         commit = _ref4.commit;
     // Call getter to get the roadmapByStage array
@@ -24129,9 +24189,9 @@ var actions = {
 
               dispatch('getRoadmapTitles'); // Update the userCourseList using the updated Ids
 
-              dispatch('getUserCourseList'); // Update the courseList component by updating the userCoursesByStage state in courseList module
+              dispatch('retrieveUserCourseList'); // Update the courseList component by updating the userCoursesByStage state in courseList module
 
-              dispatch('getUserCoursesByStage', course.stage); // Update the corresponding Stage component to show the course now in the roadmap - so we do need access to the roadmap by stage arrays outside of the Stage component
+              dispatch('retrieveUserCoursesByStage', course.stage); // Update the corresponding Stage component to show the course now in the roadmap - so we do need access to the roadmap by stage arrays outside of the Stage component
 
               dispatch('getRoadmapByStage', course.stage);
 

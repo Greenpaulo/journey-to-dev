@@ -5,14 +5,17 @@ import user_roadmap from './roadmap';
 const state = {
   courseList: [],
   userCourseList: [],
+  // An array of the current selected stage's courses
   userCoursesByStage: [],
+  currentStage: "1"
 };
 
 const getters = {
 
   getCourseList: state => state.courseList,
-  retrieveUserCourseList: state => state.userCourseList,
-  retrieveUserCoursesByStage: state => state.userCoursesByStage,
+  getUserCourseList: state => state.userCourseList,
+  getUserCoursesByStage: state => state.userCoursesByStage,
+  getCurrentStage: state => state.currentStage,
 
   // Takes the userCourseList from state and filters by stage
   filterUserCoursesByStage: (state) => (stage) => {
@@ -43,6 +46,9 @@ const mutations = {
   },
   setUserCoursesByStage: (state, courses) => {
     state.userCoursesByStage = courses;
+  },
+  setCurrentStage: (state, stage) => {
+    state.currentStage = stage;
   }
 };
 
@@ -81,12 +87,12 @@ const actions = {
         commit('setCourseList', res.data);
 
         // Call action to set the initial userCourseList
-        dispatch('getUserCourseList');
+        dispatch('retrieveUserCourseList');
       })
   },
 
   // After login - any subsequent action to get the userCourseList can be done here
-  getUserCourseList: ({ commit, getters }) => {
+  retrieveUserCourseList: ({ commit, getters }) => {
     // Call a getter to create the userCourseList
     const userCourseList = getters.createUserCourseList;
 
@@ -94,12 +100,14 @@ const actions = {
     commit('setUserCourseList', userCourseList);
   },
 
-  getUserCoursesByStage: ({ commit, getters }, stage) => {
+  retrieveUserCoursesByStage: ({ commit, getters }, stage) => {
     // Call getter to get the coursesByStage array
     const courses = getters.filterUserCoursesByStage(stage);
 
     // Call mutation to set the coursesByStage state
     commit('setUserCoursesByStage', courses);
+    // Call mutation to set the current stage
+    commit('setCurrentStage', stage);
   }
 };
 

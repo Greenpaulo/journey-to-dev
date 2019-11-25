@@ -76,7 +76,7 @@ export default {
   methods: {
     ...mapActions(['deleteCourseFromRoadmap', 'moveCourse', 'toggleCourseCompleted']),
     callGetByStage(stage){
-      this.$store.dispatch('getRoadmapByStage', stage);
+      this.$store.dispatch('retrieveRoadmapByStage', stage);
     }
   }
 }

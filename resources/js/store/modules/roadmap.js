@@ -68,7 +68,7 @@ const actions = {
           commit('setRoadmap', roadmap);
 
           // Get a titles array from the roadmap
-          dispatch('getRoadmapTitles');
+          dispatch('retrieveRoadmapTitles');
 
           resolve();
 
@@ -76,7 +76,7 @@ const actions = {
     })
    },
 
-   getRoadmapTitles: ({getters, commit}) => {
+   retrieveRoadmapTitles: ({getters, commit}) => {
      // Call getter to create id array
      const titles = getters.createTitleArray;
 
@@ -84,7 +84,7 @@ const actions = {
      commit('setTitles', titles);
    },
   
-   getRoadmapByStage: ({ getters, commit }, stage) => {
+   retrieveRoadmapByStage: ({ getters, commit }, stage) => {
     // Call getter to get the roadmapByStage array
     const courses = getters.filterRoadmapByStage(stage);
 
@@ -115,9 +115,9 @@ const actions = {
         // Update the roadmap ID array
         dispatch('getRoadmapTitles');
         // Update the userCourseList using the updated Ids
-        dispatch('getUserCourseList');
+        dispatch('retrieveUserCourseList');
         // Update the courseList component by updating the userCoursesByStage state in courseList module
-         dispatch('getUserCoursesByStage', course.stage);
+         dispatch('retrieveUserCoursesByStage', course.stage);
         // Update the corresponding Stage component to show the course now in the roadmap - so we do need access to the roadmap by stage arrays outside of the Stage component
         dispatch('getRoadmapByStage', course.stage)
     },
