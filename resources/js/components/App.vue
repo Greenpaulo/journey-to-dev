@@ -26,4 +26,9 @@ body {
   /* background-color: #100e17; */
 }
 
+.flash__message.error {
+  color:#a94442 !important;
+  background-color:#f3dede !important;
+  border-color:#f3dede !important;
+}
 </style>

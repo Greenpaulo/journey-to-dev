@@ -1,5 +1,6 @@
 import axios from "axios"
 import { router } from '../../app';
+import Vue from 'vue';
 
 const state = {
   token: window.localStorage.getItem('access_token') || null,
@@ -8,7 +9,7 @@ const state = {
 };
 
 const getters = {
-  isLoggedIn: state => !!state.token,
+  isLoggedIn: state => state.token ? true : false,
   getName: state => state.name
 };
 
@@ -34,7 +35,21 @@ const actions = {
       password_confirmation: credentials.password_confirmation
     })
     .then(res => {
-      console.log(res.data);
+      //Redirect to Login
+      router.push('/login');
+      //Show success message
+      Vue.prototype.$flashStorage.flash('Registration successful! Please Login.', 'success',
+      {
+        timeout: 3000
+      });
+    })
+    .catch(error => {
+      // console.log('Error:', error.response.data.errors)
+      //Show error message
+      Vue.prototype.$flashStorage.flash('The email is already taken.', 'error',
+        {
+          timeout: 3000
+        });
     })
   },
 
@@ -58,7 +73,11 @@ const actions = {
 
     })
     .catch(error => {
-      console.log(error)
+      console.log('error', error.response)
+      Vue.prototype.$flashStorage.flash(error.response.data, 'error', 
+      { 
+        timeout: 3000
+      });
     })
   },
 
@@ -73,6 +92,7 @@ const actions = {
     // Clear the access tokens in the DB
     axios.post('/api/logout')
       .then(res => {
+        console.log(res);
         // Set token to null in the state
         commit('setToken', null);
         // Remove token from local storage
@@ -82,8 +102,9 @@ const actions = {
           router.push('/');
         }
         //Refresh the browser to clear the state
-        window.location.reload();
+        // window.location.reload();
       })
+      
   },
 
   getUserFirstName: ({ commit }, fullname) => {

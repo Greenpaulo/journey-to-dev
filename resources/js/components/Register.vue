@@ -3,22 +3,23 @@
     <form @submit.prevent="registerSubmit">
       <fieldset>
       <h2 class="my-4">Register</h2>
+      <flash-message class=""></flash-message>
       <div class="form-group">
         <label for="name" class="lead text-orangered">Name</label>
-        <input type="text" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Enter name" v-model="name">
+        <input type="text" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Enter name" v-model="name" required>
       </div>
       <div class="form-group">
         <label for="email" class="lead text-orange">Email address</label>
-        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" v-model="email">
+        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" v-model="email" required>
         <small id="emailHelp" class="form-text">We'll never share your email with anyone else.</small>
       </div>
       <div class="form-group">
         <label for="password" class="lead text-success">Password</label>
-        <input type="password" class="form-control" id="password" placeholder="Password" v-model="password">
+        <input type="password" class="form-control" id="password" placeholder="Password" v-model="password" required>
       </div>
       <div class="form-group">
         <label for="password_confirmation" class="lead text-purple">Confirm password</label>
-        <input type="password" class="form-control" id="password_confirmation" placeholder="Password" v-model="password_confirmation">
+        <input type="password" class="form-control" id="password_confirmation" placeholder="Password" v-model="password_confirmation" required>
       </div>
       <button type="submit" class="btn btn-primary my-3">Submit</button>
     </fieldset>
@@ -39,6 +40,23 @@ export default {
   },
   methods: {
     registerSubmit(){
+      // Check the password is at least 8 characters long
+      if (this.password.length <= 7){
+        this.flash('Password must be at least 8 characters.', 'error',
+          {
+            timeout: 3000
+          });
+        return
+      }
+      // Check the passwords are the same
+      if (this.password !== this.password_confirmation){
+        this.flash('Passwords do not match.', 'error',
+          {
+            timeout: 3000
+          });
+        return
+      };
+      
       this.$store.dispatch('register', {
         name: this.name,
         email: this.email,

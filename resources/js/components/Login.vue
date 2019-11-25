@@ -3,6 +3,7 @@
     <form @submit.prevent="login">
       <fieldset>
       <h2 class="my-4">Login</h2>
+      <flash-message class=""></flash-message>
       <div class="form-group">
         <label for="email" class="lead text-orange">Email address</label>
         <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" v-model="email">
@@ -37,6 +38,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+
 
 </style>

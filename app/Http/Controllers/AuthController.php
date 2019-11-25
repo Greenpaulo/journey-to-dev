@@ -32,24 +32,24 @@ class AuthController extends Controller
 
       } else if ($e->getCode() === 401) 
       {
-        return response()->json('Your credentials are screwed mofo. Please try again.', $e->getCode());
+        return response()->json('Your credentials are incorrect. Please try again.', $e->getCode());
 
       } else {
-        return response()->json('Something seriously f***ed up at our end!', $e->getCode());
+        return response()->json('Something went wrong up at our end!', $e->getCode());
       }
     }
   }
 
   public function register (Request $request) {
-
-    $request-> validate([
-      'name' => ['required', 'string', 'max:255'],
-      'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-      'password' => ['required', 'string', 'min:8', 'confirmed'],
-      'password_confirmation' => ['required']
-    ]);
-
-    return User::create([
+    
+      $request-> validate([
+        'name' => ['required', 'string', 'max:255'],
+        'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+        'password' => ['required', 'string', 'min:8', 'confirmed'],
+        'password_confirmation' => ['required']
+      ]);
+        
+      User::create([
       'name' => $request['name'],
       'email' => $request['email'],
       'password' => Hash::make($request['password']),
