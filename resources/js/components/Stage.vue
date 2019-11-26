@@ -2,8 +2,8 @@
   <section class="stage my-5">
       
       <div class="stage-heading">
-        <h3 class="stage-number mb-4 pr-5">Stage {{stage}}</h3>
-        <h6 class="stage-hrs">Total Hrs: {{totalHours}}</h6>
+        <h2 class="stage-number mb-4 pr-5">Stage {{stage}}</h2>
+        <h5 class="stage-hrs">Total Hrs: {{totalHours}}</h5>
       </div>
         
       <div class="stage-courses ml-3"> 
@@ -18,7 +18,7 @@
           :id="course.id">
           <div class="card-header">Stage {{course.stage}}</div>
           <div class="card-body">
-            <h5 class="card-title">{{course.title}}</h5>
+            <h5 class="card-title"><a :href=course.url target="_blank">{{course.title}}</a></h5>
             <p class="card-text">{{course.creator}}</p>
             <p class="card-text">{{course.hours}} Hours</p>
           </div>
@@ -93,8 +93,12 @@ export default {
   padding: 2rem 2rem 2rem 0;
   align-self: center;
 
+  h2 {
+    font-size: 2.8rem;
+  }
+  
   h5 {
-    font-size: 0.8rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -111,6 +115,20 @@ export default {
   .card-body > h5 {
     font-size: 1.4rem;
   }
+}
+
+h5.card-title > a {
+  color: white;
+  text-decoration: none;
+
+  &:hover {
+    font-weight: bolder;
+  }
+
+}
+
+.bg-stage9 a {
+  color: black !important;
 }
 
 .course-completed {

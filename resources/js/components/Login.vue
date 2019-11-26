@@ -1,8 +1,8 @@
 <template>
-  <div class="container">
+  <div class="container my-5">
     <form @submit.prevent="login">
       <fieldset>
-      <h2 class="my-4">Login</h2>
+      <h2 class="mt-2 mb-4">Login</h2>
       <flash-message class=""></flash-message>
       <div class="form-group">
         <label for="email" class="lead text-orange">Email address</label>

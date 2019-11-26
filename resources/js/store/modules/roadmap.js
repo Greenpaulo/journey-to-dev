@@ -113,13 +113,13 @@ const actions = {
         // Update the roadmap in state
         commit('addToRoadmap', newCourse);
         // Update the roadmap ID array
-        dispatch('getRoadmapTitles');
+        dispatch('retrieveRoadmapTitles');
         // Update the userCourseList using the updated Ids
         dispatch('retrieveUserCourseList');
         // Update the courseList component by updating the userCoursesByStage state in courseList module
          dispatch('retrieveUserCoursesByStage', course.stage);
         // Update the corresponding Stage component to show the course now in the roadmap - so we do need access to the roadmap by stage arrays outside of the Stage component
-        dispatch('getRoadmapByStage', course.stage)
+        dispatch('retrieveRoadmapByStage', course.stage)
     },
    
     async deleteCourseFromRoadmap ({commit, dispatch}, course){
@@ -132,11 +132,11 @@ const actions = {
       dispatch('retrieveRoadmap')
         .then(res => {
           // Update the userCourseList using the updated titles
-          dispatch('getUserCourseList');
+          dispatch('retrieveUserCourseList');
           // Update the courseList component by updating the userCoursesByStage state in courseList module
-          dispatch('getUserCoursesByStage', course.stage);
+          dispatch('retrieveUserCoursesByStage', course.stage);
           // Update the corresponding Stage component
-          dispatch('getRoadmapByStage', course.stage)
+          dispatch('retrieveRoadmapByStage', course.stage)
         })
     },
    
@@ -203,7 +203,7 @@ const actions = {
       currentCourse.classList.toggle('course-completed');
       // Fetch the new roadmap and stage roadmap to update the state
       await dispatch('retrieveRoadmap');
-      dispatch('getRoadmapByStage', course.stage);
+      dispatch('retrieveRoadmapByStage', course.stage);
     }
 };
 

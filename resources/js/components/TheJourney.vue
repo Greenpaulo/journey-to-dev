@@ -1,16 +1,35 @@
 <template>
   <div class="container my-5">
-    <h1 class="display-4">The Journey</h1>
+    <h1 class="display-4 mb-4 text-center">The Journey</h1>
 
     <section id="intro">
-      <p class="lead pt-4 pb-2">Journey To Dev is a guide for learning full stack web development. It was born out of the need for a online curriculum for self-taught prospective developers.</p>
-      <p class="lead pt-4 pb-2">On this site you will be able to make your own "Roadmap" to plan you own journey to becoming a web developer!</p>
-      <p class="lead pt-4 pb-2">The journey from beginner to full stack web developer comprises of 9 Stages. Details of each stage and the technologies you will need to learn are listed below.</p>
-      <p class="lead pt-4 pb-2"><strong>NOTE:</strong> You don't need to learn everything contained in every stage! (See stage for details)</p>
+      <div class="icon-text-group my-4" >
+        <i class="fas fa-laptop-code fa-3x text-info py-2"></i>
+        <p class="lead px-4">Journey To Dev is a guide for learning full stack web development. It was born out of the need for a online curriculum for self-taught prospective developers.
+        </p>
+      </div >
+      <div class="icon-text-group my-4">
+        <i class="fas fa-road fa-3x text-orange mt-2"></i>
+        <p class="lead px-4">On this site you will be able to make your own "Roadmap" to plan you own journey to becoming a web developer!
+        </p>
+      </div>
+      <div class="icon-text-group my-4">
+        <i class="fas fa-graduation-cap fa-3x text-success py-2"></i>
+        <p class="lead px-4">The journey to full stack web developer comprises of nine Stages. Details of each stage and the technologies you will need to learn are listed below.
+        </p>
+      </div>
+      <div class="icon-text-group my-4">
+        <i class="fas fa-exclamation fa-3x text-danger py-2 px-3"></i>
+        <p class="lead px-4 mt-2"><span class="important">NOTE:</span> You don't need to learn everything contained in every stage! (See stage for details)
+        </p>
+      </div>
     </section>
+    <hr>
     
-    <section class="p-3 my-4">
-      <div class="card stage-section border-stage1 p-4 mb-5" id="stage-one">
+    <h3 id="stages-heading" class="mt-5 text-center">The Stages</h3>
+    
+    <section class="p-3 my-2">
+      <div class="card stage-section border-stage1 p-4 my-5" id="stage-one">
         <div class="card-header"><h3>Stage One</h3><h5 class="stage-heading text-danger mx-3 py-2">HTML & CSS</h5></div>
         <div class=" card-body">
           <div class="icon-text-group my-4">
@@ -202,24 +221,38 @@ export default {
 
 @import 'resources/sass/variables';
  
-.welcome-btn {
-  text-align: center;
-}
+// .welcome-btn {
+//   text-align: center;
+// }
 
 .icon-text-group {
     display: flex;
     margin: 1.7rem 0;
 }
 
+section#intro {
+  border-bottom: 2px solid rgb(202, 195, 195);
+  padding: 1rem 1rem 2rem 1rem;
+
+  .important {
+    font-weight: bolder;
+    color: lighten(rgb(202, 195, 195), 30%);
+  }
+}
+
 .lead {
-  font-size: 1.25rem !important;
+  font-size: 1.5rem !important;
+  line-height: 2.2rem;
+  // color: rgb(202, 195, 195);
+  color: darken(white, 15%);
 }
 
-.card-header h3 {
+.card-header > h3 {
   color: white;
+  display: inline;
 }
 
-h3, h5 {
+h5.stage-heading {
   display: inline;
 }
 

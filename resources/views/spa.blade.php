@@ -7,6 +7,8 @@
       <link rel="stylesheet" href="/css/app.css">
       <!-- Bootswatch -->
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/cyborg/bootstrap.min.css">
+      <!-- Animate.css -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
       <title>Journey To Dev</title>
   </head>
 

@@ -3,7 +3,7 @@
       <div class="course-card" v-for="course in courses" :key="course.id" :class="`border-stage${course.stage}`">
       <div class="card-header">Stage {{course.stage}}</div>
       <div class="card-body">
-        <h5 class="card-title">{{course.title}}</h5>
+        <h5 class="card-title"><a :href=course.url target="_blank">{{course.title}}</a></h5>
         <p class="card-text">{{course.creator}}</p>
         <p class="card-text">{{course.hours}} Hours</p>
         <div class="add-btn" :class="`bg-stage${course.stage}`" @click="addCourseToRoadmap(course)">
@@ -46,8 +46,8 @@ export default {
 
 .course-card {
   background-color: #17141d;
-  // min-width: 300px;
-  width: 300px;
+  min-width: 300px;
+  max-width: 300px;
   min-height: 350px;
   box-shadow: -1rem 0 3rem #000;
   border-width: 4px;
@@ -75,6 +75,10 @@ export default {
   transform: translateX(130px);
 }
 
+.course-list > .card-body {
+  padding: 1.25 0;
+}
+
 // Scrollbar
 .course-list::-webkit-scrollbar {
     width: 10px;
@@ -94,7 +98,6 @@ export default {
 
 
 // Add button
-
 .add-btn {
   width: 50px;
   height: 50px;
@@ -112,5 +115,14 @@ i.fa-plus {
   width: 50px;
   height: 50px;
   color: white;
+}
+
+h5.card-title > a {
+  color: white;
+  text-decoration: none;
+
+  &:hover {
+    color: darken(white, 20%);
+  }
 }
 </style>

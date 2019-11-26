@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg">
     <div class="container">
       <router-link class="navbar-brand" to="/">JourneyToDev</router-link>
       
@@ -11,25 +11,25 @@
         
         <ul class="navbar-nav ml-auto px-3">
           <li class="nav-item">
-            <router-link class="nav-link" to="/">Home</router-link>
+            <router-link class="nav-link" id="home-link" to="/">Home</router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" to="/thejourney">The Journey</router-link>
+            <router-link class="nav-link" id="journey-link" to="/thejourney">The Journey</router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link roadmap-link" to="roadmap">Roadmap</router-link>
+            <router-link class="nav-link" id="roadmap-link" to="roadmap">Roadmap</router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link about-link" to="about">About</router-link>
+            <router-link class="nav-link" id="about-link" to="about">About</router-link>
           </li>
           <li v-if="isLoggedIn === false" class="nav-item">
-            <router-link class="nav-link login-link" to="login">Login</router-link>
+            <router-link class="nav-link" id="login-link" to="login">Login</router-link>
           </li>
           <li v-if="isLoggedIn === false" class="nav-item">
-            <router-link class="nav-link register-link" to="register">Register</router-link>
+            <router-link class="nav-link" id="register-link" to="register">Register</router-link>
           </li>
           <li v-if="isLoggedIn" class="nav-item">
-            <a class="nav-link logout-link" href="#" @click="logout">Logout</a>
+            <a class="nav-link" id="logout-link" href="#" @click="logout">Logout</a>
           </li>
         </ul>
       
@@ -56,37 +56,77 @@ import { mapActions, mapGetters } from 'vuex';
 <style lang="scss" scoped >
 
 @import 'node_modules/bootswatch/dist/cyborg/variables';
+@import 'resources/sass/colors';
+@import 'resources/sass/animations';
+
+.navbar {
+  background-color: rgba(2,0,9,1);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
 
 .navbar-brand {
-  font-size: 1.5rem !important;
+  font-size: 1.9rem !important;
+  // font-weight: bolder;
+  // // background: linear-gradient(-92deg, lighten($stage1, 40%), $stage9);
+  // background: radial-gradient(lighten($stage1, 30%), $stage9);
+  // color: transparent;
+  // -webkit-background-clip: text;
+  // background-clip: text;
+  // display: inline;
+  // animation: hue 60s linear infinite;
+  color: white;
 }
 
-.roadmap-link {
+.nav-link {
+  font-size: 1rem;
+  color: white !important;
+  transition: all 0.5s ease;
+}
+
+#home-link {
   &:hover {
-    color: yellow !important;
-    font-weight: bolder;
+    color: $stage5 !important;
   }
 }
 
-.about-link {
+#journey-link {
   &:hover {
-    color: #77B300 !important;
-    font-weight: bolder;
+    color: $stage2 !important;
   }
 }
 
-.login-link {
+#roadmap-link {
   &:hover {
-    color: #9933CC !important;
-    font-weight: bolder;
+    color: $stage3 !important;
   }
 }
 
-.register-link {
+#about-link {
   &:hover {
-    color: #2A9FD6 !important;
-    font-weight: bolder;
+    color: $stage4 !important;
   }
 }
+
+#login-link {
+  &:hover {
+    color: $stage6 !important;
+  }
+}
+
+#register-link {
+  &:hover {
+    color: $stage7 !important;
+  }
+}
+
+#logout-link {
+  &:hover {
+    color: $stage8 !important;
+  }
+}
+
 
 </style>

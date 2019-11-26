@@ -1,8 +1,8 @@
 <template>
-  <div class="container">
+  <div class="container my-5">
     <form @submit.prevent="registerSubmit">
       <fieldset>
-      <h2 class="my-4">Register</h2>
+      <h2 class="mt-2 mb-4">Register</h2>
       <flash-message class=""></flash-message>
       <div class="form-group">
         <label for="name" class="lead text-orangered">Name</label>

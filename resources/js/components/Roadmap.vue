@@ -1,9 +1,9 @@
 <template>
   <div class="container my-5">
-    <h1 class="display-4">{{name}}'s Roadmap</h1>
+    <h1 class="display-4 py-3 my-5 text-center">{{name}}'s Roadmap</h1>
 
     <section class="course-selector mt-5">
-      <div id="select-menu">
+      <div id="select-menu" class="pb-4">
         <ul id ="select-menu-links">
           
           <li class="select-links btn bg-stage1 text-white" data-toggle="tooltip" data-placement="top" title="HTML & CSS" @click="retrieveUserCoursesByStage(1)">Stage 1</li>
@@ -26,23 +26,28 @@
         </ul>
       </div>
 
-      <h4 id="stage-description" class="my-5">Stage {{stage}} - {{getStageTitle}}</h4>
+      <h4 id="stage-description" class="my-5">Stage {{stage}} - {{getStageTitle}}: <h5>Select Your Courses</h5></h4>
       
       <CourseList></CourseList>
     </section>
 
-    <Stage :stage="1"></Stage> 
-    <Stage :stage="2"></Stage> 
-    <Stage :stage="3"></Stage> 
-    <Stage :stage="4"></Stage> 
-    <Stage :stage="5"></Stage> 
-    <Stage :stage="6"></Stage> 
-    <Stage :stage="7"></Stage> 
-    <Stage :stage="8"></Stage> 
-    <Stage :stage="9"></Stage>
+    <section id="roadmap" class="mt-5 pt-5">
+      
+      <Stage :stage="1"></Stage> 
+      <Stage :stage="2"></Stage> 
+      <Stage :stage="3"></Stage> 
+      <Stage :stage="4"></Stage> 
+      <Stage :stage="5"></Stage> 
+      <Stage :stage="6"></Stage> 
+      <Stage :stage="7"></Stage> 
+      <Stage :stage="8"></Stage> 
+      <Stage :stage="9"></Stage>
 
-    <h3>Total Hours: {{calcTotalHours}}</h3>
-    <h5>Hours Remaining: {{calcTotalHoursRemaining}}</h5>
+      <h3 class="my-4 py-4">Total Hours: {{calcTotalHours}}</h3>
+      <h5 class="mt-4">Hours Remaining: {{calcTotalHoursRemaining}}</h5>
+      <h6> Double click a course to mark as complete</h6>
+    </section>
+
 
   </div>
 </template>
@@ -142,6 +147,7 @@ export default {
 .btn-stage9 {
   color: black;
 }
+
 
 
 // Tooltip

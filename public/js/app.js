@@ -1873,6 +1873,20 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'About'
 });
@@ -2160,6 +2174,11 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+//
+//
+//
+//
+//
 //
 //
 //
@@ -2612,6 +2631,25 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'TheJourney'
 });
@@ -2627,6 +2665,13 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(source, true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(source).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 //
 //
 //
@@ -2667,23 +2712,18 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'Welcome'
+  name: 'Welcome',
+  computed: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapGetters"])(['isLoggedIn'])) // mounted() {
+  //     //Calculate path lengths of the svg logo
+  //     const logo = document.querySelectorAll('#logo path');
+  //     console.log(logo);
+  //     for(let i = 0; i < logo.length; i++){
+  //       console.log(`Letter ${i+1} is ${logo[i].getTotalLength()}`);
+  //     }
+  // }
+
 });
 
 /***/ }),
@@ -2700,7 +2740,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".bg-stage1 {\n  background-color: #CC0000;\n}\n.bg-stage2 {\n  background-color: orange;\n}\n.bg-stage3 {\n  background-color: orangered;\n}\n.bg-stage4 {\n  background-color: #77B300;\n}\n.bg-stage5 {\n  background-color: #2A9FD6;\n}\n.bg-stage6 {\n  background-color: #20c997;\n}\n.bg-stage7 {\n  background-color: #e83e8c;\n}\n.bg-stage8 {\n  background-color: #9933CC;\n}\n.bg-stage9 {\n  background-color: #fff;\n  color: black !important;\n}\n.border-stage1 {\n  border-top: 8px solid #CC0000;\n  border-right: 8px solid #CC0000;\n}\n.border-stage2 {\n  border-top: 8px solid orange;\n  border-right: 8px solid orange;\n}\n.border-stage3 {\n  border-top: 8px solid orangered;\n  border-right: 8px solid orangered;\n}\n.border-stage4 {\n  border-top: 8px solid #77B300;\n  border-right: 8px solid #77B300;\n}\n.border-stage5 {\n  border-top: 8px solid #2A9FD6;\n  border-right: 8px solid #2A9FD6;\n}\n.border-stage6 {\n  border-top: 8px solid #20c997;\n  border-right: 8px solid #20c997;\n}\n.border-stage7 {\n  border-top: 8px solid #e83e8c;\n  border-right: 8px solid #e83e8c;\n}\n.border-stage8 {\n  border-top: 8px solid #9933CC;\n  border-right: 8px solid #9933CC;\n}\n.border-stage9 {\n  border-top: 8px solid #fff;\n  border-right: 8px solid #ffff;\n}\n.text-orangered {\n  color: orangered !important;\n}\n.text-orange {\n  color: orange !important;\n}\n.text-purple {\n  color: #6f42c1 !important;\n}\n.text-teal {\n  color: #20c997 !important;\n}\n.text-pink {\n  color: #e83e8c !important;\n}\nbody {\n  background-color: #131212;\n  /* background-color: #100e17; */\n}\n.flash__message.error {\n  color: #a94442 !important;\n  background-color: #f3dede !important;\n  border-color: #f3dede !important;\n}", ""]);
+exports.push([module.i, ".bg-stage1 {\n  background-color: #CC0000;\n}\n.bg-stage2 {\n  background-color: orange;\n}\n.bg-stage3 {\n  background-color: orangered;\n}\n.bg-stage4 {\n  background-color: #77B300;\n}\n.bg-stage5 {\n  background-color: #2A9FD6;\n}\n.bg-stage6 {\n  background-color: #20c997;\n}\n.bg-stage7 {\n  background-color: #e83e8c;\n}\n.bg-stage8 {\n  background-color: #9933CC;\n}\n.bg-stage9 {\n  background-color: #fff;\n  color: black !important;\n}\n.border-stage1 {\n  border-top: 8px solid #CC0000;\n  border-right: 8px solid #CC0000;\n}\n.border-stage2 {\n  border-top: 8px solid orange;\n  border-right: 8px solid orange;\n}\n.border-stage3 {\n  border-top: 8px solid orangered;\n  border-right: 8px solid orangered;\n}\n.border-stage4 {\n  border-top: 8px solid #77B300;\n  border-right: 8px solid #77B300;\n}\n.border-stage5 {\n  border-top: 8px solid #2A9FD6;\n  border-right: 8px solid #2A9FD6;\n}\n.border-stage6 {\n  border-top: 8px solid #20c997;\n  border-right: 8px solid #20c997;\n}\n.border-stage7 {\n  border-top: 8px solid #e83e8c;\n  border-right: 8px solid #e83e8c;\n}\n.border-stage8 {\n  border-top: 8px solid #9933CC;\n  border-right: 8px solid #9933CC;\n}\n.border-stage9 {\n  border-top: 8px solid #fff;\n  border-right: 8px solid #ffff;\n}\n.text-orangered {\n  color: orangered !important;\n}\n.text-orange {\n  color: orange !important;\n}\n.text-purple {\n  color: #6f42c1 !important;\n}\n.text-teal {\n  color: #20c997 !important;\n}\n.text-pink {\n  color: #e83e8c !important;\n}\nbody {\n  background: #171419;\n  background: linear-gradient(79deg, #171419 0%, #020009 100%);\n  /* background-color: #100e17; */\n}\n.container.my-5 {\n  margin-top: 7rem !important;\n}\n.flash__message.error {\n  color: #a94442 !important;\n  background-color: #f3dede !important;\n  border-color: #f3dede !important;\n}", ""]);
 
 // exports
 
@@ -2719,7 +2759,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".bg-stage1[data-v-9d6850f8] {\n  background-color: #CC0000;\n}\n.bg-stage2[data-v-9d6850f8] {\n  background-color: orange;\n}\n.bg-stage3[data-v-9d6850f8] {\n  background-color: orangered;\n}\n.bg-stage4[data-v-9d6850f8] {\n  background-color: #77B300;\n}\n.bg-stage5[data-v-9d6850f8] {\n  background-color: #2A9FD6;\n}\n.bg-stage6[data-v-9d6850f8] {\n  background-color: #20c997;\n}\n.bg-stage7[data-v-9d6850f8] {\n  background-color: #e83e8c;\n}\n.bg-stage8[data-v-9d6850f8] {\n  background-color: #9933CC;\n}\n.bg-stage9[data-v-9d6850f8] {\n  background-color: #fff;\n  color: black !important;\n}\n.border-stage1[data-v-9d6850f8] {\n  border-top: 8px solid #CC0000;\n  border-right: 8px solid #CC0000;\n}\n.border-stage2[data-v-9d6850f8] {\n  border-top: 8px solid orange;\n  border-right: 8px solid orange;\n}\n.border-stage3[data-v-9d6850f8] {\n  border-top: 8px solid orangered;\n  border-right: 8px solid orangered;\n}\n.border-stage4[data-v-9d6850f8] {\n  border-top: 8px solid #77B300;\n  border-right: 8px solid #77B300;\n}\n.border-stage5[data-v-9d6850f8] {\n  border-top: 8px solid #2A9FD6;\n  border-right: 8px solid #2A9FD6;\n}\n.border-stage6[data-v-9d6850f8] {\n  border-top: 8px solid #20c997;\n  border-right: 8px solid #20c997;\n}\n.border-stage7[data-v-9d6850f8] {\n  border-top: 8px solid #e83e8c;\n  border-right: 8px solid #e83e8c;\n}\n.border-stage8[data-v-9d6850f8] {\n  border-top: 8px solid #9933CC;\n  border-right: 8px solid #9933CC;\n}\n.border-stage9[data-v-9d6850f8] {\n  border-top: 8px solid #fff;\n  border-right: 8px solid #ffff;\n}\n.text-orangered[data-v-9d6850f8] {\n  color: orangered !important;\n}\n.text-orange[data-v-9d6850f8] {\n  color: orange !important;\n}\n.text-purple[data-v-9d6850f8] {\n  color: #6f42c1 !important;\n}\n.text-teal[data-v-9d6850f8] {\n  color: #20c997 !important;\n}\n.text-pink[data-v-9d6850f8] {\n  color: #e83e8c !important;\n}\n.course-list[data-v-9d6850f8] {\n  display: flex;\n  padding: 3rem;\n  overflow-x: scroll;\n  -webkit-overflow-scrolling: touch;\n}\n.course-card[data-v-9d6850f8] {\n  background-color: #17141d;\n  width: 300px;\n  min-height: 350px;\n  box-shadow: -1rem 0 3rem #000;\n  border-width: 4px;\n  border-radius: 16px;\n  padding: 1.5rem;\n  transition-property: all;\n  transition-duration: 0.2s;\n  transition-timing-function: ease;\n  transition-delay: 0s;\n}\n.course-card[data-v-9d6850f8]:not(:first-child) {\n  margin-left: -130px;\n}\n.course-card h2[data-v-9d6850f8] {\n  color: white;\n}\n.course-card[data-v-9d6850f8]:hover {\n  transform: translate(0, -1rem);\n}\n.course-card:hover ~ .course-card[data-v-9d6850f8] {\n  transform: translateX(130px);\n}\n.course-list[data-v-9d6850f8]::-webkit-scrollbar {\n  width: 10px;\n  height: 15px;\n}\n.course-list[data-v-9d6850f8]::-webkit-scrollbar-thumb {\n  background: #201c29;\n  border-radius: 10px;\n  box-shadow: inset 2px 2px 2px rgba(255, 255, 255, 0.25), inset -2px -2px 2px rgba(0, 0, 0, 0.25);\n}\n.course-list[data-v-9d6850f8]::-webkit-scrollbar-track {\n  background: linear-gradient(to right, #201c29, #201c29 1px, #17141d 1px, #17141d);\n}\n.add-btn[data-v-9d6850f8] {\n  width: 50px;\n  height: 50px;\n  border-radius: 50%;\n  cursor: pointer;\n}\n.bg-stage9 i.fa-plus[data-v-9d6850f8] {\n  color: black;\n}\ni.fa-plus[data-v-9d6850f8] {\n  padding-top: 11px;\n  padding-left: 13px;\n  width: 50px;\n  height: 50px;\n  color: white;\n}", ""]);
+exports.push([module.i, ".bg-stage1[data-v-9d6850f8] {\n  background-color: #CC0000;\n}\n.bg-stage2[data-v-9d6850f8] {\n  background-color: orange;\n}\n.bg-stage3[data-v-9d6850f8] {\n  background-color: orangered;\n}\n.bg-stage4[data-v-9d6850f8] {\n  background-color: #77B300;\n}\n.bg-stage5[data-v-9d6850f8] {\n  background-color: #2A9FD6;\n}\n.bg-stage6[data-v-9d6850f8] {\n  background-color: #20c997;\n}\n.bg-stage7[data-v-9d6850f8] {\n  background-color: #e83e8c;\n}\n.bg-stage8[data-v-9d6850f8] {\n  background-color: #9933CC;\n}\n.bg-stage9[data-v-9d6850f8] {\n  background-color: #fff;\n  color: black !important;\n}\n.border-stage1[data-v-9d6850f8] {\n  border-top: 8px solid #CC0000;\n  border-right: 8px solid #CC0000;\n}\n.border-stage2[data-v-9d6850f8] {\n  border-top: 8px solid orange;\n  border-right: 8px solid orange;\n}\n.border-stage3[data-v-9d6850f8] {\n  border-top: 8px solid orangered;\n  border-right: 8px solid orangered;\n}\n.border-stage4[data-v-9d6850f8] {\n  border-top: 8px solid #77B300;\n  border-right: 8px solid #77B300;\n}\n.border-stage5[data-v-9d6850f8] {\n  border-top: 8px solid #2A9FD6;\n  border-right: 8px solid #2A9FD6;\n}\n.border-stage6[data-v-9d6850f8] {\n  border-top: 8px solid #20c997;\n  border-right: 8px solid #20c997;\n}\n.border-stage7[data-v-9d6850f8] {\n  border-top: 8px solid #e83e8c;\n  border-right: 8px solid #e83e8c;\n}\n.border-stage8[data-v-9d6850f8] {\n  border-top: 8px solid #9933CC;\n  border-right: 8px solid #9933CC;\n}\n.border-stage9[data-v-9d6850f8] {\n  border-top: 8px solid #fff;\n  border-right: 8px solid #ffff;\n}\n.text-orangered[data-v-9d6850f8] {\n  color: orangered !important;\n}\n.text-orange[data-v-9d6850f8] {\n  color: orange !important;\n}\n.text-purple[data-v-9d6850f8] {\n  color: #6f42c1 !important;\n}\n.text-teal[data-v-9d6850f8] {\n  color: #20c997 !important;\n}\n.text-pink[data-v-9d6850f8] {\n  color: #e83e8c !important;\n}\n.course-list[data-v-9d6850f8] {\n  display: flex;\n  padding: 3rem;\n  overflow-x: scroll;\n  -webkit-overflow-scrolling: touch;\n}\n.course-card[data-v-9d6850f8] {\n  background-color: #17141d;\n  min-width: 300px;\n  max-width: 300px;\n  min-height: 350px;\n  box-shadow: -1rem 0 3rem #000;\n  border-width: 4px;\n  border-radius: 16px;\n  padding: 1.5rem;\n  transition-property: all;\n  transition-duration: 0.2s;\n  transition-timing-function: ease;\n  transition-delay: 0s;\n}\n.course-card[data-v-9d6850f8]:not(:first-child) {\n  margin-left: -130px;\n}\n.course-card h2[data-v-9d6850f8] {\n  color: white;\n}\n.course-card[data-v-9d6850f8]:hover {\n  transform: translate(0, -1rem);\n}\n.course-card:hover ~ .course-card[data-v-9d6850f8] {\n  transform: translateX(130px);\n}\n.course-list > .card-body[data-v-9d6850f8] {\n  padding: 1.25 0;\n}\n.course-list[data-v-9d6850f8]::-webkit-scrollbar {\n  width: 10px;\n  height: 15px;\n}\n.course-list[data-v-9d6850f8]::-webkit-scrollbar-thumb {\n  background: #201c29;\n  border-radius: 10px;\n  box-shadow: inset 2px 2px 2px rgba(255, 255, 255, 0.25), inset -2px -2px 2px rgba(0, 0, 0, 0.25);\n}\n.course-list[data-v-9d6850f8]::-webkit-scrollbar-track {\n  background: linear-gradient(to right, #201c29, #201c29 1px, #17141d 1px, #17141d);\n}\n.add-btn[data-v-9d6850f8] {\n  width: 50px;\n  height: 50px;\n  border-radius: 50%;\n  cursor: pointer;\n}\n.bg-stage9 i.fa-plus[data-v-9d6850f8] {\n  color: black;\n}\ni.fa-plus[data-v-9d6850f8] {\n  padding-top: 11px;\n  padding-left: 13px;\n  width: 50px;\n  height: 50px;\n  color: white;\n}\nh5.card-title > a[data-v-9d6850f8] {\n  color: white;\n  text-decoration: none;\n}\nh5.card-title > a[data-v-9d6850f8]:hover {\n  color: #cccccc;\n}", ""]);
 
 // exports
 
@@ -2738,7 +2778,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".navbar-brand[data-v-6dde423b] {\n  font-size: 1.5rem !important;\n}\n.roadmap-link[data-v-6dde423b]:hover {\n  color: yellow !important;\n  font-weight: bolder;\n}\n.about-link[data-v-6dde423b]:hover {\n  color: #77B300 !important;\n  font-weight: bolder;\n}\n.login-link[data-v-6dde423b]:hover {\n  color: #9933CC !important;\n  font-weight: bolder;\n}\n.register-link[data-v-6dde423b]:hover {\n  color: #2A9FD6 !important;\n  font-weight: bolder;\n}", ""]);
+exports.push([module.i, ".bg-stage1[data-v-6dde423b] {\n  background-color: #CC0000;\n}\n.bg-stage2[data-v-6dde423b] {\n  background-color: orange;\n}\n.bg-stage3[data-v-6dde423b] {\n  background-color: orangered;\n}\n.bg-stage4[data-v-6dde423b] {\n  background-color: #77B300;\n}\n.bg-stage5[data-v-6dde423b] {\n  background-color: #2A9FD6;\n}\n.bg-stage6[data-v-6dde423b] {\n  background-color: #20c997;\n}\n.bg-stage7[data-v-6dde423b] {\n  background-color: #e83e8c;\n}\n.bg-stage8[data-v-6dde423b] {\n  background-color: #9933CC;\n}\n.bg-stage9[data-v-6dde423b] {\n  background-color: #fff;\n  color: black !important;\n}\n.border-stage1[data-v-6dde423b] {\n  border-top: 8px solid #CC0000;\n  border-right: 8px solid #CC0000;\n}\n.border-stage2[data-v-6dde423b] {\n  border-top: 8px solid orange;\n  border-right: 8px solid orange;\n}\n.border-stage3[data-v-6dde423b] {\n  border-top: 8px solid orangered;\n  border-right: 8px solid orangered;\n}\n.border-stage4[data-v-6dde423b] {\n  border-top: 8px solid #77B300;\n  border-right: 8px solid #77B300;\n}\n.border-stage5[data-v-6dde423b] {\n  border-top: 8px solid #2A9FD6;\n  border-right: 8px solid #2A9FD6;\n}\n.border-stage6[data-v-6dde423b] {\n  border-top: 8px solid #20c997;\n  border-right: 8px solid #20c997;\n}\n.border-stage7[data-v-6dde423b] {\n  border-top: 8px solid #e83e8c;\n  border-right: 8px solid #e83e8c;\n}\n.border-stage8[data-v-6dde423b] {\n  border-top: 8px solid #9933CC;\n  border-right: 8px solid #9933CC;\n}\n.border-stage9[data-v-6dde423b] {\n  border-top: 8px solid #fff;\n  border-right: 8px solid #ffff;\n}\n.text-orangered[data-v-6dde423b] {\n  color: orangered !important;\n}\n.text-orange[data-v-6dde423b] {\n  color: orange !important;\n}\n.text-purple[data-v-6dde423b] {\n  color: #6f42c1 !important;\n}\n.text-teal[data-v-6dde423b] {\n  color: #20c997 !important;\n}\n.text-pink[data-v-6dde423b] {\n  color: #e83e8c !important;\n}\n@-webkit-keyframes hue-data-v-6dde423b {\nfrom {\n    -webkit-filter: hue-rotate(0deg);\n            filter: hue-rotate(0deg);\n}\nto {\n    -webkit-filter: hue-rotate(-360deg);\n            filter: hue-rotate(-360deg);\n}\n}\n@keyframes hue-data-v-6dde423b {\nfrom {\n    -webkit-filter: hue-rotate(0deg);\n            filter: hue-rotate(0deg);\n}\nto {\n    -webkit-filter: hue-rotate(-360deg);\n            filter: hue-rotate(-360deg);\n}\n}\n.navbar[data-v-6dde423b] {\n  background-color: #020009;\n  position: fixed;\n  top: 0;\n  width: 100%;\n  z-index: 2;\n}\n.navbar-brand[data-v-6dde423b] {\n  font-size: 1.9rem !important;\n  color: white;\n}\n.nav-link[data-v-6dde423b] {\n  font-size: 1rem;\n  color: white !important;\n  transition: all 0.5s ease;\n}\n#home-link[data-v-6dde423b]:hover {\n  color: #2A9FD6 !important;\n}\n#journey-link[data-v-6dde423b]:hover {\n  color: orange !important;\n}\n#roadmap-link[data-v-6dde423b]:hover {\n  color: orangered !important;\n}\n#about-link[data-v-6dde423b]:hover {\n  color: #77B300 !important;\n}\n#login-link[data-v-6dde423b]:hover {\n  color: #20c997 !important;\n}\n#register-link[data-v-6dde423b]:hover {\n  color: #e83e8c !important;\n}\n#logout-link[data-v-6dde423b]:hover {\n  color: #9933CC !important;\n}", ""]);
 
 // exports
 
@@ -2776,7 +2816,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".stage[data-v-3fd38ca3] {\n  display: flex;\n}\n.stage-heading[data-v-3fd38ca3] {\n  padding: 2rem 2rem 2rem 0;\n  align-self: center;\n}\n.stage-heading h5[data-v-3fd38ca3] {\n  font-size: 0.8rem;\n}\n.stage-courses[data-v-3fd38ca3] {\n  display: flex;\n  flex-wrap: wrap;\n}\n.stage-courses > .stage-course[data-v-3fd38ca3] {\n  min-height: 240px;\n  min-width: 260px;\n  max-width: 260px;\n}\n.stage-courses > .stage-course .card-body > h5[data-v-3fd38ca3] {\n  font-size: 1.4rem;\n}\n.course-completed[data-v-3fd38ca3] {\n  background-color: silver;\n  opacity: 0.8;\n}\n.card-footer[data-v-3fd38ca3] {\n  display: flex;\n  justify-content: space-between;\n}\n.left-arrow[data-v-3fd38ca3], .right-arrow[data-v-3fd38ca3] {\n  cursor: pointer;\n}\n.delete-btn[data-v-3fd38ca3] {\n  cursor: pointer;\n}", ""]);
+exports.push([module.i, ".stage[data-v-3fd38ca3] {\n  display: flex;\n}\n.stage-heading[data-v-3fd38ca3] {\n  padding: 2rem 2rem 2rem 0;\n  align-self: center;\n}\n.stage-heading h2[data-v-3fd38ca3] {\n  font-size: 2.8rem;\n}\n.stage-heading h5[data-v-3fd38ca3] {\n  font-size: 1.2rem;\n}\n.stage-courses[data-v-3fd38ca3] {\n  display: flex;\n  flex-wrap: wrap;\n}\n.stage-courses > .stage-course[data-v-3fd38ca3] {\n  min-height: 240px;\n  min-width: 260px;\n  max-width: 260px;\n}\n.stage-courses > .stage-course .card-body > h5[data-v-3fd38ca3] {\n  font-size: 1.4rem;\n}\nh5.card-title > a[data-v-3fd38ca3] {\n  color: white;\n  text-decoration: none;\n}\nh5.card-title > a[data-v-3fd38ca3]:hover {\n  font-weight: bolder;\n}\n.bg-stage9 a[data-v-3fd38ca3] {\n  color: black !important;\n}\n.course-completed[data-v-3fd38ca3] {\n  background-color: silver;\n  opacity: 0.8;\n}\n.card-footer[data-v-3fd38ca3] {\n  display: flex;\n  justify-content: space-between;\n}\n.left-arrow[data-v-3fd38ca3], .right-arrow[data-v-3fd38ca3] {\n  cursor: pointer;\n}\n.delete-btn[data-v-3fd38ca3] {\n  cursor: pointer;\n}", ""]);
 
 // exports
 
@@ -2795,17 +2835,17 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".welcome-btn[data-v-3c0a633a] {\n  text-align: center;\n}\n.icon-text-group[data-v-3c0a633a] {\n  display: flex;\n  margin: 1.7rem 0;\n}\n.lead[data-v-3c0a633a] {\n  font-size: 1.25rem !important;\n}\n.card-header h3[data-v-3c0a633a] {\n  color: white;\n}\nh3[data-v-3c0a633a], h5[data-v-3c0a633a] {\n  display: inline;\n}\nimg[data-v-3c0a633a] {\n  max-height: 70px;\n}\nimg[src=\"/images/angular.png\"][data-v-3c0a633a] {\n  padding: 0 0 0.5rem 0.5rem;\n}\nimg[src=\"/images/php.png\"][data-v-3c0a633a] {\n  max-height: 50px;\n  margin-top: 0.5rem;\n}\na[href=\"https://angularjs.org/\"] + p[data-v-3c0a633a] {\n  padding: 0 1.5rem 0 1.8rem;\n}\na[href=\"https://www.python.org/\"] + p[data-v-3c0a633a] {\n  padding: 0 1.5rem 0 2rem;\n}\na[href=\"https://www.w3schools.com/sql/\"] + p[data-v-3c0a633a] {\n  margin-left: 0.75rem;\n}\n#materialize-logo[data-v-3c0a633a] {\n  max-width: 70px;\n  max-height: 30px;\n}\n.stage-section[data-v-3c0a633a] {\n  background-color: #201e1e;\n  border-radius: 0 20px 0 20px;\n  box-shadow: -5px 5px 10px -2px #010101;\n}\n.header[data-v-3c0a633a] {\n  border-bottom: 2px solid #202020;\n}\n.text-lighter[data-v-3c0a633a] {\n  color: #d9d9d9;\n}", ""]);
+exports.push([module.i, ".icon-text-group[data-v-3c0a633a] {\n  display: flex;\n  margin: 1.7rem 0;\n}\nsection#intro[data-v-3c0a633a] {\n  border-bottom: 2px solid #cac3c3;\n  padding: 1rem 1rem 2rem 1rem;\n}\nsection#intro .important[data-v-3c0a633a] {\n  font-weight: bolder;\n  color: white;\n}\n.lead[data-v-3c0a633a] {\n  font-size: 1.5rem !important;\n  line-height: 2.2rem;\n  color: #d9d9d9;\n}\n.card-header > h3[data-v-3c0a633a] {\n  color: white;\n  display: inline;\n}\nh5.stage-heading[data-v-3c0a633a] {\n  display: inline;\n}\nimg[data-v-3c0a633a] {\n  max-height: 70px;\n}\nimg[src=\"/images/angular.png\"][data-v-3c0a633a] {\n  padding: 0 0 0.5rem 0.5rem;\n}\nimg[src=\"/images/php.png\"][data-v-3c0a633a] {\n  max-height: 50px;\n  margin-top: 0.5rem;\n}\na[href=\"https://angularjs.org/\"] + p[data-v-3c0a633a] {\n  padding: 0 1.5rem 0 1.8rem;\n}\na[href=\"https://www.python.org/\"] + p[data-v-3c0a633a] {\n  padding: 0 1.5rem 0 2rem;\n}\na[href=\"https://www.w3schools.com/sql/\"] + p[data-v-3c0a633a] {\n  margin-left: 0.75rem;\n}\n#materialize-logo[data-v-3c0a633a] {\n  max-width: 70px;\n  max-height: 30px;\n}\n.stage-section[data-v-3c0a633a] {\n  background-color: #201e1e;\n  border-radius: 0 20px 0 20px;\n  box-shadow: -5px 5px 10px -2px #010101;\n}\n.header[data-v-3c0a633a] {\n  border-bottom: 2px solid #202020;\n}\n.text-lighter[data-v-3c0a633a] {\n  color: #d9d9d9;\n}", ""]);
 
 // exports
 
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Welcome.vue?vue&type=style&index=0&id=51777872&lang=scss&scoped=true&":
-/*!*****************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Welcome.vue?vue&type=style&index=0&id=51777872&lang=scss&scoped=true& ***!
-  \*****************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Welcome.vue?vue&type=style&index=0&lang=scss&":
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Welcome.vue?vue&type=style&index=0&lang=scss& ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2814,7 +2854,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".welcome[data-v-51777872] {\n  max-height: 90vh;\n}\n.lead[data-v-51777872] {\n  font-size: 1.5rem !important;\n}\n#welcome-carousel[data-v-51777872] {\n  max-height: 90%;\n}\n.carousel-inner[data-v-51777872] {\n  max-height: 93vh;\n}\n.carousel-caption[data-v-51777872] {\n  bottom: 40%;\n}\n#slide2 .img[data-v-51777872] {\n  bottom: -400px;\n}", ""]);
+exports.push([module.i, "#welcome-page {\n  position: relative;\n  background: url(\"/images/1.jpg\");\n  height: 100vh;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n}\n#welcome-svg {\n  min-width: 50vw;\n}\n#buttons {\n  margin-top: 3rem;\n}\n#logo path:nth-child(1) {\n  stroke-dasharray: 334.1294250488;\n  stroke-dashoffset: 334.1294250488;\n  -webkit-animation-name: line-anim, fill-red;\n          animation-name: line-anim, fill-red;\n  -webkit-animation-duration: 1.5s;\n          animation-duration: 1.5s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 0s, 4s;\n          animation-delay: 0s, 4s;\n}\n#logo path:nth-child(2) {\n  stroke-dasharray: 398.1838378906;\n  stroke-dashoffset: 398.1838378906;\n  -webkit-animation-name: line-anim, fill-orange;\n          animation-name: line-anim, fill-orange;\n  -webkit-animation-duration: 1.5s;\n          animation-duration: 1.5s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 0.3s, 4s;\n          animation-delay: 0.3s, 4s;\n}\n#logo path:nth-child(3) {\n  stroke-dasharray: 393.3806152344;\n  stroke-dashoffset: 393.3806152344;\n  -webkit-animation-name: line-anim, fill-orangered;\n          animation-name: line-anim, fill-orangered;\n  -webkit-animation-duration: 1.5s;\n          animation-duration: 1.5s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 0.6s, 4s;\n          animation-delay: 0.6s, 4s;\n}\n#logo path:nth-child(4) {\n  stroke-dasharray: 232.6978607178;\n  stroke-dashoffset: 232.6978607178;\n  -webkit-animation-name: line-anim, fill-green;\n          animation-name: line-anim, fill-green;\n  -webkit-animation-duration: 1.5s;\n          animation-duration: 1.5s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 0.9s, 4s;\n          animation-delay: 0.9s, 4s;\n}\n#logo path:nth-child(5) {\n  stroke-dasharray: 395.8296203613;\n  stroke-dashoffset: 395.8296203613;\n  -webkit-animation-name: line-anim, fill-blue;\n          animation-name: line-anim, fill-blue;\n  -webkit-animation-duration: 1.5s;\n          animation-duration: 1.5s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 1.2s, 4s;\n          animation-delay: 1.2s, 4s;\n}\n#logo path:nth-child(6) {\n  stroke-dasharray: 437.6187133789;\n  stroke-dashoffset: 437.6187133789;\n  -webkit-animation-name: line-anim, fill-teal;\n          animation-name: line-anim, fill-teal;\n  -webkit-animation-duration: 1.5s;\n          animation-duration: 1.5s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 1.5s, 4s;\n          animation-delay: 1.5s, 4s;\n}\n#logo path:nth-child(7) {\n  stroke-dasharray: 404.7785949707;\n  stroke-dashoffset: 404.7785949707;\n  -webkit-animation-name: line-anim, fill-pink;\n          animation-name: line-anim, fill-pink;\n  -webkit-animation-duration: 1.5s;\n          animation-duration: 1.5s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 1.8s, 4s;\n          animation-delay: 1.8s, 4s;\n}\n#logo path:nth-child(8) {\n  stroke-dasharray: 363.0939941406;\n  stroke-dashoffset: 363.0939941406;\n  -webkit-animation-name: line-anim, fill-cyan;\n          animation-name: line-anim, fill-cyan;\n  -webkit-animation-duration: 1.5s;\n          animation-duration: 1.5s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 2.1s, 4s;\n          animation-delay: 2.1s, 4s;\n}\n#logo path:nth-child(9) {\n  stroke-dasharray: 398.1834106445;\n  stroke-dashoffset: 398.1834106445;\n  -webkit-animation-name: line-anim, fill-white;\n          animation-name: line-anim, fill-white;\n  -webkit-animation-duration: 1.5s;\n          animation-duration: 1.5s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 2.4s, 4s;\n          animation-delay: 2.4s, 4s;\n}\n#logo path:nth-child(10) {\n  stroke-dasharray: 542.6750488281;\n  stroke-dashoffset: 542.6750488281;\n  -webkit-animation-name: line-anim, fill-red;\n          animation-name: line-anim, fill-red;\n  -webkit-animation-duration: 1.5s;\n          animation-duration: 1.5s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 2.7s, 4s;\n          animation-delay: 2.7s, 4s;\n}\n#logo path:nth-child(11) {\n  stroke-dasharray: 437.6190185547;\n  stroke-dashoffset: 437.6190185547;\n  -webkit-animation-name: line-anim, fill-orange;\n          animation-name: line-anim, fill-orange;\n  -webkit-animation-duration: 1.5s;\n          animation-duration: 1.5s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 3s, 4s;\n          animation-delay: 3s, 4s;\n}\n#logo path:nth-child(12) {\n  stroke-dasharray: 321.1700439453;\n  stroke-dashoffset: 321.1700439453;\n  -webkit-animation-name: line-anim, fill-orangered;\n          animation-name: line-anim, fill-orangered;\n  -webkit-animation-duration: 1.5s;\n          animation-duration: 1.5s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 3.3s, 4s;\n          animation-delay: 3.3s, 4s;\n}\n@-webkit-keyframes line-anim {\nto {\n    stroke-dashoffset: 0;\n}\n}\n@keyframes line-anim {\nto {\n    stroke-dashoffset: 0;\n}\n}\n@-webkit-keyframes fill-red {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #CC0000;\n}\n}\n@keyframes fill-red {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #CC0000;\n}\n}\n@-webkit-keyframes fill-orange {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: orange;\n}\n}\n@keyframes fill-orange {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: orange;\n}\n}\n@-webkit-keyframes fill-orangered {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: orangered;\n}\n}\n@keyframes fill-orangered {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: orangered;\n}\n}\n@-webkit-keyframes fill-green {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #77B300;\n}\n}\n@keyframes fill-green {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #77B300;\n}\n}\n@-webkit-keyframes fill-blue {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #2A9FD6;\n}\n}\n@keyframes fill-blue {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #2A9FD6;\n}\n}\n@-webkit-keyframes fill-teal {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #20c997;\n}\n}\n@keyframes fill-teal {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #20c997;\n}\n}\n@-webkit-keyframes fill-pink {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #e83e8c;\n}\n}\n@keyframes fill-pink {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #e83e8c;\n}\n}\n@-webkit-keyframes fill-cyan {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #9933CC;\n}\n}\n@keyframes fill-cyan {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #9933CC;\n}\n}\n@-webkit-keyframes fill-white {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: white;\n}\n}\n@keyframes fill-white {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: white;\n}\n}", ""]);
 
 // exports
 
@@ -4259,15 +4299,15 @@ if(false) {}
 
 /***/ }),
 
-/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Welcome.vue?vue&type=style&index=0&id=51777872&lang=scss&scoped=true&":
-/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/style-loader!./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Welcome.vue?vue&type=style&index=0&id=51777872&lang=scss&scoped=true& ***!
-  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Welcome.vue?vue&type=style&index=0&lang=scss&":
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Welcome.vue?vue&type=style&index=0&lang=scss& ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../../node_modules/css-loader!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--7-2!../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../node_modules/vue-loader/lib??vue-loader-options!./Welcome.vue?vue&type=style&index=0&id=51777872&lang=scss&scoped=true& */ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Welcome.vue?vue&type=style&index=0&id=51777872&lang=scss&scoped=true&");
+var content = __webpack_require__(/*! !../../../node_modules/css-loader!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--7-2!../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../node_modules/vue-loader/lib??vue-loader-options!./Welcome.vue?vue&type=style&index=0&lang=scss& */ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Welcome.vue?vue&type=style&index=0&lang=scss&");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -4939,51 +4979,95 @@ var staticRenderFns = [
     return _c("div", { staticClass: "container my-5" }, [
       _c("h1", { staticClass: "display-4" }, [_vm._v("About")]),
       _vm._v(" "),
-      _c("h4", { staticClass: "mt-5" }, [_vm._v("The App")]),
-      _vm._v(" "),
-      _c("p", { staticClass: "lead py-2" }, [
-        _vm._v(
-          "As a self taught developer I spent a lot of time, in the beginning, trying to figure out what to learn! Unlike a university course, there existed no curriculum for self-studying devs at home. So after spending time researching I built my own."
-        )
+      _c("section", [
+        _c("h4", { staticClass: "mt-5" }, [_vm._v("The App")]),
+        _vm._v(" "),
+        _c("p", { staticClass: "lead py-2" }, [
+          _vm._v(
+            "As a self taught developer I spent a lot of time, in the beginning, trying to figure out what to learn! Unlike a university course, there existed no curriculum for self-studying devs at home. So after spending time researching I built my own."
+          )
+        ]),
+        _vm._v(" "),
+        _c("p", { staticClass: "lead py-2" }, [
+          _vm._v(
+            "I realised that many other prospective developers could potentially benefit from my research and get straight to learning. So I built this app to share my knowledge. I hope you find it useful!"
+          )
+        ]),
+        _vm._v(" "),
+        _c("p", { staticClass: "lead py-2" }, [
+          _vm._v("Much love! And good luck with your studies!")
+        ])
       ]),
       _vm._v(" "),
-      _c("p", { staticClass: "lead py-2" }, [
-        _vm._v(
-          "I realised that many other prospective developers could potentially benefit from my research and get straight to learning. So I built this app to share my knowledge. I hope you find it useful!"
-        )
+      _c("section", [
+        _c("h4", { staticClass: "mt-5 mb-3" }, [_vm._v("Creator")]),
+        _vm._v(" "),
+        _c("p", { staticClass: "lead py-2" }, [_vm._v("I'm Paul!")]),
+        _vm._v(" "),
+        _c("p", { staticClass: "lead py-2" }, [
+          _vm._v("Check out my github and other links below!")
+        ]),
+        _vm._v(" "),
+        _c("div", { attrs: { className: "list-group" } }, [
+          _c("i", { attrs: { className: "fas fa-envelope fa-2x" } }),
+          _vm._v(" "),
+          _c("span", { attrs: { className: "lead contact-info" } }, [
+            _vm._v("greenpaulo@yahoo.co.uk")
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { attrs: { className: "list-group" } }, [
+          _c("i", { attrs: { className: "fab fa-github fa-2x" } }),
+          _vm._v(" "),
+          _c(
+            "a",
+            {
+              attrs: {
+                href: "https://github.com/Greenpaulo",
+                target: "_blank",
+                className: "lead contact-info"
+              }
+            },
+            [_vm._v("https://github.com/Greenpaulo")]
+          )
+        ])
       ]),
       _vm._v(" "),
-      _c("p", { staticClass: "lead py-2" }, [
-        _vm._v("Much love! And good luck with your studies!")
-      ]),
-      _vm._v(" "),
-      _c("h4", { staticClass: "mt-5 mb-3" }, [_vm._v("Creator")]),
-      _vm._v(" "),
-      _c("p", { staticClass: "lead py-2" }, [_vm._v("I'm Paul!")]),
-      _vm._v(" "),
-      _c("p", { staticClass: "lead py-2" }, [
-        _vm._v("Check out my github and other links below ;)")
-      ]),
-      _vm._v(" "),
-      _c("h4", { staticClass: "mt-5" }, [_vm._v("Credit")]),
-      _vm._v(" "),
-      _c("p", { staticClass: "lead py-2" }, [
-        _vm._v(
-          "The Stages for this curriculum are based on Brad Traversy's yearly youtube video. Brad is a great teacher and I highly recommend his channel!"
-        )
-      ]),
-      _vm._v(" "),
-      _c(
-        "a",
-        {
-          staticClass: "btn btn-info",
-          attrs: {
-            href: "https://www.youtube.com/watch?v=UnTQVlqmDQ0",
-            target: "_blank"
-          }
-        },
-        [_vm._v("Watch Brad's Video")]
-      )
+      _c("section", [
+        _c("h4", { staticClass: "mt-5" }, [_vm._v("Credit")]),
+        _vm._v(" "),
+        _c("p", { staticClass: "lead py-2" }, [
+          _vm._v(
+            "The Stages for this curriculum are based on Brad Traversy's yearly youtube video. Brad is a great teacher and I highly recommend his channel!"
+          )
+        ]),
+        _vm._v(" "),
+        _c(
+          "a",
+          {
+            staticClass: "btn btn-info",
+            attrs: {
+              href: "https://www.youtube.com/watch?v=UnTQVlqmDQ0",
+              target: "_blank"
+            }
+          },
+          [_vm._v("Watch Brad's Video")]
+        ),
+        _vm._v(" "),
+        _c("p", [
+          _c(
+            "a",
+            {
+              attrs: {
+                href: "https://thenounproject.com/search/?q=road&i=1141292",
+                target: "_blank"
+              }
+            },
+            [_vm._v("'Road'")]
+          ),
+          _vm._v(" icon by Bakunetsu Kaito from the Noun Project.")
+        ])
+      ])
     ])
   }
 ]
@@ -5050,7 +5134,9 @@ var render = function() {
           _vm._v(" "),
           _c("div", { staticClass: "card-body" }, [
             _c("h5", { staticClass: "card-title" }, [
-              _vm._v(_vm._s(course.title))
+              _c("a", { attrs: { href: course.url, target: "_blank" } }, [
+                _vm._v(_vm._s(course.title))
+              ])
             ]),
             _vm._v(" "),
             _c("p", { staticClass: "card-text" }, [
@@ -5103,7 +5189,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container" }, [
+  return _c("div", { staticClass: "container my-5" }, [
     _c(
       "form",
       {
@@ -5118,7 +5204,7 @@ var render = function() {
         _c(
           "fieldset",
           [
-            _c("h2", { staticClass: "my-4" }, [_vm._v("Login")]),
+            _c("h2", { staticClass: "mt-2 mb-4" }, [_vm._v("Login")]),
             _vm._v(" "),
             _c("flash-message", {}),
             _vm._v(" "),
@@ -5228,145 +5314,145 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "nav",
-    { staticClass: "navbar navbar-expand-lg navbar-dark bg-dark" },
-    [
-      _c(
-        "div",
-        { staticClass: "container" },
-        [
-          _c(
-            "router-link",
-            { staticClass: "navbar-brand", attrs: { to: "/" } },
-            [_vm._v("JourneyToDev")]
-          ),
-          _vm._v(" "),
-          _vm._m(0),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass: "collapse navbar-collapse",
-              attrs: { id: "navbarColor02" }
-            },
-            [
-              _c("ul", { staticClass: "navbar-nav ml-auto px-3" }, [
-                _c(
-                  "li",
-                  { staticClass: "nav-item" },
-                  [
-                    _c(
-                      "router-link",
-                      { staticClass: "nav-link", attrs: { to: "/" } },
-                      [_vm._v("Home")]
-                    )
-                  ],
-                  1
-                ),
-                _vm._v(" "),
-                _c(
-                  "li",
-                  { staticClass: "nav-item" },
-                  [
-                    _c(
-                      "router-link",
-                      { staticClass: "nav-link", attrs: { to: "/thejourney" } },
-                      [_vm._v("The Journey")]
-                    )
-                  ],
-                  1
-                ),
-                _vm._v(" "),
-                _c(
-                  "li",
-                  { staticClass: "nav-item" },
-                  [
-                    _c(
-                      "router-link",
-                      {
-                        staticClass: "nav-link roadmap-link",
-                        attrs: { to: "roadmap" }
-                      },
-                      [_vm._v("Roadmap")]
-                    )
-                  ],
-                  1
-                ),
-                _vm._v(" "),
-                _c(
-                  "li",
-                  { staticClass: "nav-item" },
-                  [
-                    _c(
-                      "router-link",
-                      {
-                        staticClass: "nav-link about-link",
-                        attrs: { to: "about" }
-                      },
-                      [_vm._v("About")]
-                    )
-                  ],
-                  1
-                ),
-                _vm._v(" "),
-                _vm.isLoggedIn === false
-                  ? _c(
-                      "li",
-                      { staticClass: "nav-item" },
-                      [
-                        _c(
-                          "router-link",
-                          {
-                            staticClass: "nav-link login-link",
-                            attrs: { to: "login" }
-                          },
-                          [_vm._v("Login")]
-                        )
-                      ],
-                      1
-                    )
-                  : _vm._e(),
-                _vm._v(" "),
-                _vm.isLoggedIn === false
-                  ? _c(
-                      "li",
-                      { staticClass: "nav-item" },
-                      [
-                        _c(
-                          "router-link",
-                          {
-                            staticClass: "nav-link register-link",
-                            attrs: { to: "register" }
-                          },
-                          [_vm._v("Register")]
-                        )
-                      ],
-                      1
-                    )
-                  : _vm._e(),
-                _vm._v(" "),
-                _vm.isLoggedIn
-                  ? _c("li", { staticClass: "nav-item" }, [
+  return _c("nav", { staticClass: "navbar navbar-expand-lg" }, [
+    _c(
+      "div",
+      { staticClass: "container" },
+      [
+        _c("router-link", { staticClass: "navbar-brand", attrs: { to: "/" } }, [
+          _vm._v("JourneyToDev")
+        ]),
+        _vm._v(" "),
+        _vm._m(0),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass: "collapse navbar-collapse",
+            attrs: { id: "navbarColor02" }
+          },
+          [
+            _c("ul", { staticClass: "navbar-nav ml-auto px-3" }, [
+              _c(
+                "li",
+                { staticClass: "nav-item" },
+                [
+                  _c(
+                    "router-link",
+                    {
+                      staticClass: "nav-link",
+                      attrs: { id: "home-link", to: "/" }
+                    },
+                    [_vm._v("Home")]
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "li",
+                { staticClass: "nav-item" },
+                [
+                  _c(
+                    "router-link",
+                    {
+                      staticClass: "nav-link",
+                      attrs: { id: "journey-link", to: "/thejourney" }
+                    },
+                    [_vm._v("The Journey")]
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "li",
+                { staticClass: "nav-item" },
+                [
+                  _c(
+                    "router-link",
+                    {
+                      staticClass: "nav-link",
+                      attrs: { id: "roadmap-link", to: "roadmap" }
+                    },
+                    [_vm._v("Roadmap")]
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "li",
+                { staticClass: "nav-item" },
+                [
+                  _c(
+                    "router-link",
+                    {
+                      staticClass: "nav-link",
+                      attrs: { id: "about-link", to: "about" }
+                    },
+                    [_vm._v("About")]
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _vm.isLoggedIn === false
+                ? _c(
+                    "li",
+                    { staticClass: "nav-item" },
+                    [
                       _c(
-                        "a",
+                        "router-link",
                         {
-                          staticClass: "nav-link logout-link",
-                          attrs: { href: "#" },
-                          on: { click: _vm.logout }
+                          staticClass: "nav-link",
+                          attrs: { id: "login-link", to: "login" }
                         },
-                        [_vm._v("Logout")]
+                        [_vm._v("Login")]
                       )
-                    ])
-                  : _vm._e()
-              ])
-            ]
-          )
-        ],
-        1
-      )
-    ]
-  )
+                    ],
+                    1
+                  )
+                : _vm._e(),
+              _vm._v(" "),
+              _vm.isLoggedIn === false
+                ? _c(
+                    "li",
+                    { staticClass: "nav-item" },
+                    [
+                      _c(
+                        "router-link",
+                        {
+                          staticClass: "nav-link",
+                          attrs: { id: "register-link", to: "register" }
+                        },
+                        [_vm._v("Register")]
+                      )
+                    ],
+                    1
+                  )
+                : _vm._e(),
+              _vm._v(" "),
+              _vm.isLoggedIn
+                ? _c("li", { staticClass: "nav-item" }, [
+                    _c(
+                      "a",
+                      {
+                        staticClass: "nav-link",
+                        attrs: { id: "logout-link", href: "#" },
+                        on: { click: _vm.logout }
+                      },
+                      [_vm._v("Logout")]
+                    )
+                  ])
+                : _vm._e()
+            ])
+          ]
+        )
+      ],
+      1
+    )
+  ])
 }
 var staticRenderFns = [
   function() {
@@ -5411,7 +5497,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container" }, [
+  return _c("div", { staticClass: "container my-5" }, [
     _c(
       "form",
       {
@@ -5426,7 +5512,7 @@ var render = function() {
         _c(
           "fieldset",
           [
-            _c("h2", { staticClass: "my-4" }, [_vm._v("Register")]),
+            _c("h2", { staticClass: "mt-2 mb-4" }, [_vm._v("Register")]),
             _vm._v(" "),
             _c("flash-message", {}),
             _vm._v(" "),
@@ -5621,225 +5707,232 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    { staticClass: "container my-5" },
-    [
-      _c("h1", { staticClass: "display-4" }, [
-        _vm._v(_vm._s(_vm.name) + "'s Roadmap")
-      ]),
-      _vm._v(" "),
-      _c(
-        "section",
-        { staticClass: "course-selector mt-5" },
-        [
-          _c("div", { attrs: { id: "select-menu" } }, [
-            _c("ul", { attrs: { id: "select-menu-links" } }, [
-              _c(
-                "li",
-                {
-                  staticClass: "select-links btn bg-stage1 text-white",
-                  attrs: {
-                    "data-toggle": "tooltip",
-                    "data-placement": "top",
-                    title: "HTML & CSS"
-                  },
-                  on: {
-                    click: function($event) {
-                      return _vm.retrieveUserCoursesByStage(1)
-                    }
-                  }
+  return _c("div", { staticClass: "container my-5" }, [
+    _c("h1", { staticClass: "display-4 py-3 my-5 text-center" }, [
+      _vm._v(_vm._s(_vm.name) + "'s Roadmap")
+    ]),
+    _vm._v(" "),
+    _c(
+      "section",
+      { staticClass: "course-selector mt-5" },
+      [
+        _c("div", { staticClass: "pb-4", attrs: { id: "select-menu" } }, [
+          _c("ul", { attrs: { id: "select-menu-links" } }, [
+            _c(
+              "li",
+              {
+                staticClass: "select-links btn bg-stage1 text-white",
+                attrs: {
+                  "data-toggle": "tooltip",
+                  "data-placement": "top",
+                  title: "HTML & CSS"
                 },
-                [_vm._v("Stage 1")]
-              ),
-              _vm._v(" "),
-              _c(
-                "li",
-                {
-                  staticClass: "select-links btn bg-stage2 text-white",
-                  attrs: {
-                    "data-toggle": "tooltip",
-                    "data-placement": "top",
-                    title: "CSS Frameworks"
-                  },
-                  on: {
-                    click: function($event) {
-                      return _vm.retrieveUserCoursesByStage(2)
-                    }
+                on: {
+                  click: function($event) {
+                    return _vm.retrieveUserCoursesByStage(1)
                   }
+                }
+              },
+              [_vm._v("Stage 1")]
+            ),
+            _vm._v(" "),
+            _c(
+              "li",
+              {
+                staticClass: "select-links btn bg-stage2 text-white",
+                attrs: {
+                  "data-toggle": "tooltip",
+                  "data-placement": "top",
+                  title: "CSS Frameworks"
                 },
-                [_vm._v("Stage 2")]
-              ),
-              _vm._v(" "),
-              _c(
-                "li",
-                {
-                  staticClass: "select-links btn bg-stage3 text-white",
-                  attrs: {
-                    "data-toggle": "tooltip",
-                    "data-placement": "top",
-                    title: "JavaScript"
-                  },
-                  on: {
-                    click: function($event) {
-                      return _vm.retrieveUserCoursesByStage(3)
-                    }
+                on: {
+                  click: function($event) {
+                    return _vm.retrieveUserCoursesByStage(2)
                   }
+                }
+              },
+              [_vm._v("Stage 2")]
+            ),
+            _vm._v(" "),
+            _c(
+              "li",
+              {
+                staticClass: "select-links btn bg-stage3 text-white",
+                attrs: {
+                  "data-toggle": "tooltip",
+                  "data-placement": "top",
+                  title: "JavaScript"
                 },
-                [_vm._v("Stage 3")]
-              ),
-              _vm._v(" "),
-              _c(
-                "li",
-                {
-                  staticClass: "select-links btn bg-stage4 text-white",
-                  attrs: {
-                    "data-toggle": "tooltip",
-                    "data-placement": "top",
-                    title: "Front-End JS Frameworks"
-                  },
-                  on: {
-                    click: function($event) {
-                      return _vm.retrieveUserCoursesByStage(4)
-                    }
+                on: {
+                  click: function($event) {
+                    return _vm.retrieveUserCoursesByStage(3)
                   }
+                }
+              },
+              [_vm._v("Stage 3")]
+            ),
+            _vm._v(" "),
+            _c(
+              "li",
+              {
+                staticClass: "select-links btn bg-stage4 text-white",
+                attrs: {
+                  "data-toggle": "tooltip",
+                  "data-placement": "top",
+                  title: "Front-End JS Frameworks"
                 },
-                [_vm._v("Stage 4")]
-              ),
-              _vm._v(" "),
-              _c(
-                "li",
-                {
-                  staticClass: "select-links btn bg-stage5 text-white",
-                  attrs: {
-                    "data-toggle": "tooltip",
-                    "data-placement": "top",
-                    title: "Server Side Languages"
-                  },
-                  on: {
-                    click: function($event) {
-                      return _vm.retrieveUserCoursesByStage(5)
-                    }
+                on: {
+                  click: function($event) {
+                    return _vm.retrieveUserCoursesByStage(4)
                   }
+                }
+              },
+              [_vm._v("Stage 4")]
+            ),
+            _vm._v(" "),
+            _c(
+              "li",
+              {
+                staticClass: "select-links btn bg-stage5 text-white",
+                attrs: {
+                  "data-toggle": "tooltip",
+                  "data-placement": "top",
+                  title: "Server Side Languages"
                 },
-                [_vm._v("Stage 5")]
-              ),
-              _vm._v(" "),
-              _c(
-                "li",
-                {
-                  staticClass: "select-links btn bg-stage6 text-white",
-                  attrs: {
-                    "data-toggle": "tooltip",
-                    "data-placement": "top",
-                    title: "Databases"
-                  },
-                  on: {
-                    click: function($event) {
-                      return _vm.retrieveUserCoursesByStage(6)
-                    }
+                on: {
+                  click: function($event) {
+                    return _vm.retrieveUserCoursesByStage(5)
                   }
+                }
+              },
+              [_vm._v("Stage 5")]
+            ),
+            _vm._v(" "),
+            _c(
+              "li",
+              {
+                staticClass: "select-links btn bg-stage6 text-white",
+                attrs: {
+                  "data-toggle": "tooltip",
+                  "data-placement": "top",
+                  title: "Databases"
                 },
-                [_vm._v("Stage 6")]
-              ),
-              _vm._v(" "),
-              _c(
-                "li",
-                {
-                  staticClass: "select-links btn bg-stage7 text-white",
-                  attrs: {
-                    "data-toggle": "tooltip",
-                    "data-placement": "top",
-                    title: "Server Side Frameworks"
-                  },
-                  on: {
-                    click: function($event) {
-                      return _vm.retrieveUserCoursesByStage(7)
-                    }
+                on: {
+                  click: function($event) {
+                    return _vm.retrieveUserCoursesByStage(6)
                   }
+                }
+              },
+              [_vm._v("Stage 6")]
+            ),
+            _vm._v(" "),
+            _c(
+              "li",
+              {
+                staticClass: "select-links btn bg-stage7 text-white",
+                attrs: {
+                  "data-toggle": "tooltip",
+                  "data-placement": "top",
+                  title: "Server Side Frameworks"
                 },
-                [_vm._v("Stage 7")]
-              ),
-              _vm._v(" "),
-              _c(
-                "li",
-                {
-                  staticClass: "select-links btn bg-stage8 text-white",
-                  attrs: {
-                    "data-toggle": "tooltip",
-                    "data-placement": "top",
-                    title: "Version Control"
-                  },
-                  on: {
-                    click: function($event) {
-                      return _vm.retrieveUserCoursesByStage(8)
-                    }
+                on: {
+                  click: function($event) {
+                    return _vm.retrieveUserCoursesByStage(7)
                   }
+                }
+              },
+              [_vm._v("Stage 7")]
+            ),
+            _vm._v(" "),
+            _c(
+              "li",
+              {
+                staticClass: "select-links btn bg-stage8 text-white",
+                attrs: {
+                  "data-toggle": "tooltip",
+                  "data-placement": "top",
+                  title: "Version Control"
                 },
-                [_vm._v("Stage 8")]
-              ),
-              _vm._v(" "),
-              _c(
-                "li",
-                {
-                  staticClass: "select-links btn btn-stage9 bg-stage9",
-                  attrs: {
-                    "data-toggle": "tooltip",
-                    "data-placement": "top",
-                    title: "Deployment"
-                  },
-                  on: {
-                    click: function($event) {
-                      return _vm.retrieveUserCoursesByStage(9)
-                    }
+                on: {
+                  click: function($event) {
+                    return _vm.retrieveUserCoursesByStage(8)
                   }
+                }
+              },
+              [_vm._v("Stage 8")]
+            ),
+            _vm._v(" "),
+            _c(
+              "li",
+              {
+                staticClass: "select-links btn btn-stage9 bg-stage9",
+                attrs: {
+                  "data-toggle": "tooltip",
+                  "data-placement": "top",
+                  title: "Deployment"
                 },
-                [_vm._v("Stage 9")]
-              )
-            ])
-          ]),
-          _vm._v(" "),
-          _c(
-            "h4",
-            { staticClass: "my-5", attrs: { id: "stage-description" } },
-            [
-              _vm._v(
-                "Stage " + _vm._s(_vm.stage) + " - " + _vm._s(_vm.getStageTitle)
-              )
-            ]
+                on: {
+                  click: function($event) {
+                    return _vm.retrieveUserCoursesByStage(9)
+                  }
+                }
+              },
+              [_vm._v("Stage 9")]
+            )
+          ])
+        ]),
+        _vm._v(" "),
+        _c("h4", { staticClass: "my-5", attrs: { id: "stage-description" } }, [
+          _vm._v(
+            "Stage " +
+              _vm._s(_vm.stage) +
+              " - " +
+              _vm._s(_vm.getStageTitle) +
+              ": "
           ),
-          _vm._v(" "),
-          _c("CourseList")
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c("Stage", { attrs: { stage: 1 } }),
-      _vm._v(" "),
-      _c("Stage", { attrs: { stage: 2 } }),
-      _vm._v(" "),
-      _c("Stage", { attrs: { stage: 3 } }),
-      _vm._v(" "),
-      _c("Stage", { attrs: { stage: 4 } }),
-      _vm._v(" "),
-      _c("Stage", { attrs: { stage: 5 } }),
-      _vm._v(" "),
-      _c("Stage", { attrs: { stage: 6 } }),
-      _vm._v(" "),
-      _c("Stage", { attrs: { stage: 7 } }),
-      _vm._v(" "),
-      _c("Stage", { attrs: { stage: 8 } }),
-      _vm._v(" "),
-      _c("Stage", { attrs: { stage: 9 } }),
-      _vm._v(" "),
-      _c("h3", [_vm._v("Total Hours: " + _vm._s(_vm.calcTotalHours))]),
-      _vm._v(" "),
-      _c("h5", [
-        _vm._v("Hours Remaining: " + _vm._s(_vm.calcTotalHoursRemaining))
-      ])
-    ],
-    1
-  )
+          _c("h5", [_vm._v("Select Your Courses")])
+        ]),
+        _vm._v(" "),
+        _c("CourseList")
+      ],
+      1
+    ),
+    _vm._v(" "),
+    _c(
+      "section",
+      { staticClass: "mt-5 pt-5", attrs: { id: "roadmap" } },
+      [
+        _c("Stage", { attrs: { stage: 1 } }),
+        _vm._v(" "),
+        _c("Stage", { attrs: { stage: 2 } }),
+        _vm._v(" "),
+        _c("Stage", { attrs: { stage: 3 } }),
+        _vm._v(" "),
+        _c("Stage", { attrs: { stage: 4 } }),
+        _vm._v(" "),
+        _c("Stage", { attrs: { stage: 5 } }),
+        _vm._v(" "),
+        _c("Stage", { attrs: { stage: 6 } }),
+        _vm._v(" "),
+        _c("Stage", { attrs: { stage: 7 } }),
+        _vm._v(" "),
+        _c("Stage", { attrs: { stage: 8 } }),
+        _vm._v(" "),
+        _c("Stage", { attrs: { stage: 9 } }),
+        _vm._v(" "),
+        _c("h3", { staticClass: "my-4 py-4" }, [
+          _vm._v("Total Hours: " + _vm._s(_vm.calcTotalHours))
+        ]),
+        _vm._v(" "),
+        _c("h5", { staticClass: "mt-4" }, [
+          _vm._v("Hours Remaining: " + _vm._s(_vm.calcTotalHoursRemaining))
+        ]),
+        _vm._v(" "),
+        _c("h6", [_vm._v(" Double click a course to mark as complete")])
+      ],
+      1
+    )
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -5865,11 +5958,11 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("section", { staticClass: "stage my-5" }, [
     _c("div", { staticClass: "stage-heading" }, [
-      _c("h3", { staticClass: "stage-number mb-4 pr-5" }, [
+      _c("h2", { staticClass: "stage-number mb-4 pr-5" }, [
         _vm._v("Stage " + _vm._s(_vm.stage))
       ]),
       _vm._v(" "),
-      _c("h6", { staticClass: "stage-hrs" }, [
+      _c("h5", { staticClass: "stage-hrs" }, [
         _vm._v("Total Hrs: " + _vm._s(_vm.totalHours))
       ])
     ]),
@@ -5901,7 +5994,9 @@ var render = function() {
             _vm._v(" "),
             _c("div", { staticClass: "card-body" }, [
               _c("h5", { staticClass: "card-title" }, [
-                _vm._v(_vm._s(course.title))
+                _c("a", { attrs: { href: course.url, target: "_blank" } }, [
+                  _vm._v(_vm._s(course.title))
+                ])
               ]),
               _vm._v(" "),
               _c("p", { staticClass: "card-text" }, [
@@ -5986,40 +6081,70 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "container my-5" }, [
-      _c("h1", { staticClass: "display-4" }, [_vm._v("The Journey")]),
+      _c("h1", { staticClass: "display-4 mb-4 text-center" }, [
+        _vm._v("The Journey")
+      ]),
       _vm._v(" "),
       _c("section", { attrs: { id: "intro" } }, [
-        _c("p", { staticClass: "lead pt-4 pb-2" }, [
-          _vm._v(
-            "Journey To Dev is a guide for learning full stack web development. It was born out of the need for a online curriculum for self-taught prospective developers."
-          )
+        _c("div", { staticClass: "icon-text-group my-4" }, [
+          _c("i", { staticClass: "fas fa-laptop-code fa-3x text-info py-2" }),
+          _vm._v(" "),
+          _c("p", { staticClass: "lead px-4" }, [
+            _vm._v(
+              "Journey To Dev is a guide for learning full stack web development. It was born out of the need for a online curriculum for self-taught prospective developers.\n      "
+            )
+          ])
         ]),
         _vm._v(" "),
-        _c("p", { staticClass: "lead pt-4 pb-2" }, [
-          _vm._v(
-            'On this site you will be able to make your own "Roadmap" to plan you own journey to becoming a web developer!'
-          )
+        _c("div", { staticClass: "icon-text-group my-4" }, [
+          _c("i", { staticClass: "fas fa-road fa-3x text-orange mt-2" }),
+          _vm._v(" "),
+          _c("p", { staticClass: "lead px-4" }, [
+            _vm._v(
+              'On this site you will be able to make your own "Roadmap" to plan you own journey to becoming a web developer!\n      '
+            )
+          ])
         ]),
         _vm._v(" "),
-        _c("p", { staticClass: "lead pt-4 pb-2" }, [
-          _vm._v(
-            "The journey from beginner to full stack web developer comprises of 9 Stages. Details of each stage and the technologies you will need to learn are listed below."
-          )
+        _c("div", { staticClass: "icon-text-group my-4" }, [
+          _c("i", {
+            staticClass: "fas fa-graduation-cap fa-3x text-success py-2"
+          }),
+          _vm._v(" "),
+          _c("p", { staticClass: "lead px-4" }, [
+            _vm._v(
+              "The journey to full stack web developer comprises of nine Stages. Details of each stage and the technologies you will need to learn are listed below.\n      "
+            )
+          ])
         ]),
         _vm._v(" "),
-        _c("p", { staticClass: "lead pt-4 pb-2" }, [
-          _c("strong", [_vm._v("NOTE:")]),
-          _vm._v(
-            " You don't need to learn everything contained in every stage! (See stage for details)"
-          )
+        _c("div", { staticClass: "icon-text-group my-4" }, [
+          _c("i", {
+            staticClass: "fas fa-exclamation fa-3x text-danger py-2 px-3"
+          }),
+          _vm._v(" "),
+          _c("p", { staticClass: "lead px-4 mt-2" }, [
+            _c("span", { staticClass: "important" }, [_vm._v("NOTE:")]),
+            _vm._v(
+              " You don't need to learn everything contained in every stage! (See stage for details)\n      "
+            )
+          ])
         ])
       ]),
       _vm._v(" "),
-      _c("section", { staticClass: "p-3 my-4" }, [
+      _c("hr"),
+      _vm._v(" "),
+      _c(
+        "h3",
+        { staticClass: "mt-5 text-center", attrs: { id: "stages-heading" } },
+        [_vm._v("The Stages")]
+      ),
+      _vm._v(" "),
+      _c("section", { staticClass: "p-3 my-2" }, [
         _c(
           "div",
           {
-            staticClass: "card stage-section border-stage1 p-4 mb-5",
+            staticClass: "card stage-section border-stage1 p-4 my-5",
             attrs: { id: "stage-one" }
           },
           [
@@ -6791,10 +6916,10 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Welcome.vue?vue&type=template&id=51777872&scoped=true&":
-/*!**********************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Welcome.vue?vue&type=template&id=51777872&scoped=true& ***!
-  \**********************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Welcome.vue?vue&type=template&id=51777872&":
+/*!**********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Welcome.vue?vue&type=template&id=51777872& ***!
+  \**********************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -6806,228 +6931,170 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("section", { staticClass: "welcome" }, [
-    _c(
-      "div",
-      {
-        staticClass: "carousel slide",
-        attrs: { id: "welcome-carousel", "data-ride": "carousel" }
-      },
-      [
-        _vm._m(0),
-        _vm._v(" "),
-        _c("div", { staticClass: "carousel-inner" }, [
-          _c(
-            "div",
-            { staticClass: "carousel-item active", attrs: { id: "slide1" } },
-            [
-              _c("img", {
-                staticClass: "d-block w-100",
-                attrs: { src: "/images/1.jpg", alt: "laptop with code" }
-              }),
-              _vm._v(" "),
-              _c("div", { staticClass: "carousel-caption d-none d-md-block" }, [
-                _c("h1", { staticClass: "my-3" }, [
-                  _vm._v("Welcome To Your Journey To Dev!")
-                ]),
-                _vm._v(" "),
-                _c("p", { staticClass: "lead py-4" }, [
-                  _vm._v(
-                    "Journey To Dev is a guide for learning full stack web development. It was born out of the need for a online curriculum for self-taught prospective developers."
-                  )
-                ]),
-                _vm._v(" "),
-                _c(
-                  "p",
-                  { staticClass: "lead" },
-                  [
-                    _c(
-                      "router-link",
-                      {
-                        staticClass: "btn btn-info btn-lg",
-                        attrs: { to: "/login", role: "button" }
-                      },
-                      [_vm._v("Login")]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "router-link",
-                      {
-                        staticClass: "btn btn-primary btn-lg",
-                        attrs: { to: "/register", role: "button" }
-                      },
-                      [_vm._v("Register")]
-                    )
-                  ],
-                  1
-                )
-              ])
-            ]
-          ),
+  return _c("section", { attrs: { id: "welcome-page" } }, [
+    _c("div", { attrs: { id: "welcome-svg" } }, [
+      _c(
+        "svg",
+        {
+          attrs: {
+            id: "logo",
+            viewBox: "0 0 914 139",
+            width: "100%",
+            height: "100%",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg"
+          }
+        },
+        [
+          _c("path", {
+            attrs: {
+              d:
+                "M53.7734 2.625H67.3438V75.1172C67.3438 84.9141 64.3906 92.5781 58.4844 98.1094C52.625 103.641 44.7969 106.406 35 106.406C24.8281 106.406 16.9062 103.805 11.2344 98.6016C5.5625 93.3984 2.72656 86.1094 2.72656 76.7344H16.2266C16.2266 82.5938 17.8203 87.1641 21.0078 90.4453C24.2422 93.7266 28.9062 95.3672 35 95.3672C40.5781 95.3672 45.0781 93.6094 48.5 90.0938C51.9688 86.5781 53.7266 81.6562 53.7734 75.3281V2.625Z",
+              stroke: "#CC0000",
+              "stroke-width": "5"
+            }
+          }),
           _vm._v(" "),
-          _c("div", { staticClass: "carousel-item", attrs: { id: "slide2" } }, [
-            _c("img", {
-              staticClass: "d-block w-100",
-              attrs: { src: "/images/2.jpg", alt: "road with sunset" }
-            }),
-            _vm._v(" "),
-            _c("div", { staticClass: "carousel-caption d-none d-md-block" }, [
-              _c("h1", { staticClass: "my-3" }, [_vm._v("Build Your Roadmap")]),
-              _vm._v(" "),
-              _c("p", { staticClass: "lead py-4" }, [
-                _vm._v(
-                  'Make a "Roadmap" to plan you own journey to becoming a web developer!'
-                )
-              ]),
-              _vm._v(" "),
-              _c(
-                "p",
-                { staticClass: "lead" },
-                [
-                  _c(
-                    "router-link",
-                    {
-                      staticClass: "btn btn-info btn-lg",
-                      attrs: { to: "/login", role: "button" }
-                    },
-                    [_vm._v("Login")]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "router-link",
-                    {
-                      staticClass: "btn btn-primary btn-lg",
-                      attrs: { to: "/register", role: "button" }
-                    },
-                    [_vm._v("Register")]
-                  )
-                ],
-                1
-              )
-            ])
-          ]),
+          _c("path", {
+            attrs: {
+              d:
+                "M84.8516 66.2578C84.8516 58.8047 86.3047 52.1016 89.2109 46.1484C92.1641 40.1953 96.2422 35.6016 101.445 32.3672C106.695 29.1328 112.672 27.5156 119.375 27.5156C129.734 27.5156 138.102 31.1016 144.477 38.2734C150.898 45.4453 154.109 54.9844 154.109 66.8906V67.8047C154.109 75.2109 152.68 81.8672 149.82 87.7734C147.008 93.6328 142.953 98.2031 137.656 101.484C132.406 104.766 126.359 106.406 119.516 106.406C109.203 106.406 100.836 102.82 94.4141 95.6484C88.0391 88.4766 84.8516 78.9844 84.8516 67.1719V66.2578ZM97.9297 67.8047C97.9297 76.2422 99.875 83.0156 103.766 88.125C107.703 93.2344 112.953 95.7891 119.516 95.7891C126.125 95.7891 131.375 93.2109 135.266 88.0547C139.156 82.8516 141.102 75.5859 141.102 66.2578C141.102 57.9141 139.109 51.1641 135.125 46.0078C131.188 40.8047 125.938 38.2031 119.375 38.2031C112.953 38.2031 107.773 40.7578 103.836 45.8672C99.8984 50.9766 97.9297 58.2891 97.9297 67.8047Z",
+              stroke: "rgb(255,165,0)",
+              "stroke-width": "5"
+            }
+          }),
           _vm._v(" "),
-          _c("div", { staticClass: "carousel-item", attrs: { id: "slide3" } }, [
-            _c("img", {
-              staticClass: "d-block w-100",
-              attrs: { src: "/images/3.jpg", alt: "student with a laptop" }
-            }),
+          _c("path", {
+            attrs: {
+              d:
+                "M217.391 97.4766C212.328 103.43 204.898 106.406 195.102 106.406C186.992 106.406 180.805 104.062 176.539 99.375C172.32 94.6406 170.188 87.6562 170.141 78.4219V28.9219H183.148V78.0703C183.148 89.6016 187.836 95.3672 197.211 95.3672C207.148 95.3672 213.758 91.6641 217.039 84.2578V28.9219H230.047V105H217.672L217.391 97.4766Z",
+              stroke: "rgb(255,69,0)",
+              "stroke-width": "5"
+            }
+          }),
+          _vm._v(" "),
+          _c("path", {
+            attrs: {
+              d:
+                "M286.648 40.5938C284.68 40.2656 282.547 40.1016 280.25 40.1016C271.719 40.1016 265.93 43.7344 262.883 51V105H249.875V28.9219H262.531L262.742 37.7109C267.008 30.9141 273.055 27.5156 280.883 27.5156C283.414 27.5156 285.336 27.8438 286.648 28.5V40.5938Z",
+              stroke: "#77B300",
+              "stroke-width": "5"
+            }
+          }),
+          _vm._v(" "),
+          _c("path", {
+            attrs: {
+              d:
+                "M310.977 28.9219L311.398 38.4844C317.211 31.1719 324.805 27.5156 334.18 27.5156C350.258 27.5156 358.367 36.5859 358.508 54.7266V105H345.5V54.6562C345.453 49.1719 344.188 45.1172 341.703 42.4922C339.266 39.8672 335.445 38.5547 330.242 38.5547C326.023 38.5547 322.32 39.6797 319.133 41.9297C315.945 44.1797 313.461 47.1328 311.68 50.7891V105H298.672V28.9219H310.977Z",
+              stroke: "#2A9FD6",
+              "stroke-width": "5"
+            }
+          }),
+          _vm._v(" "),
+          _c("path", {
+            attrs: {
+              d:
+                "M409.695 106.406C399.383 106.406 390.992 103.031 384.523 96.2812C378.055 89.4844 374.82 80.4141 374.82 69.0703V66.6797C374.82 59.1328 376.25 52.4062 379.109 46.5C382.016 40.5469 386.047 35.9062 391.203 32.5781C396.406 29.2031 402.031 27.5156 408.078 27.5156C417.969 27.5156 425.656 30.7734 431.141 37.2891C436.625 43.8047 439.367 53.1328 439.367 65.2734V70.6875H387.828C388.016 78.1875 390.195 84.2578 394.367 88.8984C398.586 93.4922 403.93 95.7891 410.398 95.7891C414.992 95.7891 418.883 94.8516 422.07 92.9766C425.258 91.1016 428.047 88.6172 430.438 85.5234L438.383 91.7109C432.008 101.508 422.445 106.406 409.695 106.406ZM408.078 38.2031C402.828 38.2031 398.422 40.125 394.859 43.9688C391.297 47.7656 389.094 53.1094 388.25 60H426.359V59.0156C425.984 52.4062 424.203 47.2969 421.016 43.6875C417.828 40.0312 413.516 38.2031 408.078 38.2031Z",
+              stroke: "#20c997",
+              "stroke-width": "5"
+            }
+          }),
+          _vm._v(" "),
+          _c("path", {
+            attrs: {
+              d:
+                "M478.391 85.9453L496.109 28.9219H510.031L479.445 116.742C474.711 129.398 467.188 135.727 456.875 135.727L454.414 135.516L449.562 134.602V124.055L453.078 124.336C457.484 124.336 460.906 123.445 463.344 121.664C465.828 119.883 467.867 116.625 469.461 111.891L472.344 104.156L445.203 28.9219H459.406L478.391 85.9453Z",
+              stroke: "#e83e8c",
+              "stroke-width": "5"
+            }
+          }),
+          _vm._v(" "),
+          _c("path", {
+            attrs: {
+              d:
+                "M594.477 13.7344H561.57V105H548.141V13.7344H515.305V2.625H594.477V13.7344Z",
+              stroke: "#9933CC",
+              "stroke-width": "5"
+            }
+          }),
+          _vm._v(" "),
+          _c("path", {
+            attrs: {
+              d:
+                "M597.148 66.2578C597.148 58.8047 598.602 52.1016 601.508 46.1484C604.461 40.1953 608.539 35.6016 613.742 32.3672C618.992 29.1328 624.969 27.5156 631.672 27.5156C642.031 27.5156 650.398 31.1016 656.773 38.2734C663.195 45.4453 666.406 54.9844 666.406 66.8906V67.8047C666.406 75.2109 664.977 81.8672 662.117 87.7734C659.305 93.6328 655.25 98.2031 649.953 101.484C644.703 104.766 638.656 106.406 631.812 106.406C621.5 106.406 613.133 102.82 606.711 95.6484C600.336 88.4766 597.148 78.9844 597.148 67.1719V66.2578ZM610.227 67.8047C610.227 76.2422 612.172 83.0156 616.062 88.125C620 93.2344 625.25 95.7891 631.812 95.7891C638.422 95.7891 643.672 93.2109 647.562 88.0547C651.453 82.8516 653.398 75.5859 653.398 66.2578C653.398 57.9141 651.406 51.1641 647.422 46.0078C643.484 40.8047 638.234 38.2031 631.672 38.2031C625.25 38.2031 620.07 40.7578 616.133 45.8672C612.195 50.9766 610.227 58.2891 610.227 67.8047Z",
+              stroke: "white",
+              "stroke-width": "5"
+            }
+          }),
+          _vm._v(" "),
+          _c("path", {
+            attrs: {
+              d:
+                "M684.758 105V2.625H713.656C722.562 2.625 730.438 4.59375 737.281 8.53125C744.125 12.4688 749.398 18.0703 753.102 25.3359C756.852 32.6016 758.75 40.9453 758.797 50.3672V56.9062C758.797 66.5625 756.922 75.0234 753.172 82.2891C749.469 89.5547 744.148 95.1328 737.211 99.0234C730.32 102.914 722.281 104.906 713.094 105H684.758ZM698.258 13.7344V93.9609H712.461C722.867 93.9609 730.953 90.7266 736.719 84.2578C742.531 77.7891 745.438 68.5781 745.438 56.625V50.6484C745.438 39.0234 742.695 30 737.211 23.5781C731.773 17.1094 724.039 13.8281 714.008 13.7344H698.258Z",
+              stroke: "#CC0000",
+              "stroke-width": "5"
+            }
+          }),
+          _vm._v(" "),
+          _c("path", {
+            attrs: {
+              d:
+                "M808.789 106.406C798.477 106.406 790.086 103.031 783.617 96.2812C777.148 89.4844 773.914 80.4141 773.914 69.0703V66.6797C773.914 59.1328 775.344 52.4062 778.203 46.5C781.109 40.5469 785.141 35.9062 790.297 32.5781C795.5 29.2031 801.125 27.5156 807.172 27.5156C817.062 27.5156 824.75 30.7734 830.234 37.2891C835.719 43.8047 838.461 53.1328 838.461 65.2734V70.6875H786.922C787.109 78.1875 789.289 84.2578 793.461 88.8984C797.68 93.4922 803.023 95.7891 809.492 95.7891C814.086 95.7891 817.977 94.8516 821.164 92.9766C824.352 91.1016 827.141 88.6172 829.531 85.5234L837.477 91.7109C831.102 101.508 821.539 106.406 808.789 106.406ZM807.172 38.2031C801.922 38.2031 797.516 40.125 793.953 43.9688C790.391 47.7656 788.188 53.1094 787.344 60H825.453V59.0156C825.078 52.4062 823.297 47.2969 820.109 43.6875C816.922 40.0312 812.609 38.2031 807.172 38.2031Z",
+              stroke: "rgb(255,165,0)",
+              "stroke-width": "5"
+            }
+          }),
+          _vm._v(" "),
+          _c("path", {
+            attrs: {
+              d:
+                "M877.695 87.3516L896.539 28.9219H909.828L882.547 105H872.633L845.07 28.9219H858.359L877.695 87.3516Z",
+              stroke: "rgb(255,69,0)",
+              "stroke-width": "5"
+            }
+          })
+        ]
+      )
+    ]),
+    _vm._v(" "),
+    _vm.isLoggedIn === false
+      ? _c(
+          "div",
+          { attrs: { id: "buttons" } },
+          [
+            _c(
+              "router-link",
+              {
+                staticClass: "btn btn-info btn-lg",
+                attrs: { to: "/login", role: "button" }
+              },
+              [_vm._v("Login")]
+            ),
             _vm._v(" "),
-            _c("div", { staticClass: "carousel-caption d-none d-md-block" }, [
-              _c("h1", { staticClass: "my-3" }, [
-                _vm._v("Get Straight To Learning!")
-              ]),
-              _vm._v(" "),
-              _c("p", { staticClass: "lead py-4" }, [
-                _vm._v(
-                  "Benefit from other student's past research, build yourself a custom roadmap and get straight to learning!"
-                )
-              ]),
-              _vm._v(" "),
-              _c(
-                "p",
-                { staticClass: "lead" },
-                [
-                  _c(
-                    "router-link",
-                    {
-                      staticClass: "btn btn-info btn-lg",
-                      attrs: { to: "/login", role: "button" }
-                    },
-                    [_vm._v("Login")]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "router-link",
-                    {
-                      staticClass: "btn btn-primary btn-lg",
-                      attrs: { to: "/register", role: "button" }
-                    },
-                    [_vm._v("Register")]
-                  )
-                ],
-                1
-              )
-            ])
-          ])
-        ]),
-        _vm._v(" "),
-        _vm._m(1),
-        _vm._v(" "),
-        _vm._m(2)
-      ]
-    )
+            _c(
+              "router-link",
+              {
+                staticClass: "btn btn-primary btn-lg",
+                attrs: { to: "/register", role: "button" }
+              },
+              [_vm._v("Register")]
+            ),
+            _vm._v(" "),
+            _c(
+              "router-link",
+              {
+                staticClass: "btn btn-success btn-lg",
+                attrs: { to: "/thejourney", role: "button" }
+              },
+              [_vm._v("Find Out More")]
+            )
+          ],
+          1
+        )
+      : _vm._e()
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("ol", { staticClass: "carousel-indicators" }, [
-      _c("li", {
-        staticClass: "active",
-        attrs: { "data-target": "#welcome-carousel", "data-slide-to": "0" }
-      }),
-      _vm._v(" "),
-      _c("li", {
-        attrs: { "data-target": "#welcome-carousel", "data-slide-to": "1" }
-      }),
-      _vm._v(" "),
-      _c("li", {
-        attrs: { "data-target": "#welcome-carousel", "data-slide-to": "2" }
-      })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "a",
-      {
-        staticClass: "carousel-control-prev",
-        attrs: {
-          href: "#welcome-carousel",
-          role: "button",
-          "data-slide": "prev"
-        }
-      },
-      [
-        _c("span", {
-          staticClass: "carousel-control-prev-icon",
-          attrs: { "aria-hidden": "true" }
-        }),
-        _vm._v(" "),
-        _c("span", { staticClass: "sr-only" }, [_vm._v("Previous")])
-      ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "a",
-      {
-        staticClass: "carousel-control-next",
-        attrs: {
-          href: "#welcome-carousel",
-          role: "button",
-          "data-slide": "next"
-        }
-      },
-      [
-        _c("span", {
-          staticClass: "carousel-control-next-icon",
-          attrs: { "aria-hidden": "true" }
-        }),
-        _vm._v(" "),
-        _c("span", { staticClass: "sr-only" }, [_vm._v("Next")])
-      ]
-    )
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -23898,9 +23965,9 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Welcome_vue_vue_type_template_id_51777872_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Welcome.vue?vue&type=template&id=51777872&scoped=true& */ "./resources/js/components/Welcome.vue?vue&type=template&id=51777872&scoped=true&");
+/* harmony import */ var _Welcome_vue_vue_type_template_id_51777872___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Welcome.vue?vue&type=template&id=51777872& */ "./resources/js/components/Welcome.vue?vue&type=template&id=51777872&");
 /* harmony import */ var _Welcome_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Welcome.vue?vue&type=script&lang=js& */ "./resources/js/components/Welcome.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _Welcome_vue_vue_type_style_index_0_id_51777872_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Welcome.vue?vue&type=style&index=0&id=51777872&lang=scss&scoped=true& */ "./resources/js/components/Welcome.vue?vue&type=style&index=0&id=51777872&lang=scss&scoped=true&");
+/* empty/unused harmony star reexport *//* harmony import */ var _Welcome_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Welcome.vue?vue&type=style&index=0&lang=scss& */ "./resources/js/components/Welcome.vue?vue&type=style&index=0&lang=scss&");
 /* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -23912,11 +23979,11 @@ __webpack_require__.r(__webpack_exports__);
 
 var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
   _Welcome_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _Welcome_vue_vue_type_template_id_51777872_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _Welcome_vue_vue_type_template_id_51777872_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _Welcome_vue_vue_type_template_id_51777872___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Welcome_vue_vue_type_template_id_51777872___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
-  "51777872",
+  null,
   null
   
 )
@@ -23942,35 +24009,35 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/components/Welcome.vue?vue&type=style&index=0&id=51777872&lang=scss&scoped=true&":
-/*!*******************************************************************************************************!*\
-  !*** ./resources/js/components/Welcome.vue?vue&type=style&index=0&id=51777872&lang=scss&scoped=true& ***!
-  \*******************************************************************************************************/
+/***/ "./resources/js/components/Welcome.vue?vue&type=style&index=0&lang=scss&":
+/*!*******************************************************************************!*\
+  !*** ./resources/js/components/Welcome.vue?vue&type=style&index=0&lang=scss& ***!
+  \*******************************************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_Welcome_vue_vue_type_style_index_0_id_51777872_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader!../../../node_modules/css-loader!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--7-2!../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../node_modules/vue-loader/lib??vue-loader-options!./Welcome.vue?vue&type=style&index=0&id=51777872&lang=scss&scoped=true& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Welcome.vue?vue&type=style&index=0&id=51777872&lang=scss&scoped=true&");
-/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_Welcome_vue_vue_type_style_index_0_id_51777872_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_Welcome_vue_vue_type_style_index_0_id_51777872_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_Welcome_vue_vue_type_style_index_0_id_51777872_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_Welcome_vue_vue_type_style_index_0_id_51777872_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
- /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_Welcome_vue_vue_type_style_index_0_id_51777872_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0___default.a); 
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_Welcome_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader!../../../node_modules/css-loader!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--7-2!../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../node_modules/vue-loader/lib??vue-loader-options!./Welcome.vue?vue&type=style&index=0&lang=scss& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Welcome.vue?vue&type=style&index=0&lang=scss&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_Welcome_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_Welcome_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_Welcome_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_Welcome_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_Welcome_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0___default.a); 
 
 /***/ }),
 
-/***/ "./resources/js/components/Welcome.vue?vue&type=template&id=51777872&scoped=true&":
-/*!****************************************************************************************!*\
-  !*** ./resources/js/components/Welcome.vue?vue&type=template&id=51777872&scoped=true& ***!
-  \****************************************************************************************/
+/***/ "./resources/js/components/Welcome.vue?vue&type=template&id=51777872&":
+/*!****************************************************************************!*\
+  !*** ./resources/js/components/Welcome.vue?vue&type=template&id=51777872& ***!
+  \****************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Welcome_vue_vue_type_template_id_51777872_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./Welcome.vue?vue&type=template&id=51777872&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Welcome.vue?vue&type=template&id=51777872&scoped=true&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Welcome_vue_vue_type_template_id_51777872_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Welcome_vue_vue_type_template_id_51777872___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./Welcome.vue?vue&type=template&id=51777872& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Welcome.vue?vue&type=template&id=51777872&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Welcome_vue_vue_type_template_id_51777872___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Welcome_vue_vue_type_template_id_51777872_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Welcome_vue_vue_type_template_id_51777872___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
@@ -24424,13 +24491,13 @@ var actions = {
 
               commit('addToRoadmap', newCourse); // Update the roadmap ID array
 
-              dispatch('getRoadmapTitles'); // Update the userCourseList using the updated Ids
+              dispatch('retrieveRoadmapTitles'); // Update the userCourseList using the updated Ids
 
               dispatch('retrieveUserCourseList'); // Update the courseList component by updating the userCoursesByStage state in courseList module
 
               dispatch('retrieveUserCoursesByStage', course.stage); // Update the corresponding Stage component to show the course now in the roadmap - so we do need access to the roadmap by stage arrays outside of the Stage component
 
-              dispatch('getRoadmapByStage', course.stage);
+              dispatch('retrieveRoadmapByStage', course.stage);
 
             case 11:
             case "end":
@@ -24467,11 +24534,11 @@ var actions = {
               // Fetch the updated roadmap
               dispatch('retrieveRoadmap').then(function (res) {
                 // Update the userCourseList using the updated titles
-                dispatch('getUserCourseList'); // Update the courseList component by updating the userCoursesByStage state in courseList module
+                dispatch('retrieveUserCourseList'); // Update the courseList component by updating the userCoursesByStage state in courseList module
 
-                dispatch('getUserCoursesByStage', course.stage); // Update the corresponding Stage component
+                dispatch('retrieveUserCoursesByStage', course.stage); // Update the corresponding Stage component
 
-                dispatch('getRoadmapByStage', course.stage);
+                dispatch('retrieveRoadmapByStage', course.stage);
               });
 
             case 6:
@@ -24569,7 +24636,7 @@ var actions = {
               return dispatch('retrieveRoadmap');
 
             case 9:
-              dispatch('getRoadmapByStage', course.stage);
+              dispatch('retrieveRoadmapByStage', course.stage);
 
             case 10:
             case "end":
