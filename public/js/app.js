@@ -1920,6 +1920,34 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Arrow.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Arrow.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: 'Arrow'
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/CourseList.vue?vue&type=script&lang=js&":
 /*!*********************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/CourseList.vue?vue&type=script&lang=js& ***!
@@ -2167,7 +2195,8 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _CourseList__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./CourseList */ "./resources/js/components/CourseList.vue");
 /* harmony import */ var _Stage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Stage */ "./resources/js/components/Stage.vue");
-/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+/* harmony import */ var _Arrow__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Arrow */ "./resources/js/components/Arrow.vue");
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(source, true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(source).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -2228,6 +2257,15 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+
 
 
 
@@ -2261,7 +2299,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
     initialLoad();
   },
-  computed: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_2__["mapGetters"])({
+  computed: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_3__["mapGetters"])({
     userCourseList: 'getUserCourseList',
     name: 'getName',
     stage: 'getCurrentStage'
@@ -2318,10 +2356,11 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       return total;
     }
   }),
-  methods: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_2__["mapActions"])(['loadInitialUserData', 'retrieveUserCoursesByStage'])),
+  methods: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_3__["mapActions"])(['loadInitialUserData', 'retrieveUserCoursesByStage'])),
   components: {
     CourseList: _CourseList__WEBPACK_IMPORTED_MODULE_0__["default"],
-    Stage: _Stage__WEBPACK_IMPORTED_MODULE_1__["default"]
+    Stage: _Stage__WEBPACK_IMPORTED_MODULE_1__["default"],
+    Arrow: _Arrow__WEBPACK_IMPORTED_MODULE_2__["default"]
   }
 });
 
@@ -2778,7 +2817,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".bg-stage1[data-v-6dde423b] {\n  background-color: #CC0000;\n}\n.bg-stage2[data-v-6dde423b] {\n  background-color: orange;\n}\n.bg-stage3[data-v-6dde423b] {\n  background-color: orangered;\n}\n.bg-stage4[data-v-6dde423b] {\n  background-color: #77B300;\n}\n.bg-stage5[data-v-6dde423b] {\n  background-color: #2A9FD6;\n}\n.bg-stage6[data-v-6dde423b] {\n  background-color: #20c997;\n}\n.bg-stage7[data-v-6dde423b] {\n  background-color: #e83e8c;\n}\n.bg-stage8[data-v-6dde423b] {\n  background-color: #9933CC;\n}\n.bg-stage9[data-v-6dde423b] {\n  background-color: #fff;\n  color: black !important;\n}\n.border-stage1[data-v-6dde423b] {\n  border-top: 8px solid #CC0000;\n  border-right: 8px solid #CC0000;\n}\n.border-stage2[data-v-6dde423b] {\n  border-top: 8px solid orange;\n  border-right: 8px solid orange;\n}\n.border-stage3[data-v-6dde423b] {\n  border-top: 8px solid orangered;\n  border-right: 8px solid orangered;\n}\n.border-stage4[data-v-6dde423b] {\n  border-top: 8px solid #77B300;\n  border-right: 8px solid #77B300;\n}\n.border-stage5[data-v-6dde423b] {\n  border-top: 8px solid #2A9FD6;\n  border-right: 8px solid #2A9FD6;\n}\n.border-stage6[data-v-6dde423b] {\n  border-top: 8px solid #20c997;\n  border-right: 8px solid #20c997;\n}\n.border-stage7[data-v-6dde423b] {\n  border-top: 8px solid #e83e8c;\n  border-right: 8px solid #e83e8c;\n}\n.border-stage8[data-v-6dde423b] {\n  border-top: 8px solid #9933CC;\n  border-right: 8px solid #9933CC;\n}\n.border-stage9[data-v-6dde423b] {\n  border-top: 8px solid #fff;\n  border-right: 8px solid #ffff;\n}\n.text-orangered[data-v-6dde423b] {\n  color: orangered !important;\n}\n.text-orange[data-v-6dde423b] {\n  color: orange !important;\n}\n.text-purple[data-v-6dde423b] {\n  color: #6f42c1 !important;\n}\n.text-teal[data-v-6dde423b] {\n  color: #20c997 !important;\n}\n.text-pink[data-v-6dde423b] {\n  color: #e83e8c !important;\n}\n@-webkit-keyframes hue-data-v-6dde423b {\nfrom {\n    -webkit-filter: hue-rotate(0deg);\n            filter: hue-rotate(0deg);\n}\nto {\n    -webkit-filter: hue-rotate(-360deg);\n            filter: hue-rotate(-360deg);\n}\n}\n@keyframes hue-data-v-6dde423b {\nfrom {\n    -webkit-filter: hue-rotate(0deg);\n            filter: hue-rotate(0deg);\n}\nto {\n    -webkit-filter: hue-rotate(-360deg);\n            filter: hue-rotate(-360deg);\n}\n}\n.navbar[data-v-6dde423b] {\n  background-color: #020009;\n  position: fixed;\n  top: 0;\n  width: 100%;\n  z-index: 2;\n}\n.navbar-brand[data-v-6dde423b] {\n  font-size: 1.9rem !important;\n  color: white;\n}\n.nav-link[data-v-6dde423b] {\n  font-size: 1rem;\n  color: white !important;\n  transition: all 0.5s ease;\n}\n#home-link[data-v-6dde423b]:hover {\n  color: #2A9FD6 !important;\n}\n#journey-link[data-v-6dde423b]:hover {\n  color: orange !important;\n}\n#roadmap-link[data-v-6dde423b]:hover {\n  color: orangered !important;\n}\n#about-link[data-v-6dde423b]:hover {\n  color: #77B300 !important;\n}\n#login-link[data-v-6dde423b]:hover {\n  color: #20c997 !important;\n}\n#register-link[data-v-6dde423b]:hover {\n  color: #e83e8c !important;\n}\n#logout-link[data-v-6dde423b]:hover {\n  color: #9933CC !important;\n}", ""]);
+exports.push([module.i, ".bg-stage1[data-v-6dde423b] {\n  background-color: #CC0000;\n}\n.bg-stage2[data-v-6dde423b] {\n  background-color: orange;\n}\n.bg-stage3[data-v-6dde423b] {\n  background-color: orangered;\n}\n.bg-stage4[data-v-6dde423b] {\n  background-color: #77B300;\n}\n.bg-stage5[data-v-6dde423b] {\n  background-color: #2A9FD6;\n}\n.bg-stage6[data-v-6dde423b] {\n  background-color: #20c997;\n}\n.bg-stage7[data-v-6dde423b] {\n  background-color: #e83e8c;\n}\n.bg-stage8[data-v-6dde423b] {\n  background-color: #9933CC;\n}\n.bg-stage9[data-v-6dde423b] {\n  background-color: #fff;\n  color: black !important;\n}\n.border-stage1[data-v-6dde423b] {\n  border-top: 8px solid #CC0000;\n  border-right: 8px solid #CC0000;\n}\n.border-stage2[data-v-6dde423b] {\n  border-top: 8px solid orange;\n  border-right: 8px solid orange;\n}\n.border-stage3[data-v-6dde423b] {\n  border-top: 8px solid orangered;\n  border-right: 8px solid orangered;\n}\n.border-stage4[data-v-6dde423b] {\n  border-top: 8px solid #77B300;\n  border-right: 8px solid #77B300;\n}\n.border-stage5[data-v-6dde423b] {\n  border-top: 8px solid #2A9FD6;\n  border-right: 8px solid #2A9FD6;\n}\n.border-stage6[data-v-6dde423b] {\n  border-top: 8px solid #20c997;\n  border-right: 8px solid #20c997;\n}\n.border-stage7[data-v-6dde423b] {\n  border-top: 8px solid #e83e8c;\n  border-right: 8px solid #e83e8c;\n}\n.border-stage8[data-v-6dde423b] {\n  border-top: 8px solid #9933CC;\n  border-right: 8px solid #9933CC;\n}\n.border-stage9[data-v-6dde423b] {\n  border-top: 8px solid #fff;\n  border-right: 8px solid #ffff;\n}\n.text-orangered[data-v-6dde423b] {\n  color: orangered !important;\n}\n.text-orange[data-v-6dde423b] {\n  color: orange !important;\n}\n.text-purple[data-v-6dde423b] {\n  color: #6f42c1 !important;\n}\n.text-teal[data-v-6dde423b] {\n  color: #20c997 !important;\n}\n.text-pink[data-v-6dde423b] {\n  color: #e83e8c !important;\n}\n@-webkit-keyframes hue-data-v-6dde423b {\nfrom {\n    -webkit-filter: hue-rotate(0deg);\n            filter: hue-rotate(0deg);\n}\nto {\n    -webkit-filter: hue-rotate(-360deg);\n            filter: hue-rotate(-360deg);\n}\n}\n@keyframes hue-data-v-6dde423b {\nfrom {\n    -webkit-filter: hue-rotate(0deg);\n            filter: hue-rotate(0deg);\n}\nto {\n    -webkit-filter: hue-rotate(-360deg);\n            filter: hue-rotate(-360deg);\n}\n}\n.navbar[data-v-6dde423b] {\n  background-color: #020009;\n  position: fixed;\n  top: 0;\n  width: 100%;\n  z-index: 2;\n}\n.navbar-brand[data-v-6dde423b] {\n  font-size: 1.9rem !important;\n  color: white;\n}\n.nav-item[data-v-6dde423b] {\n  padding: 0 0.8rem;\n}\n.nav-link[data-v-6dde423b] {\n  font-size: 1.1rem;\n  color: white !important;\n  transition: all 0.5s ease;\n}\n#home-link[data-v-6dde423b]:hover {\n  color: #2A9FD6 !important;\n}\n#journey-link[data-v-6dde423b]:hover {\n  color: orange !important;\n}\n#roadmap-link[data-v-6dde423b]:hover {\n  color: orangered !important;\n}\n#about-link[data-v-6dde423b]:hover {\n  color: #77B300 !important;\n}\n#login-link[data-v-6dde423b]:hover {\n  color: #20c997 !important;\n}\n#register-link[data-v-6dde423b]:hover {\n  color: #e83e8c !important;\n}\n#logout-link[data-v-6dde423b]:hover {\n  color: #9933CC !important;\n}", ""]);
 
 // exports
 
@@ -2816,7 +2855,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".stage[data-v-3fd38ca3] {\n  display: flex;\n}\n.stage-heading[data-v-3fd38ca3] {\n  padding: 2rem 2rem 2rem 0;\n  align-self: center;\n}\n.stage-heading h2[data-v-3fd38ca3] {\n  font-size: 2.8rem;\n}\n.stage-heading h5[data-v-3fd38ca3] {\n  font-size: 1.2rem;\n}\n.stage-courses[data-v-3fd38ca3] {\n  display: flex;\n  flex-wrap: wrap;\n}\n.stage-courses > .stage-course[data-v-3fd38ca3] {\n  min-height: 240px;\n  min-width: 260px;\n  max-width: 260px;\n}\n.stage-courses > .stage-course .card-body > h5[data-v-3fd38ca3] {\n  font-size: 1.4rem;\n}\nh5.card-title > a[data-v-3fd38ca3] {\n  color: white;\n  text-decoration: none;\n}\nh5.card-title > a[data-v-3fd38ca3]:hover {\n  font-weight: bolder;\n}\n.bg-stage9 a[data-v-3fd38ca3] {\n  color: black !important;\n}\n.course-completed[data-v-3fd38ca3] {\n  background-color: silver;\n  opacity: 0.8;\n}\n.card-footer[data-v-3fd38ca3] {\n  display: flex;\n  justify-content: space-between;\n}\n.left-arrow[data-v-3fd38ca3], .right-arrow[data-v-3fd38ca3] {\n  cursor: pointer;\n}\n.delete-btn[data-v-3fd38ca3] {\n  cursor: pointer;\n}", ""]);
+exports.push([module.i, ".stage[data-v-3fd38ca3] {\n  display: flex;\n}\n.stage-heading[data-v-3fd38ca3] {\n  padding: 2rem 2rem 2rem 0;\n  align-self: center;\n}\n.stage-heading h2[data-v-3fd38ca3] {\n  font-size: 2.8rem;\n}\n.stage-heading h5[data-v-3fd38ca3] {\n  font-size: 1.2rem;\n}\n.stage-courses[data-v-3fd38ca3] {\n  display: flex;\n  flex-wrap: wrap;\n}\n.stage-courses > .stage-course[data-v-3fd38ca3] {\n  min-height: 240px;\n  min-width: 260px;\n  max-width: 260px;\n  border-radius: 10px;\n  box-shadow: 1rem 0 3rem #000;\n}\n.stage-courses > .stage-course .card-body > h5[data-v-3fd38ca3] {\n  font-size: 1.4rem;\n}\nh5.card-title > a[data-v-3fd38ca3] {\n  color: white;\n  text-decoration: none;\n}\nh5.card-title > a[data-v-3fd38ca3]:hover {\n  color: #cccccc;\n}\n.bg-stage9 a[data-v-3fd38ca3] {\n  color: black !important;\n}\n.course-completed[data-v-3fd38ca3] {\n  background-color: silver;\n  opacity: 0.8;\n}\n.card-footer[data-v-3fd38ca3] {\n  display: flex;\n  justify-content: space-between;\n}\n.left-arrow[data-v-3fd38ca3], .right-arrow[data-v-3fd38ca3] {\n  cursor: pointer;\n}\n.delete-btn[data-v-3fd38ca3] {\n  cursor: pointer;\n}", ""]);
 
 // exports
 
@@ -2854,7 +2893,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "#welcome-page {\n  position: relative;\n  background: url(\"/images/1.jpg\");\n  height: 100vh;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n}\n#welcome-svg {\n  min-width: 50vw;\n}\n#buttons {\n  margin-top: 3rem;\n}\n#logo path:nth-child(1) {\n  stroke-dasharray: 334.1294250488;\n  stroke-dashoffset: 334.1294250488;\n  -webkit-animation-name: line-anim, fill-red;\n          animation-name: line-anim, fill-red;\n  -webkit-animation-duration: 1.5s;\n          animation-duration: 1.5s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 0s, 4s;\n          animation-delay: 0s, 4s;\n}\n#logo path:nth-child(2) {\n  stroke-dasharray: 398.1838378906;\n  stroke-dashoffset: 398.1838378906;\n  -webkit-animation-name: line-anim, fill-orange;\n          animation-name: line-anim, fill-orange;\n  -webkit-animation-duration: 1.5s;\n          animation-duration: 1.5s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 0.3s, 4s;\n          animation-delay: 0.3s, 4s;\n}\n#logo path:nth-child(3) {\n  stroke-dasharray: 393.3806152344;\n  stroke-dashoffset: 393.3806152344;\n  -webkit-animation-name: line-anim, fill-orangered;\n          animation-name: line-anim, fill-orangered;\n  -webkit-animation-duration: 1.5s;\n          animation-duration: 1.5s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 0.6s, 4s;\n          animation-delay: 0.6s, 4s;\n}\n#logo path:nth-child(4) {\n  stroke-dasharray: 232.6978607178;\n  stroke-dashoffset: 232.6978607178;\n  -webkit-animation-name: line-anim, fill-green;\n          animation-name: line-anim, fill-green;\n  -webkit-animation-duration: 1.5s;\n          animation-duration: 1.5s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 0.9s, 4s;\n          animation-delay: 0.9s, 4s;\n}\n#logo path:nth-child(5) {\n  stroke-dasharray: 395.8296203613;\n  stroke-dashoffset: 395.8296203613;\n  -webkit-animation-name: line-anim, fill-blue;\n          animation-name: line-anim, fill-blue;\n  -webkit-animation-duration: 1.5s;\n          animation-duration: 1.5s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 1.2s, 4s;\n          animation-delay: 1.2s, 4s;\n}\n#logo path:nth-child(6) {\n  stroke-dasharray: 437.6187133789;\n  stroke-dashoffset: 437.6187133789;\n  -webkit-animation-name: line-anim, fill-teal;\n          animation-name: line-anim, fill-teal;\n  -webkit-animation-duration: 1.5s;\n          animation-duration: 1.5s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 1.5s, 4s;\n          animation-delay: 1.5s, 4s;\n}\n#logo path:nth-child(7) {\n  stroke-dasharray: 404.7785949707;\n  stroke-dashoffset: 404.7785949707;\n  -webkit-animation-name: line-anim, fill-pink;\n          animation-name: line-anim, fill-pink;\n  -webkit-animation-duration: 1.5s;\n          animation-duration: 1.5s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 1.8s, 4s;\n          animation-delay: 1.8s, 4s;\n}\n#logo path:nth-child(8) {\n  stroke-dasharray: 363.0939941406;\n  stroke-dashoffset: 363.0939941406;\n  -webkit-animation-name: line-anim, fill-cyan;\n          animation-name: line-anim, fill-cyan;\n  -webkit-animation-duration: 1.5s;\n          animation-duration: 1.5s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 2.1s, 4s;\n          animation-delay: 2.1s, 4s;\n}\n#logo path:nth-child(9) {\n  stroke-dasharray: 398.1834106445;\n  stroke-dashoffset: 398.1834106445;\n  -webkit-animation-name: line-anim, fill-white;\n          animation-name: line-anim, fill-white;\n  -webkit-animation-duration: 1.5s;\n          animation-duration: 1.5s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 2.4s, 4s;\n          animation-delay: 2.4s, 4s;\n}\n#logo path:nth-child(10) {\n  stroke-dasharray: 542.6750488281;\n  stroke-dashoffset: 542.6750488281;\n  -webkit-animation-name: line-anim, fill-red;\n          animation-name: line-anim, fill-red;\n  -webkit-animation-duration: 1.5s;\n          animation-duration: 1.5s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 2.7s, 4s;\n          animation-delay: 2.7s, 4s;\n}\n#logo path:nth-child(11) {\n  stroke-dasharray: 437.6190185547;\n  stroke-dashoffset: 437.6190185547;\n  -webkit-animation-name: line-anim, fill-orange;\n          animation-name: line-anim, fill-orange;\n  -webkit-animation-duration: 1.5s;\n          animation-duration: 1.5s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 3s, 4s;\n          animation-delay: 3s, 4s;\n}\n#logo path:nth-child(12) {\n  stroke-dasharray: 321.1700439453;\n  stroke-dashoffset: 321.1700439453;\n  -webkit-animation-name: line-anim, fill-orangered;\n          animation-name: line-anim, fill-orangered;\n  -webkit-animation-duration: 1.5s;\n          animation-duration: 1.5s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 3.3s, 4s;\n          animation-delay: 3.3s, 4s;\n}\n@-webkit-keyframes line-anim {\nto {\n    stroke-dashoffset: 0;\n}\n}\n@keyframes line-anim {\nto {\n    stroke-dashoffset: 0;\n}\n}\n@-webkit-keyframes fill-red {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #CC0000;\n}\n}\n@keyframes fill-red {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #CC0000;\n}\n}\n@-webkit-keyframes fill-orange {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: orange;\n}\n}\n@keyframes fill-orange {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: orange;\n}\n}\n@-webkit-keyframes fill-orangered {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: orangered;\n}\n}\n@keyframes fill-orangered {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: orangered;\n}\n}\n@-webkit-keyframes fill-green {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #77B300;\n}\n}\n@keyframes fill-green {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #77B300;\n}\n}\n@-webkit-keyframes fill-blue {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #2A9FD6;\n}\n}\n@keyframes fill-blue {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #2A9FD6;\n}\n}\n@-webkit-keyframes fill-teal {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #20c997;\n}\n}\n@keyframes fill-teal {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #20c997;\n}\n}\n@-webkit-keyframes fill-pink {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #e83e8c;\n}\n}\n@keyframes fill-pink {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #e83e8c;\n}\n}\n@-webkit-keyframes fill-cyan {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #9933CC;\n}\n}\n@keyframes fill-cyan {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #9933CC;\n}\n}\n@-webkit-keyframes fill-white {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: white;\n}\n}\n@keyframes fill-white {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: white;\n}\n}", ""]);
+exports.push([module.i, "#welcome-page {\n  position: relative;\n  background: url(\"/images/1.jpg\");\n  height: 100vh;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n}\n#welcome-svg {\n  min-width: 50vw;\n}\n#buttons {\n  margin-top: 3rem;\n}\n#logo path:nth-child(1) {\n  stroke-dasharray: 334.1294250488;\n  stroke-dashoffset: 334.1294250488;\n  -webkit-animation-name: line-anim, fill-red;\n          animation-name: line-anim, fill-red;\n  -webkit-animation-duration: 0.75s, 3s;\n          animation-duration: 0.75s, 3s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 0s, 3.5s;\n          animation-delay: 0s, 3.5s;\n}\n#logo path:nth-child(2) {\n  stroke-dasharray: 398.1838378906;\n  stroke-dashoffset: 398.1838378906;\n  -webkit-animation-name: line-anim, fill-orange;\n          animation-name: line-anim, fill-orange;\n  -webkit-animation-duration: 0.75s, 3s;\n          animation-duration: 0.75s, 3s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 0.3s, 3.5s;\n          animation-delay: 0.3s, 3.5s;\n}\n#logo path:nth-child(3) {\n  stroke-dasharray: 393.3806152344;\n  stroke-dashoffset: 393.3806152344;\n  -webkit-animation-name: line-anim, fill-orangered;\n          animation-name: line-anim, fill-orangered;\n  -webkit-animation-duration: 0.75s, 3s;\n          animation-duration: 0.75s, 3s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 0.6s, 3.5s;\n          animation-delay: 0.6s, 3.5s;\n}\n#logo path:nth-child(4) {\n  stroke-dasharray: 232.6978607178;\n  stroke-dashoffset: 232.6978607178;\n  -webkit-animation-name: line-anim, fill-green;\n          animation-name: line-anim, fill-green;\n  -webkit-animation-duration: 0.75s, 3s;\n          animation-duration: 0.75s, 3s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 0.9s, 3.5s;\n          animation-delay: 0.9s, 3.5s;\n}\n#logo path:nth-child(5) {\n  stroke-dasharray: 395.8296203613;\n  stroke-dashoffset: 395.8296203613;\n  -webkit-animation-name: line-anim, fill-blue;\n          animation-name: line-anim, fill-blue;\n  -webkit-animation-duration: 0.75s, 3s;\n          animation-duration: 0.75s, 3s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 1.2s, 3.5s;\n          animation-delay: 1.2s, 3.5s;\n}\n#logo path:nth-child(6) {\n  stroke-dasharray: 437.6187133789;\n  stroke-dashoffset: 437.6187133789;\n  -webkit-animation-name: line-anim, fill-teal;\n          animation-name: line-anim, fill-teal;\n  -webkit-animation-duration: 0.75s, 3s;\n          animation-duration: 0.75s, 3s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 1.5s, 3.5s;\n          animation-delay: 1.5s, 3.5s;\n}\n#logo path:nth-child(7) {\n  stroke-dasharray: 404.7785949707;\n  stroke-dashoffset: 404.7785949707;\n  -webkit-animation-name: line-anim, fill-pink;\n          animation-name: line-anim, fill-pink;\n  -webkit-animation-duration: 0.75s, 3s;\n          animation-duration: 0.75s, 3s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 1.8s, 3.5s;\n          animation-delay: 1.8s, 3.5s;\n}\n#logo path:nth-child(8) {\n  stroke-dasharray: 363.0939941406;\n  stroke-dashoffset: 363.0939941406;\n  -webkit-animation-name: line-anim, fill-cyan;\n          animation-name: line-anim, fill-cyan;\n  -webkit-animation-duration: 0.75s, 3s;\n          animation-duration: 0.75s, 3s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 2.1s, 3.5s;\n          animation-delay: 2.1s, 3.5s;\n}\n#logo path:nth-child(9) {\n  stroke-dasharray: 398.1834106445;\n  stroke-dashoffset: 398.1834106445;\n  -webkit-animation-name: line-anim, fill-white;\n          animation-name: line-anim, fill-white;\n  -webkit-animation-duration: 0.75s, 3s;\n          animation-duration: 0.75s, 3s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 2.4s, 3.5s;\n          animation-delay: 2.4s, 3.5s;\n}\n#logo path:nth-child(10) {\n  stroke-dasharray: 542.6750488281;\n  stroke-dashoffset: 542.6750488281;\n  -webkit-animation-name: line-anim, fill-red;\n          animation-name: line-anim, fill-red;\n  -webkit-animation-duration: 0.75s, 3s;\n          animation-duration: 0.75s, 3s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 2.7s, 3.5s;\n          animation-delay: 2.7s, 3.5s;\n}\n#logo path:nth-child(11) {\n  stroke-dasharray: 437.6190185547;\n  stroke-dashoffset: 437.6190185547;\n  -webkit-animation-name: line-anim, fill-orange;\n          animation-name: line-anim, fill-orange;\n  -webkit-animation-duration: 0.75s, 3s;\n          animation-duration: 0.75s, 3s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 3s, 3.5s;\n          animation-delay: 3s, 3.5s;\n}\n#logo path:nth-child(12) {\n  stroke-dasharray: 321.1700439453;\n  stroke-dashoffset: 321.1700439453;\n  -webkit-animation-name: line-anim, fill-orangered;\n          animation-name: line-anim, fill-orangered;\n  -webkit-animation-duration: 0.75s, 3s;\n          animation-duration: 0.75s, 3s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 3.3s, 3.5s;\n          animation-delay: 3.3s, 3.5s;\n}\n@-webkit-keyframes line-anim {\nto {\n    stroke-dashoffset: 0;\n}\n}\n@keyframes line-anim {\nto {\n    stroke-dashoffset: 0;\n}\n}\n@-webkit-keyframes fill-red {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #CC0000;\n}\n}\n@keyframes fill-red {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #CC0000;\n}\n}\n@-webkit-keyframes fill-orange {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: orange;\n}\n}\n@keyframes fill-orange {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: orange;\n}\n}\n@-webkit-keyframes fill-orangered {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: orangered;\n}\n}\n@keyframes fill-orangered {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: orangered;\n}\n}\n@-webkit-keyframes fill-green {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #77B300;\n}\n}\n@keyframes fill-green {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #77B300;\n}\n}\n@-webkit-keyframes fill-blue {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #2A9FD6;\n}\n}\n@keyframes fill-blue {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #2A9FD6;\n}\n}\n@-webkit-keyframes fill-teal {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #20c997;\n}\n}\n@keyframes fill-teal {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #20c997;\n}\n}\n@-webkit-keyframes fill-pink {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #e83e8c;\n}\n}\n@keyframes fill-pink {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #e83e8c;\n}\n}\n@-webkit-keyframes fill-cyan {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #9933CC;\n}\n}\n@keyframes fill-cyan {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #9933CC;\n}\n}\n@-webkit-keyframes fill-white {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: white;\n}\n}\n@keyframes fill-white {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: white;\n}\n}", ""]);
 
 // exports
 
@@ -2874,6 +2913,25 @@ exports = module.exports = __webpack_require__(/*! ../../css-loader/lib/css-base
 
 // module
 exports.push([module.i, ".flash__message{-webkit-box-sizing:border-box;box-sizing:border-box;padding:15px 30px 15px 15px;margin-bottom:10px;border:1px solid transparent;border-radius:4px;background-color:#ccc;position:relative}.flash__message.success{color:#3c763d;background-color:#dff0d8;border-color:#d6e9c6}.flash__message.warning{color:#8a6d3b;background-color:#fcf8e3;border-color:#faebcc}.flash__message.error{color:#a94442;background-color:#f2dede;border-color:#ebccd1}.flash__message.info{color:#37516a;background-color:#f2f5fe;border-color:#dfe3f0}.flash__close-button{-webkit-box-sizing:border-box;box-sizing:border-box;position:absolute;top:0;right:0;color:inherit;-webkit-appearance:none;-moz-appearance:none;appearance:none;background-color:transparent;background:none;border:none;cursor:pointer;font-size:18px;line-height:10px;margin:0;padding:8px}.flash__close-button:active,.flash__close-button:focus{outline:none}", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Arrow.vue?vue&type=style&index=0&lang=css&":
+/*!***********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Arrow.vue?vue&type=style&index=0&lang=css& ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.st0{\r\n  fill:none;\n}\n.st1{\r\n  fill:#038A51;stroke:#058B38;stroke-width:0.2;stroke-miterlimit:10;\n}\r\n\r\n", ""]);
 
 // exports
 
@@ -4329,6 +4387,36 @@ if(false) {}
 
 /***/ }),
 
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Arrow.vue?vue&type=style&index=0&lang=css&":
+/*!***************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Arrow.vue?vue&type=style&index=0&lang=css& ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--6-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--6-2!../../../node_modules/vue-loader/lib??vue-loader-options!./Arrow.vue?vue&type=style&index=0&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Arrow.vue?vue&type=style&index=0&lang=css&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "./node_modules/style-loader/lib/addStyles.js":
 /*!****************************************************!*\
   !*** ./node_modules/style-loader/lib/addStyles.js ***!
@@ -4977,7 +5065,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "container my-5" }, [
-      _c("h1", { staticClass: "display-4" }, [_vm._v("About")]),
+      _c("h1", { staticClass: "display-4 text-center" }, [_vm._v("About")]),
       _vm._v(" "),
       _c("section", [
         _c("h4", { staticClass: "mt-5" }, [_vm._v("The App")]),
@@ -5093,6 +5181,64 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [_c("Navbar"), _vm._v(" "), _c("router-view")], 1)
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Arrow.vue?vue&type=template&id=d5a07fa4&":
+/*!********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Arrow.vue?vue&type=template&id=d5a07fa4& ***!
+  \********************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "svg",
+    {
+      staticClass: "arrow",
+      staticStyle: { "enable-background": "new 0 0 6.8 8.5" },
+      attrs: {
+        version: "1.1",
+        id: "Layer_1",
+        xmlns: "http://www.w3.org/2000/svg",
+        "xmlns:xlink": "http://www.w3.org/1999/xlink",
+        x: "0px",
+        y: "0px",
+        height: "50px",
+        weight: "50px",
+        viewBox: "0 0 6.8 8.5",
+        "xml:space": "preserve"
+      }
+    },
+    [
+      _c("rect", {
+        staticClass: "st0",
+        attrs: { width: "6.8", height: "6.8" }
+      }),
+      _vm._v(" "),
+      _c("g", [
+        _c("path", {
+          staticClass: "st1",
+          attrs: {
+            d:
+              "M2.3,1.1v2.3c0,0,0,0.1-0.1,0.1h-1l2.3,2.3l2.3-2.3h-1c0,0-0.1,0-0.1-0.1V1.1L3.5,2.2l0,0c0,0-0.1,0-0.1,0l0,0\n      L2.3,1.1C2.3,1.1,2.3,1.1,2.3,1.1z M2.1,3.3V0.9h0c0,0,0,0,0-0.1c0,0,0.1,0,0.1,0l0,0l1.2,1.2l1.2-1.2c0,0,0,0,0.1,0\n      c0,0,0.1,0,0.1,0.1v2.4h1.2v0c0,0,0,0,0.1,0c0,0,0,0.1,0,0.1l0,0L3.5,5.9l0,0c0,0-0.1,0-0.1,0l0,0L0.9,3.5c0,0,0,0,0-0.1\n      c0,0,0-0.1,0.1-0.1L2.1,3.3C2.1,3.3,2.1,3.3,2.1,3.3z"
+          }
+        })
+      ])
+    ]
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -5904,19 +6050,35 @@ var render = function() {
       [
         _c("Stage", { attrs: { stage: 1 } }),
         _vm._v(" "),
+        _c("Arrow"),
+        _vm._v(" "),
         _c("Stage", { attrs: { stage: 2 } }),
+        _vm._v(" "),
+        _c("Arrow"),
         _vm._v(" "),
         _c("Stage", { attrs: { stage: 3 } }),
         _vm._v(" "),
+        _c("Arrow"),
+        _vm._v(" "),
         _c("Stage", { attrs: { stage: 4 } }),
+        _vm._v(" "),
+        _c("Arrow"),
         _vm._v(" "),
         _c("Stage", { attrs: { stage: 5 } }),
         _vm._v(" "),
+        _c("Arrow"),
+        _vm._v(" "),
         _c("Stage", { attrs: { stage: 6 } }),
+        _vm._v(" "),
+        _c("Arrow"),
         _vm._v(" "),
         _c("Stage", { attrs: { stage: 7 } }),
         _vm._v(" "),
+        _c("Arrow"),
+        _vm._v(" "),
         _c("Stage", { attrs: { stage: 8 } }),
+        _vm._v(" "),
+        _c("Arrow"),
         _vm._v(" "),
         _c("Stage", { attrs: { stage: 9 } }),
         _vm._v(" "),
@@ -23378,6 +23540,93 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_App_vue_vue_type_template_id_332fccf4___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_App_vue_vue_type_template_id_332fccf4___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/Arrow.vue":
+/*!*******************************************!*\
+  !*** ./resources/js/components/Arrow.vue ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Arrow_vue_vue_type_template_id_d5a07fa4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Arrow.vue?vue&type=template&id=d5a07fa4& */ "./resources/js/components/Arrow.vue?vue&type=template&id=d5a07fa4&");
+/* harmony import */ var _Arrow_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Arrow.vue?vue&type=script&lang=js& */ "./resources/js/components/Arrow.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _Arrow_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Arrow.vue?vue&type=style&index=0&lang=css& */ "./resources/js/components/Arrow.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _Arrow_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Arrow_vue_vue_type_template_id_d5a07fa4___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Arrow_vue_vue_type_template_id_d5a07fa4___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/Arrow.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/Arrow.vue?vue&type=script&lang=js&":
+/*!********************************************************************!*\
+  !*** ./resources/js/components/Arrow.vue?vue&type=script&lang=js& ***!
+  \********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Arrow_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./Arrow.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Arrow.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Arrow_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/Arrow.vue?vue&type=style&index=0&lang=css&":
+/*!****************************************************************************!*\
+  !*** ./resources/js/components/Arrow.vue?vue&type=style&index=0&lang=css& ***!
+  \****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Arrow_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader!../../../node_modules/css-loader??ref--6-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--6-2!../../../node_modules/vue-loader/lib??vue-loader-options!./Arrow.vue?vue&type=style&index=0&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Arrow.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Arrow_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Arrow_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Arrow_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Arrow_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Arrow_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ "./resources/js/components/Arrow.vue?vue&type=template&id=d5a07fa4&":
+/*!**************************************************************************!*\
+  !*** ./resources/js/components/Arrow.vue?vue&type=template&id=d5a07fa4& ***!
+  \**************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Arrow_vue_vue_type_template_id_d5a07fa4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./Arrow.vue?vue&type=template&id=d5a07fa4& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Arrow.vue?vue&type=template&id=d5a07fa4&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Arrow_vue_vue_type_template_id_d5a07fa4___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Arrow_vue_vue_type_template_id_d5a07fa4___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

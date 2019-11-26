@@ -77,133 +77,124 @@ export default {
   margin-top: 3rem;
 }
 
-#logo {
-  // position: relative;
-  // top: 42vh;
-  // left: 25%;
-}
-
 #logo path:nth-child(1){
   stroke-dasharray: 334.1294250488281;
   stroke-dashoffset: 334.1294250488281;
   animation-name: line-anim, fill-red;
-  animation-duration: 1.5s;
+  animation-duration: 0.75s, 3s;
   animation-fill-mode: forwards;
   animation-timing-function: ease;
-  animation-delay: 0s, 4s;
-
-  // animation: line-anim 1.5s ease forwards;
-  // animation: fill-red 0.5s ease forwards 5s;
+  animation-delay: 0s, 3.5s;
 }
 
 #logo path:nth-child(2){
   stroke-dasharray: 398.183837890625;
   stroke-dashoffset: 398.183837890625;
   animation-name: line-anim, fill-orange;
-  animation-duration: 1.5s;
+  animation-duration: 0.75s, 3s;
   animation-fill-mode: forwards;
   animation-timing-function: ease;
-  animation-delay: 0.3s, 4s;
+  animation-delay: 0.3s, 3.5s;
 }
 
 #logo path:nth-child(3){
   stroke-dasharray: 393.380615234375;
   stroke-dashoffset: 393.380615234375;
   animation-name: line-anim, fill-orangered;
-  animation-duration: 1.5s;
+  animation-duration: 0.75s, 3s;
   animation-fill-mode: forwards;
   animation-timing-function: ease;
-  animation-delay: 0.6s, 4s;
+  animation-delay: 0.6s, 3.5s;
 }
 
 #logo path:nth-child(4){
   stroke-dasharray: 232.69786071777344;
   stroke-dashoffset: 232.69786071777344;
   animation-name: line-anim, fill-green;
-  animation-duration: 1.5s;
+  animation-duration: 0.75s, 3s;
   animation-fill-mode: forwards;
   animation-timing-function: ease;
-  animation-delay: 0.9s, 4s;
+  animation-delay: 0.9s, 3.5s;
 }
 
 #logo path:nth-child(5){
   stroke-dasharray: 395.8296203613281;
   stroke-dashoffset: 395.8296203613281;
   animation-name: line-anim, fill-blue;
-  animation-duration: 1.5s;
+  animation-duration: 0.75s, 3s;
   animation-fill-mode: forwards;
   animation-timing-function: ease;
-  animation-delay: 1.2s, 4s;
+  animation-delay: 1.2s, 3.5s;
 }
 
 #logo path:nth-child(6){
   stroke-dasharray: 437.61871337890625;
   stroke-dashoffset: 437.61871337890625;
   animation-name: line-anim, fill-teal;
-  animation-duration: 1.5s;
+  animation-duration: 0.75s, 3s;
   animation-fill-mode: forwards;
   animation-timing-function: ease;
-  animation-delay: 1.5s, 4s;
+  animation-delay: 1.5s, 3.5s;
 }
 
 #logo path:nth-child(7){
   stroke-dasharray: 404.7785949707031;
   stroke-dashoffset: 404.7785949707031;
   animation-name: line-anim, fill-pink;
-  animation-duration: 1.5s;
+  animation-duration: 0.75s, 3s;
   animation-fill-mode: forwards;
   animation-timing-function: ease;
-  animation-delay: 1.8s, 4s;
+  animation-delay: 1.8s, 3.5s;
 }
 
 #logo path:nth-child(8){
   stroke-dasharray: 363.093994140625;
   stroke-dashoffset: 363.093994140625;
   animation-name: line-anim, fill-cyan;
-  animation-duration: 1.5s;
+  animation-duration: 0.75s, 3s;
   animation-fill-mode: forwards;
   animation-timing-function: ease;
-  animation-delay: 2.1s, 4s;
+  animation-delay: 2.1s, 3.5s;
 }
 
 #logo path:nth-child(9){
   stroke-dasharray: 398.18341064453125;
   stroke-dashoffset: 398.18341064453125;
   animation-name: line-anim, fill-white;
-  animation-duration: 1.5s;
+  animation-duration: 0.75s, 3s;
   animation-fill-mode: forwards;
   animation-timing-function: ease;
-  animation-delay: 2.4s, 4s;
+  animation-delay: 2.4s, 3.5s;
 }
 
 #logo path:nth-child(10){
   stroke-dasharray: 542.675048828125;
   stroke-dashoffset: 542.675048828125;
   animation-name: line-anim, fill-red;
-  animation-duration: 1.5s;
+  animation-duration: 0.75s, 3s;
   animation-fill-mode: forwards;
   animation-timing-function: ease;
-  animation-delay: 2.7s, 4s;
+  animation-delay: 2.7s, 3.5s;
 }
 
 #logo path:nth-child(11){
   stroke-dasharray: 437.6190185546875;
   stroke-dashoffset: 437.6190185546875;
   animation-name: line-anim, fill-orange;
-  animation-duration: 1.5s;
+  animation-duration: 0.75s, 3s;
   animation-fill-mode: forwards;
   animation-timing-function: ease;
-  animation-delay: 3s, 4s;
+  animation-delay: 3s, 3.5s;
 }
 
 #logo path:nth-child(12){
   stroke-dasharray: 321.1700439453125;
   stroke-dashoffset: 321.1700439453125;
   animation-name: line-anim, fill-orangered;
-  animation-duration: 1.5s;
+  animation-duration: 0.75s, 3s;
   animation-fill-mode: forwards;
   animation-timing-function: ease;
-  animation-delay: 3.3s, 4s;
+  animation-delay: 3.3s, 3.5s;
 }
 
 @keyframes line-anim{

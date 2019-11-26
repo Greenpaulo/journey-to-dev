@@ -32,15 +32,23 @@
     </section>
 
     <section id="roadmap" class="mt-5 pt-5">
-      
-      <Stage :stage="1"></Stage> 
-      <Stage :stage="2"></Stage> 
-      <Stage :stage="3"></Stage> 
-      <Stage :stage="4"></Stage> 
-      <Stage :stage="5"></Stage> 
-      <Stage :stage="6"></Stage> 
-      <Stage :stage="7"></Stage> 
-      <Stage :stage="8"></Stage> 
+
+      <Stage :stage="1"></Stage>
+      <Arrow/>
+      <Stage :stage="2"></Stage>
+      <Arrow/>
+      <Stage :stage="3"></Stage>
+      <Arrow/> 
+      <Stage :stage="4"></Stage>
+      <Arrow/> 
+      <Stage :stage="5"></Stage>
+      <Arrow/> 
+      <Stage :stage="6"></Stage>
+      <Arrow/>
+      <Stage :stage="7"></Stage>
+      <Arrow/> 
+      <Stage :stage="8"></Stage>
+      <Arrow/> 
       <Stage :stage="9"></Stage>
 
       <h3 class="my-4 py-4">Total Hours: {{calcTotalHours}}</h3>
@@ -55,6 +63,7 @@
 <script>
 import CourseList from './CourseList';
 import Stage from './Stage';
+import Arrow from './Arrow';
 import { mapGetters, mapActions } from 'vuex';
 
 export default {
@@ -125,7 +134,8 @@ export default {
   },
   components: {
     CourseList,
-    Stage
+    Stage,
+    Arrow
   },
 };
 

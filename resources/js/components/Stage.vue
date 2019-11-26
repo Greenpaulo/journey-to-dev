@@ -1,6 +1,6 @@
 <template>
+  
   <section class="stage my-5">
-      
       <div class="stage-heading">
         <h2 class="stage-number mb-4 pr-5">Stage {{stage}}</h2>
         <h5 class="stage-hrs">Total Hrs: {{totalHours}}</h5>
@@ -111,6 +111,8 @@ export default {
   min-height:240px;
   min-width: 260px;
   max-width: 260px;
+  border-radius: 10px;
+  box-shadow: 1rem 0 3rem #000;
 
   .card-body > h5 {
     font-size: 1.4rem;
@@ -122,7 +124,7 @@ h5.card-title > a {
   text-decoration: none;
 
   &:hover {
-    font-weight: bolder;
+    color: darken(white, 20%);
   }
 
 }

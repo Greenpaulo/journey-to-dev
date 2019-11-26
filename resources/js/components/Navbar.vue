@@ -80,8 +80,12 @@ import { mapActions, mapGetters } from 'vuex';
   color: white;
 }
 
+.nav-item {
+  padding: 0 0.8rem;
+}
+
 .nav-link {
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: white !important;
   transition: all 0.5s ease;
 }

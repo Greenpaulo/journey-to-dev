@@ -1,6 +1,6 @@
 <template>
   <div class="container my-5">
-    <h1 class="display-4">About</h1>
+    <h1 class="display-4 text-center">About</h1>
     
     <section>
       <h4 class="mt-5">The App</h4>
