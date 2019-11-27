@@ -5,7 +5,14 @@
         <div class="inner" :class="[
           `bg-stage${stage}`]">
           <h4 class="mb-3">Tip</h4>
-            <p>Don't feel you need to master HTML & CSS before moving onto Stage 2 as you'll be doing lots of HTML & CSS from now on!</p>
+          <p>Don't feel you need to master HTML & CSS before moving onto Stage 2 as you'll be doing lots of HTML & CSS from now on!</p>
+          <svg id="tick" version="1.1" focusable="false" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+          x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" height="50px" width="50px">
+            <path class="st0" d="M256,8C119,8,8,119,8,256s111,248,248,248s248-111,248-248S393,8,256,8z M256,56c110.5,0,200,89.5,200,200
+              c0,110.5-89.5,200-200,200c-110.5,0-200-89.5-200-200C56,145.5,145.5,56,256,56 M396.2,186.3l-22.5-22.7c-4.7-4.7-12.3-4.7-17-0.1
+              L215.3,303.7l-59.8-60.3c-4.7-4.7-12.3-4.7-17-0.1l-22.7,22.5c-4.7,4.7-4.7,12.3-0.1,17l90.8,91.5c4.7,4.7,12.3,4.7,17,0.1
+              l172.6-171.2C400.8,198.6,400.9,191,396.2,186.3L396.2,186.3z"/>
+          </svg>
         </div>
         <div class="stage-heading-info">
           <h2 class="stage-number">Stage {{stage}}</h2>
@@ -152,6 +159,41 @@ export default {
 .inner:hover {
   clip-path: circle(75%)
 }
+
+
+#tick .st0 {
+  fill: none;
+  stroke:#FFFFFF;
+  stroke-width:15;
+  stroke-miterlimit:10;
+  stroke-dasharray: 3629.587890625;
+  stroke-dashoffset: 3629.587890625;
+  
+}
+
+.inner:hover .st0 {
+  animation-name: line-anim, fill-white;
+  animation-duration: 1.5s, 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+  animation-delay: 0.5s, 0.5s;
+}
+
+@keyframes line-anim {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fill-white {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: white;
+  }
+}
+              
 
 .stage-courses {
   display: flex;
