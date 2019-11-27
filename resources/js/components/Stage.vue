@@ -2,8 +2,15 @@
   
   <section class="stage my-5">
       <div class="stage-heading">
-        <h2 class="stage-number mb-4 pr-5">Stage {{stage}}</h2>
-        <h5 class="stage-hrs">Total Hrs: {{totalHours}}</h5>
+        <div class="inner" :class="[
+          `bg-stage${stage}`]">
+          <h4 class="mb-3">Tip</h4>
+            <p>Don't feel you need to master HTML & CSS before moving onto Stage 2 as you'll be doing lots of HTML & CSS from now on!</p>
+        </div>
+        <div class="stage-heading-info">
+          <h2 class="stage-number">Stage {{stage}}</h2>
+          <h5 class="stage-hrs">Total Hrs: {{totalHours}}</h5>
+        </div>
       </div>
         
       <div class="stage-courses ml-3"> 
@@ -85,21 +92,65 @@ export default {
 
 <style lang="scss" scoped>
 
+@import 'resources/sass/variables';
+@import 'resources/sass/colors';
+
+
 .stage {
   display: flex;
 }
 
 .stage-heading {
-  padding: 2rem 2rem 2rem 0;
-  align-self: center;
+  // padding: 2rem 2rem 2rem 0;
+  // align-self: center;
+  position: relative;
+  // height: 100%;
+  // border-bottom: $stage1 2px solid;
+  // border-right: $stage1 2px solid;
+  border-radius: 10px;
+  // width: 30%;
+  // height: 250px;
+  height: 290px;
+  min-width: 260px;
+  max-width: 260px;
+  text-align: center;
+  // box-shadow: 1rem 0 3rem #000;
+
 
   h2 {
     font-size: 2.8rem;
+    // padding: 3rem 2rem 0 2rem;
   }
   
   h5 {
     font-size: 1.2rem;
+    // padding-left: 1rem;
   }
+}
+
+.stage-heading-info {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner {
+  color: white;
+  font-size: 1.1rem;
+  padding: 1.5rem;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  text-align: center;
+  clip-path: circle(20% at 0% 0%);
+  transition: clip-path 0.5s ease-in-out;
+}
+
+.inner:hover {
+  clip-path: circle(75%)
 }
 
 .stage-courses {

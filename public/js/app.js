@@ -2423,6 +2423,13 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Stage",
@@ -2855,7 +2862,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".stage[data-v-3fd38ca3] {\n  display: flex;\n}\n.stage-heading[data-v-3fd38ca3] {\n  padding: 2rem 2rem 2rem 0;\n  align-self: center;\n}\n.stage-heading h2[data-v-3fd38ca3] {\n  font-size: 2.8rem;\n}\n.stage-heading h5[data-v-3fd38ca3] {\n  font-size: 1.2rem;\n}\n.stage-courses[data-v-3fd38ca3] {\n  display: flex;\n  flex-wrap: wrap;\n}\n.stage-courses > .stage-course[data-v-3fd38ca3] {\n  min-height: 240px;\n  min-width: 260px;\n  max-width: 260px;\n  border-radius: 10px;\n  box-shadow: 1rem 0 3rem #000;\n}\n.stage-courses > .stage-course .card-body > h5[data-v-3fd38ca3] {\n  font-size: 1.4rem;\n}\nh5.card-title > a[data-v-3fd38ca3] {\n  color: white;\n  text-decoration: none;\n}\nh5.card-title > a[data-v-3fd38ca3]:hover {\n  color: #cccccc;\n}\n.bg-stage9 a[data-v-3fd38ca3] {\n  color: black !important;\n}\n.course-completed[data-v-3fd38ca3] {\n  background-color: silver;\n  opacity: 0.8;\n}\n.card-footer[data-v-3fd38ca3] {\n  display: flex;\n  justify-content: space-between;\n}\n.left-arrow[data-v-3fd38ca3], .right-arrow[data-v-3fd38ca3] {\n  cursor: pointer;\n}\n.delete-btn[data-v-3fd38ca3] {\n  cursor: pointer;\n}", ""]);
+exports.push([module.i, ".bg-stage1[data-v-3fd38ca3] {\n  background-color: #CC0000;\n}\n.bg-stage2[data-v-3fd38ca3] {\n  background-color: orange;\n}\n.bg-stage3[data-v-3fd38ca3] {\n  background-color: orangered;\n}\n.bg-stage4[data-v-3fd38ca3] {\n  background-color: #77B300;\n}\n.bg-stage5[data-v-3fd38ca3] {\n  background-color: #2A9FD6;\n}\n.bg-stage6[data-v-3fd38ca3] {\n  background-color: #20c997;\n}\n.bg-stage7[data-v-3fd38ca3] {\n  background-color: #e83e8c;\n}\n.bg-stage8[data-v-3fd38ca3] {\n  background-color: #9933CC;\n}\n.bg-stage9[data-v-3fd38ca3] {\n  background-color: #fff;\n  color: black !important;\n}\n.border-stage1[data-v-3fd38ca3] {\n  border-top: 8px solid #CC0000;\n  border-right: 8px solid #CC0000;\n}\n.border-stage2[data-v-3fd38ca3] {\n  border-top: 8px solid orange;\n  border-right: 8px solid orange;\n}\n.border-stage3[data-v-3fd38ca3] {\n  border-top: 8px solid orangered;\n  border-right: 8px solid orangered;\n}\n.border-stage4[data-v-3fd38ca3] {\n  border-top: 8px solid #77B300;\n  border-right: 8px solid #77B300;\n}\n.border-stage5[data-v-3fd38ca3] {\n  border-top: 8px solid #2A9FD6;\n  border-right: 8px solid #2A9FD6;\n}\n.border-stage6[data-v-3fd38ca3] {\n  border-top: 8px solid #20c997;\n  border-right: 8px solid #20c997;\n}\n.border-stage7[data-v-3fd38ca3] {\n  border-top: 8px solid #e83e8c;\n  border-right: 8px solid #e83e8c;\n}\n.border-stage8[data-v-3fd38ca3] {\n  border-top: 8px solid #9933CC;\n  border-right: 8px solid #9933CC;\n}\n.border-stage9[data-v-3fd38ca3] {\n  border-top: 8px solid #fff;\n  border-right: 8px solid #ffff;\n}\n.text-orangered[data-v-3fd38ca3] {\n  color: orangered !important;\n}\n.text-orange[data-v-3fd38ca3] {\n  color: orange !important;\n}\n.text-purple[data-v-3fd38ca3] {\n  color: #6f42c1 !important;\n}\n.text-teal[data-v-3fd38ca3] {\n  color: #20c997 !important;\n}\n.text-pink[data-v-3fd38ca3] {\n  color: #e83e8c !important;\n}\n.stage[data-v-3fd38ca3] {\n  display: flex;\n}\n.stage-heading[data-v-3fd38ca3] {\n  position: relative;\n  border-radius: 10px;\n  height: 290px;\n  min-width: 260px;\n  max-width: 260px;\n  text-align: center;\n}\n.stage-heading h2[data-v-3fd38ca3] {\n  font-size: 2.8rem;\n}\n.stage-heading h5[data-v-3fd38ca3] {\n  font-size: 1.2rem;\n}\n.stage-heading-info[data-v-3fd38ca3] {\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n}\n.inner[data-v-3fd38ca3] {\n  color: white;\n  font-size: 1.1rem;\n  padding: 1.5rem;\n  border-radius: 10px;\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  text-align: center;\n  -webkit-clip-path: circle(20% at 0% 0%);\n          clip-path: circle(20% at 0% 0%);\n  transition: -webkit-clip-path 0.5s ease-in-out;\n  transition: clip-path 0.5s ease-in-out;\n  transition: clip-path 0.5s ease-in-out, -webkit-clip-path 0.5s ease-in-out;\n}\n.inner[data-v-3fd38ca3]:hover {\n  -webkit-clip-path: circle(75%);\n          clip-path: circle(75%);\n}\n.stage-courses[data-v-3fd38ca3] {\n  display: flex;\n  flex-wrap: wrap;\n}\n.stage-courses > .stage-course[data-v-3fd38ca3] {\n  min-height: 240px;\n  min-width: 260px;\n  max-width: 260px;\n  border-radius: 10px;\n  box-shadow: 1rem 0 3rem #000;\n}\n.stage-courses > .stage-course .card-body > h5[data-v-3fd38ca3] {\n  font-size: 1.4rem;\n}\nh5.card-title > a[data-v-3fd38ca3] {\n  color: white;\n  text-decoration: none;\n}\nh5.card-title > a[data-v-3fd38ca3]:hover {\n  color: #cccccc;\n}\n.bg-stage9 a[data-v-3fd38ca3] {\n  color: black !important;\n}\n.course-completed[data-v-3fd38ca3] {\n  background-color: silver;\n  opacity: 0.8;\n}\n.card-footer[data-v-3fd38ca3] {\n  display: flex;\n  justify-content: space-between;\n}\n.left-arrow[data-v-3fd38ca3], .right-arrow[data-v-3fd38ca3] {\n  cursor: pointer;\n}\n.delete-btn[data-v-3fd38ca3] {\n  cursor: pointer;\n}", ""]);
 
 // exports
 
@@ -6120,12 +6127,24 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("section", { staticClass: "stage my-5" }, [
     _c("div", { staticClass: "stage-heading" }, [
-      _c("h2", { staticClass: "stage-number mb-4 pr-5" }, [
-        _vm._v("Stage " + _vm._s(_vm.stage))
+      _c("div", { staticClass: "inner", class: ["bg-stage" + _vm.stage] }, [
+        _c("h4", { staticClass: "mb-3" }, [_vm._v("Tip")]),
+        _vm._v(" "),
+        _c("p", [
+          _vm._v(
+            "Don't feel you need to master HTML & CSS before moving onto Stage 2 as you'll be doing lots of HTML & CSS from now on!"
+          )
+        ])
       ]),
       _vm._v(" "),
-      _c("h5", { staticClass: "stage-hrs" }, [
-        _vm._v("Total Hrs: " + _vm._s(_vm.totalHours))
+      _c("div", { staticClass: "stage-heading-info" }, [
+        _c("h2", { staticClass: "stage-number" }, [
+          _vm._v("Stage " + _vm._s(_vm.stage))
+        ]),
+        _vm._v(" "),
+        _c("h5", { staticClass: "stage-hrs" }, [
+          _vm._v("Total Hrs: " + _vm._s(_vm.totalHours))
+        ])
       ])
     ]),
     _vm._v(" "),
