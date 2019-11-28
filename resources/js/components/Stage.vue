@@ -108,7 +108,7 @@ export default {
       const courses = this.currentStageRoadmap;
       let total = 0;
       courses.forEach(course => {
-        if (course.completed === 0){
+        if (course.completed == false){
           total += course.hours
         }
       })

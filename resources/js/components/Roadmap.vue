@@ -95,7 +95,7 @@ export default {
 
     initialLoad();
 
-    // Animate the stage selector buttons with GSAP
+    // // Animate the stage selector buttons with GSAP
     // const tl = gsap.timeline({});
     
     // tl.add('drop')

@@ -2309,7 +2309,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       ;
     };
 
-    initialLoad(); // Animate the stage selector buttons with GSAP
+    initialLoad(); // // Animate the stage selector buttons with GSAP
     // const tl = gsap.timeline({});
     // tl.add('drop')
     // tl.from('.select-links', { y: -200, duration: 1,  ease: "bounce.out",stagger: 0.2}, 'drop')
@@ -2508,7 +2508,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       var courses = this.currentStageRoadmap;
       var total = 0;
       courses.forEach(function (course) {
-        if (course.completed === 0) {
+        if (course.completed == false) {
           total += course.hours;
         }
       });
