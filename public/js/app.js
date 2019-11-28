@@ -2462,17 +2462,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Stage",
@@ -2494,19 +2483,57 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         }
       });
       return total;
+    },
+    // Get the tip for each stage
+    getStageTip: function getStageTip() {
+      switch (this.stage) {
+        case 1:
+          return "Don't feel you need to master HTML & CSS before moving onto Stage 2 as you'll get lots of practice in every stage!";
+
+        case 2:
+          return "CSS Frameworks are very useful but don't become over-reliant on them.";
+
+        case 3:
+          return "JS is very important! Make sure you have a good grasp of vanilla JS before moving onto Stage 4.";
+
+        case 4:
+          return "Try to focus on one framework. Try them all, but focus on one.";
+
+        case 5:
+          return "You only really need one server-side language to start off. Resist the temptation to learn too many!";
+
+        case 6:
+          return "Make sure you learn an SQL database and a no-SQL database.";
+
+        case 7:
+          return "Build an API with your framework and use it as the back-end for a CRUD application!";
+
+        case 8:
+          return "Git and Github are great ways to save and share your projects. Start using git in your personal projects.";
+
+        case 9:
+          return "Netlify is best for static sites, Heroku is best for full stack applications.";
+
+        default:
+          break;
+      }
     }
   }),
   created: function created() {
     var _this = this;
 
     // Get the roadmap by stage only after the initial data has been loaded
-    if (this.courseList.length === 0) {
-      setTimeout(function () {
+    var waitForInitialDataLoad = function waitForInitialDataLoad() {
+      if (_this.courseList.length === 0) {
+        setTimeout(function () {
+          waitForInitialDataLoad();
+        }, 500);
+      } else {
         _this.callGetByStage(_this.stage);
-      }, 1000);
-    } else {
-      this.callGetByStage(this.stage);
-    }
+      }
+    };
+
+    waitForInitialDataLoad();
   },
   methods: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapActions"])(['deleteCourseFromRoadmap', 'moveCourse', 'toggleCourseCompleted']), {
     callGetByStage: function callGetByStage(stage) {
@@ -2913,7 +2940,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".bg-stage1[data-v-3fd38ca3] {\n  background-color: #CC0000;\n}\n.bg-stage2[data-v-3fd38ca3] {\n  background-color: orange;\n}\n.bg-stage3[data-v-3fd38ca3] {\n  background-color: orangered;\n}\n.bg-stage4[data-v-3fd38ca3] {\n  background-color: #77B300;\n}\n.bg-stage5[data-v-3fd38ca3] {\n  background-color: #2A9FD6;\n}\n.bg-stage6[data-v-3fd38ca3] {\n  background-color: #20c997;\n}\n.bg-stage7[data-v-3fd38ca3] {\n  background-color: #e83e8c;\n}\n.bg-stage8[data-v-3fd38ca3] {\n  background-color: #9933CC;\n}\n.bg-stage9[data-v-3fd38ca3] {\n  background-color: #fff;\n  color: black !important;\n}\n.border-stage1[data-v-3fd38ca3] {\n  border-top: 8px solid #CC0000;\n  border-right: 8px solid #CC0000;\n}\n.border-stage2[data-v-3fd38ca3] {\n  border-top: 8px solid orange;\n  border-right: 8px solid orange;\n}\n.border-stage3[data-v-3fd38ca3] {\n  border-top: 8px solid orangered;\n  border-right: 8px solid orangered;\n}\n.border-stage4[data-v-3fd38ca3] {\n  border-top: 8px solid #77B300;\n  border-right: 8px solid #77B300;\n}\n.border-stage5[data-v-3fd38ca3] {\n  border-top: 8px solid #2A9FD6;\n  border-right: 8px solid #2A9FD6;\n}\n.border-stage6[data-v-3fd38ca3] {\n  border-top: 8px solid #20c997;\n  border-right: 8px solid #20c997;\n}\n.border-stage7[data-v-3fd38ca3] {\n  border-top: 8px solid #e83e8c;\n  border-right: 8px solid #e83e8c;\n}\n.border-stage8[data-v-3fd38ca3] {\n  border-top: 8px solid #9933CC;\n  border-right: 8px solid #9933CC;\n}\n.border-stage9[data-v-3fd38ca3] {\n  border-top: 8px solid #fff;\n  border-right: 8px solid #ffff;\n}\n.text-orangered[data-v-3fd38ca3] {\n  color: orangered !important;\n}\n.text-orange[data-v-3fd38ca3] {\n  color: orange !important;\n}\n.text-purple[data-v-3fd38ca3] {\n  color: #6f42c1 !important;\n}\n.text-teal[data-v-3fd38ca3] {\n  color: #20c997 !important;\n}\n.text-pink[data-v-3fd38ca3] {\n  color: #e83e8c !important;\n}\n@-webkit-keyframes hue-data-v-3fd38ca3 {\nfrom {\n    -webkit-filter: hue-rotate(0deg);\n            filter: hue-rotate(0deg);\n}\nto {\n    -webkit-filter: hue-rotate(-360deg);\n            filter: hue-rotate(-360deg);\n}\n}\n@keyframes hue-data-v-3fd38ca3 {\nfrom {\n    -webkit-filter: hue-rotate(0deg);\n            filter: hue-rotate(0deg);\n}\nto {\n    -webkit-filter: hue-rotate(-360deg);\n            filter: hue-rotate(-360deg);\n}\n}\n@-webkit-keyframes bg-animation-data-v-3fd38ca3 {\n0% {\n    background-position: left;\n}\n100% {\n    background-position: right;\n}\n}\n@keyframes bg-animation-data-v-3fd38ca3 {\n0% {\n    background-position: left;\n}\n100% {\n    background-position: right;\n}\n}\n@-webkit-keyframes line-anim-data-v-3fd38ca3 {\nto {\n    stroke-dashoffset: 0;\n}\n}\n@keyframes line-anim-data-v-3fd38ca3 {\nto {\n    stroke-dashoffset: 0;\n}\n}\n@-webkit-keyframes fill-red-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: red;\n}\n}\n@keyframes fill-red-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: red;\n}\n}\n@-webkit-keyframes fill-orange-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ffb733;\n}\n}\n@keyframes fill-orange-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ffb733;\n}\n}\n@-webkit-keyframes fill-orangered-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ff6a33;\n}\n}\n@keyframes fill-orangered-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ff6a33;\n}\n}\n@-webkit-keyframes fill-green-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #99e600;\n}\n}\n@keyframes fill-green-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #99e600;\n}\n}\n@-webkit-keyframes fill-blue-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #55b2de;\n}\n}\n@keyframes fill-blue-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #55b2de;\n}\n}\n@-webkit-keyframes fill-teal-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #3ce0af;\n}\n}\n@keyframes fill-teal-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #3ce0af;\n}\n}\n@-webkit-keyframes fill-pink-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ed6ca7;\n}\n}\n@keyframes fill-pink-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ed6ca7;\n}\n}\n@-webkit-keyframes fill-cyan-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ad5cd6;\n}\n}\n@keyframes fill-cyan-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ad5cd6;\n}\n}\n@-webkit-keyframes fill-white-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: white;\n}\n}\n@keyframes fill-white-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: white;\n}\n}\n@-webkit-keyframes fill-black-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: black;\n}\n}\n@keyframes fill-black-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: black;\n}\n}\n.stage[data-v-3fd38ca3] {\n  display: flex;\n}\n.stage-heading[data-v-3fd38ca3] {\n  position: relative;\n  border-radius: 10px;\n  height: 290px;\n  min-width: 260px;\n  max-width: 260px;\n  text-align: center;\n}\n.stage-heading h2[data-v-3fd38ca3] {\n  font-size: 2.8rem;\n}\n.stage-heading h5[data-v-3fd38ca3] {\n  font-size: 1.2rem;\n}\n.stage-heading-info[data-v-3fd38ca3] {\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n}\n.inner[data-v-3fd38ca3] {\n  color: white;\n  font-size: 1.1rem;\n  border-radius: 10px;\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  text-align: center;\n  -webkit-clip-path: circle(20% at 0% 0%);\n          clip-path: circle(20% at 0% 0%);\n  transition: -webkit-clip-path 0.5s ease-in-out;\n  transition: clip-path 0.5s ease-in-out;\n  transition: clip-path 0.5s ease-in-out, -webkit-clip-path 0.5s ease-in-out;\n}\n.inner p[data-v-3fd38ca3] {\n  margin-bottom: 0.5rem;\n  padding: 1rem;\n}\n.inner .inner-header[data-v-3fd38ca3] {\n  display: grid;\n  grid-template-columns: 1.65fr 2.35fr;\n}\n.inner .inner-header #lightbulb[data-v-3fd38ca3] {\n  fill: white;\n  padding-top: 0.2rem;\n}\n.inner .inner-header h4[data-v-3fd38ca3] {\n  margin: 0;\n  text-align: left;\n  padding-top: 0.5rem;\n}\n.inner[data-v-3fd38ca3]:hover {\n  -webkit-clip-path: circle(75%);\n          clip-path: circle(75%);\n}\n#thumbs-up path[data-v-3fd38ca3]:nth-child(odd) {\n  fill: none;\n  stroke: white;\n  stroke-width: 2;\n  stroke-miterlimit: 10;\n  stroke-dasharray: 134.7793579102;\n  stroke-dashoffset: 134.7793579102;\n}\n#thumbs-up path[data-v-3fd38ca3]:nth-child(even) {\n  fill: none;\n  stroke: white;\n  stroke-width: 2;\n  stroke-miterlimit: 10;\n  stroke-dasharray: 633.6428833008;\n  stroke-dashoffset: 633.6428833008;\n}\n.inner:hover .st0[data-v-3fd38ca3] {\n  -webkit-animation-name: line-anim-data-v-3fd38ca3,fill-white-data-v-3fd38ca3;\n          animation-name: line-anim-data-v-3fd38ca3,fill-white-data-v-3fd38ca3;\n  -webkit-animation-duration: 1s, 1s;\n          animation-duration: 1s, 1s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 0.4s, 0.4s;\n          animation-delay: 0.4s, 0.4s;\n}\n.inner.bg-stage9 #thumbs-up .st0[data-v-3fd38ca3] {\n  stroke: black;\n}\n.inner.bg-stage9:hover .st0[data-v-3fd38ca3] {\n  -webkit-animation-name: line-anim-data-v-3fd38ca3,fill-black-data-v-3fd38ca3;\n          animation-name: line-anim-data-v-3fd38ca3,fill-black-data-v-3fd38ca3;\n}\n.stage-courses[data-v-3fd38ca3] {\n  display: flex;\n  flex-wrap: wrap;\n}\n.stage-courses > .stage-course[data-v-3fd38ca3] {\n  min-height: 240px;\n  min-width: 260px;\n  max-width: 260px;\n  border-radius: 10px;\n  box-shadow: 1rem 0 3rem #000;\n}\n.stage-courses > .stage-course .card-body > h5[data-v-3fd38ca3] {\n  font-size: 1.4rem;\n}\nh5.card-title > a[data-v-3fd38ca3] {\n  color: white;\n  text-decoration: none;\n}\nh5.card-title > a[data-v-3fd38ca3]:hover {\n  color: #cccccc;\n}\n.bg-stage9 a[data-v-3fd38ca3] {\n  color: black !important;\n}\n.course-completed[data-v-3fd38ca3] {\n  background-color: silver;\n  opacity: 0.8;\n}\n.card-footer[data-v-3fd38ca3] {\n  display: flex;\n  justify-content: space-between;\n}\n.left-arrow[data-v-3fd38ca3], .right-arrow[data-v-3fd38ca3] {\n  cursor: pointer;\n}\n.delete-btn[data-v-3fd38ca3] {\n  cursor: pointer;\n}", ""]);
+exports.push([module.i, ".bg-stage1[data-v-3fd38ca3] {\n  background-color: #CC0000;\n}\n.bg-stage2[data-v-3fd38ca3] {\n  background-color: orange;\n}\n.bg-stage3[data-v-3fd38ca3] {\n  background-color: orangered;\n}\n.bg-stage4[data-v-3fd38ca3] {\n  background-color: #77B300;\n}\n.bg-stage5[data-v-3fd38ca3] {\n  background-color: #2A9FD6;\n}\n.bg-stage6[data-v-3fd38ca3] {\n  background-color: #20c997;\n}\n.bg-stage7[data-v-3fd38ca3] {\n  background-color: #e83e8c;\n}\n.bg-stage8[data-v-3fd38ca3] {\n  background-color: #9933CC;\n}\n.bg-stage9[data-v-3fd38ca3] {\n  background-color: #fff;\n  color: black !important;\n}\n.border-stage1[data-v-3fd38ca3] {\n  border-top: 8px solid #CC0000;\n  border-right: 8px solid #CC0000;\n}\n.border-stage2[data-v-3fd38ca3] {\n  border-top: 8px solid orange;\n  border-right: 8px solid orange;\n}\n.border-stage3[data-v-3fd38ca3] {\n  border-top: 8px solid orangered;\n  border-right: 8px solid orangered;\n}\n.border-stage4[data-v-3fd38ca3] {\n  border-top: 8px solid #77B300;\n  border-right: 8px solid #77B300;\n}\n.border-stage5[data-v-3fd38ca3] {\n  border-top: 8px solid #2A9FD6;\n  border-right: 8px solid #2A9FD6;\n}\n.border-stage6[data-v-3fd38ca3] {\n  border-top: 8px solid #20c997;\n  border-right: 8px solid #20c997;\n}\n.border-stage7[data-v-3fd38ca3] {\n  border-top: 8px solid #e83e8c;\n  border-right: 8px solid #e83e8c;\n}\n.border-stage8[data-v-3fd38ca3] {\n  border-top: 8px solid #9933CC;\n  border-right: 8px solid #9933CC;\n}\n.border-stage9[data-v-3fd38ca3] {\n  border-top: 8px solid #fff;\n  border-right: 8px solid #ffff;\n}\n.text-orangered[data-v-3fd38ca3] {\n  color: orangered !important;\n}\n.text-orange[data-v-3fd38ca3] {\n  color: orange !important;\n}\n.text-purple[data-v-3fd38ca3] {\n  color: #6f42c1 !important;\n}\n.text-teal[data-v-3fd38ca3] {\n  color: #20c997 !important;\n}\n.text-pink[data-v-3fd38ca3] {\n  color: #e83e8c !important;\n}\n@-webkit-keyframes hue-data-v-3fd38ca3 {\nfrom {\n    -webkit-filter: hue-rotate(0deg);\n            filter: hue-rotate(0deg);\n}\nto {\n    -webkit-filter: hue-rotate(-360deg);\n            filter: hue-rotate(-360deg);\n}\n}\n@keyframes hue-data-v-3fd38ca3 {\nfrom {\n    -webkit-filter: hue-rotate(0deg);\n            filter: hue-rotate(0deg);\n}\nto {\n    -webkit-filter: hue-rotate(-360deg);\n            filter: hue-rotate(-360deg);\n}\n}\n@-webkit-keyframes bg-animation-data-v-3fd38ca3 {\n0% {\n    background-position: left;\n}\n100% {\n    background-position: right;\n}\n}\n@keyframes bg-animation-data-v-3fd38ca3 {\n0% {\n    background-position: left;\n}\n100% {\n    background-position: right;\n}\n}\n@-webkit-keyframes line-anim-data-v-3fd38ca3 {\nto {\n    stroke-dashoffset: 0;\n}\n}\n@keyframes line-anim-data-v-3fd38ca3 {\nto {\n    stroke-dashoffset: 0;\n}\n}\n@-webkit-keyframes fill-red-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: red;\n}\n}\n@keyframes fill-red-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: red;\n}\n}\n@-webkit-keyframes fill-orange-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ffb733;\n}\n}\n@keyframes fill-orange-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ffb733;\n}\n}\n@-webkit-keyframes fill-orangered-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ff6a33;\n}\n}\n@keyframes fill-orangered-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ff6a33;\n}\n}\n@-webkit-keyframes fill-green-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #99e600;\n}\n}\n@keyframes fill-green-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #99e600;\n}\n}\n@-webkit-keyframes fill-blue-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #55b2de;\n}\n}\n@keyframes fill-blue-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #55b2de;\n}\n}\n@-webkit-keyframes fill-teal-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #3ce0af;\n}\n}\n@keyframes fill-teal-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #3ce0af;\n}\n}\n@-webkit-keyframes fill-pink-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ed6ca7;\n}\n}\n@keyframes fill-pink-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ed6ca7;\n}\n}\n@-webkit-keyframes fill-cyan-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ad5cd6;\n}\n}\n@keyframes fill-cyan-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ad5cd6;\n}\n}\n@-webkit-keyframes fill-white-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: white;\n}\n}\n@keyframes fill-white-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: white;\n}\n}\n@-webkit-keyframes fill-black-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: black;\n}\n}\n@keyframes fill-black-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: black;\n}\n}\n.stage[data-v-3fd38ca3] {\n  display: flex;\n}\n.stage-heading[data-v-3fd38ca3] {\n  position: relative;\n  border-radius: 10px;\n  height: 290px;\n  min-width: 260px;\n  max-width: 260px;\n  text-align: center;\n}\n.stage-heading h2[data-v-3fd38ca3] {\n  font-size: 2.8rem;\n}\n.stage-heading h5[data-v-3fd38ca3] {\n  font-size: 1.2rem;\n}\n.stage-heading-info[data-v-3fd38ca3] {\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n}\n.inner[data-v-3fd38ca3] {\n  color: white;\n  font-size: 1.1rem;\n  border-radius: 10px;\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  text-align: center;\n  -webkit-clip-path: circle(20% at 0% 0%);\n          clip-path: circle(20% at 0% 0%);\n  transition: -webkit-clip-path 0.5s ease-in-out;\n  transition: clip-path 0.5s ease-in-out;\n  transition: clip-path 0.5s ease-in-out, -webkit-clip-path 0.5s ease-in-out;\n}\n.inner p[data-v-3fd38ca3] {\n  margin-bottom: 0.5rem;\n  padding: 1rem;\n}\n.inner .inner-header[data-v-3fd38ca3] {\n  display: grid;\n  grid-template-columns: 1.65fr 2.35fr;\n}\n.inner .inner-header #lightbulb[data-v-3fd38ca3] {\n  fill: white;\n  padding-top: 0.2rem;\n}\n.inner .inner-header h4[data-v-3fd38ca3] {\n  margin: 0;\n  text-align: left;\n  padding-top: 0.5rem;\n}\n.inner[data-v-3fd38ca3]:hover {\n  -webkit-clip-path: circle(75%);\n          clip-path: circle(75%);\n}\n#thumbs-up path[data-v-3fd38ca3]:nth-child(odd) {\n  fill: none;\n  stroke: white;\n  stroke-width: 2;\n  stroke-miterlimit: 10;\n  stroke-dasharray: 134.7793579102;\n  stroke-dashoffset: 134.7793579102;\n}\n#thumbs-up path[data-v-3fd38ca3]:nth-child(even) {\n  fill: none;\n  stroke: white;\n  stroke-width: 2;\n  stroke-miterlimit: 10;\n  stroke-dasharray: 633.6428833008;\n  stroke-dashoffset: 633.6428833008;\n}\n.inner:hover .st0[data-v-3fd38ca3] {\n  -webkit-animation-name: line-anim-data-v-3fd38ca3,fill-white-data-v-3fd38ca3;\n          animation-name: line-anim-data-v-3fd38ca3,fill-white-data-v-3fd38ca3;\n  -webkit-animation-duration: 1s, 1s;\n          animation-duration: 1s, 1s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 0.4s, 0.4s;\n          animation-delay: 0.4s, 0.4s;\n}\n.inner.bg-stage9 #lightbulb[data-v-3fd38ca3] {\n  fill: black;\n}\n.inner.bg-stage9 h4[data-v-3fd38ca3] {\n  color: black;\n}\n.inner.bg-stage9 #thumbs-up .st0[data-v-3fd38ca3] {\n  stroke: black;\n}\n.inner.bg-stage9:hover .st0[data-v-3fd38ca3] {\n  -webkit-animation-name: line-anim-data-v-3fd38ca3,fill-black-data-v-3fd38ca3;\n          animation-name: line-anim-data-v-3fd38ca3,fill-black-data-v-3fd38ca3;\n}\n.stage-courses[data-v-3fd38ca3] {\n  display: flex;\n  flex-wrap: wrap;\n}\n.stage-courses > .stage-course[data-v-3fd38ca3] {\n  min-height: 240px;\n  min-width: 260px;\n  max-width: 260px;\n  border-radius: 10px;\n  box-shadow: 1rem 0 3rem #000;\n}\n.stage-courses > .stage-course .card-body > h5[data-v-3fd38ca3] {\n  font-size: 1.4rem;\n}\nh5.card-title > a[data-v-3fd38ca3] {\n  color: white;\n  text-decoration: none;\n}\nh5.card-title > a[data-v-3fd38ca3]:hover {\n  color: #cccccc;\n}\n.bg-stage9 a[data-v-3fd38ca3] {\n  color: black !important;\n}\n.course-completed[data-v-3fd38ca3] {\n  background-color: silver;\n  opacity: 0.8;\n}\n.card-footer[data-v-3fd38ca3] {\n  display: flex;\n  justify-content: space-between;\n}\n.left-arrow[data-v-3fd38ca3], .right-arrow[data-v-3fd38ca3] {\n  cursor: pointer;\n}\n.delete-btn[data-v-3fd38ca3] {\n  cursor: pointer;\n}", ""]);
 
 // exports
 
@@ -6267,11 +6294,7 @@ var render = function() {
           _c("h4", [_vm._v("Tip")])
         ]),
         _vm._v(" "),
-        _c("p", [
-          _vm._v(
-            "Don't feel you need to master HTML & CSS before moving onto Stage 2 as you'll be doing lots of HTML & CSS from now on!"
-          )
-        ]),
+        _c("p", [_vm._v(_vm._s(_vm.getStageTip))]),
         _vm._v(" "),
         _c(
           "svg",
@@ -6296,7 +6319,7 @@ var render = function() {
               staticClass: "st0",
               attrs: {
                 d:
-                  "M71.1,25.5c0,1.4,1.1,2.5,2.5,2.5h5.6c1.4,0,2.5-1.1,2.5-2.5S80.6,23,79.2,23h-5.6C72.2,23,71.1,24.1,71.1,25.5\n          z M32.7,25.5c0,1.4,1.1,2.5,2.5,2.5h5.6c1.4,0,2.5-1.1,2.5-2.5S42.1,23,40.8,23h-5.6C33.8,23,32.7,24.1,32.7,25.5z M59.7,9.1V3.5\n          c0-1.4-1.1-2.5-2.5-2.5s-2.5,1.1-2.5,2.5v5.6c0,1.4,1.1,2.5,2.5,2.5S59.7,10.5,59.7,9.1z M71,8.2l-4,4c-1,1-1,2.6,0,3.5\n          c1,1,2.6,1,3.5,0l4-4c1-1,1-2.6,0-3.5C73.6,7.2,72,7.2,71,8.2z M45.6,16.4c1.4,0,2.5-1.1,2.5-2.5c0-0.7-0.3-1.3-0.7-1.8l-4-4\n          c-1-1-2.6-1-3.5,0c-1,1-1,2.6,0,3.5l4,4C44.3,16.1,44.9,16.4,45.6,16.4z"
+                  "M71.1,25.5c0,1.4,1.1,2.5,2.5,2.5h5.6c1.4,0,2.5-1.1,2.5-2.5S80.6,23,79.2,23h-5.6C72.2,23,71.1,24.1,71.1,25.5\n          z M32.7,25.5c0,1.4,1.1,2.5,2.5,2.5h5.6c1.4,0,2.5-1.1,2.5-2.5S42.1,23,40.8,23h-5.6C33.8,23,32.7,24.1,32.7,25.5z M59.7,9.1V3.5c0-1.4-1.1-2.5-2.5-2.5s-2.5,1.1-2.5,2.5v5.6c0,1.4,1.1,2.5,2.5,2.5S59.7,10.5,59.7,9.1z M71,8.2l-4,4c-1,1-1,2.6,0,3.5c1,1,2.6,1,3.5,0l4-4c1-1,1-2.6,0-3.5C73.6,7.2,72,7.2,71,8.2z M45.6,16.4c1.4,0,2.5-1.1,2.5-2.5c0-0.7-0.3-1.3-0.7-1.8l-4-4c-1-1-2.6-1-3.5,0c-1,1-1,2.6,0,3.5l4,4C44.3,16.1,44.9,16.4,45.6,16.4z"
               }
             }),
             _vm._v(" "),
@@ -6304,7 +6327,7 @@ var render = function() {
               staticClass: "st0",
               attrs: {
                 d:
-                  "M15.5,45.2c-2.8,0-5,2.2-5,5V94c0,2.8,2.2,5,5,5H30c2.6,0,4.8-2,5-4.7l3.1,1.9c3,1.8,6.3,2.7,9.8,2.7H69\n            c2.6,0,5.1-0.5,7.4-1.5c6.8-3,7.8-8.3,7.3-11.8c3.6-3,4.9-7.9,3.3-12.2c1.7-2,2.6-4.6,2.5-7.2c-0.1-2.1-0.8-4-2.1-5.7\n            c1.6-3.6,0.7-7.8-2.3-10.5c-0.2-0.2-0.4-0.4-0.7-0.5c-1.1-0.8-2.4-1.4-3.8-1.7h-0.1c-6.6-1.4-11.1-1.5-17.7-1.5\n            c-0.3-1.5-0.2-4.7,1.7-10.7c1.8-5.5,1.7-10.1-0.5-13.6c-1.8-2.8-4.8-4.7-8.1-5.1h-0.3c-2.4,0-4.5,1.5-5.2,3.7c0,0.1-0.1,0.2-0.1,0.4\n            l-0.8,5.4c-0.2,1.6-0.7,3.2-1.4,4.7l-7.3,15.3c-1.1,2.6-3.4,4.4-6.1,5v-1.2c0-2.8-2.2-5-5-5H15.5z M15.5,94V50.2H30V94H15.5z\n            M35.5,56.5c4.5-0.8,8.3-3.8,10.1-8l7.2-15.3c0.9-1.9,1.5-4,1.8-6.1l0.8-5l0.1-0.1c1.8,0.3,3.3,1.3,4.3,2.8c1.3,2.1,1.3,5.4,0,9.4\n            C57.9,40,57.3,44.7,58,47.9c0.5,2.1,2.3,3.5,4.4,3.5c6.6,0,10.7,0.1,17,1.4h0.1c0.7,0.1,1.3,0.4,1.8,0.8l0.3,0.3\n            c2.6,2.3,0.9,5.3,0.6,5.8c-0.7,1-0.5,2.4,0.4,3.2c1,1,1.6,2.3,1.7,3.7c-0.1,1.9-0.9,3.6-2.3,4.9c-0.8,0.8-0.9,2-0.3,3\n            c0.1,0.2,2.7,4.7-2.4,8.4c-0.9,0.7-1.2,1.8-0.9,2.8c0.3,0.8,1.3,4.9-4.2,7.3c-1.7,0.7-3.6,1.1-5.5,1H47.8c-2.5,0-5-0.7-7.2-2\n            L35,88.5v-32H35.5z"
+                  "M15.5,45.2c-2.8,0-5,2.2-5,5V94c0,2.8,2.2,5,5,5H30c2.6,0,4.8-2,5-4.7l3.1,1.9c3,1.8,6.3,2.7,9.8,2.7H69c2.6,0,5.1-0.5,7.4-1.5c6.8-3,7.8-8.3,7.3-11.8c3.6-3,4.9-7.9,3.3-12.2c1.7-2,2.6-4.6,2.5-7.2c-0.1-2.1-0.8-4-2.1-5.7c1.6-3.6,0.7-7.8-2.3-10.5c-0.2-0.2-0.4-0.4-0.7-0.5c-1.1-0.8-2.4-1.4-3.8-1.7h-0.1c-6.6-1.4-11.1-1.5-17.7-1.5c-0.3-1.5-0.2-4.7,1.7-10.7c1.8-5.5,1.7-10.1-0.5-13.6c-1.8-2.8-4.8-4.7-8.1-5.1h-0.3c-2.4,0-4.5,1.5-5.2,3.7c0,0.1-0.1,0.2-0.1,0.4l-0.8,5.4c-0.2,1.6-0.7,3.2-1.4,4.7l-7.3,15.3c-1.1,2.6-3.4,4.4-6.1,5v-1.2c0-2.8-2.2-5-5-5H15.5z M15.5,94V50.2H30V94H15.5z\n          M35.5,56.5c4.5-0.8,8.3-3.8,10.1-8l7.2-15.3c0.9-1.9,1.5-4,1.8-6.1l0.8-5l0.1-0.1c1.8,0.3,3.3,1.3,4.3,2.8c1.3,2.1,1.3,5.4,0,9.4C57.9,40,57.3,44.7,58,47.9c0.5,2.1,2.3,3.5,4.4,3.5c6.6,0,10.7,0.1,17,1.4h0.1c0.7,0.1,1.3,0.4,1.8,0.8l0.3,0.3c2.6,2.3,0.9,5.3,0.6,5.8c-0.7,1-0.5,2.4,0.4,3.2c1,1,1.6,2.3,1.7,3.7c-0.1,1.9-0.9,3.6-2.3,4.9c-0.8,0.8-0.9,2-0.3,3c0.1,0.2,2.7,4.7-2.4,8.4c-0.9,0.7-1.2,1.8-0.9,2.8c0.3,0.8,1.3,4.9-4.2,7.3c-1.7,0.7-3.6,1.1-5.5,1H47.8c-2.5,0-5-0.7-7.2-2L35,88.5v-32H35.5z"
               }
             }),
             _vm._v(" "),
@@ -24556,7 +24579,7 @@ __webpack_require__.r(__webpack_exports__);
 var state = {
   token: window.localStorage.getItem('access_token') || null,
   user_id: "",
-  name: "Your"
+  name: ""
 };
 var getters = {
   isLoggedIn: function isLoggedIn(state) {

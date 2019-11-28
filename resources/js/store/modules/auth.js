@@ -5,7 +5,7 @@ import Vue from 'vue';
 const state = {
   token: window.localStorage.getItem('access_token') || null,
   user_id: "",
-  name: "Your"
+  name: ""
 };
 
 const getters = {
