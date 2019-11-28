@@ -4,7 +4,23 @@
       <div class="stage-heading">
         <div class="inner" :class="[
           `bg-stage${stage}`]">
-          <h4 class="mb-3">Tip</h4>
+          <div class="inner-header">
+            <svg version="1.1" id="lightbulb" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 125" style="enable-background:new 0 0 100 125;" xml:space="preserve" height="50px" width="50px">
+            <g transform="translate(0,-952.36218)">
+              <circle cx="50" cy="1002.7" r="21.5"/>
+              <path d="M41.9,1033.9c0.7,1.9,2.3,3.3,4.3,3.7v1c0,2,1.7,3.7,3.7,3.7s3.7-1.7,3.7-3.7v-1c2-0.3,3.7-1.8,4.3-3.7H41.9z"/>
+              <rect x="41.6" y="1028.4" width="16.7" height="3.7"/>
+              <rect x="41.6" y="1022.4" width="16.7" height="3.7"/>
+              <path d="M11.9,1000.5c-1,0-1.9,0.8-1.9,1.9s0.8,1.9,1.9,1.9h9.3c1,0,1.9-0.8,1.9-1.9c0-1-0.8-1.9-1.9-1.9H11.9z"/>
+              <path d="M23,973.6c-0.5,0-0.9,0.2-1.3,0.6c-0.7,0.7-0.7,1.9,0,2.6l6.6,6.6c0.7,0.7,1.9,0.7,2.6,0s0.7-1.9,0-2.6l-6.6-6.6 C24,973.8,23.5,973.6,23,973.6z"/>
+              <path d="M50,962.4c-1,0-1.9,0.8-1.9,1.9v9.3c0,1,0.8,1.9,1.9,1.9c1,0,1.9-0.8,1.9-1.9v-9.3C51.8,963.2,51,962.4,50,962.4z"/>
+              <path d="M76.9,973.6c-0.5,0-0.9,0.2-1.3,0.6l-6.6,6.6c-0.7,0.7-0.7,1.9,0,2.6c0.7,0.7,1.9,0.7,2.6,0l6.6-6.6c0.7-0.7,0.7-1.9,0-2.6 C77.8,973.8,77.4,973.6,76.9,973.6z"/>
+              <path d="M78.8,1000.5c-1,0-1.9,0.8-1.9,1.9c0,1,0.8,1.9,1.9,1.9H88c1,0,1.9-0.8,1.9-1.9s-0.8-1.9-1.9-1.9H78.8z"/>
+            </g>
+            </svg>
+            <h4>Tip</h4>
+          </div>
+
           <p>Don't feel you need to master HTML & CSS before moving onto Stage 2 as you'll be doing lots of HTML & CSS from now on!</p>
           <!-- <svg id="tick" version="1.1" focusable="false" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
           x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" height="50px" width="50px">
@@ -13,8 +29,8 @@
               L215.3,303.7l-59.8-60.3c-4.7-4.7-12.3-4.7-17-0.1l-22.7,22.5c-4.7,4.7-4.7,12.3-0.1,17l90.8,91.5c4.7,4.7,12.3,4.7,17,0.1
               l172.6-171.2C400.8,198.6,400.9,191,396.2,186.3L396.2,186.3z"/>
           </svg> -->
-          <svg version="1.1" id="thumbs-up" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-          viewBox="0 0 100 125" style="enable-background:new 0 0 100 125;" xml:space="preserve" height="70px" width="70px">
+          <svg version="1.1" id="thumbs-up" class="pb-2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          viewBox="0 0 100 125" style="enable-background:new 0 0 100 125;" xml:space="preserve" height="80px" width="80px">
       
             <path class="st0" d="M71.1,25.5c0,1.4,1.1,2.5,2.5,2.5h5.6c1.4,0,2.5-1.1,2.5-2.5S80.6,23,79.2,23h-5.6C72.2,23,71.1,24.1,71.1,25.5
             z M32.7,25.5c0,1.4,1.1,2.5,2.5,2.5h5.6c1.4,0,2.5-1.1,2.5-2.5S42.1,23,40.8,23h-5.6C33.8,23,32.7,24.1,32.7,25.5z M59.7,9.1V3.5
@@ -176,7 +192,7 @@ export default {
 .inner {
   color: white;
   font-size: 1.1rem;
-  padding: 1.5rem;
+  // padding: 1.5rem;
   border-radius: 10px;
   width: 100%;
   height: 100%;
@@ -184,6 +200,27 @@ export default {
   text-align: center;
   clip-path: circle(20% at 0% 0%);
   transition: clip-path 0.5s ease-in-out;
+
+  p {
+    margin-bottom: 0.5rem;
+    padding: 1rem;
+  }
+
+  .inner-header {
+    display: grid;
+    grid-template-columns: 1.65fr 2.35fr;
+
+    #lightbulb {
+    fill: white;
+    padding-top: 0.2rem;
+    }
+
+    h4 {
+      margin: 0;
+      text-align: left;
+      padding-top: 0.5rem;
+    }
+  }
 }
 
 .inner:hover {
@@ -232,7 +269,17 @@ export default {
   animation-duration: 1s, 1s;
   animation-fill-mode: forwards;
   animation-timing-function: ease;
-  animation-delay: 0.5s, 0.5s;
+  animation-delay: 0.4s, 0.4s;
+}
+
+.inner.bg-stage9{
+  & #thumbs-up .st0 {
+    stroke: black;
+  }
+
+  &:hover .st0 {
+  animation-name: line-anim, fill-black;
+  }
 }
               
 

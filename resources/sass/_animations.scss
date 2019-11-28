@@ -93,3 +93,11 @@
     fill: white;
   }
 }
+@keyframes fill-black {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: black;
+  }
+}
