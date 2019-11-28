@@ -52,7 +52,7 @@
           `bg-stage${course.stage}`,
            course.completed ? 'course-completed' : null 
            ]" 
-          v-for="(course, index) in currentRoadmap" 
+          v-for="(course, index) in currentStageRoadmap"
           :key="course.id" @dblclick='toggleCourseCompleted([$event, course])'
           :id="course.id">
           <div class="card-header">Stage {{course.stage}}</div>
@@ -73,6 +73,9 @@
           </div>
           </div>
         </div>
+        <div class="empty-stage" v-if="currentStageRoadmap.length === 0">
+          <h4>Add a course!</h4>
+        </div>
       </div>
     
     </section>
@@ -87,12 +90,12 @@ export default {
   computed: {
     ...mapGetters({courseList: 'getCourseList'}),
     // Returns the current stage roadmap
-    currentRoadmap() {
+    currentStageRoadmap() {
       return this.$store.getters.getRoadmapByStage(this.stage);
     },
     // Calculate the total course hours for the stage
     totalHours() {
-      const courses = this.currentRoadmap;
+      const courses = this.currentStageRoadmap;
       let total = 0;
       courses.forEach(course => {
         if (course.completed === 0){
@@ -227,7 +230,7 @@ export default {
     h4 {
       margin: 0;
       text-align: left;
-      padding-top: 0.5rem;
+      padding-top: 1rem;
     }
   }
 }
@@ -304,6 +307,7 @@ export default {
 .stage-courses {
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .stage-courses > .stage-course {
@@ -340,6 +344,12 @@ h5.card-title > a {
 .card-footer {
   display: flex;
   justify-content: space-between;
+}
+
+.empty-stage {
+  width: 100%;
+  margin: auto;
+  text-align: center;
 }
 
 .left-arrow, .right-arrow {

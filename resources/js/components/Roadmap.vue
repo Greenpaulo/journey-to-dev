@@ -1,9 +1,9 @@
 <template>
   <div class="container my-5">
-    <h1 class="display-4 py-3 my-5 text-center">{{name}}'s Roadmap</h1>
+    <h1 class="display-4 pt-4 pb-5 my-5 text-center">{{name}}'s Roadmap</h1>
 
     <section class="course-selector mt-5">
-      <div id="select-menu" class="pb-4">
+      <div id="select-menu" class="pb-4 mt-3">
         <ul id ="select-menu-links">
           
           <li class="select-links btn bg-stage1 text-white" data-toggle="tooltip" data-placement="top" title="HTML & CSS" @click="retrieveUserCoursesByStage(1)">Stage 1</li>
@@ -26,7 +26,7 @@
         </ul>
       </div>
 
-      <h4 id="stage-description" class="my-5">Stage {{stage}} - {{getStageTitle}}: <h5>Select Your Courses</h5></h4>
+      <h4 id="stage-description" class="mt-5 mb-3">Stage {{stage}} - {{getStageTitle}}:</h4> <h5>Select Your Courses</h5>
       
       <CourseList></CourseList>
     </section>
@@ -82,17 +82,25 @@ export default {
 
     // Render the courseList stage 1 default only after the initial data has been loaded
     const initialLoad = () => {
-
-    if(this.userCourseList.length === 0){
-      setTimeout(() => {
-        initialLoad();
-      }, 1000)
-    } else {
-      this.retrieveUserCoursesByStage(1);
+      if(this.userCourseList.length === 0){
+        setTimeout(() => {
+          initialLoad();
+        }, 1000)
+      } else {
+        this.retrieveUserCoursesByStage(1);
+      };
     };
-    };
 
-    initialLoad()
+    initialLoad();
+
+    // Animate the stage selector buttons with GSAP
+    // const tl = gsap.timeline({});
+    
+    // tl.add('drop')
+    // tl.from('.select-links', { y: -200, duration: 1,  ease: "bounce.out",stagger: 0.2}, 'drop')
+    //   .from('.select-links', {backgroundColor: '#ffffff', duration: 2}, 'drop');
+
+    // tl.play();
   },
   computed: {
     ...mapGetters({userCourseList: 'getUserCourseList', name: 'getName', stage: 'getCurrentStage'}),
@@ -152,6 +160,10 @@ export default {
 .select-links {
   list-style: none;
   cursor: pointer;
+
+  &:hover {
+    filter: brightness(120%);
+  }
 }
 
 .btn-stage9 {
