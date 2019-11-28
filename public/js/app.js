@@ -1942,6 +1942,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Arrow'
 });
@@ -1974,6 +1976,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "CourseList",
@@ -1986,7 +1993,10 @@ __webpack_require__.r(__webpack_exports__);
     userCourseList: 'getUserCourseList',
     courses: 'getUserCoursesByStage'
   }),
-  methods: Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapActions"])(['addCourseToRoadmap', 'retrieveUserCoursesByStage'])
+  methods: Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapActions"])(['addCourseToRoadmap', 'retrieveUserCoursesByStage']),
+  mounted: function mounted() {
+    console.log(this.courses.length);
+  }
 });
 
 /***/ }),
@@ -2203,6 +2213,8 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+//
+//
 //
 //
 //
@@ -2872,7 +2884,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".bg-stage1 {\n  background-color: #CC0000;\n}\n.bg-stage2 {\n  background-color: orange;\n}\n.bg-stage3 {\n  background-color: orangered;\n}\n.bg-stage4 {\n  background-color: #77B300;\n}\n.bg-stage5 {\n  background-color: #2A9FD6;\n}\n.bg-stage6 {\n  background-color: #20c997;\n}\n.bg-stage7 {\n  background-color: #e83e8c;\n}\n.bg-stage8 {\n  background-color: #9933CC;\n}\n.bg-stage9 {\n  background-color: #fff;\n  color: black !important;\n}\n.border-stage1 {\n  border-top: 8px solid #CC0000;\n  border-right: 8px solid #CC0000;\n}\n.border-stage2 {\n  border-top: 8px solid orange;\n  border-right: 8px solid orange;\n}\n.border-stage3 {\n  border-top: 8px solid orangered;\n  border-right: 8px solid orangered;\n}\n.border-stage4 {\n  border-top: 8px solid #77B300;\n  border-right: 8px solid #77B300;\n}\n.border-stage5 {\n  border-top: 8px solid #2A9FD6;\n  border-right: 8px solid #2A9FD6;\n}\n.border-stage6 {\n  border-top: 8px solid #20c997;\n  border-right: 8px solid #20c997;\n}\n.border-stage7 {\n  border-top: 8px solid #e83e8c;\n  border-right: 8px solid #e83e8c;\n}\n.border-stage8 {\n  border-top: 8px solid #9933CC;\n  border-right: 8px solid #9933CC;\n}\n.border-stage9 {\n  border-top: 8px solid #fff;\n  border-right: 8px solid #ffff;\n}\n.text-orangered {\n  color: orangered !important;\n}\n.text-orange {\n  color: orange !important;\n}\n.text-purple {\n  color: #6f42c1 !important;\n}\n.text-teal {\n  color: #20c997 !important;\n}\n.text-pink {\n  color: #e83e8c !important;\n}\nbody {\n  background: #171419;\n  background: linear-gradient(79deg, #171419 0%, #020009 100%);\n  /* background-color: #100e17; */\n}\n.container.my-5 {\n  margin-top: 7rem !important;\n}\n.flash__message.error {\n  color: #a94442 !important;\n  background-color: #f3dede !important;\n  border-color: #f3dede !important;\n}", ""]);
+exports.push([module.i, ".bg-stage1 {\n  background-color: #CC0000;\n}\n.bg-stage2 {\n  background-color: orange;\n}\n.bg-stage3 {\n  background-color: orangered;\n}\n.bg-stage4 {\n  background-color: #77B300;\n}\n.bg-stage5 {\n  background-color: #2A9FD6;\n}\n.bg-stage6 {\n  background-color: #20c997;\n}\n.bg-stage7 {\n  background-color: #e83e8c;\n}\n.bg-stage8 {\n  background-color: #9933CC;\n}\n.bg-stage9 {\n  background-color: #fff;\n  color: black !important;\n}\n.border-stage1 {\n  border-top: 8px solid #CC0000;\n  border-right: 8px solid #CC0000;\n}\n.border-stage2 {\n  border-top: 8px solid orange;\n  border-right: 8px solid orange;\n}\n.border-stage3 {\n  border-top: 8px solid orangered;\n  border-right: 8px solid orangered;\n}\n.border-stage4 {\n  border-top: 8px solid #77B300;\n  border-right: 8px solid #77B300;\n}\n.border-stage5 {\n  border-top: 8px solid #2A9FD6;\n  border-right: 8px solid #2A9FD6;\n}\n.border-stage6 {\n  border-top: 8px solid #20c997;\n  border-right: 8px solid #20c997;\n}\n.border-stage7 {\n  border-top: 8px solid #e83e8c;\n  border-right: 8px solid #e83e8c;\n}\n.border-stage8 {\n  border-top: 8px solid #9933CC;\n  border-right: 8px solid #9933CC;\n}\n.border-stage9 {\n  border-top: 8px solid #fff;\n  border-right: 8px solid #ffff;\n}\n.text-orangered {\n  color: orangered !important;\n}\n.text-orange {\n  color: orange !important;\n}\n.text-purple {\n  color: #6f42c1 !important;\n}\n.text-teal {\n  color: #20c997 !important;\n}\n.text-pink {\n  color: #e83e8c !important;\n}\nbody {\n  background: #171419;\n  background: linear-gradient(79deg, #171419 0%, #020009 100%);\n  /* background-color: #100e17; */\n}\n.container.my-5 {\n  margin-top: 7rem !important;\n}\n.flash__message.error {\n  color: #a94442 !important;\n  background-color: #f3dede !important;\n  border-color: #f3dede !important;\n}\n@media (min-width: 1200px) {\n.container {\n    max-width: 1150px;\n}\n}", ""]);
 
 // exports
 
@@ -2891,7 +2903,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".bg-stage1[data-v-9d6850f8] {\n  background-color: #CC0000;\n}\n.bg-stage2[data-v-9d6850f8] {\n  background-color: orange;\n}\n.bg-stage3[data-v-9d6850f8] {\n  background-color: orangered;\n}\n.bg-stage4[data-v-9d6850f8] {\n  background-color: #77B300;\n}\n.bg-stage5[data-v-9d6850f8] {\n  background-color: #2A9FD6;\n}\n.bg-stage6[data-v-9d6850f8] {\n  background-color: #20c997;\n}\n.bg-stage7[data-v-9d6850f8] {\n  background-color: #e83e8c;\n}\n.bg-stage8[data-v-9d6850f8] {\n  background-color: #9933CC;\n}\n.bg-stage9[data-v-9d6850f8] {\n  background-color: #fff;\n  color: black !important;\n}\n.border-stage1[data-v-9d6850f8] {\n  border-top: 8px solid #CC0000;\n  border-right: 8px solid #CC0000;\n}\n.border-stage2[data-v-9d6850f8] {\n  border-top: 8px solid orange;\n  border-right: 8px solid orange;\n}\n.border-stage3[data-v-9d6850f8] {\n  border-top: 8px solid orangered;\n  border-right: 8px solid orangered;\n}\n.border-stage4[data-v-9d6850f8] {\n  border-top: 8px solid #77B300;\n  border-right: 8px solid #77B300;\n}\n.border-stage5[data-v-9d6850f8] {\n  border-top: 8px solid #2A9FD6;\n  border-right: 8px solid #2A9FD6;\n}\n.border-stage6[data-v-9d6850f8] {\n  border-top: 8px solid #20c997;\n  border-right: 8px solid #20c997;\n}\n.border-stage7[data-v-9d6850f8] {\n  border-top: 8px solid #e83e8c;\n  border-right: 8px solid #e83e8c;\n}\n.border-stage8[data-v-9d6850f8] {\n  border-top: 8px solid #9933CC;\n  border-right: 8px solid #9933CC;\n}\n.border-stage9[data-v-9d6850f8] {\n  border-top: 8px solid #fff;\n  border-right: 8px solid #ffff;\n}\n.text-orangered[data-v-9d6850f8] {\n  color: orangered !important;\n}\n.text-orange[data-v-9d6850f8] {\n  color: orange !important;\n}\n.text-purple[data-v-9d6850f8] {\n  color: #6f42c1 !important;\n}\n.text-teal[data-v-9d6850f8] {\n  color: #20c997 !important;\n}\n.text-pink[data-v-9d6850f8] {\n  color: #e83e8c !important;\n}\n.course-list[data-v-9d6850f8] {\n  display: flex;\n  padding: 3rem;\n  overflow-x: scroll;\n  -webkit-overflow-scrolling: touch;\n}\n.course-card[data-v-9d6850f8] {\n  background-color: #17141d;\n  min-width: 300px;\n  max-width: 300px;\n  min-height: 350px;\n  box-shadow: -1rem 0 3rem #000;\n  border-width: 4px;\n  border-radius: 16px;\n  padding: 1.5rem;\n  transition-property: all;\n  transition-duration: 0.2s;\n  transition-timing-function: ease;\n  transition-delay: 0s;\n}\n.course-card[data-v-9d6850f8]:not(:first-child) {\n  margin-left: -130px;\n}\n.course-card h2[data-v-9d6850f8] {\n  color: white;\n}\n.course-card[data-v-9d6850f8]:hover {\n  transform: translate(0, -1rem);\n}\n.course-card:hover ~ .course-card[data-v-9d6850f8] {\n  transform: translateX(130px);\n}\n.course-list > .card-body[data-v-9d6850f8] {\n  padding: 1.25 0;\n}\n.course-list[data-v-9d6850f8]::-webkit-scrollbar {\n  width: 10px;\n  height: 15px;\n}\n.course-list[data-v-9d6850f8]::-webkit-scrollbar-thumb {\n  background: #201c29;\n  border-radius: 10px;\n  box-shadow: inset 2px 2px 2px rgba(255, 255, 255, 0.25), inset -2px -2px 2px rgba(0, 0, 0, 0.25);\n}\n.course-list[data-v-9d6850f8]::-webkit-scrollbar-track {\n  background: linear-gradient(to right, #201c29, #201c29 1px, #17141d 1px, #17141d);\n}\n.add-btn[data-v-9d6850f8] {\n  width: 50px;\n  height: 50px;\n  border-radius: 50%;\n  cursor: pointer;\n}\n.bg-stage9 i.fa-plus[data-v-9d6850f8] {\n  color: black;\n}\ni.fa-plus[data-v-9d6850f8] {\n  padding-top: 11px;\n  padding-left: 13px;\n  width: 50px;\n  height: 50px;\n  color: white;\n}\nh5.card-title > a[data-v-9d6850f8] {\n  color: white;\n  text-decoration: none;\n}\nh5.card-title > a[data-v-9d6850f8]:hover {\n  color: #cccccc;\n}", ""]);
+exports.push([module.i, ".bg-stage1[data-v-9d6850f8] {\n  background-color: #CC0000;\n}\n.bg-stage2[data-v-9d6850f8] {\n  background-color: orange;\n}\n.bg-stage3[data-v-9d6850f8] {\n  background-color: orangered;\n}\n.bg-stage4[data-v-9d6850f8] {\n  background-color: #77B300;\n}\n.bg-stage5[data-v-9d6850f8] {\n  background-color: #2A9FD6;\n}\n.bg-stage6[data-v-9d6850f8] {\n  background-color: #20c997;\n}\n.bg-stage7[data-v-9d6850f8] {\n  background-color: #e83e8c;\n}\n.bg-stage8[data-v-9d6850f8] {\n  background-color: #9933CC;\n}\n.bg-stage9[data-v-9d6850f8] {\n  background-color: #fff;\n  color: black !important;\n}\n.border-stage1[data-v-9d6850f8] {\n  border-top: 8px solid #CC0000;\n  border-right: 8px solid #CC0000;\n}\n.border-stage2[data-v-9d6850f8] {\n  border-top: 8px solid orange;\n  border-right: 8px solid orange;\n}\n.border-stage3[data-v-9d6850f8] {\n  border-top: 8px solid orangered;\n  border-right: 8px solid orangered;\n}\n.border-stage4[data-v-9d6850f8] {\n  border-top: 8px solid #77B300;\n  border-right: 8px solid #77B300;\n}\n.border-stage5[data-v-9d6850f8] {\n  border-top: 8px solid #2A9FD6;\n  border-right: 8px solid #2A9FD6;\n}\n.border-stage6[data-v-9d6850f8] {\n  border-top: 8px solid #20c997;\n  border-right: 8px solid #20c997;\n}\n.border-stage7[data-v-9d6850f8] {\n  border-top: 8px solid #e83e8c;\n  border-right: 8px solid #e83e8c;\n}\n.border-stage8[data-v-9d6850f8] {\n  border-top: 8px solid #9933CC;\n  border-right: 8px solid #9933CC;\n}\n.border-stage9[data-v-9d6850f8] {\n  border-top: 8px solid #fff;\n  border-right: 8px solid #ffff;\n}\n.text-orangered[data-v-9d6850f8] {\n  color: orangered !important;\n}\n.text-orange[data-v-9d6850f8] {\n  color: orange !important;\n}\n.text-purple[data-v-9d6850f8] {\n  color: #6f42c1 !important;\n}\n.text-teal[data-v-9d6850f8] {\n  color: #20c997 !important;\n}\n.text-pink[data-v-9d6850f8] {\n  color: #e83e8c !important;\n}\n.course-list[data-v-9d6850f8] {\n  display: flex;\n  padding: 3rem;\n  overflow-x: scroll;\n  -webkit-overflow-scrolling: touch;\n}\n.course-card[data-v-9d6850f8] {\n  background-color: #17141d;\n  min-width: 300px;\n  max-width: 300px;\n  min-height: 350px;\n  box-shadow: -1rem 0 3rem #000;\n  border-width: 4px;\n  border-radius: 16px;\n  padding: 1.5rem;\n  transition-property: all;\n  transition-duration: 0.2s;\n  transition-timing-function: ease;\n  transition-delay: 0s;\n}\n.course-card[data-v-9d6850f8]:not(:first-child) {\n  margin-left: -130px;\n}\n.course-card h2[data-v-9d6850f8] {\n  color: white;\n}\n.course-card[data-v-9d6850f8]:hover {\n  transform: translate(0, -1rem);\n}\n.course-card:hover ~ .course-card[data-v-9d6850f8] {\n  transform: translateX(130px);\n}\n.course-list > .card-body[data-v-9d6850f8] {\n  padding: 1.25 0;\n}\n.course-list[data-v-9d6850f8]::-webkit-scrollbar {\n  width: 10px;\n  height: 15px;\n}\n.course-list[data-v-9d6850f8]::-webkit-scrollbar-thumb {\n  background: #201c29;\n  border-radius: 10px;\n  box-shadow: inset 2px 2px 2px rgba(255, 255, 255, 0.25), inset -2px -2px 2px rgba(0, 0, 0, 0.25);\n}\n.course-list[data-v-9d6850f8]::-webkit-scrollbar-track {\n  background: linear-gradient(to right, #201c29, #201c29 1px, #17141d 1px, #17141d);\n}\n.add-btn[data-v-9d6850f8] {\n  width: 50px;\n  height: 50px;\n  border-radius: 50%;\n  cursor: pointer;\n}\n.bg-stage9 i.fa-plus[data-v-9d6850f8] {\n  color: black;\n}\ni.fa-plus[data-v-9d6850f8] {\n  padding-top: 11px;\n  padding-left: 13px;\n  width: 50px;\n  height: 50px;\n  color: white;\n}\nh5.card-title > a[data-v-9d6850f8] {\n  color: white;\n  text-decoration: none;\n}\nh5.card-title > a[data-v-9d6850f8]:hover {\n  color: #cccccc;\n}\n.empty-courselist[data-v-9d6850f8] {\n  text-align: center;\n  padding-top: 3rem;\n}", ""]);
 
 // exports
 
@@ -2929,7 +2941,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "#select-menu-links[data-v-04effda1] {\n  display: flex;\n  justify-content: space-between;\n}\n.select-links[data-v-04effda1] {\n  list-style: none;\n  cursor: pointer;\n}\n.select-links[data-v-04effda1]:hover {\n  -webkit-filter: brightness(120%);\n          filter: brightness(120%);\n}\n.btn-stage9[data-v-04effda1] {\n  color: black;\n}", ""]);
+exports.push([module.i, "#select-menu-links[data-v-04effda1] {\n  display: flex;\n  justify-content: space-between;\n}\n.select-links[data-v-04effda1] {\n  list-style: none;\n  cursor: pointer;\n}\n.select-links[data-v-04effda1]:hover {\n  -webkit-filter: brightness(120%);\n          filter: brightness(120%);\n}\n.btn-stage9[data-v-04effda1] {\n  color: black;\n}\n#total-hours[data-v-04effda1] {\n  text-align: center;\n}", ""]);
 
 // exports
 
@@ -2948,7 +2960,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".bg-stage1[data-v-3fd38ca3] {\n  background-color: #CC0000;\n}\n.bg-stage2[data-v-3fd38ca3] {\n  background-color: orange;\n}\n.bg-stage3[data-v-3fd38ca3] {\n  background-color: orangered;\n}\n.bg-stage4[data-v-3fd38ca3] {\n  background-color: #77B300;\n}\n.bg-stage5[data-v-3fd38ca3] {\n  background-color: #2A9FD6;\n}\n.bg-stage6[data-v-3fd38ca3] {\n  background-color: #20c997;\n}\n.bg-stage7[data-v-3fd38ca3] {\n  background-color: #e83e8c;\n}\n.bg-stage8[data-v-3fd38ca3] {\n  background-color: #9933CC;\n}\n.bg-stage9[data-v-3fd38ca3] {\n  background-color: #fff;\n  color: black !important;\n}\n.border-stage1[data-v-3fd38ca3] {\n  border-top: 8px solid #CC0000;\n  border-right: 8px solid #CC0000;\n}\n.border-stage2[data-v-3fd38ca3] {\n  border-top: 8px solid orange;\n  border-right: 8px solid orange;\n}\n.border-stage3[data-v-3fd38ca3] {\n  border-top: 8px solid orangered;\n  border-right: 8px solid orangered;\n}\n.border-stage4[data-v-3fd38ca3] {\n  border-top: 8px solid #77B300;\n  border-right: 8px solid #77B300;\n}\n.border-stage5[data-v-3fd38ca3] {\n  border-top: 8px solid #2A9FD6;\n  border-right: 8px solid #2A9FD6;\n}\n.border-stage6[data-v-3fd38ca3] {\n  border-top: 8px solid #20c997;\n  border-right: 8px solid #20c997;\n}\n.border-stage7[data-v-3fd38ca3] {\n  border-top: 8px solid #e83e8c;\n  border-right: 8px solid #e83e8c;\n}\n.border-stage8[data-v-3fd38ca3] {\n  border-top: 8px solid #9933CC;\n  border-right: 8px solid #9933CC;\n}\n.border-stage9[data-v-3fd38ca3] {\n  border-top: 8px solid #fff;\n  border-right: 8px solid #ffff;\n}\n.text-orangered[data-v-3fd38ca3] {\n  color: orangered !important;\n}\n.text-orange[data-v-3fd38ca3] {\n  color: orange !important;\n}\n.text-purple[data-v-3fd38ca3] {\n  color: #6f42c1 !important;\n}\n.text-teal[data-v-3fd38ca3] {\n  color: #20c997 !important;\n}\n.text-pink[data-v-3fd38ca3] {\n  color: #e83e8c !important;\n}\n@-webkit-keyframes hue-data-v-3fd38ca3 {\nfrom {\n    -webkit-filter: hue-rotate(0deg);\n            filter: hue-rotate(0deg);\n}\nto {\n    -webkit-filter: hue-rotate(-360deg);\n            filter: hue-rotate(-360deg);\n}\n}\n@keyframes hue-data-v-3fd38ca3 {\nfrom {\n    -webkit-filter: hue-rotate(0deg);\n            filter: hue-rotate(0deg);\n}\nto {\n    -webkit-filter: hue-rotate(-360deg);\n            filter: hue-rotate(-360deg);\n}\n}\n@-webkit-keyframes bg-animation-data-v-3fd38ca3 {\n0% {\n    background-position: left;\n}\n100% {\n    background-position: right;\n}\n}\n@keyframes bg-animation-data-v-3fd38ca3 {\n0% {\n    background-position: left;\n}\n100% {\n    background-position: right;\n}\n}\n@-webkit-keyframes line-anim-data-v-3fd38ca3 {\nto {\n    stroke-dashoffset: 0;\n}\n}\n@keyframes line-anim-data-v-3fd38ca3 {\nto {\n    stroke-dashoffset: 0;\n}\n}\n@-webkit-keyframes fill-red-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: red;\n}\n}\n@keyframes fill-red-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: red;\n}\n}\n@-webkit-keyframes fill-orange-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ffb733;\n}\n}\n@keyframes fill-orange-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ffb733;\n}\n}\n@-webkit-keyframes fill-orangered-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ff6a33;\n}\n}\n@keyframes fill-orangered-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ff6a33;\n}\n}\n@-webkit-keyframes fill-green-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #99e600;\n}\n}\n@keyframes fill-green-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #99e600;\n}\n}\n@-webkit-keyframes fill-blue-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #55b2de;\n}\n}\n@keyframes fill-blue-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #55b2de;\n}\n}\n@-webkit-keyframes fill-teal-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #3ce0af;\n}\n}\n@keyframes fill-teal-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #3ce0af;\n}\n}\n@-webkit-keyframes fill-pink-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ed6ca7;\n}\n}\n@keyframes fill-pink-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ed6ca7;\n}\n}\n@-webkit-keyframes fill-cyan-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ad5cd6;\n}\n}\n@keyframes fill-cyan-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ad5cd6;\n}\n}\n@-webkit-keyframes fill-white-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: white;\n}\n}\n@keyframes fill-white-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: white;\n}\n}\n@-webkit-keyframes fill-black-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: black;\n}\n}\n@keyframes fill-black-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: black;\n}\n}\n.stage[data-v-3fd38ca3] {\n  display: flex;\n}\n.stage-heading[data-v-3fd38ca3] {\n  position: relative;\n  border-radius: 10px;\n  height: 290px;\n  min-width: 260px;\n  max-width: 260px;\n  text-align: center;\n}\n.stage-heading h2[data-v-3fd38ca3] {\n  font-size: 2.8rem;\n}\n.stage-heading h5[data-v-3fd38ca3] {\n  font-size: 1.2rem;\n}\n.stage-heading-info[data-v-3fd38ca3] {\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n}\n.inner[data-v-3fd38ca3] {\n  color: white;\n  font-size: 1.1rem;\n  border-radius: 10px;\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  text-align: center;\n  -webkit-clip-path: circle(20% at 0% 0%);\n          clip-path: circle(20% at 0% 0%);\n  transition: -webkit-clip-path 0.5s ease-in-out;\n  transition: clip-path 0.5s ease-in-out;\n  transition: clip-path 0.5s ease-in-out, -webkit-clip-path 0.5s ease-in-out;\n}\n.inner p[data-v-3fd38ca3] {\n  margin-bottom: 0.5rem;\n  padding: 1rem;\n}\n.inner .inner-header[data-v-3fd38ca3] {\n  display: grid;\n  grid-template-columns: 1.65fr 2.35fr;\n}\n.inner .inner-header #lightbulb[data-v-3fd38ca3] {\n  fill: white;\n  padding-top: 0.2rem;\n}\n.inner .inner-header h4[data-v-3fd38ca3] {\n  margin: 0;\n  text-align: left;\n  padding-top: 1rem;\n}\n.inner[data-v-3fd38ca3]:hover {\n  -webkit-clip-path: circle(75%);\n          clip-path: circle(75%);\n}\n#thumbs-up path[data-v-3fd38ca3]:nth-child(odd) {\n  fill: none;\n  stroke: white;\n  stroke-width: 2;\n  stroke-miterlimit: 10;\n  stroke-dasharray: 134.7793579102;\n  stroke-dashoffset: 134.7793579102;\n}\n#thumbs-up path[data-v-3fd38ca3]:nth-child(even) {\n  fill: none;\n  stroke: white;\n  stroke-width: 2;\n  stroke-miterlimit: 10;\n  stroke-dasharray: 633.6428833008;\n  stroke-dashoffset: 633.6428833008;\n}\n.inner:hover .st0[data-v-3fd38ca3] {\n  -webkit-animation-name: line-anim-data-v-3fd38ca3,fill-white-data-v-3fd38ca3;\n          animation-name: line-anim-data-v-3fd38ca3,fill-white-data-v-3fd38ca3;\n  -webkit-animation-duration: 1s, 1s;\n          animation-duration: 1s, 1s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 0.4s, 0.4s;\n          animation-delay: 0.4s, 0.4s;\n}\n.inner.bg-stage9 #lightbulb[data-v-3fd38ca3] {\n  fill: black;\n}\n.inner.bg-stage9 h4[data-v-3fd38ca3] {\n  color: black;\n}\n.inner.bg-stage9 #thumbs-up .st0[data-v-3fd38ca3] {\n  stroke: black;\n}\n.inner.bg-stage9:hover .st0[data-v-3fd38ca3] {\n  -webkit-animation-name: line-anim-data-v-3fd38ca3,fill-black-data-v-3fd38ca3;\n          animation-name: line-anim-data-v-3fd38ca3,fill-black-data-v-3fd38ca3;\n}\n.stage-courses[data-v-3fd38ca3] {\n  display: flex;\n  flex-wrap: wrap;\n  width: 100%;\n}\n.stage-courses > .stage-course[data-v-3fd38ca3] {\n  min-height: 240px;\n  min-width: 260px;\n  max-width: 260px;\n  border-radius: 10px;\n  box-shadow: 1rem 0 3rem #000;\n}\n.stage-courses > .stage-course .card-body > h5[data-v-3fd38ca3] {\n  font-size: 1.4rem;\n}\nh5.card-title > a[data-v-3fd38ca3] {\n  color: white;\n  text-decoration: none;\n}\nh5.card-title > a[data-v-3fd38ca3]:hover {\n  color: #cccccc;\n}\n.bg-stage9 a[data-v-3fd38ca3] {\n  color: black !important;\n}\n.course-completed[data-v-3fd38ca3] {\n  background-color: silver;\n  opacity: 0.8;\n}\n.card-footer[data-v-3fd38ca3] {\n  display: flex;\n  justify-content: space-between;\n}\n.empty-stage[data-v-3fd38ca3] {\n  width: 100%;\n  margin: auto;\n  text-align: center;\n}\n.left-arrow[data-v-3fd38ca3], .right-arrow[data-v-3fd38ca3] {\n  cursor: pointer;\n}\n.delete-btn[data-v-3fd38ca3] {\n  cursor: pointer;\n}", ""]);
+exports.push([module.i, ".bg-stage1[data-v-3fd38ca3] {\n  background-color: #CC0000;\n}\n.bg-stage2[data-v-3fd38ca3] {\n  background-color: orange;\n}\n.bg-stage3[data-v-3fd38ca3] {\n  background-color: orangered;\n}\n.bg-stage4[data-v-3fd38ca3] {\n  background-color: #77B300;\n}\n.bg-stage5[data-v-3fd38ca3] {\n  background-color: #2A9FD6;\n}\n.bg-stage6[data-v-3fd38ca3] {\n  background-color: #20c997;\n}\n.bg-stage7[data-v-3fd38ca3] {\n  background-color: #e83e8c;\n}\n.bg-stage8[data-v-3fd38ca3] {\n  background-color: #9933CC;\n}\n.bg-stage9[data-v-3fd38ca3] {\n  background-color: #fff;\n  color: black !important;\n}\n.border-stage1[data-v-3fd38ca3] {\n  border-top: 8px solid #CC0000;\n  border-right: 8px solid #CC0000;\n}\n.border-stage2[data-v-3fd38ca3] {\n  border-top: 8px solid orange;\n  border-right: 8px solid orange;\n}\n.border-stage3[data-v-3fd38ca3] {\n  border-top: 8px solid orangered;\n  border-right: 8px solid orangered;\n}\n.border-stage4[data-v-3fd38ca3] {\n  border-top: 8px solid #77B300;\n  border-right: 8px solid #77B300;\n}\n.border-stage5[data-v-3fd38ca3] {\n  border-top: 8px solid #2A9FD6;\n  border-right: 8px solid #2A9FD6;\n}\n.border-stage6[data-v-3fd38ca3] {\n  border-top: 8px solid #20c997;\n  border-right: 8px solid #20c997;\n}\n.border-stage7[data-v-3fd38ca3] {\n  border-top: 8px solid #e83e8c;\n  border-right: 8px solid #e83e8c;\n}\n.border-stage8[data-v-3fd38ca3] {\n  border-top: 8px solid #9933CC;\n  border-right: 8px solid #9933CC;\n}\n.border-stage9[data-v-3fd38ca3] {\n  border-top: 8px solid #fff;\n  border-right: 8px solid #ffff;\n}\n.text-orangered[data-v-3fd38ca3] {\n  color: orangered !important;\n}\n.text-orange[data-v-3fd38ca3] {\n  color: orange !important;\n}\n.text-purple[data-v-3fd38ca3] {\n  color: #6f42c1 !important;\n}\n.text-teal[data-v-3fd38ca3] {\n  color: #20c997 !important;\n}\n.text-pink[data-v-3fd38ca3] {\n  color: #e83e8c !important;\n}\n@-webkit-keyframes hue-data-v-3fd38ca3 {\nfrom {\n    -webkit-filter: hue-rotate(0deg);\n            filter: hue-rotate(0deg);\n}\nto {\n    -webkit-filter: hue-rotate(-360deg);\n            filter: hue-rotate(-360deg);\n}\n}\n@keyframes hue-data-v-3fd38ca3 {\nfrom {\n    -webkit-filter: hue-rotate(0deg);\n            filter: hue-rotate(0deg);\n}\nto {\n    -webkit-filter: hue-rotate(-360deg);\n            filter: hue-rotate(-360deg);\n}\n}\n@-webkit-keyframes bg-animation-data-v-3fd38ca3 {\n0% {\n    background-position: left;\n}\n100% {\n    background-position: right;\n}\n}\n@keyframes bg-animation-data-v-3fd38ca3 {\n0% {\n    background-position: left;\n}\n100% {\n    background-position: right;\n}\n}\n@-webkit-keyframes line-anim-data-v-3fd38ca3 {\nto {\n    stroke-dashoffset: 0;\n}\n}\n@keyframes line-anim-data-v-3fd38ca3 {\nto {\n    stroke-dashoffset: 0;\n}\n}\n@-webkit-keyframes fill-red-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: red;\n}\n}\n@keyframes fill-red-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: red;\n}\n}\n@-webkit-keyframes fill-orange-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ffb733;\n}\n}\n@keyframes fill-orange-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ffb733;\n}\n}\n@-webkit-keyframes fill-orangered-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ff6a33;\n}\n}\n@keyframes fill-orangered-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ff6a33;\n}\n}\n@-webkit-keyframes fill-green-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #99e600;\n}\n}\n@keyframes fill-green-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #99e600;\n}\n}\n@-webkit-keyframes fill-blue-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #55b2de;\n}\n}\n@keyframes fill-blue-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #55b2de;\n}\n}\n@-webkit-keyframes fill-teal-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #3ce0af;\n}\n}\n@keyframes fill-teal-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #3ce0af;\n}\n}\n@-webkit-keyframes fill-pink-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ed6ca7;\n}\n}\n@keyframes fill-pink-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ed6ca7;\n}\n}\n@-webkit-keyframes fill-cyan-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ad5cd6;\n}\n}\n@keyframes fill-cyan-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ad5cd6;\n}\n}\n@-webkit-keyframes fill-white-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: white;\n}\n}\n@keyframes fill-white-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: white;\n}\n}\n@-webkit-keyframes fill-black-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: black;\n}\n}\n@keyframes fill-black-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: black;\n}\n}\n.stage[data-v-3fd38ca3] {\n  display: flex;\n  box-shadow: 1rem 0 3rem #000;\n  padding: 0 0.3rem 1rem 0;\n  border-radius: 10px;\n}\n.stage-heading[data-v-3fd38ca3] {\n  position: relative;\n  border-radius: 10px;\n  height: 290px;\n  min-width: 260px;\n  max-width: 260px;\n  text-align: center;\n}\n.stage-heading h2[data-v-3fd38ca3] {\n  font-size: 2.8rem;\n}\n.stage-heading h5[data-v-3fd38ca3] {\n  font-size: 1.2rem;\n}\n.stage-heading-info[data-v-3fd38ca3] {\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n}\n.inner[data-v-3fd38ca3] {\n  color: white;\n  font-size: 1.1rem;\n  border-radius: 10px;\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  text-align: center;\n  -webkit-clip-path: circle(20% at 0% 0%);\n          clip-path: circle(20% at 0% 0%);\n  transition: -webkit-clip-path 0.5s ease-in-out;\n  transition: clip-path 0.5s ease-in-out;\n  transition: clip-path 0.5s ease-in-out, -webkit-clip-path 0.5s ease-in-out;\n}\n.inner p[data-v-3fd38ca3] {\n  margin-bottom: 0.5rem;\n  padding: 1rem;\n}\n.inner .inner-header[data-v-3fd38ca3] {\n  display: grid;\n  grid-template-columns: 1.65fr 2.35fr;\n}\n.inner .inner-header #lightbulb[data-v-3fd38ca3] {\n  fill: white;\n  padding-top: 0.2rem;\n}\n.inner .inner-header h4[data-v-3fd38ca3] {\n  margin: 0;\n  text-align: left;\n  padding-top: 1rem;\n}\n.inner[data-v-3fd38ca3]:hover {\n  -webkit-clip-path: circle(75%);\n          clip-path: circle(75%);\n}\n#thumbs-up path[data-v-3fd38ca3]:nth-child(odd) {\n  fill: none;\n  stroke: white;\n  stroke-width: 2;\n  stroke-miterlimit: 10;\n  stroke-dasharray: 134.7793579102;\n  stroke-dashoffset: 134.7793579102;\n}\n#thumbs-up path[data-v-3fd38ca3]:nth-child(even) {\n  fill: none;\n  stroke: white;\n  stroke-width: 2;\n  stroke-miterlimit: 10;\n  stroke-dasharray: 633.6428833008;\n  stroke-dashoffset: 633.6428833008;\n}\n.inner:hover .st0[data-v-3fd38ca3] {\n  -webkit-animation-name: line-anim-data-v-3fd38ca3,fill-white-data-v-3fd38ca3;\n          animation-name: line-anim-data-v-3fd38ca3,fill-white-data-v-3fd38ca3;\n  -webkit-animation-duration: 1s, 1s;\n          animation-duration: 1s, 1s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 0.4s, 0.4s;\n          animation-delay: 0.4s, 0.4s;\n}\n.inner.bg-stage9 #lightbulb[data-v-3fd38ca3] {\n  fill: black;\n}\n.inner.bg-stage9 h4[data-v-3fd38ca3] {\n  color: black;\n}\n.inner.bg-stage9 #thumbs-up .st0[data-v-3fd38ca3] {\n  stroke: black;\n}\n.inner.bg-stage9:hover .st0[data-v-3fd38ca3] {\n  -webkit-animation-name: line-anim-data-v-3fd38ca3,fill-black-data-v-3fd38ca3;\n          animation-name: line-anim-data-v-3fd38ca3,fill-black-data-v-3fd38ca3;\n}\n.stage-courses[data-v-3fd38ca3] {\n  display: flex;\n  flex-wrap: wrap;\n  width: 100%;\n}\n.stage-courses > .stage-course[data-v-3fd38ca3] {\n  min-height: 240px;\n  min-width: 260px;\n  max-width: 260px;\n  border-radius: 10px;\n  margin-top: 1.8rem;\n  box-shadow: 1rem 0 3rem #000;\n}\n.stage-courses > .stage-course .card-body > h5[data-v-3fd38ca3] {\n  font-size: 1.4rem;\n}\nh5.card-title > a[data-v-3fd38ca3] {\n  color: white;\n  text-decoration: none;\n}\nh5.card-title > a[data-v-3fd38ca3]:hover {\n  color: #cccccc;\n}\n.bg-stage9 a[data-v-3fd38ca3] {\n  color: black !important;\n}\n.course-completed[data-v-3fd38ca3] {\n  background-color: silver;\n  opacity: 0.8;\n}\n.card-footer[data-v-3fd38ca3] {\n  display: flex;\n  justify-content: space-between;\n}\n.empty-stage[data-v-3fd38ca3] {\n  width: 100%;\n  margin: auto;\n  text-align: center;\n}\n.left-arrow[data-v-3fd38ca3], .right-arrow[data-v-3fd38ca3] {\n  cursor: pointer;\n}\n.delete-btn[data-v-3fd38ca3] {\n  cursor: pointer;\n}", ""]);
 
 // exports
 
@@ -3024,7 +3036,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.st0{\r\n  fill:none;\n}\n.st1{\r\n  fill:#038A51;stroke:#058B38;stroke-width:0.2;stroke-miterlimit:10;\n}\r\n\r\n", ""]);
+exports.push([module.i, "\n.arrow-container {\r\n  width: 100%;\r\n  text-align: center;\n}\n.st0{\r\n  fill:none;\n}\n.st1{\r\n  fill:#038A51;stroke:#058B38;stroke-width:0.2;stroke-miterlimit:10;\n}\r\n\r\n", ""]);
 
 // exports
 
@@ -5297,41 +5309,43 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "svg",
-    {
-      staticClass: "arrow",
-      staticStyle: { "enable-background": "new 0 0 6.8 8.5" },
-      attrs: {
-        version: "1.1",
-        id: "Layer_1",
-        xmlns: "http://www.w3.org/2000/svg",
-        "xmlns:xlink": "http://www.w3.org/1999/xlink",
-        x: "0px",
-        y: "0px",
-        height: "50px",
-        weight: "50px",
-        viewBox: "0 0 6.8 8.5",
-        "xml:space": "preserve"
-      }
-    },
-    [
-      _c("rect", {
-        staticClass: "st0",
-        attrs: { width: "6.8", height: "6.8" }
-      }),
-      _vm._v(" "),
-      _c("g", [
-        _c("path", {
-          staticClass: "st1",
-          attrs: {
-            d:
-              "M2.3,1.1v2.3c0,0,0,0.1-0.1,0.1h-1l2.3,2.3l2.3-2.3h-1c0,0-0.1,0-0.1-0.1V1.1L3.5,2.2l0,0c0,0-0.1,0-0.1,0l0,0\n      L2.3,1.1C2.3,1.1,2.3,1.1,2.3,1.1z M2.1,3.3V0.9h0c0,0,0,0,0-0.1c0,0,0.1,0,0.1,0l0,0l1.2,1.2l1.2-1.2c0,0,0,0,0.1,0\n      c0,0,0.1,0,0.1,0.1v2.4h1.2v0c0,0,0,0,0.1,0c0,0,0,0.1,0,0.1l0,0L3.5,5.9l0,0c0,0-0.1,0-0.1,0l0,0L0.9,3.5c0,0,0,0,0-0.1\n      c0,0,0-0.1,0.1-0.1L2.1,3.3C2.1,3.3,2.1,3.3,2.1,3.3z"
-          }
-        })
-      ])
-    ]
-  )
+  return _c("div", { staticClass: "arrow-container" }, [
+    _c(
+      "svg",
+      {
+        staticClass: "arrow pt-3",
+        staticStyle: { "enable-background": "new 0 0 6.8 8.5" },
+        attrs: {
+          version: "1.1",
+          id: "Layer_1",
+          xmlns: "http://www.w3.org/2000/svg",
+          "xmlns:xlink": "http://www.w3.org/1999/xlink",
+          x: "0px",
+          y: "0px",
+          height: "120px",
+          weight: "120px",
+          viewBox: "0 0 6.8 8.5",
+          "xml:space": "preserve"
+        }
+      },
+      [
+        _c("rect", {
+          staticClass: "st0",
+          attrs: { width: "6.8", height: "6.8" }
+        }),
+        _vm._v(" "),
+        _c("g", [
+          _c("path", {
+            staticClass: "st1",
+            attrs: {
+              d:
+                "M2.3,1.1v2.3c0,0,0,0.1-0.1,0.1h-1l2.3,2.3l2.3-2.3h-1c0,0-0.1,0-0.1-0.1V1.1L3.5,2.2l0,0c0,0-0.1,0-0.1,0l0,0\n        L2.3,1.1C2.3,1.1,2.3,1.1,2.3,1.1z M2.1,3.3V0.9h0c0,0,0,0,0-0.1c0,0,0.1,0,0.1,0l0,0l1.2,1.2l1.2-1.2c0,0,0,0,0.1,0\n        c0,0,0.1,0,0.1,0.1v2.4h1.2v0c0,0,0,0,0.1,0c0,0,0,0.1,0,0.1l0,0L3.5,5.9l0,0c0,0-0.1,0-0.1,0l0,0L0.9,3.5c0,0,0,0,0-0.1\n        c0,0,0-0.1,0.1-0.1L2.1,3.3C2.1,3.3,2.1,3.3,2.1,3.3z"
+            }
+          })
+        ])
+      ]
+    )
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -5355,58 +5369,76 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    { staticClass: "course-list" },
-    _vm._l(_vm.courses, function(course) {
-      return _c(
-        "div",
-        {
-          key: course.id,
-          staticClass: "course-card",
-          class: "border-stage" + course.stage
-        },
-        [
-          _c("div", { staticClass: "card-header" }, [
-            _vm._v("Stage " + _vm._s(course.stage))
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "card-body" }, [
-            _c("h5", { staticClass: "card-title" }, [
-              _c("a", { attrs: { href: course.url, target: "_blank" } }, [
-                _vm._v(_vm._s(course.title))
-              ])
-            ]),
-            _vm._v(" "),
-            _c("p", { staticClass: "card-text" }, [
-              _vm._v(_vm._s(course.creator))
-            ]),
-            _vm._v(" "),
-            _c("p", { staticClass: "card-text" }, [
-              _vm._v(_vm._s(course.hours) + " Hours")
-            ]),
-            _vm._v(" "),
-            _c(
+  return _c("div", [
+    _vm.courses.length > 0
+      ? _c(
+          "div",
+          { staticClass: "course-list" },
+          _vm._l(_vm.courses, function(course) {
+            return _c(
               "div",
               {
-                staticClass: "add-btn",
-                class: "bg-stage" + course.stage,
-                on: {
-                  click: function($event) {
-                    return _vm.addCourseToRoadmap(course)
-                  }
-                }
+                key: course.id,
+                staticClass: "course-card",
+                class: "border-stage" + course.stage
               },
-              [_c("i", { staticClass: "fas fa-plus fa-2x" })]
+              [
+                _c("div", { staticClass: "card-header" }, [
+                  _vm._v("Stage " + _vm._s(course.stage))
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "card-body" }, [
+                  _c("h5", { staticClass: "card-title" }, [
+                    _c("a", { attrs: { href: course.url, target: "_blank" } }, [
+                      _vm._v(_vm._s(course.title))
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "card-text" }, [
+                    _vm._v(_vm._s(course.creator))
+                  ]),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "card-text" }, [
+                    _vm._v(_vm._s(course.hours) + " Hours")
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass: "add-btn",
+                      class: "bg-stage" + course.stage,
+                      on: {
+                        click: function($event) {
+                          return _vm.addCourseToRoadmap(course)
+                        }
+                      }
+                    },
+                    [_c("i", { staticClass: "fas fa-plus fa-2x" })]
+                  )
+                ])
+              ]
             )
-          ])
-        ]
-      )
-    }),
-    0
-  )
+          }),
+          0
+        )
+      : _vm._e(),
+    _vm._v(" "),
+    _vm.courses.length === 0
+      ? _c("div", { staticClass: "empty-courselist" }, [_vm._m(0)])
+      : _vm._e()
+  ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("h4", [
+      _vm._v("All courses added!"),
+      _c("i", { staticClass: "far fa-smile pl-4" })
+    ])
+  }
+]
 render._withStripped = true
 
 
@@ -6180,15 +6212,17 @@ var render = function() {
         _vm._v(" "),
         _c("Stage", { attrs: { stage: 9 } }),
         _vm._v(" "),
-        _c("h3", { staticClass: "my-4 py-4" }, [
-          _vm._v("Total Hours: " + _vm._s(_vm.calcTotalHours))
-        ]),
-        _vm._v(" "),
-        _c("h5", { staticClass: "mt-4" }, [
-          _vm._v("Hours Remaining: " + _vm._s(_vm.calcTotalHoursRemaining))
-        ]),
-        _vm._v(" "),
-        _c("h6", [_vm._v(" Double click a course to mark as complete")])
+        _c("div", { attrs: { id: "total-hours" } }, [
+          _c("h3", { staticClass: "my-4 py-4" }, [
+            _vm._v("Total Hours: " + _vm._s(_vm.calcTotalHours))
+          ]),
+          _vm._v(" "),
+          _c("h5", { staticClass: "mt-4" }, [
+            _vm._v("Hours Remaining: " + _vm._s(_vm.calcTotalHoursRemaining))
+          ]),
+          _vm._v(" "),
+          _c("h6", [_vm._v(" Double click a course to mark as complete")])
+        ])
       ],
       1
     )

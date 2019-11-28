@@ -38,4 +38,10 @@ body {
   background-color:#f3dede !important;
   border-color:#f3dede !important;
 }
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1150px;
+  }
+}
 </style>

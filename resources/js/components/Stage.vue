@@ -163,6 +163,9 @@ export default {
 
 .stage {
   display: flex;
+  box-shadow: 1rem 0 3rem #000;
+  padding: 0 0.3rem 1rem 0;
+  border-radius: 10px;
 }
 
 .stage-heading {
@@ -315,6 +318,7 @@ export default {
   min-width: 260px;
   max-width: 260px;
   border-radius: 10px;
+  margin-top: 1.8rem;
   box-shadow: 1rem 0 3rem #000;
 
   .card-body > h5 {

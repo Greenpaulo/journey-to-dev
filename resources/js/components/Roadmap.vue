@@ -51,9 +51,11 @@
       <Arrow/> 
       <Stage :stage="9"></Stage>
 
-      <h3 class="my-4 py-4">Total Hours: {{calcTotalHours}}</h3>
-      <h5 class="mt-4">Hours Remaining: {{calcTotalHoursRemaining}}</h5>
-      <h6> Double click a course to mark as complete</h6>
+      <div id="total-hours">
+        <h3 class="my-4 py-4">Total Hours: {{calcTotalHours}}</h3>
+        <h5 class="mt-4">Hours Remaining: {{calcTotalHoursRemaining}}</h5>
+        <h6> Double click a course to mark as complete</h6>
+      </div>
     </section>
 
 
@@ -170,9 +172,9 @@ export default {
   color: black;
 }
 
-
-
-// Tooltip
+#total-hours {
+  text-align: center;
+}
 
 
 </style>
