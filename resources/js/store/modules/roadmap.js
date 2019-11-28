@@ -183,9 +183,9 @@ const actions = {
             dispatch('retrieveRoadmap')
               .then(res => {
                 // Call getRoadmapByStage action to get an updated stage roadmap, which will update the computed property in the stage component to update the UI
-                dispatch('getRoadmapByStage', course.stage);
-                dispatch('getUserCourseList');
-                dispatch('getUserCoursesByStage', course.stage);
+                dispatch('retrieveRoadmapByStage', course.stage);
+                dispatch('retrieveUserCourseList');
+                dispatch('retrieveUserCoursesByStage', course.stage);
               })
           })
         })
