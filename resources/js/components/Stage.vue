@@ -101,6 +101,7 @@ export default {
 
 @import 'resources/sass/variables';
 @import 'resources/sass/colors';
+@import 'resources/sass/animations';
 
 
 .stage {
@@ -177,21 +178,6 @@ export default {
   animation-fill-mode: forwards;
   animation-timing-function: ease;
   animation-delay: 0.5s, 0.5s;
-}
-
-@keyframes line-anim {
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
-@keyframes fill-white {
-  from {
-    fill: transparent;
-  }
-  to {
-    fill: white;
-  }
 }
               
 

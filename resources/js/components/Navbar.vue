@@ -69,15 +69,18 @@ import { mapActions, mapGetters } from 'vuex';
 
 .navbar-brand {
   font-size: 1.9rem !important;
-  // font-weight: bolder;
-  // // background: linear-gradient(-92deg, lighten($stage1, 40%), $stage9);
-  // background: radial-gradient(lighten($stage1, 30%), $stage9);
-  // color: transparent;
-  // -webkit-background-clip: text;
-  // background-clip: text;
+  // color: white;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
   // display: inline;
+  // background: radial-gradient(lighten($stage1, 30%), $stage9);
   // animation: hue 60s linear infinite;
-  color: white;
+  background-image: linear-gradient(45deg, $stage9, $stage9, $stage1, $stage2, $stage3, $stage4, $stage5, $stage6, $stage7, $stage8);
+  // To animation the background-image, we need to make the background size mush bigger than the text, and then animate the background position
+  background-size: 1000%;
+  animation: bg-animation 300s infinite alternate;
+  
 }
 
 .nav-item {

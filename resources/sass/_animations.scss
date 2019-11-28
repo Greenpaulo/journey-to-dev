@@ -8,3 +8,88 @@
     filter: hue-rotate(-360deg);
   }
 }
+
+// Background gradient animation - for backgrounds of anything e.g. text, buttons, body
+@keyframes bg-animation {
+  0% { background-position: left;}
+  100% {background-position: right;}
+}
+
+@keyframes line-anim{
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fill-red {
+  from   {
+    fill: transparent;
+  }
+  to {
+    fill: lighten(#CC0000, 10%);
+  }
+}
+@keyframes fill-orange {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill:lighten(rgb(255,165,0), 10%);
+  }
+}
+@keyframes fill-orangered {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: lighten(rgb(255,69,0), 10%);
+  }
+}
+@keyframes fill-green {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: lighten(#77B300, 10%);
+  }
+}
+@keyframes fill-blue {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: lighten(#2A9FD6, 10%);
+  }
+}
+@keyframes fill-teal {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: lighten(#20c997, 10%);
+  }
+}
+@keyframes fill-pink {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: lighten(#e83e8c, 10%);
+  }
+}
+@keyframes fill-cyan {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: lighten(#9933CC, 10%);
+  }
+}
+@keyframes fill-white {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: white;
+  }
+}

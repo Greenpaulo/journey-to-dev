@@ -19,7 +19,7 @@
 
         <path d="M594.477 13.7344H561.57V105H548.141V13.7344H515.305V2.625H594.477V13.7344Z" stroke="#9933CC" stroke-width="5"/>
 
-        <path d="M597.148 66.2578C597.148 58.8047 598.602 52.1016 601.508 46.1484C604.461 40.1953 608.539 35.6016 613.742 32.3672C618.992 29.1328 624.969 27.5156 631.672 27.5156C642.031 27.5156 650.398 31.1016 656.773 38.2734C663.195 45.4453 666.406 54.9844 666.406 66.8906V67.8047C666.406 75.2109 664.977 81.8672 662.117 87.7734C659.305 93.6328 655.25 98.2031 649.953 101.484C644.703 104.766 638.656 106.406 631.812 106.406C621.5 106.406 613.133 102.82 606.711 95.6484C600.336 88.4766 597.148 78.9844 597.148 67.1719V66.2578ZM610.227 67.8047C610.227 76.2422 612.172 83.0156 616.062 88.125C620 93.2344 625.25 95.7891 631.812 95.7891C638.422 95.7891 643.672 93.2109 647.562 88.0547C651.453 82.8516 653.398 75.5859 653.398 66.2578C653.398 57.9141 651.406 51.1641 647.422 46.0078C643.484 40.8047 638.234 38.2031 631.672 38.2031C625.25 38.2031 620.07 40.7578 616.133 45.8672C612.195 50.9766 610.227 58.2891 610.227 67.8047Z" stroke="white" stroke-width="5"/>
+        <path d="M597.148 66.2578C597.148 58.8047 598.602 52.1016 601.508 46.1484C604.461 40.1953 608.539 35.6016 613.742 32.3672C618.992 29.1328 624.969 27.5156 631.672 27.5156C642.031 27.5156 650.398 31.1016 656.773 38.2734C663.195 45.4453 666.406 54.9844 666.406 66.8906V67.8047C666.406 75.2109 664.977 81.8672 662.117 87.7734C659.305 93.6328 655.25 98.2031 649.953 101.484C644.703 104.766 638.656 106.406 631.812 106.406C621.5 106.406 613.133 102.82 606.711 95.6484C600.336 88.4766 597.148 78.9844 597.148 67.1719V66.2578ZM610.227 67.8047C610.227 76.2422 612.172 83.0156 616.062 88.125C620 93.2344 625.25 95.7891 631.812 95.7891C638.422 95.7891 643.672 93.2109 647.562 88.0547C651.453 82.8516 653.398 75.5859 653.398 66.2578C653.398 57.9141 651.406 51.1641 647.422 46.0078C643.484 40.8047 638.234 38.2031 631.672 38.2031C625.25 38.2031 620.07 40.7578 616.133 45.8672C612.195 50.9766 610.227 58.2891 610.227 67.8047Z" stroke="#DDD" stroke-width="5"/>
 
         <path d="M684.758 105V2.625H713.656C722.562 2.625 730.438 4.59375 737.281 8.53125C744.125 12.4688 749.398 18.0703 753.102 25.3359C756.852 32.6016 758.75 40.9453 758.797 50.3672V56.9062C758.797 66.5625 756.922 75.0234 753.172 82.2891C749.469 89.5547 744.148 95.1328 737.211 99.0234C730.32 102.914 722.281 104.906 713.094 105H684.758ZM698.258 13.7344V93.9609H712.461C722.867 93.9609 730.953 90.7266 736.719 84.2578C742.531 77.7891 745.438 68.5781 745.438 56.625V50.6484C745.438 39.0234 742.695 30 737.211 23.5781C731.773 17.1094 724.039 13.8281 714.008 13.7344H698.258Z" stroke="#CC0000" stroke-width="5"/>
 
@@ -29,11 +29,11 @@
       </svg>
     </div>
     
-    <div id="buttons" v-if="isLoggedIn === false">
-      <router-link class="btn btn-info btn-lg" to="/login" role="button">Login</router-link>
-      <router-link class="btn btn-primary btn-lg" to="/register" role="button">Register</router-link>
-      <router-link class="btn btn-success btn-lg" to="/thejourney" role="button">Find Out More</router-link>
-    
+    <div id="buttons">
+      <router-link v-if="isLoggedIn === false" class="btn btn-info btn-lg" to="/login" role="button">Login</router-link>
+      <router-link v-if="isLoggedIn === false" class="btn btn-primary btn-lg" to="/register" role="button">Register</router-link>
+      <router-link v-if="isLoggedIn === false" class="btn btn-success btn-lg" to="/thejourney" role="button">Find Out More</router-link>
+      <router-link v-if="isLoggedIn" class="btn btn-success btn-lg" to="/roadmap" role="button">Get Started</router-link>
     </div>
   </section>
 </template>
@@ -58,6 +58,9 @@ export default {
 </script>
 
 <style lang="scss">
+
+@import 'resources/sass/animations';
+
 
 #welcome-page {
   position: relative;
@@ -84,7 +87,7 @@ export default {
   animation-duration: 0.75s, 3s;
   animation-fill-mode: forwards;
   animation-timing-function: ease;
-  animation-delay: 0s, 3.5s;
+  animation-delay: 0s, 2.4s;
 }
 
 #logo path:nth-child(2){
@@ -94,7 +97,7 @@ export default {
   animation-duration: 0.75s, 3s;
   animation-fill-mode: forwards;
   animation-timing-function: ease;
-  animation-delay: 0.3s, 3.5s;
+  animation-delay: 0.2s, 2.4s;
 }
 
 #logo path:nth-child(3){
@@ -104,7 +107,7 @@ export default {
   animation-duration: 0.75s, 3s;
   animation-fill-mode: forwards;
   animation-timing-function: ease;
-  animation-delay: 0.6s, 3.5s;
+  animation-delay: 0.4s, 2.4s;
 }
 
 #logo path:nth-child(4){
@@ -114,7 +117,7 @@ export default {
   animation-duration: 0.75s, 3s;
   animation-fill-mode: forwards;
   animation-timing-function: ease;
-  animation-delay: 0.9s, 3.5s;
+  animation-delay: 0.6s, 2.4s;
 }
 
 #logo path:nth-child(5){
@@ -124,7 +127,7 @@ export default {
   animation-duration: 0.75s, 3s;
   animation-fill-mode: forwards;
   animation-timing-function: ease;
-  animation-delay: 1.2s, 3.5s;
+  animation-delay: 0.8s, 2.4s;
 }
 
 #logo path:nth-child(6){
@@ -134,7 +137,7 @@ export default {
   animation-duration: 0.75s, 3s;
   animation-fill-mode: forwards;
   animation-timing-function: ease;
-  animation-delay: 1.5s, 3.5s;
+  animation-delay: 1s, 2.4s;
 }
 
 #logo path:nth-child(7){
@@ -144,7 +147,7 @@ export default {
   animation-duration: 0.75s, 3s;
   animation-fill-mode: forwards;
   animation-timing-function: ease;
-  animation-delay: 1.8s, 3.5s;
+  animation-delay: 1.2s, 2.4s;
 }
 
 #logo path:nth-child(8){
@@ -154,7 +157,7 @@ export default {
   animation-duration: 0.75s, 3s;
   animation-fill-mode: forwards;
   animation-timing-function: ease;
-  animation-delay: 2.1s, 3.5s;
+  animation-delay: 1.4s, 2.4s;
 }
 
 #logo path:nth-child(9){
@@ -164,7 +167,7 @@ export default {
   animation-duration: 0.75s, 3s;
   animation-fill-mode: forwards;
   animation-timing-function: ease;
-  animation-delay: 2.4s, 3.5s;
+  animation-delay: 1.6s, 2.4s;
 }
 
 #logo path:nth-child(10){
@@ -174,7 +177,7 @@ export default {
   animation-duration: 0.75s, 3s;
   animation-fill-mode: forwards;
   animation-timing-function: ease;
-  animation-delay: 2.7s, 3.5s;
+  animation-delay: 1.8s, 2.4s;
 }
 
 #logo path:nth-child(11){
@@ -184,7 +187,7 @@ export default {
   animation-duration: 0.75s, 3s;
   animation-fill-mode: forwards;
   animation-timing-function: ease;
-  animation-delay: 3s, 3.5s;
+  animation-delay: 2s, 2.4s;
 }
 
 #logo path:nth-child(12){
@@ -194,86 +197,7 @@ export default {
   animation-duration: 0.75s, 3s;
   animation-fill-mode: forwards;
   animation-timing-function: ease;
-  animation-delay: 3.3s, 3.5s;
-}
-
-@keyframes line-anim{
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
-@keyframes fill-red {
-  from   {
-    fill: transparent;
-  }
-  to {
-    fill: #CC0000;
-  }
-}
-@keyframes fill-orange {
-  from {
-    fill: transparent;
-  }
-  to {
-    fill:rgb(255,165,0);
-  }
-}
-@keyframes fill-orangered {
-  from {
-    fill: transparent;
-  }
-  to {
-    fill: rgb(255,69,0);
-  }
-}
-@keyframes fill-green {
-  from {
-    fill: transparent;
-  }
-  to {
-    fill: #77B300;
-  }
-}
-@keyframes fill-blue {
-  from {
-    fill: transparent;
-  }
-  to {
-    fill: #2A9FD6;
-  }
-}
-@keyframes fill-teal {
-  from {
-    fill: transparent;
-  }
-  to {
-    fill: #20c997;
-  }
-}
-@keyframes fill-pink {
-  from {
-    fill: transparent;
-  }
-  to {
-    fill: #e83e8c;
-  }
-}
-@keyframes fill-cyan {
-  from {
-    fill: transparent;
-  }
-  to {
-    fill: #9933CC;
-  }
-}
-@keyframes fill-white {
-  from {
-    fill: transparent;
-  }
-  to {
-    fill: white;
-  }
+  animation-delay: 2.2s, 2.4s;
 }
 
 </style>
