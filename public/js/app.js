@@ -1850,6 +1850,7 @@ module.exports = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Footer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Footer */ "./resources/js/components/Footer.vue");
 //
 //
 //
@@ -1892,8 +1893,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'About'
+  name: 'About',
+  components: {
+    Footer: _Footer__WEBPACK_IMPORTED_MODULE_0__["default"]
+  }
 });
 
 /***/ }),
@@ -2001,6 +2009,34 @@ __webpack_require__.r(__webpack_exports__);
   methods: Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapActions"])(['addCourseToRoadmap', 'retrieveUserCoursesByStage']),
   mounted: function mounted() {
     console.log(this.courses.length);
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Footer.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Footer.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: 'Footer',
+  computed: {
+    getYear: function getYear() {
+      var year = new Date().getFullYear();
+      return year;
+    }
   }
 });
 
@@ -2211,7 +2247,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _CourseList__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./CourseList */ "./resources/js/components/CourseList.vue");
 /* harmony import */ var _Stage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Stage */ "./resources/js/components/Stage.vue");
 /* harmony import */ var _Arrow__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Arrow */ "./resources/js/components/Arrow.vue");
-/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+/* harmony import */ var _Footer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Footer */ "./resources/js/components/Footer.vue");
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(source, true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(source).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -2287,12 +2324,22 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+
 
 
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Roadmap",
+  components: {
+    CourseList: _CourseList__WEBPACK_IMPORTED_MODULE_0__["default"],
+    Stage: _Stage__WEBPACK_IMPORTED_MODULE_1__["default"],
+    Arrow: _Arrow__WEBPACK_IMPORTED_MODULE_2__["default"],
+    Footer: _Footer__WEBPACK_IMPORTED_MODULE_3__["default"]
+  },
   data: function data() {
     return {
       stageTitle: "HTML & CSS",
@@ -2329,7 +2376,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     //   .from('.select-links', {backgroundColor: '#ffffff', duration: 2}, 'drop');
     // tl.play();
   },
-  computed: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_3__["mapGetters"])({
+  computed: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_4__["mapGetters"])({
     userCourseList: 'getUserCourseList',
     name: 'getName',
     stage: 'getCurrentStage'
@@ -2402,12 +2449,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     // }
 
   }),
-  methods: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_3__["mapActions"])(['loadInitialUserData', 'retrieveUserCoursesByStage'])),
-  components: {
-    CourseList: _CourseList__WEBPACK_IMPORTED_MODULE_0__["default"],
-    Stage: _Stage__WEBPACK_IMPORTED_MODULE_1__["default"],
-    Arrow: _Arrow__WEBPACK_IMPORTED_MODULE_2__["default"]
-  }
+  methods: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_4__["mapActions"])(['loadInitialUserData', 'retrieveUserCoursesByStage']))
 });
 
 /***/ }),
@@ -2620,6 +2662,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Footer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Footer */ "./resources/js/components/Footer.vue");
 //
 //
 //
@@ -2833,8 +2876,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'TheJourney'
+  name: 'TheJourney',
+  components: {
+    Footer: _Footer__WEBPACK_IMPORTED_MODULE_0__["default"]
+  }
 });
 
 /***/ }),
@@ -2962,6 +3012,25 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 // module
 exports.push([module.i, ".bg-stage1[data-v-9d6850f8] {\n  background-color: #CC0000;\n}\n.bg-stage2[data-v-9d6850f8] {\n  background-color: orange;\n}\n.bg-stage3[data-v-9d6850f8] {\n  background-color: orangered;\n}\n.bg-stage4[data-v-9d6850f8] {\n  background-color: #77B300;\n}\n.bg-stage5[data-v-9d6850f8] {\n  background-color: #2A9FD6;\n}\n.bg-stage6[data-v-9d6850f8] {\n  background-color: #20c997;\n}\n.bg-stage7[data-v-9d6850f8] {\n  background-color: #e83e8c;\n}\n.bg-stage8[data-v-9d6850f8] {\n  background-color: #9933CC;\n}\n.bg-stage9[data-v-9d6850f8] {\n  background-color: #fff;\n  color: black !important;\n}\n.border-stage1[data-v-9d6850f8] {\n  border-top: 8px solid #CC0000;\n  border-right: 8px solid #CC0000;\n}\n.border-stage2[data-v-9d6850f8] {\n  border-top: 8px solid orange;\n  border-right: 8px solid orange;\n}\n.border-stage3[data-v-9d6850f8] {\n  border-top: 8px solid orangered;\n  border-right: 8px solid orangered;\n}\n.border-stage4[data-v-9d6850f8] {\n  border-top: 8px solid #77B300;\n  border-right: 8px solid #77B300;\n}\n.border-stage5[data-v-9d6850f8] {\n  border-top: 8px solid #2A9FD6;\n  border-right: 8px solid #2A9FD6;\n}\n.border-stage6[data-v-9d6850f8] {\n  border-top: 8px solid #20c997;\n  border-right: 8px solid #20c997;\n}\n.border-stage7[data-v-9d6850f8] {\n  border-top: 8px solid #e83e8c;\n  border-right: 8px solid #e83e8c;\n}\n.border-stage8[data-v-9d6850f8] {\n  border-top: 8px solid #9933CC;\n  border-right: 8px solid #9933CC;\n}\n.border-stage9[data-v-9d6850f8] {\n  border-top: 8px solid #fff;\n  border-right: 8px solid #ffff;\n}\n.text-orangered[data-v-9d6850f8] {\n  color: orangered !important;\n}\n.text-orange[data-v-9d6850f8] {\n  color: orange !important;\n}\n.text-purple[data-v-9d6850f8] {\n  color: #6f42c1 !important;\n}\n.text-teal[data-v-9d6850f8] {\n  color: #20c997 !important;\n}\n.text-pink[data-v-9d6850f8] {\n  color: #e83e8c !important;\n}\n.course-list[data-v-9d6850f8] {\n  display: flex;\n  padding: 3rem;\n  overflow-x: scroll;\n  -webkit-overflow-scrolling: touch;\n}\n.course-card[data-v-9d6850f8] {\n  background-color: #17141d;\n  min-width: 300px;\n  max-width: 300px;\n  min-height: 350px;\n  box-shadow: -1rem 0 3rem #000;\n  border-width: 4px;\n  border-radius: 16px;\n  padding: 1.5rem;\n  transition-property: all;\n  transition-duration: 0.2s;\n  transition-timing-function: ease;\n  transition-delay: 0s;\n}\n.course-card[data-v-9d6850f8]:not(:first-child) {\n  margin-left: -130px;\n}\n.course-card h2[data-v-9d6850f8] {\n  color: white;\n}\n.course-card[data-v-9d6850f8]:hover {\n  transform: translate(0, -1rem);\n}\n.course-card:hover ~ .course-card[data-v-9d6850f8] {\n  transform: translateX(130px);\n}\n.course-list > .card-body[data-v-9d6850f8] {\n  padding: 1.25 0;\n}\n.course-list[data-v-9d6850f8]::-webkit-scrollbar {\n  width: 10px;\n  height: 15px;\n}\n.course-list[data-v-9d6850f8]::-webkit-scrollbar-thumb {\n  background: #201c29;\n  border-radius: 10px;\n  box-shadow: inset 2px 2px 2px rgba(255, 255, 255, 0.25), inset -2px -2px 2px rgba(0, 0, 0, 0.25);\n}\n.course-list[data-v-9d6850f8]::-webkit-scrollbar-track {\n  background: linear-gradient(to right, #201c29, #201c29 1px, #17141d 1px, #17141d);\n}\n.add-btn[data-v-9d6850f8] {\n  width: 50px;\n  height: 50px;\n  border-radius: 50%;\n  cursor: pointer;\n}\n.bg-stage9 i.fa-plus[data-v-9d6850f8] {\n  color: black;\n}\ni.fa-plus[data-v-9d6850f8] {\n  padding-top: 11px;\n  padding-left: 13px;\n  width: 50px;\n  height: 50px;\n  color: white;\n}\nh5.card-title > a[data-v-9d6850f8] {\n  color: white;\n  text-decoration: none;\n}\nh5.card-title > a[data-v-9d6850f8]:hover {\n  color: #cccccc;\n}\n.empty-courselist[data-v-9d6850f8] {\n  text-align: center;\n  padding-top: 3rem;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Footer.vue?vue&type=style&index=0&id=61a7c374&lang=scss&scoped=true&":
+/*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Footer.vue?vue&type=style&index=0&id=61a7c374&lang=scss&scoped=true& ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "#footer[data-v-61a7c374] {\n  background-color: #020009;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  text-align: center;\n}\n#footer a[data-v-61a7c374] {\n  color: #d9d9d9;\n}", ""]);
 
 // exports
 
@@ -4430,6 +4499,36 @@ if(false) {}
 
 /***/ }),
 
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Footer.vue?vue&type=style&index=0&id=61a7c374&lang=scss&scoped=true&":
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Footer.vue?vue&type=style&index=0&id=61a7c374&lang=scss&scoped=true& ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/css-loader!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--7-2!../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../node_modules/vue-loader/lib??vue-loader-options!./Footer.vue?vue&type=style&index=0&id=61a7c374&lang=scss&scoped=true& */ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Footer.vue?vue&type=style&index=0&id=61a7c374&lang=scss&scoped=true&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Navbar.vue?vue&type=style&index=0&id=6dde423b&lang=scss&scoped=true&":
 /*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/style-loader!./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Navbar.vue?vue&type=style&index=0&id=6dde423b&lang=scss&scoped=true& ***!
@@ -5250,7 +5349,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", [_vm._m(0), _vm._v(" "), _c("Footer")], 1)
 }
 var staticRenderFns = [
   function() {
@@ -5513,6 +5612,38 @@ var staticRenderFns = [
     ])
   }
 ]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Footer.vue?vue&type=template&id=61a7c374&scoped=true&":
+/*!*********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Footer.vue?vue&type=template&id=61a7c374&scoped=true& ***!
+  \*********************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "p-5 mt-5", attrs: { id: "footer" } }, [
+    _c("h5", [_vm._v("JourneyToDev ©" + _vm._s(_vm.getYear))]),
+    _vm._v(" "),
+    _c(
+      "h6",
+      [_c("router-link", { attrs: { to: "about" } }, [_vm._v("Contact")])],
+      1
+    )
+  ])
+}
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -6052,267 +6183,294 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container my-5" }, [
+  return _c("div", [
     this.userCourseList.length !== 0
-      ? _c("div", { attrs: { id: "roadmap-page" } }, [
-          _c("h1", { staticClass: "display-4 pt-4 pb-5 my-5 text-center" }, [
-            _vm._v(_vm._s(_vm.name) + "'s Roadmap")
-          ]),
-          _vm._v(" "),
-          _c(
-            "section",
-            { staticClass: "course-selector mt-5" },
-            [
-              _c(
-                "div",
-                { staticClass: "pb-4 mt-3", attrs: { id: "select-menu" } },
-                [
-                  _c("ul", { attrs: { id: "select-menu-links" } }, [
-                    _c(
-                      "li",
-                      {
-                        staticClass: "select-links btn bg-stage1 text-white",
-                        attrs: {
-                          "data-toggle": "tooltip",
-                          "data-placement": "top",
-                          title: "HTML & CSS"
-                        },
-                        on: {
-                          click: function($event) {
-                            return _vm.retrieveUserCoursesByStage(1)
-                          }
-                        }
-                      },
-                      [_vm._v("Stage 1")]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "li",
-                      {
-                        staticClass: "select-links btn bg-stage2 text-white",
-                        attrs: {
-                          "data-toggle": "tooltip",
-                          "data-placement": "top",
-                          title: "CSS Frameworks"
-                        },
-                        on: {
-                          click: function($event) {
-                            return _vm.retrieveUserCoursesByStage(2)
-                          }
-                        }
-                      },
-                      [_vm._v("Stage 2")]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "li",
-                      {
-                        staticClass: "select-links btn bg-stage3 text-white",
-                        attrs: {
-                          "data-toggle": "tooltip",
-                          "data-placement": "top",
-                          title: "JavaScript"
-                        },
-                        on: {
-                          click: function($event) {
-                            return _vm.retrieveUserCoursesByStage(3)
-                          }
-                        }
-                      },
-                      [_vm._v("Stage 3")]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "li",
-                      {
-                        staticClass: "select-links btn bg-stage4 text-white",
-                        attrs: {
-                          "data-toggle": "tooltip",
-                          "data-placement": "top",
-                          title: "Front-End JS Frameworks"
-                        },
-                        on: {
-                          click: function($event) {
-                            return _vm.retrieveUserCoursesByStage(4)
-                          }
-                        }
-                      },
-                      [_vm._v("Stage 4")]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "li",
-                      {
-                        staticClass: "select-links btn bg-stage5 text-white",
-                        attrs: {
-                          "data-toggle": "tooltip",
-                          "data-placement": "top",
-                          title: "Server Side Languages"
-                        },
-                        on: {
-                          click: function($event) {
-                            return _vm.retrieveUserCoursesByStage(5)
-                          }
-                        }
-                      },
-                      [_vm._v("Stage 5")]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "li",
-                      {
-                        staticClass: "select-links btn bg-stage6 text-white",
-                        attrs: {
-                          "data-toggle": "tooltip",
-                          "data-placement": "top",
-                          title: "Databases"
-                        },
-                        on: {
-                          click: function($event) {
-                            return _vm.retrieveUserCoursesByStage(6)
-                          }
-                        }
-                      },
-                      [_vm._v("Stage 6")]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "li",
-                      {
-                        staticClass: "select-links btn bg-stage7 text-white",
-                        attrs: {
-                          "data-toggle": "tooltip",
-                          "data-placement": "top",
-                          title: "Server Side Frameworks"
-                        },
-                        on: {
-                          click: function($event) {
-                            return _vm.retrieveUserCoursesByStage(7)
-                          }
-                        }
-                      },
-                      [_vm._v("Stage 7")]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "li",
-                      {
-                        staticClass: "select-links btn bg-stage8 text-white",
-                        attrs: {
-                          "data-toggle": "tooltip",
-                          "data-placement": "top",
-                          title: "Version Control"
-                        },
-                        on: {
-                          click: function($event) {
-                            return _vm.retrieveUserCoursesByStage(8)
-                          }
-                        }
-                      },
-                      [_vm._v("Stage 8")]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "li",
-                      {
-                        staticClass: "select-links btn btn-stage9 bg-stage9",
-                        attrs: {
-                          "data-toggle": "tooltip",
-                          "data-placement": "top",
-                          title: "Deployment"
-                        },
-                        on: {
-                          click: function($event) {
-                            return _vm.retrieveUserCoursesByStage(9)
-                          }
-                        }
-                      },
-                      [_vm._v("Stage 9")]
-                    )
-                  ])
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "h4",
-                {
-                  staticClass: "mt-5 mb-3",
-                  attrs: { id: "stage-description" }
-                },
-                [
-                  _vm._v(
-                    "Stage " +
-                      _vm._s(_vm.stage) +
-                      " - " +
-                      _vm._s(_vm.getStageTitle) +
-                      ":"
-                  )
-                ]
-              ),
-              _vm._v(" "),
-              _c("h5", [_vm._v("Select Your Courses")]),
-              _vm._v(" "),
-              _c("CourseList")
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "section",
-            { staticClass: "mt-5 pt-5", attrs: { id: "roadmap" } },
-            [
-              _c("Stage", { attrs: { stage: 1 } }),
-              _vm._v(" "),
-              _c("Arrow"),
-              _vm._v(" "),
-              _c("Stage", { attrs: { stage: 2 } }),
-              _vm._v(" "),
-              _c("Arrow"),
-              _vm._v(" "),
-              _c("Stage", { attrs: { stage: 3 } }),
-              _vm._v(" "),
-              _c("Arrow"),
-              _vm._v(" "),
-              _c("Stage", { attrs: { stage: 4 } }),
-              _vm._v(" "),
-              _c("Arrow"),
-              _vm._v(" "),
-              _c("Stage", { attrs: { stage: 5 } }),
-              _vm._v(" "),
-              _c("Arrow"),
-              _vm._v(" "),
-              _c("Stage", { attrs: { stage: 6 } }),
-              _vm._v(" "),
-              _c("Arrow"),
-              _vm._v(" "),
-              _c("Stage", { attrs: { stage: 7 } }),
-              _vm._v(" "),
-              _c("Arrow"),
-              _vm._v(" "),
-              _c("Stage", { attrs: { stage: 8 } }),
-              _vm._v(" "),
-              _c("Arrow"),
-              _vm._v(" "),
-              _c("Stage", { attrs: { stage: 9 } }),
-              _vm._v(" "),
-              _c("div", { attrs: { id: "total-hours" } }, [
-                _c("h3", { staticClass: "my-4 py-4" }, [
-                  _vm._v("Total Hours: " + _vm._s(_vm.calcTotalHours))
-                ]),
+      ? _c(
+          "div",
+          [
+            _c("div", { staticClass: "container my-5" }, [
+              _c("div", { attrs: { id: "roadmap-page" } }, [
+                _c(
+                  "h1",
+                  { staticClass: "display-4 pt-4 pb-5 my-5 text-center" },
+                  [_vm._v(_vm._s(_vm.name) + "'s Roadmap")]
+                ),
                 _vm._v(" "),
-                _c("h5", { staticClass: "mt-4" }, [
-                  _vm._v(
-                    "Hours Remaining: " + _vm._s(_vm.calcTotalHoursRemaining)
-                  )
-                ]),
+                _c(
+                  "section",
+                  { staticClass: "course-selector mt-5" },
+                  [
+                    _c(
+                      "div",
+                      {
+                        staticClass: "pb-4 mt-3",
+                        attrs: { id: "select-menu" }
+                      },
+                      [
+                        _c("ul", { attrs: { id: "select-menu-links" } }, [
+                          _c(
+                            "li",
+                            {
+                              staticClass:
+                                "select-links btn bg-stage1 text-white",
+                              attrs: {
+                                "data-toggle": "tooltip",
+                                "data-placement": "top",
+                                title: "HTML & CSS"
+                              },
+                              on: {
+                                click: function($event) {
+                                  return _vm.retrieveUserCoursesByStage(1)
+                                }
+                              }
+                            },
+                            [_vm._v("Stage 1")]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "li",
+                            {
+                              staticClass:
+                                "select-links btn bg-stage2 text-white",
+                              attrs: {
+                                "data-toggle": "tooltip",
+                                "data-placement": "top",
+                                title: "CSS Frameworks"
+                              },
+                              on: {
+                                click: function($event) {
+                                  return _vm.retrieveUserCoursesByStage(2)
+                                }
+                              }
+                            },
+                            [_vm._v("Stage 2")]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "li",
+                            {
+                              staticClass:
+                                "select-links btn bg-stage3 text-white",
+                              attrs: {
+                                "data-toggle": "tooltip",
+                                "data-placement": "top",
+                                title: "JavaScript"
+                              },
+                              on: {
+                                click: function($event) {
+                                  return _vm.retrieveUserCoursesByStage(3)
+                                }
+                              }
+                            },
+                            [_vm._v("Stage 3")]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "li",
+                            {
+                              staticClass:
+                                "select-links btn bg-stage4 text-white",
+                              attrs: {
+                                "data-toggle": "tooltip",
+                                "data-placement": "top",
+                                title: "Front-End JS Frameworks"
+                              },
+                              on: {
+                                click: function($event) {
+                                  return _vm.retrieveUserCoursesByStage(4)
+                                }
+                              }
+                            },
+                            [_vm._v("Stage 4")]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "li",
+                            {
+                              staticClass:
+                                "select-links btn bg-stage5 text-white",
+                              attrs: {
+                                "data-toggle": "tooltip",
+                                "data-placement": "top",
+                                title: "Server Side Languages"
+                              },
+                              on: {
+                                click: function($event) {
+                                  return _vm.retrieveUserCoursesByStage(5)
+                                }
+                              }
+                            },
+                            [_vm._v("Stage 5")]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "li",
+                            {
+                              staticClass:
+                                "select-links btn bg-stage6 text-white",
+                              attrs: {
+                                "data-toggle": "tooltip",
+                                "data-placement": "top",
+                                title: "Databases"
+                              },
+                              on: {
+                                click: function($event) {
+                                  return _vm.retrieveUserCoursesByStage(6)
+                                }
+                              }
+                            },
+                            [_vm._v("Stage 6")]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "li",
+                            {
+                              staticClass:
+                                "select-links btn bg-stage7 text-white",
+                              attrs: {
+                                "data-toggle": "tooltip",
+                                "data-placement": "top",
+                                title: "Server Side Frameworks"
+                              },
+                              on: {
+                                click: function($event) {
+                                  return _vm.retrieveUserCoursesByStage(7)
+                                }
+                              }
+                            },
+                            [_vm._v("Stage 7")]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "li",
+                            {
+                              staticClass:
+                                "select-links btn bg-stage8 text-white",
+                              attrs: {
+                                "data-toggle": "tooltip",
+                                "data-placement": "top",
+                                title: "Version Control"
+                              },
+                              on: {
+                                click: function($event) {
+                                  return _vm.retrieveUserCoursesByStage(8)
+                                }
+                              }
+                            },
+                            [_vm._v("Stage 8")]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "li",
+                            {
+                              staticClass:
+                                "select-links btn btn-stage9 bg-stage9",
+                              attrs: {
+                                "data-toggle": "tooltip",
+                                "data-placement": "top",
+                                title: "Deployment"
+                              },
+                              on: {
+                                click: function($event) {
+                                  return _vm.retrieveUserCoursesByStage(9)
+                                }
+                              }
+                            },
+                            [_vm._v("Stage 9")]
+                          )
+                        ])
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "h4",
+                      {
+                        staticClass: "mt-5 mb-3",
+                        attrs: { id: "stage-description" }
+                      },
+                      [
+                        _vm._v(
+                          "Stage " +
+                            _vm._s(_vm.stage) +
+                            " - " +
+                            _vm._s(_vm.getStageTitle) +
+                            ":"
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c("h5", [_vm._v("Select Your Courses")]),
+                    _vm._v(" "),
+                    _c("CourseList")
+                  ],
+                  1
+                ),
                 _vm._v(" "),
-                _c("h6", [_vm._v(" Double click a course to mark as complete")])
+                _c(
+                  "section",
+                  { staticClass: "mt-5 pt-5", attrs: { id: "roadmap" } },
+                  [
+                    _c("Stage", { attrs: { stage: 1 } }),
+                    _vm._v(" "),
+                    _c("Arrow"),
+                    _vm._v(" "),
+                    _c("Stage", { attrs: { stage: 2 } }),
+                    _vm._v(" "),
+                    _c("Arrow"),
+                    _vm._v(" "),
+                    _c("Stage", { attrs: { stage: 3 } }),
+                    _vm._v(" "),
+                    _c("Arrow"),
+                    _vm._v(" "),
+                    _c("Stage", { attrs: { stage: 4 } }),
+                    _vm._v(" "),
+                    _c("Arrow"),
+                    _vm._v(" "),
+                    _c("Stage", { attrs: { stage: 5 } }),
+                    _vm._v(" "),
+                    _c("Arrow"),
+                    _vm._v(" "),
+                    _c("Stage", { attrs: { stage: 6 } }),
+                    _vm._v(" "),
+                    _c("Arrow"),
+                    _vm._v(" "),
+                    _c("Stage", { attrs: { stage: 7 } }),
+                    _vm._v(" "),
+                    _c("Arrow"),
+                    _vm._v(" "),
+                    _c("Stage", { attrs: { stage: 8 } }),
+                    _vm._v(" "),
+                    _c("Arrow"),
+                    _vm._v(" "),
+                    _c("Stage", { attrs: { stage: 9 } }),
+                    _vm._v(" "),
+                    _c("div", { attrs: { id: "total-hours" } }, [
+                      _c("h3", { staticClass: "my-4 py-4" }, [
+                        _vm._v("Total Hours: " + _vm._s(_vm.calcTotalHours))
+                      ]),
+                      _vm._v(" "),
+                      _c("h5", { staticClass: "mt-4" }, [
+                        _vm._v(
+                          "Hours Remaining: " +
+                            _vm._s(_vm.calcTotalHoursRemaining)
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("h6", [
+                        _vm._v(" Double click a course to mark as complete")
+                      ])
+                    ])
+                  ],
+                  1
+                )
               ])
-            ],
-            1
-          )
-        ])
-      : _c("div", { attrs: { id: "loader" } }, [
+            ]),
+            _vm._v(" "),
+            _c("Footer")
+          ],
+          1
+        )
+      : _c("div", { staticClass: "mt-5 pt-5", attrs: { id: "loader" } }, [
           _c("h2", [_vm._v("Loading....")])
         ])
   ])
@@ -6587,7 +6745,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", [_vm._m(0), _vm._v(" "), _c("Footer")], 1)
 }
 var staticRenderFns = [
   function() {
@@ -6605,7 +6763,7 @@ var staticRenderFns = [
           _vm._v(" "),
           _c("p", { staticClass: "lead px-4" }, [
             _vm._v(
-              "Journey To Dev is a guide for learning full stack web development. It was born out of the need for a online curriculum for self-taught prospective developers.\n      "
+              "Journey To Dev is a guide for learning full stack web development. It was born out of the need for a online curriculum for self-taught prospective developers.\n        "
             )
           ])
         ]),
@@ -6615,7 +6773,7 @@ var staticRenderFns = [
           _vm._v(" "),
           _c("p", { staticClass: "lead px-4" }, [
             _vm._v(
-              'On this site you will be able to make your own "Roadmap" to plan you own journey to becoming a web developer!\n      '
+              'On this site you will be able to make your own "Roadmap" to plan you own journey to becoming a web developer!\n        '
             )
           ])
         ]),
@@ -6627,7 +6785,7 @@ var staticRenderFns = [
           _vm._v(" "),
           _c("p", { staticClass: "lead px-4" }, [
             _vm._v(
-              "The journey to full stack web developer comprises of nine stages. Details of each stage and the technologies you will need to learn are listed below.\n      "
+              "The journey to full stack web developer comprises of nine stages. Details of each stage and the technologies you will need to learn are listed below.\n        "
             )
           ])
         ]),
@@ -6640,7 +6798,7 @@ var staticRenderFns = [
           _c("p", { staticClass: "lead px-4 mt-2" }, [
             _c("span", { staticClass: "important" }, [_vm._v("NOTE:")]),
             _vm._v(
-              " You don't need to learn everything contained in every stage! (See stage for details)\n      "
+              " You don't need to learn everything contained in every stage! (See stage for details)\n        "
             )
           ])
         ])
@@ -6689,7 +6847,7 @@ var staticRenderFns = [
                 _c("p", { staticClass: "lead px-3 my-2" }, [
                   _c("span", { staticClass: "text-lighter" }, [_vm._v("HTML")]),
                   _vm._v(
-                    " is a markup language that describes the content and layout of a website.\n          "
+                    " is a markup language that describes the content and layout of a website.\n            "
                   )
                 ])
               ]),
@@ -6714,7 +6872,7 @@ var staticRenderFns = [
                 _c("p", { staticClass: "lead px-4 my-2" }, [
                   _c("span", { staticClass: "text-lighter" }, [_vm._v("CSS")]),
                   _vm._v(
-                    " (Cascading Style Sheets) is a style sheet language that adds style to your html document/website, adding fonts and colours etc.\n          "
+                    " (Cascading Style Sheets) is a style sheet language that adds style to your html document/website, adding fonts and colours etc.\n            "
                   )
                 ])
               ])
@@ -6763,7 +6921,7 @@ var staticRenderFns = [
                     _vm._v("Bootstrap")
                   ]),
                   _vm._v(
-                    ", a sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.\n          "
+                    ", a sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.\n            "
                   )
                 ])
               ]),
@@ -6794,7 +6952,7 @@ var staticRenderFns = [
                     _vm._v("Materialize")
                   ]),
                   _vm._v(
-                    " is a modern responsive CSS framework based on Material Design by Google.\n          "
+                    " is a modern responsive CSS framework based on Material Design by Google.\n            "
                   )
                 ])
               ])
@@ -6843,7 +7001,7 @@ var staticRenderFns = [
                     _vm._v("JavaScript")
                   ]),
                   _vm._v(
-                    ' is the programming language of the web. Before learning any JS frameworks it\'s a good idea to become competent in "vanilla" JavaScript.\n          '
+                    ' is the programming language of the web. Before learning any JS frameworks it\'s a good idea to become competent in "vanilla" JavaScript.\n            '
                   )
                 ])
               ])
@@ -6886,7 +7044,7 @@ var staticRenderFns = [
                     _vm._v("React")
                   ]),
                   _vm._v(
-                    " is a JavaScript library for building user interfaces. It is maintained by Facebook and a community of individual developers and companies.\n          "
+                    " is a JavaScript library for building user interfaces. It is maintained by Facebook and a community of individual developers and companies.\n            "
                   )
                 ])
               ]),
@@ -6905,7 +7063,7 @@ var staticRenderFns = [
                 _c("p", { staticClass: "lead px-4 my-2" }, [
                   _c("span", { staticClass: "text-lighter" }, [_vm._v("Vue")]),
                   _vm._v(
-                    " is a progressive framework for building user interfaces. An incrementally adoptable ecosystem that scales between a library and a full-featured framework.\n          "
+                    " is a progressive framework for building user interfaces. An incrementally adoptable ecosystem that scales between a library and a full-featured framework.\n            "
                   )
                 ])
               ]),
@@ -6931,7 +7089,7 @@ var staticRenderFns = [
                     _vm._v("Angular")
                   ]),
                   _vm._v(
-                    " is a Javascript framework used for building MVC based applications.\n          "
+                    " is a Javascript framework used for building MVC based applications.\n            "
                   )
                 ])
               ])
@@ -6976,7 +7134,7 @@ var staticRenderFns = [
                     _vm._v("Node.js")
                   ]),
                   _vm._v(
-                    " is an open-source, cross-platform, JavaScript runtime environment that executes JavaScript code outside of a browser. Node.js lets developers use JavaScript on the server-side.\n          "
+                    " is an open-source, cross-platform, JavaScript runtime environment that executes JavaScript code outside of a browser. Node.js lets developers use JavaScript on the server-side.\n            "
                   )
                 ])
               ]),
@@ -7001,7 +7159,7 @@ var staticRenderFns = [
                 _c("p", { staticClass: "lead px-2 my-2" }, [
                   _c("span", { staticClass: "text-lighter" }, [_vm._v("PHP")]),
                   _vm._v(
-                    " is a server scripting language, and a powerful tool for making dynamic and interactive Web pages.\n          "
+                    " is a server scripting language, and a powerful tool for making dynamic and interactive Web pages.\n            "
                   )
                 ])
               ]),
@@ -7024,7 +7182,7 @@ var staticRenderFns = [
                     _vm._v("Python")
                   ]),
                   _vm._v(
-                    " is an interpreted, high-level, general-purpose programming language.\n          "
+                    " is an interpreted, high-level, general-purpose programming language.\n            "
                   )
                 ])
               ]),
@@ -7049,7 +7207,7 @@ var staticRenderFns = [
                 _c("p", { staticClass: "lead px-4 my-2" }, [
                   _c("span", { staticClass: "text-lighter" }, [_vm._v("C#")]),
                   _vm._v(
-                    " is a simple, modern, general-purpose, object-oriented programming language developed by Microsoft.\n          "
+                    " is a simple, modern, general-purpose, object-oriented programming language developed by Microsoft.\n            "
                   )
                 ])
               ])
@@ -7092,7 +7250,7 @@ var staticRenderFns = [
                 _c("p", { staticClass: "lead px-4 my-2" }, [
                   _c("span", { staticClass: "text-lighter" }, [_vm._v("SQL")]),
                   _vm._v(
-                    " (Structered Query Language) is a standard language for storing, manipulating and retrieving data in databases.\n          "
+                    " (Structered Query Language) is a standard language for storing, manipulating and retrieving data in databases.\n            "
                   )
                 ])
               ]),
@@ -7115,7 +7273,7 @@ var staticRenderFns = [
                     _vm._v("MySQL")
                   ]),
                   _vm._v(
-                    " is an open-source relational database management system.\n          "
+                    " is an open-source relational database management system.\n            "
                   )
                 ])
               ]),
@@ -7142,7 +7300,7 @@ var staticRenderFns = [
                     _vm._v("MongoDB")
                   ]),
                   _vm._v(
-                    " is a cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with schema.\n          "
+                    " is a cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with schema.\n            "
                   )
                 ])
               ])
@@ -7185,7 +7343,7 @@ var staticRenderFns = [
                     _vm._v("Express")
                   ]),
                   _vm._v(
-                    " is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.\n          "
+                    " is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.\n            "
                   )
                 ])
               ]),
@@ -7206,7 +7364,7 @@ var staticRenderFns = [
                     _vm._v("Laravel")
                   ]),
                   _vm._v(
-                    " is a free, open-source PHP web framework, intended for the development of web applications following the model-view-controller (MVC) architectural pattern.\n          "
+                    " is a free, open-source PHP web framework, intended for the development of web applications following the model-view-controller (MVC) architectural pattern.\n            "
                   )
                 ])
               ]),
@@ -7232,7 +7390,7 @@ var staticRenderFns = [
                     _vm._v("ASP.NET")
                   ]),
                   _vm._v(
-                    " is an open-source server-side web application framework designed by Microsoft for web development to produce dynamic web pages.\n          "
+                    " is an open-source server-side web application framework designed by Microsoft for web development to produce dynamic web pages.\n            "
                   )
                 ])
               ]),
@@ -7258,7 +7416,7 @@ var staticRenderFns = [
                     _vm._v("Django")
                   ]),
                   _vm._v(
-                    " is a Python-based free and open-source web framework, which follows the model-template-view architectural pattern.\n          "
+                    " is a Python-based free and open-source web framework, which follows the model-template-view architectural pattern.\n            "
                   )
                 ])
               ])
@@ -7295,7 +7453,7 @@ var staticRenderFns = [
                 _c("p", { staticClass: "lead px-4 my-2" }, [
                   _c("span", { staticClass: "text-lighter" }, [_vm._v("Git")]),
                   _vm._v(
-                    " is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency\n          "
+                    " is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency\n            "
                   )
                 ])
               ]),
@@ -7316,7 +7474,7 @@ var staticRenderFns = [
                     _vm._v("Github")
                   ]),
                   _vm._v(
-                    " is an American company that provides hosting for software development version control using Git. \n          "
+                    " is an American company that provides hosting for software development version control using Git. \n            "
                   )
                 ])
               ])
@@ -7360,7 +7518,7 @@ var staticRenderFns = [
                     _vm._v("Netlify")
                   ]),
                   _vm._v(
-                    " is a cloud computing company that offers hosting and serverless backend services for static websites.\n          "
+                    " is a cloud computing company that offers hosting and serverless backend services for static websites.\n            "
                   )
                 ])
               ]),
@@ -7389,7 +7547,7 @@ var staticRenderFns = [
                     _vm._v("DigitalOcean")
                   ]),
                   _vm._v(
-                    " is a cloud infrastructure provider with data centers worldwide. DigitalOcean provides developers cloud services that help to deploy and scale applications that run simultaneously on multiple computers. \n          "
+                    " is a cloud infrastructure provider with data centers worldwide. DigitalOcean provides developers cloud services that help to deploy and scale applications that run simultaneously on multiple computers. \n            "
                   )
                 ])
               ]),
@@ -7413,7 +7571,7 @@ var staticRenderFns = [
                 _c("p", { staticClass: "lead px-4 my-2" }, [
                   _c("span", { staticClass: "text-lighter" }, [_vm._v("SSH")]),
                   _vm._v(
-                    " (Secure Shell) is a cryptographic network protocol for operating network services securely over an unsecured network.  \n          "
+                    " (Secure Shell) is a cryptographic network protocol for operating network services securely over an unsecured network.  \n            "
                   )
                 ])
               ])
@@ -24099,6 +24257,93 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CourseList_vue_vue_type_template_id_9d6850f8_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CourseList_vue_vue_type_template_id_9d6850f8_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/Footer.vue":
+/*!********************************************!*\
+  !*** ./resources/js/components/Footer.vue ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Footer_vue_vue_type_template_id_61a7c374_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Footer.vue?vue&type=template&id=61a7c374&scoped=true& */ "./resources/js/components/Footer.vue?vue&type=template&id=61a7c374&scoped=true&");
+/* harmony import */ var _Footer_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Footer.vue?vue&type=script&lang=js& */ "./resources/js/components/Footer.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _Footer_vue_vue_type_style_index_0_id_61a7c374_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Footer.vue?vue&type=style&index=0&id=61a7c374&lang=scss&scoped=true& */ "./resources/js/components/Footer.vue?vue&type=style&index=0&id=61a7c374&lang=scss&scoped=true&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _Footer_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Footer_vue_vue_type_template_id_61a7c374_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Footer_vue_vue_type_template_id_61a7c374_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "61a7c374",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/Footer.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/Footer.vue?vue&type=script&lang=js&":
+/*!*********************************************************************!*\
+  !*** ./resources/js/components/Footer.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Footer_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./Footer.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Footer.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Footer_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/Footer.vue?vue&type=style&index=0&id=61a7c374&lang=scss&scoped=true&":
+/*!******************************************************************************************************!*\
+  !*** ./resources/js/components/Footer.vue?vue&type=style&index=0&id=61a7c374&lang=scss&scoped=true& ***!
+  \******************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_Footer_vue_vue_type_style_index_0_id_61a7c374_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader!../../../node_modules/css-loader!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--7-2!../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../node_modules/vue-loader/lib??vue-loader-options!./Footer.vue?vue&type=style&index=0&id=61a7c374&lang=scss&scoped=true& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Footer.vue?vue&type=style&index=0&id=61a7c374&lang=scss&scoped=true&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_Footer_vue_vue_type_style_index_0_id_61a7c374_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_Footer_vue_vue_type_style_index_0_id_61a7c374_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_Footer_vue_vue_type_style_index_0_id_61a7c374_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_Footer_vue_vue_type_style_index_0_id_61a7c374_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_Footer_vue_vue_type_style_index_0_id_61a7c374_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ "./resources/js/components/Footer.vue?vue&type=template&id=61a7c374&scoped=true&":
+/*!***************************************************************************************!*\
+  !*** ./resources/js/components/Footer.vue?vue&type=template&id=61a7c374&scoped=true& ***!
+  \***************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Footer_vue_vue_type_template_id_61a7c374_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./Footer.vue?vue&type=template&id=61a7c374&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Footer.vue?vue&type=template&id=61a7c374&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Footer_vue_vue_type_template_id_61a7c374_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Footer_vue_vue_type_template_id_61a7c374_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

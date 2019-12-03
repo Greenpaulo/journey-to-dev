@@ -1,67 +1,70 @@
 <template>
-  <div class="container my-5">
-    <div v-if="this.userCourseList.length !== 0" id="roadmap-page">
-      <h1 class="display-4 pt-4 pb-5 my-5 text-center">{{name}}'s Roadmap</h1>
-      <section class="course-selector mt-5">
-        <div id="select-menu" class="pb-4 mt-3">
-          <ul id ="select-menu-links">
-            
-            <li class="select-links btn bg-stage1 text-white" data-toggle="tooltip" data-placement="top" title="HTML & CSS" @click="retrieveUserCoursesByStage(1)">Stage 1</li>
+  <div>
+    <div v-if="this.userCourseList.length !== 0">
+      <div class="container my-5">
+        <div id="roadmap-page">
+          <h1 class="display-4 pt-4 pb-5 my-5 text-center">{{name}}'s Roadmap</h1>
+          <section class="course-selector mt-5">
+            <div id="select-menu" class="pb-4 mt-3">
+              <ul id ="select-menu-links">
+                
+                <li class="select-links btn bg-stage1 text-white" data-toggle="tooltip" data-placement="top" title="HTML & CSS" @click="retrieveUserCoursesByStage(1)">Stage 1</li>
 
-            <li class="select-links btn bg-stage2 text-white" data-toggle="tooltip" data-placement="top" title="CSS Frameworks"  @click="retrieveUserCoursesByStage(2)">Stage 2</li>
+                <li class="select-links btn bg-stage2 text-white" data-toggle="tooltip" data-placement="top" title="CSS Frameworks"  @click="retrieveUserCoursesByStage(2)">Stage 2</li>
+                
+                <li class="select-links btn bg-stage3 text-white" data-toggle="tooltip" data-placement="top" title="JavaScript" @click="retrieveUserCoursesByStage(3)">Stage 3</li>
+                
+                <li class="select-links btn bg-stage4 text-white" data-toggle="tooltip" data-placement="top" title="Front-End JS Frameworks"  @click="retrieveUserCoursesByStage(4)">Stage 4</li>
+                
+                <li class="select-links btn bg-stage5 text-white" data-toggle="tooltip" data-placement="top" title="Server Side Languages" @click="retrieveUserCoursesByStage(5)">Stage 5</li>
+                
+                <li class="select-links btn bg-stage6 text-white" data-toggle="tooltip" data-placement="top" title="Databases" @click="retrieveUserCoursesByStage(6)">Stage 6</li>
+                
+                <li class="select-links btn bg-stage7 text-white" data-toggle="tooltip" data-placement="top" title="Server Side Frameworks" @click="retrieveUserCoursesByStage(7)">Stage 7</li>
+                
+                <li class="select-links btn bg-stage8 text-white" data-toggle="tooltip" data-placement="top" title="Version Control" @click="retrieveUserCoursesByStage(8)">Stage 8</li>
+                
+                <li class="select-links btn btn-stage9 bg-stage9" data-toggle="tooltip" data-placement="top" title="Deployment" @click="retrieveUserCoursesByStage(9)">Stage 9</li>
+              </ul>
+            </div>
+
+            <h4 id="stage-description" class="mt-5 mb-3">Stage {{stage}} - {{getStageTitle}}:</h4> <h5>Select Your Courses</h5>
             
-            <li class="select-links btn bg-stage3 text-white" data-toggle="tooltip" data-placement="top" title="JavaScript" @click="retrieveUserCoursesByStage(3)">Stage 3</li>
-            
-            <li class="select-links btn bg-stage4 text-white" data-toggle="tooltip" data-placement="top" title="Front-End JS Frameworks"  @click="retrieveUserCoursesByStage(4)">Stage 4</li>
-            
-            <li class="select-links btn bg-stage5 text-white" data-toggle="tooltip" data-placement="top" title="Server Side Languages" @click="retrieveUserCoursesByStage(5)">Stage 5</li>
-            
-            <li class="select-links btn bg-stage6 text-white" data-toggle="tooltip" data-placement="top" title="Databases" @click="retrieveUserCoursesByStage(6)">Stage 6</li>
-            
-            <li class="select-links btn bg-stage7 text-white" data-toggle="tooltip" data-placement="top" title="Server Side Frameworks" @click="retrieveUserCoursesByStage(7)">Stage 7</li>
-            
-            <li class="select-links btn bg-stage8 text-white" data-toggle="tooltip" data-placement="top" title="Version Control" @click="retrieveUserCoursesByStage(8)">Stage 8</li>
-            
-            <li class="select-links btn btn-stage9 bg-stage9" data-toggle="tooltip" data-placement="top" title="Deployment" @click="retrieveUserCoursesByStage(9)">Stage 9</li>
-          </ul>
+            <CourseList></CourseList>
+          </section>
+
+          <section id="roadmap" class="mt-5 pt-5">
+
+            <Stage :stage="1"></Stage>
+            <Arrow/>
+            <Stage :stage="2"></Stage>
+            <Arrow/>
+            <Stage :stage="3"></Stage>
+            <Arrow/> 
+            <Stage :stage="4"></Stage>
+            <Arrow/> 
+            <Stage :stage="5"></Stage>
+            <Arrow/> 
+            <Stage :stage="6"></Stage>
+            <Arrow/>
+            <Stage :stage="7"></Stage>
+            <Arrow/> 
+            <Stage :stage="8"></Stage>
+            <Arrow/> 
+            <Stage :stage="9"></Stage>
+
+            <div id="total-hours">
+              <h3 class="my-4 py-4">Total Hours: {{calcTotalHours}}</h3>
+              <h5 class="mt-4">Hours Remaining: {{calcTotalHoursRemaining}}</h5>
+              <h6> Double click a course to mark as complete</h6>
+            </div>
+          </section>
         </div>
-
-        <h4 id="stage-description" class="mt-5 mb-3">Stage {{stage}} - {{getStageTitle}}:</h4> <h5>Select Your Courses</h5>
-        
-        <CourseList></CourseList>
-      </section>
-
-      <section id="roadmap" class="mt-5 pt-5">
-
-        <Stage :stage="1"></Stage>
-        <Arrow/>
-        <Stage :stage="2"></Stage>
-        <Arrow/>
-        <Stage :stage="3"></Stage>
-        <Arrow/> 
-        <Stage :stage="4"></Stage>
-        <Arrow/> 
-        <Stage :stage="5"></Stage>
-        <Arrow/> 
-        <Stage :stage="6"></Stage>
-        <Arrow/>
-        <Stage :stage="7"></Stage>
-        <Arrow/> 
-        <Stage :stage="8"></Stage>
-        <Arrow/> 
-        <Stage :stage="9"></Stage>
-
-        <div id="total-hours">
-          <h3 class="my-4 py-4">Total Hours: {{calcTotalHours}}</h3>
-          <h5 class="mt-4">Hours Remaining: {{calcTotalHoursRemaining}}</h5>
-          <!-- <div class="progress">
-            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" :style="[`width:${progress}%;`]"></div>
-          </div> -->
-          <h6> Double click a course to mark as complete</h6>
-        </div>
-      </section>
+      </div>
+      <Footer />  
     </div>
-    <div v-else id="loader">
+      
+    <div v-else id="loader" class="mt-5 pt-5">
       <h2>Loading....</h2>
     </div>
   </div>
@@ -71,10 +74,17 @@
 import CourseList from './CourseList';
 import Stage from './Stage';
 import Arrow from './Arrow';
+import Footer from './Footer';
 import { mapGetters, mapActions } from 'vuex';
 
 export default {
   name: "Roadmap",
+  components: {
+    CourseList,
+    Stage,
+    Arrow,
+    Footer
+  },
   data () {
     return {
       stageTitle: "HTML & CSS",
@@ -167,12 +177,7 @@ export default {
   },
   methods: {
     ...mapActions(['loadInitialUserData', 'retrieveUserCoursesByStage']),
-  },
-  components: {
-    CourseList,
-    Stage,
-    Arrow
-  },
+  }
 };
 
 </script>
