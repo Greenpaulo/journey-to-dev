@@ -2285,6 +2285,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
 
 
 
@@ -2293,7 +2295,10 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   name: "Roadmap",
   data: function data() {
     return {
-      stageTitle: "HTML & CSS"
+      stageTitle: "HTML & CSS",
+      totalHours: null,
+      remainingHrs: null,
+      progress: null
     };
   },
   created: function created() {
@@ -2363,23 +2368,39 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       }
     },
     calcTotalHours: function calcTotalHours() {
+      console.log('total called');
       var roadmap = this.$store.state.roadmap.roadmap;
       var total = 0;
       roadmap.forEach(function (course) {
         total += course.hours;
       });
+      this.totalHours = total;
       return total;
     },
     calcTotalHoursRemaining: function calcTotalHoursRemaining() {
+      console.log('remain called');
       var roadmap = this.$store.state.roadmap.roadmap;
       var total = 0;
       roadmap.forEach(function (course) {
-        if (course.completed === 0) {
+        if (course.completed == 0) {
           total += course.hours;
         }
       });
+      this.remainingHrs = total;
       return total;
-    }
+    } // calcProgress() {
+    //   if (this.totalHours === null || this.remainingHrs === null){
+    //     setTimeout(() => calcProgress(),
+    //     500);
+    //     return
+    //   };
+    //   const totalHours = this.totalHours;
+    //   const remainingHrs = this.remainingHrs;
+    //   const progress =  (remainingHrs/totalHours)*100;
+    //   this.progress = progress;
+    //   return progress;
+    // }
+
   }),
   methods: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_3__["mapActions"])(['loadInitialUserData', 'retrieveUserCoursesByStage'])),
   components: {
@@ -6032,276 +6053,271 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container my-5" }, [
-    _c("h1", { staticClass: "display-4 pt-4 pb-5 my-5 text-center" }, [
-      _vm._v(_vm._s(_vm.name) + "'s Roadmap")
-    ]),
-    _vm._v(" "),
-    _c(
-      "section",
-      { staticClass: "course-selector mt-5" },
-      [
-        _c("div", { staticClass: "pb-4 mt-3", attrs: { id: "select-menu" } }, [
-          _c("ul", { attrs: { id: "select-menu-links" } }, [
-            _c(
-              "li",
-              {
-                staticClass: "select-links btn bg-stage1 text-white",
-                attrs: {
-                  "data-toggle": "tooltip",
-                  "data-placement": "top",
-                  title: "HTML & CSS"
-                },
-                on: {
-                  click: function($event) {
-                    return _vm.retrieveUserCoursesByStage(1)
-                  }
-                }
-              },
-              [_vm._v("Stage 1")]
-            ),
-            _vm._v(" "),
-            _c(
-              "li",
-              {
-                staticClass: "select-links btn bg-stage2 text-white",
-                attrs: {
-                  "data-toggle": "tooltip",
-                  "data-placement": "top",
-                  title: "CSS Frameworks"
-                },
-                on: {
-                  click: function($event) {
-                    return _vm.retrieveUserCoursesByStage(2)
-                  }
-                }
-              },
-              [_vm._v("Stage 2")]
-            ),
-            _vm._v(" "),
-            _c(
-              "li",
-              {
-                staticClass: "select-links btn bg-stage3 text-white",
-                attrs: {
-                  "data-toggle": "tooltip",
-                  "data-placement": "top",
-                  title: "JavaScript"
-                },
-                on: {
-                  click: function($event) {
-                    return _vm.retrieveUserCoursesByStage(3)
-                  }
-                }
-              },
-              [_vm._v("Stage 3")]
-            ),
-            _vm._v(" "),
-            _c(
-              "li",
-              {
-                staticClass: "select-links btn bg-stage4 text-white",
-                attrs: {
-                  "data-toggle": "tooltip",
-                  "data-placement": "top",
-                  title: "Front-End JS Frameworks"
-                },
-                on: {
-                  click: function($event) {
-                    return _vm.retrieveUserCoursesByStage(4)
-                  }
-                }
-              },
-              [_vm._v("Stage 4")]
-            ),
-            _vm._v(" "),
-            _c(
-              "li",
-              {
-                staticClass: "select-links btn bg-stage5 text-white",
-                attrs: {
-                  "data-toggle": "tooltip",
-                  "data-placement": "top",
-                  title: "Server Side Languages"
-                },
-                on: {
-                  click: function($event) {
-                    return _vm.retrieveUserCoursesByStage(5)
-                  }
-                }
-              },
-              [_vm._v("Stage 5")]
-            ),
-            _vm._v(" "),
-            _c(
-              "li",
-              {
-                staticClass: "select-links btn bg-stage6 text-white",
-                attrs: {
-                  "data-toggle": "tooltip",
-                  "data-placement": "top",
-                  title: "Databases"
-                },
-                on: {
-                  click: function($event) {
-                    return _vm.retrieveUserCoursesByStage(6)
-                  }
-                }
-              },
-              [_vm._v("Stage 6")]
-            ),
-            _vm._v(" "),
-            _c(
-              "li",
-              {
-                staticClass: "select-links btn bg-stage7 text-white",
-                attrs: {
-                  "data-toggle": "tooltip",
-                  "data-placement": "top",
-                  title: "Server Side Frameworks"
-                },
-                on: {
-                  click: function($event) {
-                    return _vm.retrieveUserCoursesByStage(7)
-                  }
-                }
-              },
-              [_vm._v("Stage 7")]
-            ),
-            _vm._v(" "),
-            _c(
-              "li",
-              {
-                staticClass: "select-links btn bg-stage8 text-white",
-                attrs: {
-                  "data-toggle": "tooltip",
-                  "data-placement": "top",
-                  title: "Version Control"
-                },
-                on: {
-                  click: function($event) {
-                    return _vm.retrieveUserCoursesByStage(8)
-                  }
-                }
-              },
-              [_vm._v("Stage 8")]
-            ),
-            _vm._v(" "),
-            _c(
-              "li",
-              {
-                staticClass: "select-links btn btn-stage9 bg-stage9",
-                attrs: {
-                  "data-toggle": "tooltip",
-                  "data-placement": "top",
-                  title: "Deployment"
-                },
-                on: {
-                  click: function($event) {
-                    return _vm.retrieveUserCoursesByStage(9)
-                  }
-                }
-              },
-              [_vm._v("Stage 9")]
-            )
-          ])
-        ]),
-        _vm._v(" "),
-        _c(
-          "h4",
-          { staticClass: "mt-5 mb-3", attrs: { id: "stage-description" } },
-          [
-            _vm._v(
-              "Stage " +
-                _vm._s(_vm.stage) +
-                " - " +
-                _vm._s(_vm.getStageTitle) +
-                ":"
-            )
-          ]
-        ),
-        _vm._v(" "),
-        _c("h5", [_vm._v("Select Your Courses")]),
-        _vm._v(" "),
-        _c("CourseList")
-      ],
-      1
-    ),
-    _vm._v(" "),
-    _c(
-      "section",
-      { staticClass: "mt-5 pt-5", attrs: { id: "roadmap" } },
-      [
-        _c("Stage", { attrs: { stage: 1 } }),
-        _vm._v(" "),
-        _c("Arrow"),
-        _vm._v(" "),
-        _c("Stage", { attrs: { stage: 2 } }),
-        _vm._v(" "),
-        _c("Arrow"),
-        _vm._v(" "),
-        _c("Stage", { attrs: { stage: 3 } }),
-        _vm._v(" "),
-        _c("Arrow"),
-        _vm._v(" "),
-        _c("Stage", { attrs: { stage: 4 } }),
-        _vm._v(" "),
-        _c("Arrow"),
-        _vm._v(" "),
-        _c("Stage", { attrs: { stage: 5 } }),
-        _vm._v(" "),
-        _c("Arrow"),
-        _vm._v(" "),
-        _c("Stage", { attrs: { stage: 6 } }),
-        _vm._v(" "),
-        _c("Arrow"),
-        _vm._v(" "),
-        _c("Stage", { attrs: { stage: 7 } }),
-        _vm._v(" "),
-        _c("Arrow"),
-        _vm._v(" "),
-        _c("Stage", { attrs: { stage: 8 } }),
-        _vm._v(" "),
-        _c("Arrow"),
-        _vm._v(" "),
-        _c("Stage", { attrs: { stage: 9 } }),
-        _vm._v(" "),
-        _c("div", { attrs: { id: "total-hours" } }, [
-          _c("h3", { staticClass: "my-4 py-4" }, [
-            _vm._v("Total Hours: " + _vm._s(_vm.calcTotalHours))
+    this.userCourseList.length !== 0
+      ? _c("div", { attrs: { id: "roadmap-page" } }, [
+          _c("h1", { staticClass: "display-4 pt-4 pb-5 my-5 text-center" }, [
+            _vm._v(_vm._s(_vm.name) + "'s Roadmap")
           ]),
           _vm._v(" "),
-          _c("h5", { staticClass: "mt-4" }, [
-            _vm._v("Hours Remaining: " + _vm._s(_vm.calcTotalHoursRemaining))
-          ]),
+          _c(
+            "section",
+            { staticClass: "course-selector mt-5" },
+            [
+              _c(
+                "div",
+                { staticClass: "pb-4 mt-3", attrs: { id: "select-menu" } },
+                [
+                  _c("ul", { attrs: { id: "select-menu-links" } }, [
+                    _c(
+                      "li",
+                      {
+                        staticClass: "select-links btn bg-stage1 text-white",
+                        attrs: {
+                          "data-toggle": "tooltip",
+                          "data-placement": "top",
+                          title: "HTML & CSS"
+                        },
+                        on: {
+                          click: function($event) {
+                            return _vm.retrieveUserCoursesByStage(1)
+                          }
+                        }
+                      },
+                      [_vm._v("Stage 1")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "li",
+                      {
+                        staticClass: "select-links btn bg-stage2 text-white",
+                        attrs: {
+                          "data-toggle": "tooltip",
+                          "data-placement": "top",
+                          title: "CSS Frameworks"
+                        },
+                        on: {
+                          click: function($event) {
+                            return _vm.retrieveUserCoursesByStage(2)
+                          }
+                        }
+                      },
+                      [_vm._v("Stage 2")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "li",
+                      {
+                        staticClass: "select-links btn bg-stage3 text-white",
+                        attrs: {
+                          "data-toggle": "tooltip",
+                          "data-placement": "top",
+                          title: "JavaScript"
+                        },
+                        on: {
+                          click: function($event) {
+                            return _vm.retrieveUserCoursesByStage(3)
+                          }
+                        }
+                      },
+                      [_vm._v("Stage 3")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "li",
+                      {
+                        staticClass: "select-links btn bg-stage4 text-white",
+                        attrs: {
+                          "data-toggle": "tooltip",
+                          "data-placement": "top",
+                          title: "Front-End JS Frameworks"
+                        },
+                        on: {
+                          click: function($event) {
+                            return _vm.retrieveUserCoursesByStage(4)
+                          }
+                        }
+                      },
+                      [_vm._v("Stage 4")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "li",
+                      {
+                        staticClass: "select-links btn bg-stage5 text-white",
+                        attrs: {
+                          "data-toggle": "tooltip",
+                          "data-placement": "top",
+                          title: "Server Side Languages"
+                        },
+                        on: {
+                          click: function($event) {
+                            return _vm.retrieveUserCoursesByStage(5)
+                          }
+                        }
+                      },
+                      [_vm._v("Stage 5")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "li",
+                      {
+                        staticClass: "select-links btn bg-stage6 text-white",
+                        attrs: {
+                          "data-toggle": "tooltip",
+                          "data-placement": "top",
+                          title: "Databases"
+                        },
+                        on: {
+                          click: function($event) {
+                            return _vm.retrieveUserCoursesByStage(6)
+                          }
+                        }
+                      },
+                      [_vm._v("Stage 6")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "li",
+                      {
+                        staticClass: "select-links btn bg-stage7 text-white",
+                        attrs: {
+                          "data-toggle": "tooltip",
+                          "data-placement": "top",
+                          title: "Server Side Frameworks"
+                        },
+                        on: {
+                          click: function($event) {
+                            return _vm.retrieveUserCoursesByStage(7)
+                          }
+                        }
+                      },
+                      [_vm._v("Stage 7")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "li",
+                      {
+                        staticClass: "select-links btn bg-stage8 text-white",
+                        attrs: {
+                          "data-toggle": "tooltip",
+                          "data-placement": "top",
+                          title: "Version Control"
+                        },
+                        on: {
+                          click: function($event) {
+                            return _vm.retrieveUserCoursesByStage(8)
+                          }
+                        }
+                      },
+                      [_vm._v("Stage 8")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "li",
+                      {
+                        staticClass: "select-links btn btn-stage9 bg-stage9",
+                        attrs: {
+                          "data-toggle": "tooltip",
+                          "data-placement": "top",
+                          title: "Deployment"
+                        },
+                        on: {
+                          click: function($event) {
+                            return _vm.retrieveUserCoursesByStage(9)
+                          }
+                        }
+                      },
+                      [_vm._v("Stage 9")]
+                    )
+                  ])
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "h4",
+                {
+                  staticClass: "mt-5 mb-3",
+                  attrs: { id: "stage-description" }
+                },
+                [
+                  _vm._v(
+                    "Stage " +
+                      _vm._s(_vm.stage) +
+                      " - " +
+                      _vm._s(_vm.getStageTitle) +
+                      ":"
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c("h5", [_vm._v("Select Your Courses")]),
+              _vm._v(" "),
+              _c("CourseList")
+            ],
+            1
+          ),
           _vm._v(" "),
-          _vm._m(0),
-          _vm._v(" "),
-          _c("h6", [_vm._v(" Double click a course to mark as complete")])
+          _c(
+            "section",
+            { staticClass: "mt-5 pt-5", attrs: { id: "roadmap" } },
+            [
+              _c("Stage", { attrs: { stage: 1 } }),
+              _vm._v(" "),
+              _c("Arrow"),
+              _vm._v(" "),
+              _c("Stage", { attrs: { stage: 2 } }),
+              _vm._v(" "),
+              _c("Arrow"),
+              _vm._v(" "),
+              _c("Stage", { attrs: { stage: 3 } }),
+              _vm._v(" "),
+              _c("Arrow"),
+              _vm._v(" "),
+              _c("Stage", { attrs: { stage: 4 } }),
+              _vm._v(" "),
+              _c("Arrow"),
+              _vm._v(" "),
+              _c("Stage", { attrs: { stage: 5 } }),
+              _vm._v(" "),
+              _c("Arrow"),
+              _vm._v(" "),
+              _c("Stage", { attrs: { stage: 6 } }),
+              _vm._v(" "),
+              _c("Arrow"),
+              _vm._v(" "),
+              _c("Stage", { attrs: { stage: 7 } }),
+              _vm._v(" "),
+              _c("Arrow"),
+              _vm._v(" "),
+              _c("Stage", { attrs: { stage: 8 } }),
+              _vm._v(" "),
+              _c("Arrow"),
+              _vm._v(" "),
+              _c("Stage", { attrs: { stage: 9 } }),
+              _vm._v(" "),
+              _c("div", { attrs: { id: "total-hours" } }, [
+                _c("h3", { staticClass: "my-4 py-4" }, [
+                  _vm._v("Total Hours: " + _vm._s(_vm.calcTotalHours))
+                ]),
+                _vm._v(" "),
+                _c("h5", { staticClass: "mt-4" }, [
+                  _vm._v(
+                    "Hours Remaining: " + _vm._s(_vm.calcTotalHoursRemaining)
+                  )
+                ]),
+                _vm._v(" "),
+                _c("h6", [_vm._v(" Double click a course to mark as complete")])
+              ])
+            ],
+            1
+          )
         ])
-      ],
-      1
-    )
+      : _c("div", { attrs: { id: "loader" } }, [
+          _c("h2", [_vm._v("Loading....")])
+        ])
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "progress" }, [
-      _c("div", {
-        staticClass: "progress-bar progress-bar-striped progress-bar-animated",
-        staticStyle: { width: "75%" },
-        attrs: {
-          role: "progressbar",
-          "aria-valuenow": "75",
-          "aria-valuemin": "0",
-          "aria-valuemax": "100"
-        }
-      })
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
