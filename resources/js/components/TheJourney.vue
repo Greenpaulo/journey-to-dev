@@ -15,7 +15,7 @@
       </div>
       <div class="icon-text-group my-4">
         <i class="fas fa-graduation-cap fa-3x text-success py-2"></i>
-        <p class="lead px-4">The journey to full stack web developer comprises of nine Stages. Details of each stage and the technologies you will need to learn are listed below.
+        <p class="lead px-4">The journey to full stack web developer comprises of nine stages. Details of each stage and the technologies you will need to learn are listed below.
         </p>
       </div>
       <div class="icon-text-group my-4">
@@ -164,7 +164,7 @@
           </div>
           <div class="icon-text-group my-4">
             <a href="https://www.djangoproject.com/" target="_blank"><img src="/images/django.png" alt="django logo"></a>
-            <p class="lead px-4 my-2"><span class="text-lighter">Django</span> is a Python-based free and open-source web framework, which follows the model-template-view architectural pattern.
+            <p class="lead px-3 my-2"><span class="text-lighter">Django</span> is a Python-based free and open-source web framework, which follows the model-template-view architectural pattern.
             </p>
           </div>
         </div>
@@ -200,7 +200,7 @@
             </p>
           </div>
           <div class="icon-text-group my-4">
-            <a href="https://www.ssh.com/ssh/" target="_blank"><img src="/images/ssh.png" alt="ssh logo"></a>
+            <a href="https://www.ssh.com/ssh/" target="_blank"><img src="/images/ssh2.png" alt="ssh logo"></a>
             <p class="lead px-4 my-2"><span class="text-lighter">SSH</span> (Secure Shell) is a cryptographic network protocol for operating network services securely over an unsecured network.  
             </p>
           </div>
@@ -241,7 +241,7 @@ section#intro {
 }
 
 .lead {
-  font-size: 1.5rem !important;
+  font-size: 1.4rem !important;
   line-height: 2.2rem;
   // color: rgb(202, 195, 195);
   color: darken(white, 15%);
@@ -266,6 +266,11 @@ img[src="/images/angular.png"] {
 
 img[src="/images/php.png"] {
   max-height: 50px;
+  margin-top: 0.5rem;
+}
+
+img[src="/images/ssh2.png"] {
+  max-width: 70px;
   margin-top: 0.5rem;
 }
 

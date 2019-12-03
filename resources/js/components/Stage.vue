@@ -125,7 +125,7 @@ export default {
         case 6: return "Make sure you learn an SQL database and a no-SQL database.";
         case 7: return "Build an API with your framework and use it as the back-end for a CRUD application!";
         case 8: return "Git and Github are great ways to save and share your projects. Start using git in your personal projects.";
-        case 9: return "Netlify is best for static sites, Heroku is best for full stack applications.";
+        case 9: return "Netlify is best for static sites, Digital Ocean is best for full stack applications.";
         default: break;
       }
     }

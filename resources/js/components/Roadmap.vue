@@ -54,6 +54,9 @@
       <div id="total-hours">
         <h3 class="my-4 py-4">Total Hours: {{calcTotalHours}}</h3>
         <h5 class="mt-4">Hours Remaining: {{calcTotalHoursRemaining}}</h5>
+        <div class="progress">
+          <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+        </div>
         <h6> Double click a course to mark as complete</h6>
       </div>
     </section>
