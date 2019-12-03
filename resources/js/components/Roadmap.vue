@@ -54,9 +54,9 @@
             <Stage :stage="9"></Stage>
 
             <div id="total-hours">
-              <h3 class="my-4 py-4">Total Hours: {{calcTotalHours}}</h3>
-              <h5 class="mt-4">Hours Remaining: {{calcTotalHoursRemaining}}</h5>
-              <h6> Double click a course to mark as complete</h6>
+              <h3 class="my-3 py-3">Total Hours: {{calcTotalHours}}</h3>
+              <h5 class="mt-3 py-2">Hours Remaining: {{calcTotalHoursRemaining}}</h5>
+              <h6 class="p-3"> Double click a course to mark as complete!</h6>
             </div>
           </section>
         </div>

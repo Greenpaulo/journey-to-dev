@@ -28,10 +28,6 @@ Route::middleware('auth:api')->group(function() {
   Route::get('/courses', function () {
     return Course::all();
   });
-  // // Get request for single course, by id
-  // Route::get('courses/{id}', function ($id) {
-  //   return Course::find($id);
-  // });
   
   // Get request for users roadmap, by id
   Route::get('roadmap/{id}', function ($user_id) {
@@ -42,6 +38,11 @@ Route::middleware('auth:api')->group(function() {
   Route::delete('roadmap/{roadmapcourse}', 'RoadmapCourseController@destroy');
   
 });
+
+// // Get request for single course, by id
+// Route::get('courses/{id}', function ($id) {
+//   return Course::find($id);
+// });
 
 Route::post('/login', 'AuthController@login');
 Route::post('/register', 'AuthController@register');

@@ -2973,7 +2973,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".bg-stage1[data-v-fb05e49c] {\n  background-color: #CC0000;\n}\n.bg-stage2[data-v-fb05e49c] {\n  background-color: orange;\n}\n.bg-stage3[data-v-fb05e49c] {\n  background-color: orangered;\n}\n.bg-stage4[data-v-fb05e49c] {\n  background-color: #77B300;\n}\n.bg-stage5[data-v-fb05e49c] {\n  background-color: #2A9FD6;\n}\n.bg-stage6[data-v-fb05e49c] {\n  background-color: #20c997;\n}\n.bg-stage7[data-v-fb05e49c] {\n  background-color: #e83e8c;\n}\n.bg-stage8[data-v-fb05e49c] {\n  background-color: #9933CC;\n}\n.bg-stage9[data-v-fb05e49c] {\n  background-color: #fff;\n  color: black !important;\n}\n.border-stage1[data-v-fb05e49c] {\n  border-top: 8px solid #CC0000;\n  border-right: 8px solid #CC0000;\n}\n.border-stage2[data-v-fb05e49c] {\n  border-top: 8px solid orange;\n  border-right: 8px solid orange;\n}\n.border-stage3[data-v-fb05e49c] {\n  border-top: 8px solid orangered;\n  border-right: 8px solid orangered;\n}\n.border-stage4[data-v-fb05e49c] {\n  border-top: 8px solid #77B300;\n  border-right: 8px solid #77B300;\n}\n.border-stage5[data-v-fb05e49c] {\n  border-top: 8px solid #2A9FD6;\n  border-right: 8px solid #2A9FD6;\n}\n.border-stage6[data-v-fb05e49c] {\n  border-top: 8px solid #20c997;\n  border-right: 8px solid #20c997;\n}\n.border-stage7[data-v-fb05e49c] {\n  border-top: 8px solid #e83e8c;\n  border-right: 8px solid #e83e8c;\n}\n.border-stage8[data-v-fb05e49c] {\n  border-top: 8px solid #9933CC;\n  border-right: 8px solid #9933CC;\n}\n.border-stage9[data-v-fb05e49c] {\n  border-top: 8px solid #fff;\n  border-right: 8px solid #ffff;\n}\n.text-orangered[data-v-fb05e49c] {\n  color: orangered !important;\n}\n.text-orange[data-v-fb05e49c] {\n  color: orange !important;\n}\n.text-purple[data-v-fb05e49c] {\n  color: #6f42c1 !important;\n}\n.text-teal[data-v-fb05e49c] {\n  color: #20c997 !important;\n}\n.text-pink[data-v-fb05e49c] {\n  color: #e83e8c !important;\n}\np.lead[data-v-fb05e49c] {\n  color: #d9d9d9;\n  font-size: 1.3rem;\n}\n#theApp[data-v-fb05e49c] {\n  border-bottom: 2px solid #CC0000;\n}\n#creator[data-v-fb05e49c] {\n  border-bottom: 2px solid orange;\n  color: #d9d9d9;\n}\n#creator a[data-v-fb05e49c] {\n  text-decoration: none;\n  color: #d9d9d9;\n  font-size: 1.2rem;\n}\n#creator a[data-v-fb05e49c]:hover {\n  color: #b3b3b3;\n}\n#creator .icon-group[data-v-fb05e49c] {\n  display: flex;\n  padding: 1rem;\n  align-items: center;\n}\n#credits[data-v-fb05e49c] {\n  border-bottom: 2px solid orangered;\n  color: #d9d9d9;\n}\n#credits h5[data-v-fb05e49c] {\n  font-size: 1.3rem !important;\n}", ""]);
+exports.push([module.i, ".bg-stage1[data-v-fb05e49c] {\n  background-color: #CC0000;\n}\n.bg-stage2[data-v-fb05e49c] {\n  background-color: orange;\n}\n.bg-stage3[data-v-fb05e49c] {\n  background-color: orangered;\n}\n.bg-stage4[data-v-fb05e49c] {\n  background-color: #77B300;\n}\n.bg-stage5[data-v-fb05e49c] {\n  background-color: #2A9FD6;\n}\n.bg-stage6[data-v-fb05e49c] {\n  background-color: #20c997;\n}\n.bg-stage7[data-v-fb05e49c] {\n  background-color: #e83e8c;\n}\n.bg-stage8[data-v-fb05e49c] {\n  background-color: #9933CC;\n}\n.bg-stage9[data-v-fb05e49c] {\n  background-color: #fff;\n  color: black !important;\n}\n.border-stage1[data-v-fb05e49c] {\n  border-top: 8px solid #CC0000;\n  border-right: 8px solid #CC0000;\n}\n.border-stage2[data-v-fb05e49c] {\n  border-top: 8px solid orange;\n  border-right: 8px solid orange;\n}\n.border-stage3[data-v-fb05e49c] {\n  border-top: 8px solid orangered;\n  border-right: 8px solid orangered;\n}\n.border-stage4[data-v-fb05e49c] {\n  border-top: 8px solid #77B300;\n  border-right: 8px solid #77B300;\n}\n.border-stage5[data-v-fb05e49c] {\n  border-top: 8px solid #2A9FD6;\n  border-right: 8px solid #2A9FD6;\n}\n.border-stage6[data-v-fb05e49c] {\n  border-top: 8px solid #20c997;\n  border-right: 8px solid #20c997;\n}\n.border-stage7[data-v-fb05e49c] {\n  border-top: 8px solid #e83e8c;\n  border-right: 8px solid #e83e8c;\n}\n.border-stage8[data-v-fb05e49c] {\n  border-top: 8px solid #9933CC;\n  border-right: 8px solid #9933CC;\n}\n.border-stage9[data-v-fb05e49c] {\n  border-top: 8px solid #fff;\n  border-right: 8px solid #ffff;\n}\n.text-orangered[data-v-fb05e49c] {\n  color: orangered !important;\n}\n.text-orange[data-v-fb05e49c] {\n  color: orange !important;\n}\n.text-purple[data-v-fb05e49c] {\n  color: #6f42c1 !important;\n}\n.text-teal[data-v-fb05e49c] {\n  color: #20c997 !important;\n}\n.text-pink[data-v-fb05e49c] {\n  color: #e83e8c !important;\n}\np[data-v-fb05e49c] {\n  color: #d9d9d9;\n  font-size: 1.3rem;\n}\n#theApp[data-v-fb05e49c] {\n  border-bottom: 2px solid #CC0000;\n}\n#creator[data-v-fb05e49c] {\n  border-bottom: 2px solid orange;\n  color: #d9d9d9;\n}\n#creator a[data-v-fb05e49c], #creator span[data-v-fb05e49c] {\n  text-decoration: none;\n  color: #d9d9d9;\n  font-size: 1.2rem;\n}\n#creator a[data-v-fb05e49c]:hover, #creator span[data-v-fb05e49c]:hover {\n  color: #b3b3b3;\n}\n#creator .icon-group[data-v-fb05e49c] {\n  display: flex;\n  padding: 1rem;\n  align-items: center;\n}\n#credits[data-v-fb05e49c] {\n  border-bottom: 2px solid orangered;\n  color: #d9d9d9;\n}\n#credits h5[data-v-fb05e49c] {\n  font-size: 1.3rem !important;\n}", ""]);
 
 // exports
 
@@ -3106,7 +3106,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".icon-text-group[data-v-3c0a633a] {\n  display: flex;\n  margin: 1.7rem 0;\n}\nsection#intro[data-v-3c0a633a] {\n  border-bottom: 2px solid #cac3c3;\n  padding: 1rem 1rem 2rem 1rem;\n}\nsection#intro .important[data-v-3c0a633a] {\n  font-weight: bolder;\n  color: white;\n}\n.lead[data-v-3c0a633a] {\n  font-size: 1.4rem !important;\n  line-height: 2.2rem;\n  color: #d9d9d9;\n}\n.card-header > h3[data-v-3c0a633a] {\n  color: white;\n  display: inline;\n}\nh5.stage-heading[data-v-3c0a633a] {\n  display: inline;\n}\nimg[data-v-3c0a633a] {\n  max-height: 70px;\n}\nimg[src=\"/images/angular.png\"][data-v-3c0a633a] {\n  padding: 0 0 0.5rem 0.5rem;\n}\nimg[src=\"/images/php.png\"][data-v-3c0a633a] {\n  max-height: 50px;\n  margin-top: 0.5rem;\n}\nimg[src=\"/images/ssh2.png\"][data-v-3c0a633a] {\n  max-width: 70px;\n  margin-top: 0.5rem;\n}\na[href=\"https://angularjs.org/\"] + p[data-v-3c0a633a] {\n  padding: 0 1.5rem 0 1.8rem;\n}\na[href=\"https://www.python.org/\"] + p[data-v-3c0a633a] {\n  padding: 0 1.5rem 0 2rem;\n}\na[href=\"https://www.w3schools.com/sql/\"] + p[data-v-3c0a633a] {\n  margin-left: 0.75rem;\n}\n#materialize-logo[data-v-3c0a633a] {\n  max-width: 70px;\n  max-height: 30px;\n}\n.stage-section[data-v-3c0a633a] {\n  background-color: #201e1e;\n  border-radius: 0 20px 0 20px;\n  box-shadow: -5px 5px 10px -2px #010101;\n}\n.header[data-v-3c0a633a] {\n  border-bottom: 2px solid #202020;\n}\n.text-lighter[data-v-3c0a633a] {\n  color: #d9d9d9;\n}", ""]);
+exports.push([module.i, ".icon-text-group[data-v-3c0a633a] {\n  display: flex;\n  margin: 1.7rem 0;\n}\nsection#intro[data-v-3c0a633a] {\n  border-bottom: 2px solid #cac3c3;\n  padding: 1rem 1rem 2rem 1rem;\n}\nsection#intro .important[data-v-3c0a633a] {\n  font-weight: bolder;\n  color: white;\n}\np[data-v-3c0a633a] {\n  font-size: 1.4rem !important;\n  line-height: 2.2rem;\n  color: #d9d9d9;\n}\n.card-header > h3[data-v-3c0a633a] {\n  color: white;\n  display: inline;\n}\nh5.stage-heading[data-v-3c0a633a] {\n  display: inline;\n}\nimg[data-v-3c0a633a] {\n  max-height: 70px;\n}\nimg[src=\"/images/angular.png\"][data-v-3c0a633a] {\n  padding: 0 0 0.5rem 0.5rem;\n}\nimg[src=\"/images/php.png\"][data-v-3c0a633a] {\n  max-height: 50px;\n  margin-top: 0.5rem;\n}\nimg[src=\"/images/ssh2.png\"][data-v-3c0a633a] {\n  max-width: 70px;\n  margin-top: 0.5rem;\n}\na[href=\"https://angularjs.org/\"] + p[data-v-3c0a633a] {\n  padding: 0 1.5rem 0 1.8rem;\n}\na[href=\"https://www.python.org/\"] + p[data-v-3c0a633a] {\n  padding: 0 1.5rem 0 2rem;\n}\na[href=\"https://www.w3schools.com/sql/\"] + p[data-v-3c0a633a] {\n  margin-left: 0.75rem;\n}\n#materialize-logo[data-v-3c0a633a] {\n  max-width: 70px;\n  max-height: 30px;\n}\n.stage-section[data-v-3c0a633a] {\n  background-color: #201e1e;\n  border-radius: 0 20px 0 20px;\n  box-shadow: -5px 5px 10px -2px #010101;\n}\n.header[data-v-3c0a633a] {\n  border-bottom: 2px solid #202020;\n}\n.text-lighter[data-v-3c0a633a] {\n  color: #d9d9d9;\n}\n@media (max-width: 742px) {\n.icon-text-group[data-v-3c0a633a] {\n    flex-direction: column;\n    text-align: center;\n}\np[data-v-3c0a633a] {\n    font-size: 1.2rem !important;\n    line-height: 2.2rem;\n    color: #d9d9d9;\n    padding: 0 !important;\n}\n.stage-section[data-v-3c0a633a], .stage-heading[data-v-3c0a633a] {\n    text-align: center;\n}\n.card-header > h3[data-v-3c0a633a], .card-header h5[data-v-3c0a633a] {\n    display: block;\n}\n.card-header > h3[data-v-3c0a633a] {\n    font-size: 2.3rem;\n}\n.card-body[data-v-3c0a633a] {\n    padding-left: 0;\n    padding-right: 0;\n}\n}", ""]);
 
 // exports
 
@@ -5362,19 +5362,19 @@ var staticRenderFns = [
       _c("section", { staticClass: "mb-5 pb-3", attrs: { id: "theApp" } }, [
         _c("h4", { staticClass: "mt-5 mb-3" }, [_vm._v("The App")]),
         _vm._v(" "),
-        _c("p", { staticClass: "lead py-2" }, [
+        _c("p", { staticClass: "py-2" }, [
           _vm._v(
             "As a self taught developer I spent a lot of time, in the beginning, trying to figure out what to learn! Unlike a university course, there existed no curriculum for self-studying devs at home. So after spending time researching I built my own."
           )
         ]),
         _vm._v(" "),
-        _c("p", { staticClass: "lead py-2" }, [
+        _c("p", { staticClass: "py-2" }, [
           _vm._v(
             "I realised that many other prospective developers could potentially benefit from my research and get straight to learning. So I built this app to share my knowledge. I hope you find it useful!"
           )
         ]),
         _vm._v(" "),
-        _c("p", { staticClass: "lead py-2" }, [
+        _c("p", { staticClass: "py-2" }, [
           _vm._v("Much love! And good luck with your studies!")
         ])
       ]),
@@ -5382,16 +5382,16 @@ var staticRenderFns = [
       _c("section", { staticClass: "pb-4", attrs: { id: "creator" } }, [
         _c("h4", { staticClass: "mt-5 mb-3" }, [_vm._v("Creator")]),
         _vm._v(" "),
-        _c("p", { staticClass: "lead py-2" }, [_vm._v("I'm Paul!")]),
+        _c("p", { staticClass: "py-2" }, [_vm._v("I'm Paul!")]),
         _vm._v(" "),
-        _c("p", { staticClass: "lead py-2" }, [
+        _c("p", { staticClass: "py-2" }, [
           _vm._v("Check out my Github profile and other links below!")
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "icon-group" }, [
           _c("i", { staticClass: "far fa-envelope fa-3x pr-3" }),
           _vm._v(" "),
-          _c("span", { staticClass: "lead contact-info" }, [
+          _c("span", { staticClass: "contact-info" }, [
             _vm._v("greenpaulo@yahoo.co.uk")
           ])
         ]),
@@ -5405,7 +5405,7 @@ var staticRenderFns = [
               attrs: {
                 href: "https://github.com/Greenpaulo",
                 target: "_blank",
-                className: "lead contact-info"
+                className: "contact-info"
               }
             },
             [_vm._v("https://github.com/Greenpaulo")]
@@ -5413,10 +5413,10 @@ var staticRenderFns = [
         ])
       ]),
       _vm._v(" "),
-      _c("section", { staticClass: "pb-4", attrs: { id: "credits" } }, [
+      _c("section", { staticClass: "pb-5", attrs: { id: "credits" } }, [
         _c("h4", { staticClass: "mt-5" }, [_vm._v("Credits")]),
         _vm._v(" "),
-        _c("p", { staticClass: "lead py-2" }, [
+        _c("p", { staticClass: "py-2" }, [
           _vm._v(
             'The Stages for this curriculum are based on Brad Traversy\'s annual "Web Development" youtube video. Brad is a great teacher and I highly recommend his channel!'
           )
@@ -5790,7 +5790,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("nav", { staticClass: "navbar navbar-expand-lg" }, [
+  return _c("nav", { staticClass: "navbar navbar-expand-lg navbar-dark" }, [
     _c(
       "div",
       { staticClass: "container" },
@@ -6445,19 +6445,19 @@ var render = function() {
                     _c("Stage", { attrs: { stage: 9 } }),
                     _vm._v(" "),
                     _c("div", { attrs: { id: "total-hours" } }, [
-                      _c("h3", { staticClass: "my-4 py-4" }, [
+                      _c("h3", { staticClass: "my-3 py-3" }, [
                         _vm._v("Total Hours: " + _vm._s(_vm.calcTotalHours))
                       ]),
                       _vm._v(" "),
-                      _c("h5", { staticClass: "mt-4" }, [
+                      _c("h5", { staticClass: "mt-3 py-2" }, [
                         _vm._v(
                           "Hours Remaining: " +
                             _vm._s(_vm.calcTotalHoursRemaining)
                         )
                       ]),
                       _vm._v(" "),
-                      _c("h6", [
-                        _vm._v(" Double click a course to mark as complete")
+                      _c("h6", { staticClass: "p-3" }, [
+                        _vm._v(" Double click a course to mark as complete!")
                       ])
                     ])
                   ],
@@ -6761,7 +6761,7 @@ var staticRenderFns = [
         _c("div", { staticClass: "icon-text-group my-4" }, [
           _c("i", { staticClass: "fas fa-laptop-code fa-3x text-info py-2" }),
           _vm._v(" "),
-          _c("p", { staticClass: "lead px-4" }, [
+          _c("p", { staticClass: "px-4" }, [
             _vm._v(
               "Journey To Dev is a guide for learning full stack web development. It was born out of the need for a online curriculum for self-taught prospective developers.\n        "
             )
@@ -6771,7 +6771,7 @@ var staticRenderFns = [
         _c("div", { staticClass: "icon-text-group my-4" }, [
           _c("i", { staticClass: "fas fa-road fa-3x text-orange mt-2" }),
           _vm._v(" "),
-          _c("p", { staticClass: "lead px-4" }, [
+          _c("p", { staticClass: "px-4" }, [
             _vm._v(
               'On this site you will be able to make your own "Roadmap" to plan you own journey to becoming a web developer!\n        '
             )
@@ -6783,7 +6783,7 @@ var staticRenderFns = [
             staticClass: "fas fa-graduation-cap fa-3x text-success py-2"
           }),
           _vm._v(" "),
-          _c("p", { staticClass: "lead px-4" }, [
+          _c("p", { staticClass: "px-4" }, [
             _vm._v(
               "The journey to full stack web developer comprises of nine stages. Details of each stage and the technologies you will need to learn are listed below.\n        "
             )
@@ -6795,7 +6795,7 @@ var staticRenderFns = [
             staticClass: "fas fa-exclamation fa-3x text-danger py-2 px-3"
           }),
           _vm._v(" "),
-          _c("p", { staticClass: "lead px-4 mt-2" }, [
+          _c("p", { staticClass: "px-4 mt-2" }, [
             _c("span", { staticClass: "important" }, [_vm._v("NOTE:")]),
             _vm._v(
               " You don't need to learn everything contained in every stage! (See stage for details)\n        "
@@ -6844,7 +6844,7 @@ var staticRenderFns = [
                   ]
                 ),
                 _vm._v(" "),
-                _c("p", { staticClass: "lead px-3 my-2" }, [
+                _c("p", { staticClass: "px-3 my-2" }, [
                   _c("span", { staticClass: "text-lighter" }, [_vm._v("HTML")]),
                   _vm._v(
                     " is a markup language that describes the content and layout of a website.\n            "
@@ -6869,7 +6869,7 @@ var staticRenderFns = [
                   ]
                 ),
                 _vm._v(" "),
-                _c("p", { staticClass: "lead px-4 my-2" }, [
+                _c("p", { staticClass: "px-4 my-2" }, [
                   _c("span", { staticClass: "text-lighter" }, [_vm._v("CSS")]),
                   _vm._v(
                     " (Cascading Style Sheets) is a style sheet language that adds style to your html document/website, adding fonts and colours etc.\n            "
@@ -6916,7 +6916,7 @@ var staticRenderFns = [
                   ]
                 ),
                 _vm._v(" "),
-                _c("p", { staticClass: "lead px-4 my-2" }, [
+                _c("p", { staticClass: "px-4 my-2" }, [
                   _c("span", { staticClass: "text-lighter" }, [
                     _vm._v("Bootstrap")
                   ]),
@@ -6947,7 +6947,7 @@ var staticRenderFns = [
                   ]
                 ),
                 _vm._v(" "),
-                _c("p", { staticClass: "lead px-4 my-4" }, [
+                _c("p", { staticClass: "px-4 my-4" }, [
                   _c("span", { staticClass: "text-lighter" }, [
                     _vm._v("Materialize")
                   ]),
@@ -6996,7 +6996,7 @@ var staticRenderFns = [
                   ]
                 ),
                 _vm._v(" "),
-                _c("p", { staticClass: "lead px-4 my-2" }, [
+                _c("p", { staticClass: "px-4 my-2" }, [
                   _c("span", { staticClass: "text-lighter" }, [
                     _vm._v("JavaScript")
                   ]),
@@ -7039,7 +7039,7 @@ var staticRenderFns = [
                   ]
                 ),
                 _vm._v(" "),
-                _c("p", { staticClass: "lead px-4 my-2" }, [
+                _c("p", { staticClass: "px-4 my-2" }, [
                   _c("span", { staticClass: "text-lighter" }, [
                     _vm._v("React")
                   ]),
@@ -7060,7 +7060,7 @@ var staticRenderFns = [
                   ]
                 ),
                 _vm._v(" "),
-                _c("p", { staticClass: "lead px-4 my-2" }, [
+                _c("p", { staticClass: "px-4 my-2" }, [
                   _c("span", { staticClass: "text-lighter" }, [_vm._v("Vue")]),
                   _vm._v(
                     " is a progressive framework for building user interfaces. An incrementally adoptable ecosystem that scales between a library and a full-featured framework.\n            "
@@ -7084,7 +7084,7 @@ var staticRenderFns = [
                   ]
                 ),
                 _vm._v(" "),
-                _c("p", { staticClass: "lead my-2" }, [
+                _c("p", { staticClass: "my-2" }, [
                   _c("span", { staticClass: "text-lighter" }, [
                     _vm._v("Angular")
                   ]),
@@ -7129,7 +7129,7 @@ var staticRenderFns = [
                   ]
                 ),
                 _vm._v(" "),
-                _c("p", { staticClass: "lead px-4 my-2" }, [
+                _c("p", { staticClass: "px-4 my-2" }, [
                   _c("span", { staticClass: "text-lighter" }, [
                     _vm._v("Node.js")
                   ]),
@@ -7156,7 +7156,7 @@ var staticRenderFns = [
                   ]
                 ),
                 _vm._v(" "),
-                _c("p", { staticClass: "lead px-2 my-2" }, [
+                _c("p", { staticClass: "px-2 my-2" }, [
                   _c("span", { staticClass: "text-lighter" }, [_vm._v("PHP")]),
                   _vm._v(
                     " is a server scripting language, and a powerful tool for making dynamic and interactive Web pages.\n            "
@@ -7177,7 +7177,7 @@ var staticRenderFns = [
                   ]
                 ),
                 _vm._v(" "),
-                _c("p", { staticClass: "lead px-3 my-2" }, [
+                _c("p", { staticClass: "px-3 my-2" }, [
                   _c("span", { staticClass: "text-lighter" }, [
                     _vm._v("Python")
                   ]),
@@ -7204,7 +7204,7 @@ var staticRenderFns = [
                   ]
                 ),
                 _vm._v(" "),
-                _c("p", { staticClass: "lead px-4 my-2" }, [
+                _c("p", { staticClass: "px-4 my-2" }, [
                   _c("span", { staticClass: "text-lighter" }, [_vm._v("C#")]),
                   _vm._v(
                     " is a simple, modern, general-purpose, object-oriented programming language developed by Microsoft.\n            "
@@ -7247,7 +7247,7 @@ var staticRenderFns = [
                   ]
                 ),
                 _vm._v(" "),
-                _c("p", { staticClass: "lead px-4 my-2" }, [
+                _c("p", { staticClass: "px-4 my-2" }, [
                   _c("span", { staticClass: "text-lighter" }, [_vm._v("SQL")]),
                   _vm._v(
                     " (Structered Query Language) is a standard language for storing, manipulating and retrieving data in databases.\n            "
@@ -7268,7 +7268,7 @@ var staticRenderFns = [
                   ]
                 ),
                 _vm._v(" "),
-                _c("p", { staticClass: "lead px-4 my-2" }, [
+                _c("p", { staticClass: "px-4 my-2" }, [
                   _c("span", { staticClass: "text-lighter" }, [
                     _vm._v("MySQL")
                   ]),
@@ -7295,7 +7295,7 @@ var staticRenderFns = [
                   ]
                 ),
                 _vm._v(" "),
-                _c("p", { staticClass: "lead px-4 my-2" }, [
+                _c("p", { staticClass: "px-4 my-2" }, [
                   _c("span", { staticClass: "text-lighter" }, [
                     _vm._v("MongoDB")
                   ]),
@@ -7338,7 +7338,7 @@ var staticRenderFns = [
                   ]
                 ),
                 _vm._v(" "),
-                _c("p", { staticClass: "lead px-4 my-2" }, [
+                _c("p", { staticClass: "px-4 my-2" }, [
                   _c("span", { staticClass: "text-lighter" }, [
                     _vm._v("Express")
                   ]),
@@ -7359,7 +7359,7 @@ var staticRenderFns = [
                   ]
                 ),
                 _vm._v(" "),
-                _c("p", { staticClass: "lead px-4 my-2" }, [
+                _c("p", { staticClass: "px-4 my-2" }, [
                   _c("span", { staticClass: "text-lighter" }, [
                     _vm._v("Laravel")
                   ]),
@@ -7385,7 +7385,7 @@ var staticRenderFns = [
                   ]
                 ),
                 _vm._v(" "),
-                _c("p", { staticClass: "lead px-4 my-2" }, [
+                _c("p", { staticClass: "px-4 my-2" }, [
                   _c("span", { staticClass: "text-lighter" }, [
                     _vm._v("ASP.NET")
                   ]),
@@ -7411,7 +7411,7 @@ var staticRenderFns = [
                   ]
                 ),
                 _vm._v(" "),
-                _c("p", { staticClass: "lead px-3 my-2" }, [
+                _c("p", { staticClass: "px-3 my-2" }, [
                   _c("span", { staticClass: "text-lighter" }, [
                     _vm._v("Django")
                   ]),
@@ -7450,7 +7450,7 @@ var staticRenderFns = [
                   ]
                 ),
                 _vm._v(" "),
-                _c("p", { staticClass: "lead px-4 my-2" }, [
+                _c("p", { staticClass: "px-4 my-2" }, [
                   _c("span", { staticClass: "text-lighter" }, [_vm._v("Git")]),
                   _vm._v(
                     " is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency\n            "
@@ -7469,7 +7469,7 @@ var staticRenderFns = [
                   ]
                 ),
                 _vm._v(" "),
-                _c("p", { staticClass: "lead px-4 my-2" }, [
+                _c("p", { staticClass: "px-4 my-2" }, [
                   _c("span", { staticClass: "text-lighter" }, [
                     _vm._v("Github")
                   ]),
@@ -7513,7 +7513,7 @@ var staticRenderFns = [
                   ]
                 ),
                 _vm._v(" "),
-                _c("p", { staticClass: "lead px-4 my-2" }, [
+                _c("p", { staticClass: "px-4 my-2" }, [
                   _c("span", { staticClass: "text-lighter" }, [
                     _vm._v("Netlify")
                   ]),
@@ -7542,7 +7542,7 @@ var staticRenderFns = [
                   ]
                 ),
                 _vm._v(" "),
-                _c("p", { staticClass: "lead px-4 my-2" }, [
+                _c("p", { staticClass: "px-4 my-2" }, [
                   _c("span", { staticClass: "text-lighter" }, [
                     _vm._v("DigitalOcean")
                   ]),
@@ -7568,7 +7568,7 @@ var staticRenderFns = [
                   ]
                 ),
                 _vm._v(" "),
-                _c("p", { staticClass: "lead px-4 my-2" }, [
+                _c("p", { staticClass: "px-4 my-2" }, [
                   _c("span", { staticClass: "text-lighter" }, [_vm._v("SSH")]),
                   _vm._v(
                     " (Secure Shell) is a cryptographic network protocol for operating network services securely over an unsecured network.  \n            "
