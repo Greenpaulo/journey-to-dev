@@ -427,6 +427,7 @@ h5.card-title > a {
 .card-footer {
   display: flex;
   justify-content: space-between;
+  padding: 0;
 }
 
 .empty-stage {
@@ -435,12 +436,45 @@ h5.card-title > a {
   text-align: left;
 }
 
-.left-arrow, .right-arrow {
+.left-arrow, .right-arrow, .delete-btn {
   cursor: pointer;
+  padding: 0.75rem;
 }
 
-.delete-btn {
-  cursor: pointer;
+.left-arrow {
+  padding-left: 1.25rem;
+ 
+  &:hover{
+    animation: left-point 750ms ease-in;
+    animation-iteration-count: 2;
+  }
+}
+
+@keyframes left-point {
+  50% {
+    transform: translateX(-15px)
+  }
+  100% {
+    transform: translateX(0px)
+  }
+}
+
+.right-arrow {
+  padding-right: 1.25rem;
+ 
+  &:hover{
+    animation: right-point 750ms ease-in;
+    animation-iteration-count: 2;
+  }
+}
+
+@keyframes right-point {
+  50% {
+    transform: translateX(15px)
+  }
+  100% {
+    transform: translateX(0px)
+  }
 }
 
 </style>

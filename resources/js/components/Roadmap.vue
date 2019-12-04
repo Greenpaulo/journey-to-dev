@@ -191,6 +191,7 @@ export default {
 .select-links {
   list-style: none;
   cursor: pointer;
+  transition: filter 200ms ease-in-out;
 
   &:hover {
     filter: brightness(120%);

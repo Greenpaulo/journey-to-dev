@@ -125,6 +125,11 @@ export default {
   height: 50px;
   border-radius: 50%;
   cursor: pointer;
+  transition: filter 150ms ease-in-out;
+
+  &:hover {
+    filter: brightness(90%);
+  }
 }
 
 .bg-stage9 i.fa-plus {
