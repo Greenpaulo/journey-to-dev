@@ -100,4 +100,38 @@ p {
   }
 }
 
+// Media queries
+// Smartphones - larger
+@media (max-width: 420px) {
+  h4 {
+    text-align: center;
+  }
+
+  p {
+    font-size: 1.1rem;
+    line-height: 1.9rem;
+  }
+
+  #creator a {
+    font-size: 1rem;
+  }
+
+  section {
+    padding: 0 1rem 3rem 1rem; 
+  }
+
+  a.btn {
+    display: block;
+    margin: auto;
+  }
+}
+
+// Smartphones -smaller
+@media (max-width: 320px){
+
+  #creator a, #creator span {
+    font-size: 0.8rem;
+  }
+}
+
 </style>

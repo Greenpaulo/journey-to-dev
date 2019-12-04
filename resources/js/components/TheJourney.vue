@@ -314,11 +314,36 @@ a[href="https://www.w3schools.com/sql/"] + p {
 }
 
 // Media Queries
+//  Ipad Pro
+@media (max-width: 1024px){
+ 
+  img[src="/images/materialize.png"], 
+  img[src="/images/javascript.png"], 
+  img[src="/images/vue.png"]  {
+    margin-top: 1rem;
+  }
+
+}
+
+// Ipad and large phone landscape
+@media (max-width: 900px){
+
+}
+
+// Smartphones with larger screens
 @media(max-width: 742px) {
+
+  h1 {
+    margin-bottom: 0 !important;
+  }
 
   .icon-text-group {
     flex-direction: column;
     text-align: center;
+
+    i {
+      margin-bottom: 1rem;
+    }
   }
 
   p {
@@ -335,6 +360,8 @@ a[href="https://www.w3schools.com/sql/"] + p {
 
   .card-header {
 
+    padding-bottom: 1rem;
+
     &>h3, h5 {
       display: block;
     }
@@ -347,9 +374,32 @@ a[href="https://www.w3schools.com/sql/"] + p {
   .card-body {
     padding-left: 0;
     padding-right: 0;
+    padding-top: 0;
   }
 
-  
+  a[href="https://materializecss.com/"] {
+    margin: 0 !important;
+  }
+
+    img[src="/images/javascript.png"]{
+    margin-bottom: 1rem;
+    margin-top: 0;
+  } 
+}
+
+// Smartphones with width 360px
+@media (max-width: 360px){
+
+  .card-header {
+
+    &>h3 {
+      font-size: 2rem;
+    }
+
+    h5 {
+      font-size: 1.2rem;
+    }
+  }
 }
 
 </style>
