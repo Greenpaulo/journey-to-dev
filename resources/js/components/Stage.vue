@@ -363,6 +363,11 @@ export default {
   flex-wrap: wrap;
   width: 100%;
 }
+.stage-courses {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
 
 .stage-courses > .stage-course {
   position: relative;
@@ -403,6 +408,15 @@ export default {
       }
     }
   }
+
+}
+
+.stage-courses > .bg-stage9 > .card-body i{
+  color: black;
+  
+  &:hover {
+      color: lighten(black, 25%);
+    }
 }
 
 h5.card-title > a {
@@ -476,5 +490,24 @@ h5.card-title > a {
     transform: translateX(0px)
   }
 }
+
+// Media queries
+// Ipad
+@media (max-width: 768px){
+  .stage {
+    display: grid;
+  }
+
+  .stage-courses {
+    margin: 0 !important;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 260px));
+    justify-items: center;
+    justify-content: space-around;
+
+  }
+} 
 
 </style>

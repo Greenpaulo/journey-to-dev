@@ -28,7 +28,10 @@
               </ul>
             </div>
 
-            <h4 id="stage-description" class="mt-5 mb-3">Stage {{stage}} - {{getStageTitle}}:</h4> <h5>Select Your Courses</h5>
+            <div id="stage-select-title">
+              <h4 id="stage-description" class="mt-5 mb-3">Stage {{stage}} - {{getStageTitle}}</h4> 
+              <h5>Select Your Courses</h5>
+            </div>
             
             <CourseList></CourseList>
           </section>
@@ -209,5 +212,46 @@ export default {
 
 // Media queries
 // Ipad
+@media (max-width: 768px){
+
+  #select-menu-links {
+    padding: 0;
+  }
+  .select-links {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    margin-right: 0.7rem;
+  }
+
+  #stage-select-title {
+    text-align: center;
+  }
+}
+
+// Smartphone - larger
+@media (max-width: 420px){
+
+  h1.display-4 {
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 3rem; 
+  }
+
+  #select-menu {
+    padding: 0 2rem !important;
+  }
+
+  ul#select-menu-links {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-gap: 1rem;
+    justify-content: space-around;
+  }
+
+  .select-links {
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+  }
+}
 
 </style>
