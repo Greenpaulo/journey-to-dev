@@ -157,4 +157,19 @@ h5.card-title > a {
   text-align: center;
   padding-top: 3rem;
 }
+
+
+// Media queries
+// Smartphone - smaller
+@media (max-width: 375px){
+
+  .course-list {
+    padding-left: 1.5rem;
+  }
+
+  .course-card {
+    min-width: 280px;
+    padding: 0.75rem;
+  }
+}
 </style>

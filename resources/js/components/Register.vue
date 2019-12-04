@@ -5,20 +5,20 @@
       <h2 class="mt-2 mb-4">Register</h2>
       <flash-message class=""></flash-message>
       <div class="form-group">
-        <label for="name" class="lead text-orangered">Name</label>
+        <label for="name" class="lead text-stage2">Name</label>
         <input type="text" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Enter name" v-model="name" required>
       </div>
       <div class="form-group">
-        <label for="email" class="lead text-orange">Email address</label>
+        <label for="email" class="lead text-stage3">Email address</label>
         <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" v-model="email" required>
         <small id="emailHelp" class="form-text">We'll never share your email with anyone else.</small>
       </div>
       <div class="form-group">
-        <label for="password" class="lead text-success">Password</label>
+        <label for="password" class="lead text-stage4">Password</label>
         <input type="password" class="form-control" id="password" placeholder="Password" v-model="password" required>
       </div>
       <div class="form-group">
-        <label for="password_confirmation" class="lead text-purple">Confirm password</label>
+        <label for="password_confirmation" class="lead text-stage8">Confirm password</label>
         <input type="password" class="form-control" id="password_confirmation" placeholder="Password" v-model="password_confirmation" required>
       </div>
       <button type="submit" class="btn btn-primary my-3">Submit</button>

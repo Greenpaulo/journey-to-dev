@@ -5,7 +5,7 @@
       <h2 class="mt-2 mb-4">Login</h2>
       <flash-message class=""></flash-message>
       <div class="form-group">
-        <label for="email" class="lead text-orange">Email address</label>
+        <label for="email" class="lead text-stage2">Email address</label>
         <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" v-model="email">
       </div>
       <div class="form-group">

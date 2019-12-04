@@ -508,6 +508,14 @@ h5.card-title > a {
     justify-content: space-around;
 
   }
-} 
+}
+
+// Smartphone - smaller
+@media (max-width: 375px){
+
+  .stage-heading {
+    margin: auto;
+  }
+}
 
 </style>
