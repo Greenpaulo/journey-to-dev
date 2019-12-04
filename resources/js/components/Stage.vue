@@ -66,9 +66,14 @@
           :id="course.id">
           <div class="card-header">Stage {{course.stage}}</div>
           <div class="card-body">
-            <h5 class="card-title"><a :href=course.url target="_blank">{{course.title}}</a></h5>
-            <p class="card-text">{{course.creator}}</p>
-            <p class="card-text">{{course.hours}} Hours</p>
+            <div class="course-info">
+              <h5 class="card-title">{{course.title}}</h5>
+              <p class="card-text">{{course.creator}}</p>
+              <p class="card-text">{{course.hours}} Hours</p>
+            </div>
+            <div class="link">
+              <a :href=course.url target="_blank"><i class="fas fa-link fa-lg"></i></a>
+            </div>
           </div>
           <div class="card-footer">
           <div class="left-arrow">
@@ -360,6 +365,7 @@ export default {
 }
 
 .stage-courses > .stage-course {
+  position: relative;
   min-height:240px;
   min-width: 260px;
   max-width: 260px;
@@ -369,6 +375,33 @@ export default {
 
   .card-body > h5 {
     font-size: 1.4rem;
+  }
+
+  .card-body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+
+    p.card-text {
+      margin-bottom: 0.6rem;
+    }
+  
+    .link a {
+      position: absolute;
+      bottom: 15px;
+      left: 217px;
+    }
+    
+    i {
+      color: white;
+      margin-top: 0.5rem;
+      transition: color 200ms ease-in-out;
+
+      &:hover {
+        color: darken(white, 15%);
+      }
+    }
   }
 }
 

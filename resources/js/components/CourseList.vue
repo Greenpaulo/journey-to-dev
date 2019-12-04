@@ -111,6 +111,11 @@ export default {
 
   a {
     margin-top: 1rem;
+    transition: filter 100ms ease;
+
+    &:hover {
+      filter: brightness(90%);
+    }
   }
 }
 
