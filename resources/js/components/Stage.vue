@@ -118,6 +118,7 @@ export default {
   },
   mounted() {
     // Enable touch alternative for hover for "stage tips" on smartphones
+    // Store the tip element in data object to be able to pass to click handler
     const tip = document.getElementById([`stage${this.stage}-tip`]);
     this.tip = tip;
   },
@@ -159,21 +160,21 @@ export default {
     callGetByStage(stage){
       this.$store.dispatch('retrieveRoadmapByStage', stage);
     },
+    // Enable opening and closing tip on touch/click for mobile devices
     showTip(tip){
-        console.log('ShowTip called with tip', tip)
-        // console.log(tip.style.clipPath);
-        // Check if tip is already showing
-        if (this.tipOpen){
-          // If open then close it
-          tip.style.clipPath = "circle(20% at 0% 0%)"
-          this.tipOpen = false;
-          console.log('if', this.tipOpen)
-        }
-        // Else tip is closed
-        else{
-          tip.style.clipPath = "circle(75%)";
-          this.tipOpen = true;
-          console.log('else', this.tipOpen)
+        // Only enable on mobiles and tablets - inc. landscape
+        if(window.innerWidth <= 1366){
+          // Check if tip is already showing
+          if (this.tipOpen){
+            // If open then close it
+            tip.style.clipPath = "circle(20% at 0% 0%)"
+            this.tipOpen = false;
+          }
+          // Else tip is closed
+          else{
+            tip.style.clipPath = "circle(75%)";
+            this.tipOpen = true;
+          }
         }
     }  
   },

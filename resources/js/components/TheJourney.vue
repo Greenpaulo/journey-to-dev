@@ -10,7 +10,7 @@
           </p>
         </div >
         <div class="icon-text-group my-4">
-          <i class="fas fa-road fa-3x text-orange mt-2"></i>
+          <i class="fas fa-road fa-3x text-stage3 mt-2"></i>
           <p class="px-4">On this site you will be able to make your own "Roadmap" to plan you own journey to becoming a web developer!
           </p>
         </div>
@@ -31,7 +31,7 @@
       
       <section class="p-3 my-2">
         <div class="card stage-section border-stage1 p-4 my-5" id="stage-one">
-          <div class="card-header"><h3>Stage One</h3><h5 class="stage-heading text-danger mx-3 py-2">HTML & CSS</h5></div>
+          <div class="card-header"><h3>Stage One</h3><h5 class="stage-heading text-stage1 mx-3 py-2">HTML & CSS</h5></div>
           <div class=" card-body">
             <div class="icon-text-group my-4">
               <a href="https://www.w3schools.com/html/html5_intro.asp" target="_blank"><img src="/images/html5.png" alt="html5 logo"></a>
@@ -47,7 +47,7 @@
         </div>
         
         <div class="card stage-section border-stage2 p-4 mb-5" id="stage-two">
-          <div class="card-header"><h3>Stage Two</h3><h5 class="stage-heading text-orange mx-3 py-2">CSS Frameworks</h5></div>
+          <div class="card-header"><h3>Stage Two</h3><h5 class="stage-heading text-stage2 mx-3 py-2">CSS Frameworks</h5></div>
           <div class=" card-body">
             <h5>Choose One:</h5>
             <div class="icon-text-group my-4">
@@ -64,7 +64,7 @@
         </div>
 
         <div class="card stage-section border-stage3 p-4 mb-5" id="stage-three">
-          <div class="card-header"><h3>Stage Three</h3><h5 class="stage-heading text-orangered mx-3 py-2">JavaScript</h5></div>
+          <div class="card-header"><h3>Stage Three</h3><h5 class="stage-heading text-stage3 mx-3 py-2">JavaScript</h5></div>
           <div class=" card-body">
             <div class="icon-text-group my-4">
               <a href="https://www.w3schools.com/Js/" target="_blank"><img src="/images/javascript.png" alt="javascript logo"></a>
@@ -75,7 +75,7 @@
         </div>
 
         <div class="card stage-section border-stage4 p-4 mb-5" id="stage-four">
-          <div class="card-header"><h3>Stage Four</h3><h5 class="stage-heading text-success mx-3 py-2">Front-End JS Frameworks</h5></div>
+          <div class="card-header"><h3>Stage Four</h3><h5 class="stage-heading text-stage4 mx-3 py-2">Front-End JS Frameworks</h5></div>
           <div class=" card-body">
             <h5>Choose One:</h5>
             <div class="icon-text-group my-4">
@@ -97,7 +97,7 @@
         </div>
 
         <div class="card stage-section border-stage5 p-4 mb-5" id="stage-five">
-          <div class="card-header"><h3>Stage Five</h3><h5 class="stage-heading text-primary mx-3 py-2">Server Side Languages</h5></div>
+          <div class="card-header"><h3>Stage Five</h3><h5 class="stage-heading text-stage5 mx-3 py-2">Server Side Languages</h5></div>
           <div class=" card-body">
             <h5>Choose One:</h5>
             <div class="icon-text-group my-4">
@@ -124,7 +124,7 @@
         </div>
 
         <div class="card stage-section border-stage6 p-4 mb-5" id="stage-six">
-          <div class="card-header"><h3>Stage Six</h3><h5 class="stage-heading text-teal mx-3 py-2">Databases </h5></div>
+          <div class="card-header"><h3>Stage Six</h3><h5 class="stage-heading text-stage6 mx-3 py-2">Databases </h5></div>
           <div class=" card-body">
             <div class="icon-text-group my-4">
               <a class="px-2" href="https://www.w3schools.com/sql/" target="_blank"><img src="/images/sql.png" alt="sql logo"></a>
@@ -145,7 +145,7 @@
         </div>
 
         <div class="card stage-section border-stage7 p-4 mb-5" id="stage-seven">
-          <div class="card-header"><h3>Stage Seven</h3><h5 class="stage-heading text-pink mx-3 py-2">Server Side Frameworks </h5></div>
+          <div class="card-header"><h3>Stage Seven</h3><h5 class="stage-heading text-stage7 mx-3 py-2">Server Side Frameworks </h5></div>
           <div class=" card-body">
             <h5>Choose One:</h5>
             <div class="icon-text-group my-4">
@@ -172,7 +172,7 @@
         </div>
 
         <div class="card stage-section border-stage8 p-4 mb-5" id="stage-eight">
-          <div class="card-header"><h3>Stage Eight</h3><h5 class="stage-heading text-info mx-3 py-2">Version Control </h5></div>
+          <div class="card-header"><h3>Stage Eight</h3><h5 class="stage-heading text-stage8 mx-3 py-2">Version Control </h5></div>
           <div class=" card-body">
             <div class="icon-text-group my-4">
               <a href="https://git-scm.com/" target="_blank"><img src="/images/git.png" alt="git logo"></a>
@@ -188,7 +188,7 @@
         </div>
 
         <div class="card stage-section border-stage9 p-4 mb-5" id="stage-nine">
-          <div class="card-header"><h3>Stage Nine</h3><h5 class="stage-heading text-white mx-3 py-2">Deployment</h5></div>
+          <div class="card-header"><h3>Stage Nine</h3><h5 class="stage-heading text-stage9 mx-3 py-2">Deployment</h5></div>
           <div class=" card-body">
             <div class="icon-text-group my-4">
               <a href="https://www.netlify.com/" target="_blank"><img src="/images/netlify.png" alt="netlify logo"></a>
@@ -228,11 +228,8 @@ export default {
 <style lang='scss' scoped>
 
 @import 'resources/sass/variables';
+@import 'resources/sass/colors';
  
-// .welcome-btn {
-//   text-align: center;
-// }
-
 .icon-text-group {
     display: flex;
     margin: 1.7rem 0;

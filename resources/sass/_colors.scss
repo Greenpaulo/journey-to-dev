@@ -86,22 +86,30 @@ $stage9: $white;
 }
 
 // Text colors
-.text-orangered {
-  color: orangered !important;
+.text-stage1 {
+  color: $stage1;
 }
-
-.text-orange {
-  color: orange !important;
+.text-stage2 {
+  color: $stage2;
 }
-
-.text-purple {
-  color: $purple !important;
+.text-stage3 {
+  color: $stage3;
 }
-
-.text-teal {
-  color: $teal !important;
+.text-stage4 {
+  color: $stage4;
 }
-
-.text-pink {
-  color: $pink !important;
+.text-stage5 {
+  color: $stage5;
+}
+.text-stage6 {
+  color: $stage6;
+}
+.text-stage7 {
+  color: $stage7;
+}
+.text-stage8 {
+  color: $stage8;
+}
+.text-stage9 {
+  color:white;
 }
