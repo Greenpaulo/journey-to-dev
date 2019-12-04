@@ -30,10 +30,7 @@ export default {
     }
   },
   computed: mapGetters({userCourseList: 'getUserCourseList', courses: 'getUserCoursesByStage'}),
-  methods: mapActions(['addCourseToRoadmap', 'retrieveUserCoursesByStage']),
-  mounted(){
-    console.log(this.courses.length);
-  }
+  methods: mapActions(['addCourseToRoadmap', 'retrieveUserCoursesByStage'])
 }
 
 </script>

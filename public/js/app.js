@@ -2006,10 +2006,7 @@ __webpack_require__.r(__webpack_exports__);
     userCourseList: 'getUserCourseList',
     courses: 'getUserCoursesByStage'
   }),
-  methods: Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapActions"])(['addCourseToRoadmap', 'retrieveUserCoursesByStage']),
-  mounted: function mounted() {
-    console.log(this.courses.length);
-  }
+  methods: Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapActions"])(['addCourseToRoadmap', 'retrieveUserCoursesByStage'])
 });
 
 /***/ }),
@@ -2415,7 +2412,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       }
     },
     calcTotalHours: function calcTotalHours() {
-      console.log('total called');
       var roadmap = this.$store.state.roadmap.roadmap;
       var total = 0;
       roadmap.forEach(function (course) {
@@ -2425,7 +2421,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       return total;
     },
     calcTotalHoursRemaining: function calcTotalHoursRemaining() {
-      console.log('remain called');
       var roadmap = this.$store.state.roadmap.roadmap;
       var total = 0;
       roadmap.forEach(function (course) {
@@ -2562,11 +2557,37 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Stage",
   props: ['stage'],
+  data: function data() {
+    return {
+      tipOpen: false,
+      tip: null
+    };
+  },
+  created: function created() {
+    var _this = this;
+
+    // Get the roadmap by stage only after the initial data has been loaded
+    var waitForInitialDataLoad = function waitForInitialDataLoad() {
+      if (_this.courseList.length === 0) {
+        setTimeout(function () {
+          waitForInitialDataLoad();
+        }, 500);
+      } else {
+        _this.callGetByStage(_this.stage);
+      }
+    };
+
+    waitForInitialDataLoad();
+  },
+  mounted: function mounted() {
+    // Enable touch alternative for hover for "stage tips" on smartphones
+    var tip = document.getElementById(["stage".concat(this.stage, "-tip")]);
+    this.tip = tip;
+  },
   computed: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapGetters"])({
     courseList: 'getCourseList'
   }), {
@@ -2620,25 +2641,25 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       }
     }
   }),
-  created: function created() {
-    var _this = this;
-
-    // Get the roadmap by stage only after the initial data has been loaded
-    var waitForInitialDataLoad = function waitForInitialDataLoad() {
-      if (_this.courseList.length === 0) {
-        setTimeout(function () {
-          waitForInitialDataLoad();
-        }, 500);
-      } else {
-        _this.callGetByStage(_this.stage);
-      }
-    };
-
-    waitForInitialDataLoad();
-  },
   methods: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapActions"])(['deleteCourseFromRoadmap', 'moveCourse', 'toggleCourseCompleted']), {
     callGetByStage: function callGetByStage(stage) {
       this.$store.dispatch('retrieveRoadmapByStage', stage);
+    },
+    showTip: function showTip(tip) {
+      console.log('ShowTip called with tip', tip); // console.log(tip.style.clipPath);
+      // Check if tip is already showing
+
+      if (this.tipOpen) {
+        // If open then close it
+        tip.style.clipPath = "circle(20% at 0% 0%)";
+        this.tipOpen = false;
+        console.log('if', this.tipOpen);
+      } // Else tip is closed
+      else {
+          tip.style.clipPath = "circle(75%)";
+          this.tipOpen = true;
+          console.log('else', this.tipOpen);
+        }
     }
   }) // mounted() {
   //     //Calculate path lengths of the svg logo
@@ -6499,126 +6520,141 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("section", { staticClass: "stage my-5" }, [
     _c("div", { staticClass: "stage-heading" }, [
-      _c("div", { staticClass: "inner", class: ["bg-stage" + _vm.stage] }, [
-        _c("div", { staticClass: "inner-header" }, [
+      _c(
+        "div",
+        {
+          staticClass: "inner",
+          class: ["bg-stage" + _vm.stage],
+          attrs: { id: ["stage" + _vm.stage + "-tip"] },
+          on: {
+            click: function($event) {
+              return _vm.showTip(_vm.tip)
+            }
+          }
+        },
+        [
+          _c("div", { staticClass: "inner-header" }, [
+            _c(
+              "svg",
+              {
+                staticStyle: { "enable-background": "new 0 0 100 125" },
+                attrs: {
+                  version: "1.1",
+                  id: "lightbulb",
+                  xmlns: "http://www.w3.org/2000/svg",
+                  "xmlns:xlink": "http://www.w3.org/1999/xlink",
+                  x: "0px",
+                  y: "0px",
+                  viewBox: "0 0 100 125",
+                  "xml:space": "preserve",
+                  height: "50px",
+                  width: "50px"
+                }
+              },
+              [
+                _c("g", { attrs: { transform: "translate(0,-952.36218)" } }, [
+                  _c("circle", {
+                    attrs: { cx: "50", cy: "1002.7", r: "21.5" }
+                  }),
+                  _vm._v(" "),
+                  _c("path", {
+                    attrs: {
+                      d:
+                        "M41.9,1033.9c0.7,1.9,2.3,3.3,4.3,3.7v1c0,2,1.7,3.7,3.7,3.7s3.7-1.7,3.7-3.7v-1c2-0.3,3.7-1.8,4.3-3.7H41.9z"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("rect", {
+                    attrs: {
+                      x: "41.6",
+                      y: "1028.4",
+                      width: "16.7",
+                      height: "3.7"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("rect", {
+                    attrs: {
+                      x: "41.6",
+                      y: "1022.4",
+                      width: "16.7",
+                      height: "3.7"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("path", {
+                    attrs: {
+                      d:
+                        "M11.9,1000.5c-1,0-1.9,0.8-1.9,1.9s0.8,1.9,1.9,1.9h9.3c1,0,1.9-0.8,1.9-1.9c0-1-0.8-1.9-1.9-1.9H11.9z"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("path", {
+                    attrs: {
+                      d:
+                        "M23,973.6c-0.5,0-0.9,0.2-1.3,0.6c-0.7,0.7-0.7,1.9,0,2.6l6.6,6.6c0.7,0.7,1.9,0.7,2.6,0s0.7-1.9,0-2.6l-6.6-6.6 C24,973.8,23.5,973.6,23,973.6z"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("path", {
+                    attrs: {
+                      d:
+                        "M50,962.4c-1,0-1.9,0.8-1.9,1.9v9.3c0,1,0.8,1.9,1.9,1.9c1,0,1.9-0.8,1.9-1.9v-9.3C51.8,963.2,51,962.4,50,962.4z"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("path", {
+                    attrs: {
+                      d:
+                        "M76.9,973.6c-0.5,0-0.9,0.2-1.3,0.6l-6.6,6.6c-0.7,0.7-0.7,1.9,0,2.6c0.7,0.7,1.9,0.7,2.6,0l6.6-6.6c0.7-0.7,0.7-1.9,0-2.6 C77.8,973.8,77.4,973.6,76.9,973.6z"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("path", {
+                    attrs: {
+                      d:
+                        "M78.8,1000.5c-1,0-1.9,0.8-1.9,1.9c0,1,0.8,1.9,1.9,1.9H88c1,0,1.9-0.8,1.9-1.9s-0.8-1.9-1.9-1.9H78.8z"
+                    }
+                  })
+                ])
+              ]
+            ),
+            _vm._v(" "),
+            _c("h4", [_vm._v("Tip")])
+          ]),
+          _vm._v(" "),
+          _c("p", [_vm._v(_vm._s(_vm.getStageTip))]),
+          _vm._v(" "),
           _c(
             "svg",
             {
-              staticStyle: { "enable-background": "new 0 0 100 125" },
+              staticStyle: { "enable-background": "new 0 0 512 512" },
               attrs: {
                 version: "1.1",
-                id: "lightbulb",
+                id: "thumbs-up",
+                focusable: "false",
                 xmlns: "http://www.w3.org/2000/svg",
                 "xmlns:xlink": "http://www.w3.org/1999/xlink",
                 x: "0px",
                 y: "0px",
-                viewBox: "0 0 100 125",
+                viewBox: "0 0 512 512",
                 "xml:space": "preserve",
                 height: "50px",
                 width: "50px"
               }
             },
             [
-              _c("g", { attrs: { transform: "translate(0,-952.36218)" } }, [
-                _c("circle", { attrs: { cx: "50", cy: "1002.7", r: "21.5" } }),
-                _vm._v(" "),
-                _c("path", {
-                  attrs: {
-                    d:
-                      "M41.9,1033.9c0.7,1.9,2.3,3.3,4.3,3.7v1c0,2,1.7,3.7,3.7,3.7s3.7-1.7,3.7-3.7v-1c2-0.3,3.7-1.8,4.3-3.7H41.9z"
-                  }
-                }),
-                _vm._v(" "),
-                _c("rect", {
-                  attrs: {
-                    x: "41.6",
-                    y: "1028.4",
-                    width: "16.7",
-                    height: "3.7"
-                  }
-                }),
-                _vm._v(" "),
-                _c("rect", {
-                  attrs: {
-                    x: "41.6",
-                    y: "1022.4",
-                    width: "16.7",
-                    height: "3.7"
-                  }
-                }),
-                _vm._v(" "),
-                _c("path", {
-                  attrs: {
-                    d:
-                      "M11.9,1000.5c-1,0-1.9,0.8-1.9,1.9s0.8,1.9,1.9,1.9h9.3c1,0,1.9-0.8,1.9-1.9c0-1-0.8-1.9-1.9-1.9H11.9z"
-                  }
-                }),
-                _vm._v(" "),
-                _c("path", {
-                  attrs: {
-                    d:
-                      "M23,973.6c-0.5,0-0.9,0.2-1.3,0.6c-0.7,0.7-0.7,1.9,0,2.6l6.6,6.6c0.7,0.7,1.9,0.7,2.6,0s0.7-1.9,0-2.6l-6.6-6.6 C24,973.8,23.5,973.6,23,973.6z"
-                  }
-                }),
-                _vm._v(" "),
-                _c("path", {
-                  attrs: {
-                    d:
-                      "M50,962.4c-1,0-1.9,0.8-1.9,1.9v9.3c0,1,0.8,1.9,1.9,1.9c1,0,1.9-0.8,1.9-1.9v-9.3C51.8,963.2,51,962.4,50,962.4z"
-                  }
-                }),
-                _vm._v(" "),
-                _c("path", {
-                  attrs: {
-                    d:
-                      "M76.9,973.6c-0.5,0-0.9,0.2-1.3,0.6l-6.6,6.6c-0.7,0.7-0.7,1.9,0,2.6c0.7,0.7,1.9,0.7,2.6,0l6.6-6.6c0.7-0.7,0.7-1.9,0-2.6 C77.8,973.8,77.4,973.6,76.9,973.6z"
-                  }
-                }),
-                _vm._v(" "),
-                _c("path", {
-                  attrs: {
-                    d:
-                      "M78.8,1000.5c-1,0-1.9,0.8-1.9,1.9c0,1,0.8,1.9,1.9,1.9H88c1,0,1.9-0.8,1.9-1.9s-0.8-1.9-1.9-1.9H78.8z"
-                  }
-                })
-              ])
+              _c("path", {
+                staticClass: "st0",
+                attrs: {
+                  d:
+                    "M466.3,286.7C475,271.8,480,256,480,236.9c0-44-37.2-85.6-85.8-85.6h-36.5c4.9-12.8,8.9-28.1,8.9-46.5\n            C366.5,31.9,328.9,0,271.3,0c-61.6,0-58.1,94.9-71.8,108.6c-22.7,22.7-49.6,66.4-68.8,83.4H32c-17.7,0-32,14.3-32,32v240\n            c0,17.7,14.3,32,32,32h64c14.9,0,27.4-10.2,31-24c44.5,1,75.1,39.9,177.8,39.9c7.2,0,15.2,0,22.2,0c77.1,0,112-39.4,112.9-95.3\n            c13.3-18.4,20.3-43.1,17.3-67C467.1,331.2,470.9,309.3,466.3,286.7z M404.5,340.5c12.6,21.1,1.3,49.4-13.9,57.6\n            c7.7,48.8-17.6,65.9-53.1,65.9h-37.8c-71.6,0-118-37.8-171.6-37.8V240h10.9c28.4,0,68-70.9,94.5-97.5c28.4-28.4,18.9-75.6,37.8-94.5\n            c47.3,0,47.3,33,47.3,56.7c0,39.2-28.4,56.7-28.4,94.5h104c21.1,0,37.7,18.9,37.8,37.8c0.1,18.9-12.8,37.8-22.3,37.8\n            C423.2,289.5,426.1,320.1,404.5,340.5L404.5,340.5z M88,432c0,13.3-10.7,24-24,24s-24-10.7-24-24s10.7-24,24-24S88,418.7,88,432z"
+                }
+              })
             ]
-          ),
-          _vm._v(" "),
-          _c("h4", [_vm._v("Tip")])
-        ]),
-        _vm._v(" "),
-        _c("p", [_vm._v(_vm._s(_vm.getStageTip))]),
-        _vm._v(" "),
-        _c(
-          "svg",
-          {
-            staticStyle: { "enable-background": "new 0 0 512 512" },
-            attrs: {
-              version: "1.1",
-              id: "thumbs-up",
-              focusable: "false",
-              xmlns: "http://www.w3.org/2000/svg",
-              "xmlns:xlink": "http://www.w3.org/1999/xlink",
-              x: "0px",
-              y: "0px",
-              viewBox: "0 0 512 512",
-              "xml:space": "preserve",
-              height: "50px",
-              width: "50px"
-            }
-          },
-          [
-            _c("path", {
-              staticClass: "st0",
-              attrs: {
-                d:
-                  "M466.3,286.7C475,271.8,480,256,480,236.9c0-44-37.2-85.6-85.8-85.6h-36.5c4.9-12.8,8.9-28.1,8.9-46.5\n            C366.5,31.9,328.9,0,271.3,0c-61.6,0-58.1,94.9-71.8,108.6c-22.7,22.7-49.6,66.4-68.8,83.4H32c-17.7,0-32,14.3-32,32v240\n            c0,17.7,14.3,32,32,32h64c14.9,0,27.4-10.2,31-24c44.5,1,75.1,39.9,177.8,39.9c7.2,0,15.2,0,22.2,0c77.1,0,112-39.4,112.9-95.3\n            c13.3-18.4,20.3-43.1,17.3-67C467.1,331.2,470.9,309.3,466.3,286.7z M404.5,340.5c12.6,21.1,1.3,49.4-13.9,57.6\n            c7.7,48.8-17.6,65.9-53.1,65.9h-37.8c-71.6,0-118-37.8-171.6-37.8V240h10.9c28.4,0,68-70.9,94.5-97.5c28.4-28.4,18.9-75.6,37.8-94.5\n            c47.3,0,47.3,33,47.3,56.7c0,39.2-28.4,56.7-28.4,94.5h104c21.1,0,37.7,18.9,37.8,37.8c0.1,18.9-12.8,37.8-22.3,37.8\n            C423.2,289.5,426.1,320.1,404.5,340.5L404.5,340.5z M88,432c0,13.3-10.7,24-24,24s-24-10.7-24-24s10.7-24,24-24S88,418.7,88,432z"
-              }
-            })
-          ]
-        )
-      ]),
+          )
+        ]
+      ),
       _vm._v(" "),
       _c("div", { staticClass: "stage-heading-info" }, [
         _c("h2", { staticClass: "stage-number" }, [

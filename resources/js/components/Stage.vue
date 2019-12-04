@@ -2,8 +2,7 @@
   
   <section class="stage my-5">
       <div class="stage-heading">
-        <div class="inner" :class="[
-          `bg-stage${stage}`]">
+        <div class="inner" :class="[`bg-stage${stage}`]" :id="[`stage${stage}-tip`]" @click="showTip(tip)">
           <div class="inner-header">
             <svg version="1.1" id="lightbulb" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 125" style="enable-background:new 0 0 100 125;" xml:space="preserve" height="50px" width="50px">
             <g transform="translate(0,-952.36218)">
@@ -97,6 +96,31 @@ import { mapGetters, mapActions } from 'vuex';
 export default {
   name: "Stage",
   props: ['stage'],
+  data () {
+    return {
+      tipOpen: false,
+      tip: null
+    }
+  },
+  created(){
+    // Get the roadmap by stage only after the initial data has been loaded
+    const waitForInitialDataLoad = () => {
+    if(this.courseList.length === 0){
+      setTimeout(() => {
+        waitForInitialDataLoad();
+      }, 500)
+    } else {
+      this.callGetByStage(this.stage);
+    }
+    };
+    
+    waitForInitialDataLoad();
+  },
+  mounted() {
+    // Enable touch alternative for hover for "stage tips" on smartphones
+    const tip = document.getElementById([`stage${this.stage}-tip`]);
+    this.tip = tip;
+  },
   computed: {
     ...mapGetters({courseList: 'getCourseList'}),
     // Returns the current stage roadmap
@@ -130,26 +154,28 @@ export default {
       }
     }
   },
-
-  created(){
-    // Get the roadmap by stage only after the initial data has been loaded
-    const waitForInitialDataLoad = () => {
-    if(this.courseList.length === 0){
-      setTimeout(() => {
-        waitForInitialDataLoad();
-      }, 500)
-    } else {
-      this.callGetByStage(this.stage);
-    }
-    };
-    
-    waitForInitialDataLoad();
-  },
   methods: {
     ...mapActions(['deleteCourseFromRoadmap', 'moveCourse', 'toggleCourseCompleted']),
     callGetByStage(stage){
       this.$store.dispatch('retrieveRoadmapByStage', stage);
-    }
+    },
+    showTip(tip){
+        console.log('ShowTip called with tip', tip)
+        // console.log(tip.style.clipPath);
+        // Check if tip is already showing
+        if (this.tipOpen){
+          // If open then close it
+          tip.style.clipPath = "circle(20% at 0% 0%)"
+          this.tipOpen = false;
+          console.log('if', this.tipOpen)
+        }
+        // Else tip is closed
+        else{
+          tip.style.clipPath = "circle(75%)";
+          this.tipOpen = true;
+          console.log('else', this.tipOpen)
+        }
+    }  
   },
   // mounted() {
   //     //Calculate path lengths of the svg logo

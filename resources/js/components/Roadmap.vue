@@ -139,7 +139,6 @@ export default {
       }
     },
     calcTotalHours() {
-      console.log('total called')
       const { roadmap } = this.$store.state.roadmap;
       let total = 0;
       roadmap.forEach(course => {
@@ -149,7 +148,6 @@ export default {
       return total;
     },
     calcTotalHoursRemaining() {
-      console.log('remain called')
       const { roadmap } = this.$store.state.roadmap;
       let total = 0;
       roadmap.forEach(course => {
@@ -207,5 +205,8 @@ export default {
   text-align: center;
 }
 
+
+// Media queries
+// Ipad
 
 </style>
