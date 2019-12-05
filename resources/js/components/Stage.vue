@@ -62,7 +62,9 @@
            course.completed ? 'course-completed' : null 
            ]" 
           v-for="(course, index) in currentStageRoadmap"
-          :key="course.id" @dblclick='toggleCourseCompleted([$event, course])'
+          :key="course.id"
+          @click="handleDeleteClick($event, course)"
+          @dblclick='toggleCourseCompleted([$event, course])'
           :id="course.id">
           <div class="card-header">Stage {{course.stage}}</div>
           <div class="card-body">
@@ -79,7 +81,7 @@
           <div class="left-arrow">
             <i class="fas fa-arrow-left fa-2x" @click='moveCourse([course, index, -1])'></i>
           </div>
-          <div class="delete-btn" @click='deleteCourseFromRoadmap(course)'>
+          <div class="delete-btn">
             <i class="fas fa-times fa-2x"></i>
           </div>
           <div class="right-arrow">
@@ -167,21 +169,34 @@ export default {
     },
     // Enable opening and closing tip on touch/click for mobile devices
     showTip(tip){
-        // Only enable on mobiles and tablets - inc. landscape
-        if(window.innerWidth <= 1366){
-          // Check if tip is already showing
-          if (this.tipOpen){
-            // If open then close it
-            tip.style.clipPath = "circle(20% at 0% 0%)"
-            this.tipOpen = false;
-          }
-          // Else tip is closed
-          else{
-            tip.style.clipPath = "circle(75%)";
-            this.tipOpen = true;
-          }
+      // Only enable on mobiles and tablets - inc. landscape
+      if(window.innerWidth <= 1366){
+        // Check if tip is already showing
+        if (this.tipOpen){
+          // If open then close it
+          tip.style.clipPath = "circle(20% at 0% 0%)"
+          this.tipOpen = false;
         }
-    }  
+        // Else tip is closed
+        else{
+          tip.style.clipPath = "circle(75%)";
+          this.tipOpen = true;
+        }
+      }
+    },
+    handleDeleteClick($event, course){
+      // Check that the delete button was clicked
+     if (event.target.className === "fas fa-times fa-2x"){
+       const card = document.getElementById(`${course.id}`);
+        // Animate the card using animate.css
+        card.classList.add("animated", "fadeOut");
+
+        // Call the store action when the animation ends
+        card.addEventListener('animationend', () => {
+          this.$store.dispatch('deleteCourseFromRoadmap', course);
+        });
+      }     
+    }
   },
   // mounted() {
   //     //Calculate path lengths of the svg logo

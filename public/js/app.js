@@ -2021,10 +2021,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     handleAddClick: function handleAddClick($event, course) {
       var _this = this;
 
-      console.log('event', $event);
-      console.log('course', course);
-      console.log(event.target.className); // Check that the add button was clicked
-
+      // Check that the add button was clicked
       if (event.target.className === "fas fa-plus fa-2x") {
         var card = document.getElementById("".concat(course.id));
         console.log(card); // Animate the card using animate.css
@@ -2598,6 +2595,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Stage",
@@ -2701,6 +2700,20 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             tip.style.clipPath = "circle(75%)";
             this.tipOpen = true;
           }
+      }
+    },
+    handleDeleteClick: function handleDeleteClick($event, course) {
+      var _this2 = this;
+
+      // Check that the delete button was clicked
+      if (event.target.className === "fas fa-times fa-2x") {
+        var card = document.getElementById("".concat(course.id)); // Animate the card using animate.css
+
+        card.classList.add("animated", "fadeOut"); // Call the store action when the animation ends
+
+        card.addEventListener('animationend', function () {
+          _this2.$store.dispatch('deleteCourseFromRoadmap', course);
+        });
       }
     }
   }) // mounted() {
@@ -6731,6 +6744,9 @@ var render = function() {
               ],
               attrs: { id: course.id },
               on: {
+                click: function($event) {
+                  return _vm.handleDeleteClick($event, course)
+                },
                 dblclick: function($event) {
                   return _vm.toggleCourseCompleted([$event, course])
                 }
@@ -6775,18 +6791,7 @@ var render = function() {
                   })
                 ]),
                 _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass: "delete-btn",
-                    on: {
-                      click: function($event) {
-                        return _vm.deleteCourseFromRoadmap(course)
-                      }
-                    }
-                  },
-                  [_c("i", { staticClass: "fas fa-times fa-2x" })]
-                ),
+                _vm._m(0, true),
                 _vm._v(" "),
                 _c("div", { staticClass: "right-arrow" }, [
                   _c("i", {
@@ -6813,7 +6818,16 @@ var render = function() {
     )
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "delete-btn" }, [
+      _c("i", { staticClass: "fas fa-times fa-2x" })
+    ])
+  }
+]
 render._withStripped = true
 
 

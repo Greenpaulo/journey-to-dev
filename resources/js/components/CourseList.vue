@@ -39,9 +39,6 @@ export default {
     ...mapActions(['addCourseToRoadmap', 'retrieveUserCoursesByStage']),
     
     handleAddClick($event, course) {
-      console.log('event', $event);
-      console.log('course', course);
-      console.log(event.target.className);
       // Check that the add button was clicked
      if (event.target.className === "fas fa-plus fa-2x"){
        const card = document.getElementById(`${course.id}`);
