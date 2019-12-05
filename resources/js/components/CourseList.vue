@@ -155,8 +155,7 @@ export default {
     filter: brightness(90%);
 
     i.fa-plus {
-      animation: delete 500ms ease-in; // Keyframes is in _animation.scss
-      animation-iteration-count: 2;
+      animation: pulse 500ms ease-in infinite; // Keyframes is in _animation.scss
     }
   }
 }

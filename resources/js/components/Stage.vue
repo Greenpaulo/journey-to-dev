@@ -144,9 +144,9 @@ export default {
       const courses = this.currentStageRoadmap;
       let total = 0;
       courses.forEach(course => {
-        if (course.completed == false){
-          total += course.hours
-        }
+        total += course.hours
+        // if (course.completed == false){
+        // }
       })
       return total;
     },
@@ -415,6 +415,11 @@ export default {
 
     div.tick {
       cursor: pointer;
+
+      &:hover i{
+        animation: pulse 500ms ease-in;
+        animation-iteration-count: 2;
+      }
     }
   }
   
@@ -532,7 +537,7 @@ h5.card-title > a {
 }
 
 .delete-btn:hover {
-  animation: delete 500ms ease-in; // Keyframes is in _animation.scss
+  animation: pulse 500ms ease-in; // Keyframes is in _animation.scss
   animation-iteration-count: 2;
 }
 

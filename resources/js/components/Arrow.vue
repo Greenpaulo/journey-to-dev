@@ -26,7 +26,7 @@ export default {
   text-align: center;
 }
 
-.arrow:hover {
+/* .arrow:hover {
   animation: down-point 500ms ease-in;
   animation-iteration-count: 2;
 
@@ -39,7 +39,7 @@ export default {
   100% {
     transform: translateY(0px)
   }
-}
+} */
 
 .st0{
   fill:none;

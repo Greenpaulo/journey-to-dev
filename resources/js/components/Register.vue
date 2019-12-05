@@ -1,5 +1,5 @@
 <template>
-  <div class="container my-5">
+  <div class="container my-5 animated fadeIn">
     <form @submit.prevent="registerSubmit">
       <fieldset>
       <h2 class="mt-2 mb-4">Register</h2>

@@ -1,5 +1,5 @@
 <template>
-  <section id="welcome-page">
+  <section id="welcome-page" class="animated fadeIn">
     
     <div id="welcome-svg">
       <svg id="logo" viewBox="0 0 914 139" width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg">

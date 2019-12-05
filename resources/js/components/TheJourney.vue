@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="animated fadeIn">
     <div class="container my-5">
       <h1 class="display-4 mb-4 text-center">The Journey</h1>
 

@@ -1,7 +1,7 @@
 <template>
   <div>
     <div v-if="this.userCourseList.length !== 0">
-      <div class="container my-5">
+      <div class="container my-5 animated fadeIn">
         <div id="roadmap-page">
           <h1 class="display-4 pt-4 pb-5 my-5 text-center">{{name}}'s Roadmap</h1>
           <section class="course-selector mt-5">
@@ -191,6 +191,10 @@ export default {
   justify-content: space-between;
 }
 
+#stage-select-title {
+    text-align: center;
+  }
+
 .select-links {
   list-style: none;
   cursor: pointer;
@@ -223,9 +227,6 @@ export default {
     margin-right: 0.7rem;
   }
 
-  #stage-select-title {
-    text-align: center;
-  }
 }
 
 // Smartphone - larger
