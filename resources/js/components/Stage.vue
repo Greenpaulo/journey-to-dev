@@ -459,7 +459,7 @@ h5.card-title > a {
   padding-left: 1.25rem;
  
   &:hover{
-    animation: left-point 750ms ease-in;
+    animation: left-point 500ms ease-in;
     animation-iteration-count: 2;
   }
 }
@@ -477,7 +477,7 @@ h5.card-title > a {
   padding-right: 1.25rem;
  
   &:hover{
-    animation: right-point 750ms ease-in;
+    animation: right-point 500ms ease-in;
     animation-iteration-count: 2;
   }
 }
@@ -490,6 +490,12 @@ h5.card-title > a {
     transform: translateX(0px)
   }
 }
+
+.delete-btn:hover {
+  animation: delete 500ms ease-in; // Keyframes is in _animation.scss
+  animation-iteration-count: 2;
+}
+
 
 // Media queries
 // Ipad

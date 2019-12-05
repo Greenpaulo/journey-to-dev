@@ -64,7 +64,7 @@ export default {
 
 #welcome-page {
   position: relative;
-  background: url("/images/1.jpg");
+  background: url("/images/1.jpg") cover no-repeat;
   height: 100vh;
   display: flex;
   flex-direction: column;

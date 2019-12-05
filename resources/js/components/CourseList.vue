@@ -43,6 +43,7 @@ export default {
 
 @import 'resources/sass/variables';
 @import 'resources/sass/colors';
+@import 'resources/sass/animations';
 
 .course-list{
   display: flex;
@@ -129,6 +130,11 @@ export default {
 
   &:hover {
     filter: brightness(90%);
+
+    i.fa-plus {
+      animation: delete 500ms ease-in; // Keyframes is in _animation.scss
+      animation-iteration-count: 2;
+    }
   }
 }
 
@@ -142,6 +148,8 @@ i.fa-plus {
   width: 50px;
   height: 50px;
   color: white;
+
+
 }
 
 h5.card-title > a {
