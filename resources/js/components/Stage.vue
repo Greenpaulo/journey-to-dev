@@ -63,10 +63,14 @@
            ]" 
           v-for="(course, index) in currentStageRoadmap"
           :key="course.id"
-          @click="handleDeleteClick($event, course)"
-          @dblclick='toggleCourseCompleted([$event, course])'
+          @click="handleClick($event, course)"
           :id="course.id">
-          <div class="card-header">Stage {{course.stage}}</div>
+          <div class="card-header">
+            <h6>Stage {{course.stage}}</h6>
+            <div class="tick">
+              <i class="fas fa-check fa-lg"></i>
+            </div>
+            </div>
           <div class="card-body">
             <div class="course-info">
               <h5 class="card-title">{{course.title}}</h5>
@@ -184,7 +188,7 @@ export default {
         }
       }
     },
-    handleDeleteClick($event, course){
+    handleClick($event, course){
       // Check that the delete button was clicked
      if (event.target.className === "fas fa-times fa-2x"){
        const card = document.getElementById(`${course.id}`);
@@ -195,7 +199,17 @@ export default {
         card.addEventListener('animationend', () => {
           this.$store.dispatch('deleteCourseFromRoadmap', course);
         });
-      }     
+
+      } else if (event.target.className === "fas fa-check fa-lg"){
+        // Checking that the completed button was clicked
+        const card = document.getElementById(course.id);
+        card.classList.toggle("course-completed");
+        // Call the store action
+        this.$store.dispatch('toggleCourseCompleted', course);
+        
+
+
+      }    
     }
   },
   // mounted() {
@@ -393,6 +407,17 @@ export default {
   margin-top: 1.8rem;
   box-shadow: 1rem 0 3rem #000;
 
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // padding-top: 0.5rem;
+
+    div.tick {
+      cursor: pointer;
+    }
+  }
+  
   .card-body > h5 {
     font-size: 1.4rem;
   }
@@ -449,7 +474,7 @@ h5.card-title > a {
 }
 
 .course-completed {
-  background-color: silver;
+  background-color: lightgreen;
   opacity: 0.8;
 }
 

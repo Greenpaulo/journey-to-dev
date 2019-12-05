@@ -2018,22 +2018,21 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     courses: 'getUserCoursesByStage'
   }),
   methods: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapActions"])(['addCourseToRoadmap', 'retrieveUserCoursesByStage']), {
-    handleAddClick: function handleAddClick($event, course) {
+    handleClick: function handleClick($event, course) {
       var _this = this;
 
-      // Check that the add button was clicked
+      // Check if the add button was clicked
       if (event.target.className === "fas fa-plus fa-2x") {
-        var card = document.getElementById("".concat(course.id));
-        console.log(card); // Animate the card using animate.css
+        var card = document.getElementById("".concat(course.id)); // Animate the card using animate.css
 
         card.classList.add("animated", "zoomOutUp"); // Call the store action when the animation ends
 
         card.addEventListener('animationend', function () {
           _this.$store.dispatch('addCourseToRoadmap', course);
-        }); // setTimeout(() => {
-        //   console.log('course inside', course);
-        //   this.$store.dispatch('addCourseToRoadmap', course);
-        // }, 500);
+        }); //  } else {
+        //    const card = document.getElementById(`${course.id}`);
+        //    card.addEventListener('touchstart', () => console.log('touched'));
+        //  }
       }
     }
   })
@@ -2597,6 +2596,10 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Stage",
@@ -2702,7 +2705,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
           }
       }
     },
-    handleDeleteClick: function handleDeleteClick($event, course) {
+    handleClick: function handleClick($event, course) {
       var _this2 = this;
 
       // Check that the delete button was clicked
@@ -2714,6 +2717,14 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         card.addEventListener('animationend', function () {
           _this2.$store.dispatch('deleteCourseFromRoadmap', course);
         });
+      } else if (event.target.className === "fas fa-check fa-lg") {
+        // Checking that the completed button was clicked
+        var _card = document.getElementById(course.id);
+
+        _card.classList.toggle("course-completed"); // Call the store action
+
+
+        this.$store.dispatch('toggleCourseCompleted', course);
       }
     }
   }) // mounted() {
@@ -3163,7 +3174,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".bg-stage1[data-v-3fd38ca3] {\n  background-color: #CC0000;\n}\n.bg-stage2[data-v-3fd38ca3] {\n  background-color: orange;\n}\n.bg-stage3[data-v-3fd38ca3] {\n  background-color: orangered;\n}\n.bg-stage4[data-v-3fd38ca3] {\n  background-color: #77B300;\n}\n.bg-stage5[data-v-3fd38ca3] {\n  background-color: #2A9FD6;\n}\n.bg-stage6[data-v-3fd38ca3] {\n  background-color: #20c997;\n}\n.bg-stage7[data-v-3fd38ca3] {\n  background-color: #e83e8c;\n}\n.bg-stage8[data-v-3fd38ca3] {\n  background-color: #9933CC;\n}\n.bg-stage9[data-v-3fd38ca3] {\n  background-color: #fff;\n  color: black !important;\n}\n.border-stage1[data-v-3fd38ca3] {\n  border-top: 8px solid #CC0000;\n  border-right: 8px solid #CC0000;\n}\n.border-stage2[data-v-3fd38ca3] {\n  border-top: 8px solid orange;\n  border-right: 8px solid orange;\n}\n.border-stage3[data-v-3fd38ca3] {\n  border-top: 8px solid orangered;\n  border-right: 8px solid orangered;\n}\n.border-stage4[data-v-3fd38ca3] {\n  border-top: 8px solid #77B300;\n  border-right: 8px solid #77B300;\n}\n.border-stage5[data-v-3fd38ca3] {\n  border-top: 8px solid #2A9FD6;\n  border-right: 8px solid #2A9FD6;\n}\n.border-stage6[data-v-3fd38ca3] {\n  border-top: 8px solid #20c997;\n  border-right: 8px solid #20c997;\n}\n.border-stage7[data-v-3fd38ca3] {\n  border-top: 8px solid #e83e8c;\n  border-right: 8px solid #e83e8c;\n}\n.border-stage8[data-v-3fd38ca3] {\n  border-top: 8px solid #9933CC;\n  border-right: 8px solid #9933CC;\n}\n.border-stage9[data-v-3fd38ca3] {\n  border-top: 8px solid #fff;\n  border-right: 8px solid #ffff;\n}\n.text-stage1[data-v-3fd38ca3] {\n  color: #CC0000;\n}\n.text-stage2[data-v-3fd38ca3] {\n  color: orange;\n}\n.text-stage3[data-v-3fd38ca3] {\n  color: orangered;\n}\n.text-stage4[data-v-3fd38ca3] {\n  color: #77B300;\n}\n.text-stage5[data-v-3fd38ca3] {\n  color: #2A9FD6;\n}\n.text-stage6[data-v-3fd38ca3] {\n  color: #20c997;\n}\n.text-stage7[data-v-3fd38ca3] {\n  color: #e83e8c;\n}\n.text-stage8[data-v-3fd38ca3] {\n  color: #9933CC;\n}\n.text-stage9[data-v-3fd38ca3] {\n  color: white;\n}\n@-webkit-keyframes hue-data-v-3fd38ca3 {\nfrom {\n    -webkit-filter: hue-rotate(0deg);\n            filter: hue-rotate(0deg);\n}\nto {\n    -webkit-filter: hue-rotate(-360deg);\n            filter: hue-rotate(-360deg);\n}\n}\n@keyframes hue-data-v-3fd38ca3 {\nfrom {\n    -webkit-filter: hue-rotate(0deg);\n            filter: hue-rotate(0deg);\n}\nto {\n    -webkit-filter: hue-rotate(-360deg);\n            filter: hue-rotate(-360deg);\n}\n}\n@-webkit-keyframes bg-animation-data-v-3fd38ca3 {\n0% {\n    background-position: left;\n}\n100% {\n    background-position: right;\n}\n}\n@keyframes bg-animation-data-v-3fd38ca3 {\n0% {\n    background-position: left;\n}\n100% {\n    background-position: right;\n}\n}\n@-webkit-keyframes line-anim-data-v-3fd38ca3 {\nto {\n    stroke-dashoffset: 0;\n}\n}\n@keyframes line-anim-data-v-3fd38ca3 {\nto {\n    stroke-dashoffset: 0;\n}\n}\n@-webkit-keyframes fill-red-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: red;\n}\n}\n@keyframes fill-red-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: red;\n}\n}\n@-webkit-keyframes fill-orange-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ffb733;\n}\n}\n@keyframes fill-orange-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ffb733;\n}\n}\n@-webkit-keyframes fill-orangered-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ff6a33;\n}\n}\n@keyframes fill-orangered-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ff6a33;\n}\n}\n@-webkit-keyframes fill-green-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #99e600;\n}\n}\n@keyframes fill-green-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #99e600;\n}\n}\n@-webkit-keyframes fill-blue-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #55b2de;\n}\n}\n@keyframes fill-blue-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #55b2de;\n}\n}\n@-webkit-keyframes fill-teal-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #3ce0af;\n}\n}\n@keyframes fill-teal-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #3ce0af;\n}\n}\n@-webkit-keyframes fill-pink-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ed6ca7;\n}\n}\n@keyframes fill-pink-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ed6ca7;\n}\n}\n@-webkit-keyframes fill-cyan-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ad5cd6;\n}\n}\n@keyframes fill-cyan-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ad5cd6;\n}\n}\n@-webkit-keyframes fill-white-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: white;\n}\n}\n@keyframes fill-white-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: white;\n}\n}\n@-webkit-keyframes fill-black-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: black;\n}\n}\n@keyframes fill-black-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: black;\n}\n}\n@-webkit-keyframes delete-data-v-3fd38ca3 {\n50% {\n    transform: scale(0.8);\n}\n100% {\n    transform: scale(1);\n}\n}\n@keyframes delete-data-v-3fd38ca3 {\n50% {\n    transform: scale(0.8);\n}\n100% {\n    transform: scale(1);\n}\n}\n.stage[data-v-3fd38ca3] {\n  display: flex;\n  box-shadow: 1rem 0 3rem #000;\n  padding: 0 0.3rem 1rem 0;\n  border-radius: 10px;\n}\n.stage-heading[data-v-3fd38ca3] {\n  position: relative;\n  border-radius: 10px;\n  height: 290px;\n  min-width: 260px;\n  max-width: 260px;\n  text-align: center;\n}\n.stage-heading h2[data-v-3fd38ca3] {\n  font-size: 2.8rem;\n}\n.stage-heading h5[data-v-3fd38ca3] {\n  font-size: 1.2rem;\n}\n.stage-heading-info[data-v-3fd38ca3] {\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n}\n.inner[data-v-3fd38ca3] {\n  color: white;\n  font-size: 1.1rem;\n  border-radius: 10px;\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  text-align: center;\n  -webkit-clip-path: circle(20% at 0% 0%);\n          clip-path: circle(20% at 0% 0%);\n  transition: -webkit-clip-path 0.5s ease-in-out;\n  transition: clip-path 0.5s ease-in-out;\n  transition: clip-path 0.5s ease-in-out, -webkit-clip-path 0.5s ease-in-out;\n}\n.inner p[data-v-3fd38ca3] {\n  margin-bottom: 0.5rem;\n  padding: 1rem;\n}\n.inner .inner-header[data-v-3fd38ca3] {\n  display: grid;\n  grid-template-columns: 1.65fr 2.35fr;\n}\n.inner .inner-header #lightbulb[data-v-3fd38ca3] {\n  fill: white;\n  padding-top: 0.2rem;\n}\n.inner .inner-header h4[data-v-3fd38ca3] {\n  margin: 0;\n  text-align: left;\n  padding-top: 1rem;\n}\n.inner[data-v-3fd38ca3]:hover {\n  -webkit-clip-path: circle(75%);\n          clip-path: circle(75%);\n}\n#thumbs-up path[data-v-3fd38ca3] {\n  fill: none;\n  stroke: white;\n  stroke-width: 8;\n  stroke-miterlimit: 10;\n  stroke-dasharray: 3174.4838867188;\n  stroke-dashoffset: 3174.4838867188;\n}\n.inner:hover .st0[data-v-3fd38ca3] {\n  -webkit-animation-name: line-anim-data-v-3fd38ca3,fill-white-data-v-3fd38ca3;\n          animation-name: line-anim-data-v-3fd38ca3,fill-white-data-v-3fd38ca3;\n  -webkit-animation-duration: 1.5s, 1s;\n          animation-duration: 1.5s, 1s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 0.4s, 0.4s;\n          animation-delay: 0.4s, 0.4s;\n}\n.inner.bg-stage9 #lightbulb[data-v-3fd38ca3] {\n  fill: black;\n}\n.inner.bg-stage9 h4[data-v-3fd38ca3] {\n  color: black;\n}\n.inner.bg-stage9 #thumbs-up .st0[data-v-3fd38ca3] {\n  stroke: black;\n}\n.inner.bg-stage9:hover .st0[data-v-3fd38ca3] {\n  -webkit-animation-name: line-anim-data-v-3fd38ca3,fill-black-data-v-3fd38ca3;\n          animation-name: line-anim-data-v-3fd38ca3,fill-black-data-v-3fd38ca3;\n}\n.stage-courses[data-v-3fd38ca3] {\n  display: flex;\n  flex-wrap: wrap;\n  width: 100%;\n}\n.stage-courses[data-v-3fd38ca3] {\n  display: flex;\n  flex-wrap: wrap;\n  width: 100%;\n}\n.stage-courses > .stage-course[data-v-3fd38ca3] {\n  position: relative;\n  min-height: 240px;\n  min-width: 260px;\n  max-width: 260px;\n  border-radius: 10px;\n  margin-top: 1.8rem;\n  box-shadow: 1rem 0 3rem #000;\n}\n.stage-courses > .stage-course .card-body > h5[data-v-3fd38ca3] {\n  font-size: 1.4rem;\n}\n.stage-courses > .stage-course .card-body[data-v-3fd38ca3] {\n  position: relative;\n  display: flex;\n  flex-direction: column;\n  align-content: space-between;\n}\n.stage-courses > .stage-course .card-body p.card-text[data-v-3fd38ca3] {\n  margin-bottom: 0.6rem;\n}\n.stage-courses > .stage-course .card-body .link a[data-v-3fd38ca3] {\n  position: absolute;\n  bottom: 15px;\n  left: 217px;\n}\n.stage-courses > .stage-course .card-body i[data-v-3fd38ca3] {\n  color: white;\n  margin-top: 0.5rem;\n  transition: color 200ms ease-in-out;\n}\n.stage-courses > .stage-course .card-body i[data-v-3fd38ca3]:hover {\n  color: #d9d9d9;\n}\n.stage-courses > .bg-stage9 > .card-body i[data-v-3fd38ca3] {\n  color: black;\n}\n.stage-courses > .bg-stage9 > .card-body i[data-v-3fd38ca3]:hover {\n  color: #404040;\n}\nh5.card-title > a[data-v-3fd38ca3] {\n  color: white;\n  text-decoration: none;\n}\nh5.card-title > a[data-v-3fd38ca3]:hover {\n  color: #cccccc;\n}\n.bg-stage9 a[data-v-3fd38ca3] {\n  color: black !important;\n}\n.course-completed[data-v-3fd38ca3] {\n  background-color: silver;\n  opacity: 0.8;\n}\n.card-footer[data-v-3fd38ca3] {\n  display: flex;\n  justify-content: space-between;\n  padding: 0;\n}\n.empty-stage[data-v-3fd38ca3] {\n  width: 53%;\n  margin: auto;\n  text-align: left;\n}\n.left-arrow[data-v-3fd38ca3], .right-arrow[data-v-3fd38ca3], .delete-btn[data-v-3fd38ca3] {\n  cursor: pointer;\n  padding: 0.75rem;\n}\n.left-arrow[data-v-3fd38ca3] {\n  padding-left: 1.25rem;\n}\n.left-arrow[data-v-3fd38ca3]:hover {\n  -webkit-animation: left-point-data-v-3fd38ca3 500ms ease-in;\n          animation: left-point-data-v-3fd38ca3 500ms ease-in;\n  -webkit-animation-iteration-count: 2;\n          animation-iteration-count: 2;\n}\n@-webkit-keyframes left-point-data-v-3fd38ca3 {\n50% {\n    transform: translateX(-15px);\n}\n100% {\n    transform: translateX(0px);\n}\n}\n@keyframes left-point-data-v-3fd38ca3 {\n50% {\n    transform: translateX(-15px);\n}\n100% {\n    transform: translateX(0px);\n}\n}\n.right-arrow[data-v-3fd38ca3] {\n  padding-right: 1.25rem;\n}\n.right-arrow[data-v-3fd38ca3]:hover {\n  -webkit-animation: right-point-data-v-3fd38ca3 500ms ease-in;\n          animation: right-point-data-v-3fd38ca3 500ms ease-in;\n  -webkit-animation-iteration-count: 2;\n          animation-iteration-count: 2;\n}\n@-webkit-keyframes right-point-data-v-3fd38ca3 {\n50% {\n    transform: translateX(15px);\n}\n100% {\n    transform: translateX(0px);\n}\n}\n@keyframes right-point-data-v-3fd38ca3 {\n50% {\n    transform: translateX(15px);\n}\n100% {\n    transform: translateX(0px);\n}\n}\n.delete-btn[data-v-3fd38ca3]:hover {\n  -webkit-animation: delete-data-v-3fd38ca3 500ms ease-in;\n          animation: delete-data-v-3fd38ca3 500ms ease-in;\n  -webkit-animation-iteration-count: 2;\n          animation-iteration-count: 2;\n}\n@media (max-width: 768px) {\n.stage[data-v-3fd38ca3] {\n    display: grid;\n}\n.stage-courses[data-v-3fd38ca3] {\n    margin: 0 !important;\n    padding-left: 2rem;\n    padding-right: 2rem;\n    display: grid;\n    grid-template-columns: repeat(auto-fill, minmax(240px, 260px));\n    justify-items: center;\n    justify-content: space-around;\n}\n}\n@media (max-width: 375px) {\n.stage-heading[data-v-3fd38ca3] {\n    margin: auto;\n}\n}", ""]);
+exports.push([module.i, ".bg-stage1[data-v-3fd38ca3] {\n  background-color: #CC0000;\n}\n.bg-stage2[data-v-3fd38ca3] {\n  background-color: orange;\n}\n.bg-stage3[data-v-3fd38ca3] {\n  background-color: orangered;\n}\n.bg-stage4[data-v-3fd38ca3] {\n  background-color: #77B300;\n}\n.bg-stage5[data-v-3fd38ca3] {\n  background-color: #2A9FD6;\n}\n.bg-stage6[data-v-3fd38ca3] {\n  background-color: #20c997;\n}\n.bg-stage7[data-v-3fd38ca3] {\n  background-color: #e83e8c;\n}\n.bg-stage8[data-v-3fd38ca3] {\n  background-color: #9933CC;\n}\n.bg-stage9[data-v-3fd38ca3] {\n  background-color: #fff;\n  color: black !important;\n}\n.border-stage1[data-v-3fd38ca3] {\n  border-top: 8px solid #CC0000;\n  border-right: 8px solid #CC0000;\n}\n.border-stage2[data-v-3fd38ca3] {\n  border-top: 8px solid orange;\n  border-right: 8px solid orange;\n}\n.border-stage3[data-v-3fd38ca3] {\n  border-top: 8px solid orangered;\n  border-right: 8px solid orangered;\n}\n.border-stage4[data-v-3fd38ca3] {\n  border-top: 8px solid #77B300;\n  border-right: 8px solid #77B300;\n}\n.border-stage5[data-v-3fd38ca3] {\n  border-top: 8px solid #2A9FD6;\n  border-right: 8px solid #2A9FD6;\n}\n.border-stage6[data-v-3fd38ca3] {\n  border-top: 8px solid #20c997;\n  border-right: 8px solid #20c997;\n}\n.border-stage7[data-v-3fd38ca3] {\n  border-top: 8px solid #e83e8c;\n  border-right: 8px solid #e83e8c;\n}\n.border-stage8[data-v-3fd38ca3] {\n  border-top: 8px solid #9933CC;\n  border-right: 8px solid #9933CC;\n}\n.border-stage9[data-v-3fd38ca3] {\n  border-top: 8px solid #fff;\n  border-right: 8px solid #ffff;\n}\n.text-stage1[data-v-3fd38ca3] {\n  color: #CC0000;\n}\n.text-stage2[data-v-3fd38ca3] {\n  color: orange;\n}\n.text-stage3[data-v-3fd38ca3] {\n  color: orangered;\n}\n.text-stage4[data-v-3fd38ca3] {\n  color: #77B300;\n}\n.text-stage5[data-v-3fd38ca3] {\n  color: #2A9FD6;\n}\n.text-stage6[data-v-3fd38ca3] {\n  color: #20c997;\n}\n.text-stage7[data-v-3fd38ca3] {\n  color: #e83e8c;\n}\n.text-stage8[data-v-3fd38ca3] {\n  color: #9933CC;\n}\n.text-stage9[data-v-3fd38ca3] {\n  color: white;\n}\n@-webkit-keyframes hue-data-v-3fd38ca3 {\nfrom {\n    -webkit-filter: hue-rotate(0deg);\n            filter: hue-rotate(0deg);\n}\nto {\n    -webkit-filter: hue-rotate(-360deg);\n            filter: hue-rotate(-360deg);\n}\n}\n@keyframes hue-data-v-3fd38ca3 {\nfrom {\n    -webkit-filter: hue-rotate(0deg);\n            filter: hue-rotate(0deg);\n}\nto {\n    -webkit-filter: hue-rotate(-360deg);\n            filter: hue-rotate(-360deg);\n}\n}\n@-webkit-keyframes bg-animation-data-v-3fd38ca3 {\n0% {\n    background-position: left;\n}\n100% {\n    background-position: right;\n}\n}\n@keyframes bg-animation-data-v-3fd38ca3 {\n0% {\n    background-position: left;\n}\n100% {\n    background-position: right;\n}\n}\n@-webkit-keyframes line-anim-data-v-3fd38ca3 {\nto {\n    stroke-dashoffset: 0;\n}\n}\n@keyframes line-anim-data-v-3fd38ca3 {\nto {\n    stroke-dashoffset: 0;\n}\n}\n@-webkit-keyframes fill-red-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: red;\n}\n}\n@keyframes fill-red-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: red;\n}\n}\n@-webkit-keyframes fill-orange-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ffb733;\n}\n}\n@keyframes fill-orange-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ffb733;\n}\n}\n@-webkit-keyframes fill-orangered-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ff6a33;\n}\n}\n@keyframes fill-orangered-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ff6a33;\n}\n}\n@-webkit-keyframes fill-green-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #99e600;\n}\n}\n@keyframes fill-green-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #99e600;\n}\n}\n@-webkit-keyframes fill-blue-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #55b2de;\n}\n}\n@keyframes fill-blue-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #55b2de;\n}\n}\n@-webkit-keyframes fill-teal-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #3ce0af;\n}\n}\n@keyframes fill-teal-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #3ce0af;\n}\n}\n@-webkit-keyframes fill-pink-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ed6ca7;\n}\n}\n@keyframes fill-pink-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ed6ca7;\n}\n}\n@-webkit-keyframes fill-cyan-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ad5cd6;\n}\n}\n@keyframes fill-cyan-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ad5cd6;\n}\n}\n@-webkit-keyframes fill-white-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: white;\n}\n}\n@keyframes fill-white-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: white;\n}\n}\n@-webkit-keyframes fill-black-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: black;\n}\n}\n@keyframes fill-black-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: black;\n}\n}\n@-webkit-keyframes delete-data-v-3fd38ca3 {\n50% {\n    transform: scale(0.8);\n}\n100% {\n    transform: scale(1);\n}\n}\n@keyframes delete-data-v-3fd38ca3 {\n50% {\n    transform: scale(0.8);\n}\n100% {\n    transform: scale(1);\n}\n}\n.stage[data-v-3fd38ca3] {\n  display: flex;\n  box-shadow: 1rem 0 3rem #000;\n  padding: 0 0.3rem 1rem 0;\n  border-radius: 10px;\n}\n.stage-heading[data-v-3fd38ca3] {\n  position: relative;\n  border-radius: 10px;\n  height: 290px;\n  min-width: 260px;\n  max-width: 260px;\n  text-align: center;\n}\n.stage-heading h2[data-v-3fd38ca3] {\n  font-size: 2.8rem;\n}\n.stage-heading h5[data-v-3fd38ca3] {\n  font-size: 1.2rem;\n}\n.stage-heading-info[data-v-3fd38ca3] {\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n}\n.inner[data-v-3fd38ca3] {\n  color: white;\n  font-size: 1.1rem;\n  border-radius: 10px;\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  text-align: center;\n  -webkit-clip-path: circle(20% at 0% 0%);\n          clip-path: circle(20% at 0% 0%);\n  transition: -webkit-clip-path 0.5s ease-in-out;\n  transition: clip-path 0.5s ease-in-out;\n  transition: clip-path 0.5s ease-in-out, -webkit-clip-path 0.5s ease-in-out;\n}\n.inner p[data-v-3fd38ca3] {\n  margin-bottom: 0.5rem;\n  padding: 1rem;\n}\n.inner .inner-header[data-v-3fd38ca3] {\n  display: grid;\n  grid-template-columns: 1.65fr 2.35fr;\n}\n.inner .inner-header #lightbulb[data-v-3fd38ca3] {\n  fill: white;\n  padding-top: 0.2rem;\n}\n.inner .inner-header h4[data-v-3fd38ca3] {\n  margin: 0;\n  text-align: left;\n  padding-top: 1rem;\n}\n.inner[data-v-3fd38ca3]:hover {\n  -webkit-clip-path: circle(75%);\n          clip-path: circle(75%);\n}\n#thumbs-up path[data-v-3fd38ca3] {\n  fill: none;\n  stroke: white;\n  stroke-width: 8;\n  stroke-miterlimit: 10;\n  stroke-dasharray: 3174.4838867188;\n  stroke-dashoffset: 3174.4838867188;\n}\n.inner:hover .st0[data-v-3fd38ca3] {\n  -webkit-animation-name: line-anim-data-v-3fd38ca3,fill-white-data-v-3fd38ca3;\n          animation-name: line-anim-data-v-3fd38ca3,fill-white-data-v-3fd38ca3;\n  -webkit-animation-duration: 1.5s, 1s;\n          animation-duration: 1.5s, 1s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 0.4s, 0.4s;\n          animation-delay: 0.4s, 0.4s;\n}\n.inner.bg-stage9 #lightbulb[data-v-3fd38ca3] {\n  fill: black;\n}\n.inner.bg-stage9 h4[data-v-3fd38ca3] {\n  color: black;\n}\n.inner.bg-stage9 #thumbs-up .st0[data-v-3fd38ca3] {\n  stroke: black;\n}\n.inner.bg-stage9:hover .st0[data-v-3fd38ca3] {\n  -webkit-animation-name: line-anim-data-v-3fd38ca3,fill-black-data-v-3fd38ca3;\n          animation-name: line-anim-data-v-3fd38ca3,fill-black-data-v-3fd38ca3;\n}\n.stage-courses[data-v-3fd38ca3] {\n  display: flex;\n  flex-wrap: wrap;\n  width: 100%;\n}\n.stage-courses[data-v-3fd38ca3] {\n  display: flex;\n  flex-wrap: wrap;\n  width: 100%;\n}\n.stage-courses > .stage-course[data-v-3fd38ca3] {\n  position: relative;\n  min-height: 240px;\n  min-width: 260px;\n  max-width: 260px;\n  border-radius: 10px;\n  margin-top: 1.8rem;\n  box-shadow: 1rem 0 3rem #000;\n}\n.stage-courses > .stage-course .card-header[data-v-3fd38ca3] {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n.stage-courses > .stage-course .card-header div.tick[data-v-3fd38ca3] {\n  cursor: pointer;\n}\n.stage-courses > .stage-course .card-body > h5[data-v-3fd38ca3] {\n  font-size: 1.4rem;\n}\n.stage-courses > .stage-course .card-body[data-v-3fd38ca3] {\n  position: relative;\n  display: flex;\n  flex-direction: column;\n  align-content: space-between;\n}\n.stage-courses > .stage-course .card-body p.card-text[data-v-3fd38ca3] {\n  margin-bottom: 0.6rem;\n}\n.stage-courses > .stage-course .card-body .link a[data-v-3fd38ca3] {\n  position: absolute;\n  bottom: 15px;\n  left: 217px;\n}\n.stage-courses > .stage-course .card-body i[data-v-3fd38ca3] {\n  color: white;\n  margin-top: 0.5rem;\n  transition: color 200ms ease-in-out;\n}\n.stage-courses > .stage-course .card-body i[data-v-3fd38ca3]:hover {\n  color: #d9d9d9;\n}\n.stage-courses > .bg-stage9 > .card-body i[data-v-3fd38ca3] {\n  color: black;\n}\n.stage-courses > .bg-stage9 > .card-body i[data-v-3fd38ca3]:hover {\n  color: #404040;\n}\nh5.card-title > a[data-v-3fd38ca3] {\n  color: white;\n  text-decoration: none;\n}\nh5.card-title > a[data-v-3fd38ca3]:hover {\n  color: #cccccc;\n}\n.bg-stage9 a[data-v-3fd38ca3] {\n  color: black !important;\n}\n.course-completed[data-v-3fd38ca3] {\n  background-color: lightgreen;\n  opacity: 0.8;\n}\n.card-footer[data-v-3fd38ca3] {\n  display: flex;\n  justify-content: space-between;\n  padding: 0;\n}\n.empty-stage[data-v-3fd38ca3] {\n  width: 53%;\n  margin: auto;\n  text-align: left;\n}\n.left-arrow[data-v-3fd38ca3], .right-arrow[data-v-3fd38ca3], .delete-btn[data-v-3fd38ca3] {\n  cursor: pointer;\n  padding: 0.75rem;\n}\n.left-arrow[data-v-3fd38ca3] {\n  padding-left: 1.25rem;\n}\n.left-arrow[data-v-3fd38ca3]:hover {\n  -webkit-animation: left-point-data-v-3fd38ca3 500ms ease-in;\n          animation: left-point-data-v-3fd38ca3 500ms ease-in;\n  -webkit-animation-iteration-count: 2;\n          animation-iteration-count: 2;\n}\n@-webkit-keyframes left-point-data-v-3fd38ca3 {\n50% {\n    transform: translateX(-15px);\n}\n100% {\n    transform: translateX(0px);\n}\n}\n@keyframes left-point-data-v-3fd38ca3 {\n50% {\n    transform: translateX(-15px);\n}\n100% {\n    transform: translateX(0px);\n}\n}\n.right-arrow[data-v-3fd38ca3] {\n  padding-right: 1.25rem;\n}\n.right-arrow[data-v-3fd38ca3]:hover {\n  -webkit-animation: right-point-data-v-3fd38ca3 500ms ease-in;\n          animation: right-point-data-v-3fd38ca3 500ms ease-in;\n  -webkit-animation-iteration-count: 2;\n          animation-iteration-count: 2;\n}\n@-webkit-keyframes right-point-data-v-3fd38ca3 {\n50% {\n    transform: translateX(15px);\n}\n100% {\n    transform: translateX(0px);\n}\n}\n@keyframes right-point-data-v-3fd38ca3 {\n50% {\n    transform: translateX(15px);\n}\n100% {\n    transform: translateX(0px);\n}\n}\n.delete-btn[data-v-3fd38ca3]:hover {\n  -webkit-animation: delete-data-v-3fd38ca3 500ms ease-in;\n          animation: delete-data-v-3fd38ca3 500ms ease-in;\n  -webkit-animation-iteration-count: 2;\n          animation-iteration-count: 2;\n}\n@media (max-width: 768px) {\n.stage[data-v-3fd38ca3] {\n    display: grid;\n}\n.stage-courses[data-v-3fd38ca3] {\n    margin: 0 !important;\n    padding-left: 2rem;\n    padding-right: 2rem;\n    display: grid;\n    grid-template-columns: repeat(auto-fill, minmax(240px, 260px));\n    justify-items: center;\n    justify-content: space-around;\n}\n}\n@media (max-width: 375px) {\n.stage-heading[data-v-3fd38ca3] {\n    margin: auto;\n}\n}", ""]);
 
 // exports
 
@@ -3239,7 +3250,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.arrow-container {\r\n  width: 100%;\r\n  text-align: center;\n}\n.st0{\r\n  fill:none;\n}\n.st1{\r\n  fill:#038A51;stroke:#058B38;stroke-width:0.2;stroke-miterlimit:10;\n}\r\n\r\n", ""]);
+exports.push([module.i, "\n.arrow-container {\r\n  width: 100%;\r\n  text-align: center;\n}\n.arrow:hover {\r\n  -webkit-animation: down-point 500ms ease-in;\r\n          animation: down-point 500ms ease-in;\r\n  -webkit-animation-iteration-count: 2;\r\n          animation-iteration-count: 2;\n}\n@-webkit-keyframes down-point {\n50% {\r\n    transform: translateY(15px)\n}\n100% {\r\n    transform: translateY(0px)\n}\n}\n@keyframes down-point {\n50% {\r\n    transform: translateY(15px)\n}\n100% {\r\n    transform: translateY(0px)\n}\n}\n.st0{\r\n  fill:none;\n}\n.st1{\r\n  fill:#038A51;stroke:#058B38;stroke-width:0.2;stroke-miterlimit:10;\n}\r\n\r\n", ""]);
 
 // exports
 
@@ -5633,7 +5644,7 @@ var render = function() {
                 attrs: { id: "" + course.id },
                 on: {
                   click: function($event) {
-                    return _vm.handleAddClick($event, course)
+                    return _vm.handleClick($event, course)
                   }
                 }
               },
@@ -6539,7 +6550,9 @@ var render = function() {
                       ]),
                       _vm._v(" "),
                       _c("h6", { staticClass: "p-3" }, [
-                        _vm._v(" Double click a course to mark as complete!")
+                        _vm._v(
+                          " (Click the tick in the top right corner of a course to mark as complete!)"
+                        )
                       ])
                     ])
                   ],
@@ -6745,16 +6758,15 @@ var render = function() {
               attrs: { id: course.id },
               on: {
                 click: function($event) {
-                  return _vm.handleDeleteClick($event, course)
-                },
-                dblclick: function($event) {
-                  return _vm.toggleCourseCompleted([$event, course])
+                  return _vm.handleClick($event, course)
                 }
               }
             },
             [
               _c("div", { staticClass: "card-header" }, [
-                _vm._v("Stage " + _vm._s(course.stage))
+                _c("h6", [_vm._v("Stage " + _vm._s(course.stage))]),
+                _vm._v(" "),
+                _vm._m(0, true)
               ]),
               _vm._v(" "),
               _c("div", { staticClass: "card-body" }, [
@@ -6791,7 +6803,7 @@ var render = function() {
                   })
                 ]),
                 _vm._v(" "),
-                _vm._m(0, true),
+                _vm._m(1, true),
                 _vm._v(" "),
                 _c("div", { staticClass: "right-arrow" }, [
                   _c("i", {
@@ -6819,6 +6831,14 @@ var render = function() {
   ])
 }
 var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "tick" }, [
+      _c("i", { staticClass: "fas fa-check fa-lg" })
+    ])
+  },
   function() {
     var _vm = this
     var _h = _vm.$createElement
@@ -25587,35 +25607,29 @@ var actions = {
   toggleCourseCompleted: function () {
     var _toggleCourseCompleted = _asyncToGenerator(
     /*#__PURE__*/
-    _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee3(_ref10, _ref11) {
-      var dispatch, _ref12, $event, course, currentCourse;
-
+    _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee3(_ref10, course) {
+      var dispatch;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee3$(_context3) {
         while (1) {
           switch (_context3.prev = _context3.next) {
             case 0:
               dispatch = _ref10.dispatch;
-              _ref12 = _slicedToArray(_ref11, 2), $event = _ref12[0], course = _ref12[1];
               // Update the completed status in the DB entry
               axios__WEBPACK_IMPORTED_MODULE_1___default.a.defaults.headers.common['Authorization'] = 'Bearer ' + _auth__WEBPACK_IMPORTED_MODULE_2__["default"].state.token;
-              _context3.next = 5;
+              _context3.next = 4;
               return axios__WEBPACK_IMPORTED_MODULE_1___default.a.patch("/api/roadmap/".concat(course.id), {
                 course_id: course.course_id,
                 completed: !course.completed
               });
 
-            case 5:
-              // Update the UI (instantly instead of waiting for API requests)
-              currentCourse = document.getElementById(course.id);
-              currentCourse.classList.toggle('course-completed'); // Fetch the new roadmap and stage roadmap to update the state
-
-              _context3.next = 9;
+            case 4:
+              _context3.next = 6;
               return dispatch('retrieveRoadmap');
 
-            case 9:
+            case 6:
               dispatch('retrieveRoadmapByStage', course.stage);
 
-            case 10:
+            case 7:
             case "end":
               return _context3.stop();
           }

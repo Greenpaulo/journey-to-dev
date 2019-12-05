@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="course-list" v-if="courses.length > 0">
-        <div class="course-card" v-for="course in courses" :key="course.id" :class="`border-stage${course.stage}`" @click="handleAddClick($event, course)" :id="`${course.id}`"> 
+        <div class="course-card" v-for="course in courses" :key="course.id" :class="`border-stage${course.stage}`" @click="handleClick($event, course)" :id="`${course.id}`"> 
           <div class="card-header">Stage {{course.stage}}</div>
           <div class="card-body">
             <h5 class="card-title">{{course.title}}</h5>
@@ -38,11 +38,10 @@ export default {
   methods: {
     ...mapActions(['addCourseToRoadmap', 'retrieveUserCoursesByStage']),
     
-    handleAddClick($event, course) {
-      // Check that the add button was clicked
+    handleClick($event, course) {
+      // Check if the add button was clicked
      if (event.target.className === "fas fa-plus fa-2x"){
        const card = document.getElementById(`${course.id}`);
-       console.log(card)
       // Animate the card using animate.css
       card.classList.add("animated", "zoomOutUp");
 
@@ -50,15 +49,16 @@ export default {
       card.addEventListener('animationend', () => {
         this.$store.dispatch('addCourseToRoadmap', course);
        });
-      
-      // setTimeout(() => {
-      //   console.log('course inside', course);
-      //   this.$store.dispatch('addCourseToRoadmap', course);
-      // }, 500);
-     }
+    //  } else {
+    //    const card = document.getElementById(`${course.id}`);
+    //    card.addEventListener('touchstart', () => console.log('touched'));
+    //  }
+      } 
     }
   }
 }
+
+
 
 </script>
 
