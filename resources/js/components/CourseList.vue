@@ -1,15 +1,16 @@
 <template>
   <div>
     <div class="course-list" v-if="courses.length > 0">
-        <div class="course-card" v-for="course in courses" :key="course.id" :class="`border-stage${course.stage}`">
+        <div class="course-card" v-for="course in courses" :key="course.id" :class="`border-stage${course.stage}`" @click="handleAddClick($event, course)" :id="`${course.id}`"> 
           <div class="card-header">Stage {{course.stage}}</div>
           <div class="card-body">
             <h5 class="card-title">{{course.title}}</h5>
             <p class="card-text">{{course.creator}}</p>
             <p class="card-text">{{course.hours}} Hours</p>
             <div class="btns">
-              <div class="add-btn" :class="`bg-stage${course.stage}`" @click="addCourseToRoadmap(course)">
-                <i class="fas fa-plus fa-2x"></i>
+              <div class="add-btn" :class="`bg-stage${course.stage}`">
+                <i class="fas fa-plus fa-2x">
+                </i>
               </div>
               <a :href=course.url target="_blank"><i class="fas fa-link fa-2x" :class="`text-stage${course.stage}`"></i></a>
             </div>
@@ -34,7 +35,32 @@ export default {
     }
   },
   computed: mapGetters({userCourseList: 'getUserCourseList', courses: 'getUserCoursesByStage'}),
-  methods: mapActions(['addCourseToRoadmap', 'retrieveUserCoursesByStage'])
+  methods: {
+    ...mapActions(['addCourseToRoadmap', 'retrieveUserCoursesByStage']),
+    
+    handleAddClick($event, course) {
+      console.log('event', $event);
+      console.log('course', course);
+      console.log(event.target.className);
+      // Check that the add button was clicked
+     if (event.target.className === "fas fa-plus fa-2x"){
+       const card = document.getElementById(`${course.id}`);
+       console.log(card)
+      // Animate the card using animate.css
+      card.classList.add("animated", "zoomOutUp");
+
+      // Call the store action when the animation ends
+      card.addEventListener('animationend', () => {
+        this.$store.dispatch('addCourseToRoadmap', course);
+       });
+      
+      // setTimeout(() => {
+      //   console.log('course inside', course);
+      //   this.$store.dispatch('addCourseToRoadmap', course);
+      // }, 500);
+     }
+    }
+  }
 }
 
 </script>

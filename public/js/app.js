@@ -1973,6 +1973,13 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(source, true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(source).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+//
 //
 //
 //
@@ -2010,7 +2017,29 @@ __webpack_require__.r(__webpack_exports__);
     userCourseList: 'getUserCourseList',
     courses: 'getUserCoursesByStage'
   }),
-  methods: Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapActions"])(['addCourseToRoadmap', 'retrieveUserCoursesByStage'])
+  methods: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapActions"])(['addCourseToRoadmap', 'retrieveUserCoursesByStage']), {
+    handleAddClick: function handleAddClick($event, course) {
+      var _this = this;
+
+      console.log('event', $event);
+      console.log('course', course);
+      console.log(event.target.className); // Check that the add button was clicked
+
+      if (event.target.className === "fas fa-plus fa-2x") {
+        var card = document.getElementById("".concat(course.id));
+        console.log(card); // Animate the card using animate.css
+
+        card.classList.add("animated", "zoomOutUp"); // Call the store action when the animation ends
+
+        card.addEventListener('animationend', function () {
+          _this.$store.dispatch('addCourseToRoadmap', course);
+        }); // setTimeout(() => {
+        //   console.log('course inside', course);
+        //   this.$store.dispatch('addCourseToRoadmap', course);
+        // }, 500);
+      }
+    }
+  })
 });
 
 /***/ }),
@@ -5587,7 +5616,13 @@ var render = function() {
               {
                 key: course.id,
                 staticClass: "course-card",
-                class: "border-stage" + course.stage
+                class: "border-stage" + course.stage,
+                attrs: { id: "" + course.id },
+                on: {
+                  click: function($event) {
+                    return _vm.handleAddClick($event, course)
+                  }
+                }
               },
               [
                 _c("div", { staticClass: "card-header" }, [
@@ -5612,12 +5647,7 @@ var render = function() {
                       "div",
                       {
                         staticClass: "add-btn",
-                        class: "bg-stage" + course.stage,
-                        on: {
-                          click: function($event) {
-                            return _vm.addCourseToRoadmap(course)
-                          }
-                        }
+                        class: "bg-stage" + course.stage
                       },
                       [_c("i", { staticClass: "fas fa-plus fa-2x" })]
                     ),
@@ -25403,7 +25433,7 @@ var actions = {
           switch (_context.prev = _context.next) {
             case 0:
               commit = _ref5.commit, dispatch = _ref5.dispatch;
-              // This API is authenticated - Pass through the token in the header
+              // Make API request - This API is authenticated - Pass through token in the header
               axios__WEBPACK_IMPORTED_MODULE_1___default.a.defaults.headers.common['Authorization'] = 'Bearer ' + _auth__WEBPACK_IMPORTED_MODULE_2__["default"].state.token; // Add the course to the roadmap table in DB
 
               _context.next = 4;

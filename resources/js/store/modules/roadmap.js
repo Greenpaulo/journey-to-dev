@@ -94,7 +94,7 @@ const actions = {
   },
 
    async addCourseToRoadmap ({commit, dispatch}, course){
-     // This API is authenticated - Pass through the token in the header
+     // Make API request - This API is authenticated - Pass through token in the header
      axios.defaults.headers.common['Authorization'] = 'Bearer ' + auth.state.token
      // Add the course to the roadmap table in DB
      const response = await axios.post('/api/roadmap', {
