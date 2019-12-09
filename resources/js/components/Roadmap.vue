@@ -67,8 +67,11 @@
       <Footer />  
     </div>
       
-    <div v-else id="loader" class="mt-5 pt-5">
-      <h2>Loading....</h2>
+    <div v-else id="loader" class="mt-5 pt-5 text-center">
+      <div id="loader-content">
+        <h2>Loading</h2>
+        <Loader />
+      </div>
     </div>
   </div>
 </template>
@@ -77,6 +80,7 @@
 import CourseList from './CourseList';
 import Stage from './Stage';
 import Arrow from './Arrow';
+import Loader from './Loader';
 import Footer from './Footer';
 import { mapGetters, mapActions } from 'vuex';
 
@@ -86,6 +90,7 @@ export default {
     CourseList,
     Stage,
     Arrow,
+    Loader,
     Footer
   },
   data () {
@@ -211,6 +216,18 @@ export default {
 
 #total-hours {
   text-align: center;
+}
+
+#loader {
+  height:100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  #loader-content {
+    padding-bottom: 5rem;
+  }
 }
 
 
