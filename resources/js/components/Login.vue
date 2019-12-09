@@ -12,12 +12,12 @@
         <label for="password" class="lead text-success">Password</label>
         <input type="password" class="form-control" id="password" placeholder="Password" v-model="password">
       </div>
-      <button id="login-btn" type="submit" class="btn btn-info my-3">
-        <span v-if="!loggingIn">Login</span>
-        <span v-if="loggingIn">
+      <button type="submit" class="btn btn-info my-3">
+        <span v-if="!requestBeingMade">Login</span>
+        <span v-if="requestBeingMade">
           <span class="mr-2">Logging In</span>
-          <SmallLoader v-if="loggingIn"></SmallLoader>
-          </span>  
+          <SmallLoader v-if="requestBeingMade"></SmallLoader>
+        </span>  
       </button>
       
     </fieldset>
@@ -27,6 +27,7 @@
 
 <script>
 import SmallLoader from './SmallLoader';
+import { mapGetters } from 'vuex';
 
 export default {
   name: 'Login',
@@ -36,21 +37,16 @@ export default {
   data() {
     return {
       email:'',
-      password:'',
-      loggingIn: false
+      password:''
     }
   },
+  computed: mapGetters({ requestBeingMade:'isRequestBeingMade'}),
   methods: {
     login() {
-      // Show the small loader
-      this.loggingIn = true;
-      
-
-
-      // this.$store.dispatch('login', {
-      //   username: this.email,
-      //   password: this.password,
-      // });
+      this.$store.dispatch('login', {
+        username: this.email,
+        password: this.password,
+      });
     }
   }
 }

@@ -21,21 +21,33 @@
         <label for="password_confirmation" class="lead text-stage8">Confirm password</label>
         <input type="password" class="form-control" id="password_confirmation" placeholder="Password" v-model="password_confirmation" required>
       </div>
-      <button type="submit" class="btn btn-primary my-3">Submit</button>
+      <button type="submit" class="btn btn-primary my-3">
+        <span v-if="!requestBeingMade">Register</span>
+        <span v-if="requestBeingMade">
+          <span class="mr-2">Registering</span>
+          <SmallLoader v-if="requestBeingMade"></SmallLoader>
+        </span> 
+      </button>
     </fieldset>
   </form>
   </div>
 </template>
 
 <script>
+import SmallLoader from './SmallLoader';
+
 export default {
   name: 'Register',
+  components: {
+    SmallLoader
+  },
   data() {
     return {
       name: '',
       email: '',
       password: '',
-      password_confirmation: ''
+      password_confirmation: '',
+      requestBeingMade: false
     }
   },
   methods: {

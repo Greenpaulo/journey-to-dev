@@ -2078,6 +2078,7 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _SmallLoader__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./SmallLoader */ "./resources/js/components/SmallLoader.vue");
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
 //
 //
 //
@@ -2106,6 +2107,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 
+
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Login',
   components: {
@@ -2114,17 +2116,18 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       email: '',
-      password: '',
-      loggingIn: false
+      password: ''
     };
   },
+  computed: Object(vuex__WEBPACK_IMPORTED_MODULE_1__["mapGetters"])({
+    requestBeingMade: 'isRequestBeingMade'
+  }),
   methods: {
     login: function login() {
-      // Show the small loader
-      this.loggingIn = true; // this.$store.dispatch('login', {
-      //   username: this.email,
-      //   password: this.password,
-      // });
+      this.$store.dispatch('login', {
+        username: this.email,
+        password: this.password
+      });
     }
   }
 });
@@ -2205,6 +2208,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _SmallLoader__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./SmallLoader */ "./resources/js/components/SmallLoader.vue");
 //
 //
 //
@@ -2234,14 +2238,25 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Register',
+  components: {
+    SmallLoader: _SmallLoader__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
   data: function data() {
     return {
       name: '',
       email: '',
       password: '',
-      password_confirmation: ''
+      password_confirmation: '',
+      requestBeingMade: false
     };
   },
   methods: {
@@ -5926,14 +5941,13 @@ var render = function() {
             _vm._v(" "),
             _c(
               "button",
-              {
-                staticClass: "btn btn-info my-3",
-                attrs: { id: "login-btn", type: "submit" }
-              },
+              { staticClass: "btn btn-info my-3", attrs: { type: "submit" } },
               [
-                !_vm.loggingIn ? _c("span", [_vm._v("Login")]) : _vm._e(),
+                !_vm.requestBeingMade
+                  ? _c("span", [_vm._v("Login")])
+                  : _vm._e(),
                 _vm._v(" "),
-                _vm.loggingIn
+                _vm.requestBeingMade
                   ? _c(
                       "span",
                       [
@@ -5941,7 +5955,7 @@ var render = function() {
                           _vm._v("Logging In")
                         ]),
                         _vm._v(" "),
-                        _vm.loggingIn ? _c("SmallLoader") : _vm._e()
+                        _vm.requestBeingMade ? _c("SmallLoader") : _vm._e()
                       ],
                       1
                     )
@@ -6336,7 +6350,25 @@ var render = function() {
                 staticClass: "btn btn-primary my-3",
                 attrs: { type: "submit" }
               },
-              [_vm._v("Submit")]
+              [
+                !_vm.requestBeingMade
+                  ? _c("span", [_vm._v("Register")])
+                  : _vm._e(),
+                _vm._v(" "),
+                _vm.requestBeingMade
+                  ? _c(
+                      "span",
+                      [
+                        _c("span", { staticClass: "mr-2" }, [
+                          _vm._v("Registering")
+                        ]),
+                        _vm._v(" "),
+                        _vm.requestBeingMade ? _c("SmallLoader") : _vm._e()
+                      ],
+                      1
+                    )
+                  : _vm._e()
+              ]
             )
           ],
           1
@@ -25361,7 +25393,8 @@ __webpack_require__.r(__webpack_exports__);
 var state = {
   token: window.localStorage.getItem('access_token') || null,
   user_id: "",
-  name: ""
+  name: "",
+  requestBeingMade: false
 };
 var getters = {
   isLoggedIn: function isLoggedIn(state) {
@@ -25369,6 +25402,9 @@ var getters = {
   },
   getName: function getName(state) {
     return state.name;
+  },
+  isRequestBeingMade: function isRequestBeingMade(state) {
+    return state.requestBeingMade;
   }
 };
 var mutations = {
@@ -25380,6 +25416,9 @@ var mutations = {
   },
   setName: function setName(state, name) {
     state.name = name;
+  },
+  setRequestBeingMade: function setRequestBeingMade(state, status) {
+    state.requestBeingMade = status;
   }
 };
 var actions = {
@@ -25405,8 +25444,9 @@ var actions = {
   },
   // Retrieves a token from the API
   login: function login(_ref, credentials) {
-    var commit = _ref.commit,
-        dispatch = _ref.dispatch;
+    var commit = _ref.commit;
+    // Set the request status in the state
+    commit('setRequestBeingMade', true);
     axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('/api/login', {
       username: credentials.username,
       password: credentials.password
@@ -25417,12 +25457,16 @@ var actions = {
 
       window.localStorage.setItem('access_token', token); //Redirect to Roadmap
 
-      _app__WEBPACK_IMPORTED_MODULE_1__["router"].push('/roadmap');
+      _app__WEBPACK_IMPORTED_MODULE_1__["router"].push('/roadmap'); // Set the request status in the state
+
+      commit('setRequestBeingMade', false);
     })["catch"](function (error) {
       console.log('error', error.response);
       vue__WEBPACK_IMPORTED_MODULE_2___default.a.prototype.$flashStorage.flash(error.response.data, 'error', {
         timeout: 3000
-      });
+      }); // Set the request status in the state
+
+      commit('setRequestBeingMade', false);
     });
   },
   logout: function logout(_ref2) {

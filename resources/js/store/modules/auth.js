@@ -5,12 +5,14 @@ import Vue from 'vue';
 const state = {
   token: window.localStorage.getItem('access_token') || null,
   user_id: "",
-  name: ""
+  name: "",
+  requestBeingMade: false
 };
 
 const getters = {
   isLoggedIn: state => state.token ? true : false,
-  getName: state => state.name
+  getName: state => state.name,
+  isRequestBeingMade: state => state.requestBeingMade
 };
 
 const mutations = {
@@ -22,6 +24,9 @@ const mutations = {
   },
   setName: (state, name) => {
     state.name = name;
+  },
+  setRequestBeingMade: (state, status) => {
+    state.requestBeingMade = status;
   }
 };
 
@@ -53,7 +58,10 @@ const actions = {
   },
 
   // Retrieves a token from the API
-  login({ commit, dispatch }, credentials){
+  login({ commit}, credentials){
+    // Set the request status in the state
+    commit('setRequestBeingMade', true);
+
     axios.post('/api/login', {
       username: credentials.username,
       password: credentials.password
@@ -70,6 +78,9 @@ const actions = {
       //Redirect to Roadmap
       router.push('/roadmap');
 
+      // Set the request status in the state
+      commit('setRequestBeingMade', false);
+
     })
     .catch(error => {
       console.log('error', error.response)
@@ -77,6 +88,8 @@ const actions = {
       { 
         timeout: 3000
       });
+      // Set the request status in the state
+      commit('setRequestBeingMade', false);
     })
   },
 
