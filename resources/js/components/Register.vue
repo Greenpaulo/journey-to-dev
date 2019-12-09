@@ -35,6 +35,7 @@
 
 <script>
 import SmallLoader from './SmallLoader';
+import { mapGetters } from 'vuex';
 
 export default {
   name: 'Register',
@@ -46,10 +47,10 @@ export default {
       name: '',
       email: '',
       password: '',
-      password_confirmation: '',
-      requestBeingMade: false
+      password_confirmation: ''
     }
   },
+  computed: mapGetters({ requestBeingMade:'isRequestBeingMade'}),
   methods: {
     registerSubmit(){
       // Check the password is at least 8 characters long

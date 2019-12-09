@@ -2209,6 +2209,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _SmallLoader__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./SmallLoader */ "./resources/js/components/SmallLoader.vue");
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
 //
 //
 //
@@ -2245,6 +2246,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 
+
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Register',
   components: {
@@ -2255,10 +2257,12 @@ __webpack_require__.r(__webpack_exports__);
       name: '',
       email: '',
       password: '',
-      password_confirmation: '',
-      requestBeingMade: false
+      password_confirmation: ''
     };
   },
+  computed: Object(vuex__WEBPACK_IMPORTED_MODULE_1__["mapGetters"])({
+    requestBeingMade: 'isRequestBeingMade'
+  }),
   methods: {
     registerSubmit: function registerSubmit() {
       // Check the password is at least 8 characters long
@@ -25422,7 +25426,10 @@ var mutations = {
   }
 };
 var actions = {
-  register: function register(context, credentials) {
+  register: function register(_ref, credentials) {
+    var commit = _ref.commit;
+    // Set the request status in the state
+    commit('setRequestBeingMade', true);
     axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('/api/register', {
       name: credentials.name,
       email: credentials.email,
@@ -25434,17 +25441,21 @@ var actions = {
 
       vue__WEBPACK_IMPORTED_MODULE_2___default.a.prototype.$flashStorage.flash('Registration successful! Please Login.', 'success', {
         timeout: 3000
-      });
+      }); // Set the request status in the state
+
+      commit('setRequestBeingMade', false);
     })["catch"](function (error) {
       //Show error message
       vue__WEBPACK_IMPORTED_MODULE_2___default.a.prototype.$flashStorage.flash('The email is already taken.', 'error', {
         timeout: 3000
-      });
+      }); // Set the request status in the state
+
+      commit('setRequestBeingMade', false);
     });
   },
   // Retrieves a token from the API
-  login: function login(_ref, credentials) {
-    var commit = _ref.commit;
+  login: function login(_ref2, credentials) {
+    var commit = _ref2.commit;
     // Set the request status in the state
     commit('setRequestBeingMade', true);
     axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('/api/login', {
@@ -25469,9 +25480,9 @@ var actions = {
       commit('setRequestBeingMade', false);
     });
   },
-  logout: function logout(_ref2) {
-    var commit = _ref2.commit,
-        state = _ref2.state;
+  logout: function logout(_ref3) {
+    var commit = _ref3.commit,
+        state = _ref3.state;
     // This API is authenticated - Pass through the token in the header
     axios__WEBPACK_IMPORTED_MODULE_0___default.a.defaults.headers.common['Authorization'] = 'Bearer ' + state.token; // Clear the access tokens in the DB
 
@@ -25488,8 +25499,8 @@ var actions = {
 
     });
   },
-  getUserFirstName: function getUserFirstName(_ref3, fullname) {
-    var commit = _ref3.commit;
+  getUserFirstName: function getUserFirstName(_ref4, fullname) {
+    var commit = _ref4.commit;
     var firstname = fullname.replace(/ .*/, ''); // Call the mutation to set the name
 
     commit('setName', firstname);

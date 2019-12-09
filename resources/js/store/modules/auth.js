@@ -32,7 +32,10 @@ const mutations = {
 
 const actions = {
 
-  register(context, credentials){
+  register({ commit }, credentials){
+    // Set the request status in the state
+    commit('setRequestBeingMade', true);
+
     axios.post('/api/register', {
       name: credentials.name,
       email: credentials.email,
@@ -47,6 +50,8 @@ const actions = {
       {
         timeout: 3000
       });
+      // Set the request status in the state
+      commit('setRequestBeingMade', false);
     })
     .catch(error => {
       //Show error message
@@ -54,6 +59,9 @@ const actions = {
         {
           timeout: 3000
         });
+      
+      // Set the request status in the state
+      commit('setRequestBeingMade', false);
     })
   },
 
