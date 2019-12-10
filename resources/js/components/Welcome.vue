@@ -34,7 +34,7 @@ export default {
 }
 
 #welcome-content {
-  margin-bottom: 10rem;
+  margin-bottom: 2rem;
 }
 
 

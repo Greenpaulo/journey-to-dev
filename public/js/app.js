@@ -3412,12 +3412,7 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(source, true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(source).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
+//
 //
 //
 //
@@ -3430,7 +3425,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'WelcomeButtons',
-  computed: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapGetters"])(['isLoggedIn']))
+  computed: Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapGetters"])(['isLoggedIn'])
 });
 
 /***/ }),
@@ -3737,7 +3732,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n#welcome-page[data-v-51777872] {\r\n  position: relative;\r\n  background: url(\"/images/1.jpg\") cover no-repeat;\r\n  height: 100vh;\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: center;\r\n  align-items: center;\n}\n#welcome-content[data-v-51777872] {\r\n  margin-bottom: 10rem;\n}\r\n\r\n\r\n", ""]);
+exports.push([module.i, "\n#welcome-page[data-v-51777872] {\r\n  position: relative;\r\n  background: url(\"/images/1.jpg\") cover no-repeat;\r\n  height: 100vh;\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: center;\r\n  align-items: center;\n}\n#welcome-content[data-v-51777872] {\r\n  margin-bottom: 2rem;\n}\r\n\r\n\r\n", ""]);
 
 // exports
 
@@ -3756,7 +3751,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n#buttons[data-v-770c052c] {\r\n  margin-top: 3rem;\n}\r\n\r\n", ""]);
+exports.push([module.i, "\n#buttons[data-v-770c052c] {\r\n  margin-top: 3rem;\r\n  text-align: center;\n}\n.btn[data-v-770c052c] {\r\n  -webkit-animation-delay: 11s;\r\n          animation-delay: 11s;\r\n  margin: 0 0.5rem;\n}\r\n\r\n", ""]);
 
 // exports
 
@@ -8976,7 +8971,7 @@ var render = function() {
         ? _c(
             "router-link",
             {
-              staticClass: "btn btn-info btn-lg",
+              staticClass: "btn btn-info btn-lg animated fadeInLeft",
               attrs: { to: "/login", role: "button" }
             },
             [_vm._v("Login")]
@@ -8987,7 +8982,7 @@ var render = function() {
         ? _c(
             "router-link",
             {
-              staticClass: "btn btn-primary btn-lg",
+              staticClass: "btn btn-primary btn-lg animated fadeInUp",
               attrs: { to: "/register", role: "button" }
             },
             [_vm._v("Register")]
@@ -8998,7 +8993,7 @@ var render = function() {
         ? _c(
             "router-link",
             {
-              staticClass: "btn btn-success btn-lg",
+              staticClass: "btn btn-success btn-lg animated fadeInRight",
               attrs: { to: "/thejourney", role: "button" }
             },
             [_vm._v("Find Out More")]
@@ -9009,10 +9004,10 @@ var render = function() {
         ? _c(
             "router-link",
             {
-              staticClass: "btn btn-success btn-lg",
+              staticClass: "btn btn-success btn-lg animated fadeInUp",
               attrs: { to: "/roadmap", role: "button" }
             },
-            [_vm._v("Get Started")]
+            [_vm._v("Your Roadmap")]
           )
         : _vm._e()
     ],

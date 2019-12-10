@@ -1,9 +1,10 @@
 <template>
   <div id="buttons">
-    <router-link v-if="isLoggedIn === false" class="btn btn-info btn-lg" to="/login" role="button">Login</router-link>
-    <router-link v-if="isLoggedIn === false" class="btn btn-primary btn-lg" to="/register" role="button">Register</router-link>
-    <router-link v-if="isLoggedIn === false" class="btn btn-success btn-lg" to="/thejourney" role="button">Find Out More</router-link>
-    <router-link v-if="isLoggedIn" class="btn btn-success btn-lg" to="/roadmap" role="button">Get Started</router-link>
+    <router-link v-if="isLoggedIn === false" class="btn btn-info btn-lg animated fadeInLeft" to="/login" role="button">Login</router-link>
+    <router-link v-if="isLoggedIn === false" class="btn btn-primary btn-lg animated fadeInUp" to="/register" role="button">Register</router-link>
+    <router-link v-if="isLoggedIn === false" class="btn btn-success btn-lg animated fadeInRight" to="/thejourney" role="button">Find Out More</router-link>
+    
+    <router-link v-if="isLoggedIn" class="btn btn-success btn-lg animated fadeInUp" to="/roadmap" role="button">Your Roadmap</router-link>
   </div>
 </template>
 
@@ -13,9 +14,7 @@ import { mapGetters } from 'vuex';
 
 export default {
   name: 'WelcomeButtons',
-  computed: { 
-    ...mapGetters(['isLoggedIn'])
-  },
+  computed: mapGetters(['isLoggedIn']),
 }
 </script>
 
@@ -23,6 +22,13 @@ export default {
 
 #buttons {
   margin-top: 3rem;
+  text-align: center;
+
+}
+
+.btn {
+  animation-delay: 11s;
+  margin: 0 0.5rem;
 }
 
 </style>
