@@ -22,12 +22,14 @@ export default {
 
 #buttons {
   margin-top: 3rem;
+  padding-right: 5rem;
   text-align: center;
 
 }
 
 .btn {
   animation-delay: 11s;
+  animation-duration: 2s;
   margin: 0 0.5rem;
 }
 

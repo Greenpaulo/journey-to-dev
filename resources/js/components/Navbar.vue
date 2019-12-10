@@ -95,7 +95,7 @@ import { mapActions, mapGetters } from 'vuex';
 
 #home-link {
   &:hover {
-    color: $stage5 !important;
+    color: $stage1 !important;
   }
 }
 
@@ -131,7 +131,7 @@ import { mapActions, mapGetters } from 'vuex';
 
 #logout-link {
   &:hover {
-    color: $stage8 !important;
+    color: $stage5 !important;
   }
 }
 

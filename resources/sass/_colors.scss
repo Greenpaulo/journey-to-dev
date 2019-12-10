@@ -1,13 +1,15 @@
 // Stage colours
 $stage1: $red;
-$stage2: orange;
-$stage3: orangered;
+$stage2: orangered;
+$stage3: orange;
 $stage4: $green;
 $stage5: $blue;
 $stage6: $teal;
 $stage7: $pink;
 $stage8: $info;
 $stage9: $white;
+
+$colors: $stage1, $stage2, $stage3, $stage4, $stage5, $stage6, $stage7, $stage8;
 
 //Stage backgrounds
 .bg-stage1 {
@@ -46,13 +48,13 @@ $stage9: $white;
 }
 
 .border-stage2 {
-  border-top: 8px solid orange;
-  border-right: 8px solid orange;
+  border-top: 8px solid orangered;
+  border-right: 8px solid orangered;
 }
 
 .border-stage3 {
-  border-top: 8px solid orangered;
-  border-right: 8px solid orangered;
+  border-top: 8px solid orange;
+  border-right: 8px solid orange;
 }
 
 .border-stage4 {

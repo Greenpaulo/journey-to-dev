@@ -171,18 +171,20 @@ export default {
     tl.to(cloud, { opacity: 1 , duration: 0.5});
 
     // First arrow
-    tl.to(circle1, { opacity: 1 , duration: 0.4});
-    tl.to(circle2, { opacity: 1 , duration: 0.4});
-    tl.to([circle3, arrowHead1], { opacity: 1 , duration: 0.4});
+    tl.to(circle1, { opacity: 1 , duration: 0.3});
+    tl.to(circle2, { opacity: 1 , duration: 0.3});
+    tl.to(circle3, { opacity: 1 , duration: 0.3});
+    tl.to(arrowHead1, { opacity: 1 , duration: 0.3});
 
     // Study
     tl.from(studyMain, { y: -100, duration: 1, opacity: 0});
     tl.to(lightRays, { opacity: 1 , duration: 0.5});
 
     // Second arrow
-    tl.to(circle4, { opacity: 1 , duration: 0.4});
-    tl.to(circle5, { opacity: 1 , duration: 0.4});
-    tl.to([circle6, arrowHead2], { opacity: 1 , duration: 0.4});
+    tl.to(circle4, { opacity: 1 , duration: 0.3});
+    tl.to(circle5, { opacity: 1 , duration: 0.3});
+    tl.to(circle6, { opacity: 1 , duration: 0.3});
+    tl.to(arrowHead2, { opacity: 1 , duration: 0.3});
 
     // Handshake
     tl.from(handshake, { y: -100, duration: 1, opacity: 0});
@@ -209,6 +211,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+@import 'resources/sass/variables';
+@import 'resources/sass/colors';
 
 .st0 { 
   fill:none;
@@ -286,5 +291,35 @@ circle, path {
 #job-complete {
   opacity: 0;
 }
+
+// Arrow colours
+#circle-1 {
+  fill: $stage1;
+}
+#circle-2 {
+  fill: $stage2;
+}
+#circle-3 {
+  fill: $stage3;
+}
+#arrow-head-1 {
+  fill: $stage4;
+}
+#circle-4 {
+  fill: $stage5;
+}
+#circle-5 {
+  fill: $stage6;
+}
+#circle-6 {
+  fill: $stage7;
+}
+#arrow-head-2 {
+  fill: $stage8;
+}
+
+// #light-rays path {
+//   fill: yellow;
+// }
 
 </style>
