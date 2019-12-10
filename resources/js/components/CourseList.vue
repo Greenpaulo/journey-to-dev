@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="course-list" v-if="courses.length > 0">
+    <div class="course-list animated fadeIn" v-if="courses.length > 0">
         <div class="course-card" v-for="course in courses" :key="course.id" :class="`border-stage${course.stage}`" @click="handleClick($event, course)" :id="`${course.id}`"> 
           <div class="card-header">Stage {{course.stage}}</div>
           <div class="card-body">

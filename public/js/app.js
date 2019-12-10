@@ -3133,6 +3133,282 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _WelcomeAnimation__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./WelcomeAnimation */ "./resources/js/components/WelcomeAnimation.vue");
+/* harmony import */ var _WelcomeLogo__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./WelcomeLogo */ "./resources/js/components/WelcomeLogo.vue");
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: 'Welcome',
+  components: {
+    WelcomeAnimation: _WelcomeAnimation__WEBPACK_IMPORTED_MODULE_0__["default"],
+    WelcomeLogo: _WelcomeLogo__WEBPACK_IMPORTED_MODULE_1__["default"]
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/WelcomeAnimation.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/WelcomeAnimation.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: 'WelcomeAnimation',
+  mounted: function mounted() {
+    // Grab the elements from the DOM
+    // Idea SVG
+    var head = document.getElementById('head');
+    var smallCircle = document.getElementById('small-circle');
+    var bigCircle = document.getElementById('big-circle');
+    var cloud = document.getElementById('cloud'); //First Arrow SVG
+
+    var circle1 = document.getElementById('circle-1');
+    var circle2 = document.getElementById('circle-2');
+    var circle3 = document.getElementById('circle-3');
+    var arrowHead1 = document.getElementById('arrow-head-1'); // Study SVG
+
+    var studyMain = document.getElementById('study-main');
+    var lightRays = document.getElementById('light-rays'); //Second Arrow SVG
+
+    var circle4 = document.getElementById('circle-4');
+    var circle5 = document.getElementById('circle-5');
+    var circle6 = document.getElementById('circle-6');
+    var arrowHead2 = document.getElementById('arrow-head-2'); // Job SVG
+
+    var handshake = document.getElementById('handshake');
+    var jobComplete = document.getElementById('job-complete'); // Initialise the gsap timeline
+
+    var tl = gsap.timeline(); // Idea
+
+    tl.from(head, {
+      y: -100,
+      duration: 1,
+      opacity: 0
+    });
+    tl.to(smallCircle, {
+      opacity: 1,
+      duration: 0.5
+    });
+    tl.to(bigCircle, {
+      opacity: 1,
+      duration: 0.5
+    });
+    tl.to(cloud, {
+      opacity: 1,
+      duration: 0.5
+    }); // First arrow
+
+    tl.to(circle1, {
+      opacity: 1,
+      duration: 0.4
+    });
+    tl.to(circle2, {
+      opacity: 1,
+      duration: 0.4
+    });
+    tl.to([circle3, arrowHead1], {
+      opacity: 1,
+      duration: 0.4
+    }); // Study
+
+    tl.from(studyMain, {
+      y: -100,
+      duration: 1,
+      opacity: 0
+    });
+    tl.to(lightRays, {
+      opacity: 1,
+      duration: 0.5
+    }); // Second arrow
+
+    tl.to(circle4, {
+      opacity: 1,
+      duration: 0.4
+    });
+    tl.to(circle5, {
+      opacity: 1,
+      duration: 0.4
+    });
+    tl.to([circle6, arrowHead2], {
+      opacity: 1,
+      duration: 0.4
+    }); // Handshake
+
+    tl.from(handshake, {
+      y: -100,
+      duration: 1,
+      opacity: 0
+    });
+    tl.to(jobComplete, {
+      opacity: 1,
+      duration: 0.5
+    });
+
+    function calculatePathLength() {
+      console.log('func ran'); //Calculate path lengths of the svg logo
+
+      var tick = document.getElementById('#tick');
+      console.log('tick', tick.getTotalLength());
+      var tickCircle = document.getElementById('#tick-circle');
+      console.log('tick-circle', tickCircle.getTotalLength());
+    }
+
+    calculatePathLength();
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/WelcomeLogo.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/WelcomeLogo.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
@@ -3179,10 +3455,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'Welcome',
+  name: 'WelcomeLogo',
   computed: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapGetters"])(['isLoggedIn'])) // mounted() {
   //     //Calculate path lengths of the svg logo
   //     const logo = document.querySelectorAll('#logo path');
@@ -3322,7 +3597,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".bg-stage1[data-v-3fd38ca3] {\n  background-color: #CC0000;\n}\n.bg-stage2[data-v-3fd38ca3] {\n  background-color: orange;\n}\n.bg-stage3[data-v-3fd38ca3] {\n  background-color: orangered;\n}\n.bg-stage4[data-v-3fd38ca3] {\n  background-color: #77B300;\n}\n.bg-stage5[data-v-3fd38ca3] {\n  background-color: #2A9FD6;\n}\n.bg-stage6[data-v-3fd38ca3] {\n  background-color: #20c997;\n}\n.bg-stage7[data-v-3fd38ca3] {\n  background-color: #e83e8c;\n}\n.bg-stage8[data-v-3fd38ca3] {\n  background-color: #9933CC;\n}\n.bg-stage9[data-v-3fd38ca3] {\n  background-color: #fff;\n  color: black !important;\n}\n.border-stage1[data-v-3fd38ca3] {\n  border-top: 8px solid #CC0000;\n  border-right: 8px solid #CC0000;\n}\n.border-stage2[data-v-3fd38ca3] {\n  border-top: 8px solid orange;\n  border-right: 8px solid orange;\n}\n.border-stage3[data-v-3fd38ca3] {\n  border-top: 8px solid orangered;\n  border-right: 8px solid orangered;\n}\n.border-stage4[data-v-3fd38ca3] {\n  border-top: 8px solid #77B300;\n  border-right: 8px solid #77B300;\n}\n.border-stage5[data-v-3fd38ca3] {\n  border-top: 8px solid #2A9FD6;\n  border-right: 8px solid #2A9FD6;\n}\n.border-stage6[data-v-3fd38ca3] {\n  border-top: 8px solid #20c997;\n  border-right: 8px solid #20c997;\n}\n.border-stage7[data-v-3fd38ca3] {\n  border-top: 8px solid #e83e8c;\n  border-right: 8px solid #e83e8c;\n}\n.border-stage8[data-v-3fd38ca3] {\n  border-top: 8px solid #9933CC;\n  border-right: 8px solid #9933CC;\n}\n.border-stage9[data-v-3fd38ca3] {\n  border-top: 8px solid #fff;\n  border-right: 8px solid #ffff;\n}\n.text-stage1[data-v-3fd38ca3] {\n  color: #CC0000;\n}\n.text-stage2[data-v-3fd38ca3] {\n  color: orange;\n}\n.text-stage3[data-v-3fd38ca3] {\n  color: orangered;\n}\n.text-stage4[data-v-3fd38ca3] {\n  color: #77B300;\n}\n.text-stage5[data-v-3fd38ca3] {\n  color: #2A9FD6;\n}\n.text-stage6[data-v-3fd38ca3] {\n  color: #20c997;\n}\n.text-stage7[data-v-3fd38ca3] {\n  color: #e83e8c;\n}\n.text-stage8[data-v-3fd38ca3] {\n  color: #9933CC;\n}\n.text-stage9[data-v-3fd38ca3] {\n  color: white;\n}\n@-webkit-keyframes hue-data-v-3fd38ca3 {\nfrom {\n    -webkit-filter: hue-rotate(0deg);\n            filter: hue-rotate(0deg);\n}\nto {\n    -webkit-filter: hue-rotate(-360deg);\n            filter: hue-rotate(-360deg);\n}\n}\n@keyframes hue-data-v-3fd38ca3 {\nfrom {\n    -webkit-filter: hue-rotate(0deg);\n            filter: hue-rotate(0deg);\n}\nto {\n    -webkit-filter: hue-rotate(-360deg);\n            filter: hue-rotate(-360deg);\n}\n}\n@-webkit-keyframes bg-animation-data-v-3fd38ca3 {\n0% {\n    background-position: left;\n}\n100% {\n    background-position: right;\n}\n}\n@keyframes bg-animation-data-v-3fd38ca3 {\n0% {\n    background-position: left;\n}\n100% {\n    background-position: right;\n}\n}\n@-webkit-keyframes line-anim-data-v-3fd38ca3 {\nto {\n    stroke-dashoffset: 0;\n}\n}\n@keyframes line-anim-data-v-3fd38ca3 {\nto {\n    stroke-dashoffset: 0;\n}\n}\n@-webkit-keyframes fill-red-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: red;\n}\n}\n@keyframes fill-red-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: red;\n}\n}\n@-webkit-keyframes fill-orange-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ffb733;\n}\n}\n@keyframes fill-orange-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ffb733;\n}\n}\n@-webkit-keyframes fill-orangered-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ff6a33;\n}\n}\n@keyframes fill-orangered-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ff6a33;\n}\n}\n@-webkit-keyframes fill-green-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #99e600;\n}\n}\n@keyframes fill-green-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #99e600;\n}\n}\n@-webkit-keyframes fill-blue-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #55b2de;\n}\n}\n@keyframes fill-blue-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #55b2de;\n}\n}\n@-webkit-keyframes fill-teal-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #3ce0af;\n}\n}\n@keyframes fill-teal-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #3ce0af;\n}\n}\n@-webkit-keyframes fill-pink-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ed6ca7;\n}\n}\n@keyframes fill-pink-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ed6ca7;\n}\n}\n@-webkit-keyframes fill-cyan-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ad5cd6;\n}\n}\n@keyframes fill-cyan-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ad5cd6;\n}\n}\n@-webkit-keyframes fill-white-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: white;\n}\n}\n@keyframes fill-white-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: white;\n}\n}\n@-webkit-keyframes fill-black-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: black;\n}\n}\n@keyframes fill-black-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: black;\n}\n}\n@-webkit-keyframes pulse-data-v-3fd38ca3 {\n50% {\n    transform: scale(0.8);\n}\n100% {\n    transform: scale(1);\n}\n}\n@keyframes pulse-data-v-3fd38ca3 {\n50% {\n    transform: scale(0.8);\n}\n100% {\n    transform: scale(1);\n}\n}\n.stage[data-v-3fd38ca3] {\n  display: flex;\n  box-shadow: 1rem 0 3rem #000;\n  padding: 0 0.3rem 1rem 0;\n  border-radius: 10px;\n}\n.stage-heading[data-v-3fd38ca3] {\n  position: relative;\n  border-radius: 10px;\n  height: 290px;\n  min-width: 260px;\n  max-width: 260px;\n  text-align: center;\n}\n.stage-heading h2[data-v-3fd38ca3] {\n  font-size: 2.8rem;\n}\n.stage-heading h5[data-v-3fd38ca3] {\n  font-size: 1.2rem;\n}\n.stage-heading-info[data-v-3fd38ca3] {\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n}\n.inner[data-v-3fd38ca3] {\n  color: white;\n  font-size: 1.1rem;\n  border-radius: 10px;\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  text-align: center;\n  -webkit-clip-path: circle(20% at 0% 0%);\n          clip-path: circle(20% at 0% 0%);\n  transition: -webkit-clip-path 0.5s ease-in-out;\n  transition: clip-path 0.5s ease-in-out;\n  transition: clip-path 0.5s ease-in-out, -webkit-clip-path 0.5s ease-in-out;\n}\n.inner p[data-v-3fd38ca3] {\n  margin-bottom: 0.5rem;\n  padding: 1rem;\n}\n.inner .inner-header[data-v-3fd38ca3] {\n  display: grid;\n  grid-template-columns: 1.65fr 2.35fr;\n}\n.inner .inner-header #lightbulb[data-v-3fd38ca3] {\n  fill: white;\n  padding-top: 0.2rem;\n}\n.inner .inner-header h4[data-v-3fd38ca3] {\n  margin: 0;\n  text-align: left;\n  padding-top: 1rem;\n}\n.inner[data-v-3fd38ca3]:hover {\n  -webkit-clip-path: circle(75%);\n          clip-path: circle(75%);\n}\n#thumbs-up path[data-v-3fd38ca3] {\n  fill: none;\n  stroke: white;\n  stroke-width: 8;\n  stroke-miterlimit: 10;\n  stroke-dasharray: 3174.4838867188;\n  stroke-dashoffset: 3174.4838867188;\n}\n.inner:hover .st0[data-v-3fd38ca3] {\n  -webkit-animation-name: line-anim-data-v-3fd38ca3,fill-white-data-v-3fd38ca3;\n          animation-name: line-anim-data-v-3fd38ca3,fill-white-data-v-3fd38ca3;\n  -webkit-animation-duration: 1.5s, 1s;\n          animation-duration: 1.5s, 1s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 0.4s, 0.4s;\n          animation-delay: 0.4s, 0.4s;\n}\n.inner.bg-stage9 #lightbulb[data-v-3fd38ca3] {\n  fill: black;\n}\n.inner.bg-stage9 h4[data-v-3fd38ca3] {\n  color: black;\n}\n.inner.bg-stage9 #thumbs-up .st0[data-v-3fd38ca3] {\n  stroke: black;\n}\n.inner.bg-stage9:hover .st0[data-v-3fd38ca3] {\n  -webkit-animation-name: line-anim-data-v-3fd38ca3,fill-black-data-v-3fd38ca3;\n          animation-name: line-anim-data-v-3fd38ca3,fill-black-data-v-3fd38ca3;\n}\n.stage-courses[data-v-3fd38ca3] {\n  display: flex;\n  flex-wrap: wrap;\n  width: 100%;\n}\n.stage-courses[data-v-3fd38ca3] {\n  display: flex;\n  flex-wrap: wrap;\n  width: 100%;\n}\n.stage-courses > .stage-course[data-v-3fd38ca3] {\n  position: relative;\n  min-height: 240px;\n  min-width: 260px;\n  max-width: 260px;\n  border-radius: 10px;\n  margin-top: 1.8rem;\n  box-shadow: 1rem 0 3rem #000;\n}\n.stage-courses > .stage-course .card-header[data-v-3fd38ca3] {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n.stage-courses > .stage-course .card-header div.tick[data-v-3fd38ca3] {\n  cursor: pointer;\n}\n.stage-courses > .stage-course .card-header div.tick:hover i[data-v-3fd38ca3] {\n  -webkit-animation: pulse-data-v-3fd38ca3 500ms ease-in;\n          animation: pulse-data-v-3fd38ca3 500ms ease-in;\n  -webkit-animation-iteration-count: 2;\n          animation-iteration-count: 2;\n}\n.stage-courses > .stage-course .card-body > h5[data-v-3fd38ca3] {\n  font-size: 1.4rem;\n}\n.stage-courses > .stage-course .card-body[data-v-3fd38ca3] {\n  position: relative;\n  display: flex;\n  flex-direction: column;\n  align-content: space-between;\n}\n.stage-courses > .stage-course .card-body p.card-text[data-v-3fd38ca3] {\n  margin-bottom: 0.6rem;\n}\n.stage-courses > .stage-course .card-body .link a[data-v-3fd38ca3] {\n  position: absolute;\n  bottom: 15px;\n  left: 217px;\n}\n.stage-courses > .stage-course .card-body i[data-v-3fd38ca3] {\n  color: white;\n  margin-top: 0.5rem;\n  transition: color 200ms ease-in-out;\n}\n.stage-courses > .stage-course .card-body i[data-v-3fd38ca3]:hover {\n  color: #d9d9d9;\n}\n.stage-courses > .bg-stage9 > .card-body i[data-v-3fd38ca3] {\n  color: black;\n}\n.stage-courses > .bg-stage9 > .card-body i[data-v-3fd38ca3]:hover {\n  color: #404040;\n}\nh5.card-title > a[data-v-3fd38ca3] {\n  color: white;\n  text-decoration: none;\n}\nh5.card-title > a[data-v-3fd38ca3]:hover {\n  color: #cccccc;\n}\n.bg-stage9 a[data-v-3fd38ca3] {\n  color: black !important;\n}\n.course-completed[data-v-3fd38ca3] {\n  background-color: lightgreen;\n  opacity: 0.8;\n}\n.card-footer[data-v-3fd38ca3] {\n  display: flex;\n  justify-content: space-between;\n  padding: 0;\n}\n.empty-stage[data-v-3fd38ca3] {\n  width: 53%;\n  margin: auto;\n  text-align: left;\n}\n.left-arrow[data-v-3fd38ca3], .right-arrow[data-v-3fd38ca3], .delete-btn[data-v-3fd38ca3] {\n  cursor: pointer;\n  padding: 0.75rem;\n}\n.left-arrow[data-v-3fd38ca3] {\n  padding-left: 1.25rem;\n}\n.left-arrow[data-v-3fd38ca3]:hover {\n  -webkit-animation: left-point-data-v-3fd38ca3 500ms ease-in;\n          animation: left-point-data-v-3fd38ca3 500ms ease-in;\n  -webkit-animation-iteration-count: 2;\n          animation-iteration-count: 2;\n}\n@-webkit-keyframes left-point-data-v-3fd38ca3 {\n50% {\n    transform: translateX(-15px);\n}\n100% {\n    transform: translateX(0px);\n}\n}\n@keyframes left-point-data-v-3fd38ca3 {\n50% {\n    transform: translateX(-15px);\n}\n100% {\n    transform: translateX(0px);\n}\n}\n.right-arrow[data-v-3fd38ca3] {\n  padding-right: 1.25rem;\n}\n.right-arrow[data-v-3fd38ca3]:hover {\n  -webkit-animation: right-point-data-v-3fd38ca3 500ms ease-in;\n          animation: right-point-data-v-3fd38ca3 500ms ease-in;\n  -webkit-animation-iteration-count: 2;\n          animation-iteration-count: 2;\n}\n@-webkit-keyframes right-point-data-v-3fd38ca3 {\n50% {\n    transform: translateX(15px);\n}\n100% {\n    transform: translateX(0px);\n}\n}\n@keyframes right-point-data-v-3fd38ca3 {\n50% {\n    transform: translateX(15px);\n}\n100% {\n    transform: translateX(0px);\n}\n}\n.delete-btn[data-v-3fd38ca3]:hover {\n  -webkit-animation: pulse-data-v-3fd38ca3 500ms ease-in;\n          animation: pulse-data-v-3fd38ca3 500ms ease-in;\n  -webkit-animation-iteration-count: 2;\n          animation-iteration-count: 2;\n}\n@media (max-width: 768px) {\n.stage[data-v-3fd38ca3] {\n    display: grid;\n}\n.stage-courses[data-v-3fd38ca3] {\n    margin: 0 !important;\n    padding-left: 2rem;\n    padding-right: 2rem;\n    display: grid;\n    grid-template-columns: repeat(auto-fill, minmax(240px, 260px));\n    justify-items: center;\n    justify-content: space-around;\n}\n}\n@media (max-width: 375px) {\n.stage-heading[data-v-3fd38ca3] {\n    margin: auto;\n}\n}", ""]);
+exports.push([module.i, ".bg-stage1[data-v-3fd38ca3] {\n  background-color: #CC0000;\n}\n.bg-stage2[data-v-3fd38ca3] {\n  background-color: orange;\n}\n.bg-stage3[data-v-3fd38ca3] {\n  background-color: orangered;\n}\n.bg-stage4[data-v-3fd38ca3] {\n  background-color: #77B300;\n}\n.bg-stage5[data-v-3fd38ca3] {\n  background-color: #2A9FD6;\n}\n.bg-stage6[data-v-3fd38ca3] {\n  background-color: #20c997;\n}\n.bg-stage7[data-v-3fd38ca3] {\n  background-color: #e83e8c;\n}\n.bg-stage8[data-v-3fd38ca3] {\n  background-color: #9933CC;\n}\n.bg-stage9[data-v-3fd38ca3] {\n  background-color: #fff;\n  color: black !important;\n}\n.border-stage1[data-v-3fd38ca3] {\n  border-top: 8px solid #CC0000;\n  border-right: 8px solid #CC0000;\n}\n.border-stage2[data-v-3fd38ca3] {\n  border-top: 8px solid orange;\n  border-right: 8px solid orange;\n}\n.border-stage3[data-v-3fd38ca3] {\n  border-top: 8px solid orangered;\n  border-right: 8px solid orangered;\n}\n.border-stage4[data-v-3fd38ca3] {\n  border-top: 8px solid #77B300;\n  border-right: 8px solid #77B300;\n}\n.border-stage5[data-v-3fd38ca3] {\n  border-top: 8px solid #2A9FD6;\n  border-right: 8px solid #2A9FD6;\n}\n.border-stage6[data-v-3fd38ca3] {\n  border-top: 8px solid #20c997;\n  border-right: 8px solid #20c997;\n}\n.border-stage7[data-v-3fd38ca3] {\n  border-top: 8px solid #e83e8c;\n  border-right: 8px solid #e83e8c;\n}\n.border-stage8[data-v-3fd38ca3] {\n  border-top: 8px solid #9933CC;\n  border-right: 8px solid #9933CC;\n}\n.border-stage9[data-v-3fd38ca3] {\n  border-top: 8px solid #fff;\n  border-right: 8px solid #ffff;\n}\n.text-stage1[data-v-3fd38ca3] {\n  color: #CC0000;\n}\n.text-stage2[data-v-3fd38ca3] {\n  color: orange;\n}\n.text-stage3[data-v-3fd38ca3] {\n  color: orangered;\n}\n.text-stage4[data-v-3fd38ca3] {\n  color: #77B300;\n}\n.text-stage5[data-v-3fd38ca3] {\n  color: #2A9FD6;\n}\n.text-stage6[data-v-3fd38ca3] {\n  color: #20c997;\n}\n.text-stage7[data-v-3fd38ca3] {\n  color: #e83e8c;\n}\n.text-stage8[data-v-3fd38ca3] {\n  color: #9933CC;\n}\n.text-stage9[data-v-3fd38ca3] {\n  color: white;\n}\n@-webkit-keyframes hue-data-v-3fd38ca3 {\nfrom {\n    -webkit-filter: hue-rotate(0deg);\n            filter: hue-rotate(0deg);\n}\nto {\n    -webkit-filter: hue-rotate(-360deg);\n            filter: hue-rotate(-360deg);\n}\n}\n@keyframes hue-data-v-3fd38ca3 {\nfrom {\n    -webkit-filter: hue-rotate(0deg);\n            filter: hue-rotate(0deg);\n}\nto {\n    -webkit-filter: hue-rotate(-360deg);\n            filter: hue-rotate(-360deg);\n}\n}\n@-webkit-keyframes bg-animation-data-v-3fd38ca3 {\n0% {\n    background-position: left;\n}\n100% {\n    background-position: right;\n}\n}\n@keyframes bg-animation-data-v-3fd38ca3 {\n0% {\n    background-position: left;\n}\n100% {\n    background-position: right;\n}\n}\n@-webkit-keyframes line-anim-data-v-3fd38ca3 {\nto {\n    stroke-dashoffset: 0;\n}\n}\n@keyframes line-anim-data-v-3fd38ca3 {\nto {\n    stroke-dashoffset: 0;\n}\n}\n@-webkit-keyframes fill-red-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: red;\n}\n}\n@keyframes fill-red-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: red;\n}\n}\n@-webkit-keyframes fill-orange-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ffb733;\n}\n}\n@keyframes fill-orange-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ffb733;\n}\n}\n@-webkit-keyframes fill-orangered-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ff6a33;\n}\n}\n@keyframes fill-orangered-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ff6a33;\n}\n}\n@-webkit-keyframes fill-green-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #99e600;\n}\n}\n@keyframes fill-green-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #99e600;\n}\n}\n@-webkit-keyframes fill-blue-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #55b2de;\n}\n}\n@keyframes fill-blue-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #55b2de;\n}\n}\n@-webkit-keyframes fill-teal-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #3ce0af;\n}\n}\n@keyframes fill-teal-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #3ce0af;\n}\n}\n@-webkit-keyframes fill-pink-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ed6ca7;\n}\n}\n@keyframes fill-pink-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ed6ca7;\n}\n}\n@-webkit-keyframes fill-cyan-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ad5cd6;\n}\n}\n@keyframes fill-cyan-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ad5cd6;\n}\n}\n@-webkit-keyframes fill-white-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: white;\n}\n}\n@keyframes fill-white-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: white;\n}\n}\n@-webkit-keyframes fill-black-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: black;\n}\n}\n@keyframes fill-black-data-v-3fd38ca3 {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: black;\n}\n}\n@-webkit-keyframes pulse-data-v-3fd38ca3 {\n50% {\n    transform: scale(0.8);\n}\n100% {\n    transform: scale(1);\n}\n}\n@keyframes pulse-data-v-3fd38ca3 {\n50% {\n    transform: scale(0.8);\n}\n100% {\n    transform: scale(1);\n}\n}\n.stage[data-v-3fd38ca3] {\n  display: flex;\n  box-shadow: 1rem 0 3rem #000;\n  padding: 0 0.3rem 1rem 0;\n  border-radius: 10px;\n}\n.stage-heading[data-v-3fd38ca3] {\n  position: relative;\n  border-radius: 10px;\n  height: 290px;\n  min-width: 260px;\n  max-width: 260px;\n  text-align: center;\n}\n.stage-heading h2[data-v-3fd38ca3] {\n  font-size: 2.8rem;\n}\n.stage-heading h5[data-v-3fd38ca3] {\n  font-size: 1.2rem;\n}\n.stage-heading-info[data-v-3fd38ca3] {\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n}\n.inner[data-v-3fd38ca3] {\n  color: white;\n  font-size: 1.1rem;\n  border-radius: 10px;\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  text-align: center;\n  -webkit-clip-path: circle(20% at 0% 0%);\n          clip-path: circle(20% at 0% 0%);\n  transition: -webkit-clip-path 0.5s ease-in-out;\n  transition: clip-path 0.5s ease-in-out;\n  transition: clip-path 0.5s ease-in-out, -webkit-clip-path 0.5s ease-in-out;\n}\n.inner p[data-v-3fd38ca3] {\n  margin-bottom: 0.5rem;\n  padding: 1rem;\n}\n.inner .inner-header[data-v-3fd38ca3] {\n  display: grid;\n  grid-template-columns: 1.65fr 2.35fr;\n}\n.inner .inner-header #lightbulb[data-v-3fd38ca3] {\n  fill: white;\n  padding-top: 0.2rem;\n}\n.inner .inner-header h4[data-v-3fd38ca3] {\n  margin: 0;\n  text-align: left;\n  padding-top: 1rem;\n}\n.inner[data-v-3fd38ca3]:hover {\n  -webkit-clip-path: circle(75%);\n          clip-path: circle(75%);\n}\n#thumbs-up path[data-v-3fd38ca3] {\n  fill: none;\n  stroke: white;\n  stroke-width: 8;\n  stroke-miterlimit: 10;\n  stroke-dasharray: 3174.4838867188;\n  stroke-dashoffset: 3174.4838867188;\n}\n.inner:hover .st0[data-v-3fd38ca3] {\n  -webkit-animation-name: line-anim-data-v-3fd38ca3,fill-white-data-v-3fd38ca3;\n          animation-name: line-anim-data-v-3fd38ca3,fill-white-data-v-3fd38ca3;\n  -webkit-animation-duration: 1.5s, 1s;\n          animation-duration: 1.5s, 1s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 0.4s, 0.4s;\n          animation-delay: 0.4s, 0.4s;\n}\n.inner.bg-stage9 #lightbulb[data-v-3fd38ca3] {\n  fill: black;\n}\n.inner.bg-stage9 h4[data-v-3fd38ca3] {\n  color: black;\n}\n.inner.bg-stage9 #thumbs-up .st0[data-v-3fd38ca3] {\n  stroke: black;\n}\n.inner.bg-stage9:hover .st0[data-v-3fd38ca3] {\n  -webkit-animation-name: line-anim-data-v-3fd38ca3,fill-black-data-v-3fd38ca3;\n          animation-name: line-anim-data-v-3fd38ca3,fill-black-data-v-3fd38ca3;\n}\n.stage-courses[data-v-3fd38ca3] {\n  display: flex;\n  flex-wrap: wrap;\n  width: 100%;\n}\n.stage-courses[data-v-3fd38ca3] {\n  display: flex;\n  flex-wrap: wrap;\n  width: 100%;\n}\n.stage-courses > .stage-course[data-v-3fd38ca3] {\n  position: relative;\n  min-height: 240px;\n  min-width: 260px;\n  max-width: 260px;\n  border-radius: 10px;\n  margin-top: 1.8rem;\n  box-shadow: 1rem 0 3rem #000;\n}\n.stage-courses > .stage-course .card-header[data-v-3fd38ca3] {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n.stage-courses > .stage-course .card-header div.tick[data-v-3fd38ca3] {\n  cursor: pointer;\n}\n.stage-courses > .stage-course .card-header div.tick:hover i[data-v-3fd38ca3] {\n  -webkit-animation: pulse-data-v-3fd38ca3 500ms ease-in;\n          animation: pulse-data-v-3fd38ca3 500ms ease-in;\n  -webkit-animation-iteration-count: infinite;\n          animation-iteration-count: infinite;\n}\n.stage-courses > .stage-course .card-body > h5[data-v-3fd38ca3] {\n  font-size: 1.4rem;\n}\n.stage-courses > .stage-course .card-body[data-v-3fd38ca3] {\n  position: relative;\n  display: flex;\n  flex-direction: column;\n  align-content: space-between;\n}\n.stage-courses > .stage-course .card-body p.card-text[data-v-3fd38ca3] {\n  margin-bottom: 0.6rem;\n}\n.stage-courses > .stage-course .card-body .link a[data-v-3fd38ca3] {\n  position: absolute;\n  bottom: 15px;\n  left: 217px;\n}\n.stage-courses > .stage-course .card-body i[data-v-3fd38ca3] {\n  color: white;\n  margin-top: 0.5rem;\n  transition: color 200ms ease-in-out;\n}\n.stage-courses > .stage-course .card-body i[data-v-3fd38ca3]:hover {\n  color: #d9d9d9;\n}\n.stage-courses > .bg-stage9 > .card-body i[data-v-3fd38ca3] {\n  color: black;\n}\n.stage-courses > .bg-stage9 > .card-body i[data-v-3fd38ca3]:hover {\n  color: #404040;\n}\nh5.card-title > a[data-v-3fd38ca3] {\n  color: white;\n  text-decoration: none;\n}\nh5.card-title > a[data-v-3fd38ca3]:hover {\n  color: #cccccc;\n}\n.bg-stage9 a[data-v-3fd38ca3] {\n  color: black !important;\n}\n.course-completed[data-v-3fd38ca3] {\n  background-color: lightgreen;\n  opacity: 0.8;\n}\n.card-footer[data-v-3fd38ca3] {\n  display: flex;\n  justify-content: space-between;\n  padding: 0;\n}\n.empty-stage[data-v-3fd38ca3] {\n  width: 53%;\n  margin: auto;\n  text-align: left;\n}\n.left-arrow[data-v-3fd38ca3], .right-arrow[data-v-3fd38ca3], .delete-btn[data-v-3fd38ca3] {\n  cursor: pointer;\n  padding: 0.75rem;\n}\n.left-arrow[data-v-3fd38ca3] {\n  padding-left: 1.25rem;\n}\n.left-arrow[data-v-3fd38ca3]:hover {\n  -webkit-animation: left-point-data-v-3fd38ca3 500ms ease-in;\n          animation: left-point-data-v-3fd38ca3 500ms ease-in;\n  -webkit-animation-iteration-count: infinite;\n          animation-iteration-count: infinite;\n}\n@-webkit-keyframes left-point-data-v-3fd38ca3 {\n50% {\n    transform: translateX(-15px);\n}\n100% {\n    transform: translateX(0px);\n}\n}\n@keyframes left-point-data-v-3fd38ca3 {\n50% {\n    transform: translateX(-15px);\n}\n100% {\n    transform: translateX(0px);\n}\n}\n.right-arrow[data-v-3fd38ca3] {\n  padding-right: 1.25rem;\n}\n.right-arrow[data-v-3fd38ca3]:hover {\n  -webkit-animation: right-point-data-v-3fd38ca3 500ms ease-in;\n          animation: right-point-data-v-3fd38ca3 500ms ease-in;\n  -webkit-animation-iteration-count: infinite;\n          animation-iteration-count: infinite;\n}\n@-webkit-keyframes right-point-data-v-3fd38ca3 {\n50% {\n    transform: translateX(15px);\n}\n100% {\n    transform: translateX(0px);\n}\n}\n@keyframes right-point-data-v-3fd38ca3 {\n50% {\n    transform: translateX(15px);\n}\n100% {\n    transform: translateX(0px);\n}\n}\n.delete-btn[data-v-3fd38ca3]:hover {\n  -webkit-animation: pulse-data-v-3fd38ca3 500ms ease-in;\n          animation: pulse-data-v-3fd38ca3 500ms ease-in;\n  -webkit-animation-iteration-count: infinite;\n          animation-iteration-count: infinite;\n}\n@media (max-width: 768px) {\n.stage[data-v-3fd38ca3] {\n    display: grid;\n}\n.stage-courses[data-v-3fd38ca3] {\n    margin: 0 !important;\n    padding-left: 2rem;\n    padding-right: 2rem;\n    display: grid;\n    grid-template-columns: repeat(auto-fill, minmax(240px, 260px));\n    justify-items: center;\n    justify-content: space-around;\n}\n}\n@media (max-width: 375px) {\n.stage-heading[data-v-3fd38ca3] {\n    margin: auto;\n}\n}", ""]);
 
 // exports
 
@@ -3348,10 +3623,10 @@ exports.push([module.i, ".bg-stage1[data-v-3c0a633a] {\n  background-color: #CC0
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Welcome.vue?vue&type=style&index=0&lang=scss&":
-/*!*****************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Welcome.vue?vue&type=style&index=0&lang=scss& ***!
-  \*****************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/WelcomeAnimation.vue?vue&type=style&index=0&id=06a0efad&lang=scss&scoped=true&":
+/*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/WelcomeAnimation.vue?vue&type=style&index=0&id=06a0efad&lang=scss&scoped=true& ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3360,7 +3635,26 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "@-webkit-keyframes hue {\nfrom {\n    -webkit-filter: hue-rotate(0deg);\n            filter: hue-rotate(0deg);\n}\nto {\n    -webkit-filter: hue-rotate(-360deg);\n            filter: hue-rotate(-360deg);\n}\n}\n@keyframes hue {\nfrom {\n    -webkit-filter: hue-rotate(0deg);\n            filter: hue-rotate(0deg);\n}\nto {\n    -webkit-filter: hue-rotate(-360deg);\n            filter: hue-rotate(-360deg);\n}\n}\n@-webkit-keyframes bg-animation {\n0% {\n    background-position: left;\n}\n100% {\n    background-position: right;\n}\n}\n@keyframes bg-animation {\n0% {\n    background-position: left;\n}\n100% {\n    background-position: right;\n}\n}\n@-webkit-keyframes line-anim {\nto {\n    stroke-dashoffset: 0;\n}\n}\n@keyframes line-anim {\nto {\n    stroke-dashoffset: 0;\n}\n}\n@-webkit-keyframes fill-red {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: red;\n}\n}\n@keyframes fill-red {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: red;\n}\n}\n@-webkit-keyframes fill-orange {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ffb733;\n}\n}\n@keyframes fill-orange {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ffb733;\n}\n}\n@-webkit-keyframes fill-orangered {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ff6a33;\n}\n}\n@keyframes fill-orangered {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ff6a33;\n}\n}\n@-webkit-keyframes fill-green {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #99e600;\n}\n}\n@keyframes fill-green {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #99e600;\n}\n}\n@-webkit-keyframes fill-blue {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #55b2de;\n}\n}\n@keyframes fill-blue {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #55b2de;\n}\n}\n@-webkit-keyframes fill-teal {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #3ce0af;\n}\n}\n@keyframes fill-teal {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #3ce0af;\n}\n}\n@-webkit-keyframes fill-pink {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ed6ca7;\n}\n}\n@keyframes fill-pink {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ed6ca7;\n}\n}\n@-webkit-keyframes fill-cyan {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ad5cd6;\n}\n}\n@keyframes fill-cyan {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ad5cd6;\n}\n}\n@-webkit-keyframes fill-white {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: white;\n}\n}\n@keyframes fill-white {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: white;\n}\n}\n@-webkit-keyframes fill-black {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: black;\n}\n}\n@keyframes fill-black {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: black;\n}\n}\n@-webkit-keyframes pulse {\n50% {\n    transform: scale(0.8);\n}\n100% {\n    transform: scale(1);\n}\n}\n@keyframes pulse {\n50% {\n    transform: scale(0.8);\n}\n100% {\n    transform: scale(1);\n}\n}\n#welcome-page {\n  position: relative;\n  background: url(\"/images/1.jpg\") cover no-repeat;\n  height: 100vh;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n}\n#welcome-svg {\n  min-width: 50vw;\n}\n#buttons {\n  margin-top: 3rem;\n}\n#logo path:nth-child(1) {\n  stroke-dasharray: 334.1294250488;\n  stroke-dashoffset: 334.1294250488;\n  -webkit-animation-name: line-anim, fill-red;\n          animation-name: line-anim, fill-red;\n  -webkit-animation-duration: 0.75s, 3s;\n          animation-duration: 0.75s, 3s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 0s, 2.4s;\n          animation-delay: 0s, 2.4s;\n}\n#logo path:nth-child(2) {\n  stroke-dasharray: 398.1838378906;\n  stroke-dashoffset: 398.1838378906;\n  -webkit-animation-name: line-anim, fill-orange;\n          animation-name: line-anim, fill-orange;\n  -webkit-animation-duration: 0.75s, 3s;\n          animation-duration: 0.75s, 3s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 0.2s, 2.4s;\n          animation-delay: 0.2s, 2.4s;\n}\n#logo path:nth-child(3) {\n  stroke-dasharray: 393.3806152344;\n  stroke-dashoffset: 393.3806152344;\n  -webkit-animation-name: line-anim, fill-orangered;\n          animation-name: line-anim, fill-orangered;\n  -webkit-animation-duration: 0.75s, 3s;\n          animation-duration: 0.75s, 3s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 0.4s, 2.4s;\n          animation-delay: 0.4s, 2.4s;\n}\n#logo path:nth-child(4) {\n  stroke-dasharray: 232.6978607178;\n  stroke-dashoffset: 232.6978607178;\n  -webkit-animation-name: line-anim, fill-green;\n          animation-name: line-anim, fill-green;\n  -webkit-animation-duration: 0.75s, 3s;\n          animation-duration: 0.75s, 3s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 0.6s, 2.4s;\n          animation-delay: 0.6s, 2.4s;\n}\n#logo path:nth-child(5) {\n  stroke-dasharray: 395.8296203613;\n  stroke-dashoffset: 395.8296203613;\n  -webkit-animation-name: line-anim, fill-blue;\n          animation-name: line-anim, fill-blue;\n  -webkit-animation-duration: 0.75s, 3s;\n          animation-duration: 0.75s, 3s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 0.8s, 2.4s;\n          animation-delay: 0.8s, 2.4s;\n}\n#logo path:nth-child(6) {\n  stroke-dasharray: 437.6187133789;\n  stroke-dashoffset: 437.6187133789;\n  -webkit-animation-name: line-anim, fill-teal;\n          animation-name: line-anim, fill-teal;\n  -webkit-animation-duration: 0.75s, 3s;\n          animation-duration: 0.75s, 3s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 1s, 2.4s;\n          animation-delay: 1s, 2.4s;\n}\n#logo path:nth-child(7) {\n  stroke-dasharray: 404.7785949707;\n  stroke-dashoffset: 404.7785949707;\n  -webkit-animation-name: line-anim, fill-pink;\n          animation-name: line-anim, fill-pink;\n  -webkit-animation-duration: 0.75s, 3s;\n          animation-duration: 0.75s, 3s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 1.2s, 2.4s;\n          animation-delay: 1.2s, 2.4s;\n}\n#logo path:nth-child(8) {\n  stroke-dasharray: 363.0939941406;\n  stroke-dashoffset: 363.0939941406;\n  -webkit-animation-name: line-anim, fill-cyan;\n          animation-name: line-anim, fill-cyan;\n  -webkit-animation-duration: 0.75s, 3s;\n          animation-duration: 0.75s, 3s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 1.4s, 2.4s;\n          animation-delay: 1.4s, 2.4s;\n}\n#logo path:nth-child(9) {\n  stroke-dasharray: 398.1834106445;\n  stroke-dashoffset: 398.1834106445;\n  -webkit-animation-name: line-anim, fill-white;\n          animation-name: line-anim, fill-white;\n  -webkit-animation-duration: 0.75s, 3s;\n          animation-duration: 0.75s, 3s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 1.6s, 2.4s;\n          animation-delay: 1.6s, 2.4s;\n}\n#logo path:nth-child(10) {\n  stroke-dasharray: 542.6750488281;\n  stroke-dashoffset: 542.6750488281;\n  -webkit-animation-name: line-anim, fill-red;\n          animation-name: line-anim, fill-red;\n  -webkit-animation-duration: 0.75s, 3s;\n          animation-duration: 0.75s, 3s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 1.8s, 2.4s;\n          animation-delay: 1.8s, 2.4s;\n}\n#logo path:nth-child(11) {\n  stroke-dasharray: 437.6190185547;\n  stroke-dashoffset: 437.6190185547;\n  -webkit-animation-name: line-anim, fill-orange;\n          animation-name: line-anim, fill-orange;\n  -webkit-animation-duration: 0.75s, 3s;\n          animation-duration: 0.75s, 3s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 2s, 2.4s;\n          animation-delay: 2s, 2.4s;\n}\n#logo path:nth-child(12) {\n  stroke-dasharray: 321.1700439453;\n  stroke-dashoffset: 321.1700439453;\n  -webkit-animation-name: line-anim, fill-orangered;\n          animation-name: line-anim, fill-orangered;\n  -webkit-animation-duration: 0.75s, 3s;\n          animation-duration: 0.75s, 3s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 2.2s, 2.4s;\n          animation-delay: 2.2s, 2.4s;\n}", ""]);
+exports.push([module.i, ".st0[data-v-06a0efad] {\n  fill: none;\n  stroke: #fff;\n  stroke-width: 3;\n  stroke-miterlimit: 10;\n}\n.tick[data-v-06a0efad], .tick-circle[data-v-06a0efad] {\n  fill: white;\n  stroke: none;\n  stroke-width: 10;\n  stroke-miterlimit: 10;\n}\n#welcome-animation[data-v-06a0efad] {\n  display: flex;\n}\n#head[data-v-06a0efad] {\n  opacity: 1;\n}\n#small-circle[data-v-06a0efad], #big-circle[data-v-06a0efad], #cloud[data-v-06a0efad] {\n  opacity: 0;\n}\ncircle[data-v-06a0efad], path[data-v-06a0efad] {\n  fill: white;\n}\n\n/* #circle1, #circle2, #circle3, #arrow-head {\n\n} */\n#arrow-1 path[data-v-06a0efad], #arrow-2 path[data-v-06a0efad] {\n  opacity: 0;\n}\n#arrow[data-v-06a0efad] {\n  margin-bottom: 30px;\n}\n#study[data-v-06a0efad] {\n  padding: 2rem 4rem 0 4rem;\n}\n#light-rays[data-v-06a0efad] {\n  opacity: 0;\n}\n#study-logo[data-v-06a0efad] {\n  height: 300px;\n}\n#job[data-v-06a0efad] {\n  padding: 1.5rem 3rem;\n}\n#job-complete[data-v-06a0efad] {\n  opacity: 0;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/WelcomeLogo.vue?vue&type=style&index=0&lang=scss&":
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/WelcomeLogo.vue?vue&type=style&index=0&lang=scss& ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "@-webkit-keyframes hue {\nfrom {\n    -webkit-filter: hue-rotate(0deg);\n            filter: hue-rotate(0deg);\n}\nto {\n    -webkit-filter: hue-rotate(-360deg);\n            filter: hue-rotate(-360deg);\n}\n}\n@keyframes hue {\nfrom {\n    -webkit-filter: hue-rotate(0deg);\n            filter: hue-rotate(0deg);\n}\nto {\n    -webkit-filter: hue-rotate(-360deg);\n            filter: hue-rotate(-360deg);\n}\n}\n@-webkit-keyframes bg-animation {\n0% {\n    background-position: left;\n}\n100% {\n    background-position: right;\n}\n}\n@keyframes bg-animation {\n0% {\n    background-position: left;\n}\n100% {\n    background-position: right;\n}\n}\n@-webkit-keyframes line-anim {\nto {\n    stroke-dashoffset: 0;\n}\n}\n@keyframes line-anim {\nto {\n    stroke-dashoffset: 0;\n}\n}\n@-webkit-keyframes fill-red {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: red;\n}\n}\n@keyframes fill-red {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: red;\n}\n}\n@-webkit-keyframes fill-orange {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ffb733;\n}\n}\n@keyframes fill-orange {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ffb733;\n}\n}\n@-webkit-keyframes fill-orangered {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ff6a33;\n}\n}\n@keyframes fill-orangered {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ff6a33;\n}\n}\n@-webkit-keyframes fill-green {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #99e600;\n}\n}\n@keyframes fill-green {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #99e600;\n}\n}\n@-webkit-keyframes fill-blue {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #55b2de;\n}\n}\n@keyframes fill-blue {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #55b2de;\n}\n}\n@-webkit-keyframes fill-teal {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #3ce0af;\n}\n}\n@keyframes fill-teal {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #3ce0af;\n}\n}\n@-webkit-keyframes fill-pink {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ed6ca7;\n}\n}\n@keyframes fill-pink {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ed6ca7;\n}\n}\n@-webkit-keyframes fill-cyan {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ad5cd6;\n}\n}\n@keyframes fill-cyan {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ad5cd6;\n}\n}\n@-webkit-keyframes fill-white {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: white;\n}\n}\n@keyframes fill-white {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: white;\n}\n}\n@-webkit-keyframes fill-black {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: black;\n}\n}\n@keyframes fill-black {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: black;\n}\n}\n@-webkit-keyframes pulse {\n50% {\n    transform: scale(0.8);\n}\n100% {\n    transform: scale(1);\n}\n}\n@keyframes pulse {\n50% {\n    transform: scale(0.8);\n}\n100% {\n    transform: scale(1);\n}\n}\n#welcome-svg {\n  min-width: 50vw;\n}\n#buttons {\n  margin-top: 3rem;\n}\n#logo path:nth-child(1) {\n  stroke-dasharray: 334.1294250488;\n  stroke-dashoffset: 334.1294250488;\n  -webkit-animation-name: line-anim, fill-red;\n          animation-name: line-anim, fill-red;\n  -webkit-animation-duration: 0.75s, 3s;\n          animation-duration: 0.75s, 3s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 0s, 2.4s;\n          animation-delay: 0s, 2.4s;\n}\n#logo path:nth-child(2) {\n  stroke-dasharray: 398.1838378906;\n  stroke-dashoffset: 398.1838378906;\n  -webkit-animation-name: line-anim, fill-orange;\n          animation-name: line-anim, fill-orange;\n  -webkit-animation-duration: 0.75s, 3s;\n          animation-duration: 0.75s, 3s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 0.2s, 2.4s;\n          animation-delay: 0.2s, 2.4s;\n}\n#logo path:nth-child(3) {\n  stroke-dasharray: 393.3806152344;\n  stroke-dashoffset: 393.3806152344;\n  -webkit-animation-name: line-anim, fill-orangered;\n          animation-name: line-anim, fill-orangered;\n  -webkit-animation-duration: 0.75s, 3s;\n          animation-duration: 0.75s, 3s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 0.4s, 2.4s;\n          animation-delay: 0.4s, 2.4s;\n}\n#logo path:nth-child(4) {\n  stroke-dasharray: 232.6978607178;\n  stroke-dashoffset: 232.6978607178;\n  -webkit-animation-name: line-anim, fill-green;\n          animation-name: line-anim, fill-green;\n  -webkit-animation-duration: 0.75s, 3s;\n          animation-duration: 0.75s, 3s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 0.6s, 2.4s;\n          animation-delay: 0.6s, 2.4s;\n}\n#logo path:nth-child(5) {\n  stroke-dasharray: 395.8296203613;\n  stroke-dashoffset: 395.8296203613;\n  -webkit-animation-name: line-anim, fill-blue;\n          animation-name: line-anim, fill-blue;\n  -webkit-animation-duration: 0.75s, 3s;\n          animation-duration: 0.75s, 3s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 0.8s, 2.4s;\n          animation-delay: 0.8s, 2.4s;\n}\n#logo path:nth-child(6) {\n  stroke-dasharray: 437.6187133789;\n  stroke-dashoffset: 437.6187133789;\n  -webkit-animation-name: line-anim, fill-teal;\n          animation-name: line-anim, fill-teal;\n  -webkit-animation-duration: 0.75s, 3s;\n          animation-duration: 0.75s, 3s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 1s, 2.4s;\n          animation-delay: 1s, 2.4s;\n}\n#logo path:nth-child(7) {\n  stroke-dasharray: 404.7785949707;\n  stroke-dashoffset: 404.7785949707;\n  -webkit-animation-name: line-anim, fill-pink;\n          animation-name: line-anim, fill-pink;\n  -webkit-animation-duration: 0.75s, 3s;\n          animation-duration: 0.75s, 3s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 1.2s, 2.4s;\n          animation-delay: 1.2s, 2.4s;\n}\n#logo path:nth-child(8) {\n  stroke-dasharray: 363.0939941406;\n  stroke-dashoffset: 363.0939941406;\n  -webkit-animation-name: line-anim, fill-cyan;\n          animation-name: line-anim, fill-cyan;\n  -webkit-animation-duration: 0.75s, 3s;\n          animation-duration: 0.75s, 3s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 1.4s, 2.4s;\n          animation-delay: 1.4s, 2.4s;\n}\n#logo path:nth-child(9) {\n  stroke-dasharray: 398.1834106445;\n  stroke-dashoffset: 398.1834106445;\n  -webkit-animation-name: line-anim, fill-white;\n          animation-name: line-anim, fill-white;\n  -webkit-animation-duration: 0.75s, 3s;\n          animation-duration: 0.75s, 3s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 1.6s, 2.4s;\n          animation-delay: 1.6s, 2.4s;\n}\n#logo path:nth-child(10) {\n  stroke-dasharray: 542.6750488281;\n  stroke-dashoffset: 542.6750488281;\n  -webkit-animation-name: line-anim, fill-red;\n          animation-name: line-anim, fill-red;\n  -webkit-animation-duration: 0.75s, 3s;\n          animation-duration: 0.75s, 3s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 1.8s, 2.4s;\n          animation-delay: 1.8s, 2.4s;\n}\n#logo path:nth-child(11) {\n  stroke-dasharray: 437.6190185547;\n  stroke-dashoffset: 437.6190185547;\n  -webkit-animation-name: line-anim, fill-orange;\n          animation-name: line-anim, fill-orange;\n  -webkit-animation-duration: 0.75s, 3s;\n          animation-duration: 0.75s, 3s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 2s, 2.4s;\n          animation-delay: 2s, 2.4s;\n}\n#logo path:nth-child(12) {\n  stroke-dasharray: 321.1700439453;\n  stroke-dashoffset: 321.1700439453;\n  -webkit-animation-name: line-anim, fill-orangered;\n          animation-name: line-anim, fill-orangered;\n  -webkit-animation-duration: 0.75s, 3s;\n          animation-duration: 0.75s, 3s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 2.2s, 2.4s;\n          animation-delay: 2.2s, 2.4s;\n}", ""]);
 
 // exports
 
@@ -3399,6 +3693,25 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 // module
 exports.push([module.i, "\n.arrow-container {\r\n  width: 100%;\r\n  text-align: center;\n}\r\n\r\n/* .arrow:hover {\r\n  animation: down-point 500ms ease-in;\r\n  animation-iteration-count: 2;\r\n\r\n}\r\n\r\n@keyframes down-point {\r\n  50% {\r\n    transform: translateY(15px)\r\n  }\r\n  100% {\r\n    transform: translateY(0px)\r\n  }\r\n} */\n.st0{\r\n  fill:none;\n}\n.st1{\r\n  fill:#038A51;stroke:#058B38;stroke-width:0.2;stroke-miterlimit:10;\n}\r\n\r\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Welcome.vue?vue&type=style&index=0&id=51777872&scoped=true&lang=css&":
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Welcome.vue?vue&type=style&index=0&id=51777872&scoped=true&lang=css& ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n#welcome-page[data-v-51777872] {\r\n  position: relative;\r\n  background: url(\"/images/1.jpg\") cover no-repeat;\r\n  height: 100vh;\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: center;\r\n  align-items: center;\n}\r\n\r\n\r\n", ""]);
 
 // exports
 
@@ -4884,15 +5197,45 @@ if(false) {}
 
 /***/ }),
 
-/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Welcome.vue?vue&type=style&index=0&lang=scss&":
-/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/style-loader!./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Welcome.vue?vue&type=style&index=0&lang=scss& ***!
-  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/WelcomeAnimation.vue?vue&type=style&index=0&id=06a0efad&lang=scss&scoped=true&":
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/WelcomeAnimation.vue?vue&type=style&index=0&id=06a0efad&lang=scss&scoped=true& ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../../node_modules/css-loader!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--7-2!../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../node_modules/vue-loader/lib??vue-loader-options!./Welcome.vue?vue&type=style&index=0&lang=scss& */ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Welcome.vue?vue&type=style&index=0&lang=scss&");
+var content = __webpack_require__(/*! !../../../node_modules/css-loader!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--7-2!../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../node_modules/vue-loader/lib??vue-loader-options!./WelcomeAnimation.vue?vue&type=style&index=0&id=06a0efad&lang=scss&scoped=true& */ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/WelcomeAnimation.vue?vue&type=style&index=0&id=06a0efad&lang=scss&scoped=true&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/WelcomeLogo.vue?vue&type=style&index=0&lang=scss&":
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/WelcomeLogo.vue?vue&type=style&index=0&lang=scss& ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/css-loader!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--7-2!../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../node_modules/vue-loader/lib??vue-loader-options!./WelcomeLogo.vue?vue&type=style&index=0&lang=scss& */ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/WelcomeLogo.vue?vue&type=style&index=0&lang=scss&");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -4923,6 +5266,36 @@ if(false) {}
 
 
 var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--6-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--6-2!../../../node_modules/vue-loader/lib??vue-loader-options!./Arrow.vue?vue&type=style&index=0&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Arrow.vue?vue&type=style&index=0&lang=css&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Welcome.vue?vue&type=style&index=0&id=51777872&scoped=true&lang=css&":
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Welcome.vue?vue&type=style&index=0&id=51777872&scoped=true&lang=css& ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--6-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--6-2!../../../node_modules/vue-loader/lib??vue-loader-options!./Welcome.vue?vue&type=style&index=0&id=51777872&scoped=true&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Welcome.vue?vue&type=style&index=0&id=51777872&scoped=true&lang=css&");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -5786,7 +6159,7 @@ var render = function() {
     _vm.courses.length > 0
       ? _c(
           "div",
-          { staticClass: "course-list" },
+          { staticClass: "course-list animated fadeIn" },
           _vm._l(_vm.courses, function(course) {
             return _c(
               "div",
@@ -8109,10 +8482,10 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Welcome.vue?vue&type=template&id=51777872&":
-/*!**********************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Welcome.vue?vue&type=template&id=51777872& ***!
-  \**********************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Welcome.vue?vue&type=template&id=51777872&scoped=true&":
+/*!**********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Welcome.vue?vue&type=template&id=51777872&scoped=true& ***!
+  \**********************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -8127,184 +8500,570 @@ var render = function() {
   return _c(
     "section",
     { staticClass: "animated fadeIn", attrs: { id: "welcome-page" } },
-    [
-      _c("div", { attrs: { id: "welcome-svg" } }, [
-        _c(
-          "svg",
-          {
-            attrs: {
-              id: "logo",
-              viewBox: "0 0 914 139",
-              width: "100%",
-              height: "100%",
-              fill: "none",
-              xmlns: "http://www.w3.org/2000/svg"
-            }
-          },
-          [
+    [_c("WelcomeAnimation"), _vm._v(" "), _c("WelcomeLogo")],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/WelcomeAnimation.vue?vue&type=template&id=06a0efad&scoped=true&":
+/*!*******************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/WelcomeAnimation.vue?vue&type=template&id=06a0efad&scoped=true& ***!
+  \*******************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { attrs: { id: "welcome-animation" } }, [
+    _c(
+      "svg",
+      {
+        staticStyle: { "enable-background": "new 0 0 100 125" },
+        attrs: {
+          id: "idea",
+          version: "1.1",
+          xmlns: "http://www.w3.org/2000/svg",
+          "xmlns:xlink": "http://www.w3.org/1999/xlink",
+          x: "0px",
+          y: "0px",
+          viewBox: "0 0 100 125",
+          "xml:space": "preserve",
+          height: "300px"
+        }
+      },
+      [
+        _c("path", {
+          staticClass: "st0",
+          attrs: {
+            id: "head",
+            d:
+              "M57,73.1c-0.1-0.3-0.2-0.7-0.3-1C55.5,58,43.8,47.3,29.7,47.3c-15,0-27.1,12.2-27.1,27.1c0,8.7,4,17.3,10.8,23.1c0.1,0.1,0.5,0.5,0.5,0.9v14.4c0,2.2,1.6,4,3.9,4.3l21.3,1.8c0.1,0,0.2,0,0.3,0c1,0,2.1-0.3,2.9-1.2c0.9-0.8,1.4-2,1.4-3.1v-9.3h6.7c3.5,0,6.2-2.8,6.2-6.2v-8.9h2.4c1.7,0,3.5-0.9,4.3-2.5c0.8-1.6,0.8-3.5-0.2-5L57,73.1z"
+          }
+        }),
+        _vm._v(" "),
+        _c("path", {
+          staticClass: "st0",
+          attrs: {
+            id: "cloud",
+            d:
+              "M89.7,34.1c-1.8,0-3.5-0.6-4.8-1.7c-0.8-0.6-1.9-0.7-2.7-0.1c-2.1,1.5-4.6,2.3-7.2,2.3c-3.7,0-7.3-1.7-9.7-4.6\n      c-0.4-0.5-1.1-0.8-1.7-0.8c-0.3,0-0.6,0.1-0.9,0.2c-1,0.4-2,0.6-3.1,0.6c-4.2,0-7.6-3.4-7.6-7.6s3.4-7.6,7.6-7.6c0.1,0,0.2,0,0.2,0\n      c1,0,1.9-0.7,2.1-1.7C63,8.9,66.8,6,71.1,6c2.8,0,5.5,1.2,7.3,3.4c0.7,0.8,1.9,1,2.8,0.5c1.1-0.6,2.4-1,3.7-1\n      c4.2,0,7.6,3.4,7.6,7.6c0,0.3,0,0.6-0.1,1c-0.1,0.9,0.3,1.8,1.1,2.2c2.4,1.4,3.8,3.9,3.8,6.6C97.4,30.7,93.9,34.1,89.7,34.1z"
+          }
+        }),
+        _vm._v(" "),
+        _c("circle", {
+          attrs: { id: "small-circle", cx: "58", cy: "45.4", r: "2.8" }
+        }),
+        _vm._v(" "),
+        _c("circle", {
+          attrs: { id: "big-circle", cx: "66.1", cy: "41.8", r: "3.6" }
+        })
+      ]
+    ),
+    _vm._v(" "),
+    _c(
+      "svg",
+      {
+        staticStyle: { "enable-background": "new 0 0 300 300" },
+        attrs: {
+          version: "1.1",
+          id: "arrow-1",
+          xmlns: "http://www.w3.org/2000/svg",
+          "xmlns:xlink": "http://www.w3.org/1999/xlink",
+          x: "0px",
+          y: "0px",
+          viewBox: "0 0 300 300",
+          "xml:space": "preserve",
+          width: "100px"
+        }
+      },
+      [
+        _c("path", {
+          attrs: {
+            id: "circle-1",
+            d:
+              "M29.1,116c-14.9,0-26.9,12-26.9,26.9c0,14.8,12,26.9,26.9,26.9c14.8,0,26.9-12,26.9-26.9C56,128.1,43.9,116,29.1,116z"
+          }
+        }),
+        _vm._v(" "),
+        _c("path", {
+          attrs: {
+            id: "circle-2",
+            d:
+              "M111,116c-14.9,0-26.9,12-26.9,26.9c0,14.8,12,26.9,26.9,26.9c14.8,0,26.9-12,26.9-26.9C137.8,128.1,125.8,116,111,116z"
+          }
+        }),
+        _vm._v(" "),
+        _c("path", {
+          attrs: {
+            id: "circle-3",
+            d:
+              "M192.8,116c-14.9,0-26.9,12-26.9,26.9c0,14.8,12,26.9,26.9,26.9c14.8,0,26.9-12,26.9-26.9C219.7,128.1,207.7,116,192.8,116z"
+          }
+        }),
+        _vm._v(" "),
+        _c("path", {
+          attrs: {
+            id: "arrow-head-1",
+            d:
+              "M200.7,79.8c-12.7-12.7,7-32.3,19.6-19.6c24.2,24.2,48.5,48.5,72.7,72.7c5.3,5.3,5.3,14.3,0,19.6c-24.3,24.2-48.5,48.5-72.8,72.7c-12.6,12.7-32.3-6.9-19.6-19.6c21-21,42-41.9,62.9-62.9C242.6,121.8,221.6,100.8,200.7,79.8z"
+          }
+        })
+      ]
+    ),
+    _vm._v(" "),
+    _c("div", { attrs: { id: "study-svg" } }, [
+      _c(
+        "svg",
+        {
+          staticStyle: { "enable-background": "new 0 0 60 75" },
+          attrs: {
+            version: "1.1",
+            id: "study",
+            xmlns: "http://www.w3.org/2000/svg",
+            "xmlns:xlink": "http://www.w3.org/1999/xlink",
+            x: "0px",
+            y: "0px",
+            viewBox: "0 0 60 75",
+            "xml:space": "preserve",
+            height: "300"
+          }
+        },
+        [
+          _c("g", { attrs: { id: "study-main" } }, [
             _c("path", {
               attrs: {
                 d:
-                  "M53.7734 2.625H67.3438V75.1172C67.3438 84.9141 64.3906 92.5781 58.4844 98.1094C52.625 103.641 44.7969 106.406 35 106.406C24.8281 106.406 16.9062 103.805 11.2344 98.6016C5.5625 93.3984 2.72656 86.1094 2.72656 76.7344H16.2266C16.2266 82.5938 17.8203 87.1641 21.0078 90.4453C24.2422 93.7266 28.9062 95.3672 35 95.3672C40.5781 95.3672 45.0781 93.6094 48.5 90.0938C51.9688 86.5781 53.7266 81.6562 53.7734 75.3281V2.625Z",
-                stroke: "#CC0000",
-                "stroke-width": "5"
+                  "M13.9,47.9H2.8V34c0-0.6-0.5-1.1-1.1-1.1s-1,0.5-1,1.1v27.7c0,0.6,0.5,1.1,1.1,1.1s1.1-0.5,1.1-1.1v-7.1H13v7.1c0,0.6,0.5,1.1,1.1,1.1s1.1-0.5,1.1-1.1V48.9C15,48.3,14.5,47.9,13.9,47.9z M2.8,52.5V50h10.1v2.5H2.8z"
               }
             }),
             _vm._v(" "),
             _c("path", {
               attrs: {
                 d:
-                  "M84.8516 66.2578C84.8516 58.8047 86.3047 52.1016 89.2109 46.1484C92.1641 40.1953 96.2422 35.6016 101.445 32.3672C106.695 29.1328 112.672 27.5156 119.375 27.5156C129.734 27.5156 138.102 31.1016 144.477 38.2734C150.898 45.4453 154.109 54.9844 154.109 66.8906V67.8047C154.109 75.2109 152.68 81.8672 149.82 87.7734C147.008 93.6328 142.953 98.2031 137.656 101.484C132.406 104.766 126.359 106.406 119.516 106.406C109.203 106.406 100.836 102.82 94.4141 95.6484C88.0391 88.4766 84.8516 78.9844 84.8516 67.1719V66.2578ZM97.9297 67.8047C97.9297 76.2422 99.875 83.0156 103.766 88.125C107.703 93.2344 112.953 95.7891 119.516 95.7891C126.125 95.7891 131.375 93.2109 135.266 88.0547C139.156 82.8516 141.102 75.5859 141.102 66.2578C141.102 57.9141 139.109 51.1641 135.125 46.0078C131.188 40.8047 125.938 38.2031 119.375 38.2031C112.953 38.2031 107.773 40.7578 103.836 45.8672C99.8984 50.9766 97.9297 58.2891 97.9297 67.8047Z",
-                stroke: "rgb(255,165,0)",
-                "stroke-width": "5"
+                  "M16.5,33.9c0.2,0.1,0.3,0.1,0.5,0.1h5.9c1.7,0,3-1.3,3-3c0-1.7-1.3-3-3-3h-4.7l-2.9-2.5c-1.1-0.9-2.5-1.4-3.9-1.4h-1c-3.3,0-6,2.7-6,6v12.4c0,1.9,1.5,3.4,3.4,3.4h8.7v12.2c0,1.6,1.3,2.8,2.8,2.8s2.8-1.3,2.8-2.8V41.4c0-1.5-1.3-2.8-2.8-2.8h-5v-5.8L16.5,33.9z M13.3,40.7h6.1c0.4,0,0.7,0.3,0.7,0.7v16.8c0,0.4-0.3,0.7-0.7,0.7c-0.4,0-0.7-0.3-0.7-0.7V44.9c0-0.6-0.5-1.1-1.1-1.1H7.8c-0.7,0-1.2-0.6-1.2-1.2V30.2c0-2.1,1.7-3.9,3.9-3.9h1c0.9,0,1.8,0.3,2.5,0.9l3.2,2.7c0.2,0.2,0.4,0.3,0.7,0.3h5.1c0.5,0,0.9,0.4,0.9,0.9c0,0.5-0.4,0.9-0.9,0.9h-5.7l-3.5-1.9c-0.3-0.2-0.7-0.2-1.1,0c-0.3,0.2-0.5,0.5-0.5,0.9v8.7C12.2,40.3,12.7,40.7,13.3,40.7z"
               }
             }),
             _vm._v(" "),
             _c("path", {
               attrs: {
                 d:
-                  "M217.391 97.4766C212.328 103.43 204.898 106.406 195.102 106.406C186.992 106.406 180.805 104.062 176.539 99.375C172.32 94.6406 170.188 87.6562 170.141 78.4219V28.9219H183.148V78.0703C183.148 89.6016 187.836 95.3672 197.211 95.3672C207.148 95.3672 213.758 91.6641 217.039 84.2578V28.9219H230.047V105H217.672L217.391 97.4766Z",
-                stroke: "rgb(255,69,0)",
-                "stroke-width": "5"
+                  "M11,22.9c3.5,0,6.3-2.8,6.3-6.3s-2.8-6.3-6.3-6.3c-3.5,0-6.3,2.8-6.3,6.3S7.5,22.9,11,22.9z M11,12.4c2.3,0,4.2,1.9,4.2,4.2s-1.9,4.2-4.2,4.2s-4.2-1.9-4.2-4.2S8.6,12.4,11,12.4z"
               }
             }),
             _vm._v(" "),
             _c("path", {
               attrs: {
                 d:
-                  "M286.648 40.5938C284.68 40.2656 282.547 40.1016 280.25 40.1016C271.719 40.1016 265.93 43.7344 262.883 51V105H249.875V28.9219H262.531L262.742 37.7109C267.008 30.9141 273.055 27.5156 280.883 27.5156C283.414 27.5156 285.336 27.8438 286.648 28.5V40.5938Z",
-                stroke: "#77B300",
-                "stroke-width": "5"
+                  "M52.9,36.4h-2.7H28.8h-4.6c-0.6,0-1.1,0.5-1.1,1.1s0.5,1.1,1.1,1.1h3.5v23.2c0,0.6,0.5,1.1,1.1,1.1h21.5c0.6,0,1.1-0.5,1.1-1.1V38.5h1.7c0.6,0,1.1-0.5,1.1-1.1S53.5,36.4,52.9,36.4z M49.1,60.7H29.8V38.5h19.3V60.7z"
               }
             }),
             _vm._v(" "),
             _c("path", {
               attrs: {
                 d:
-                  "M310.977 28.9219L311.398 38.4844C317.211 31.1719 324.805 27.5156 334.18 27.5156C350.258 27.5156 358.367 36.5859 358.508 54.7266V105H345.5V54.6562C345.453 49.1719 344.188 45.1172 341.703 42.4922C339.266 39.8672 335.445 38.5547 330.242 38.5547C326.023 38.5547 322.32 39.6797 319.133 41.9297C315.945 44.1797 313.461 47.1328 311.68 50.7891V105H298.672V28.9219H310.977Z",
-                stroke: "#2A9FD6",
-                "stroke-width": "5"
+                  "M40.6,35.2c0.4,0,0.8-0.2,0.9-0.6l6.6-12.5c0.3-0.5,0.1-1.2-0.4-1.4c-0.5-0.3-1.2-0.1-1.4,0.4L39.9,33H27.2c-0.6,0-1.1,0.5-1.1,1.1c0,0.6,0.5,1.1,1.1,1.1H40.6z"
               }
             }),
             _vm._v(" "),
             _c("path", {
               attrs: {
                 d:
-                  "M409.695 106.406C399.383 106.406 390.992 103.031 384.523 96.2812C378.055 89.4844 374.82 80.4141 374.82 69.0703V66.6797C374.82 59.1328 376.25 52.4062 379.109 46.5C382.016 40.5469 386.047 35.9062 391.203 32.5781C396.406 29.2031 402.031 27.5156 408.078 27.5156C417.969 27.5156 425.656 30.7734 431.141 37.2891C436.625 43.8047 439.367 53.1328 439.367 65.2734V70.6875H387.828C388.016 78.1875 390.195 84.2578 394.367 88.8984C398.586 93.4922 403.93 95.7891 410.398 95.7891C414.992 95.7891 418.883 94.8516 422.07 92.9766C425.258 91.1016 428.047 88.6172 430.438 85.5234L438.383 91.7109C432.008 101.508 422.445 106.406 409.695 106.406ZM408.078 38.2031C402.828 38.2031 398.422 40.125 394.859 43.9688C391.297 47.7656 389.094 53.1094 388.25 60H426.359V59.0156C425.984 52.4062 424.203 47.2969 421.016 43.6875C417.828 40.0312 413.516 38.2031 408.078 38.2031Z",
-                stroke: "#20c997",
-                "stroke-width": "5"
-              }
-            }),
-            _vm._v(" "),
-            _c("path", {
-              attrs: {
-                d:
-                  "M478.391 85.9453L496.109 28.9219H510.031L479.445 116.742C474.711 129.398 467.188 135.727 456.875 135.727L454.414 135.516L449.562 134.602V124.055L453.078 124.336C457.484 124.336 460.906 123.445 463.344 121.664C465.828 119.883 467.867 116.625 469.461 111.891L472.344 104.156L445.203 28.9219H459.406L478.391 85.9453Z",
-                stroke: "#e83e8c",
-                "stroke-width": "5"
-              }
-            }),
-            _vm._v(" "),
-            _c("path", {
-              attrs: {
-                d:
-                  "M594.477 13.7344H561.57V105H548.141V13.7344H515.305V2.625H594.477V13.7344Z",
-                stroke: "#9933CC",
-                "stroke-width": "5"
-              }
-            }),
-            _vm._v(" "),
-            _c("path", {
-              attrs: {
-                d:
-                  "M597.148 66.2578C597.148 58.8047 598.602 52.1016 601.508 46.1484C604.461 40.1953 608.539 35.6016 613.742 32.3672C618.992 29.1328 624.969 27.5156 631.672 27.5156C642.031 27.5156 650.398 31.1016 656.773 38.2734C663.195 45.4453 666.406 54.9844 666.406 66.8906V67.8047C666.406 75.2109 664.977 81.8672 662.117 87.7734C659.305 93.6328 655.25 98.2031 649.953 101.484C644.703 104.766 638.656 106.406 631.812 106.406C621.5 106.406 613.133 102.82 606.711 95.6484C600.336 88.4766 597.148 78.9844 597.148 67.1719V66.2578ZM610.227 67.8047C610.227 76.2422 612.172 83.0156 616.062 88.125C620 93.2344 625.25 95.7891 631.812 95.7891C638.422 95.7891 643.672 93.2109 647.562 88.0547C651.453 82.8516 653.398 75.5859 653.398 66.2578C653.398 57.9141 651.406 51.1641 647.422 46.0078C643.484 40.8047 638.234 38.2031 631.672 38.2031C625.25 38.2031 620.07 40.7578 616.133 45.8672C612.195 50.9766 610.227 58.2891 610.227 67.8047Z",
-                stroke: "#DDD",
-                "stroke-width": "5"
-              }
-            }),
-            _vm._v(" "),
-            _c("path", {
-              attrs: {
-                d:
-                  "M684.758 105V2.625H713.656C722.562 2.625 730.438 4.59375 737.281 8.53125C744.125 12.4688 749.398 18.0703 753.102 25.3359C756.852 32.6016 758.75 40.9453 758.797 50.3672V56.9062C758.797 66.5625 756.922 75.0234 753.172 82.2891C749.469 89.5547 744.148 95.1328 737.211 99.0234C730.32 102.914 722.281 104.906 713.094 105H684.758ZM698.258 13.7344V93.9609H712.461C722.867 93.9609 730.953 90.7266 736.719 84.2578C742.531 77.7891 745.438 68.5781 745.438 56.625V50.6484C745.438 39.0234 742.695 30 737.211 23.5781C731.773 17.1094 724.039 13.8281 714.008 13.7344H698.258Z",
-                stroke: "#CC0000",
-                "stroke-width": "5"
-              }
-            }),
-            _vm._v(" "),
-            _c("path", {
-              attrs: {
-                d:
-                  "M808.789 106.406C798.477 106.406 790.086 103.031 783.617 96.2812C777.148 89.4844 773.914 80.4141 773.914 69.0703V66.6797C773.914 59.1328 775.344 52.4062 778.203 46.5C781.109 40.5469 785.141 35.9062 790.297 32.5781C795.5 29.2031 801.125 27.5156 807.172 27.5156C817.062 27.5156 824.75 30.7734 830.234 37.2891C835.719 43.8047 838.461 53.1328 838.461 65.2734V70.6875H786.922C787.109 78.1875 789.289 84.2578 793.461 88.8984C797.68 93.4922 803.023 95.7891 809.492 95.7891C814.086 95.7891 817.977 94.8516 821.164 92.9766C824.352 91.1016 827.141 88.6172 829.531 85.5234L837.477 91.7109C831.102 101.508 821.539 106.406 808.789 106.406ZM807.172 38.2031C801.922 38.2031 797.516 40.125 793.953 43.9688C790.391 47.7656 788.188 53.1094 787.344 60H825.453V59.0156C825.078 52.4062 823.297 47.2969 820.109 43.6875C816.922 40.0312 812.609 38.2031 807.172 38.2031Z",
-                stroke: "rgb(255,165,0)",
-                "stroke-width": "5"
-              }
-            }),
-            _vm._v(" "),
-            _c("path", {
-              attrs: {
-                d:
-                  "M877.695 87.3516L896.539 28.9219H909.828L882.547 105H872.633L845.07 28.9219H858.359L877.695 87.3516Z",
-                stroke: "rgb(255,69,0)",
-                "stroke-width": "5"
+                  "M59.3,19.9c0-1.4-1.1-2.7-2.5-2.7c-0.1,0-0.1,0-0.1,0l-5.9-8.2c-0.2-0.3-0.6-0.5-0.9-0.5c-0.4-0.1-0.7,0.1-1,0.4l-2.4,2.4c-1.6-1.1-3.9-0.8-5.2,0.8l-0.4,0.5c-0.4,0.4-0.4,1,0,1.4l4.6,5c0.4,0.4,0.9,0.4,1.3,0l0.6-0.6c1.2-1.3,1.5-3.2,0.9-4.9l1.4-1.4l5,6.9c-0.1,0.3-0.2,0.6-0.2,1c0,0.5,0.2,1.1,0.5,1.5l-5,11.1h-1.5c-0.7,0-1.3,0.6-1.3,1.4s0.6,1.4,1.3,1.4H54c0.7,0,1.3-0.6,1.3-1.4s-0.6-1.4-1.3-1.4h-1.3l4.5-10C58.4,22.3,59.3,21.2,59.3,19.9z"
               }
             })
-          ]
-        )
-      ]),
-      _vm._v(" "),
-      _c(
-        "div",
-        { attrs: { id: "buttons" } },
-        [
-          _vm.isLoggedIn === false
-            ? _c(
-                "router-link",
-                {
-                  staticClass: "btn btn-info btn-lg",
-                  attrs: { to: "/login", role: "button" }
-                },
-                [_vm._v("Login")]
-              )
-            : _vm._e(),
+          ]),
           _vm._v(" "),
-          _vm.isLoggedIn === false
-            ? _c(
-                "router-link",
-                {
-                  staticClass: "btn btn-primary btn-lg",
-                  attrs: { to: "/register", role: "button" }
-                },
-                [_vm._v("Register")]
-              )
-            : _vm._e(),
-          _vm._v(" "),
-          _vm.isLoggedIn === false
-            ? _c(
-                "router-link",
-                {
-                  staticClass: "btn btn-success btn-lg",
-                  attrs: { to: "/thejourney", role: "button" }
-                },
-                [_vm._v("Find Out More")]
-              )
-            : _vm._e(),
-          _vm._v(" "),
-          _vm.isLoggedIn
-            ? _c(
-                "router-link",
-                {
-                  staticClass: "btn btn-success btn-lg",
-                  attrs: { to: "/roadmap", role: "button" }
-                },
-                [_vm._v("Get Started")]
-              )
-            : _vm._e()
-        ],
-        1
+          _c("g", { attrs: { id: "light-rays" } }, [
+            _c("path", {
+              attrs: {
+                d:
+                  "M39.8,17.9c-0.4,0.4-0.4,0.9,0,1.2s0.9,0.4,1.2,0l1.3-1.3c0.4-0.4,0.4-0.9,0-1.2c-0.4-0.4-0.9-0.4-1.2,0L39.8,17.9z"
+              }
+            }),
+            _vm._v(" "),
+            _c("path", {
+              attrs: {
+                d:
+                  "M44,21.2l0.5-1.8c0.1-0.4-0.1-0.9-0.6-1c-0.4-0.1-0.9,0.1-1,0.6l-0.5,1.8c-0.1,0.3,0,0.6,0.2,0.8c0.1,0.1,0.2,0.1,0.4,0.2C43.4,21.9,43.9,21.7,44,21.2z"
+              }
+            }),
+            _vm._v(" "),
+            _c("path", {
+              attrs: {
+                d:
+                  "M38.4,16.5l1.8-0.5c0.4-0.1,0.7-0.6,0.6-1c-0.1-0.4-0.6-0.7-1-0.6L38,14.9c-0.4,0.1-0.7,0.6-0.6,1c0.1,0.1,0.1,0.3,0.2,0.4C37.8,16.5,38.1,16.6,38.4,16.5z"
+              }
+            })
+          ])
+        ]
       )
-    ]
-  )
+    ]),
+    _vm._v(" "),
+    _c(
+      "svg",
+      {
+        staticStyle: { "enable-background": "new 0 0 300 300" },
+        attrs: {
+          version: "1.1",
+          id: "arrow-2",
+          xmlns: "http://www.w3.org/2000/svg",
+          "xmlns:xlink": "http://www.w3.org/1999/xlink",
+          x: "0px",
+          y: "0px",
+          viewBox: "0 0 300 300",
+          "xml:space": "preserve",
+          width: "100px"
+        }
+      },
+      [
+        _c("path", {
+          attrs: {
+            id: "circle-4",
+            d:
+              "M29.1,116c-14.9,0-26.9,12-26.9,26.9c0,14.8,12,26.9,26.9,26.9c14.8,0,26.9-12,26.9-26.9C56,128.1,43.9,116,29.1,116z"
+          }
+        }),
+        _vm._v(" "),
+        _c("path", {
+          attrs: {
+            id: "circle-5",
+            d:
+              "M111,116c-14.9,0-26.9,12-26.9,26.9c0,14.8,12,26.9,26.9,26.9c14.8,0,26.9-12,26.9-26.9C137.8,128.1,125.8,116,111,116z"
+          }
+        }),
+        _vm._v(" "),
+        _c("path", {
+          attrs: {
+            id: "circle-6",
+            d:
+              "M192.8,116c-14.9,0-26.9,12-26.9,26.9c0,14.8,12,26.9,26.9,26.9c14.8,0,26.9-12,26.9-26.9C219.7,128.1,207.7,116,192.8,116z"
+          }
+        }),
+        _vm._v(" "),
+        _c("path", {
+          attrs: {
+            id: "arrow-head-2",
+            d:
+              "M200.7,79.8c-12.7-12.7,7-32.3,19.6-19.6c24.2,24.2,48.5,48.5,72.7,72.7c5.3,5.3,5.3,14.3,0,19.6\n    c-24.3,24.2-48.5,48.5-72.8,72.7c-12.6,12.7-32.3-6.9-19.6-19.6c21-21,42-41.9,62.9-62.9C242.6,121.8,221.6,100.8,200.7,79.8z"
+          }
+        })
+      ]
+    ),
+    _vm._v(" "),
+    _c(
+      "svg",
+      {
+        staticStyle: { "enable-background": "new 0 0 512 640" },
+        attrs: {
+          version: "1.1",
+          id: "job",
+          xmlns: "http://www.w3.org/2000/svg",
+          "xmlns:xlink": "http://www.w3.org/1999/xlink",
+          x: "0px",
+          y: "0px",
+          viewBox: "0 0 512 640",
+          "xml:space": "preserve",
+          height: "300"
+        }
+      },
+      [
+        _c("g", { attrs: { id: "handshake" } }, [
+          _c("path", {
+            attrs: {
+              d:
+                "M180.3,561.7c-7.7,0-15.3-3-21.2-8.5c-0.1-0.1-0.3-0.2-0.4-0.4c-4.1-4.5-6.6-9.8-7.7-15.2l-1.9,1.9\n\t\t\t\tc-5.6,5.6-13.1,8.6-21.1,8.6s-15.5-3.1-21.1-8.6c-4.5-4.5-7.2-9.9-8.3-15.6l-5.3,5.1c-5.6,5.6-13,8.6-21,8.6\n\t\t\t\tc-8,0-15.5-3.1-21.1-8.7c-11.6-11.6-11.6-30.5,0-42.2l52-51.2c2.5-2.5,6.5-2.5,9,0l59.5,59.5l24,24.7c3.5,3.1,8.2,4.8,12.7,4.8\n\t\t\t\tc1.9,0,3.8-0.3,5.5-0.9c2.8-1,6,0.1,7.6,2.6c1.6,2.6,1.2,5.9-1,8l-19.5,18.8C195.5,558.7,188.2,561.7,180.3,561.7z M168,544\n\t\t\t\tc3.5,3.2,7.9,4.9,12.3,4.9c4.4,0,8.6-1.7,11.7-4.9c0,0,0.1-0.1,0.1-0.1l7.9-7.6c-4.8-1.3-9.3-3.7-13-7.1\n\t\t\t\tc-0.1-0.1-0.2-0.2-0.3-0.3l-24.1-24.8l-54.9-54.9l-47.4,46.7c-6.5,6.5-6.5,17.5,0,24c3.2,3.2,7.4,4.9,12,4.9s8.9-1.7,12-4.9\n\t\t\t\tc0,0,0.1-0.1,0.1-0.1l22.6-21.8c2.5-2.4,6.6-2.4,9,0.1c2.5,2.5,2.4,6.5,0,9c-6.5,6.5-6.5,16.8,0,23.3c3.2,3.2,7.4,4.9,12,4.9\n\t\t\t\tc4.6,0,8.9-1.7,12-4.9l18.8-18.8l0,0c2.5-2.5,6.6-2.5,9.1,0c2.5,2.5,2.5,6.6,0,9.1C161.1,527.6,162.6,537.9,168,544z"
+            }
+          }),
+          _vm._v(" "),
+          _c("path", {
+            attrs: {
+              d:
+                "M238,570.8c-8,0-15.5-3.1-21.1-8.7c-9.5-9.5-11.5-24.8-4.8-36.4c0.8-1.3,2-2.4,3.5-2.8c0.9-0.3,3.1-1.8,4.3-3\n\t\t\t\tc6.5-6.5,6.7-17,0.4-24.4c-2.2-2.6-2-6.5,0.6-8.8c2.5-2.3,6.4-2.2,8.9,0.2l24.1,24.1c3.2,3.2,7.3,4.9,11.7,4.9\n\t\t\t\tc4.4,0,8.8-1.7,12.3-4.9c5.4-6.1,6.9-16.4,0-23.3v0c-2.5-2.5-2.5-6.6,0-9.1c2.5-2.5,6.6-2.5,9.1,0c0,0,0,0,0,0l18.8,18.8\n\t\t\t\tc0.9,0.9,2.3,2.3,2.9,2.6c1.8,0.9,3.1,2.7,3.4,4.7c0.3,2-0.3,4.1-1.7,5.5l-51.2,51.9C253.5,567.7,246,570.8,238,570.8z\n\t\t\t\t M222.4,533.9c-2.8,6.4-1.4,14.1,3.6,19.2c3.2,3.2,7.4,4.9,12,4.9s8.9-1.7,12-4.9l25.9-26.3c-3.3,1.2-6.8,1.8-10.4,1.8\n\t\t\t\tc-7.8,0-15.2-3.1-20.8-8.6l-7.4-7.4c-1,6-3.8,11.8-8.4,16.4C227.8,530.2,225.2,532.4,222.4,533.9z M294.8,504.5\n\t\t\t\tc-0.3,1.4-0.6,2.8-1.1,4.2l2.6-2.7L294.8,504.5z"
+            }
+          }),
+          _vm._v(" "),
+          _c("path", {
+            attrs: {
+              d:
+                "M207.9,537.7c-8,0-15.5-3.1-21.1-8.7l-24.2-24.9l-82-82c-0.8-0.8-1.3-1.7-1.6-2.8l-9-31.6c-0.6-2.2,0-4.6,1.6-6.3\n\t\t\t\tl74.5-74.5c2.5-2.5,6.6-2.5,9.1,0c0.9,0.9,2.4,1.8,3.5,2.2c0.4,0.1,0.7,0.3,1.1,0.5c5.5,3,12.1,4.5,20.3,4.5\n\t\t\t\tc14.5,0,31.2-4.6,47.4-9.1c3.5-1,6.9-1.9,10.3-2.8c2.2-0.6,4.5,0.1,6.2,1.7l131.6,131.7l18.8,18c0,0,0.1,0.1,0.1,0.1\n\t\t\t\tc5.6,5.6,8.7,13.1,8.7,21.1c0,8-3.1,15.5-8.7,21.1c-5.6,5.6-13.1,8.7-21.1,8.7c-8,0-15.5-3.1-21-8.6l-5.4-5.2\n\t\t\t\tc-1,5.9-3.9,11.3-8.2,15.7c-5.6,5.6-13.1,8.6-21.1,8.6c-8,0-15.5-3.1-21.1-8.6l-1.9-1.9c-1,5.5-3.6,10.8-7.7,15.2\n\t\t\t\tc-0.1,0.1-0.2,0.3-0.4,0.4c-5.9,5.5-13.4,8.5-21.2,8.5c-7.8,0-15.2-3.1-20.8-8.6l-7.4-7.4c-1,6-3.8,11.8-8.4,16.4\n\t\t\t\tC223.4,534.6,215.9,537.7,207.9,537.7z M90.9,414.3l80.9,80.9l24.1,24.9c3.1,3.1,7.4,4.8,12,4.8s8.9-1.7,12-4.9\n\t\t\t\tc6.5-6.5,6.7-17,0.4-24.4c-2.2-2.6-2-6.5,0.6-8.8c2.5-2.3,6.4-2.2,8.9,0.2l24.1,24.1c3.2,3.2,7.3,4.9,11.7,4.9\n\t\t\t\tc4.4,0,8.8-1.7,12.3-4.9c5.4-6.1,6.9-16.4,0-23.3h0c-2.5-2.5-2.5-6.6,0-9.1c2.5-2.5,6.6-2.5,9.1,0h0l18.8,18.8\n\t\t\t\tc3.2,3.2,7.4,4.9,12,4.9c4.6,0,8.9-1.7,12-4.9c3.2-3.2,4.9-7.3,4.9-11.7s-1.7-8.5-4.9-11.6c-2.5-2.5-2.5-6.5,0-9\n\t\t\t\tc2.5-2.5,6.5-2.6,9-0.1l22.6,21.8c0,0,0.1,0.1,0.1,0.1c3.2,3.2,7.4,4.9,12,4.9c4.6,0,8.9-1.7,12-4.9c6.5-6.5,6.5-17.5,0-24\n\t\t\t\tl-18.8-18c0,0-0.1-0.1-0.1-0.1L237.6,315.6c-2.2,0.6-4.4,1.2-6.6,1.8c-17,4.7-34.7,9.5-50.8,9.5c-10.2,0-18.7-1.9-26-5.8\n\t\t\t\tc-0.9-0.3-1.8-0.8-2.7-1.2l-68,68L90.9,414.3z"
+            }
+          }),
+          _vm._v(" "),
+          _c("path", {
+            attrs: {
+              d:
+                "M190.6,278.8c-2.2,0-4.3-1.2-5.5-3.1c-1.4-2.3-1.2-5.3,0.6-7.4l3.8-4.5c0.1-0.1,0.3-0.3,0.4-0.4l2.3-2.3\n\t\t\t\tc2.4-2.4,6.2-2.5,8.7-0.3l6,5.3c1.9,1.6,2.6,4.2,1.9,6.6c-0.7,2.4-2.7,4.2-5.1,4.6c-2.4,0.4-4.5,0.6-6.5,0.8\n\t\t\t\tc-2,0.2-3.7,0.4-5.4,0.7C191.4,278.7,191,278.8,190.6,278.8z"
+            }
+          }),
+          _vm._v(" "),
+          _c("path", {
+            attrs: {
+              d:
+                "M72.4,396.9c-1.7,0-3.3-0.7-4.5-1.9L10,337.1c-2.5-2.5-2.5-6.5,0-9l133.2-134c1.2-1.2,2.8-1.9,4.5-1.9c0,0,0,0,0,0\n\t\t\t\tc1.7,0,3.3,0.7,4.5,1.9l57.9,57.9c2.5,2.5,2.5,6.4,0.1,8.9l-15.1,15.8c-1,1.1-2.4,1.8-3.9,1.9c-27.1,3-38.8,11.1-40.9,17.7\n\t\t\t\tc-1.4,4.5,2.2,8.3,4.4,10.2c1.4,1.2,2.2,2.8,2.3,4.6c0.1,1.8-0.6,3.5-1.8,4.8L77,395C75.8,396.2,74.2,396.9,72.4,396.9\n\t\t\t\tC72.5,396.9,72.5,396.9,72.4,396.9z M23.5,332.6l48.9,48.9l69.4-70.1c-4.3-5.7-5.6-12.3-3.6-18.7c2.4-7.9,12.1-21.7,49.4-26.4\n\t\t\t\tl9.1-9.6l-49-49L23.5,332.6z"
+            }
+          }),
+          _vm._v(" "),
+          _c("path", {
+            attrs: {
+              d:
+                "M73.6,342.8c-2.4,0-4.7-0.9-6.4-2.7c-1.7-1.7-2.7-4-2.7-6.4c0-2.4,0.9-4.7,2.7-6.4c1.7-1.7,4-2.7,6.4-2.7\n\t\t\t\ts4.7,0.9,6.4,2.7c1.7,1.7,2.7,4,2.7,6.4c0,2.4-1,4.7-2.7,6.4C78.3,341.8,76,342.8,73.6,342.8z M73.6,330c-1,0-2,0.4-2.6,1.1\n\t\t\t\tc-0.7,0.7-1.1,1.6-1.1,2.6c0,1,0.4,2,1.1,2.6c0.7,0.7,1.6,1.1,2.6,1.1c1,0,2-0.4,2.6-1.1c0.7-0.7,1.1-1.6,1.1-2.6\n\t\t\t\tc0-1-0.4-2-1.1-2.6C75.5,330.4,74.6,330,73.6,330z"
+            }
+          }),
+          _vm._v(" "),
+          _c("path", {
+            attrs: {
+              d:
+                "M371.2,446.6c-1.6,0-3.3-0.6-4.5-1.9L237.6,315.6c-2.2,0.6-4.4,1.2-6.6,1.8c-17,4.7-34.7,9.5-50.8,9.5\n\t\t\t\tc-10.4,0-19.1-2-26.5-6.1c-12-6.4-18.1-16.7-15.8-27c3.8-16.9,27.9-27.7,66-29.4c0,0,0.1,0,0.1,0c8-0.2,14.2-5,21.5-10.6\n\t\t\t\tc9.2-7,19.5-15,35.5-15c8.8,0,18.3,2.4,28.9,7.4l6.9-3.7c2.5-1.3,5.6-0.9,7.6,1.1l120.4,120.4c1.6,1.6,2.2,3.9,1.7,6.2l-8.3,31.6\n\t\t\t\tc-0.3,1.1-0.9,2.1-1.7,2.9l-40.6,39.9C374.4,446,372.8,446.6,371.2,446.6z M239.5,302.1c1.7,0,3.3,0.7,4.5,1.9l127.2,127.2\n\t\t\t\tl34.8-34.2l6.9-26.3L298.6,256.2l-5.6,3c-1.8,1-4.1,1-5.9,0.1c-10-5.1-18.5-7.5-26.1-7.5c-11.6,0-19.4,6-27.7,12.3\n\t\t\t\tc-8.2,6.3-16.8,12.9-28.9,13.2c-39.6,1.8-52.6,13.1-54,19.4c-1,4.4,2.6,9.3,9.4,12.9c5.6,3.1,12.2,4.5,20.4,4.5\n\t\t\t\tc14.5,0,31.2-4.6,47.4-9.1c3.5-1,6.9-1.9,10.3-2.8C238.4,302.2,239,302.1,239.5,302.1z"
+            }
+          }),
+          _vm._v(" "),
+          _c("path", {
+            attrs: {
+              d:
+                "M431.4,386.4c-1.6,0-3.3-0.6-4.5-1.9L293.7,251.3c-2.5-2.5-2.5-6.6,0-9.1l57.9-57.9c1.2-1.2,2.8-1.9,4.5-1.9\n\t\t\t\tc1.7,0,3.3,0.7,4.5,1.9l133.2,133.2c1.2,1.2,1.9,2.8,1.9,4.5c0,1.7-0.7,3.3-1.9,4.5l-57.9,57.9\n\t\t\t\tC434.7,385.8,433,386.4,431.4,386.4z M307.3,246.8l124.1,124.1l48.9-48.9L356.2,197.9L307.3,246.8z"
+            }
+          }),
+          _vm._v(" "),
+          _c("path", {
+            attrs: {
+              d:
+                "M430.7,329.9c-2.3,0-4.5-0.9-6.2-2.6c-1.7-1.7-2.6-3.9-2.6-6.2s0.9-4.5,2.6-6.2c0.1-0.1,0.2-0.2,0.4-0.3\n\t\t\t\tc1.6-1.4,3.7-2.1,5.8-2.1c2.3,0,4.5,0.9,6.1,2.5c1.7,1.7,2.6,3.9,2.6,6.2c0,2.3-0.9,4.4-2.4,6\n\t\t\t\tC435.4,328.9,433.1,329.9,430.7,329.9z M427.6,318.4c-0.7,0.7-1,1.7-1,2.7c0,1.1,0.4,2.1,1.2,2.9c1.5,1.5,3.9,1.7,5.5,0.3\n\t\t\t\tl-4.2-4.9l4.6,4.5c0.7-0.7,1.1-1.8,1.1-2.8c0-1.1-0.4-2.1-1.2-2.9c-0.7-0.7-1.8-1.2-2.9-1.2C429.5,317.1,428.4,317.6,427.6,318.4\n\t\t\t\tz"
+            }
+          })
+        ]),
+        _vm._v(" "),
+        _c("g", { attrs: { id: "job-complete" } }, [
+          _c("path", {
+            staticClass: "tick-circle",
+            attrs: {
+              d:
+                "M243.9,207.9c-38.8,0-70.4-31.6-70.4-70.4S205,67,243.9,67c3.5,0,6.4,2.9,6.4,6.4c0,3.5-2.9,6.4-6.4,6.4\n        c-31.8,0-57.6,25.9-57.6,57.6s25.9,57.6,57.6,57.6c31.8,0,57.6-25.9,57.6-57.6c0-3.5,2.9-6.4,6.4-6.4c3.5,0,6.4,2.9,6.4,6.4\n        C314.3,176.3,282.7,207.9,243.9,207.9z"
+            }
+          }),
+          _vm._v(" "),
+          _c("path", {
+            staticClass: "tick",
+            attrs: {
+              d:
+                "M233.2,165.2c-1.6,0-3.3-0.6-4.5-1.9l-21.3-21.3c-2.5-2.5-2.5-6.6,0-9.1c2.5-2.5,6.6-2.5,9.1,0l17.2,17.2\n        l59.6-49.6c2.7-2.3,6.8-1.9,9,0.8c2.3,2.7,1.9,6.8-0.8,9l-64,53.4C236.1,164.7,234.6,165.2,233.2,165.2z"
+            }
+          })
+        ])
+      ]
+    )
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/WelcomeLogo.vue?vue&type=template&id=19931edc&":
+/*!**************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/WelcomeLogo.vue?vue&type=template&id=19931edc& ***!
+  \**************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { attrs: { id: "welcome-logo" } }, [
+    _c("div", { attrs: { id: "welcome-svg" } }, [
+      _c(
+        "svg",
+        {
+          attrs: {
+            id: "logo",
+            viewBox: "0 0 914 139",
+            width: "100%",
+            height: "100%",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg"
+          }
+        },
+        [
+          _c("path", {
+            attrs: {
+              d:
+                "M53.7734 2.625H67.3438V75.1172C67.3438 84.9141 64.3906 92.5781 58.4844 98.1094C52.625 103.641 44.7969 106.406 35 106.406C24.8281 106.406 16.9062 103.805 11.2344 98.6016C5.5625 93.3984 2.72656 86.1094 2.72656 76.7344H16.2266C16.2266 82.5938 17.8203 87.1641 21.0078 90.4453C24.2422 93.7266 28.9062 95.3672 35 95.3672C40.5781 95.3672 45.0781 93.6094 48.5 90.0938C51.9688 86.5781 53.7266 81.6562 53.7734 75.3281V2.625Z",
+              stroke: "#CC0000",
+              "stroke-width": "5"
+            }
+          }),
+          _vm._v(" "),
+          _c("path", {
+            attrs: {
+              d:
+                "M84.8516 66.2578C84.8516 58.8047 86.3047 52.1016 89.2109 46.1484C92.1641 40.1953 96.2422 35.6016 101.445 32.3672C106.695 29.1328 112.672 27.5156 119.375 27.5156C129.734 27.5156 138.102 31.1016 144.477 38.2734C150.898 45.4453 154.109 54.9844 154.109 66.8906V67.8047C154.109 75.2109 152.68 81.8672 149.82 87.7734C147.008 93.6328 142.953 98.2031 137.656 101.484C132.406 104.766 126.359 106.406 119.516 106.406C109.203 106.406 100.836 102.82 94.4141 95.6484C88.0391 88.4766 84.8516 78.9844 84.8516 67.1719V66.2578ZM97.9297 67.8047C97.9297 76.2422 99.875 83.0156 103.766 88.125C107.703 93.2344 112.953 95.7891 119.516 95.7891C126.125 95.7891 131.375 93.2109 135.266 88.0547C139.156 82.8516 141.102 75.5859 141.102 66.2578C141.102 57.9141 139.109 51.1641 135.125 46.0078C131.188 40.8047 125.938 38.2031 119.375 38.2031C112.953 38.2031 107.773 40.7578 103.836 45.8672C99.8984 50.9766 97.9297 58.2891 97.9297 67.8047Z",
+              stroke: "rgb(255,165,0)",
+              "stroke-width": "5"
+            }
+          }),
+          _vm._v(" "),
+          _c("path", {
+            attrs: {
+              d:
+                "M217.391 97.4766C212.328 103.43 204.898 106.406 195.102 106.406C186.992 106.406 180.805 104.062 176.539 99.375C172.32 94.6406 170.188 87.6562 170.141 78.4219V28.9219H183.148V78.0703C183.148 89.6016 187.836 95.3672 197.211 95.3672C207.148 95.3672 213.758 91.6641 217.039 84.2578V28.9219H230.047V105H217.672L217.391 97.4766Z",
+              stroke: "rgb(255,69,0)",
+              "stroke-width": "5"
+            }
+          }),
+          _vm._v(" "),
+          _c("path", {
+            attrs: {
+              d:
+                "M286.648 40.5938C284.68 40.2656 282.547 40.1016 280.25 40.1016C271.719 40.1016 265.93 43.7344 262.883 51V105H249.875V28.9219H262.531L262.742 37.7109C267.008 30.9141 273.055 27.5156 280.883 27.5156C283.414 27.5156 285.336 27.8438 286.648 28.5V40.5938Z",
+              stroke: "#77B300",
+              "stroke-width": "5"
+            }
+          }),
+          _vm._v(" "),
+          _c("path", {
+            attrs: {
+              d:
+                "M310.977 28.9219L311.398 38.4844C317.211 31.1719 324.805 27.5156 334.18 27.5156C350.258 27.5156 358.367 36.5859 358.508 54.7266V105H345.5V54.6562C345.453 49.1719 344.188 45.1172 341.703 42.4922C339.266 39.8672 335.445 38.5547 330.242 38.5547C326.023 38.5547 322.32 39.6797 319.133 41.9297C315.945 44.1797 313.461 47.1328 311.68 50.7891V105H298.672V28.9219H310.977Z",
+              stroke: "#2A9FD6",
+              "stroke-width": "5"
+            }
+          }),
+          _vm._v(" "),
+          _c("path", {
+            attrs: {
+              d:
+                "M409.695 106.406C399.383 106.406 390.992 103.031 384.523 96.2812C378.055 89.4844 374.82 80.4141 374.82 69.0703V66.6797C374.82 59.1328 376.25 52.4062 379.109 46.5C382.016 40.5469 386.047 35.9062 391.203 32.5781C396.406 29.2031 402.031 27.5156 408.078 27.5156C417.969 27.5156 425.656 30.7734 431.141 37.2891C436.625 43.8047 439.367 53.1328 439.367 65.2734V70.6875H387.828C388.016 78.1875 390.195 84.2578 394.367 88.8984C398.586 93.4922 403.93 95.7891 410.398 95.7891C414.992 95.7891 418.883 94.8516 422.07 92.9766C425.258 91.1016 428.047 88.6172 430.438 85.5234L438.383 91.7109C432.008 101.508 422.445 106.406 409.695 106.406ZM408.078 38.2031C402.828 38.2031 398.422 40.125 394.859 43.9688C391.297 47.7656 389.094 53.1094 388.25 60H426.359V59.0156C425.984 52.4062 424.203 47.2969 421.016 43.6875C417.828 40.0312 413.516 38.2031 408.078 38.2031Z",
+              stroke: "#20c997",
+              "stroke-width": "5"
+            }
+          }),
+          _vm._v(" "),
+          _c("path", {
+            attrs: {
+              d:
+                "M478.391 85.9453L496.109 28.9219H510.031L479.445 116.742C474.711 129.398 467.188 135.727 456.875 135.727L454.414 135.516L449.562 134.602V124.055L453.078 124.336C457.484 124.336 460.906 123.445 463.344 121.664C465.828 119.883 467.867 116.625 469.461 111.891L472.344 104.156L445.203 28.9219H459.406L478.391 85.9453Z",
+              stroke: "#e83e8c",
+              "stroke-width": "5"
+            }
+          }),
+          _vm._v(" "),
+          _c("path", {
+            attrs: {
+              d:
+                "M594.477 13.7344H561.57V105H548.141V13.7344H515.305V2.625H594.477V13.7344Z",
+              stroke: "#9933CC",
+              "stroke-width": "5"
+            }
+          }),
+          _vm._v(" "),
+          _c("path", {
+            attrs: {
+              d:
+                "M597.148 66.2578C597.148 58.8047 598.602 52.1016 601.508 46.1484C604.461 40.1953 608.539 35.6016 613.742 32.3672C618.992 29.1328 624.969 27.5156 631.672 27.5156C642.031 27.5156 650.398 31.1016 656.773 38.2734C663.195 45.4453 666.406 54.9844 666.406 66.8906V67.8047C666.406 75.2109 664.977 81.8672 662.117 87.7734C659.305 93.6328 655.25 98.2031 649.953 101.484C644.703 104.766 638.656 106.406 631.812 106.406C621.5 106.406 613.133 102.82 606.711 95.6484C600.336 88.4766 597.148 78.9844 597.148 67.1719V66.2578ZM610.227 67.8047C610.227 76.2422 612.172 83.0156 616.062 88.125C620 93.2344 625.25 95.7891 631.812 95.7891C638.422 95.7891 643.672 93.2109 647.562 88.0547C651.453 82.8516 653.398 75.5859 653.398 66.2578C653.398 57.9141 651.406 51.1641 647.422 46.0078C643.484 40.8047 638.234 38.2031 631.672 38.2031C625.25 38.2031 620.07 40.7578 616.133 45.8672C612.195 50.9766 610.227 58.2891 610.227 67.8047Z",
+              stroke: "#DDD",
+              "stroke-width": "5"
+            }
+          }),
+          _vm._v(" "),
+          _c("path", {
+            attrs: {
+              d:
+                "M684.758 105V2.625H713.656C722.562 2.625 730.438 4.59375 737.281 8.53125C744.125 12.4688 749.398 18.0703 753.102 25.3359C756.852 32.6016 758.75 40.9453 758.797 50.3672V56.9062C758.797 66.5625 756.922 75.0234 753.172 82.2891C749.469 89.5547 744.148 95.1328 737.211 99.0234C730.32 102.914 722.281 104.906 713.094 105H684.758ZM698.258 13.7344V93.9609H712.461C722.867 93.9609 730.953 90.7266 736.719 84.2578C742.531 77.7891 745.438 68.5781 745.438 56.625V50.6484C745.438 39.0234 742.695 30 737.211 23.5781C731.773 17.1094 724.039 13.8281 714.008 13.7344H698.258Z",
+              stroke: "#CC0000",
+              "stroke-width": "5"
+            }
+          }),
+          _vm._v(" "),
+          _c("path", {
+            attrs: {
+              d:
+                "M808.789 106.406C798.477 106.406 790.086 103.031 783.617 96.2812C777.148 89.4844 773.914 80.4141 773.914 69.0703V66.6797C773.914 59.1328 775.344 52.4062 778.203 46.5C781.109 40.5469 785.141 35.9062 790.297 32.5781C795.5 29.2031 801.125 27.5156 807.172 27.5156C817.062 27.5156 824.75 30.7734 830.234 37.2891C835.719 43.8047 838.461 53.1328 838.461 65.2734V70.6875H786.922C787.109 78.1875 789.289 84.2578 793.461 88.8984C797.68 93.4922 803.023 95.7891 809.492 95.7891C814.086 95.7891 817.977 94.8516 821.164 92.9766C824.352 91.1016 827.141 88.6172 829.531 85.5234L837.477 91.7109C831.102 101.508 821.539 106.406 808.789 106.406ZM807.172 38.2031C801.922 38.2031 797.516 40.125 793.953 43.9688C790.391 47.7656 788.188 53.1094 787.344 60H825.453V59.0156C825.078 52.4062 823.297 47.2969 820.109 43.6875C816.922 40.0312 812.609 38.2031 807.172 38.2031Z",
+              stroke: "rgb(255,165,0)",
+              "stroke-width": "5"
+            }
+          }),
+          _vm._v(" "),
+          _c("path", {
+            attrs: {
+              d:
+                "M877.695 87.3516L896.539 28.9219H909.828L882.547 105H872.633L845.07 28.9219H858.359L877.695 87.3516Z",
+              stroke: "rgb(255,69,0)",
+              "stroke-width": "5"
+            }
+          })
+        ]
+      )
+    ]),
+    _vm._v(" "),
+    _c(
+      "div",
+      { attrs: { id: "buttons" } },
+      [
+        _vm.isLoggedIn === false
+          ? _c(
+              "router-link",
+              {
+                staticClass: "btn btn-info btn-lg",
+                attrs: { to: "/login", role: "button" }
+              },
+              [_vm._v("Login")]
+            )
+          : _vm._e(),
+        _vm._v(" "),
+        _vm.isLoggedIn === false
+          ? _c(
+              "router-link",
+              {
+                staticClass: "btn btn-primary btn-lg",
+                attrs: { to: "/register", role: "button" }
+              },
+              [_vm._v("Register")]
+            )
+          : _vm._e(),
+        _vm._v(" "),
+        _vm.isLoggedIn === false
+          ? _c(
+              "router-link",
+              {
+                staticClass: "btn btn-success btn-lg",
+                attrs: { to: "/thejourney", role: "button" }
+              },
+              [_vm._v("Find Out More")]
+            )
+          : _vm._e(),
+        _vm._v(" "),
+        _vm.isLoggedIn
+          ? _c(
+              "router-link",
+              {
+                staticClass: "btn btn-success btn-lg",
+                attrs: { to: "/roadmap", role: "button" }
+              },
+              [_vm._v("Get Started")]
+            )
+          : _vm._e()
+      ],
+      1
+    )
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -25507,9 +26266,9 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Welcome_vue_vue_type_template_id_51777872___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Welcome.vue?vue&type=template&id=51777872& */ "./resources/js/components/Welcome.vue?vue&type=template&id=51777872&");
+/* harmony import */ var _Welcome_vue_vue_type_template_id_51777872_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Welcome.vue?vue&type=template&id=51777872&scoped=true& */ "./resources/js/components/Welcome.vue?vue&type=template&id=51777872&scoped=true&");
 /* harmony import */ var _Welcome_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Welcome.vue?vue&type=script&lang=js& */ "./resources/js/components/Welcome.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _Welcome_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Welcome.vue?vue&type=style&index=0&lang=scss& */ "./resources/js/components/Welcome.vue?vue&type=style&index=0&lang=scss&");
+/* empty/unused harmony star reexport *//* harmony import */ var _Welcome_vue_vue_type_style_index_0_id_51777872_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Welcome.vue?vue&type=style&index=0&id=51777872&scoped=true&lang=css& */ "./resources/js/components/Welcome.vue?vue&type=style&index=0&id=51777872&scoped=true&lang=css&");
 /* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -25521,11 +26280,11 @@ __webpack_require__.r(__webpack_exports__);
 
 var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
   _Welcome_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _Welcome_vue_vue_type_template_id_51777872___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _Welcome_vue_vue_type_template_id_51777872___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _Welcome_vue_vue_type_template_id_51777872_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Welcome_vue_vue_type_template_id_51777872_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
-  null,
+  "51777872",
   null
   
 )
@@ -25551,35 +26310,209 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/components/Welcome.vue?vue&type=style&index=0&lang=scss&":
-/*!*******************************************************************************!*\
-  !*** ./resources/js/components/Welcome.vue?vue&type=style&index=0&lang=scss& ***!
-  \*******************************************************************************/
+/***/ "./resources/js/components/Welcome.vue?vue&type=style&index=0&id=51777872&scoped=true&lang=css&":
+/*!******************************************************************************************************!*\
+  !*** ./resources/js/components/Welcome.vue?vue&type=style&index=0&id=51777872&scoped=true&lang=css& ***!
+  \******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_Welcome_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader!../../../node_modules/css-loader!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--7-2!../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../node_modules/vue-loader/lib??vue-loader-options!./Welcome.vue?vue&type=style&index=0&lang=scss& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Welcome.vue?vue&type=style&index=0&lang=scss&");
-/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_Welcome_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_Welcome_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_Welcome_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_Welcome_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
- /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_Welcome_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0___default.a); 
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Welcome_vue_vue_type_style_index_0_id_51777872_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader!../../../node_modules/css-loader??ref--6-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--6-2!../../../node_modules/vue-loader/lib??vue-loader-options!./Welcome.vue?vue&type=style&index=0&id=51777872&scoped=true&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Welcome.vue?vue&type=style&index=0&id=51777872&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Welcome_vue_vue_type_style_index_0_id_51777872_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Welcome_vue_vue_type_style_index_0_id_51777872_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Welcome_vue_vue_type_style_index_0_id_51777872_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Welcome_vue_vue_type_style_index_0_id_51777872_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Welcome_vue_vue_type_style_index_0_id_51777872_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
 
 /***/ }),
 
-/***/ "./resources/js/components/Welcome.vue?vue&type=template&id=51777872&":
-/*!****************************************************************************!*\
-  !*** ./resources/js/components/Welcome.vue?vue&type=template&id=51777872& ***!
-  \****************************************************************************/
+/***/ "./resources/js/components/Welcome.vue?vue&type=template&id=51777872&scoped=true&":
+/*!****************************************************************************************!*\
+  !*** ./resources/js/components/Welcome.vue?vue&type=template&id=51777872&scoped=true& ***!
+  \****************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Welcome_vue_vue_type_template_id_51777872___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./Welcome.vue?vue&type=template&id=51777872& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Welcome.vue?vue&type=template&id=51777872&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Welcome_vue_vue_type_template_id_51777872___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Welcome_vue_vue_type_template_id_51777872_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./Welcome.vue?vue&type=template&id=51777872&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Welcome.vue?vue&type=template&id=51777872&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Welcome_vue_vue_type_template_id_51777872_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Welcome_vue_vue_type_template_id_51777872___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Welcome_vue_vue_type_template_id_51777872_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/WelcomeAnimation.vue":
+/*!******************************************************!*\
+  !*** ./resources/js/components/WelcomeAnimation.vue ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _WelcomeAnimation_vue_vue_type_template_id_06a0efad_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./WelcomeAnimation.vue?vue&type=template&id=06a0efad&scoped=true& */ "./resources/js/components/WelcomeAnimation.vue?vue&type=template&id=06a0efad&scoped=true&");
+/* harmony import */ var _WelcomeAnimation_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./WelcomeAnimation.vue?vue&type=script&lang=js& */ "./resources/js/components/WelcomeAnimation.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _WelcomeAnimation_vue_vue_type_style_index_0_id_06a0efad_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./WelcomeAnimation.vue?vue&type=style&index=0&id=06a0efad&lang=scss&scoped=true& */ "./resources/js/components/WelcomeAnimation.vue?vue&type=style&index=0&id=06a0efad&lang=scss&scoped=true&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _WelcomeAnimation_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _WelcomeAnimation_vue_vue_type_template_id_06a0efad_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _WelcomeAnimation_vue_vue_type_template_id_06a0efad_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "06a0efad",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/WelcomeAnimation.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/WelcomeAnimation.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************!*\
+  !*** ./resources/js/components/WelcomeAnimation.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_WelcomeAnimation_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./WelcomeAnimation.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/WelcomeAnimation.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_WelcomeAnimation_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/WelcomeAnimation.vue?vue&type=style&index=0&id=06a0efad&lang=scss&scoped=true&":
+/*!****************************************************************************************************************!*\
+  !*** ./resources/js/components/WelcomeAnimation.vue?vue&type=style&index=0&id=06a0efad&lang=scss&scoped=true& ***!
+  \****************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_WelcomeAnimation_vue_vue_type_style_index_0_id_06a0efad_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader!../../../node_modules/css-loader!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--7-2!../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../node_modules/vue-loader/lib??vue-loader-options!./WelcomeAnimation.vue?vue&type=style&index=0&id=06a0efad&lang=scss&scoped=true& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/WelcomeAnimation.vue?vue&type=style&index=0&id=06a0efad&lang=scss&scoped=true&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_WelcomeAnimation_vue_vue_type_style_index_0_id_06a0efad_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_WelcomeAnimation_vue_vue_type_style_index_0_id_06a0efad_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_WelcomeAnimation_vue_vue_type_style_index_0_id_06a0efad_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_WelcomeAnimation_vue_vue_type_style_index_0_id_06a0efad_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_WelcomeAnimation_vue_vue_type_style_index_0_id_06a0efad_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ "./resources/js/components/WelcomeAnimation.vue?vue&type=template&id=06a0efad&scoped=true&":
+/*!*************************************************************************************************!*\
+  !*** ./resources/js/components/WelcomeAnimation.vue?vue&type=template&id=06a0efad&scoped=true& ***!
+  \*************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_WelcomeAnimation_vue_vue_type_template_id_06a0efad_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./WelcomeAnimation.vue?vue&type=template&id=06a0efad&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/WelcomeAnimation.vue?vue&type=template&id=06a0efad&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_WelcomeAnimation_vue_vue_type_template_id_06a0efad_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_WelcomeAnimation_vue_vue_type_template_id_06a0efad_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/WelcomeLogo.vue":
+/*!*************************************************!*\
+  !*** ./resources/js/components/WelcomeLogo.vue ***!
+  \*************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _WelcomeLogo_vue_vue_type_template_id_19931edc___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./WelcomeLogo.vue?vue&type=template&id=19931edc& */ "./resources/js/components/WelcomeLogo.vue?vue&type=template&id=19931edc&");
+/* harmony import */ var _WelcomeLogo_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./WelcomeLogo.vue?vue&type=script&lang=js& */ "./resources/js/components/WelcomeLogo.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _WelcomeLogo_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./WelcomeLogo.vue?vue&type=style&index=0&lang=scss& */ "./resources/js/components/WelcomeLogo.vue?vue&type=style&index=0&lang=scss&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _WelcomeLogo_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _WelcomeLogo_vue_vue_type_template_id_19931edc___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _WelcomeLogo_vue_vue_type_template_id_19931edc___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/WelcomeLogo.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/WelcomeLogo.vue?vue&type=script&lang=js&":
+/*!**************************************************************************!*\
+  !*** ./resources/js/components/WelcomeLogo.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_WelcomeLogo_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./WelcomeLogo.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/WelcomeLogo.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_WelcomeLogo_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/WelcomeLogo.vue?vue&type=style&index=0&lang=scss&":
+/*!***********************************************************************************!*\
+  !*** ./resources/js/components/WelcomeLogo.vue?vue&type=style&index=0&lang=scss& ***!
+  \***********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_WelcomeLogo_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader!../../../node_modules/css-loader!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--7-2!../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../node_modules/vue-loader/lib??vue-loader-options!./WelcomeLogo.vue?vue&type=style&index=0&lang=scss& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/WelcomeLogo.vue?vue&type=style&index=0&lang=scss&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_WelcomeLogo_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_WelcomeLogo_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_WelcomeLogo_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_WelcomeLogo_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_WelcomeLogo_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ "./resources/js/components/WelcomeLogo.vue?vue&type=template&id=19931edc&":
+/*!********************************************************************************!*\
+  !*** ./resources/js/components/WelcomeLogo.vue?vue&type=template&id=19931edc& ***!
+  \********************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_WelcomeLogo_vue_vue_type_template_id_19931edc___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./WelcomeLogo.vue?vue&type=template&id=19931edc& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/WelcomeLogo.vue?vue&type=template&id=19931edc&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_WelcomeLogo_vue_vue_type_template_id_19931edc___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_WelcomeLogo_vue_vue_type_template_id_19931edc___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

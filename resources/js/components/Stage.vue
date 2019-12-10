@@ -418,7 +418,7 @@ export default {
 
       &:hover i{
         animation: pulse 500ms ease-in;
-        animation-iteration-count: 2;
+        animation-iteration-count: infinite;
       }
     }
   }
@@ -505,7 +505,7 @@ h5.card-title > a {
  
   &:hover{
     animation: left-point 500ms ease-in;
-    animation-iteration-count: 2;
+    animation-iteration-count: infinite;
   }
 }
 
@@ -523,7 +523,7 @@ h5.card-title > a {
  
   &:hover{
     animation: right-point 500ms ease-in;
-    animation-iteration-count: 2;
+    animation-iteration-count: infinite;
   }
 }
 
@@ -538,7 +538,7 @@ h5.card-title > a {
 
 .delete-btn:hover {
   animation: pulse 500ms ease-in; // Keyframes is in _animation.scss
-  animation-iteration-count: 2;
+  animation-iteration-count: infinite;
 }
 
 
