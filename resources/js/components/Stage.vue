@@ -503,38 +503,38 @@ h5.card-title > a {
 .left-arrow {
   padding-left: 1.25rem;
  
-  &:hover{
-    animation: left-point 500ms ease-in;
-    animation-iteration-count: infinite;
-  }
+  // &:hover{
+  //   animation: left-point 500ms ease-in;
+  //   animation-iteration-count: 2;
+  // }
 }
 
-@keyframes left-point {
-  50% {
-    transform: translateX(-15px)
-  }
-  100% {
-    transform: translateX(0px)
-  }
-}
+// @keyframes left-point {
+//   50% {
+//     transform: translateX(-15px)
+//   }
+//   100% {
+//     transform: translateX(0px)
+//   }
+// }
 
 .right-arrow {
   padding-right: 1.25rem;
  
-  &:hover{
-    animation: right-point 500ms ease-in;
-    animation-iteration-count: infinite;
-  }
+  // &:hover{
+  //   animation: right-point 500ms ease-in;
+  //   animation-iteration-count: 2;
+  // }
 }
 
-@keyframes right-point {
-  50% {
-    transform: translateX(15px)
-  }
-  100% {
-    transform: translateX(0px)
-  }
-}
+// @keyframes right-point {
+//   50% {
+//     transform: translateX(15px)
+//   }
+//   100% {
+//     transform: translateX(0px)
+//   }
+// }
 
 .delete-btn:hover {
   animation: pulse 500ms ease-in; // Keyframes is in _animation.scss
