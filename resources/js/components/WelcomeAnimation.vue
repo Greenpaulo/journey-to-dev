@@ -14,7 +14,7 @@
      
   <!-- First Arrow -->
   
-  <svg version="1.1" id="arrow-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 300 300" style="enable-background:new 0 0 300 300;" xml:space="preserve" width="100px">
+  <svg version="1.1" id="arrow-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 300 300" style="enable-background:new 0 0 300 300;" xml:space="preserve" width="80px">
     <path id="circle-1" d="M29.1,116c-14.9,0-26.9,12-26.9,26.9c0,14.8,12,26.9,26.9,26.9c14.8,0,26.9-12,26.9-26.9C56,128.1,43.9,116,29.1,116z"/>
     <path id="circle-2" d="M111,116c-14.9,0-26.9,12-26.9,26.9c0,14.8,12,26.9,26.9,26.9c14.8,0,26.9-12,26.9-26.9C137.8,128.1,125.8,116,111,116z"/>
     <path id="circle-3" d="M192.8,116c-14.9,0-26.9,12-26.9,26.9c0,14.8,12,26.9,26.9,26.9c14.8,0,26.9-12,26.9-26.9C219.7,128.1,207.7,116,192.8,116z"/>
@@ -45,7 +45,7 @@
   <!-- Second Arrow -->
   
   <svg version="1.1" id="arrow-2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-    viewBox="0 0 300 300" style="enable-background:new 0 0 300 300;" xml:space="preserve" width="100px">
+    viewBox="0 0 300 300" style="enable-background:new 0 0 300 300;" xml:space="preserve" width="80px">
     <path id="circle-4" d="M29.1,116c-14.9,0-26.9,12-26.9,26.9c0,14.8,12,26.9,26.9,26.9c14.8,0,26.9-12,26.9-26.9C56,128.1,43.9,116,29.1,116z"/>
     <path id="circle-5" d="M111,116c-14.9,0-26.9,12-26.9,26.9c0,14.8,12,26.9,26.9,26.9c14.8,0,26.9-12,26.9-26.9C137.8,128.1,125.8,116,111,116z"/>
     <path id="circle-6" d="M192.8,116c-14.9,0-26.9,12-26.9,26.9c0,14.8,12,26.9,26.9,26.9c14.8,0,26.9-12,26.9-26.9C219.7,128.1,207.7,116,192.8,116z"/>
@@ -188,6 +188,9 @@ export default {
     tl.from(handshake, { y: -100, duration: 1, opacity: 0});
     tl.to(jobComplete, { opacity: 1, duration: 0.5});
 
+    //Buttons
+    // tl.from()
+
 
     // function calculatePathLength() {
     //       console.log('func ran');
@@ -232,7 +235,8 @@ export default {
 // }
 
 #welcome-animation {
-  display: flex
+  display: flex;
+  margin-bottom: 1rem;
 }
 
 #idea {

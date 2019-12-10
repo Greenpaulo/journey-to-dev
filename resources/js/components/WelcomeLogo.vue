@@ -27,24 +27,20 @@
         <path d="M877.695 87.3516L896.539 28.9219H909.828L882.547 105H872.633L845.07 28.9219H858.359L877.695 87.3516Z" stroke="rgb(255,69,0)" stroke-width="5"/>
       </svg>
     </div>
-    
-    <!-- <div id="buttons">
-      <router-link v-if="isLoggedIn === false" class="btn btn-info btn-lg" to="/login" role="button">Login</router-link>
-      <router-link v-if="isLoggedIn === false" class="btn btn-primary btn-lg" to="/register" role="button">Register</router-link>
-      <router-link v-if="isLoggedIn === false" class="btn btn-success btn-lg" to="/thejourney" role="button">Find Out More</router-link>
-      <router-link v-if="isLoggedIn" class="btn btn-success btn-lg" to="/roadmap" role="button">Get Started</router-link>
-    </div> -->
+
+    <WelcomeButtons />
   </div>
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
+import WelcomeButtons from './WelcomeButtons';
 
 export default {
   name: 'WelcomeLogo',
-  computed: { 
-    ...mapGetters(['isLoggedIn'])
-    }
+  components: {
+    WelcomeButtons
+  },
+  
   // mounted() {
   //     //Calculate path lengths of the svg logo
   //     const logo = document.querySelectorAll('#logo path');
@@ -65,12 +61,12 @@ export default {
   min-width: 50vw;
 }
 
-#logo {
-  padding-right: 3rem;
+#welcome-logo {
+  margin-bottom: 2rem;
 }
 
-#buttons {
-  margin-top: 3rem;
+#logo {
+  padding-right: 3rem;
 }
 
 #logo path:nth-child(1){

@@ -1,7 +1,9 @@
 <template>
    <section id="welcome-page" class="animated fadeIn">
-     <WelcomeAnimation />
-     <WelcomeLogo />
+     <section id="welcome-content">
+      <WelcomeAnimation />
+      <WelcomeLogo />
+     </section>
    </section>
 </template>
 
@@ -29,6 +31,10 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+#welcome-content {
+  margin-bottom: 10rem;
 }
 
 
