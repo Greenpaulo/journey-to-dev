@@ -1896,6 +1896,22 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'About',
@@ -3292,9 +3308,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'WelcomeAnimation',
   mounted: function mounted() {
@@ -3359,7 +3372,7 @@ __webpack_require__.r(__webpack_exports__);
     }); // Study
 
     tl.from(studyMain, {
-      y: -100,
+      y: -50,
       duration: 1,
       opacity: 0
     });
@@ -3512,7 +3525,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".bg-stage1[data-v-fb05e49c] {\n  background-color: #CC0000;\n}\n.bg-stage2[data-v-fb05e49c] {\n  background-color: orangered;\n}\n.bg-stage3[data-v-fb05e49c] {\n  background-color: orange;\n}\n.bg-stage4[data-v-fb05e49c] {\n  background-color: #77B300;\n}\n.bg-stage5[data-v-fb05e49c] {\n  background-color: #2A9FD6;\n}\n.bg-stage6[data-v-fb05e49c] {\n  background-color: #20c997;\n}\n.bg-stage7[data-v-fb05e49c] {\n  background-color: #e83e8c;\n}\n.bg-stage8[data-v-fb05e49c] {\n  background-color: #9933CC;\n}\n.bg-stage9[data-v-fb05e49c] {\n  background-color: #fff;\n  color: black !important;\n}\n.border-stage1[data-v-fb05e49c] {\n  border-top: 8px solid #CC0000;\n  border-right: 8px solid #CC0000;\n}\n.border-stage2[data-v-fb05e49c] {\n  border-top: 8px solid orangered;\n  border-right: 8px solid orangered;\n}\n.border-stage3[data-v-fb05e49c] {\n  border-top: 8px solid orange;\n  border-right: 8px solid orange;\n}\n.border-stage4[data-v-fb05e49c] {\n  border-top: 8px solid #77B300;\n  border-right: 8px solid #77B300;\n}\n.border-stage5[data-v-fb05e49c] {\n  border-top: 8px solid #2A9FD6;\n  border-right: 8px solid #2A9FD6;\n}\n.border-stage6[data-v-fb05e49c] {\n  border-top: 8px solid #20c997;\n  border-right: 8px solid #20c997;\n}\n.border-stage7[data-v-fb05e49c] {\n  border-top: 8px solid #e83e8c;\n  border-right: 8px solid #e83e8c;\n}\n.border-stage8[data-v-fb05e49c] {\n  border-top: 8px solid #9933CC;\n  border-right: 8px solid #9933CC;\n}\n.border-stage9[data-v-fb05e49c] {\n  border-top: 8px solid #fff;\n  border-right: 8px solid #ffff;\n}\n.text-stage1[data-v-fb05e49c] {\n  color: #CC0000;\n}\n.text-stage2[data-v-fb05e49c] {\n  color: orangered;\n}\n.text-stage3[data-v-fb05e49c] {\n  color: orange;\n}\n.text-stage4[data-v-fb05e49c] {\n  color: #77B300;\n}\n.text-stage5[data-v-fb05e49c] {\n  color: #2A9FD6;\n}\n.text-stage6[data-v-fb05e49c] {\n  color: #20c997;\n}\n.text-stage7[data-v-fb05e49c] {\n  color: #e83e8c;\n}\n.text-stage8[data-v-fb05e49c] {\n  color: #9933CC;\n}\n.text-stage9[data-v-fb05e49c] {\n  color: white;\n}\np[data-v-fb05e49c] {\n  color: #d9d9d9;\n  font-size: 1.3rem;\n}\n#theApp[data-v-fb05e49c] {\n  border-bottom: 2px solid #CC0000;\n}\n#creator[data-v-fb05e49c] {\n  border-bottom: 2px solid orangered;\n  color: #d9d9d9;\n}\n#creator a[data-v-fb05e49c], #creator span[data-v-fb05e49c] {\n  text-decoration: none;\n  color: #d9d9d9;\n  font-size: 1.2rem;\n}\n#creator a[data-v-fb05e49c]:hover, #creator span[data-v-fb05e49c]:hover {\n  color: #b3b3b3;\n}\n#creator .icon-group[data-v-fb05e49c] {\n  display: flex;\n  padding: 1rem;\n  align-items: center;\n}\n#credits[data-v-fb05e49c] {\n  border-bottom: 2px solid orange;\n  color: #d9d9d9;\n}\n#credits h5[data-v-fb05e49c] {\n  font-size: 1.3rem !important;\n}\n@media (max-width: 420px) {\nh4[data-v-fb05e49c] {\n    text-align: center;\n}\np[data-v-fb05e49c] {\n    font-size: 1.1rem;\n    line-height: 1.9rem;\n}\n#creator a[data-v-fb05e49c] {\n    font-size: 1rem;\n}\nsection[data-v-fb05e49c] {\n    padding: 0 1rem 3rem 1rem;\n}\na.btn[data-v-fb05e49c] {\n    display: block;\n    margin: auto;\n}\n}\n@media (max-width: 320px) {\n#creator a[data-v-fb05e49c], #creator span[data-v-fb05e49c] {\n    font-size: 0.8rem;\n}\n}", ""]);
+exports.push([module.i, ".bg-stage1[data-v-fb05e49c] {\n  background-color: #CC0000;\n}\n.bg-stage2[data-v-fb05e49c] {\n  background-color: orangered;\n}\n.bg-stage3[data-v-fb05e49c] {\n  background-color: orange;\n}\n.bg-stage4[data-v-fb05e49c] {\n  background-color: #77B300;\n}\n.bg-stage5[data-v-fb05e49c] {\n  background-color: #2A9FD6;\n}\n.bg-stage6[data-v-fb05e49c] {\n  background-color: #20c997;\n}\n.bg-stage7[data-v-fb05e49c] {\n  background-color: #e83e8c;\n}\n.bg-stage8[data-v-fb05e49c] {\n  background-color: #9933CC;\n}\n.bg-stage9[data-v-fb05e49c] {\n  background-color: #fff;\n  color: black !important;\n}\n.border-stage1[data-v-fb05e49c] {\n  border-top: 8px solid #CC0000;\n  border-right: 8px solid #CC0000;\n}\n.border-stage2[data-v-fb05e49c] {\n  border-top: 8px solid orangered;\n  border-right: 8px solid orangered;\n}\n.border-stage3[data-v-fb05e49c] {\n  border-top: 8px solid orange;\n  border-right: 8px solid orange;\n}\n.border-stage4[data-v-fb05e49c] {\n  border-top: 8px solid #77B300;\n  border-right: 8px solid #77B300;\n}\n.border-stage5[data-v-fb05e49c] {\n  border-top: 8px solid #2A9FD6;\n  border-right: 8px solid #2A9FD6;\n}\n.border-stage6[data-v-fb05e49c] {\n  border-top: 8px solid #20c997;\n  border-right: 8px solid #20c997;\n}\n.border-stage7[data-v-fb05e49c] {\n  border-top: 8px solid #e83e8c;\n  border-right: 8px solid #e83e8c;\n}\n.border-stage8[data-v-fb05e49c] {\n  border-top: 8px solid #9933CC;\n  border-right: 8px solid #9933CC;\n}\n.border-stage9[data-v-fb05e49c] {\n  border-top: 8px solid #fff;\n  border-right: 8px solid #ffff;\n}\n.text-stage1[data-v-fb05e49c] {\n  color: #CC0000;\n}\n.text-stage2[data-v-fb05e49c] {\n  color: orangered;\n}\n.text-stage3[data-v-fb05e49c] {\n  color: orange;\n}\n.text-stage4[data-v-fb05e49c] {\n  color: #77B300;\n}\n.text-stage5[data-v-fb05e49c] {\n  color: #2A9FD6;\n}\n.text-stage6[data-v-fb05e49c] {\n  color: #20c997;\n}\n.text-stage7[data-v-fb05e49c] {\n  color: #e83e8c;\n}\n.text-stage8[data-v-fb05e49c] {\n  color: #9933CC;\n}\n.text-stage9[data-v-fb05e49c] {\n  color: white;\n}\nh4[data-v-fb05e49c] {\n  margin-bottom: 1.5rem;\n}\np[data-v-fb05e49c] {\n  color: #d9d9d9;\n  font-size: 1.3rem;\n}\n#theApp[data-v-fb05e49c] {\n  border-bottom: 2px solid #CC0000;\n}\n#creator[data-v-fb05e49c] {\n  border-bottom: 2px solid orangered;\n  color: #d9d9d9;\n}\n#creator a[data-v-fb05e49c], #creator span[data-v-fb05e49c] {\n  text-decoration: none;\n  color: #d9d9d9;\n  font-size: 1.2rem;\n}\n#creator a[data-v-fb05e49c]:hover, #creator span[data-v-fb05e49c]:hover {\n  color: white;\n}\n#creator .icon-group[data-v-fb05e49c] {\n  display: flex;\n  padding: 1rem;\n  align-items: center;\n}\n#credits[data-v-fb05e49c] {\n  border-bottom: 2px solid orange;\n  color: #d9d9d9;\n}\n#credits h5[data-v-fb05e49c] {\n  font-size: 1.3rem !important;\n}\n.fa-envelope[data-v-fb05e49c] {\n  color: #77B300;\n}\n.fa-github[data-v-fb05e49c] {\n  color: #2A9FD6;\n}\n@media (max-width: 420px) {\nh4[data-v-fb05e49c] {\n    text-align: center;\n}\np[data-v-fb05e49c] {\n    font-size: 1.1rem;\n    line-height: 1.9rem;\n}\n#creator a[data-v-fb05e49c] {\n    font-size: 1rem;\n}\nsection[data-v-fb05e49c] {\n    padding: 0 1rem 3rem 1rem;\n}\na.btn[data-v-fb05e49c] {\n    display: block;\n    margin: auto;\n}\n}\n@media (max-width: 320px) {\n#creator a[data-v-fb05e49c], #creator span[data-v-fb05e49c] {\n    font-size: 0.8rem;\n}\n}", ""]);
 
 // exports
 
@@ -3531,7 +3544,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".bg-stage1 {\n  background-color: #CC0000;\n}\n.bg-stage2 {\n  background-color: orangered;\n}\n.bg-stage3 {\n  background-color: orange;\n}\n.bg-stage4 {\n  background-color: #77B300;\n}\n.bg-stage5 {\n  background-color: #2A9FD6;\n}\n.bg-stage6 {\n  background-color: #20c997;\n}\n.bg-stage7 {\n  background-color: #e83e8c;\n}\n.bg-stage8 {\n  background-color: #9933CC;\n}\n.bg-stage9 {\n  background-color: #fff;\n  color: black !important;\n}\n.border-stage1 {\n  border-top: 8px solid #CC0000;\n  border-right: 8px solid #CC0000;\n}\n.border-stage2 {\n  border-top: 8px solid orangered;\n  border-right: 8px solid orangered;\n}\n.border-stage3 {\n  border-top: 8px solid orange;\n  border-right: 8px solid orange;\n}\n.border-stage4 {\n  border-top: 8px solid #77B300;\n  border-right: 8px solid #77B300;\n}\n.border-stage5 {\n  border-top: 8px solid #2A9FD6;\n  border-right: 8px solid #2A9FD6;\n}\n.border-stage6 {\n  border-top: 8px solid #20c997;\n  border-right: 8px solid #20c997;\n}\n.border-stage7 {\n  border-top: 8px solid #e83e8c;\n  border-right: 8px solid #e83e8c;\n}\n.border-stage8 {\n  border-top: 8px solid #9933CC;\n  border-right: 8px solid #9933CC;\n}\n.border-stage9 {\n  border-top: 8px solid #fff;\n  border-right: 8px solid #ffff;\n}\n.text-stage1 {\n  color: #CC0000;\n}\n.text-stage2 {\n  color: orangered;\n}\n.text-stage3 {\n  color: orange;\n}\n.text-stage4 {\n  color: #77B300;\n}\n.text-stage5 {\n  color: #2A9FD6;\n}\n.text-stage6 {\n  color: #20c997;\n}\n.text-stage7 {\n  color: #e83e8c;\n}\n.text-stage8 {\n  color: #9933CC;\n}\n.text-stage9 {\n  color: white;\n}\nbody {\n  background: #171419;\n  background: linear-gradient(79deg, #171419 0%, #020009 100%);\n  /* background-color: #100e17; */\n}\n.container.my-5 {\n  margin-top: 7rem !important;\n}\n.flash__message.error {\n  color: #a94442 !important;\n  background-color: #f3dede !important;\n  border-color: #f3dede !important;\n}\n@media (min-width: 1200px) {\n.container {\n    max-width: 1150px;\n}\n}", ""]);
+exports.push([module.i, ".bg-stage1 {\n  background-color: #CC0000;\n}\n.bg-stage2 {\n  background-color: orangered;\n}\n.bg-stage3 {\n  background-color: orange;\n}\n.bg-stage4 {\n  background-color: #77B300;\n}\n.bg-stage5 {\n  background-color: #2A9FD6;\n}\n.bg-stage6 {\n  background-color: #20c997;\n}\n.bg-stage7 {\n  background-color: #e83e8c;\n}\n.bg-stage8 {\n  background-color: #9933CC;\n}\n.bg-stage9 {\n  background-color: #fff;\n  color: black !important;\n}\n.border-stage1 {\n  border-top: 8px solid #CC0000;\n  border-right: 8px solid #CC0000;\n}\n.border-stage2 {\n  border-top: 8px solid orangered;\n  border-right: 8px solid orangered;\n}\n.border-stage3 {\n  border-top: 8px solid orange;\n  border-right: 8px solid orange;\n}\n.border-stage4 {\n  border-top: 8px solid #77B300;\n  border-right: 8px solid #77B300;\n}\n.border-stage5 {\n  border-top: 8px solid #2A9FD6;\n  border-right: 8px solid #2A9FD6;\n}\n.border-stage6 {\n  border-top: 8px solid #20c997;\n  border-right: 8px solid #20c997;\n}\n.border-stage7 {\n  border-top: 8px solid #e83e8c;\n  border-right: 8px solid #e83e8c;\n}\n.border-stage8 {\n  border-top: 8px solid #9933CC;\n  border-right: 8px solid #9933CC;\n}\n.border-stage9 {\n  border-top: 8px solid #fff;\n  border-right: 8px solid #ffff;\n}\n.text-stage1 {\n  color: #CC0000;\n}\n.text-stage2 {\n  color: orangered;\n}\n.text-stage3 {\n  color: orange;\n}\n.text-stage4 {\n  color: #77B300;\n}\n.text-stage5 {\n  color: #2A9FD6;\n}\n.text-stage6 {\n  color: #20c997;\n}\n.text-stage7 {\n  color: #e83e8c;\n}\n.text-stage8 {\n  color: #9933CC;\n}\n.text-stage9 {\n  color: white;\n}\nbody {\n  background: #171419;\n  /* background-color: #100e17; */\n}\n.container.my-5 {\n  margin-top: 7rem !important;\n}\n.flash__message.error {\n  color: #a94442 !important;\n  background-color: #f3dede !important;\n  border-color: #f3dede !important;\n}\n@media (min-width: 1200px) {\n.container {\n    max-width: 1150px;\n}\n}", ""]);
 
 // exports
 
@@ -3664,7 +3677,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".bg-stage1[data-v-06a0efad] {\n  background-color: #CC0000;\n}\n.bg-stage2[data-v-06a0efad] {\n  background-color: orangered;\n}\n.bg-stage3[data-v-06a0efad] {\n  background-color: orange;\n}\n.bg-stage4[data-v-06a0efad] {\n  background-color: #77B300;\n}\n.bg-stage5[data-v-06a0efad] {\n  background-color: #2A9FD6;\n}\n.bg-stage6[data-v-06a0efad] {\n  background-color: #20c997;\n}\n.bg-stage7[data-v-06a0efad] {\n  background-color: #e83e8c;\n}\n.bg-stage8[data-v-06a0efad] {\n  background-color: #9933CC;\n}\n.bg-stage9[data-v-06a0efad] {\n  background-color: #fff;\n  color: black !important;\n}\n.border-stage1[data-v-06a0efad] {\n  border-top: 8px solid #CC0000;\n  border-right: 8px solid #CC0000;\n}\n.border-stage2[data-v-06a0efad] {\n  border-top: 8px solid orangered;\n  border-right: 8px solid orangered;\n}\n.border-stage3[data-v-06a0efad] {\n  border-top: 8px solid orange;\n  border-right: 8px solid orange;\n}\n.border-stage4[data-v-06a0efad] {\n  border-top: 8px solid #77B300;\n  border-right: 8px solid #77B300;\n}\n.border-stage5[data-v-06a0efad] {\n  border-top: 8px solid #2A9FD6;\n  border-right: 8px solid #2A9FD6;\n}\n.border-stage6[data-v-06a0efad] {\n  border-top: 8px solid #20c997;\n  border-right: 8px solid #20c997;\n}\n.border-stage7[data-v-06a0efad] {\n  border-top: 8px solid #e83e8c;\n  border-right: 8px solid #e83e8c;\n}\n.border-stage8[data-v-06a0efad] {\n  border-top: 8px solid #9933CC;\n  border-right: 8px solid #9933CC;\n}\n.border-stage9[data-v-06a0efad] {\n  border-top: 8px solid #fff;\n  border-right: 8px solid #ffff;\n}\n.text-stage1[data-v-06a0efad] {\n  color: #CC0000;\n}\n.text-stage2[data-v-06a0efad] {\n  color: orangered;\n}\n.text-stage3[data-v-06a0efad] {\n  color: orange;\n}\n.text-stage4[data-v-06a0efad] {\n  color: #77B300;\n}\n.text-stage5[data-v-06a0efad] {\n  color: #2A9FD6;\n}\n.text-stage6[data-v-06a0efad] {\n  color: #20c997;\n}\n.text-stage7[data-v-06a0efad] {\n  color: #e83e8c;\n}\n.text-stage8[data-v-06a0efad] {\n  color: #9933CC;\n}\n.text-stage9[data-v-06a0efad] {\n  color: white;\n}\n.st0[data-v-06a0efad] {\n  fill: none;\n  stroke: #fff;\n  stroke-width: 3;\n  stroke-miterlimit: 10;\n}\n#tick[data-v-06a0efad], #tick-circle[data-v-06a0efad] {\n  fill: white;\n  stroke: none;\n  stroke-width: 10;\n  stroke-miterlimit: 10;\n}\n#welcome-animation[data-v-06a0efad] {\n  display: flex;\n  margin-bottom: 1rem;\n}\n#idea[data-v-06a0efad] {\n  padding-bottom: 3rem;\n}\n#head[data-v-06a0efad] {\n  opacity: 1;\n}\n#small-circle[data-v-06a0efad], #big-circle[data-v-06a0efad], #cloud[data-v-06a0efad] {\n  opacity: 0;\n}\ncircle[data-v-06a0efad], path[data-v-06a0efad] {\n  fill: white;\n}\n\n/* #circle1, #circle2, #circle3, #arrow-head {\n\n} */\n#arrow-1 path[data-v-06a0efad], #arrow-2 path[data-v-06a0efad] {\n  opacity: 0;\n}\n#arrow-1[data-v-06a0efad], #arrow-2[data-v-06a0efad] {\n  padding-top: 3rem;\n}\n#study[data-v-06a0efad] {\n  padding: 2rem 4rem 0 4rem;\n}\n#light-rays[data-v-06a0efad] {\n  opacity: 0;\n}\n#study-logo[data-v-06a0efad] {\n  height: 300px;\n}\n#job[data-v-06a0efad] {\n  padding: 2rem 3rem 1rem 3rem;\n}\n#job-complete[data-v-06a0efad] {\n  opacity: 0;\n}\n#circle-1[data-v-06a0efad] {\n  fill: #CC0000;\n}\n#circle-2[data-v-06a0efad] {\n  fill: orangered;\n}\n#circle-3[data-v-06a0efad] {\n  fill: orange;\n}\n#arrow-head-1[data-v-06a0efad] {\n  fill: #77B300;\n}\n#circle-4[data-v-06a0efad] {\n  fill: #2A9FD6;\n}\n#circle-5[data-v-06a0efad] {\n  fill: #20c997;\n}\n#circle-6[data-v-06a0efad] {\n  fill: #e83e8c;\n}\n#arrow-head-2[data-v-06a0efad] {\n  fill: #9933CC;\n}", ""]);
+exports.push([module.i, ".bg-stage1[data-v-06a0efad] {\n  background-color: #CC0000;\n}\n.bg-stage2[data-v-06a0efad] {\n  background-color: orangered;\n}\n.bg-stage3[data-v-06a0efad] {\n  background-color: orange;\n}\n.bg-stage4[data-v-06a0efad] {\n  background-color: #77B300;\n}\n.bg-stage5[data-v-06a0efad] {\n  background-color: #2A9FD6;\n}\n.bg-stage6[data-v-06a0efad] {\n  background-color: #20c997;\n}\n.bg-stage7[data-v-06a0efad] {\n  background-color: #e83e8c;\n}\n.bg-stage8[data-v-06a0efad] {\n  background-color: #9933CC;\n}\n.bg-stage9[data-v-06a0efad] {\n  background-color: #fff;\n  color: black !important;\n}\n.border-stage1[data-v-06a0efad] {\n  border-top: 8px solid #CC0000;\n  border-right: 8px solid #CC0000;\n}\n.border-stage2[data-v-06a0efad] {\n  border-top: 8px solid orangered;\n  border-right: 8px solid orangered;\n}\n.border-stage3[data-v-06a0efad] {\n  border-top: 8px solid orange;\n  border-right: 8px solid orange;\n}\n.border-stage4[data-v-06a0efad] {\n  border-top: 8px solid #77B300;\n  border-right: 8px solid #77B300;\n}\n.border-stage5[data-v-06a0efad] {\n  border-top: 8px solid #2A9FD6;\n  border-right: 8px solid #2A9FD6;\n}\n.border-stage6[data-v-06a0efad] {\n  border-top: 8px solid #20c997;\n  border-right: 8px solid #20c997;\n}\n.border-stage7[data-v-06a0efad] {\n  border-top: 8px solid #e83e8c;\n  border-right: 8px solid #e83e8c;\n}\n.border-stage8[data-v-06a0efad] {\n  border-top: 8px solid #9933CC;\n  border-right: 8px solid #9933CC;\n}\n.border-stage9[data-v-06a0efad] {\n  border-top: 8px solid #fff;\n  border-right: 8px solid #ffff;\n}\n.text-stage1[data-v-06a0efad] {\n  color: #CC0000;\n}\n.text-stage2[data-v-06a0efad] {\n  color: orangered;\n}\n.text-stage3[data-v-06a0efad] {\n  color: orange;\n}\n.text-stage4[data-v-06a0efad] {\n  color: #77B300;\n}\n.text-stage5[data-v-06a0efad] {\n  color: #2A9FD6;\n}\n.text-stage6[data-v-06a0efad] {\n  color: #20c997;\n}\n.text-stage7[data-v-06a0efad] {\n  color: #e83e8c;\n}\n.text-stage8[data-v-06a0efad] {\n  color: #9933CC;\n}\n.text-stage9[data-v-06a0efad] {\n  color: white;\n}\n.st0[data-v-06a0efad] {\n  fill: none;\n  stroke: #fff;\n  stroke-width: 1;\n  stroke-miterlimit: 10;\n}\n.st1[data-v-06a0efad] {\n  fill: none;\n  stroke: #fff;\n  stroke-width: 2;\n  stroke-miterlimit: 10;\n}\n#tick[data-v-06a0efad], #tick-circle[data-v-06a0efad] {\n  fill: white;\n  stroke: none;\n  stroke-width: 10;\n  stroke-miterlimit: 10;\n}\n#welcome-animation[data-v-06a0efad] {\n  display: flex;\n  margin-bottom: 1rem;\n}\n#idea[data-v-06a0efad] {\n  padding-bottom: 3rem;\n}\n#head[data-v-06a0efad] {\n  opacity: 1;\n}\n#small-circle[data-v-06a0efad], #big-circle[data-v-06a0efad], #cloud[data-v-06a0efad] {\n  opacity: 0;\n}\ncircle[data-v-06a0efad], path[data-v-06a0efad] {\n  fill: white;\n}\n\n/* #circle1, #circle2, #circle3, #arrow-head {\n\n} */\n#arrow-1 path[data-v-06a0efad], #arrow-2 path[data-v-06a0efad] {\n  opacity: 0;\n}\n#arrow-1[data-v-06a0efad], #arrow-2[data-v-06a0efad] {\n  padding-top: 3rem;\n}\n#study[data-v-06a0efad] {\n  padding: 2rem 4rem 0 4rem;\n}\n#light-rays[data-v-06a0efad] {\n  opacity: 0;\n}\n#study-logo[data-v-06a0efad] {\n  height: 300px;\n}\n#job[data-v-06a0efad] {\n  padding: 2rem 3rem 1rem 3rem;\n}\n#job-complete[data-v-06a0efad] {\n  opacity: 0;\n}\n#circle-1[data-v-06a0efad] {\n  fill: #CC0000;\n}\n#circle-2[data-v-06a0efad] {\n  fill: orangered;\n}\n#circle-3[data-v-06a0efad] {\n  fill: orange;\n}\n#arrow-head-1[data-v-06a0efad] {\n  fill: #77B300;\n}\n#circle-4[data-v-06a0efad] {\n  fill: #2A9FD6;\n}\n#circle-5[data-v-06a0efad] {\n  fill: #20c997;\n}\n#circle-6[data-v-06a0efad] {\n  fill: #e83e8c;\n}\n#arrow-head-2[data-v-06a0efad] {\n  fill: #9933CC;\n}", ""]);
 
 // exports
 
@@ -6051,7 +6064,7 @@ var staticRenderFns = [
       _c("h1", { staticClass: "display-4 text-center" }, [_vm._v("About")]),
       _vm._v(" "),
       _c("section", { staticClass: "mb-5 pb-3", attrs: { id: "theApp" } }, [
-        _c("h4", { staticClass: "mt-5 mb-3" }, [_vm._v("The App")]),
+        _c("h4", { staticClass: "mt-5" }, [_vm._v("The App")]),
         _vm._v(" "),
         _c("p", { staticClass: "py-2" }, [
           _vm._v(
@@ -6071,16 +6084,25 @@ var staticRenderFns = [
       ]),
       _vm._v(" "),
       _c("section", { staticClass: "pb-4", attrs: { id: "creator" } }, [
-        _c("h4", { staticClass: "mt-5 mb-3" }, [_vm._v("Creator")]),
+        _c("h4", { staticClass: "mt-5" }, [_vm._v("Creator")]),
         _vm._v(" "),
-        _c("p", { staticClass: "py-2" }, [_vm._v("I'm Paul!")]),
+        _c("p", { staticClass: "py-2" }, [_vm._v("I'm Paul Bingham!")]),
         _vm._v(" "),
         _c("p", { staticClass: "py-2" }, [
-          _vm._v("Check out my Github profile and other links below!")
+          _vm._v("Check out my Github profile and other links below:")
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "icon-group" }, [
           _c("i", { staticClass: "far fa-envelope fa-3x pr-3" }),
+          _vm._v(" "),
+          _c(
+            "a",
+            {
+              staticClass: "contact-info",
+              attrs: { href: "mailto:greenpaulo@yahoo.co.uk" }
+            },
+            [_vm._v("greenpaulo@yahoo.co.uk")]
+          ),
           _vm._v(" "),
           _c("span", { staticClass: "contact-info" }, [
             _vm._v("greenpaulo@yahoo.co.uk")
@@ -6118,12 +6140,94 @@ var staticRenderFns = [
           {
             staticClass: "btn btn-info",
             attrs: {
-              href: "https://www.youtube.com/watch?v=UnTQVlqmDQ0",
+              href: "https://www.youtube.com/watch?v=0pThnRneDjw",
               target: "_blank"
             }
           },
           [_vm._v("Watch Brad's Video")]
-        )
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "icons-svgs" }, [
+          _c("h5", { staticClass: "mt-4 py-3" }, [_vm._v("Icons")]),
+          _vm._v(" "),
+          _c("ul", [
+            _c("li", [
+              _c(
+                "a",
+                {
+                  attrs: {
+                    href:
+                      "https://thenounproject.com/search/?q=thought&i=1752082",
+                    target: "_blank"
+                  }
+                },
+                [_vm._v("'Thought'")]
+              ),
+              _vm._v(" icon by Scott Dunlap from the Noun Project.\n          ")
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c(
+                "a",
+                {
+                  attrs: {
+                    href:
+                      "https://thenounproject.com/search/?q=thought&i=1912229",
+                    target: "_blank"
+                  }
+                },
+                [_vm._v("'Thought'")]
+              ),
+              _vm._v(
+                " icon by Adrien Coquet from the Noun Project.\n          "
+              )
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c(
+                "a",
+                {
+                  attrs: {
+                    href:
+                      "https://thenounproject.com/search/?q=arrow&creator=127828&i=95077",
+                    target: "_blank"
+                  }
+                },
+                [_vm._v("'Arrow'")]
+              ),
+              _vm._v(" icon by Sarah JOY from the Noun Project.\n          ")
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c(
+                "a",
+                {
+                  attrs: {
+                    href:
+                      "https://thenounproject.com/search/?q=study&i=2773376",
+                    target: "_blank"
+                  }
+                },
+                [_vm._v("'Study'")]
+              ),
+              _vm._v(" icon by Vectorstall from the Noun Project\n          ")
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c(
+                "a",
+                {
+                  attrs: {
+                    href: "https://thenounproject.com/search/?q=job&i=2533034",
+                    target: "_blank"
+                  }
+                },
+                [_vm._v("'Job'")]
+              ),
+              _vm._v(" icon by Flatart from the Noun Project.\n          ")
+            ])
+          ])
+        ])
       ])
     ])
   }
@@ -8629,29 +8733,31 @@ var render = function() {
       },
       [
         _c("path", {
-          staticClass: "st0",
+          staticClass: "st1",
           attrs: {
             id: "head",
             d:
-              "M57,73.1c-0.1-0.3-0.2-0.7-0.3-1C55.5,58,43.8,47.3,29.7,47.3c-15,0-27.1,12.2-27.1,27.1c0,8.7,4,17.3,10.8,23.1c0.1,0.1,0.5,0.5,0.5,0.9v14.4c0,2.2,1.6,4,3.9,4.3l21.3,1.8c0.1,0,0.2,0,0.3,0c1,0,2.1-0.3,2.9-1.2c0.9-0.8,1.4-2,1.4-3.1v-9.3h6.7c3.5,0,6.2-2.8,6.2-6.2v-8.9h2.4c1.7,0,3.5-0.9,4.3-2.5c0.8-1.6,0.8-3.5-0.2-5L57,73.1z"
+              "M57,   73.1c-0.1-0.3-0.2-0.7-0.3-1c-1.2-14.1-12.9-24.8-27-24.8c-15,0-27.1,12.2-27.1,27.1\n\t\t\tc0,8.7,4,17.3,10.8,23.1c0.1,0.1,0.5,0.5,0.5,0.9v14.4c0,2.2,1.6,4,3.9,4.3l21.3,1.8c0.1,0,0.2,0,0.3,0c1,0,2.1-0.3,2.9-1.2c0.9-0.8,1.4-2,1.4-3.1v-9.3h6.7c3.5,0,6.2-2.8,6.2-6.2v-8.9H59c1.7,0,3.5-0.9,4.3-2.5c0.8-1.6,0.8-3.5-0.2-5L57,73.1z"
           }
         }),
         _vm._v(" "),
         _c("path", {
-          staticClass: "st0",
+          staticClass: "st1",
           attrs: {
             id: "cloud",
             d:
-              "M89.7,34.1c-1.8,0-3.5-0.6-4.8-1.7c-0.8-0.6-1.9-0.7-2.7-0.1c-2.1,1.5-4.6,2.3-7.2,2.3c-3.7,0-7.3-1.7-9.7-4.6\n      c-0.4-0.5-1.1-0.8-1.7-0.8c-0.3,0-0.6,0.1-0.9,0.2c-1,0.4-2,0.6-3.1,0.6c-4.2,0-7.6-3.4-7.6-7.6s3.4-7.6,7.6-7.6c0.1,0,0.2,0,0.2,0\n      c1,0,1.9-0.7,2.1-1.7C63,8.9,66.8,6,71.1,6c2.8,0,5.5,1.2,7.3,3.4c0.7,0.8,1.9,1,2.8,0.5c1.1-0.6,2.4-1,3.7-1\n      c4.2,0,7.6,3.4,7.6,7.6c0,0.3,0,0.6-0.1,1c-0.1,0.9,0.3,1.8,1.1,2.2c2.4,1.4,3.8,3.9,3.8,6.6C97.4,30.7,93.9,34.1,89.7,34.1z"
+              "M89.7,37.1c-1.8,0-3.5-0.6-4.8-1.7c-0.8-0.6-1.9-0.7-2.7-0.1c-2.1,1.5-4.6,2.3-7.2,2.3c-3.7,0-7.3-1.7-9.7-4.6c-0.4-0.5-1.1-0.8-1.7-0.8c-0.3,0-0.6,0.1-0.9,0.2c-1,0.4-2,0.6-3.1,0.6c-4.2,0-7.6-3.4-7.6-7.6s3.4-7.6,7.6-7.6c0.1,0,0.2,0,0.2,0c1,0,1.9-0.7,2.1-1.7C63,11.9,66.8,9,71.1,9c2.8,0,5.5,1.2,7.3,3.4c0.7,0.8,1.9,1,2.8,0.5c1.1-0.6,2.4-1,3.7-1c4.2,0,7.6,3.4,7.6,7.6c0,0.3,0,0.6-0.1,1c-0.1,0.9,0.3,1.8,1.1,2.2c2.4,1.4,3.8,3.9,3.8,6.6C97.4,33.7,93.9,37.1,89.7,37.1z"
           }
         }),
         _vm._v(" "),
         _c("circle", {
-          attrs: { id: "small-circle", cx: "58", cy: "45.4", r: "2.8" }
+          staticClass: "st1",
+          attrs: { id: "small-circle", cx: "55.2", cy: "47.3", r: "2.8" }
         }),
         _vm._v(" "),
         _c("circle", {
-          attrs: { id: "big-circle", cx: "66.1", cy: "41.8", r: "3.6" }
+          staticClass: "st1",
+          attrs: { id: "big-circle", cx: "64.7", cy: "42.8", r: "3.6" }
         })
       ]
     ),

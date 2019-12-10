@@ -4,7 +4,7 @@
       <h1 class="display-4 text-center">About</h1>
       
       <section id="theApp" class="mb-5 pb-3">
-        <h4 class="mt-5 mb-3">The App</h4>
+        <h4 class="mt-5">The App</h4>
         <p class="py-2">As a self taught developer I spent a lot of time, in the beginning, trying to figure out what to learn! Unlike a university course, there existed no curriculum for self-studying devs at home. So after spending time researching I built my own.</p>
 
         <p class="py-2">I realised that many other prospective developers could potentially benefit from my research and get straight to learning. So I built this app to share my knowledge. I hope you find it useful!</p>
@@ -13,11 +13,12 @@
       </section>
 
       <section id="creator" class="pb-4">
-        <h4 class="mt-5 mb-3">Creator</h4>
-        <p class="py-2">I'm Paul!</p>
-        <p class="py-2">Check out my Github profile and other links below!</p>
+        <h4 class="mt-5">Creator</h4>
+        <p class="py-2">I'm Paul Bingham!</p>
+        <p class="py-2">Check out my Github profile and other links below:</p>
         <div class="icon-group">
           <i class="far fa-envelope fa-3x pr-3"></i>
+          <a href="mailto:greenpaulo@yahoo.co.uk" class="contact-info">greenpaulo@yahoo.co.uk</a>
           <span class="contact-info">greenpaulo@yahoo.co.uk</span>
         </div>
         <div class="icon-group">
@@ -29,13 +30,28 @@
       <section id="credits" class="pb-5">
         <h4 class="mt-5">Credits</h4>
         <p class="py-2">The Stages for this curriculum are based on Brad Traversy's annual "Web Development" youtube video. Brad is a great teacher and I highly recommend his channel!</p>
-        <a href="https://www.youtube.com/watch?v=UnTQVlqmDQ0" target="_blank" class="btn btn-info">Watch Brad's Video</a>
-        <!-- <div class="icons-svgs">
-          <h5 class="mt-4 py-3">Icons & SVGs</h5>
+        <a href="https://www.youtube.com/watch?v=0pThnRneDjw" target="_blank" class="btn btn-info">Watch Brad's Video</a>
+        <div class="icons-svgs">
+          <h5 class="mt-4 py-3">Icons</h5>
           <ul>
-            <li class="><a href="https://thenounproject.com/search/?q=road&i=1141292" target="_blank">'Road'</a> icon by Bakunetsu Kaito from the Noun Project.</li>
+            <li>
+              <a href="https://thenounproject.com/search/?q=thought&i=1752082" target="_blank">'Thought'</a> icon by Scott Dunlap from the Noun Project.
+            </li>
+            <li>
+              <a href="https://thenounproject.com/search/?q=thought&i=1912229" target="_blank">'Thought'</a> icon by Adrien Coquet from the Noun Project.
+            </li>
+            <li>
+              <a href="https://thenounproject.com/search/?q=arrow&creator=127828&i=95077" target="_blank">'Arrow'</a> icon by Sarah JOY from the Noun Project.
+            </li>
+            <li>
+              <a href="https://thenounproject.com/search/?q=study&i=2773376" target="_blank">'Study'</a> icon by Vectorstall from the Noun Project
+            </li>
+            <li>
+              <a href="https://thenounproject.com/search/?q=job&i=2533034" target="_blank">'Job'</a> icon by Flatart from the Noun Project.
+            </li>
+
           </ul>
-        </div> -->
+        </div>
       </section>
 
     </div>
@@ -59,6 +75,10 @@ export default {
 @import './resources/sass/variables';
 @import './resources/sass/colors';
 
+h4 {
+  margin-bottom: 1.5rem;
+}
+
 p {
   color: darken(white, 15%);
   font-size: 1.3rem;
@@ -78,7 +98,7 @@ p {
     font-size: 1.2rem; 
 
     &:hover {
-      color: darken(white, 30%);
+      color: white;
     }
   }
 
@@ -98,6 +118,14 @@ p {
   h5 {
     font-size: 1.3rem !important;
   }
+}
+
+.fa-envelope {
+  color: $stage4;
+}
+
+.fa-github {
+  color: $stage5;
 }
 
 // Media queries

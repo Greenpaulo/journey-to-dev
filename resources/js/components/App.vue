@@ -23,7 +23,7 @@
 
 body {
   background: rgb(23,20,25);
-  background: linear-gradient(79deg, rgba(23,20,25,1) 0%, rgba(2,0,9,1) 100%);
+  // background: linear-gradient(79deg, rgba(23,20,25,1) 0%, rgba(2,0,9,1) 100%);
   // background: rgb(15,2,25);
   // background: linear-gradient(79deg, rgba(15,2,25,1) 0%, rgba(2,0,9,1) 100%);
   /* background-color: #100e17; */
