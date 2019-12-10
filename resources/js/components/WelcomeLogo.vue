@@ -28,12 +28,12 @@
       </svg>
     </div>
     
-    <div id="buttons">
+    <!-- <div id="buttons">
       <router-link v-if="isLoggedIn === false" class="btn btn-info btn-lg" to="/login" role="button">Login</router-link>
       <router-link v-if="isLoggedIn === false" class="btn btn-primary btn-lg" to="/register" role="button">Register</router-link>
       <router-link v-if="isLoggedIn === false" class="btn btn-success btn-lg" to="/thejourney" role="button">Find Out More</router-link>
       <router-link v-if="isLoggedIn" class="btn btn-success btn-lg" to="/roadmap" role="button">Get Started</router-link>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -65,6 +65,10 @@ export default {
   min-width: 50vw;
 }
 
+#logo {
+  padding-right: 3rem;
+}
+
 #buttons {
   margin-top: 3rem;
 }
@@ -76,7 +80,7 @@ export default {
   animation-duration: 0.75s, 3s;
   animation-fill-mode: forwards;
   animation-timing-function: ease;
-  animation-delay: 0s, 2.4s;
+  animation-delay: 7.5s, 9.9s;
 }
 
 #logo path:nth-child(2){
@@ -86,7 +90,7 @@ export default {
   animation-duration: 0.75s, 3s;
   animation-fill-mode: forwards;
   animation-timing-function: ease;
-  animation-delay: 0.2s, 2.4s;
+  animation-delay: 7.7s, 9.9s;
 }
 
 #logo path:nth-child(3){
@@ -96,7 +100,7 @@ export default {
   animation-duration: 0.75s, 3s;
   animation-fill-mode: forwards;
   animation-timing-function: ease;
-  animation-delay: 0.4s, 2.4s;
+  animation-delay: 7.9s, 9.9s;
 }
 
 #logo path:nth-child(4){
@@ -106,7 +110,7 @@ export default {
   animation-duration: 0.75s, 3s;
   animation-fill-mode: forwards;
   animation-timing-function: ease;
-  animation-delay: 0.6s, 2.4s;
+  animation-delay: 8.1s, 9.9s;
 }
 
 #logo path:nth-child(5){
@@ -116,7 +120,7 @@ export default {
   animation-duration: 0.75s, 3s;
   animation-fill-mode: forwards;
   animation-timing-function: ease;
-  animation-delay: 0.8s, 2.4s;
+  animation-delay: 8.3s, 9.9s;
 }
 
 #logo path:nth-child(6){
@@ -126,7 +130,7 @@ export default {
   animation-duration: 0.75s, 3s;
   animation-fill-mode: forwards;
   animation-timing-function: ease;
-  animation-delay: 1s, 2.4s;
+  animation-delay: 8.5s, 9.9s;
 }
 
 #logo path:nth-child(7){
@@ -136,7 +140,7 @@ export default {
   animation-duration: 0.75s, 3s;
   animation-fill-mode: forwards;
   animation-timing-function: ease;
-  animation-delay: 1.2s, 2.4s;
+  animation-delay: 8.7s, 9.9s;
 }
 
 #logo path:nth-child(8){
@@ -146,7 +150,7 @@ export default {
   animation-duration: 0.75s, 3s;
   animation-fill-mode: forwards;
   animation-timing-function: ease;
-  animation-delay: 1.4s, 2.4s;
+  animation-delay: 8.9s, 9.9s;
 }
 
 #logo path:nth-child(9){
@@ -156,7 +160,7 @@ export default {
   animation-duration: 0.75s, 3s;
   animation-fill-mode: forwards;
   animation-timing-function: ease;
-  animation-delay: 1.6s, 2.4s;
+  animation-delay: 9.1s, 9.9s;
 }
 
 #logo path:nth-child(10){
@@ -166,7 +170,7 @@ export default {
   animation-duration: 0.75s, 3s;
   animation-fill-mode: forwards;
   animation-timing-function: ease;
-  animation-delay: 1.8s, 2.4s;
+  animation-delay: 9.3s, 9.9s;
 }
 
 #logo path:nth-child(11){
@@ -176,7 +180,7 @@ export default {
   animation-duration: 0.75s, 3s;
   animation-fill-mode: forwards;
   animation-timing-function: ease;
-  animation-delay: 2s, 2.4s;
+  animation-delay: 9.5s, 9.9s;
 }
 
 #logo path:nth-child(12){
@@ -186,7 +190,7 @@ export default {
   animation-duration: 0.75s, 3s;
   animation-fill-mode: forwards;
   animation-timing-function: ease;
-  animation-delay: 2.2s, 2.4s;
+  animation-delay: 9.7s, 9.9s;
 }
 
 </style>

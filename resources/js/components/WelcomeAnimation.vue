@@ -117,10 +117,10 @@
 		</g>
         
       <g id="job-complete">
-        <path class="tick-circle" d="M243.9,207.9c-38.8,0-70.4-31.6-70.4-70.4S205,67,243.9,67c3.5,0,6.4,2.9,6.4,6.4c0,3.5-2.9,6.4-6.4,6.4
+        <path id="tick-circle" d="M243.9,207.9c-38.8,0-70.4-31.6-70.4-70.4S205,67,243.9,67c3.5,0,6.4,2.9,6.4,6.4c0,3.5-2.9,6.4-6.4,6.4
         c-31.8,0-57.6,25.9-57.6,57.6s25.9,57.6,57.6,57.6c31.8,0,57.6-25.9,57.6-57.6c0-3.5,2.9-6.4,6.4-6.4c3.5,0,6.4,2.9,6.4,6.4
         C314.3,176.3,282.7,207.9,243.9,207.9z"/>
-        <path class="tick" d="M233.2,165.2c-1.6,0-3.3-0.6-4.5-1.9l-21.3-21.3c-2.5-2.5-2.5-6.6,0-9.1c2.5-2.5,6.6-2.5,9.1,0l17.2,17.2
+        <path id="tick" d="M233.2,165.2c-1.6,0-3.3-0.6-4.5-1.9l-21.3-21.3c-2.5-2.5-2.5-6.6,0-9.1c2.5-2.5,6.6-2.5,9.1,0l17.2,17.2
         l59.6-49.6c2.7-2.3,6.8-1.9,9,0.8c2.3,2.7,1.9,6.8-0.8,9l-64,53.4C236.1,164.7,234.6,165.2,233.2,165.2z"/>
       </g>
     </svg>  
@@ -158,6 +158,7 @@ export default {
     // Job SVG
     const handshake = document.getElementById('handshake');
     const jobComplete = document.getElementById('job-complete');
+    
 
 
     // Initialise the gsap timeline
@@ -188,17 +189,19 @@ export default {
     tl.to(jobComplete, { opacity: 1, duration: 0.5});
 
 
-    function calculatePathLength() {
-          console.log('func ran');
-          //Calculate path lengths of the svg logo
-          const tick = document.getElementById('#tick');
-          console.log('tick', tick.getTotalLength());
-          const tickCircle = document.getElementById('#tick-circle');
-          console.log('tick-circle', tickCircle.getTotalLength());
-    }
-    calculatePathLength();
+    // function calculatePathLength() {
+    //       console.log('func ran');
+    //       //Calculate path lengths of the svg logo
+    //       const tick = document.getElementById('tick');
+    //       console.log('tick in func', tick);
+    //       console.log('tick', tick.getTotalLength());
+    //       const tickCircle = document.getElementById('tick-circle');
+    //       console.log('tick-circle', tickCircle.getTotalLength());
+    // }
+    // calculatePathLength();
 
-  }
+  },
+  
 }
 </script>
 
@@ -211,15 +214,29 @@ export default {
   stroke-miterlimit:10;
 }
 
-.tick, .tick-circle {
+#tick, #tick-circle {
   fill:white;
   stroke:none;
   stroke-width:10;
   stroke-miterlimit:10;
 }
 
+// #tick {
+//   stroke-dasharray: 265.30194091796875;
+//   stroke-dashoffset: 265.30194091796875;
+// }
+
+// #tick-circle {
+//   stroke-dasharray: 643.3987426757812;
+//   stroke-dashoffset: 643.3987426757812;
+// }
+
 #welcome-animation {
   display: flex
+}
+
+#idea {
+  padding-bottom: 3rem;
 }
 
 #head {
@@ -242,8 +259,8 @@ circle, path {
   opacity: 0;
 }
 
-#arrow {
- margin-bottom: 30px;
+#arrow-1, #arrow-2 {
+ padding-top: 3rem;
 }
 
 #study {
@@ -259,7 +276,7 @@ circle, path {
 }
 
 #job {
-  padding: 1.5rem 3rem;
+  padding: 2rem 3rem 1rem 3rem;
 }
 
 #job-complete {

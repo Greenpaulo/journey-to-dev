@@ -3383,18 +3383,16 @@ __webpack_require__.r(__webpack_exports__);
     tl.to(jobComplete, {
       opacity: 1,
       duration: 0.5
-    });
-
-    function calculatePathLength() {
-      console.log('func ran'); //Calculate path lengths of the svg logo
-
-      var tick = document.getElementById('#tick');
-      console.log('tick', tick.getTotalLength());
-      var tickCircle = document.getElementById('#tick-circle');
-      console.log('tick-circle', tickCircle.getTotalLength());
-    }
-
-    calculatePathLength();
+    }); // function calculatePathLength() {
+    //       console.log('func ran');
+    //       //Calculate path lengths of the svg logo
+    //       const tick = document.getElementById('tick');
+    //       console.log('tick in func', tick);
+    //       console.log('tick', tick.getTotalLength());
+    //       const tickCircle = document.getElementById('tick-circle');
+    //       console.log('tick-circle', tickCircle.getTotalLength());
+    // }
+    // calculatePathLength();
   }
 });
 
@@ -3635,7 +3633,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".st0[data-v-06a0efad] {\n  fill: none;\n  stroke: #fff;\n  stroke-width: 3;\n  stroke-miterlimit: 10;\n}\n.tick[data-v-06a0efad], .tick-circle[data-v-06a0efad] {\n  fill: white;\n  stroke: none;\n  stroke-width: 10;\n  stroke-miterlimit: 10;\n}\n#welcome-animation[data-v-06a0efad] {\n  display: flex;\n}\n#head[data-v-06a0efad] {\n  opacity: 1;\n}\n#small-circle[data-v-06a0efad], #big-circle[data-v-06a0efad], #cloud[data-v-06a0efad] {\n  opacity: 0;\n}\ncircle[data-v-06a0efad], path[data-v-06a0efad] {\n  fill: white;\n}\n\n/* #circle1, #circle2, #circle3, #arrow-head {\n\n} */\n#arrow-1 path[data-v-06a0efad], #arrow-2 path[data-v-06a0efad] {\n  opacity: 0;\n}\n#arrow[data-v-06a0efad] {\n  margin-bottom: 30px;\n}\n#study[data-v-06a0efad] {\n  padding: 2rem 4rem 0 4rem;\n}\n#light-rays[data-v-06a0efad] {\n  opacity: 0;\n}\n#study-logo[data-v-06a0efad] {\n  height: 300px;\n}\n#job[data-v-06a0efad] {\n  padding: 1.5rem 3rem;\n}\n#job-complete[data-v-06a0efad] {\n  opacity: 0;\n}", ""]);
+exports.push([module.i, ".st0[data-v-06a0efad] {\n  fill: none;\n  stroke: #fff;\n  stroke-width: 3;\n  stroke-miterlimit: 10;\n}\n#tick[data-v-06a0efad], #tick-circle[data-v-06a0efad] {\n  fill: white;\n  stroke: none;\n  stroke-width: 10;\n  stroke-miterlimit: 10;\n}\n#welcome-animation[data-v-06a0efad] {\n  display: flex;\n}\n#idea[data-v-06a0efad] {\n  padding-bottom: 3rem;\n}\n#head[data-v-06a0efad] {\n  opacity: 1;\n}\n#small-circle[data-v-06a0efad], #big-circle[data-v-06a0efad], #cloud[data-v-06a0efad] {\n  opacity: 0;\n}\ncircle[data-v-06a0efad], path[data-v-06a0efad] {\n  fill: white;\n}\n\n/* #circle1, #circle2, #circle3, #arrow-head {\n\n} */\n#arrow-1 path[data-v-06a0efad], #arrow-2 path[data-v-06a0efad] {\n  opacity: 0;\n}\n#arrow-1[data-v-06a0efad], #arrow-2[data-v-06a0efad] {\n  padding-top: 3rem;\n}\n#study[data-v-06a0efad] {\n  padding: 2rem 4rem 0 4rem;\n}\n#light-rays[data-v-06a0efad] {\n  opacity: 0;\n}\n#study-logo[data-v-06a0efad] {\n  height: 300px;\n}\n#job[data-v-06a0efad] {\n  padding: 2rem 3rem 1rem 3rem;\n}\n#job-complete[data-v-06a0efad] {\n  opacity: 0;\n}", ""]);
 
 // exports
 
@@ -3654,7 +3652,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "@-webkit-keyframes hue {\nfrom {\n    -webkit-filter: hue-rotate(0deg);\n            filter: hue-rotate(0deg);\n}\nto {\n    -webkit-filter: hue-rotate(-360deg);\n            filter: hue-rotate(-360deg);\n}\n}\n@keyframes hue {\nfrom {\n    -webkit-filter: hue-rotate(0deg);\n            filter: hue-rotate(0deg);\n}\nto {\n    -webkit-filter: hue-rotate(-360deg);\n            filter: hue-rotate(-360deg);\n}\n}\n@-webkit-keyframes bg-animation {\n0% {\n    background-position: left;\n}\n100% {\n    background-position: right;\n}\n}\n@keyframes bg-animation {\n0% {\n    background-position: left;\n}\n100% {\n    background-position: right;\n}\n}\n@-webkit-keyframes line-anim {\nto {\n    stroke-dashoffset: 0;\n}\n}\n@keyframes line-anim {\nto {\n    stroke-dashoffset: 0;\n}\n}\n@-webkit-keyframes fill-red {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: red;\n}\n}\n@keyframes fill-red {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: red;\n}\n}\n@-webkit-keyframes fill-orange {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ffb733;\n}\n}\n@keyframes fill-orange {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ffb733;\n}\n}\n@-webkit-keyframes fill-orangered {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ff6a33;\n}\n}\n@keyframes fill-orangered {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ff6a33;\n}\n}\n@-webkit-keyframes fill-green {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #99e600;\n}\n}\n@keyframes fill-green {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #99e600;\n}\n}\n@-webkit-keyframes fill-blue {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #55b2de;\n}\n}\n@keyframes fill-blue {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #55b2de;\n}\n}\n@-webkit-keyframes fill-teal {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #3ce0af;\n}\n}\n@keyframes fill-teal {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #3ce0af;\n}\n}\n@-webkit-keyframes fill-pink {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ed6ca7;\n}\n}\n@keyframes fill-pink {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ed6ca7;\n}\n}\n@-webkit-keyframes fill-cyan {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ad5cd6;\n}\n}\n@keyframes fill-cyan {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ad5cd6;\n}\n}\n@-webkit-keyframes fill-white {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: white;\n}\n}\n@keyframes fill-white {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: white;\n}\n}\n@-webkit-keyframes fill-black {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: black;\n}\n}\n@keyframes fill-black {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: black;\n}\n}\n@-webkit-keyframes pulse {\n50% {\n    transform: scale(0.8);\n}\n100% {\n    transform: scale(1);\n}\n}\n@keyframes pulse {\n50% {\n    transform: scale(0.8);\n}\n100% {\n    transform: scale(1);\n}\n}\n#welcome-svg {\n  min-width: 50vw;\n}\n#buttons {\n  margin-top: 3rem;\n}\n#logo path:nth-child(1) {\n  stroke-dasharray: 334.1294250488;\n  stroke-dashoffset: 334.1294250488;\n  -webkit-animation-name: line-anim, fill-red;\n          animation-name: line-anim, fill-red;\n  -webkit-animation-duration: 0.75s, 3s;\n          animation-duration: 0.75s, 3s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 0s, 2.4s;\n          animation-delay: 0s, 2.4s;\n}\n#logo path:nth-child(2) {\n  stroke-dasharray: 398.1838378906;\n  stroke-dashoffset: 398.1838378906;\n  -webkit-animation-name: line-anim, fill-orange;\n          animation-name: line-anim, fill-orange;\n  -webkit-animation-duration: 0.75s, 3s;\n          animation-duration: 0.75s, 3s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 0.2s, 2.4s;\n          animation-delay: 0.2s, 2.4s;\n}\n#logo path:nth-child(3) {\n  stroke-dasharray: 393.3806152344;\n  stroke-dashoffset: 393.3806152344;\n  -webkit-animation-name: line-anim, fill-orangered;\n          animation-name: line-anim, fill-orangered;\n  -webkit-animation-duration: 0.75s, 3s;\n          animation-duration: 0.75s, 3s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 0.4s, 2.4s;\n          animation-delay: 0.4s, 2.4s;\n}\n#logo path:nth-child(4) {\n  stroke-dasharray: 232.6978607178;\n  stroke-dashoffset: 232.6978607178;\n  -webkit-animation-name: line-anim, fill-green;\n          animation-name: line-anim, fill-green;\n  -webkit-animation-duration: 0.75s, 3s;\n          animation-duration: 0.75s, 3s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 0.6s, 2.4s;\n          animation-delay: 0.6s, 2.4s;\n}\n#logo path:nth-child(5) {\n  stroke-dasharray: 395.8296203613;\n  stroke-dashoffset: 395.8296203613;\n  -webkit-animation-name: line-anim, fill-blue;\n          animation-name: line-anim, fill-blue;\n  -webkit-animation-duration: 0.75s, 3s;\n          animation-duration: 0.75s, 3s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 0.8s, 2.4s;\n          animation-delay: 0.8s, 2.4s;\n}\n#logo path:nth-child(6) {\n  stroke-dasharray: 437.6187133789;\n  stroke-dashoffset: 437.6187133789;\n  -webkit-animation-name: line-anim, fill-teal;\n          animation-name: line-anim, fill-teal;\n  -webkit-animation-duration: 0.75s, 3s;\n          animation-duration: 0.75s, 3s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 1s, 2.4s;\n          animation-delay: 1s, 2.4s;\n}\n#logo path:nth-child(7) {\n  stroke-dasharray: 404.7785949707;\n  stroke-dashoffset: 404.7785949707;\n  -webkit-animation-name: line-anim, fill-pink;\n          animation-name: line-anim, fill-pink;\n  -webkit-animation-duration: 0.75s, 3s;\n          animation-duration: 0.75s, 3s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 1.2s, 2.4s;\n          animation-delay: 1.2s, 2.4s;\n}\n#logo path:nth-child(8) {\n  stroke-dasharray: 363.0939941406;\n  stroke-dashoffset: 363.0939941406;\n  -webkit-animation-name: line-anim, fill-cyan;\n          animation-name: line-anim, fill-cyan;\n  -webkit-animation-duration: 0.75s, 3s;\n          animation-duration: 0.75s, 3s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 1.4s, 2.4s;\n          animation-delay: 1.4s, 2.4s;\n}\n#logo path:nth-child(9) {\n  stroke-dasharray: 398.1834106445;\n  stroke-dashoffset: 398.1834106445;\n  -webkit-animation-name: line-anim, fill-white;\n          animation-name: line-anim, fill-white;\n  -webkit-animation-duration: 0.75s, 3s;\n          animation-duration: 0.75s, 3s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 1.6s, 2.4s;\n          animation-delay: 1.6s, 2.4s;\n}\n#logo path:nth-child(10) {\n  stroke-dasharray: 542.6750488281;\n  stroke-dashoffset: 542.6750488281;\n  -webkit-animation-name: line-anim, fill-red;\n          animation-name: line-anim, fill-red;\n  -webkit-animation-duration: 0.75s, 3s;\n          animation-duration: 0.75s, 3s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 1.8s, 2.4s;\n          animation-delay: 1.8s, 2.4s;\n}\n#logo path:nth-child(11) {\n  stroke-dasharray: 437.6190185547;\n  stroke-dashoffset: 437.6190185547;\n  -webkit-animation-name: line-anim, fill-orange;\n          animation-name: line-anim, fill-orange;\n  -webkit-animation-duration: 0.75s, 3s;\n          animation-duration: 0.75s, 3s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 2s, 2.4s;\n          animation-delay: 2s, 2.4s;\n}\n#logo path:nth-child(12) {\n  stroke-dasharray: 321.1700439453;\n  stroke-dashoffset: 321.1700439453;\n  -webkit-animation-name: line-anim, fill-orangered;\n          animation-name: line-anim, fill-orangered;\n  -webkit-animation-duration: 0.75s, 3s;\n          animation-duration: 0.75s, 3s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 2.2s, 2.4s;\n          animation-delay: 2.2s, 2.4s;\n}", ""]);
+exports.push([module.i, "@-webkit-keyframes hue {\nfrom {\n    -webkit-filter: hue-rotate(0deg);\n            filter: hue-rotate(0deg);\n}\nto {\n    -webkit-filter: hue-rotate(-360deg);\n            filter: hue-rotate(-360deg);\n}\n}\n@keyframes hue {\nfrom {\n    -webkit-filter: hue-rotate(0deg);\n            filter: hue-rotate(0deg);\n}\nto {\n    -webkit-filter: hue-rotate(-360deg);\n            filter: hue-rotate(-360deg);\n}\n}\n@-webkit-keyframes bg-animation {\n0% {\n    background-position: left;\n}\n100% {\n    background-position: right;\n}\n}\n@keyframes bg-animation {\n0% {\n    background-position: left;\n}\n100% {\n    background-position: right;\n}\n}\n@-webkit-keyframes line-anim {\nto {\n    stroke-dashoffset: 0;\n}\n}\n@keyframes line-anim {\nto {\n    stroke-dashoffset: 0;\n}\n}\n@-webkit-keyframes fill-red {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: red;\n}\n}\n@keyframes fill-red {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: red;\n}\n}\n@-webkit-keyframes fill-orange {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ffb733;\n}\n}\n@keyframes fill-orange {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ffb733;\n}\n}\n@-webkit-keyframes fill-orangered {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ff6a33;\n}\n}\n@keyframes fill-orangered {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ff6a33;\n}\n}\n@-webkit-keyframes fill-green {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #99e600;\n}\n}\n@keyframes fill-green {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #99e600;\n}\n}\n@-webkit-keyframes fill-blue {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #55b2de;\n}\n}\n@keyframes fill-blue {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #55b2de;\n}\n}\n@-webkit-keyframes fill-teal {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #3ce0af;\n}\n}\n@keyframes fill-teal {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #3ce0af;\n}\n}\n@-webkit-keyframes fill-pink {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ed6ca7;\n}\n}\n@keyframes fill-pink {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ed6ca7;\n}\n}\n@-webkit-keyframes fill-cyan {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ad5cd6;\n}\n}\n@keyframes fill-cyan {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: #ad5cd6;\n}\n}\n@-webkit-keyframes fill-white {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: white;\n}\n}\n@keyframes fill-white {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: white;\n}\n}\n@-webkit-keyframes fill-black {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: black;\n}\n}\n@keyframes fill-black {\nfrom {\n    fill: transparent;\n}\nto {\n    fill: black;\n}\n}\n@-webkit-keyframes pulse {\n50% {\n    transform: scale(0.8);\n}\n100% {\n    transform: scale(1);\n}\n}\n@keyframes pulse {\n50% {\n    transform: scale(0.8);\n}\n100% {\n    transform: scale(1);\n}\n}\n#welcome-svg {\n  min-width: 50vw;\n}\n#logo {\n  padding-right: 3rem;\n}\n#buttons {\n  margin-top: 3rem;\n}\n#logo path:nth-child(1) {\n  stroke-dasharray: 334.1294250488;\n  stroke-dashoffset: 334.1294250488;\n  -webkit-animation-name: line-anim, fill-red;\n          animation-name: line-anim, fill-red;\n  -webkit-animation-duration: 0.75s, 3s;\n          animation-duration: 0.75s, 3s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 7.5s, 9.9s;\n          animation-delay: 7.5s, 9.9s;\n}\n#logo path:nth-child(2) {\n  stroke-dasharray: 398.1838378906;\n  stroke-dashoffset: 398.1838378906;\n  -webkit-animation-name: line-anim, fill-orange;\n          animation-name: line-anim, fill-orange;\n  -webkit-animation-duration: 0.75s, 3s;\n          animation-duration: 0.75s, 3s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 7.7s, 9.9s;\n          animation-delay: 7.7s, 9.9s;\n}\n#logo path:nth-child(3) {\n  stroke-dasharray: 393.3806152344;\n  stroke-dashoffset: 393.3806152344;\n  -webkit-animation-name: line-anim, fill-orangered;\n          animation-name: line-anim, fill-orangered;\n  -webkit-animation-duration: 0.75s, 3s;\n          animation-duration: 0.75s, 3s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 7.9s, 9.9s;\n          animation-delay: 7.9s, 9.9s;\n}\n#logo path:nth-child(4) {\n  stroke-dasharray: 232.6978607178;\n  stroke-dashoffset: 232.6978607178;\n  -webkit-animation-name: line-anim, fill-green;\n          animation-name: line-anim, fill-green;\n  -webkit-animation-duration: 0.75s, 3s;\n          animation-duration: 0.75s, 3s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 8.1s, 9.9s;\n          animation-delay: 8.1s, 9.9s;\n}\n#logo path:nth-child(5) {\n  stroke-dasharray: 395.8296203613;\n  stroke-dashoffset: 395.8296203613;\n  -webkit-animation-name: line-anim, fill-blue;\n          animation-name: line-anim, fill-blue;\n  -webkit-animation-duration: 0.75s, 3s;\n          animation-duration: 0.75s, 3s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 8.3s, 9.9s;\n          animation-delay: 8.3s, 9.9s;\n}\n#logo path:nth-child(6) {\n  stroke-dasharray: 437.6187133789;\n  stroke-dashoffset: 437.6187133789;\n  -webkit-animation-name: line-anim, fill-teal;\n          animation-name: line-anim, fill-teal;\n  -webkit-animation-duration: 0.75s, 3s;\n          animation-duration: 0.75s, 3s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 8.5s, 9.9s;\n          animation-delay: 8.5s, 9.9s;\n}\n#logo path:nth-child(7) {\n  stroke-dasharray: 404.7785949707;\n  stroke-dashoffset: 404.7785949707;\n  -webkit-animation-name: line-anim, fill-pink;\n          animation-name: line-anim, fill-pink;\n  -webkit-animation-duration: 0.75s, 3s;\n          animation-duration: 0.75s, 3s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 8.7s, 9.9s;\n          animation-delay: 8.7s, 9.9s;\n}\n#logo path:nth-child(8) {\n  stroke-dasharray: 363.0939941406;\n  stroke-dashoffset: 363.0939941406;\n  -webkit-animation-name: line-anim, fill-cyan;\n          animation-name: line-anim, fill-cyan;\n  -webkit-animation-duration: 0.75s, 3s;\n          animation-duration: 0.75s, 3s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 8.9s, 9.9s;\n          animation-delay: 8.9s, 9.9s;\n}\n#logo path:nth-child(9) {\n  stroke-dasharray: 398.1834106445;\n  stroke-dashoffset: 398.1834106445;\n  -webkit-animation-name: line-anim, fill-white;\n          animation-name: line-anim, fill-white;\n  -webkit-animation-duration: 0.75s, 3s;\n          animation-duration: 0.75s, 3s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 9.1s, 9.9s;\n          animation-delay: 9.1s, 9.9s;\n}\n#logo path:nth-child(10) {\n  stroke-dasharray: 542.6750488281;\n  stroke-dashoffset: 542.6750488281;\n  -webkit-animation-name: line-anim, fill-red;\n          animation-name: line-anim, fill-red;\n  -webkit-animation-duration: 0.75s, 3s;\n          animation-duration: 0.75s, 3s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 9.3s, 9.9s;\n          animation-delay: 9.3s, 9.9s;\n}\n#logo path:nth-child(11) {\n  stroke-dasharray: 437.6190185547;\n  stroke-dashoffset: 437.6190185547;\n  -webkit-animation-name: line-anim, fill-orange;\n          animation-name: line-anim, fill-orange;\n  -webkit-animation-duration: 0.75s, 3s;\n          animation-duration: 0.75s, 3s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 9.5s, 9.9s;\n          animation-delay: 9.5s, 9.9s;\n}\n#logo path:nth-child(12) {\n  stroke-dasharray: 321.1700439453;\n  stroke-dashoffset: 321.1700439453;\n  -webkit-animation-name: line-anim, fill-orangered;\n          animation-name: line-anim, fill-orangered;\n  -webkit-animation-duration: 0.75s, 3s;\n          animation-duration: 0.75s, 3s;\n  -webkit-animation-fill-mode: forwards;\n          animation-fill-mode: forwards;\n  -webkit-animation-timing-function: ease;\n          animation-timing-function: ease;\n  -webkit-animation-delay: 9.7s, 9.9s;\n          animation-delay: 9.7s, 9.9s;\n}", ""]);
 
 // exports
 
@@ -8846,16 +8844,16 @@ var render = function() {
         _vm._v(" "),
         _c("g", { attrs: { id: "job-complete" } }, [
           _c("path", {
-            staticClass: "tick-circle",
             attrs: {
+              id: "tick-circle",
               d:
                 "M243.9,207.9c-38.8,0-70.4-31.6-70.4-70.4S205,67,243.9,67c3.5,0,6.4,2.9,6.4,6.4c0,3.5-2.9,6.4-6.4,6.4\n        c-31.8,0-57.6,25.9-57.6,57.6s25.9,57.6,57.6,57.6c31.8,0,57.6-25.9,57.6-57.6c0-3.5,2.9-6.4,6.4-6.4c3.5,0,6.4,2.9,6.4,6.4\n        C314.3,176.3,282.7,207.9,243.9,207.9z"
             }
           }),
           _vm._v(" "),
           _c("path", {
-            staticClass: "tick",
             attrs: {
+              id: "tick",
               d:
                 "M233.2,165.2c-1.6,0-3.3-0.6-4.5-1.9l-21.3-21.3c-2.5-2.5-2.5-6.6,0-9.1c2.5-2.5,6.6-2.5,9.1,0l17.2,17.2\n        l59.6-49.6c2.7-2.3,6.8-1.9,9,0.8c2.3,2.7,1.9,6.8-0.8,9l-64,53.4C236.1,164.7,234.6,165.2,233.2,165.2z"
             }
@@ -9011,58 +9009,7 @@ var render = function() {
           })
         ]
       )
-    ]),
-    _vm._v(" "),
-    _c(
-      "div",
-      { attrs: { id: "buttons" } },
-      [
-        _vm.isLoggedIn === false
-          ? _c(
-              "router-link",
-              {
-                staticClass: "btn btn-info btn-lg",
-                attrs: { to: "/login", role: "button" }
-              },
-              [_vm._v("Login")]
-            )
-          : _vm._e(),
-        _vm._v(" "),
-        _vm.isLoggedIn === false
-          ? _c(
-              "router-link",
-              {
-                staticClass: "btn btn-primary btn-lg",
-                attrs: { to: "/register", role: "button" }
-              },
-              [_vm._v("Register")]
-            )
-          : _vm._e(),
-        _vm._v(" "),
-        _vm.isLoggedIn === false
-          ? _c(
-              "router-link",
-              {
-                staticClass: "btn btn-success btn-lg",
-                attrs: { to: "/thejourney", role: "button" }
-              },
-              [_vm._v("Find Out More")]
-            )
-          : _vm._e(),
-        _vm._v(" "),
-        _vm.isLoggedIn
-          ? _c(
-              "router-link",
-              {
-                staticClass: "btn btn-success btn-lg",
-                attrs: { to: "/roadmap", role: "button" }
-              },
-              [_vm._v("Get Started")]
-            )
-          : _vm._e()
-      ],
-      1
-    )
+    ])
   ])
 }
 var staticRenderFns = []
