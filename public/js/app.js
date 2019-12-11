@@ -1966,155 +1966,79 @@ __webpack_require__.r(__webpack_exports__);
     var handshake = document.getElementById('handshake');
     var jobComplete = document.getElementById('job-complete'); // Initialise the gsap timeline
 
-    var tl = gsap.timeline(); // Check the device width - animation is width dependent
+    var tl = gsap.timeline(); // Idea
 
-    if (window.innerWidth > 700) {
-      // Idea
-      tl.from(head, {
-        y: -100,
-        duration: 1,
-        opacity: 0
-      });
-      tl.to(smallCircle, {
-        opacity: 1,
-        duration: 0.5
-      });
-      tl.to(bigCircle, {
-        opacity: 1,
-        duration: 0.5
-      });
-      tl.to(cloud, {
-        opacity: 1,
-        duration: 0.5
-      }); // First arrow
+    tl.from(head, {
+      y: -100,
+      duration: 1,
+      opacity: 0
+    });
+    tl.to(smallCircle, {
+      opacity: 1,
+      duration: 0.5
+    });
+    tl.to(bigCircle, {
+      opacity: 1,
+      duration: 0.5
+    });
+    tl.to(cloud, {
+      opacity: 1,
+      duration: 0.5
+    }); // First arrow
 
-      tl.to(circle1, {
-        opacity: 1,
-        duration: 0.3
-      });
-      tl.to(circle2, {
-        opacity: 1,
-        duration: 0.3
-      });
-      tl.to(circle3, {
-        opacity: 1,
-        duration: 0.3
-      });
-      tl.to(arrowHead1, {
-        opacity: 1,
-        duration: 0.3
-      }); // Study
+    tl.to(circle1, {
+      opacity: 1,
+      duration: 0.3
+    });
+    tl.to(circle2, {
+      opacity: 1,
+      duration: 0.3
+    });
+    tl.to(circle3, {
+      opacity: 1,
+      duration: 0.3
+    });
+    tl.to(arrowHead1, {
+      opacity: 1,
+      duration: 0.3
+    }); // Study
 
-      tl.from(studyMain, {
-        y: -50,
-        duration: 1,
-        opacity: 0
-      });
-      tl.to(lightRays, {
-        opacity: 1,
-        duration: 0.5
-      }); // Second arrow
+    tl.from(studyMain, {
+      y: -50,
+      duration: 1,
+      opacity: 0
+    });
+    tl.to(lightRays, {
+      opacity: 1,
+      duration: 0.5
+    }); // Second arrow
 
-      tl.to(circle4, {
-        opacity: 1,
-        duration: 0.3
-      });
-      tl.to(circle5, {
-        opacity: 1,
-        duration: 0.3
-      });
-      tl.to(circle6, {
-        opacity: 1,
-        duration: 0.3
-      });
-      tl.to(arrowHead2, {
-        opacity: 1,
-        duration: 0.3
-      }); // Handshake
+    tl.to(circle4, {
+      opacity: 1,
+      duration: 0.3
+    });
+    tl.to(circle5, {
+      opacity: 1,
+      duration: 0.3
+    });
+    tl.to(circle6, {
+      opacity: 1,
+      duration: 0.3
+    });
+    tl.to(arrowHead2, {
+      opacity: 1,
+      duration: 0.3
+    }); // Handshake
 
-      tl.from(handshake, {
-        y: -100,
-        duration: 1,
-        opacity: 0
-      });
-      tl.to(jobComplete, {
-        opacity: 1,
-        duration: 0.5
-      });
-    } else {
-      // Window width is less than or equal to 700px
-      // Idea
-      var idea = document.getElementById('idea');
-      tl.from(head, {
-        y: -100,
-        duration: 1,
-        opacity: 0
-      });
-      tl.to(smallCircle, {
-        opacity: 1,
-        duration: 0.5
-      });
-      tl.to(bigCircle, {
-        opacity: 1,
-        duration: 0.5
-      });
-      tl.to(cloud, {
-        opacity: 1,
-        duration: 0.5
-      });
-      tl.to(idea, {
-        opacity: 0,
-        duration: 1
-      }); // // First arrow
-      // tl.to(circle1, { opacity: 1 , duration: 0.3});
-      // tl.to(circle2, { opacity: 1 , duration: 0.3});
-      // tl.to(circle3, { opacity: 1 , duration: 0.3});
-      // tl.to(arrowHead1, { opacity: 1 , duration: 0.3});
-      // tl.to('#arrow-1', { opacity: 0 , duration: 1});
-      // Study
-
-      tl.from(studyMain, {
-        y: -50,
-        duration: 1,
-        opacity: 0
-      });
-      tl.to(lightRays, {
-        opacity: 1,
-        duration: 1
-      });
-      tl.to('#study', {
-        opacity: 0,
-        duration: 1
-      }); // // Second arrow
-      // tl.to(circle4, { opacity: 1 , duration: 0.3});
-      // tl.to(circle5, { opacity: 1 , duration: 0.3});
-      // tl.to(circle6, { opacity: 1 , duration: 0.3});
-      // tl.to(arrowHead2, { opacity: 1 , duration: 0.3});
-      // tl.to('#arrow-2', { opacity: 0 , duration: 0.3});
-      // Handshake
-
-      tl.from(handshake, {
-        y: -100,
-        duration: 1.5,
-        opacity: 0
-      });
-      tl.to(jobComplete, {
-        opacity: 1,
-        duration: 1
-      });
-    } //Buttons
-    // tl.from()
-    // function calculatePathLength() {
-    //       console.log('func ran');
-    //       //Calculate path lengths of the svg logo
-    //       const tick = document.getElementById('tick');
-    //       console.log('tick in func', tick);
-    //       console.log('tick', tick.getTotalLength());
-    //       const tickCircle = document.getElementById('tick-circle');
-    //       console.log('tick-circle', tickCircle.getTotalLength());
-    // }
-    // calculatePathLength();
-
+    tl.from(handshake, {
+      y: -100,
+      duration: 1,
+      opacity: 0
+    });
+    tl.to(jobComplete, {
+      opacity: 1,
+      duration: 0.5
+    });
   }
 });
 
@@ -2306,155 +2230,53 @@ __webpack_require__.r(__webpack_exports__);
     var handshake = document.getElementById('handshake');
     var jobComplete = document.getElementById('job-complete'); // Initialise the gsap timeline
 
-    var tl = gsap.timeline(); // Check the device width - animation is width dependent
+    var tl = gsap.timeline();
+    var idea = document.getElementById('idea');
+    tl.from(head, {
+      y: -100,
+      duration: 1,
+      opacity: 0
+    });
+    tl.to(smallCircle, {
+      opacity: 1,
+      duration: 0.5
+    });
+    tl.to(bigCircle, {
+      opacity: 1,
+      duration: 0.5
+    });
+    tl.to(cloud, {
+      opacity: 1,
+      duration: 0.5
+    });
+    tl.to(idea, {
+      opacity: 0,
+      duration: 1
+    }); // Study
 
-    if (window.innerWidth > 700) {
-      // Idea
-      tl.from(head, {
-        y: -100,
-        duration: 1,
-        opacity: 0
-      });
-      tl.to(smallCircle, {
-        opacity: 1,
-        duration: 0.5
-      });
-      tl.to(bigCircle, {
-        opacity: 1,
-        duration: 0.5
-      });
-      tl.to(cloud, {
-        opacity: 1,
-        duration: 0.5
-      }); // First arrow
+    tl.from(studyMain, {
+      y: -50,
+      duration: 1,
+      opacity: 0
+    });
+    tl.to(lightRays, {
+      opacity: 1,
+      duration: 1
+    });
+    tl.to('#study', {
+      opacity: 0,
+      duration: 1
+    }); // Handshake
 
-      tl.to(circle1, {
-        opacity: 1,
-        duration: 0.3
-      });
-      tl.to(circle2, {
-        opacity: 1,
-        duration: 0.3
-      });
-      tl.to(circle3, {
-        opacity: 1,
-        duration: 0.3
-      });
-      tl.to(arrowHead1, {
-        opacity: 1,
-        duration: 0.3
-      }); // Study
-
-      tl.from(studyMain, {
-        y: -50,
-        duration: 1,
-        opacity: 0
-      });
-      tl.to(lightRays, {
-        opacity: 1,
-        duration: 0.5
-      }); // Second arrow
-
-      tl.to(circle4, {
-        opacity: 1,
-        duration: 0.3
-      });
-      tl.to(circle5, {
-        opacity: 1,
-        duration: 0.3
-      });
-      tl.to(circle6, {
-        opacity: 1,
-        duration: 0.3
-      });
-      tl.to(arrowHead2, {
-        opacity: 1,
-        duration: 0.3
-      }); // Handshake
-
-      tl.from(handshake, {
-        y: -100,
-        duration: 1,
-        opacity: 0
-      });
-      tl.to(jobComplete, {
-        opacity: 1,
-        duration: 0.5
-      });
-    } else {
-      // Window width is less than or equal to 700px
-      // Idea
-      var idea = document.getElementById('idea');
-      tl.from(head, {
-        y: -100,
-        duration: 1,
-        opacity: 0
-      });
-      tl.to(smallCircle, {
-        opacity: 1,
-        duration: 0.5
-      });
-      tl.to(bigCircle, {
-        opacity: 1,
-        duration: 0.5
-      });
-      tl.to(cloud, {
-        opacity: 1,
-        duration: 0.5
-      });
-      tl.to(idea, {
-        opacity: 0,
-        duration: 1
-      }); // // First arrow
-      // tl.to(circle1, { opacity: 1 , duration: 0.3});
-      // tl.to(circle2, { opacity: 1 , duration: 0.3});
-      // tl.to(circle3, { opacity: 1 , duration: 0.3});
-      // tl.to(arrowHead1, { opacity: 1 , duration: 0.3});
-      // tl.to('#arrow-1', { opacity: 0 , duration: 1});
-      // Study
-
-      tl.from(studyMain, {
-        y: -50,
-        duration: 1,
-        opacity: 0
-      });
-      tl.to(lightRays, {
-        opacity: 1,
-        duration: 1
-      });
-      tl.to('#study', {
-        opacity: 0,
-        duration: 1
-      }); // // Second arrow
-      // tl.to(circle4, { opacity: 1 , duration: 0.3});
-      // tl.to(circle5, { opacity: 1 , duration: 0.3});
-      // tl.to(circle6, { opacity: 1 , duration: 0.3});
-      // tl.to(arrowHead2, { opacity: 1 , duration: 0.3});
-      // tl.to('#arrow-2', { opacity: 0 , duration: 0.3});
-      // Handshake
-
-      tl.from(handshake, {
-        y: -100,
-        duration: 1.5,
-        opacity: 0
-      });
-      tl.to(jobComplete, {
-        opacity: 1,
-        duration: 1
-      });
-    } //Buttons
-    // tl.from()
-    // function calculatePathLength() {
-    //       console.log('func ran');
-    //       //Calculate path lengths of the svg logo
-    //       const tick = document.getElementById('tick');
-    //       console.log('tick in func', tick);
-    //       console.log('tick', tick.getTotalLength());
-    //       const tickCircle = document.getElementById('tick-circle');
-    //       console.log('tick-circle', tickCircle.getTotalLength());
-    // }
-    // calculatePathLength();
-
+    tl.from(handshake, {
+      y: -100,
+      duration: 1.5,
+      opacity: 0
+    });
+    tl.to(jobComplete, {
+      opacity: 1,
+      duration: 1
+    });
   }
 });
 
@@ -3769,7 +3591,7 @@ __webpack_require__.r(__webpack_exports__);
 
       globalResizeTimer = window.setTimeout(function () {
         checkScreenSize();
-      }, 100);
+      }, 200);
     });
   }
 });
@@ -3897,7 +3719,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".bg-stage1[data-v-21e4c7aa] {\n  background-color: #CC0000;\n}\n.bg-stage2[data-v-21e4c7aa] {\n  background-color: orangered;\n}\n.bg-stage3[data-v-21e4c7aa] {\n  background-color: orange;\n}\n.bg-stage4[data-v-21e4c7aa] {\n  background-color: #77B300;\n}\n.bg-stage5[data-v-21e4c7aa] {\n  background-color: #2A9FD6;\n}\n.bg-stage6[data-v-21e4c7aa] {\n  background-color: #20c997;\n}\n.bg-stage7[data-v-21e4c7aa] {\n  background-color: #e83e8c;\n}\n.bg-stage8[data-v-21e4c7aa] {\n  background-color: #9933CC;\n}\n.bg-stage9[data-v-21e4c7aa] {\n  background-color: #fff;\n  color: black !important;\n}\n.border-stage1[data-v-21e4c7aa] {\n  border-top: 8px solid #CC0000;\n  border-right: 8px solid #CC0000;\n}\n.border-stage2[data-v-21e4c7aa] {\n  border-top: 8px solid orangered;\n  border-right: 8px solid orangered;\n}\n.border-stage3[data-v-21e4c7aa] {\n  border-top: 8px solid orange;\n  border-right: 8px solid orange;\n}\n.border-stage4[data-v-21e4c7aa] {\n  border-top: 8px solid #77B300;\n  border-right: 8px solid #77B300;\n}\n.border-stage5[data-v-21e4c7aa] {\n  border-top: 8px solid #2A9FD6;\n  border-right: 8px solid #2A9FD6;\n}\n.border-stage6[data-v-21e4c7aa] {\n  border-top: 8px solid #20c997;\n  border-right: 8px solid #20c997;\n}\n.border-stage7[data-v-21e4c7aa] {\n  border-top: 8px solid #e83e8c;\n  border-right: 8px solid #e83e8c;\n}\n.border-stage8[data-v-21e4c7aa] {\n  border-top: 8px solid #9933CC;\n  border-right: 8px solid #9933CC;\n}\n.border-stage9[data-v-21e4c7aa] {\n  border-top: 8px solid #fff;\n  border-right: 8px solid #ffff;\n}\n.text-stage1[data-v-21e4c7aa] {\n  color: #CC0000;\n}\n.text-stage2[data-v-21e4c7aa] {\n  color: orangered;\n}\n.text-stage3[data-v-21e4c7aa] {\n  color: orange;\n}\n.text-stage4[data-v-21e4c7aa] {\n  color: #77B300;\n}\n.text-stage5[data-v-21e4c7aa] {\n  color: #2A9FD6;\n}\n.text-stage6[data-v-21e4c7aa] {\n  color: #20c997;\n}\n.text-stage7[data-v-21e4c7aa] {\n  color: #e83e8c;\n}\n.text-stage8[data-v-21e4c7aa] {\n  color: #9933CC;\n}\n.text-stage9[data-v-21e4c7aa] {\n  color: white;\n}\n.st0[data-v-21e4c7aa] {\n  fill: none;\n  stroke: #fff;\n  stroke-width: 3;\n  stroke-miterlimit: 10;\n}\n.st1[data-v-21e4c7aa] {\n  fill: none;\n  stroke: #fff;\n  stroke-width: 2;\n  stroke-miterlimit: 10;\n}\n#tick[data-v-21e4c7aa], #tick-circle[data-v-21e4c7aa] {\n  fill: white;\n  stroke: none;\n  stroke-width: 10;\n  stroke-miterlimit: 10;\n}\n#welcome-animation[data-v-21e4c7aa] {\n  display: flex;\n  margin-bottom: 1rem;\n}\n#idea[data-v-21e4c7aa] {\n  padding-bottom: 3rem;\n}\n#head[data-v-21e4c7aa] {\n  opacity: 1;\n}\n#small-circle[data-v-21e4c7aa], #big-circle[data-v-21e4c7aa], #cloud[data-v-21e4c7aa] {\n  opacity: 0;\n}\ncircle[data-v-21e4c7aa], path[data-v-21e4c7aa] {\n  fill: white;\n}\n\n/* #circle1, #circle2, #circle3, #arrow-head {\n\n} */\n#arrow-1 path[data-v-21e4c7aa], #arrow-2 path[data-v-21e4c7aa] {\n  opacity: 0;\n}\n#arrow-1[data-v-21e4c7aa], #arrow-2[data-v-21e4c7aa] {\n  padding-top: 3rem;\n}\n#study[data-v-21e4c7aa] {\n  padding: 2rem 4rem 0 4rem;\n}\n#light-rays[data-v-21e4c7aa] {\n  opacity: 0;\n}\n#study-logo[data-v-21e4c7aa] {\n  height: 300px;\n}\n#job[data-v-21e4c7aa] {\n  padding: 2rem 0 1rem 3rem;\n}\n#job-complete[data-v-21e4c7aa] {\n  opacity: 0;\n}\n#circle-1[data-v-21e4c7aa] {\n  fill: #CC0000;\n}\n#circle-2[data-v-21e4c7aa] {\n  fill: orangered;\n}\n#circle-3[data-v-21e4c7aa] {\n  fill: orange;\n}\n#arrow-head-1[data-v-21e4c7aa] {\n  fill: #77B300;\n}\n#circle-4[data-v-21e4c7aa] {\n  fill: #2A9FD6;\n}\n#circle-5[data-v-21e4c7aa] {\n  fill: #20c997;\n}\n#circle-6[data-v-21e4c7aa] {\n  fill: #e83e8c;\n}\n#arrow-head-2[data-v-21e4c7aa] {\n  fill: #9933CC;\n}\n@media (max-width: 1000px) {\n#welcome-animation[data-v-21e4c7aa] {\n    max-width: 90vw;\n}\nsvg#study[data-v-21e4c7aa] {\n    width: 33vw;\n}\n}\n@media (max-width: 700px) {\n#idea[data-v-21e4c7aa], #arrow-1[data-v-21e4c7aa], #study[data-v-21e4c7aa], #arrow-2[data-v-21e4c7aa], #job[data-v-21e4c7aa] {\n    position: absolute;\n}\n#idea[data-v-21e4c7aa] {\n    top: 20%;\n    left: 40%;\n    padding: 0;\n}\n#arrow-1[data-v-21e4c7aa], #arrow-2[data-v-21e4c7aa] {\n    top: 33%;\n    left: 45%;\n}\n#study[data-v-21e4c7aa] {\n    top: 25%;\n    left: 35%;\n    padding: 0;\n}\n#job[data-v-21e4c7aa] {\n    top: 23%;\n    left: 35%;\n    padding: 0;\n}\n#small-circle[data-v-21e4c7aa] {\n    stroke: #e83e8c;\n}\n#big-circle[data-v-21e4c7aa] {\n    stroke: #20c997;\n}\n#cloud[data-v-21e4c7aa] {\n    stroke: #9933CC;\n}\n#light-rays path[data-v-21e4c7aa] {\n    fill: yellow;\n}\n#tick-circle[data-v-21e4c7aa] {\n    fill: #77B300;\n}\n#tick[data-v-21e4c7aa] {\n    fill: #77B300;\n}\n}", ""]);
+exports.push([module.i, ".bg-stage1[data-v-21e4c7aa] {\n  background-color: #CC0000;\n}\n.bg-stage2[data-v-21e4c7aa] {\n  background-color: orangered;\n}\n.bg-stage3[data-v-21e4c7aa] {\n  background-color: orange;\n}\n.bg-stage4[data-v-21e4c7aa] {\n  background-color: #77B300;\n}\n.bg-stage5[data-v-21e4c7aa] {\n  background-color: #2A9FD6;\n}\n.bg-stage6[data-v-21e4c7aa] {\n  background-color: #20c997;\n}\n.bg-stage7[data-v-21e4c7aa] {\n  background-color: #e83e8c;\n}\n.bg-stage8[data-v-21e4c7aa] {\n  background-color: #9933CC;\n}\n.bg-stage9[data-v-21e4c7aa] {\n  background-color: #fff;\n  color: black !important;\n}\n.border-stage1[data-v-21e4c7aa] {\n  border-top: 8px solid #CC0000;\n  border-right: 8px solid #CC0000;\n}\n.border-stage2[data-v-21e4c7aa] {\n  border-top: 8px solid orangered;\n  border-right: 8px solid orangered;\n}\n.border-stage3[data-v-21e4c7aa] {\n  border-top: 8px solid orange;\n  border-right: 8px solid orange;\n}\n.border-stage4[data-v-21e4c7aa] {\n  border-top: 8px solid #77B300;\n  border-right: 8px solid #77B300;\n}\n.border-stage5[data-v-21e4c7aa] {\n  border-top: 8px solid #2A9FD6;\n  border-right: 8px solid #2A9FD6;\n}\n.border-stage6[data-v-21e4c7aa] {\n  border-top: 8px solid #20c997;\n  border-right: 8px solid #20c997;\n}\n.border-stage7[data-v-21e4c7aa] {\n  border-top: 8px solid #e83e8c;\n  border-right: 8px solid #e83e8c;\n}\n.border-stage8[data-v-21e4c7aa] {\n  border-top: 8px solid #9933CC;\n  border-right: 8px solid #9933CC;\n}\n.border-stage9[data-v-21e4c7aa] {\n  border-top: 8px solid #fff;\n  border-right: 8px solid #ffff;\n}\n.text-stage1[data-v-21e4c7aa] {\n  color: #CC0000;\n}\n.text-stage2[data-v-21e4c7aa] {\n  color: orangered;\n}\n.text-stage3[data-v-21e4c7aa] {\n  color: orange;\n}\n.text-stage4[data-v-21e4c7aa] {\n  color: #77B300;\n}\n.text-stage5[data-v-21e4c7aa] {\n  color: #2A9FD6;\n}\n.text-stage6[data-v-21e4c7aa] {\n  color: #20c997;\n}\n.text-stage7[data-v-21e4c7aa] {\n  color: #e83e8c;\n}\n.text-stage8[data-v-21e4c7aa] {\n  color: #9933CC;\n}\n.text-stage9[data-v-21e4c7aa] {\n  color: white;\n}\n.st0[data-v-21e4c7aa] {\n  fill: none;\n  stroke: #fff;\n  stroke-width: 3;\n  stroke-miterlimit: 10;\n}\n.st1[data-v-21e4c7aa] {\n  fill: none;\n  stroke: #fff;\n  stroke-width: 2;\n  stroke-miterlimit: 10;\n}\n#tick[data-v-21e4c7aa], #tick-circle[data-v-21e4c7aa] {\n  fill: white;\n  stroke: none;\n  stroke-width: 10;\n  stroke-miterlimit: 10;\n}\n#welcome-animation[data-v-21e4c7aa] {\n  display: flex;\n  margin-bottom: 1rem;\n}\n#idea[data-v-21e4c7aa] {\n  padding-bottom: 3rem;\n}\n#head[data-v-21e4c7aa] {\n  opacity: 1;\n}\n#small-circle[data-v-21e4c7aa], #big-circle[data-v-21e4c7aa], #cloud[data-v-21e4c7aa] {\n  opacity: 0;\n}\ncircle[data-v-21e4c7aa], path[data-v-21e4c7aa] {\n  fill: white;\n}\n\n/* #circle1, #circle2, #circle3, #arrow-head {\n\n} */\n#arrow-1 path[data-v-21e4c7aa], #arrow-2 path[data-v-21e4c7aa] {\n  opacity: 0;\n}\n#arrow-1[data-v-21e4c7aa], #arrow-2[data-v-21e4c7aa] {\n  padding-top: 3rem;\n}\n#study[data-v-21e4c7aa] {\n  padding: 2rem 4rem 0 4rem;\n}\n#light-rays[data-v-21e4c7aa] {\n  opacity: 0;\n}\n#study-logo[data-v-21e4c7aa] {\n  height: 300px;\n}\n#job[data-v-21e4c7aa] {\n  padding: 2rem 0 1rem 3rem;\n}\n#job-complete[data-v-21e4c7aa] {\n  opacity: 0;\n}\n#circle-1[data-v-21e4c7aa] {\n  fill: #CC0000;\n}\n#circle-2[data-v-21e4c7aa] {\n  fill: orangered;\n}\n#circle-3[data-v-21e4c7aa] {\n  fill: orange;\n}\n#arrow-head-1[data-v-21e4c7aa] {\n  fill: #77B300;\n}\n#circle-4[data-v-21e4c7aa] {\n  fill: #2A9FD6;\n}\n#circle-5[data-v-21e4c7aa] {\n  fill: #20c997;\n}\n#circle-6[data-v-21e4c7aa] {\n  fill: #e83e8c;\n}\n#arrow-head-2[data-v-21e4c7aa] {\n  fill: #9933CC;\n}\n@media (max-width: 1000px) {\n#welcome-animation[data-v-21e4c7aa] {\n    max-width: 90vw;\n}\nsvg#study[data-v-21e4c7aa] {\n    width: 33vw;\n}\n}\n@media (max-width: 700px) {\n#idea[data-v-21e4c7aa], #arrow-1[data-v-21e4c7aa], #study[data-v-21e4c7aa], #arrow-2[data-v-21e4c7aa], #job[data-v-21e4c7aa] {\n    position: absolute;\n}\n#idea[data-v-21e4c7aa] {\n    top: 20%;\n    left: 40%;\n    padding: 0;\n}\n#arrow-1[data-v-21e4c7aa], #arrow-2[data-v-21e4c7aa] {\n    top: 33%;\n    left: 45%;\n}\n#study[data-v-21e4c7aa] {\n    top: 24%;\n    left: 25%;\n    padding: 0;\n    width: 55vw !important;\n}\n#job[data-v-21e4c7aa] {\n    top: 23%;\n    left: 35%;\n    padding: 0;\n}\n#small-circle[data-v-21e4c7aa] {\n    stroke: #e83e8c;\n}\n#big-circle[data-v-21e4c7aa] {\n    stroke: #20c997;\n}\n#cloud[data-v-21e4c7aa] {\n    stroke: #9933CC;\n}\n#light-rays path[data-v-21e4c7aa] {\n    fill: yellow;\n}\n#tick-circle[data-v-21e4c7aa] {\n    fill: #77B300;\n}\n#tick[data-v-21e4c7aa] {\n    fill: #77B300;\n}\n}\n@media (max-width: 700px) and (max-width: 625px) {\n#idea[data-v-21e4c7aa] {\n    left: 37%;\n}\n#job[data-v-21e4c7aa] {\n    left: 30%;\n}\n}\n@media (max-width: 700px) and (max-width: 570px) {\n#idea[data-v-21e4c7aa] {\n    left: 32%;\n}\n#job[data-v-21e4c7aa] {\n    left: 25%;\n}\n}\n@media (max-width: 700px) and (max-width: 414px) {\n#idea[data-v-21e4c7aa] {\n    left: 27%;\n    top: 17%;\n}\n#job[data-v-21e4c7aa] {\n    left: 23%;\n    top: 18%;\n}\n}\n@media (max-width: 700px) and (max-width: 375px) {\n#idea[data-v-21e4c7aa] {\n    left: 27%;\n    top: 17%;\n}\n#job[data-v-21e4c7aa] {\n    left: 20%;\n    top: 17%;\n}\n}\n@media (max-width: 700px) and (max-width: 320px) {\n#idea[data-v-21e4c7aa] {\n    height: 260px;\n    left: 17%;\n    top: 17%;\n}\n#study[data-v-21e4c7aa] {\n    width: 55vw !important;\n    top: 17%;\n    left: 26%;\n}\n#job[data-v-21e4c7aa] {\n    height: 260px;\n}\n}", ""]);
 
 // exports
 

@@ -42,7 +42,7 @@ export default {
         }
           globalResizeTimer = window.setTimeout(() => {
             checkScreenSize();
-          }, 100)
+          }, 200)
         
       });
   }

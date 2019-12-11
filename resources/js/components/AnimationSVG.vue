@@ -277,9 +277,12 @@ circle, path {
   }
 
   #study {
-    top: 25%;
-    left: 35%;
+    top: 24%;
+    left: 25%;
+    // top: 25%;
+    // left: 35%;
     padding: 0;
+    width: 55vw !important;
   }
 
   #job {
@@ -312,12 +315,74 @@ circle, path {
     fill: $stage4;
   }
 
+@media(max-width: 625px) {
+
+  #idea {
+    left: 37%;
+  }
   
+  #job {
+    left: 30%;
+  }
+}
+
+@media(max-width: 570px) {
+  #idea {
+    left: 32%;
+  }
+
+  #job {
+    left: 25%;
+  }
+}
+
+// Large smartphones - 414px e.g iPhone6/7/8 plus
+@media(max-width: 414px) {
+
+  #idea {
+    left: 27%;
+    top: 17%;
+  }
   
+  #job {
+    left: 23%;
+    top: 18%;
+  }
+}
+// Normal smartphones - 375px e.g iPhone6/7/8/X
+@media(max-width: 375px) {
+
+  #idea {
+    left: 27%;
+    top: 17%;
+  }
   
-  // svg#study {
-  //   width: 280px;
-  // }
+  #job {
+    left: 20%;
+    top: 17%;
+  }
+}
+
+// Small smartphones - 320px e.g iPhone5
+@media(max-width: 320px) {
+
+  #idea {
+    height: 260px;
+    left: 17%;
+    top: 17%;
+  }
+
+  #study {
+    width: 55vw !important;
+    top: 17%;
+    left: 26%;
+  }
+  
+  #job {
+    height: 260px;
+  }
+}
+
 }
 
 </style>
