@@ -247,6 +247,10 @@ circle, path {
 }
 
 
+
+
+
+
 // Media queries
 @media (max-width: 1000px) {
 
@@ -254,19 +258,24 @@ circle, path {
     max-width: 90vw;
   }
 
-  svg#study {
+  #study {
     width: 33vw;
   }
 }
 
 @media (max-width: 700px) {
-  // Change the animation
-#idea, #arrow-1, #study,  #arrow-2, #job {
-  position: absolute;
+
+
 }
 
+@media (max-width: 639px) {
+  // Change the animation
+  #idea, #arrow-1, #study,  #arrow-2, #job {
+    position: absolute;
+  }
+
   #idea {
-    top: 20%;
+    top: 19%;
     left: 40%;
     padding: 0;
   }
@@ -277,12 +286,12 @@ circle, path {
   }
 
   #study {
-    top: 24%;
+    top: 21%;
     left: 25%;
     // top: 25%;
     // left: 35%;
     padding: 0;
-    width: 55vw !important;
+    width: 55vw;
   }
 
   #job {
@@ -314,6 +323,20 @@ circle, path {
   #tick {
     fill: $stage4;
   }
+}
+
+@media (min-width: 640px) and (max-height: 414px){
+
+  #welcome-animation {
+    margin-top: 15rem;
+  }
+}
+
+// @media(max-height: 500px) {
+//   #welcome-animation {
+//     display: none;
+//   }
+// }
 
 @media(max-width: 625px) {
 
@@ -353,8 +376,8 @@ circle, path {
 @media(max-width: 375px) {
 
   #idea {
-    left: 27%;
-    top: 17%;
+    left: 22%;
+    top: 14%;
   }
   
   #job {
@@ -373,7 +396,7 @@ circle, path {
   }
 
   #study {
-    width: 55vw !important;
+    width: 55vw;
     top: 17%;
     left: 26%;
   }
@@ -383,6 +406,12 @@ circle, path {
   }
 }
 
+// Small phone landscape - e.g iphone5
+@media(max-width: 568px) and (max-height: 320px) {
+  #welcome-animation {
+    display:none;
+  }
+  
 }
 
 </style>

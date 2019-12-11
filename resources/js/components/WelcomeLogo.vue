@@ -194,11 +194,55 @@ export default {
   } 
 }
 
-@media(max-width: 700px){
+// Push the logo down when the animation changes to AnimationSmall
+@media(max-width: 639px){
   
   #logo {
+    margin-top: 17rem;
+  }
+}
 
-  margin-top: 17rem;
+// Small phone landscape - e.g iphone5
+@media(max-width: 568px) and (max-height: 320px) {
+  #logo {
+    margin-top: 7rem;
+  }
+
+  #logo path:nth-child(1){
+    animation-delay: 0s, 2.4s;
+  }
+  #logo path:nth-child(2){
+    animation-delay: 0.3s, 2.4s;
+  }
+  #logo path:nth-child(3){
+    animation-delay: 0.6s, 2.4s;
+  }
+  #logo path:nth-child(4){
+    animation-delay: 0.9s, 2.4s;
+  }
+  #logo path:nth-child(5){
+    animation-delay: 1.2s, 2.4s;
+  }
+  #logo path:nth-child(6){
+    animation-delay: 1.5s, 2.4s;
+  }
+  #logo path:nth-child(7){
+    animation-delay: 1.8s, 2.4s;
+  }
+  #logo path:nth-child(8){
+    animation-delay: 2.1s, 2.4s;
+  }
+  #logo path:nth-child(9){
+    animation-delay: 2.4s, 2.4s;
+  }
+  #logo path:nth-child(10){
+    animation-delay: 2.7s, 2.4s;
+  }
+  #logo path:nth-child(11){
+    animation-delay: 3s, 2.4s;
+  }
+  #logo path:nth-child(12){
+    animation-delay: 3.3s, 2.4s;
   }
 }
 
