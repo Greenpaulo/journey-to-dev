@@ -92,7 +92,7 @@
 				c-1.4,4.5,2.2,8.3,4.4,10.2c1.4,1.2,2.2,2.8,2.3,4.6c0.1,1.8-0.6,3.5-1.8,4.8L77,395C75.8,396.2,74.2,396.9,72.4,396.9
 				C72.5,396.9,72.5,396.9,72.4,396.9z M23.5,332.6l48.9,48.9l69.4-70.1c-4.3-5.7-5.6-12.3-3.6-18.7c2.4-7.9,12.1-21.7,49.4-26.4
 				l9.1-9.6l-49-49L23.5,332.6z"/>
-			<path d="M73.6,342.8c-2.4,0-4.7-0.9-6.4-2.7c-1.7-1.7-2.7-4-2.7-6.4c0-2.4,0.9-4.7,2.7-6.4c1.7-1.7,4-2.7,6.4-2.7
+			<path class="cuff-link" d="M73.6,342.8c-2.4,0-4.7-0.9-6.4-2.7c-1.7-1.7-2.7-4-2.7-6.4c0-2.4,0.9-4.7,2.7-6.4c1.7-1.7,4-2.7,6.4-2.7
 				s4.7,0.9,6.4,2.7c1.7,1.7,2.7,4,2.7,6.4c0,2.4-1,4.7-2.7,6.4C78.3,341.8,76,342.8,73.6,342.8z M73.6,330c-1,0-2,0.4-2.6,1.1
 				c-0.7,0.7-1.1,1.6-1.1,2.6c0,1,0.4,2,1.1,2.6c0.7,0.7,1.6,1.1,2.6,1.1c1,0,2-0.4,2.6-1.1c0.7-0.7,1.1-1.6,1.1-2.6
 				c0-1-0.4-2-1.1-2.6C75.5,330.4,74.6,330,73.6,330z"/>
@@ -106,7 +106,7 @@
 			<path d="M431.4,386.4c-1.6,0-3.3-0.6-4.5-1.9L293.7,251.3c-2.5-2.5-2.5-6.6,0-9.1l57.9-57.9c1.2-1.2,2.8-1.9,4.5-1.9
 				c1.7,0,3.3,0.7,4.5,1.9l133.2,133.2c1.2,1.2,1.9,2.8,1.9,4.5c0,1.7-0.7,3.3-1.9,4.5l-57.9,57.9
 				C434.7,385.8,433,386.4,431.4,386.4z M307.3,246.8l124.1,124.1l48.9-48.9L356.2,197.9L307.3,246.8z"/>
-			<path d="M430.7,329.9c-2.3,0-4.5-0.9-6.2-2.6c-1.7-1.7-2.6-3.9-2.6-6.2s0.9-4.5,2.6-6.2c0.1-0.1,0.2-0.2,0.4-0.3
+			<path class="cuff-link" d="M430.7,329.9c-2.3,0-4.5-0.9-6.2-2.6c-1.7-1.7-2.6-3.9-2.6-6.2s0.9-4.5,2.6-6.2c0.1-0.1,0.2-0.2,0.4-0.3
 				c1.6-1.4,3.7-2.1,5.8-2.1c2.3,0,4.5,0.9,6.1,2.5c1.7,1.7,2.6,3.9,2.6,6.2c0,2.3-0.9,4.4-2.4,6
 				C435.4,328.9,433.1,329.9,430.7,329.9z M427.6,318.4c-0.7,0.7-1,1.7-1,2.7c0,1.1,0.4,2.1,1.2,2.9c1.5,1.5,3.9,1.7,5.5,0.3
 				l-4.2-4.9l4.6,4.5c0.7-0.7,1.1-1.8,1.1-2.8c0-1.1-0.4-2.1-1.2-2.9c-0.7-0.7-1.8-1.2-2.9-1.2C429.5,317.1,428.4,317.6,427.6,318.4
@@ -161,32 +161,70 @@ export default {
     // Initialise the gsap timeline
     const tl = gsap.timeline();
 
-    // Idea
-    tl.from(head, { y: -100, duration: 1, opacity: 0});
-    tl.to(smallCircle, { opacity: 1 , duration: 0.5});
-    tl.to(bigCircle, { opacity: 1 , duration: 0.5});
-    tl.to(cloud, { opacity: 1 , duration: 0.5});
+    // Check the device width - animation is width dependent
+    if (window.innerWidth > 700) {
 
-    // First arrow
-    tl.to(circle1, { opacity: 1 , duration: 0.3});
-    tl.to(circle2, { opacity: 1 , duration: 0.3});
-    tl.to(circle3, { opacity: 1 , duration: 0.3});
-    tl.to(arrowHead1, { opacity: 1 , duration: 0.3});
+      // Idea
+      tl.from(head, { y: -100, duration: 1, opacity: 0});
+      tl.to(smallCircle, { opacity: 1 , duration: 0.5});
+      tl.to(bigCircle, { opacity: 1 , duration: 0.5});
+      tl.to(cloud, { opacity: 1 , duration: 0.5});
 
-    // Study
-    tl.from(studyMain, { y: -50, duration: 1, opacity: 0});
-    tl.to(lightRays, { opacity: 1 , duration: 0.5});
+      // First arrow
+      tl.to(circle1, { opacity: 1 , duration: 0.3});
+      tl.to(circle2, { opacity: 1 , duration: 0.3});
+      tl.to(circle3, { opacity: 1 , duration: 0.3});
+      tl.to(arrowHead1, { opacity: 1 , duration: 0.3});
 
-    // Second arrow
-    tl.to(circle4, { opacity: 1 , duration: 0.3});
-    tl.to(circle5, { opacity: 1 , duration: 0.3});
-    tl.to(circle6, { opacity: 1 , duration: 0.3});
-    tl.to(arrowHead2, { opacity: 1 , duration: 0.3});
+      // Study
+      tl.from(studyMain, { y: -50, duration: 1, opacity: 0});
+      tl.to(lightRays, { opacity: 1 , duration: 0.5});
 
-    // Handshake
-    tl.from(handshake, { y: -100, duration: 1, opacity: 0});
-    tl.to(jobComplete, { opacity: 1, duration: 0.5});
+      // Second arrow
+      tl.to(circle4, { opacity: 1 , duration: 0.3});
+      tl.to(circle5, { opacity: 1 , duration: 0.3});
+      tl.to(circle6, { opacity: 1 , duration: 0.3});
+      tl.to(arrowHead2, { opacity: 1 , duration: 0.3});
 
+      // Handshake
+      tl.from(handshake, { y: -100, duration: 1, opacity: 0});
+      tl.to(jobComplete, { opacity: 1, duration: 0.5});
+
+    } else {
+      // Window width is less than or equal to 700px
+      // Idea
+      const idea = document.getElementById('idea');
+    
+
+      tl.from(head, { y: -100, duration: 1, opacity: 0});
+      tl.to(smallCircle, { opacity: 1 , duration: 0.5});
+      tl.to(bigCircle, { opacity: 1 , duration: 0.5});
+      tl.to(cloud, { opacity: 1 , duration: 0.5});
+      tl.to(idea, {opacity:0, duration: 0.75})
+
+      // // First arrow
+      // tl.to(circle1, { opacity: 1 , duration: 0.3});
+      // tl.to(circle2, { opacity: 1 , duration: 0.3});
+      // tl.to(circle3, { opacity: 1 , duration: 0.3});
+      // tl.to(arrowHead1, { opacity: 1 , duration: 0.3});
+      // tl.to('#arrow-1', { opacity: 0 , duration: 1});
+
+      // Study
+      tl.from(studyMain, { y: -50, duration: 1, opacity: 0});
+      tl.to(lightRays, { opacity: 1 , duration: 1});
+      tl.to('#study', { opacity: 0 , duration: 0.75});
+
+      // // Second arrow
+      // tl.to(circle4, { opacity: 1 , duration: 0.3});
+      // tl.to(circle5, { opacity: 1 , duration: 0.3});
+      // tl.to(circle6, { opacity: 1 , duration: 0.3});
+      // tl.to(arrowHead2, { opacity: 1 , duration: 0.3});
+      // tl.to('#arrow-2', { opacity: 0 , duration: 0.3});
+
+      // Handshake
+      tl.from(handshake, { y: -100, duration: 1, opacity: 0});
+      tl.to(jobComplete, { opacity: 1, duration: 1});
+    }
     //Buttons
     // tl.from()
 
@@ -322,9 +360,6 @@ circle, path {
   fill: $stage8;
 }
 
-// #light-rays path {
-//   fill: yellow;
-// }
 
 // Media queries
 @media (max-width: 1000px) {
@@ -367,7 +402,33 @@ circle, path {
     padding: 0;
   }
 
+  #small-circle {
+    stroke: $stage7;
+  }
 
+  #big-circle {
+    stroke: $stage6
+  }
+
+  #cloud {
+    stroke: $stage5
+  }
+
+  #light-rays path {
+  fill: yellow;
+  }
+
+  #tick-circle {
+    fill: $stage4;
+  }
+
+  #tick {
+    fill: $stage4;
+  }
+
+  // .cuff-link {
+  //   fill: $stage6;
+  // }
 
   
   

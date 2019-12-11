@@ -198,7 +198,7 @@ export default {
   
   #logo {
 
-  margin-top: 15rem;
+  margin-top: 17rem;
   }
 }
 

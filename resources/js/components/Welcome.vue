@@ -25,14 +25,14 @@ export default {
 
 <style scoped>
 
-#welcome-page {
-  /* position: relative;
+/* #welcome-page {
+  position: relative;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; */
-}
+  align-items: center;
+} */
 
 #welcome-content {
   margin-bottom: 2rem;

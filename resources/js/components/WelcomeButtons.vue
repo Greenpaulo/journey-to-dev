@@ -33,4 +33,12 @@ export default {
   margin: 0 0.5rem;
 }
 
+/* Media queries */
+@media(max-width: 700px){
+
+  #buttons {
+    margin-top: 2rem;
+  }
+}
+
 </style>
