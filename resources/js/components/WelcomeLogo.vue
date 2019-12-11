@@ -65,10 +65,6 @@ export default {
   margin-bottom: 2rem;
 }
 
-#logo {
-  padding-right: 3rem;
-}
-
 #logo path:nth-child(1){
   stroke-dasharray: 334.1294250488281;
   stroke-dashoffset: 334.1294250488281;
@@ -187,6 +183,23 @@ export default {
   animation-fill-mode: forwards;
   animation-timing-function: ease;
   animation-delay: 9.7s, 9.9s;
+}
+
+
+// Media queries
+// Ipad
+@media (max-width: 1200px){
+  #logo {
+    width: 80vw;  
+  } 
+}
+
+@media(max-width: 700px){
+  
+  #logo {
+
+  margin-top: 15rem;
+  }
 }
 
 </style>

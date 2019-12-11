@@ -1,10 +1,12 @@
 <template>
-   <section id="welcome-page" class="animated fadeIn">
-     <section id="welcome-content">
+   <!-- <section id="welcome-page" class="animated fadeIn"> -->
+  <div class="container">
+    <section id="welcome-content">
       <WelcomeAnimation />
       <WelcomeLogo />
-     </section>
-   </section>
+    </section>
+  </div>   
+   <!-- </section> -->
 </template>
 
 <script>
@@ -24,8 +26,16 @@ export default {
 <style scoped>
 
 #welcome-page {
-  position: relative;
-  background: url("/images/1.jpg") cover no-repeat;
+  /* position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+}
+
+#welcome-content {
+  margin-bottom: 2rem;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -33,8 +43,13 @@ export default {
   align-items: center;
 }
 
-#welcome-content {
-  margin-bottom: 2rem;
+/* Media queries
+Ipad */
+@media (max-width: 970px){
+  
+  #welcome-content {
+    text-align: center;
+  }
 }
 
 

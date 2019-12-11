@@ -289,7 +289,7 @@ circle, path {
 }
 
 #job {
-  padding: 2rem 3rem 1rem 3rem;
+  padding: 2rem 0 1rem 3rem;
 }
 
 #job-complete {
@@ -325,5 +325,58 @@ circle, path {
 // #light-rays path {
 //   fill: yellow;
 // }
+
+// Media queries
+@media (max-width: 1000px) {
+
+  #welcome-animation {
+    max-width: 90vw;
+  }
+
+  svg#study {
+    width: 33vw;
+  }
+}
+
+@media (max-width: 700px) {
+  // Change the animation
+#idea, #arrow-1, #study,  #arrow-2, #job {
+  position: absolute;
+}
+
+  #idea {
+    top: 20%;
+    left: 40%;
+    padding: 0;
+  }
+
+  #arrow-1, #arrow-2 {
+    top: 33%;
+    left: 45%;
+  }
+
+  #study {
+    top: 25%;
+    left: 35%;
+    padding: 0;
+  }
+
+  #job {
+    top: 23%;
+    left: 35%;
+    padding: 0;
+  }
+
+
+
+  
+  
+  
+  // svg#study {
+  //   width: 280px;
+  // }
+}
+
+
 
 </style>

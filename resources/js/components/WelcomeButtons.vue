@@ -22,7 +22,7 @@ export default {
 
 #buttons {
   margin-top: 3rem;
-  padding-right: 5rem;
+  /* padding-right: 5rem; */
   text-align: center;
 
 }
