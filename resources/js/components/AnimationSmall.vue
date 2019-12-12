@@ -162,6 +162,8 @@ export default {
 
 @import 'resources/sass/variables';
 @import 'resources/sass/colors';
+@import 'resources/sass/welcome-animation';
+
 
 // Media queries
 @media (max-width: 639px) {
@@ -220,19 +222,6 @@ export default {
     fill: $stage4;
   }
 }
-
-@media (min-width: 640px) and (max-height: 414px){
-
-  #welcome-animation {
-    margin-top: 15rem;
-  }
-}
-
-// @media(max-height: 500px) {
-//   #welcome-animation {
-//     display: none;
-//   }
-// }
 
 @media(max-width: 625px) {
 
