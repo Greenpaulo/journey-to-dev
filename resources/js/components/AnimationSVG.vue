@@ -386,6 +386,10 @@ circle, path {
     left: 23%;
     top: 18%;
   }
+
+  #welcome-animation {
+    margin-bottom: 3rem;
+  }
 }
 // Normal smartphones - 375px e.g iPhone6/7/8/X
 @media(max-width: 375px) {
