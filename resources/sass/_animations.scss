@@ -1,27 +1,17 @@
-// Color change animation
-@keyframes hue {
-  from {
-    filter: hue-rotate(0deg);
-  }
-  
-  to {
-    filter: hue-rotate(-360deg);
-  }
-}
-
 // Background gradient animation - for backgrounds of anything e.g. text, buttons, body
 @keyframes bg-animation {
   0% { background-position: left;}
   100% {background-position: right;}
 }
 
+// Animating drawing of paths
 @keyframes line-anim{
   to {
     stroke-dashoffset: 0;
   }
 }
 
-// fill animations
+// Fill animations
 @keyframes fill-red {
   from   {
     fill: transparent;
@@ -103,6 +93,7 @@
   }
 }
 
+// Pulsing animation for buttons, icons etc.
 @keyframes pulse {
   50% {
     transform: scale(0.8)
@@ -111,7 +102,3 @@
     transform: scale(1)
   }
 }
-
-
-// Animate.css animations
-

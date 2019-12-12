@@ -118,17 +118,8 @@ export default {
         this.retrieveUserCoursesByStage(1);
       };
     };
-
     initialLoad();
 
-    // // Animate the stage selector buttons with GSAP
-    // const tl = gsap.timeline({});
-    
-    // tl.add('drop')
-    // tl.from('.select-links', { y: -200, duration: 1,  ease: "bounce.out",stagger: 0.2}, 'drop')
-    //   .from('.select-links', {backgroundColor: '#ffffff', duration: 2}, 'drop');
-
-    // tl.play();
   },
   computed: {
     ...mapGetters({userCourseList: 'getUserCourseList', name: 'getName', stage: 'getCurrentStage'}),
@@ -166,20 +157,6 @@ export default {
       this.remainingHrs = total;
       return total;
     },
-    // calcProgress() {
-
-    //   if (this.totalHours === null || this.remainingHrs === null){
-    //     setTimeout(() => calcProgress(),
-    //     500);
-    //     return
-    //   };
-      
-    //   const totalHours = this.totalHours;
-    //   const remainingHrs = this.remainingHrs;
-    //   const progress =  (remainingHrs/totalHours)*100;
-    //   this.progress = progress;
-    //   return progress;
-    // }
   },
   methods: {
     ...mapActions(['loadInitialUserData', 'retrieveUserCoursesByStage']),
@@ -230,7 +207,6 @@ export default {
   }
 }
 
-
 // Media queries
 // Ipad
 @media (max-width: 768px){
@@ -243,7 +219,6 @@ export default {
     padding-right: 0.5rem;
     margin-right: 0.7rem;
   }
-
 }
 
 // Smartphone - larger
@@ -271,7 +246,5 @@ export default {
     padding: 0.75rem;
   }
 }
-
-
 
 </style>

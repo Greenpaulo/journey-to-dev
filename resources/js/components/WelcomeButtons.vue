@@ -11,7 +11,6 @@
 <script>
 import { mapGetters } from 'vuex';
 
-
 export default {
   name: 'WelcomeButtons',
   computed: mapGetters(['isLoggedIn']),
@@ -22,9 +21,7 @@ export default {
 
 #buttons {
   margin-top: 3rem;
-  /* padding-right: 5rem; */
   text-align: center;
-
 }
 
 .btn {
@@ -62,7 +59,7 @@ export default {
   animation-delay: 4s;
   animation-duration: 2s;
   margin: 0 0.5rem;
-}
+  }
 }
 
 </style>

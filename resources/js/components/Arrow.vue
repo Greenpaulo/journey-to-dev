@@ -26,21 +26,6 @@ export default {
   text-align: center;
 }
 
-/* .arrow:hover {
-  animation: down-point 500ms ease-in;
-  animation-iteration-count: 2;
-
-}
-
-@keyframes down-point {
-  50% {
-    transform: translateY(15px)
-  }
-  100% {
-    transform: translateY(0px)
-  }
-} */
-
 .st0{
   fill:none;
 }

@@ -18,8 +18,7 @@
           <span class="mr-2">Logging In</span>
           <SmallLoader v-if="requestBeingMade"></SmallLoader>
         </span>  
-      </button>
-      
+      </button> 
     </fieldset>
   </form>
   </div>
@@ -52,7 +51,5 @@ export default {
 }
 </script>
 
-<style scoped>
-
-
+<style>
 </style>

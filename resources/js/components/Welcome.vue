@@ -1,12 +1,10 @@
 <template>
-   <!-- <section id="welcome-page" class="animated fadeIn"> -->
   <div class="container">
     <section id="welcome-content">
       <WelcomeAnimation />
       <WelcomeLogo />
     </section>
   </div>   
-   <!-- </section> -->
 </template>
 
 <script>
@@ -25,15 +23,6 @@ export default {
 
 <style scoped>
 
-/* #welcome-page {
-  position: relative;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-} */
-
 #welcome-content {
   margin-bottom: 2rem;
   height: 100vh;
@@ -51,6 +40,5 @@ Ipad */
     text-align: center;
   }
 }
-
 
 </style>

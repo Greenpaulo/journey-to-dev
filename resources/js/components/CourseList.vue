@@ -49,16 +49,10 @@ export default {
       card.addEventListener('animationend', () => {
         this.$store.dispatch('addCourseToRoadmap', course);
        });
-    //  } else {
-    //    const card = document.getElementById(`${course.id}`);
-    //    card.addEventListener('touchstart', () => console.log('touched'));
-    //  }
       } 
     }
   }
 }
-
-
 
 </script>
 
@@ -127,7 +121,6 @@ export default {
     background: linear-gradient(to right,#201c29,#201c29 1px,#17141d 1px,#17141d);
 }
 
-
 // Course link
 .btns {
   display: flex;
@@ -170,8 +163,6 @@ i.fa-plus {
   width: 50px;
   height: 50px;
   color: white;
-
-
 }
 
 h5.card-title > a {
