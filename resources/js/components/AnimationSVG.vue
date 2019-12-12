@@ -263,8 +263,23 @@ circle, path {
   }
 }
 
-@media (max-width: 700px) {
+@media(max-width: 768px) and (min-width: 640px) {
 
+  #idea, #arrow-1, #study,  #arrow-2, #job {
+    height: 200px;
+  }
+
+  #idea {
+    padding-bottom: 1.4rem;
+  }
+
+  #job {
+    padding: 2rem 0 1rem 1rem;
+  }
+  
+  #study {
+    padding: 1rem 3rem 0 3rem;
+  }
 
 }
 
@@ -403,6 +418,13 @@ circle, path {
   
   #job {
     height: 260px;
+  }
+}
+
+// Smartphone landscape
+@media(max-height: 414px) {
+  #welcome-animation {
+    margin-bottom: 0;
   }
 }
 
