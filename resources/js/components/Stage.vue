@@ -128,9 +128,7 @@ export default {
       const courses = this.currentStageRoadmap;
       let total = 0;
       courses.forEach(course => {
-        total += course.hours
-        // if (course.completed == false){
-        // }
+        total += Number(course.hours)
       })
       return total;
     },

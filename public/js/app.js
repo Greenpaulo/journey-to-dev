@@ -2991,7 +2991,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       var total = 0;
       roadmap.forEach(function (course) {
         if (course.completed == 0) {
-          total += course.hours;
+          total += Number(course.hours);
         }
       });
       this.remainingHrs = total;
@@ -3205,8 +3205,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       var courses = this.currentStageRoadmap;
       var total = 0;
       courses.forEach(function (course) {
-        total += course.hours; // if (course.completed == false){
-        // }
+        total += Number(course.hours);
       });
       return total;
     },
