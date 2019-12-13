@@ -145,7 +145,7 @@ export default {
           // total += Number(course.hours)
       });
       this.totalHours = total;
-      return total;
+      return 'hello';
     },
     calcTotalHoursRemaining() {
       const { roadmap } = this.$store.state.roadmap;
