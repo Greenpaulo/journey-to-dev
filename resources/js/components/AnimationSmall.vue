@@ -295,6 +295,21 @@ export default {
   }
 }
 
+// Even smaller browser screen on mobile
+@media (max-height: 640px) and (min-width: 320px) {
+  #idea {
+    top: 13%;
+  }
+
+  #study {
+    top: 16%;
+  }
+  
+  #job {
+    top: 16%;
+  }
+}
+
 // Smartphone landscape
 @media(max-height: 414px) {
   #welcome-animation {
