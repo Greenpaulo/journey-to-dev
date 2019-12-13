@@ -141,7 +141,6 @@ export default {
       const { roadmap } = this.$store.state.roadmap;
       let total = 0;
       roadmap.forEach(course => {
-        
           // total += Number(course.hours)
       });
       this.totalHours = total;

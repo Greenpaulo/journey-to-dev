@@ -2980,11 +2980,10 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     calcTotalHours: function calcTotalHours() {
       var roadmap = this.$store.state.roadmap.roadmap;
       var total = 0;
-      roadmap.forEach(function (course) {
-        total += course.hours;
+      roadmap.forEach(function (course) {// total += Number(course.hours)
       });
       this.totalHours = total;
-      return total;
+      return 'hello';
     },
     calcTotalHoursRemaining: function calcTotalHoursRemaining() {
       var roadmap = this.$store.state.roadmap.roadmap;
