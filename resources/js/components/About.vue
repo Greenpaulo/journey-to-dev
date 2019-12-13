@@ -19,7 +19,6 @@
         <div class="icon-group">
           <i class="far fa-envelope fa-3x pr-3"></i>
           <a href="mailto:greenpaulo@yahoo.co.uk" class="contact-info">greenpaulo@yahoo.co.uk</a>
-          <span class="contact-info">greenpaulo@yahoo.co.uk</span>
         </div>
         <div class="icon-group">
           <i class="fab fa-github fa-3x pr-3"></i>
@@ -66,6 +65,9 @@ export default {
   name: 'About',
   components: {
     Footer
+  },
+  mounted(){
+    window.scrollTo(0, 0);
   }
 }
 </script>

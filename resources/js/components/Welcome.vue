@@ -16,6 +16,9 @@ export default {
   components: {
     WelcomeAnimation,
     WelcomeLogo
+  },
+  mounted(){
+    window.scrollTo(0, 0);
   }
 
 }

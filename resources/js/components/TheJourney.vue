@@ -221,6 +221,9 @@ export default {
   name: 'TheJourney',
   components: {
     Footer
+  },
+  mounted(){
+    window.scrollTo(0, 0);
   }
 }
 </script>

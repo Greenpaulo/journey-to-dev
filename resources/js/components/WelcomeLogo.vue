@@ -247,7 +247,7 @@ export default {
 }
 
 // Even smaller browser screen on mobile
-@media (max-height: 640px) and (min-width: 320px)  {
+@media (max-height: 600px) and (min-width: 320px)  {
   #welcome-logo {
     margin-bottom: 0;
   }

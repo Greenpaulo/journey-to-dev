@@ -10,25 +10,25 @@
       <div class="collapse navbar-collapse" id="navbarColor02">
         
         <ul class="navbar-nav ml-auto px-3">
-          <li class="nav-item">
+          <li class="nav-item" @click='hideMenu'>
             <router-link class="nav-link" id="home-link" to="/">Home</router-link>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" @click='hideMenu'>
             <router-link class="nav-link" id="journey-link" to="/thejourney">The Journey</router-link>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" @click='hideMenu'>
             <router-link class="nav-link" id="roadmap-link" to="roadmap">Roadmap</router-link>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" @click='hideMenu'>
             <router-link class="nav-link" id="about-link" to="about">About</router-link>
           </li>
-          <li v-if="isLoggedIn === false" class="nav-item">
+          <li v-if="isLoggedIn === false" class="nav-item" @click='hideMenu'>
             <router-link class="nav-link" id="login-link" to="login">Login</router-link>
           </li>
-          <li v-if="isLoggedIn === false" class="nav-item">
+          <li v-if="isLoggedIn === false" class="nav-item" @click='hideMenu'>
             <router-link class="nav-link" id="register-link" to="register">Register</router-link>
           </li>
-          <li v-if="isLoggedIn" class="nav-item">
+          <li v-if="isLoggedIn" class="nav-item" @click='hideMenu'>
             <a class="nav-link" id="logout-link" href="#" @click="logout">Logout</a>
           </li>
         </ul>
@@ -48,7 +48,14 @@ import { mapActions, mapGetters } from 'vuex';
       ...mapGetters(['isLoggedIn'])
     },
     methods: {
-      ...mapActions(['logout'])
+      ...mapActions(['logout']),
+      hideMenu() {
+        const navbar = document.querySelector('.navbar-collapse');
+        console.log('called', navbar)
+        if(navbar.classList.contains('show')){
+          navbar.classList.remove('show')
+        };
+      }
     }
   }
 </script>

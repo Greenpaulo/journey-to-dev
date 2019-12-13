@@ -105,6 +105,8 @@ export default {
     this.loadInitialUserData();
   },
   mounted () {
+    window.scrollTo(0, 0);
+  
     // Intialise bootstrap tooltip
     $('[data-toggle="tooltip"]').tooltip();
 
