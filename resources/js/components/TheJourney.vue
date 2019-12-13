@@ -101,7 +101,7 @@
           <div class=" card-body">
             <h5>Choose One:</h5>
             <div class="icon-text-group my-4">
-              <a href="https://nodejs.org/en/" target="_blank"><img src="/images/Node.png" alt="node.js logo"></a>
+              <a href="https://nodejs.org/en/" target="_blank"><img src="/images/node.png" alt="node.js logo"></a>
               <p class="px-4 my-2"><span class="text-lighter">Node.js</span> is an open-source, cross-platform, JavaScript runtime environment that executes JavaScript code outside of a browser. Node.js lets developers use JavaScript on the server-side.
               </p>
             </div>

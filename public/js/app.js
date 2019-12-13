@@ -9095,7 +9095,7 @@ var staticRenderFns = [
                   },
                   [
                     _c("img", {
-                      attrs: { src: "/images/Node.png", alt: "node.js logo" }
+                      attrs: { src: "/images/node.png", alt: "node.js logo" }
                     })
                   ]
                 ),
