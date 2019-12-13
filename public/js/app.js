@@ -3595,8 +3595,6 @@ __webpack_require__.r(__webpack_exports__);
 
     // Check the screen size
     var checkScreenSize = function checkScreenSize() {
-      console.log('check called');
-
       if (window.innerWidth <= 639) {
         _this.smallScreen = true;
       } else {

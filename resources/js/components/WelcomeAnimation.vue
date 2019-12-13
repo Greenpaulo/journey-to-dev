@@ -23,7 +23,6 @@ export default {
   created () {
     // Check the screen size
     const checkScreenSize= () => {
-      console.log('check called')
       if (window.innerWidth <= 639){
         this.smallScreen = true;
       } else {
