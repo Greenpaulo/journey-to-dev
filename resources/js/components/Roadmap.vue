@@ -142,7 +142,7 @@ export default {
       let total = 0;
       roadmap.forEach(course => {
         
-          total += Number(course.hours)
+          // total += Number(course.hours)
       });
       this.totalHours = total;
       return total;
