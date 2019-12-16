@@ -27,7 +27,7 @@ export default {
 <style scoped>
 
 #welcome-content {
-  margin-bottom: 2rem;
+  /* margin-bottom: 2rem; */
   height: 100vh;
   display: flex;
   flex-direction: column;
