@@ -59,11 +59,17 @@ export default {
   }
 }
 
-/* Even smaller browser screen on mobile */
-  @media (max-height: 550px) and (min-width: 320px) {
+@media(max-width: 639px) and (max-height: 475px) {
     #animation-container {
-      margin-top: 2rem;
-    }
+      display:none;
+    } 
+}
+
+/* Even smaller browser screen on mobile */
+@media (max-height: 550px) and (min-width: 320px) {
+  #animation-container {
+    margin-top: 2rem;
   }
+}
 
 </style>

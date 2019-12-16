@@ -10,6 +10,7 @@
     </svg>
       
   <!--  Study  -->
+  <div id="study-svg">
     <svg version="1.1" id="study" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
     viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve" height="300">
       <g id="study-main">
@@ -27,6 +28,7 @@
         <path d="M38.4,16.5l1.8-0.5c0.4-0.1,0.7-0.6,0.6-1c-0.1-0.4-0.6-0.7-1-0.6L38,14.9c-0.4,0.1-0.7,0.6-0.6,1c0.1,0.1,0.1,0.3,0.2,0.4C37.8,16.5,38.1,16.6,38.4,16.5z"/>
       </g>
     </svg>
+  </div>
      
   <!-- Job  -->
     
@@ -166,52 +168,162 @@ export default {
 // Media queries
 @media (max-width: 639px) {
   // Change the animation
-  #welcome-animation {
-    position: relative;
-    text-align: center; 
-  }
-
-  #idea, #study, #job {
+  #idea, #arrow-1, #study,  #arrow-2, #job {
     position: absolute;
-    padding: 0;
   }
 
   #idea {
-    padding: 1rem 1rem 2rem 1rem;
-    width: 100%;
+    top: 19%;
+    left: 40%;
+    padding: 0;
+  }
+
+  #arrow-1, #arrow-2 {
+    top: 33%;
+    left: 45%;
   }
 
   #study {
-    width: 100%;
-    padding: 3.5rem 2.5rem 1rem 3.5rem;
+    top: 21%;
+    left: 25%;
+    // top: 25%;
+    // left: 35%;
+    padding: 0;
+    width: 55vw;
   }
 
   #job {
-    padding: 0.7rem 0.3rem 0.7rem 0.7rem;
-    width: 100%;
+    top: 23%;
+    left: 35%;
+    padding: 0;
   }
 
+  #small-circle {
+    stroke: $stage7;
+  }
+
+  #big-circle {
+    stroke: $stage6
+  }
+
+  #cloud {
+    stroke: $stage8
+  }
+
+  #light-rays path {
+  fill: yellow;
+  }
+
+  #tick-circle {
+    fill: $stage4;
+  }
+
+  #tick {
+    fill: $stage4;
+  }
 }
 
-  // Small phone landscape - e.g iphone5
-  @media(max-width: 568px) and (max-height: 320px) {
-    #welcome-animation {
-      display:none;
-    } 
+@media(max-width: 625px) {
+
+  #idea {
+    left: 37%;
+  }
+  
+  #job {
+    left: 30%;
+  }
+}
+
+@media(max-width: 570px) {
+  #idea {
+    left: 32%;
   }
 
-  @media(max-width: 639px) and (max-height: 475px) {
-    #welcome-animation {
-      display:none;
-    } 
+  #job {
+    left: 25%;
+  }
+}
+
+// Large smartphones - 414px e.g iPhone6/7/8 plus
+@media(max-width: 414px) {
+
+  #idea {
+    left: 27%;
+    top: 17%;
+  }
+  
+  #job {
+    left: 23%;
+    top: 18%;
   }
 
-  // Smartphone landscape
-  @media(max-height: 414px) {
-      #welcome-animation {
-      margin-bottom: 0;
-    }
+  #welcome-animation {
+    margin-bottom: 3rem;
+  }
+}
+// Normal smartphones - 375px e.g iPhone6/7/8/X
+@media(max-width: 375px) {
+
+  #idea {
+    left: 22%;
+    top: 14%;
+  }
+  
+  #job {
+    left: 20%;
+    top: 17%;
+  }
+}
+
+// Small smartphones - 320px e.g iPhone5
+@media(max-width: 320px) {
+
+  #idea {
+    height: 260px;
+    left: 17%;
+    top: 17%;
   }
 
+  #study {
+    width: 55vw;
+    top: 17%;
+    left: 26%;
+  }
+  
+  #job {
+    height: 260px;
+  }
+}
+
+// Even smaller browser screen on mobile
+@media (max-height: 640px) and (min-width: 320px) {
+  #idea {
+    top: 13%;
+  }
+
+  #study {
+    top: 16%;
+  }
+  
+  #job {
+    top: 16%;
+  }
+}
+
+// Smartphone landscape
+@media(max-height: 414px) {
+  #welcome-animation {
+    margin-bottom: 0;
+  }
+}
+
+// Small phone landscape - e.g iphone5
+@media(max-width: 639px) and (max-height: 600px) {
+// @media(max-height: 600px) {
+  #welcome-animation {
+    display:none;
+  }
+  
+}
 
 </style>

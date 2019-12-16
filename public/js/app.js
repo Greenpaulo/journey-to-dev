@@ -2277,8 +2277,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'AnimationSmall',
   mounted: function mounted() {
@@ -3761,7 +3759,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".bg-stage1[data-v-0dc5c9c2] {\n  background-color: #CC0000;\n}\n.bg-stage2[data-v-0dc5c9c2] {\n  background-color: orangered;\n}\n.bg-stage3[data-v-0dc5c9c2] {\n  background-color: orange;\n}\n.bg-stage4[data-v-0dc5c9c2] {\n  background-color: #77B300;\n}\n.bg-stage5[data-v-0dc5c9c2] {\n  background-color: #2A9FD6;\n}\n.bg-stage6[data-v-0dc5c9c2] {\n  background-color: #20c997;\n}\n.bg-stage7[data-v-0dc5c9c2] {\n  background-color: #e83e8c;\n}\n.bg-stage8[data-v-0dc5c9c2] {\n  background-color: #9933CC;\n}\n.bg-stage9[data-v-0dc5c9c2] {\n  background-color: #fff;\n  color: black !important;\n}\n.border-stage1[data-v-0dc5c9c2] {\n  border-top: 8px solid #CC0000;\n  border-right: 8px solid #CC0000;\n}\n.border-stage2[data-v-0dc5c9c2] {\n  border-top: 8px solid orangered;\n  border-right: 8px solid orangered;\n}\n.border-stage3[data-v-0dc5c9c2] {\n  border-top: 8px solid orange;\n  border-right: 8px solid orange;\n}\n.border-stage4[data-v-0dc5c9c2] {\n  border-top: 8px solid #77B300;\n  border-right: 8px solid #77B300;\n}\n.border-stage5[data-v-0dc5c9c2] {\n  border-top: 8px solid #2A9FD6;\n  border-right: 8px solid #2A9FD6;\n}\n.border-stage6[data-v-0dc5c9c2] {\n  border-top: 8px solid #20c997;\n  border-right: 8px solid #20c997;\n}\n.border-stage7[data-v-0dc5c9c2] {\n  border-top: 8px solid #e83e8c;\n  border-right: 8px solid #e83e8c;\n}\n.border-stage8[data-v-0dc5c9c2] {\n  border-top: 8px solid #9933CC;\n  border-right: 8px solid #9933CC;\n}\n.border-stage9[data-v-0dc5c9c2] {\n  border-top: 8px solid #fff;\n  border-right: 8px solid #ffff;\n}\n.text-stage1[data-v-0dc5c9c2] {\n  color: #CC0000;\n}\n.text-stage2[data-v-0dc5c9c2] {\n  color: orangered;\n}\n.text-stage3[data-v-0dc5c9c2] {\n  color: orange;\n}\n.text-stage4[data-v-0dc5c9c2] {\n  color: #77B300;\n}\n.text-stage5[data-v-0dc5c9c2] {\n  color: #2A9FD6;\n}\n.text-stage6[data-v-0dc5c9c2] {\n  color: #20c997;\n}\n.text-stage7[data-v-0dc5c9c2] {\n  color: #e83e8c;\n}\n.text-stage8[data-v-0dc5c9c2] {\n  color: #9933CC;\n}\n.text-stage9[data-v-0dc5c9c2] {\n  color: white;\n}\n.st0[data-v-0dc5c9c2] {\n  fill: none;\n  stroke: #fff;\n  stroke-width: 3;\n  stroke-miterlimit: 10;\n}\n.st1[data-v-0dc5c9c2] {\n  fill: none;\n  stroke: #fff;\n  stroke-width: 2;\n  stroke-miterlimit: 10;\n}\n#tick[data-v-0dc5c9c2], #tick-circle[data-v-0dc5c9c2] {\n  fill: white;\n  stroke: none;\n  stroke-width: 10;\n  stroke-miterlimit: 10;\n}\n#welcome-animation[data-v-0dc5c9c2] {\n  display: flex;\n  margin-bottom: 1rem;\n}\n#idea[data-v-0dc5c9c2] {\n  padding-bottom: 3rem;\n}\n#head[data-v-0dc5c9c2] {\n  opacity: 1;\n}\ncircle[data-v-0dc5c9c2], path[data-v-0dc5c9c2] {\n  fill: white;\n}\n#small-circle[data-v-0dc5c9c2], #big-circle[data-v-0dc5c9c2], #cloud[data-v-0dc5c9c2] {\n  opacity: 0;\n}\n#small-circle[data-v-0dc5c9c2] {\n  stroke: #e83e8c;\n}\n#big-circle[data-v-0dc5c9c2] {\n  stroke: #20c997;\n}\n#cloud[data-v-0dc5c9c2] {\n  stroke: #9933CC;\n}\n#light-rays path[data-v-0dc5c9c2] {\n  fill: yellow;\n}\n#tick-circle[data-v-0dc5c9c2] {\n  fill: #77B300;\n}\n#tick[data-v-0dc5c9c2] {\n  fill: #77B300;\n}\n#arrow-1 path[data-v-0dc5c9c2], #arrow-2 path[data-v-0dc5c9c2] {\n  opacity: 0;\n}\n#arrow-1[data-v-0dc5c9c2], #arrow-2[data-v-0dc5c9c2] {\n  padding-top: 3rem;\n}\n#study[data-v-0dc5c9c2] {\n  padding: 2rem 4rem 0 4rem;\n}\n#light-rays[data-v-0dc5c9c2] {\n  opacity: 0;\n}\n#study-logo[data-v-0dc5c9c2] {\n  height: 300px;\n}\n#job[data-v-0dc5c9c2] {\n  padding: 2rem 0 1rem 3rem;\n}\n#job-complete[data-v-0dc5c9c2] {\n  opacity: 0;\n}\n#circle-1[data-v-0dc5c9c2] {\n  fill: #CC0000;\n}\n#circle-2[data-v-0dc5c9c2] {\n  fill: orangered;\n}\n#circle-3[data-v-0dc5c9c2] {\n  fill: orange;\n}\n#arrow-head-1[data-v-0dc5c9c2] {\n  fill: #77B300;\n}\n#circle-4[data-v-0dc5c9c2] {\n  fill: #2A9FD6;\n}\n#circle-5[data-v-0dc5c9c2] {\n  fill: #20c997;\n}\n#circle-6[data-v-0dc5c9c2] {\n  fill: #e83e8c;\n}\n#arrow-head-2[data-v-0dc5c9c2] {\n  fill: #9933CC;\n}\n@media (max-width: 1000px) {\n#welcome-animation[data-v-0dc5c9c2] {\n    max-width: 90vw;\n}\n#study[data-v-0dc5c9c2] {\n    width: 33vw;\n}\n}\n@media (max-width: 768px) and (min-width: 640px) {\n#idea[data-v-0dc5c9c2], #arrow-1[data-v-0dc5c9c2], #study[data-v-0dc5c9c2], #arrow-2[data-v-0dc5c9c2], #job[data-v-0dc5c9c2] {\n    height: 200px;\n}\n#idea[data-v-0dc5c9c2] {\n    padding-bottom: 1.4rem;\n}\n#job[data-v-0dc5c9c2] {\n    padding: 2rem 0 1rem 1rem;\n}\n#study[data-v-0dc5c9c2] {\n    padding: 1rem 3rem 0 3rem;\n}\n}\n@media (min-width: 640px) and (max-height: 414px) {\n#welcome-animation[data-v-0dc5c9c2] {\n    margin-top: 15rem;\n}\n}", ""]);
+exports.push([module.i, ".bg-stage1[data-v-0dc5c9c2] {\n  background-color: #CC0000;\n}\n.bg-stage2[data-v-0dc5c9c2] {\n  background-color: orangered;\n}\n.bg-stage3[data-v-0dc5c9c2] {\n  background-color: orange;\n}\n.bg-stage4[data-v-0dc5c9c2] {\n  background-color: #77B300;\n}\n.bg-stage5[data-v-0dc5c9c2] {\n  background-color: #2A9FD6;\n}\n.bg-stage6[data-v-0dc5c9c2] {\n  background-color: #20c997;\n}\n.bg-stage7[data-v-0dc5c9c2] {\n  background-color: #e83e8c;\n}\n.bg-stage8[data-v-0dc5c9c2] {\n  background-color: #9933CC;\n}\n.bg-stage9[data-v-0dc5c9c2] {\n  background-color: #fff;\n  color: black !important;\n}\n.border-stage1[data-v-0dc5c9c2] {\n  border-top: 8px solid #CC0000;\n  border-right: 8px solid #CC0000;\n}\n.border-stage2[data-v-0dc5c9c2] {\n  border-top: 8px solid orangered;\n  border-right: 8px solid orangered;\n}\n.border-stage3[data-v-0dc5c9c2] {\n  border-top: 8px solid orange;\n  border-right: 8px solid orange;\n}\n.border-stage4[data-v-0dc5c9c2] {\n  border-top: 8px solid #77B300;\n  border-right: 8px solid #77B300;\n}\n.border-stage5[data-v-0dc5c9c2] {\n  border-top: 8px solid #2A9FD6;\n  border-right: 8px solid #2A9FD6;\n}\n.border-stage6[data-v-0dc5c9c2] {\n  border-top: 8px solid #20c997;\n  border-right: 8px solid #20c997;\n}\n.border-stage7[data-v-0dc5c9c2] {\n  border-top: 8px solid #e83e8c;\n  border-right: 8px solid #e83e8c;\n}\n.border-stage8[data-v-0dc5c9c2] {\n  border-top: 8px solid #9933CC;\n  border-right: 8px solid #9933CC;\n}\n.border-stage9[data-v-0dc5c9c2] {\n  border-top: 8px solid #fff;\n  border-right: 8px solid #ffff;\n}\n.text-stage1[data-v-0dc5c9c2] {\n  color: #CC0000;\n}\n.text-stage2[data-v-0dc5c9c2] {\n  color: orangered;\n}\n.text-stage3[data-v-0dc5c9c2] {\n  color: orange;\n}\n.text-stage4[data-v-0dc5c9c2] {\n  color: #77B300;\n}\n.text-stage5[data-v-0dc5c9c2] {\n  color: #2A9FD6;\n}\n.text-stage6[data-v-0dc5c9c2] {\n  color: #20c997;\n}\n.text-stage7[data-v-0dc5c9c2] {\n  color: #e83e8c;\n}\n.text-stage8[data-v-0dc5c9c2] {\n  color: #9933CC;\n}\n.text-stage9[data-v-0dc5c9c2] {\n  color: white;\n}\n.st0[data-v-0dc5c9c2] {\n  fill: none;\n  stroke: #fff;\n  stroke-width: 3;\n  stroke-miterlimit: 10;\n}\n.st1[data-v-0dc5c9c2] {\n  fill: none;\n  stroke: #fff;\n  stroke-width: 2;\n  stroke-miterlimit: 10;\n}\n#tick[data-v-0dc5c9c2], #tick-circle[data-v-0dc5c9c2] {\n  fill: white;\n  stroke: none;\n  stroke-width: 10;\n  stroke-miterlimit: 10;\n}\n#welcome-animation[data-v-0dc5c9c2] {\n  display: flex;\n  margin-bottom: 1rem;\n}\n#idea[data-v-0dc5c9c2] {\n  padding-bottom: 3rem;\n}\n#head[data-v-0dc5c9c2] {\n  opacity: 1;\n}\ncircle[data-v-0dc5c9c2], path[data-v-0dc5c9c2] {\n  fill: white;\n}\n#small-circle[data-v-0dc5c9c2], #big-circle[data-v-0dc5c9c2], #cloud[data-v-0dc5c9c2] {\n  opacity: 0;\n}\n#small-circle[data-v-0dc5c9c2] {\n  stroke: #e83e8c;\n}\n#big-circle[data-v-0dc5c9c2] {\n  stroke: #20c997;\n}\n#cloud[data-v-0dc5c9c2] {\n  stroke: #9933CC;\n}\n#light-rays path[data-v-0dc5c9c2] {\n  fill: yellow;\n}\n#tick-circle[data-v-0dc5c9c2] {\n  fill: #77B300;\n}\n#tick[data-v-0dc5c9c2] {\n  fill: #77B300;\n}\n#arrow-1 path[data-v-0dc5c9c2], #arrow-2 path[data-v-0dc5c9c2] {\n  opacity: 0;\n}\n#arrow-1[data-v-0dc5c9c2], #arrow-2[data-v-0dc5c9c2] {\n  padding-top: 3rem;\n}\n#study[data-v-0dc5c9c2] {\n  padding: 2rem 4rem 0 4rem;\n}\n#light-rays[data-v-0dc5c9c2] {\n  opacity: 0;\n}\n#study-logo[data-v-0dc5c9c2] {\n  height: 300px;\n}\n#job[data-v-0dc5c9c2] {\n  padding: 2rem 0 1rem 3rem;\n}\n#job-complete[data-v-0dc5c9c2] {\n  opacity: 0;\n}\n#circle-1[data-v-0dc5c9c2] {\n  fill: #CC0000;\n}\n#circle-2[data-v-0dc5c9c2] {\n  fill: orangered;\n}\n#circle-3[data-v-0dc5c9c2] {\n  fill: orange;\n}\n#arrow-head-1[data-v-0dc5c9c2] {\n  fill: #77B300;\n}\n#circle-4[data-v-0dc5c9c2] {\n  fill: #2A9FD6;\n}\n#circle-5[data-v-0dc5c9c2] {\n  fill: #20c997;\n}\n#circle-6[data-v-0dc5c9c2] {\n  fill: #e83e8c;\n}\n#arrow-head-2[data-v-0dc5c9c2] {\n  fill: #9933CC;\n}\n@media (max-width: 1000px) {\n#welcome-animation[data-v-0dc5c9c2] {\n    max-width: 90vw;\n}\n#study[data-v-0dc5c9c2] {\n    width: 33vw;\n}\n}\n@media (max-width: 768px) and (min-width: 640px) {\n#idea[data-v-0dc5c9c2], #arrow-1[data-v-0dc5c9c2], #study[data-v-0dc5c9c2], #arrow-2[data-v-0dc5c9c2], #job[data-v-0dc5c9c2] {\n    height: 200px;\n}\n#idea[data-v-0dc5c9c2] {\n    padding-bottom: 1.4rem;\n}\n#job[data-v-0dc5c9c2] {\n    padding: 2rem 0 1rem 1rem;\n}\n#study[data-v-0dc5c9c2] {\n    padding: 1rem 3rem 0 3rem;\n}\n}\n@media (min-width: 640px) and (max-height: 500px) {\n#welcome-animation[data-v-0dc5c9c2] {\n    margin-top: 15rem;\n}\n}", ""]);
 
 // exports
 
@@ -3780,7 +3778,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".bg-stage1[data-v-7fd3dd8e] {\n  background-color: #CC0000;\n}\n.bg-stage2[data-v-7fd3dd8e] {\n  background-color: orangered;\n}\n.bg-stage3[data-v-7fd3dd8e] {\n  background-color: orange;\n}\n.bg-stage4[data-v-7fd3dd8e] {\n  background-color: #77B300;\n}\n.bg-stage5[data-v-7fd3dd8e] {\n  background-color: #2A9FD6;\n}\n.bg-stage6[data-v-7fd3dd8e] {\n  background-color: #20c997;\n}\n.bg-stage7[data-v-7fd3dd8e] {\n  background-color: #e83e8c;\n}\n.bg-stage8[data-v-7fd3dd8e] {\n  background-color: #9933CC;\n}\n.bg-stage9[data-v-7fd3dd8e] {\n  background-color: #fff;\n  color: black !important;\n}\n.border-stage1[data-v-7fd3dd8e] {\n  border-top: 8px solid #CC0000;\n  border-right: 8px solid #CC0000;\n}\n.border-stage2[data-v-7fd3dd8e] {\n  border-top: 8px solid orangered;\n  border-right: 8px solid orangered;\n}\n.border-stage3[data-v-7fd3dd8e] {\n  border-top: 8px solid orange;\n  border-right: 8px solid orange;\n}\n.border-stage4[data-v-7fd3dd8e] {\n  border-top: 8px solid #77B300;\n  border-right: 8px solid #77B300;\n}\n.border-stage5[data-v-7fd3dd8e] {\n  border-top: 8px solid #2A9FD6;\n  border-right: 8px solid #2A9FD6;\n}\n.border-stage6[data-v-7fd3dd8e] {\n  border-top: 8px solid #20c997;\n  border-right: 8px solid #20c997;\n}\n.border-stage7[data-v-7fd3dd8e] {\n  border-top: 8px solid #e83e8c;\n  border-right: 8px solid #e83e8c;\n}\n.border-stage8[data-v-7fd3dd8e] {\n  border-top: 8px solid #9933CC;\n  border-right: 8px solid #9933CC;\n}\n.border-stage9[data-v-7fd3dd8e] {\n  border-top: 8px solid #fff;\n  border-right: 8px solid #ffff;\n}\n.text-stage1[data-v-7fd3dd8e] {\n  color: #CC0000;\n}\n.text-stage2[data-v-7fd3dd8e] {\n  color: orangered;\n}\n.text-stage3[data-v-7fd3dd8e] {\n  color: orange;\n}\n.text-stage4[data-v-7fd3dd8e] {\n  color: #77B300;\n}\n.text-stage5[data-v-7fd3dd8e] {\n  color: #2A9FD6;\n}\n.text-stage6[data-v-7fd3dd8e] {\n  color: #20c997;\n}\n.text-stage7[data-v-7fd3dd8e] {\n  color: #e83e8c;\n}\n.text-stage8[data-v-7fd3dd8e] {\n  color: #9933CC;\n}\n.text-stage9[data-v-7fd3dd8e] {\n  color: white;\n}\n.st0[data-v-7fd3dd8e] {\n  fill: none;\n  stroke: #fff;\n  stroke-width: 3;\n  stroke-miterlimit: 10;\n}\n.st1[data-v-7fd3dd8e] {\n  fill: none;\n  stroke: #fff;\n  stroke-width: 2;\n  stroke-miterlimit: 10;\n}\n#tick[data-v-7fd3dd8e], #tick-circle[data-v-7fd3dd8e] {\n  fill: white;\n  stroke: none;\n  stroke-width: 10;\n  stroke-miterlimit: 10;\n}\n#welcome-animation[data-v-7fd3dd8e] {\n  display: flex;\n  margin-bottom: 1rem;\n}\n#idea[data-v-7fd3dd8e] {\n  padding-bottom: 3rem;\n}\n#head[data-v-7fd3dd8e] {\n  opacity: 1;\n}\ncircle[data-v-7fd3dd8e], path[data-v-7fd3dd8e] {\n  fill: white;\n}\n#small-circle[data-v-7fd3dd8e], #big-circle[data-v-7fd3dd8e], #cloud[data-v-7fd3dd8e] {\n  opacity: 0;\n}\n#small-circle[data-v-7fd3dd8e] {\n  stroke: #e83e8c;\n}\n#big-circle[data-v-7fd3dd8e] {\n  stroke: #20c997;\n}\n#cloud[data-v-7fd3dd8e] {\n  stroke: #9933CC;\n}\n#light-rays path[data-v-7fd3dd8e] {\n  fill: yellow;\n}\n#tick-circle[data-v-7fd3dd8e] {\n  fill: #77B300;\n}\n#tick[data-v-7fd3dd8e] {\n  fill: #77B300;\n}\n#arrow-1 path[data-v-7fd3dd8e], #arrow-2 path[data-v-7fd3dd8e] {\n  opacity: 0;\n}\n#arrow-1[data-v-7fd3dd8e], #arrow-2[data-v-7fd3dd8e] {\n  padding-top: 3rem;\n}\n#study[data-v-7fd3dd8e] {\n  padding: 2rem 4rem 0 4rem;\n}\n#light-rays[data-v-7fd3dd8e] {\n  opacity: 0;\n}\n#study-logo[data-v-7fd3dd8e] {\n  height: 300px;\n}\n#job[data-v-7fd3dd8e] {\n  padding: 2rem 0 1rem 3rem;\n}\n#job-complete[data-v-7fd3dd8e] {\n  opacity: 0;\n}\n#circle-1[data-v-7fd3dd8e] {\n  fill: #CC0000;\n}\n#circle-2[data-v-7fd3dd8e] {\n  fill: orangered;\n}\n#circle-3[data-v-7fd3dd8e] {\n  fill: orange;\n}\n#arrow-head-1[data-v-7fd3dd8e] {\n  fill: #77B300;\n}\n#circle-4[data-v-7fd3dd8e] {\n  fill: #2A9FD6;\n}\n#circle-5[data-v-7fd3dd8e] {\n  fill: #20c997;\n}\n#circle-6[data-v-7fd3dd8e] {\n  fill: #e83e8c;\n}\n#arrow-head-2[data-v-7fd3dd8e] {\n  fill: #9933CC;\n}\n@media (max-width: 1000px) {\n#welcome-animation[data-v-7fd3dd8e] {\n    max-width: 90vw;\n}\n#study[data-v-7fd3dd8e] {\n    width: 33vw;\n}\n}\n@media (max-width: 768px) and (min-width: 640px) {\n#idea[data-v-7fd3dd8e], #arrow-1[data-v-7fd3dd8e], #study[data-v-7fd3dd8e], #arrow-2[data-v-7fd3dd8e], #job[data-v-7fd3dd8e] {\n    height: 200px;\n}\n#idea[data-v-7fd3dd8e] {\n    padding-bottom: 1.4rem;\n}\n#job[data-v-7fd3dd8e] {\n    padding: 2rem 0 1rem 1rem;\n}\n#study[data-v-7fd3dd8e] {\n    padding: 1rem 3rem 0 3rem;\n}\n}\n@media (min-width: 640px) and (max-height: 414px) {\n#welcome-animation[data-v-7fd3dd8e] {\n    margin-top: 15rem;\n}\n}\n@media (max-width: 639px) {\n#idea[data-v-7fd3dd8e], #arrow-1[data-v-7fd3dd8e], #study[data-v-7fd3dd8e], #arrow-2[data-v-7fd3dd8e], #job[data-v-7fd3dd8e] {\n    position: absolute;\n}\n#idea[data-v-7fd3dd8e] {\n    top: 19%;\n    left: 40%;\n    padding: 0;\n}\n#arrow-1[data-v-7fd3dd8e], #arrow-2[data-v-7fd3dd8e] {\n    top: 33%;\n    left: 45%;\n}\n#study[data-v-7fd3dd8e] {\n    top: 21%;\n    left: 25%;\n    padding: 0;\n    width: 55vw;\n}\n#job[data-v-7fd3dd8e] {\n    top: 23%;\n    left: 35%;\n    padding: 0;\n}\n#small-circle[data-v-7fd3dd8e] {\n    stroke: #e83e8c;\n}\n#big-circle[data-v-7fd3dd8e] {\n    stroke: #20c997;\n}\n#cloud[data-v-7fd3dd8e] {\n    stroke: #9933CC;\n}\n#light-rays path[data-v-7fd3dd8e] {\n    fill: yellow;\n}\n#tick-circle[data-v-7fd3dd8e] {\n    fill: #77B300;\n}\n#tick[data-v-7fd3dd8e] {\n    fill: #77B300;\n}\n}\n@media (max-width: 625px) {\n#idea[data-v-7fd3dd8e] {\n    left: 37%;\n}\n#job[data-v-7fd3dd8e] {\n    left: 30%;\n}\n}\n@media (max-width: 570px) {\n#idea[data-v-7fd3dd8e] {\n    left: 32%;\n}\n#job[data-v-7fd3dd8e] {\n    left: 25%;\n}\n}\n@media (max-width: 414px) {\n#idea[data-v-7fd3dd8e] {\n    left: 27%;\n    top: 17%;\n}\n#job[data-v-7fd3dd8e] {\n    left: 23%;\n    top: 18%;\n}\n#welcome-animation[data-v-7fd3dd8e] {\n    margin-bottom: 3rem;\n}\n}\n@media (max-width: 375px) {\n#idea[data-v-7fd3dd8e] {\n    left: 22%;\n    top: 14%;\n}\n#job[data-v-7fd3dd8e] {\n    left: 20%;\n    top: 17%;\n}\n}\n@media (max-width: 320px) {\n#idea[data-v-7fd3dd8e] {\n    height: 260px;\n    left: 17%;\n    top: 17%;\n}\n#study[data-v-7fd3dd8e] {\n    width: 55vw;\n    top: 17%;\n    left: 26%;\n}\n#job[data-v-7fd3dd8e] {\n    height: 260px;\n}\n}\n@media (max-height: 640px) and (min-width: 320px) {\n#idea[data-v-7fd3dd8e] {\n    top: 13%;\n}\n#study[data-v-7fd3dd8e] {\n    top: 16%;\n}\n#job[data-v-7fd3dd8e] {\n    top: 16%;\n}\n}\n@media (max-height: 414px) {\n#welcome-animation[data-v-7fd3dd8e] {\n    margin-bottom: 0;\n}\n}\n@media (max-width: 568px) and (max-height: 320px) {\n#welcome-animation[data-v-7fd3dd8e] {\n    display: none;\n}\n}", ""]);
+exports.push([module.i, ".bg-stage1[data-v-7fd3dd8e] {\n  background-color: #CC0000;\n}\n.bg-stage2[data-v-7fd3dd8e] {\n  background-color: orangered;\n}\n.bg-stage3[data-v-7fd3dd8e] {\n  background-color: orange;\n}\n.bg-stage4[data-v-7fd3dd8e] {\n  background-color: #77B300;\n}\n.bg-stage5[data-v-7fd3dd8e] {\n  background-color: #2A9FD6;\n}\n.bg-stage6[data-v-7fd3dd8e] {\n  background-color: #20c997;\n}\n.bg-stage7[data-v-7fd3dd8e] {\n  background-color: #e83e8c;\n}\n.bg-stage8[data-v-7fd3dd8e] {\n  background-color: #9933CC;\n}\n.bg-stage9[data-v-7fd3dd8e] {\n  background-color: #fff;\n  color: black !important;\n}\n.border-stage1[data-v-7fd3dd8e] {\n  border-top: 8px solid #CC0000;\n  border-right: 8px solid #CC0000;\n}\n.border-stage2[data-v-7fd3dd8e] {\n  border-top: 8px solid orangered;\n  border-right: 8px solid orangered;\n}\n.border-stage3[data-v-7fd3dd8e] {\n  border-top: 8px solid orange;\n  border-right: 8px solid orange;\n}\n.border-stage4[data-v-7fd3dd8e] {\n  border-top: 8px solid #77B300;\n  border-right: 8px solid #77B300;\n}\n.border-stage5[data-v-7fd3dd8e] {\n  border-top: 8px solid #2A9FD6;\n  border-right: 8px solid #2A9FD6;\n}\n.border-stage6[data-v-7fd3dd8e] {\n  border-top: 8px solid #20c997;\n  border-right: 8px solid #20c997;\n}\n.border-stage7[data-v-7fd3dd8e] {\n  border-top: 8px solid #e83e8c;\n  border-right: 8px solid #e83e8c;\n}\n.border-stage8[data-v-7fd3dd8e] {\n  border-top: 8px solid #9933CC;\n  border-right: 8px solid #9933CC;\n}\n.border-stage9[data-v-7fd3dd8e] {\n  border-top: 8px solid #fff;\n  border-right: 8px solid #ffff;\n}\n.text-stage1[data-v-7fd3dd8e] {\n  color: #CC0000;\n}\n.text-stage2[data-v-7fd3dd8e] {\n  color: orangered;\n}\n.text-stage3[data-v-7fd3dd8e] {\n  color: orange;\n}\n.text-stage4[data-v-7fd3dd8e] {\n  color: #77B300;\n}\n.text-stage5[data-v-7fd3dd8e] {\n  color: #2A9FD6;\n}\n.text-stage6[data-v-7fd3dd8e] {\n  color: #20c997;\n}\n.text-stage7[data-v-7fd3dd8e] {\n  color: #e83e8c;\n}\n.text-stage8[data-v-7fd3dd8e] {\n  color: #9933CC;\n}\n.text-stage9[data-v-7fd3dd8e] {\n  color: white;\n}\n.st0[data-v-7fd3dd8e] {\n  fill: none;\n  stroke: #fff;\n  stroke-width: 3;\n  stroke-miterlimit: 10;\n}\n.st1[data-v-7fd3dd8e] {\n  fill: none;\n  stroke: #fff;\n  stroke-width: 2;\n  stroke-miterlimit: 10;\n}\n#tick[data-v-7fd3dd8e], #tick-circle[data-v-7fd3dd8e] {\n  fill: white;\n  stroke: none;\n  stroke-width: 10;\n  stroke-miterlimit: 10;\n}\n#welcome-animation[data-v-7fd3dd8e] {\n  display: flex;\n  margin-bottom: 1rem;\n}\n#idea[data-v-7fd3dd8e] {\n  padding-bottom: 3rem;\n}\n#head[data-v-7fd3dd8e] {\n  opacity: 1;\n}\ncircle[data-v-7fd3dd8e], path[data-v-7fd3dd8e] {\n  fill: white;\n}\n#small-circle[data-v-7fd3dd8e], #big-circle[data-v-7fd3dd8e], #cloud[data-v-7fd3dd8e] {\n  opacity: 0;\n}\n#small-circle[data-v-7fd3dd8e] {\n  stroke: #e83e8c;\n}\n#big-circle[data-v-7fd3dd8e] {\n  stroke: #20c997;\n}\n#cloud[data-v-7fd3dd8e] {\n  stroke: #9933CC;\n}\n#light-rays path[data-v-7fd3dd8e] {\n  fill: yellow;\n}\n#tick-circle[data-v-7fd3dd8e] {\n  fill: #77B300;\n}\n#tick[data-v-7fd3dd8e] {\n  fill: #77B300;\n}\n#arrow-1 path[data-v-7fd3dd8e], #arrow-2 path[data-v-7fd3dd8e] {\n  opacity: 0;\n}\n#arrow-1[data-v-7fd3dd8e], #arrow-2[data-v-7fd3dd8e] {\n  padding-top: 3rem;\n}\n#study[data-v-7fd3dd8e] {\n  padding: 2rem 4rem 0 4rem;\n}\n#light-rays[data-v-7fd3dd8e] {\n  opacity: 0;\n}\n#study-logo[data-v-7fd3dd8e] {\n  height: 300px;\n}\n#job[data-v-7fd3dd8e] {\n  padding: 2rem 0 1rem 3rem;\n}\n#job-complete[data-v-7fd3dd8e] {\n  opacity: 0;\n}\n#circle-1[data-v-7fd3dd8e] {\n  fill: #CC0000;\n}\n#circle-2[data-v-7fd3dd8e] {\n  fill: orangered;\n}\n#circle-3[data-v-7fd3dd8e] {\n  fill: orange;\n}\n#arrow-head-1[data-v-7fd3dd8e] {\n  fill: #77B300;\n}\n#circle-4[data-v-7fd3dd8e] {\n  fill: #2A9FD6;\n}\n#circle-5[data-v-7fd3dd8e] {\n  fill: #20c997;\n}\n#circle-6[data-v-7fd3dd8e] {\n  fill: #e83e8c;\n}\n#arrow-head-2[data-v-7fd3dd8e] {\n  fill: #9933CC;\n}\n@media (max-width: 1000px) {\n#welcome-animation[data-v-7fd3dd8e] {\n    max-width: 90vw;\n}\n#study[data-v-7fd3dd8e] {\n    width: 33vw;\n}\n}\n@media (max-width: 768px) and (min-width: 640px) {\n#idea[data-v-7fd3dd8e], #arrow-1[data-v-7fd3dd8e], #study[data-v-7fd3dd8e], #arrow-2[data-v-7fd3dd8e], #job[data-v-7fd3dd8e] {\n    height: 200px;\n}\n#idea[data-v-7fd3dd8e] {\n    padding-bottom: 1.4rem;\n}\n#job[data-v-7fd3dd8e] {\n    padding: 2rem 0 1rem 1rem;\n}\n#study[data-v-7fd3dd8e] {\n    padding: 1rem 3rem 0 3rem;\n}\n}\n@media (min-width: 640px) and (max-height: 500px) {\n#welcome-animation[data-v-7fd3dd8e] {\n    margin-top: 15rem;\n}\n}\n@media (max-width: 639px) {\n#welcome-animation[data-v-7fd3dd8e] {\n    position: relative;\n    text-align: center;\n}\n#idea[data-v-7fd3dd8e], #study[data-v-7fd3dd8e], #job[data-v-7fd3dd8e] {\n    position: absolute;\n    padding: 0;\n}\n#idea[data-v-7fd3dd8e] {\n    padding: 1rem 1rem 2rem 1rem;\n    width: 100%;\n}\n#study[data-v-7fd3dd8e] {\n    width: 100%;\n    padding: 3.5rem 2.5rem 1rem 3.5rem;\n}\n#job[data-v-7fd3dd8e] {\n    padding: 0.7rem 0.3rem 0.7rem 0.7rem;\n    width: 100%;\n}\n}\n@media (max-width: 568px) and (max-height: 320px) {\n#welcome-animation[data-v-7fd3dd8e] {\n    display: none;\n}\n}\n@media (max-width: 639px) and (max-height: 475px) {\n#welcome-animation[data-v-7fd3dd8e] {\n    display: none;\n}\n}\n@media (max-height: 414px) {\n#welcome-animation[data-v-7fd3dd8e] {\n    margin-bottom: 0;\n}\n}", ""]);
 
 // exports
 
@@ -4008,7 +4006,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n@media (max-width: 639px){\n#animation-container[data-v-06a0efad] {\r\n    display: block;\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n    height: 300px;\r\n    width: 300px;\n}\n}\r\n\r\n/* Even smaller browser screen on mobile */\n@media (max-height: 550px) and (min-width: 320px) {\n#animation-container[data-v-06a0efad] {\r\n      margin-top: 2rem;\n}\n}\r\n\r\n", ""]);
+exports.push([module.i, "\n@media (max-width: 639px){\n#animation-container[data-v-06a0efad] {\r\n    display: block;\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n    height: 300px;\r\n    width: 300px;\n}\n}\n@media(max-width: 639px) and (max-height: 475px) {\n#animation-container[data-v-06a0efad] {\r\n      display:none;\n}\n}\r\n\r\n/* Even smaller browser screen on mobile */\n@media (max-height: 550px) and (min-width: 320px) {\n#animation-container[data-v-06a0efad] {\r\n    margin-top: 2rem;\n}\n}\r\n\r\n", ""]);
 
 // exports
 
@@ -6977,93 +6975,91 @@ var render = function() {
       ]
     ),
     _vm._v(" "),
-    _c("div", { attrs: { id: "study-svg" } }, [
-      _c(
-        "svg",
-        {
-          staticStyle: { "enable-background": "new 0 0 60 75" },
-          attrs: {
-            version: "1.1",
-            id: "study",
-            xmlns: "http://www.w3.org/2000/svg",
-            "xmlns:xlink": "http://www.w3.org/1999/xlink",
-            x: "0px",
-            y: "0px",
-            viewBox: "0 0 60 75",
-            "xml:space": "preserve",
-            height: "300"
-          }
-        },
-        [
-          _c("g", { attrs: { id: "study-main" } }, [
-            _c("path", {
-              attrs: {
-                d:
-                  "M13.9,47.9H2.8V34c0-0.6-0.5-1.1-1.1-1.1s-1,0.5-1,1.1v27.7c0,0.6,0.5,1.1,1.1,1.1s1.1-0.5,1.1-1.1v-7.1H13v7.1c0,0.6,0.5,1.1,1.1,1.1s1.1-0.5,1.1-1.1V48.9C15,48.3,14.5,47.9,13.9,47.9z M2.8,52.5V50h10.1v2.5H2.8z"
-              }
-            }),
-            _vm._v(" "),
-            _c("path", {
-              attrs: {
-                d:
-                  "M16.5,33.9c0.2,0.1,0.3,0.1,0.5,0.1h5.9c1.7,0,3-1.3,3-3c0-1.7-1.3-3-3-3h-4.7l-2.9-2.5c-1.1-0.9-2.5-1.4-3.9-1.4h-1c-3.3,0-6,2.7-6,6v12.4c0,1.9,1.5,3.4,3.4,3.4h8.7v12.2c0,1.6,1.3,2.8,2.8,2.8s2.8-1.3,2.8-2.8V41.4c0-1.5-1.3-2.8-2.8-2.8h-5v-5.8L16.5,33.9z M13.3,40.7h6.1c0.4,0,0.7,0.3,0.7,0.7v16.8c0,0.4-0.3,0.7-0.7,0.7c-0.4,0-0.7-0.3-0.7-0.7V44.9c0-0.6-0.5-1.1-1.1-1.1H7.8c-0.7,0-1.2-0.6-1.2-1.2V30.2c0-2.1,1.7-3.9,3.9-3.9h1c0.9,0,1.8,0.3,2.5,0.9l3.2,2.7c0.2,0.2,0.4,0.3,0.7,0.3h5.1c0.5,0,0.9,0.4,0.9,0.9c0,0.5-0.4,0.9-0.9,0.9h-5.7l-3.5-1.9c-0.3-0.2-0.7-0.2-1.1,0c-0.3,0.2-0.5,0.5-0.5,0.9v8.7C12.2,40.3,12.7,40.7,13.3,40.7z"
-              }
-            }),
-            _vm._v(" "),
-            _c("path", {
-              attrs: {
-                d:
-                  "M11,22.9c3.5,0,6.3-2.8,6.3-6.3s-2.8-6.3-6.3-6.3c-3.5,0-6.3,2.8-6.3,6.3S7.5,22.9,11,22.9z M11,12.4c2.3,0,4.2,1.9,4.2,4.2s-1.9,4.2-4.2,4.2s-4.2-1.9-4.2-4.2S8.6,12.4,11,12.4z"
-              }
-            }),
-            _vm._v(" "),
-            _c("path", {
-              attrs: {
-                d:
-                  "M52.9,36.4h-2.7H28.8h-4.6c-0.6,0-1.1,0.5-1.1,1.1s0.5,1.1,1.1,1.1h3.5v23.2c0,0.6,0.5,1.1,1.1,1.1h21.5c0.6,0,1.1-0.5,1.1-1.1V38.5h1.7c0.6,0,1.1-0.5,1.1-1.1S53.5,36.4,52.9,36.4z M49.1,60.7H29.8V38.5h19.3V60.7z"
-              }
-            }),
-            _vm._v(" "),
-            _c("path", {
-              attrs: {
-                d:
-                  "M40.6,35.2c0.4,0,0.8-0.2,0.9-0.6l6.6-12.5c0.3-0.5,0.1-1.2-0.4-1.4c-0.5-0.3-1.2-0.1-1.4,0.4L39.9,33H27.2c-0.6,0-1.1,0.5-1.1,1.1c0,0.6,0.5,1.1,1.1,1.1H40.6z"
-              }
-            }),
-            _vm._v(" "),
-            _c("path", {
-              attrs: {
-                d:
-                  "M59.3,19.9c0-1.4-1.1-2.7-2.5-2.7c-0.1,0-0.1,0-0.1,0l-5.9-8.2c-0.2-0.3-0.6-0.5-0.9-0.5c-0.4-0.1-0.7,0.1-1,0.4l-2.4,2.4c-1.6-1.1-3.9-0.8-5.2,0.8l-0.4,0.5c-0.4,0.4-0.4,1,0,1.4l4.6,5c0.4,0.4,0.9,0.4,1.3,0l0.6-0.6c1.2-1.3,1.5-3.2,0.9-4.9l1.4-1.4l5,6.9c-0.1,0.3-0.2,0.6-0.2,1c0,0.5,0.2,1.1,0.5,1.5l-5,11.1h-1.5c-0.7,0-1.3,0.6-1.3,1.4s0.6,1.4,1.3,1.4H54c0.7,0,1.3-0.6,1.3-1.4s-0.6-1.4-1.3-1.4h-1.3l4.5-10C58.4,22.3,59.3,21.2,59.3,19.9z"
-              }
-            })
-          ]),
+    _c(
+      "svg",
+      {
+        staticStyle: { "enable-background": "new 0 0 60 75" },
+        attrs: {
+          version: "1.1",
+          id: "study",
+          xmlns: "http://www.w3.org/2000/svg",
+          "xmlns:xlink": "http://www.w3.org/1999/xlink",
+          x: "0px",
+          y: "0px",
+          viewBox: "0 0 60 75",
+          "xml:space": "preserve",
+          height: "300"
+        }
+      },
+      [
+        _c("g", { attrs: { id: "study-main" } }, [
+          _c("path", {
+            attrs: {
+              d:
+                "M13.9,47.9H2.8V34c0-0.6-0.5-1.1-1.1-1.1s-1,0.5-1,1.1v27.7c0,0.6,0.5,1.1,1.1,1.1s1.1-0.5,1.1-1.1v-7.1H13v7.1c0,0.6,0.5,1.1,1.1,1.1s1.1-0.5,1.1-1.1V48.9C15,48.3,14.5,47.9,13.9,47.9z M2.8,52.5V50h10.1v2.5H2.8z"
+            }
+          }),
           _vm._v(" "),
-          _c("g", { attrs: { id: "light-rays" } }, [
-            _c("path", {
-              attrs: {
-                d:
-                  "M39.8,17.9c-0.4,0.4-0.4,0.9,0,1.2s0.9,0.4,1.2,0l1.3-1.3c0.4-0.4,0.4-0.9,0-1.2c-0.4-0.4-0.9-0.4-1.2,0L39.8,17.9z"
-              }
-            }),
-            _vm._v(" "),
-            _c("path", {
-              attrs: {
-                d:
-                  "M44,21.2l0.5-1.8c0.1-0.4-0.1-0.9-0.6-1c-0.4-0.1-0.9,0.1-1,0.6l-0.5,1.8c-0.1,0.3,0,0.6,0.2,0.8c0.1,0.1,0.2,0.1,0.4,0.2C43.4,21.9,43.9,21.7,44,21.2z"
-              }
-            }),
-            _vm._v(" "),
-            _c("path", {
-              attrs: {
-                d:
-                  "M38.4,16.5l1.8-0.5c0.4-0.1,0.7-0.6,0.6-1c-0.1-0.4-0.6-0.7-1-0.6L38,14.9c-0.4,0.1-0.7,0.6-0.6,1c0.1,0.1,0.1,0.3,0.2,0.4C37.8,16.5,38.1,16.6,38.4,16.5z"
-              }
-            })
-          ])
-        ]
-      )
-    ]),
+          _c("path", {
+            attrs: {
+              d:
+                "M16.5,33.9c0.2,0.1,0.3,0.1,0.5,0.1h5.9c1.7,0,3-1.3,3-3c0-1.7-1.3-3-3-3h-4.7l-2.9-2.5c-1.1-0.9-2.5-1.4-3.9-1.4h-1c-3.3,0-6,2.7-6,6v12.4c0,1.9,1.5,3.4,3.4,3.4h8.7v12.2c0,1.6,1.3,2.8,2.8,2.8s2.8-1.3,2.8-2.8V41.4c0-1.5-1.3-2.8-2.8-2.8h-5v-5.8L16.5,33.9z M13.3,40.7h6.1c0.4,0,0.7,0.3,0.7,0.7v16.8c0,0.4-0.3,0.7-0.7,0.7c-0.4,0-0.7-0.3-0.7-0.7V44.9c0-0.6-0.5-1.1-1.1-1.1H7.8c-0.7,0-1.2-0.6-1.2-1.2V30.2c0-2.1,1.7-3.9,3.9-3.9h1c0.9,0,1.8,0.3,2.5,0.9l3.2,2.7c0.2,0.2,0.4,0.3,0.7,0.3h5.1c0.5,0,0.9,0.4,0.9,0.9c0,0.5-0.4,0.9-0.9,0.9h-5.7l-3.5-1.9c-0.3-0.2-0.7-0.2-1.1,0c-0.3,0.2-0.5,0.5-0.5,0.9v8.7C12.2,40.3,12.7,40.7,13.3,40.7z"
+            }
+          }),
+          _vm._v(" "),
+          _c("path", {
+            attrs: {
+              d:
+                "M11,22.9c3.5,0,6.3-2.8,6.3-6.3s-2.8-6.3-6.3-6.3c-3.5,0-6.3,2.8-6.3,6.3S7.5,22.9,11,22.9z M11,12.4c2.3,0,4.2,1.9,4.2,4.2s-1.9,4.2-4.2,4.2s-4.2-1.9-4.2-4.2S8.6,12.4,11,12.4z"
+            }
+          }),
+          _vm._v(" "),
+          _c("path", {
+            attrs: {
+              d:
+                "M52.9,36.4h-2.7H28.8h-4.6c-0.6,0-1.1,0.5-1.1,1.1s0.5,1.1,1.1,1.1h3.5v23.2c0,0.6,0.5,1.1,1.1,1.1h21.5c0.6,0,1.1-0.5,1.1-1.1V38.5h1.7c0.6,0,1.1-0.5,1.1-1.1S53.5,36.4,52.9,36.4z M49.1,60.7H29.8V38.5h19.3V60.7z"
+            }
+          }),
+          _vm._v(" "),
+          _c("path", {
+            attrs: {
+              d:
+                "M40.6,35.2c0.4,0,0.8-0.2,0.9-0.6l6.6-12.5c0.3-0.5,0.1-1.2-0.4-1.4c-0.5-0.3-1.2-0.1-1.4,0.4L39.9,33H27.2c-0.6,0-1.1,0.5-1.1,1.1c0,0.6,0.5,1.1,1.1,1.1H40.6z"
+            }
+          }),
+          _vm._v(" "),
+          _c("path", {
+            attrs: {
+              d:
+                "M59.3,19.9c0-1.4-1.1-2.7-2.5-2.7c-0.1,0-0.1,0-0.1,0l-5.9-8.2c-0.2-0.3-0.6-0.5-0.9-0.5c-0.4-0.1-0.7,0.1-1,0.4l-2.4,2.4c-1.6-1.1-3.9-0.8-5.2,0.8l-0.4,0.5c-0.4,0.4-0.4,1,0,1.4l4.6,5c0.4,0.4,0.9,0.4,1.3,0l0.6-0.6c1.2-1.3,1.5-3.2,0.9-4.9l1.4-1.4l5,6.9c-0.1,0.3-0.2,0.6-0.2,1c0,0.5,0.2,1.1,0.5,1.5l-5,11.1h-1.5c-0.7,0-1.3,0.6-1.3,1.4s0.6,1.4,1.3,1.4H54c0.7,0,1.3-0.6,1.3-1.4s-0.6-1.4-1.3-1.4h-1.3l4.5-10C58.4,22.3,59.3,21.2,59.3,19.9z"
+            }
+          })
+        ]),
+        _vm._v(" "),
+        _c("g", { attrs: { id: "light-rays" } }, [
+          _c("path", {
+            attrs: {
+              d:
+                "M39.8,17.9c-0.4,0.4-0.4,0.9,0,1.2s0.9,0.4,1.2,0l1.3-1.3c0.4-0.4,0.4-0.9,0-1.2c-0.4-0.4-0.9-0.4-1.2,0L39.8,17.9z"
+            }
+          }),
+          _vm._v(" "),
+          _c("path", {
+            attrs: {
+              d:
+                "M44,21.2l0.5-1.8c0.1-0.4-0.1-0.9-0.6-1c-0.4-0.1-0.9,0.1-1,0.6l-0.5,1.8c-0.1,0.3,0,0.6,0.2,0.8c0.1,0.1,0.2,0.1,0.4,0.2C43.4,21.9,43.9,21.7,44,21.2z"
+            }
+          }),
+          _vm._v(" "),
+          _c("path", {
+            attrs: {
+              d:
+                "M38.4,16.5l1.8-0.5c0.4-0.1,0.7-0.6,0.6-1c-0.1-0.4-0.6-0.7-1-0.6L38,14.9c-0.4,0.1-0.7,0.6-0.6,1c0.1,0.1,0.1,0.3,0.2,0.4C37.8,16.5,38.1,16.6,38.4,16.5z"
+            }
+          })
+        ])
+      ]
+    ),
     _vm._v(" "),
     _c(
       "svg",
