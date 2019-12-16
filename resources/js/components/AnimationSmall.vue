@@ -195,8 +195,14 @@ export default {
   @media(max-width: 568px) and (max-height: 320px) {
     #welcome-animation {
       display:none;
+    } 
+  }
+
+  // Smartphone landscape
+  @media(max-height: 414px) {
+      #welcome-animation {
+      margin-bottom: 0;
     }
-    
   }
 }
 
