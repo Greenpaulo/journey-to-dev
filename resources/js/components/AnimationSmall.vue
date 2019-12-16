@@ -190,33 +190,6 @@ export default {
     padding: 0.7rem 0.3rem 0.7rem 0.7rem;
     width: 100%;
   }
-
-  #small-circle {
-    stroke: $stage7;
-  }
-
-  #big-circle {
-    stroke: $stage6
-  }
-
-  #cloud {
-    stroke: $stage8
-  }
-
-  #light-rays path {
-  fill: yellow;
-  }
-
-  #tick-circle {
-    fill: $stage4;
-  }
-
-  #tick {
-    fill: $stage4;
-  }
-
-
-
 }
 
 </style>

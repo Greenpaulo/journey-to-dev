@@ -19,16 +19,6 @@
   stroke-miterlimit:10;
 }
 
-// #tick {
-//   stroke-dasharray: 265.30194091796875;
-//   stroke-dashoffset: 265.30194091796875;
-// }
-
-// #tick-circle {
-//   stroke-dasharray: 643.3987426757812;
-//   stroke-dashoffset: 643.3987426757812;
-// }
-
 #welcome-animation {
   display: flex;
   margin-bottom: 1rem;
@@ -42,17 +32,38 @@
   opacity: 1
 }
 
-#small-circle, #big-circle, #cloud {
-  opacity: 0;
-}
-
 circle, path {
   fill: white;
 }
 
-/* #circle1, #circle2, #circle3, #arrow-head {
-  
-} */
+#small-circle, #big-circle, #cloud {
+  opacity: 0;
+}
+
+  #small-circle {
+    stroke: $stage7;
+  }
+
+  #big-circle {
+    stroke: $stage6
+  }
+
+  #cloud {
+    stroke: $stage8
+  }
+
+  #light-rays path {
+  fill: yellow;
+  }
+
+  #tick-circle {
+    fill: $stage4;
+  }
+
+  #tick {
+    fill: $stage4;
+  }
+
 
 #arrow-1 path, #arrow-2 path {
   opacity: 0;

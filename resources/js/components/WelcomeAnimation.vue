@@ -56,7 +56,6 @@ export default {
     margin-right: auto;
     height: 300px;
     width: 300px;
-    /* border: red 1px solid; */
   }
 }
 
