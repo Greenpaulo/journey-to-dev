@@ -194,13 +194,13 @@ export default {
   } 
 }
 
-// Push the logo down when the animation changes to AnimationSmall
-@media(max-width: 639px){
+// // Push the logo down when the animation changes to AnimationSmall
+// @media(max-width: 639px){
   
-}
+// }
 
 // Small phone landscape - e.g iphone5
-@media(max-width: 568px) and (max-height: 320px) {
+@media(max-width: 568px) and (max-height: 400px) {
   #logo {
     margin-top: 7rem;
   }
