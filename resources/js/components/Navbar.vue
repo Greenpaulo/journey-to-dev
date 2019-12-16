@@ -51,7 +51,6 @@ import { mapActions, mapGetters } from 'vuex';
       ...mapActions(['logout']),
       hideMenu() {
         const navbar = document.querySelector('.navbar-collapse');
-        console.log('called', navbar)
         if(navbar.classList.contains('show')){
           navbar.classList.remove('show')
         };

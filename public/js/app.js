@@ -2697,7 +2697,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   methods: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapActions"])(['logout']), {
     hideMenu: function hideMenu() {
       var navbar = document.querySelector('.navbar-collapse');
-      console.log('called', navbar);
 
       if (navbar.classList.contains('show')) {
         navbar.classList.remove('show');
