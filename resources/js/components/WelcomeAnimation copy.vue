@@ -1,5 +1,5 @@
 <template>
-  <div id="animation-container">
+  <div>
     <AnimationLarge v-if="!smallScreen" />
     <AnimationSmall v-if="smallScreen" />
   </div>
@@ -46,18 +46,6 @@ export default {
 }
 </script>
 
-<style scoped>
-
-@media (max-width: 639px){
-
-  #animation-container {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    height: 300px;
-    width: 300px;
-    /* border: red 1px solid; */
-  }
-}
+<style>
 
 </style>

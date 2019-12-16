@@ -197,6 +197,9 @@ export default {
 // Push the logo down when the animation changes to AnimationSmall
 @media(max-width: 639px){
   
+  #logo {
+    margin-top: 17rem;
+  }
 }
 
 // Small phone landscape - e.g iphone5
