@@ -190,6 +190,14 @@ export default {
     padding: 0.7rem 0.3rem 0.7rem 0.7rem;
     width: 100%;
   }
+
+  // Small phone landscape - e.g iphone5
+  @media(max-width: 568px) and (max-height: 320px) {
+    #welcome-animation {
+      display:none;
+    }
+    
+  }
 }
 
 </style>

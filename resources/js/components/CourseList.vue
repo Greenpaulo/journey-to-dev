@@ -181,6 +181,7 @@ h5.card-title > a {
 
 
 // Media queries
+
 // Smartphone - smaller
 @media (max-width: 375px){
 
