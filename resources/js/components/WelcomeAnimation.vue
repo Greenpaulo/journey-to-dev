@@ -59,4 +59,11 @@ export default {
   }
 }
 
+/* Even smaller browser screen on mobile */
+  @media (max-height: 550px) and (min-width: 320px) {
+    #animation-container {
+      margin-top: 2rem;
+    }
+  }
+
 </style>
