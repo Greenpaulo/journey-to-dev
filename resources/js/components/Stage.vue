@@ -212,7 +212,7 @@ export default {
   border-radius: 10px;
   height: 290px;
   min-width: 260px;
-  max-width: 260px;
+  // max-width: 260px;
   text-align: center;
 
   h2 {
@@ -479,11 +479,11 @@ h5.card-title > a {
 }
 
 // Smartphone - smaller
-@media (max-width: 375px){
+// @media (max-width: 375px){
 
-  .stage-heading {
-    margin: auto;
-  }
-}
+//   .stage-heading {
+//     // margin: auto;
+//   }
+// }
 
 </style>

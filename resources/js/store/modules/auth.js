@@ -91,7 +91,7 @@ const actions = {
 
     })
     .catch(error => {
-      console.log('error', error.response)
+      // console.log('error', error.response)
       Vue.prototype.$flashStorage.flash(error.response.data, 'error', 
       { 
         timeout: 3000
