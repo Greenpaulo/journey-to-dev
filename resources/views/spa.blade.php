@@ -27,8 +27,8 @@
     <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.1/gsap.min.js"></script>
     
-    <script src="{{ asset('js/app.js') }}"></script>
-    {{-- <script src="https://pure-cove-33505.herokuapp.com/js/app.js"></script> --}}
+    {{-- <script src="{{ asset('js/app.js') }}"></script> --}}
+    <script src="https://pure-cove-33505.herokuapp.com/js/app.js"></script>
   </body>
 
 </html>
