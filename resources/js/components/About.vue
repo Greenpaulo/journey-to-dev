@@ -5,16 +5,16 @@
       
       <section id="theApp" class="mb-5 pb-3">
         <h4 class="mt-5">The App</h4>
-        <p class="py-2">As a self taught developer I spent a lot of time, in the beginning, trying to figure out what to learn! Unlike a university course, there existed no curriculum for self-studying devs at home. So after spending time researching I built my own.</p>
+        <p class="py-2">As a self taught developer I spent a lot of time, in the beginning, trying to figure out what to learn. Unlike a university course, there existed no curriculum for self-studying devs at home. So after spending time researching I built my own.</p>
 
         <p class="py-2">I realised that many other prospective developers could potentially benefit from my research and get straight to learning. So I built this app to share my knowledge. I hope you find it useful!</p>
 
-        <p class="py-2">Much love! And good luck with your studies!</p>
+        <p class="py-2">Much love, and good luck with your studies!</p>
       </section>
 
       <section id="creator" class="pb-4">
         <h4 class="mt-5">Creator</h4>
-        <p class="py-2">I'm Paul Bingham!</p>
+        <p class="py-2">I'm Paul Bingham</p>
         <p class="py-2">Check out my Github profile and other links below:</p>
         <div class="icon-group">
           <i class="far fa-envelope fa-3x pr-3"></i>
