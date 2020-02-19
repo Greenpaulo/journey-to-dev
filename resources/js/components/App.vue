@@ -21,9 +21,12 @@
 @import 'resources/sass/variables';
 @import 'resources/sass/colors';
 
+body, html {
+  overflow-x: hidden;
+}
+
 body {
   background: rgb(23,20,25);
-  overflow-x: hidden;
 }
 
 .container.my-5 {
