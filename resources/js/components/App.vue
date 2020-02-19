@@ -23,6 +23,7 @@
 
 body {
   background: rgb(23,20,25);
+  overflow-x: hidden;
 }
 
 .container.my-5 {

@@ -3797,7 +3797,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".bg-stage1 {\n  background-color: #CC0000;\n}\n.bg-stage2 {\n  background-color: orangered;\n}\n.bg-stage3 {\n  background-color: orange;\n}\n.bg-stage4 {\n  background-color: #77B300;\n}\n.bg-stage5 {\n  background-color: #2A9FD6;\n}\n.bg-stage6 {\n  background-color: #20c997;\n}\n.bg-stage7 {\n  background-color: #e83e8c;\n}\n.bg-stage8 {\n  background-color: #9933CC;\n}\n.bg-stage9 {\n  background-color: #fff;\n  color: black !important;\n}\n.border-stage1 {\n  border-top: 8px solid #CC0000;\n  border-right: 8px solid #CC0000;\n}\n.border-stage2 {\n  border-top: 8px solid orangered;\n  border-right: 8px solid orangered;\n}\n.border-stage3 {\n  border-top: 8px solid orange;\n  border-right: 8px solid orange;\n}\n.border-stage4 {\n  border-top: 8px solid #77B300;\n  border-right: 8px solid #77B300;\n}\n.border-stage5 {\n  border-top: 8px solid #2A9FD6;\n  border-right: 8px solid #2A9FD6;\n}\n.border-stage6 {\n  border-top: 8px solid #20c997;\n  border-right: 8px solid #20c997;\n}\n.border-stage7 {\n  border-top: 8px solid #e83e8c;\n  border-right: 8px solid #e83e8c;\n}\n.border-stage8 {\n  border-top: 8px solid #9933CC;\n  border-right: 8px solid #9933CC;\n}\n.border-stage9 {\n  border-top: 8px solid #fff;\n  border-right: 8px solid #ffff;\n}\n.text-stage1 {\n  color: #CC0000;\n}\n.text-stage2 {\n  color: orangered;\n}\n.text-stage3 {\n  color: orange;\n}\n.text-stage4 {\n  color: #77B300;\n}\n.text-stage5 {\n  color: #2A9FD6;\n}\n.text-stage6 {\n  color: #20c997;\n}\n.text-stage7 {\n  color: #e83e8c;\n}\n.text-stage8 {\n  color: #9933CC;\n}\n.text-stage9 {\n  color: white;\n}\nbody {\n  background: #171419;\n}\n.container.my-5 {\n  margin-top: 7rem !important;\n}\n.flash__message.error {\n  color: #a94442 !important;\n  background-color: #f3dede !important;\n  border-color: #f3dede !important;\n}\n@media (min-width: 1200px) {\n.container {\n    max-width: 1150px;\n}\n}", ""]);
+exports.push([module.i, ".bg-stage1 {\n  background-color: #CC0000;\n}\n.bg-stage2 {\n  background-color: orangered;\n}\n.bg-stage3 {\n  background-color: orange;\n}\n.bg-stage4 {\n  background-color: #77B300;\n}\n.bg-stage5 {\n  background-color: #2A9FD6;\n}\n.bg-stage6 {\n  background-color: #20c997;\n}\n.bg-stage7 {\n  background-color: #e83e8c;\n}\n.bg-stage8 {\n  background-color: #9933CC;\n}\n.bg-stage9 {\n  background-color: #fff;\n  color: black !important;\n}\n.border-stage1 {\n  border-top: 8px solid #CC0000;\n  border-right: 8px solid #CC0000;\n}\n.border-stage2 {\n  border-top: 8px solid orangered;\n  border-right: 8px solid orangered;\n}\n.border-stage3 {\n  border-top: 8px solid orange;\n  border-right: 8px solid orange;\n}\n.border-stage4 {\n  border-top: 8px solid #77B300;\n  border-right: 8px solid #77B300;\n}\n.border-stage5 {\n  border-top: 8px solid #2A9FD6;\n  border-right: 8px solid #2A9FD6;\n}\n.border-stage6 {\n  border-top: 8px solid #20c997;\n  border-right: 8px solid #20c997;\n}\n.border-stage7 {\n  border-top: 8px solid #e83e8c;\n  border-right: 8px solid #e83e8c;\n}\n.border-stage8 {\n  border-top: 8px solid #9933CC;\n  border-right: 8px solid #9933CC;\n}\n.border-stage9 {\n  border-top: 8px solid #fff;\n  border-right: 8px solid #ffff;\n}\n.text-stage1 {\n  color: #CC0000;\n}\n.text-stage2 {\n  color: orangered;\n}\n.text-stage3 {\n  color: orange;\n}\n.text-stage4 {\n  color: #77B300;\n}\n.text-stage5 {\n  color: #2A9FD6;\n}\n.text-stage6 {\n  color: #20c997;\n}\n.text-stage7 {\n  color: #e83e8c;\n}\n.text-stage8 {\n  color: #9933CC;\n}\n.text-stage9 {\n  color: white;\n}\nbody {\n  background: #171419;\n  overflow-x: hidden;\n}\n.container.my-5 {\n  margin-top: 7rem !important;\n}\n.flash__message.error {\n  color: #a94442 !important;\n  background-color: #f3dede !important;\n  border-color: #f3dede !important;\n}\n@media (min-width: 1200px) {\n.container {\n    max-width: 1150px;\n}\n}", ""]);
 
 // exports
 
@@ -6381,7 +6381,7 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("p", { staticClass: "py-2" }, [
           _vm._v(
-            "As a self taught developer I spent a lot of time, in the beginning, trying to figure out what to learn! Unlike a university course, there existed no curriculum for self-studying devs at home. So after spending time researching I built my own."
+            "As a self taught developer I spent a lot of time, in the beginning, trying to figure out what to learn. Unlike a university course, there existed no curriculum for self-studying devs at home. So after spending time researching I built my own."
           )
         ]),
         _vm._v(" "),
@@ -6392,14 +6392,14 @@ var staticRenderFns = [
         ]),
         _vm._v(" "),
         _c("p", { staticClass: "py-2" }, [
-          _vm._v("Much love! And good luck with your studies!")
+          _vm._v("Much love, and good luck with your studies!")
         ])
       ]),
       _vm._v(" "),
       _c("section", { staticClass: "pb-4", attrs: { id: "creator" } }, [
         _c("h4", { staticClass: "mt-5" }, [_vm._v("Creator")]),
         _vm._v(" "),
-        _c("p", { staticClass: "py-2" }, [_vm._v("I'm Paul Bingham!")]),
+        _c("p", { staticClass: "py-2" }, [_vm._v("I'm Paul Bingham")]),
         _vm._v(" "),
         _c("p", { staticClass: "py-2" }, [
           _vm._v("Check out my Github profile and other links below:")
