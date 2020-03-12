@@ -160,7 +160,7 @@ export default {
 
 @import 'resources/sass/variables';
 @import 'resources/sass/colors';
-@import 'resources/sass/welcome-animation';
+@import 'resources/sass/spare/welcome-animation2';
 
 
 // Media queries

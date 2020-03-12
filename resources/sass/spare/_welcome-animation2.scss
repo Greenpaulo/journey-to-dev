@@ -37,36 +37,36 @@ circle, path {
 }
 
 #small-circle, #big-circle, #cloud {
-  opacity: 1;
+  opacity: 0;
 }
 
-#small-circle {
-  stroke: $stage7;
-}
+  #small-circle {
+    stroke: $stage7;
+  }
 
-#big-circle {
-  stroke: $stage6
-}
+  #big-circle {
+    stroke: $stage6
+  }
 
-#cloud {
-  stroke: $stage8
-}
+  #cloud {
+    stroke: $stage8
+  }
 
-#light-rays path {
-fill: yellow;
-}
+  #light-rays path {
+  fill: yellow;
+  }
 
-#tick-circle {
-  fill: $stage4;
-}
+  #tick-circle {
+    fill: $stage4;
+  }
 
-#tick {
-  fill: $stage4;
-}
+  #tick {
+    fill: $stage4;
+  }
 
 
 #arrow-1 path, #arrow-2 path {
-  opacity: 1;
+  opacity: 0;
 }
 
 #arrow-1, #arrow-2 {
@@ -78,7 +78,7 @@ fill: yellow;
 }
 
 #light-rays {
-  opacity: 1;
+  opacity: 0;
 }
 
 #study-logo {
@@ -90,7 +90,7 @@ fill: yellow;
 }
 
 #job-complete {
-  opacity: 1;
+  opacity: 0;
 }
 
 // Arrow colours

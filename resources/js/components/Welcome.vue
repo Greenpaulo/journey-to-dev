@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <section id="welcome-content">
+    <section id="welcome-content" class="animated fadeIn">
       <WelcomeAnimation />
       <WelcomeLogo />
     </section>

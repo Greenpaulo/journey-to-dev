@@ -61,16 +61,6 @@ export const router = new VueRouter({
   ],
 });
 
-// Navigation guard
-// router.beforeEach((to, from, next) => {
-//   if (to.fullPath === '/roadmap') {
-//     if (!store.state.token) {
-//       next('/login');
-//     }
-//   }
-//   next();
-// });
-
 const app = new Vue({
   el: '#app',
   components: { App },

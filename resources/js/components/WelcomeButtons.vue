@@ -24,17 +24,20 @@ export default {
   text-align: center;
 }
 
-.btn {
-  animation-delay: 11s;
-  animation-duration: 2s;
-  margin: 0 0.5rem;
-}
 
 /* Media queries */
 @media(max-width: 700px){
 
   #buttons {
     margin-top: 2rem;
+  }
+}
+
+@media(max-width: 639px) {
+  .btn {
+    animation-delay: 11s;
+    animation-duration: 2s;
+    margin: 0 0.5rem;
   }
 }
 

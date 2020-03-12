@@ -159,57 +159,31 @@ export default {
     // Initialise the gsap timeline
     const tl = gsap.timeline();
 
-    // // Idea
-    // tl.from(head, { y: -100, duration: 1, opacity: 0});
-    // tl.to(smallCircle, { opacity: 1 , duration: 0.5});
-    // tl.to(bigCircle, { opacity: 1 , duration: 0.5});
-    // tl.to(cloud, { opacity: 1 , duration: 0.5});
-
-    // // First arrow
-    // tl.to(circle1, { opacity: 1 , duration: 0.3});
-    // tl.to(circle2, { opacity: 1 , duration: 0.3});
-    // tl.to(circle3, { opacity: 1 , duration: 0.3});
-    // tl.to(arrowHead1, { opacity: 1 , duration: 0.3});
-
-    // // Study
-    // tl.from(studyMain, { y: -50, duration: 1, opacity: 0});
-    // tl.to(lightRays, { opacity: 1 , duration: 0.5});
-
-    // // Second arrow
-    // tl.to(circle4, { opacity: 1 , duration: 0.3});
-    // tl.to(circle5, { opacity: 1 , duration: 0.3});
-    // tl.to(circle6, { opacity: 1 , duration: 0.3});
-    // tl.to(arrowHead2, { opacity: 1 , duration: 0.3});
-
-    // // Handshake
-    // tl.from(handshake, { y: -100, duration: 1, opacity: 0});
-    // tl.to(jobComplete, { opacity: 1, duration: 0.5});
-
     // Idea
-    // tl.from(head, { y: -100, duration: 1, opacity: 0});
-    // tl.to(smallCircle, { opacity: 1 , duration: 0.5});
-    // tl.to(bigCircle, { opacity: 1 , duration: 0.5});
-    // tl.to(cloud, { opacity: 1 , duration: 0.5});
+    tl.from(head, { y: -100, duration: 1, opacity: 0});
+    tl.to(smallCircle, { opacity: 1 , duration: 0.5});
+    tl.to(bigCircle, { opacity: 1 , duration: 0.5});
+    tl.to(cloud, { opacity: 1 , duration: 0.5});
 
-    // // First arrow
-    // tl.to(circle1, { opacity: 1 , duration: 0.3}, "firstArrow");
-    // tl.to(circle2, { opacity: 1 , duration: 0.3}, "firstArrow");
-    // tl.to(circle3, { opacity: 1 , duration: 0.3}, "firstArrow");
-    // tl.to(arrowHead1, { opacity: 1 , duration: 0.3}, "firstArrow");
+    // First arrow
+    tl.to(circle1, { opacity: 1 , duration: 0.3});
+    tl.to(circle2, { opacity: 1 , duration: 0.3});
+    tl.to(circle3, { opacity: 1 , duration: 0.3});
+    tl.to(arrowHead1, { opacity: 1 , duration: 0.3});
 
-    // // Study
-    // tl.from(studyMain, { y: -50, duration: 1, opacity: 0});
-    // tl.to(lightRays, { opacity: 1 , duration: 0.5});
+    // Study
+    tl.from(studyMain, { y: -50, duration: 1, opacity: 0});
+    tl.to(lightRays, { opacity: 1 , duration: 0.5});
 
-    // // Second arrow
-    // tl.to(circle4, { opacity: 1 , duration: 0.3});
-    // tl.to(circle5, { opacity: 1 , duration: 0.3});
-    // tl.to(circle6, { opacity: 1 , duration: 0.3});
-    // tl.to(arrowHead2, { opacity: 1 , duration: 0.3});
+    // Second arrow
+    tl.to(circle4, { opacity: 1 , duration: 0.3});
+    tl.to(circle5, { opacity: 1 , duration: 0.3});
+    tl.to(circle6, { opacity: 1 , duration: 0.3});
+    tl.to(arrowHead2, { opacity: 1 , duration: 0.3});
 
-    // // Handshake
-    // tl.from(handshake, { y: -100, duration: 1, opacity: 0});
-    // tl.to(jobComplete, { opacity: 1, duration: 0.5});
+    // Handshake
+    tl.from(handshake, { y: -100, duration: 1, opacity: 0});
+    tl.to(jobComplete, { opacity: 1, duration: 0.5});
   }, 
 }
 </script>
