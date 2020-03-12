@@ -4,7 +4,7 @@
       <h1 class="display-4 mb-4 text-center">The Journey</h1>
 
       <section id="intro">
-        <div class="icon-text-group my-4" >
+        <!-- <div class="icon-text-group my-4" >
           <i class="fas fa-laptop-code fa-3x text-info py-2"></i>
           <p class="px-4">Journey To Dev is a guide for learning full stack web development. It was born out of the need for a online curriculum for self-taught prospective developers.
           </p>
@@ -13,7 +13,7 @@
           <i class="fas fa-road fa-3x text-stage3 mt-2"></i>
           <p class="px-4">On this site you will be able to make your own "Roadmap" to plan you own journey to becoming a web developer!
           </p>
-        </div>
+        </div> -->
         <div class="icon-text-group my-4">
           <i class="fas fa-graduation-cap fa-3x text-success py-2"></i>
           <p class="px-4">The journey to full stack web developer comprises of nine stages. Details of each stage and the technologies you will need to learn are listed below.

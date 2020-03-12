@@ -2,7 +2,7 @@
   <div id="buttons">
     <router-link v-if="isLoggedIn === false" class="btn btn-info btn-lg animated fadeInLeft" to="/login" role="button">Login</router-link>
     <router-link v-if="isLoggedIn === false" class="btn btn-success btn-lg animated fadeInRight" to="/register" role="button">Register</router-link>
-    <!-- <router-link v-if="isLoggedIn === false" class="btn btn-primary btn-lg animated fadeInRight" to="/thejourney" role="button">Find Out More</router-link> -->
+    <!-- <button v-if="isLoggedIn === false" v-scroll-to="'#website-guide'" class="btn btn-primary btn-lg animated fadeInRight">Find Out More</button> -->
     
     <router-link v-if="isLoggedIn" class="btn btn-success btn-lg animated fadeInUp" to="/roadmap" role="button">Your Roadmap</router-link>
   </div>
@@ -14,7 +14,14 @@ import { mapGetters } from 'vuex';
 export default {
   name: 'WelcomeButtons',
   computed: mapGetters(['isLoggedIn']),
+  methods: {
+    scrollToSection(){   	
+      const container = document.getElementById("website-guide");
+      container.scrollTop = container.scrollHeight;
+    }
+  }
 }
+
 </script>
 
 <style scoped>

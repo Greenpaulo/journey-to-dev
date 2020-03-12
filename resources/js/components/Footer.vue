@@ -1,5 +1,5 @@
 <template>
-  <div id="footer" class="p-5 mt-5">
+  <div id="footer" class="p-5">
     <h5>JourneyToDev &copy;{{getYear}}</h5>
     <h6><router-link to="about">Contact</router-link></h6>
   </div>
