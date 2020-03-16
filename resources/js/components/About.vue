@@ -17,12 +17,25 @@
         <p class="py-2">I'm Paul Bingham</p>
         <p class="py-2">Check out my Github profile and other links below:</p>
         <div class="icon-group">
-          <i class="far fa-envelope fa-3x pr-3"></i>
-          <a href="mailto:greenpaulo@yahoo.co.uk" class="contact-info">greenpaulo@yahoo.co.uk</a>
-        </div>
-        <div class="icon-group">
           <i class="fab fa-github fa-3x pr-3"></i>
           <a href='https://github.com/Greenpaulo' target="_blank" className="contact-info">https://github.com/Greenpaulo</a>
+        </div>
+        <div class="icon-group">
+          <svg id="logo" data-name="logo" viewBox="0 0 120 120" class="pr-3">
+            <circle class="cls-1" cx="60" cy="60" r="50" />
+            <circle class="cls-2" cx="60" cy="60" r="57" />
+            <path class="cls-3"
+              d="M123.83,113.19H137c7,0,10.13,4,10.13,9.2,0,6.15-3.78,9.57-10,9.57H127.8v12.51h-4Zm4,15.05h8.75c3.84,0,6.53-1.27,6.53-5.77,0-3.55-2.13-5.57-6.53-5.57H127.8Z"
+              transform="translate(-83.5 -80.5)" />
+            <path class="cls-3"
+              d="M143.29,136.88h14.28c6.36,0,9.67,2.83,9.67,7.45a6.37,6.37,0,0,1-4.81,6.32c2.68.72,6,2.63,6,7.2,0,5.93-4.89,8.68-10.64,8.68H143.29Zm13.23,12.23c4.27,0,6.34-1.53,6.34-4.4,0-3.41-2.74-4.43-6.18-4.43h-9.24v8.83Zm-9.08,14h9.43c3.5,0,7.15-1.06,7.15-5.28,0-3.56-2.81-5.35-7.55-5.35h-9Z"
+              transform="translate(-83.5 -80.5)" />
+          </svg>
+          <a href='https://blissful-sinoussi-d8e11c.netlify.com/' target="_blank" className="contact-info">Portfolio</a>
+        </div>
+        <div class="icon-group">
+          <i class="far fa-envelope fa-3x pr-3"></i>
+          <a href="mailto:greenpaulo@yahoo.co.uk" class="contact-info">greenpaulo@yahoo.co.uk</a>
         </div>
       </section>
 
@@ -108,6 +121,30 @@ p {
     display: flex;
     padding: 1rem;
     align-items: center;
+  }
+
+  // SVG Logo
+
+  #logo {
+    height: 60px;
+    width: 60px;
+    position: relative;
+    right: 1.5px;
+  }
+
+  .cls-1 {
+  fill: #ef84ef;
+  }
+        
+  .cls-2 {
+    fill: none;
+    stroke: #ef84ef;;
+    stroke-miterlimit: 10;
+    stroke-width: 6px;
+  }
+        
+  .cls-3 {
+    fill: #fff;
   }
 
 }

@@ -1911,6 +1911,19 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'About',
@@ -3852,7 +3865,7 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _LogoLarge__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./LogoLarge */ "./resources/js/components/LogoLarge.vue");
-/* harmony import */ var _LogoSmall__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./LogoSmall */ "./resources/js/components/LogoSmall.vue");
+/* harmony import */ var _LogoSmall__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./LogoSmall */ "./resources/js/components/LogoSmall.vue");
 //
 //
 //
@@ -3866,7 +3879,7 @@ __webpack_require__.r(__webpack_exports__);
   name: 'WelcomeLogo',
   components: {
     LogoLarge: _LogoLarge__WEBPACK_IMPORTED_MODULE_0__["default"],
-    LogoSmall: _LogoSmall__WEBPACK_IMPORTED_MODULE_2__["default"]
+    LogoSmall: _LogoSmall__WEBPACK_IMPORTED_MODULE_1__["default"]
   },
   data: function data() {
     return {
@@ -3916,7 +3929,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".bg-stage1[data-v-fb05e49c] {\n  background-color: #CC0000;\n}\n.bg-stage2[data-v-fb05e49c] {\n  background-color: orangered;\n}\n.bg-stage3[data-v-fb05e49c] {\n  background-color: orange;\n}\n.bg-stage4[data-v-fb05e49c] {\n  background-color: #77B300;\n}\n.bg-stage5[data-v-fb05e49c] {\n  background-color: #2A9FD6;\n}\n.bg-stage6[data-v-fb05e49c] {\n  background-color: #20c997;\n}\n.bg-stage7[data-v-fb05e49c] {\n  background-color: #e83e8c;\n}\n.bg-stage8[data-v-fb05e49c] {\n  background-color: #9933CC;\n}\n.bg-stage9[data-v-fb05e49c] {\n  background-color: #fff;\n  color: black !important;\n}\n.border-stage1[data-v-fb05e49c] {\n  border-top: 8px solid #CC0000;\n  border-right: 8px solid #CC0000;\n}\n.border-stage2[data-v-fb05e49c] {\n  border-top: 8px solid orangered;\n  border-right: 8px solid orangered;\n}\n.border-stage3[data-v-fb05e49c] {\n  border-top: 8px solid orange;\n  border-right: 8px solid orange;\n}\n.border-stage4[data-v-fb05e49c] {\n  border-top: 8px solid #77B300;\n  border-right: 8px solid #77B300;\n}\n.border-stage5[data-v-fb05e49c] {\n  border-top: 8px solid #2A9FD6;\n  border-right: 8px solid #2A9FD6;\n}\n.border-stage6[data-v-fb05e49c] {\n  border-top: 8px solid #20c997;\n  border-right: 8px solid #20c997;\n}\n.border-stage7[data-v-fb05e49c] {\n  border-top: 8px solid #e83e8c;\n  border-right: 8px solid #e83e8c;\n}\n.border-stage8[data-v-fb05e49c] {\n  border-top: 8px solid #9933CC;\n  border-right: 8px solid #9933CC;\n}\n.border-stage9[data-v-fb05e49c] {\n  border-top: 8px solid #fff;\n  border-right: 8px solid #ffff;\n}\n.text-stage1[data-v-fb05e49c] {\n  color: #CC0000;\n}\n.text-stage2[data-v-fb05e49c] {\n  color: orangered;\n}\n.text-stage3[data-v-fb05e49c] {\n  color: orange;\n}\n.text-stage4[data-v-fb05e49c] {\n  color: #77B300;\n}\n.text-stage5[data-v-fb05e49c] {\n  color: #2A9FD6;\n}\n.text-stage6[data-v-fb05e49c] {\n  color: #20c997;\n}\n.text-stage7[data-v-fb05e49c] {\n  color: #e83e8c;\n}\n.text-stage8[data-v-fb05e49c] {\n  color: #9933CC;\n}\n.text-stage9[data-v-fb05e49c] {\n  color: white;\n}\nh4[data-v-fb05e49c] {\n  margin-bottom: 1.5rem;\n}\np[data-v-fb05e49c] {\n  color: #d9d9d9;\n  font-size: 1.3rem;\n}\n#theApp[data-v-fb05e49c] {\n  border-bottom: 2px solid #CC0000;\n}\n#creator[data-v-fb05e49c] {\n  border-bottom: 2px solid orangered;\n  color: #d9d9d9;\n}\n#creator a[data-v-fb05e49c], #creator span[data-v-fb05e49c] {\n  text-decoration: none;\n  color: #d9d9d9;\n  font-size: 1.2rem;\n}\n#creator a[data-v-fb05e49c]:hover, #creator span[data-v-fb05e49c]:hover {\n  color: white;\n}\n#creator .icon-group[data-v-fb05e49c] {\n  display: flex;\n  padding: 1rem;\n  align-items: center;\n}\n#credits[data-v-fb05e49c] {\n  border-bottom: 2px solid orange;\n  color: #d9d9d9;\n}\n#credits h5[data-v-fb05e49c] {\n  font-size: 1.3rem !important;\n}\n.fa-envelope[data-v-fb05e49c] {\n  color: #77B300;\n}\n.fa-github[data-v-fb05e49c] {\n  color: #2A9FD6;\n}\n@media (max-width: 420px) {\nh4[data-v-fb05e49c] {\n    text-align: center;\n}\np[data-v-fb05e49c] {\n    font-size: 1.1rem;\n    line-height: 1.9rem;\n}\n#creator a[data-v-fb05e49c] {\n    font-size: 1rem;\n}\nsection[data-v-fb05e49c] {\n    padding: 0 1rem 3rem 1rem;\n}\na.btn[data-v-fb05e49c] {\n    display: block;\n    margin: auto;\n}\n}\n@media (max-width: 320px) {\n#creator a[data-v-fb05e49c], #creator span[data-v-fb05e49c] {\n    font-size: 0.8rem;\n}\n}", ""]);
+exports.push([module.i, ".bg-stage1[data-v-fb05e49c] {\n  background-color: #CC0000;\n}\n.bg-stage2[data-v-fb05e49c] {\n  background-color: orangered;\n}\n.bg-stage3[data-v-fb05e49c] {\n  background-color: orange;\n}\n.bg-stage4[data-v-fb05e49c] {\n  background-color: #77B300;\n}\n.bg-stage5[data-v-fb05e49c] {\n  background-color: #2A9FD6;\n}\n.bg-stage6[data-v-fb05e49c] {\n  background-color: #20c997;\n}\n.bg-stage7[data-v-fb05e49c] {\n  background-color: #e83e8c;\n}\n.bg-stage8[data-v-fb05e49c] {\n  background-color: #9933CC;\n}\n.bg-stage9[data-v-fb05e49c] {\n  background-color: #fff;\n  color: black !important;\n}\n.border-stage1[data-v-fb05e49c] {\n  border-top: 8px solid #CC0000;\n  border-right: 8px solid #CC0000;\n}\n.border-stage2[data-v-fb05e49c] {\n  border-top: 8px solid orangered;\n  border-right: 8px solid orangered;\n}\n.border-stage3[data-v-fb05e49c] {\n  border-top: 8px solid orange;\n  border-right: 8px solid orange;\n}\n.border-stage4[data-v-fb05e49c] {\n  border-top: 8px solid #77B300;\n  border-right: 8px solid #77B300;\n}\n.border-stage5[data-v-fb05e49c] {\n  border-top: 8px solid #2A9FD6;\n  border-right: 8px solid #2A9FD6;\n}\n.border-stage6[data-v-fb05e49c] {\n  border-top: 8px solid #20c997;\n  border-right: 8px solid #20c997;\n}\n.border-stage7[data-v-fb05e49c] {\n  border-top: 8px solid #e83e8c;\n  border-right: 8px solid #e83e8c;\n}\n.border-stage8[data-v-fb05e49c] {\n  border-top: 8px solid #9933CC;\n  border-right: 8px solid #9933CC;\n}\n.border-stage9[data-v-fb05e49c] {\n  border-top: 8px solid #fff;\n  border-right: 8px solid #ffff;\n}\n.text-stage1[data-v-fb05e49c] {\n  color: #CC0000;\n}\n.text-stage2[data-v-fb05e49c] {\n  color: orangered;\n}\n.text-stage3[data-v-fb05e49c] {\n  color: orange;\n}\n.text-stage4[data-v-fb05e49c] {\n  color: #77B300;\n}\n.text-stage5[data-v-fb05e49c] {\n  color: #2A9FD6;\n}\n.text-stage6[data-v-fb05e49c] {\n  color: #20c997;\n}\n.text-stage7[data-v-fb05e49c] {\n  color: #e83e8c;\n}\n.text-stage8[data-v-fb05e49c] {\n  color: #9933CC;\n}\n.text-stage9[data-v-fb05e49c] {\n  color: white;\n}\nh4[data-v-fb05e49c] {\n  margin-bottom: 1.5rem;\n}\np[data-v-fb05e49c] {\n  color: #d9d9d9;\n  font-size: 1.3rem;\n}\n#theApp[data-v-fb05e49c] {\n  border-bottom: 2px solid #CC0000;\n}\n#creator[data-v-fb05e49c] {\n  border-bottom: 2px solid orangered;\n  color: #d9d9d9;\n}\n#creator a[data-v-fb05e49c], #creator span[data-v-fb05e49c] {\n  text-decoration: none;\n  color: #d9d9d9;\n  font-size: 1.2rem;\n}\n#creator a[data-v-fb05e49c]:hover, #creator span[data-v-fb05e49c]:hover {\n  color: white;\n}\n#creator .icon-group[data-v-fb05e49c] {\n  display: flex;\n  padding: 1rem;\n  align-items: center;\n}\n#creator #logo[data-v-fb05e49c] {\n  height: 60px;\n  width: 60px;\n  position: relative;\n  right: 1.5px;\n}\n#creator .cls-1[data-v-fb05e49c] {\n  fill: #ef84ef;\n}\n#creator .cls-2[data-v-fb05e49c] {\n  fill: none;\n  stroke: #ef84ef;\n  stroke-miterlimit: 10;\n  stroke-width: 6px;\n}\n#creator .cls-3[data-v-fb05e49c] {\n  fill: #fff;\n}\n#credits[data-v-fb05e49c] {\n  border-bottom: 2px solid orange;\n  color: #d9d9d9;\n}\n#credits h5[data-v-fb05e49c] {\n  font-size: 1.3rem !important;\n}\n.fa-envelope[data-v-fb05e49c] {\n  color: #77B300;\n}\n.fa-github[data-v-fb05e49c] {\n  color: #2A9FD6;\n}\n@media (max-width: 420px) {\nh4[data-v-fb05e49c] {\n    text-align: center;\n}\np[data-v-fb05e49c] {\n    font-size: 1.1rem;\n    line-height: 1.9rem;\n}\n#creator a[data-v-fb05e49c] {\n    font-size: 1rem;\n}\nsection[data-v-fb05e49c] {\n    padding: 0 1rem 3rem 1rem;\n}\na.btn[data-v-fb05e49c] {\n    display: block;\n    margin: auto;\n}\n}\n@media (max-width: 320px) {\n#creator a[data-v-fb05e49c], #creator span[data-v-fb05e49c] {\n    font-size: 0.8rem;\n}\n}", ""]);
 
 // exports
 
@@ -4011,7 +4024,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "#footer[data-v-61a7c374] {\n  background-color: #020009;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  text-align: center;\n}\n#footer a[data-v-61a7c374] {\n  color: #d9d9d9;\n}", ""]);
+exports.push([module.i, "#footer[data-v-61a7c374] {\n  background-color: #020009;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  text-align: center;\n  padding: 2.7rem 1rem 2rem 1rem;\n}\n#footer h5[data-v-61a7c374] {\n  margin-bottom: 0.8rem;\n}\n#footer a[data-v-61a7c374] {\n  color: #d9d9d9;\n}", ""]);
 
 // exports
 
@@ -4163,7 +4176,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".bg-stage1[data-v-51138e8c] {\n  background-color: #CC0000;\n}\n.bg-stage2[data-v-51138e8c] {\n  background-color: orangered;\n}\n.bg-stage3[data-v-51138e8c] {\n  background-color: orange;\n}\n.bg-stage4[data-v-51138e8c] {\n  background-color: #77B300;\n}\n.bg-stage5[data-v-51138e8c] {\n  background-color: #2A9FD6;\n}\n.bg-stage6[data-v-51138e8c] {\n  background-color: #20c997;\n}\n.bg-stage7[data-v-51138e8c] {\n  background-color: #e83e8c;\n}\n.bg-stage8[data-v-51138e8c] {\n  background-color: #9933CC;\n}\n.bg-stage9[data-v-51138e8c] {\n  background-color: #fff;\n  color: black !important;\n}\n.border-stage1[data-v-51138e8c] {\n  border-top: 8px solid #CC0000;\n  border-right: 8px solid #CC0000;\n}\n.border-stage2[data-v-51138e8c] {\n  border-top: 8px solid orangered;\n  border-right: 8px solid orangered;\n}\n.border-stage3[data-v-51138e8c] {\n  border-top: 8px solid orange;\n  border-right: 8px solid orange;\n}\n.border-stage4[data-v-51138e8c] {\n  border-top: 8px solid #77B300;\n  border-right: 8px solid #77B300;\n}\n.border-stage5[data-v-51138e8c] {\n  border-top: 8px solid #2A9FD6;\n  border-right: 8px solid #2A9FD6;\n}\n.border-stage6[data-v-51138e8c] {\n  border-top: 8px solid #20c997;\n  border-right: 8px solid #20c997;\n}\n.border-stage7[data-v-51138e8c] {\n  border-top: 8px solid #e83e8c;\n  border-right: 8px solid #e83e8c;\n}\n.border-stage8[data-v-51138e8c] {\n  border-top: 8px solid #9933CC;\n  border-right: 8px solid #9933CC;\n}\n.border-stage9[data-v-51138e8c] {\n  border-top: 8px solid #fff;\n  border-right: 8px solid #ffff;\n}\n.text-stage1[data-v-51138e8c] {\n  color: #CC0000;\n}\n.text-stage2[data-v-51138e8c] {\n  color: orangered;\n}\n.text-stage3[data-v-51138e8c] {\n  color: orange;\n}\n.text-stage4[data-v-51138e8c] {\n  color: #77B300;\n}\n.text-stage5[data-v-51138e8c] {\n  color: #2A9FD6;\n}\n.text-stage6[data-v-51138e8c] {\n  color: #20c997;\n}\n.text-stage7[data-v-51138e8c] {\n  color: #e83e8c;\n}\n.text-stage8[data-v-51138e8c] {\n  color: #9933CC;\n}\n.text-stage9[data-v-51138e8c] {\n  color: white;\n}\n#website-guide[data-v-51138e8c] {\n  border-top: 2px solid #cac3c3;\n  padding: 1rem 1rem 7rem 1rem;\n  background-color: #201e1e;\n}\nh3[data-v-51138e8c] {\n  text-align: center;\n  margin: 3rem 0;\n}\n.icon-text-group[data-v-51138e8c] {\n  display: flex;\n  margin: 1.7rem 0;\n}\n#guide-info[data-v-51138e8c] {\n  margin: 4rem 0 5rem 0;\n}\nimg[data-v-51138e8c] {\n  height: 400px;\n}\n#page-screenshots[data-v-51138e8c] {\n  margin-top: 3rem;\n  display: flex;\n  justify-content: space-between;\n}\nimg[data-v-51138e8c] {\n  box-shadow: -5px 5px 10px -2px #010101;\n}\nsection#intro[data-v-51138e8c] {\n  border-bottom: 2px solid #cac3c3;\n  padding: 1rem 1rem 2rem 1rem;\n}\nsection#intro .important[data-v-51138e8c] {\n  font-weight: bolder;\n  color: white;\n}\np[data-v-51138e8c] {\n  font-size: 1.4rem !important;\n  line-height: 2.2rem;\n  color: #d9d9d9;\n}\n@media (max-width: 742px) {\nh1[data-v-51138e8c] {\n    margin-bottom: 0 !important;\n}\n.icon-text-group[data-v-51138e8c] {\n    flex-direction: column;\n    text-align: center;\n}\n.icon-text-group i[data-v-51138e8c] {\n    margin-bottom: 1rem;\n}\np[data-v-51138e8c] {\n    font-size: 1.2rem !important;\n    line-height: 2.2rem;\n    color: #d9d9d9;\n    padding: 0 !important;\n}\n#guide-info[data-v-51138e8c] {\n    margin-bottom: 3rem;\n}\n#page-screenshots[data-v-51138e8c] {\n    flex-direction: column;\n    margin-top: 1rem;\n}\nimg[data-v-51138e8c] {\n    margin: 1rem;\n    max-height: 230px;\n}\n}\n@media (max-width: 360px) {\n.card-header > h3[data-v-51138e8c] {\n    font-size: 2rem;\n}\n.card-header h5[data-v-51138e8c] {\n    font-size: 1.2rem;\n}\n}", ""]);
+exports.push([module.i, ".bg-stage1[data-v-51138e8c] {\n  background-color: #CC0000;\n}\n.bg-stage2[data-v-51138e8c] {\n  background-color: orangered;\n}\n.bg-stage3[data-v-51138e8c] {\n  background-color: orange;\n}\n.bg-stage4[data-v-51138e8c] {\n  background-color: #77B300;\n}\n.bg-stage5[data-v-51138e8c] {\n  background-color: #2A9FD6;\n}\n.bg-stage6[data-v-51138e8c] {\n  background-color: #20c997;\n}\n.bg-stage7[data-v-51138e8c] {\n  background-color: #e83e8c;\n}\n.bg-stage8[data-v-51138e8c] {\n  background-color: #9933CC;\n}\n.bg-stage9[data-v-51138e8c] {\n  background-color: #fff;\n  color: black !important;\n}\n.border-stage1[data-v-51138e8c] {\n  border-top: 8px solid #CC0000;\n  border-right: 8px solid #CC0000;\n}\n.border-stage2[data-v-51138e8c] {\n  border-top: 8px solid orangered;\n  border-right: 8px solid orangered;\n}\n.border-stage3[data-v-51138e8c] {\n  border-top: 8px solid orange;\n  border-right: 8px solid orange;\n}\n.border-stage4[data-v-51138e8c] {\n  border-top: 8px solid #77B300;\n  border-right: 8px solid #77B300;\n}\n.border-stage5[data-v-51138e8c] {\n  border-top: 8px solid #2A9FD6;\n  border-right: 8px solid #2A9FD6;\n}\n.border-stage6[data-v-51138e8c] {\n  border-top: 8px solid #20c997;\n  border-right: 8px solid #20c997;\n}\n.border-stage7[data-v-51138e8c] {\n  border-top: 8px solid #e83e8c;\n  border-right: 8px solid #e83e8c;\n}\n.border-stage8[data-v-51138e8c] {\n  border-top: 8px solid #9933CC;\n  border-right: 8px solid #9933CC;\n}\n.border-stage9[data-v-51138e8c] {\n  border-top: 8px solid #fff;\n  border-right: 8px solid #ffff;\n}\n.text-stage1[data-v-51138e8c] {\n  color: #CC0000;\n}\n.text-stage2[data-v-51138e8c] {\n  color: orangered;\n}\n.text-stage3[data-v-51138e8c] {\n  color: orange;\n}\n.text-stage4[data-v-51138e8c] {\n  color: #77B300;\n}\n.text-stage5[data-v-51138e8c] {\n  color: #2A9FD6;\n}\n.text-stage6[data-v-51138e8c] {\n  color: #20c997;\n}\n.text-stage7[data-v-51138e8c] {\n  color: #e83e8c;\n}\n.text-stage8[data-v-51138e8c] {\n  color: #9933CC;\n}\n.text-stage9[data-v-51138e8c] {\n  color: white;\n}\n#website-guide[data-v-51138e8c] {\n  border-top: 2px solid #cac3c3;\n  padding: 1rem 1rem 7rem 1rem;\n  background-color: #201e1e;\n}\nh3[data-v-51138e8c] {\n  text-align: center;\n  font-size: 2.7rem;\n  margin: 3rem 0 2.7rem 0;\n}\n.icon-text-group[data-v-51138e8c] {\n  display: flex;\n  margin: 1.7rem 0;\n}\n#guide-info[data-v-51138e8c] {\n  margin: 4rem 0 5rem 0;\n}\nimg[data-v-51138e8c] {\n  height: 400px;\n}\n#page-screenshots[data-v-51138e8c] {\n  margin-top: 3rem;\n  display: flex;\n  justify-content: space-between;\n}\nimg[data-v-51138e8c] {\n  box-shadow: -5px 5px 10px -2px #010101;\n}\np[data-v-51138e8c] {\n  font-size: 1.4rem !important;\n  line-height: 2.2rem;\n  color: #d9d9d9;\n}\n@media (max-width: 742px) {\n#website-guide[data-v-51138e8c] {\n    padding: 1rem 1rem 4rem 1rem;\n}\n.icon-text-group[data-v-51138e8c] {\n    flex-direction: column;\n    text-align: center;\n}\n.icon-text-group i[data-v-51138e8c] {\n    margin-bottom: 1rem;\n}\np[data-v-51138e8c] {\n    font-size: 1.2rem !important;\n    line-height: 2.2rem;\n    color: #d9d9d9;\n    padding: 0 !important;\n}\n#guide-info[data-v-51138e8c] {\n    margin-bottom: 3rem;\n}\n#page-screenshots[data-v-51138e8c] {\n    flex-direction: column;\n    margin-top: 1rem;\n}\nimg[data-v-51138e8c] {\n    margin: 1rem;\n    max-height: 230px;\n}\nimg[src=\"/images/screenshot-1.png\"][data-v-51138e8c] {\n    margin-bottom: 2.8rem;\n}\n}", ""]);
 
 // exports
 
@@ -6736,7 +6749,86 @@ var render = function() {
   return _c(
     "div",
     { staticClass: "animated fadeIn" },
-    [_vm._m(0), _vm._v(" "), _c("Footer")],
+    [
+      _c("div", { staticClass: "container my-5" }, [
+        _c("h1", { staticClass: "display-4 text-center" }, [_vm._v("About")]),
+        _vm._v(" "),
+        _vm._m(0),
+        _vm._v(" "),
+        _c("section", { staticClass: "pb-4", attrs: { id: "creator" } }, [
+          _c("h4", { staticClass: "mt-5" }, [_vm._v("Creator")]),
+          _vm._v(" "),
+          _c("p", { staticClass: "py-2" }, [_vm._v("I'm Paul Bingham")]),
+          _vm._v(" "),
+          _c("p", { staticClass: "py-2" }, [
+            _vm._v("Check out my Github profile and other links below:")
+          ]),
+          _vm._v(" "),
+          _vm._m(1),
+          _vm._v(" "),
+          _c("div", { staticClass: "icon-group" }, [
+            _c(
+              "svg",
+              {
+                staticClass: "pr-3",
+                attrs: {
+                  id: "logo",
+                  "data-name": "logo",
+                  viewBox: "0 0 120 120"
+                }
+              },
+              [
+                _c("circle", {
+                  staticClass: "cls-1",
+                  attrs: { cx: "60", cy: "60", r: "50" }
+                }),
+                _vm._v(" "),
+                _c("circle", {
+                  staticClass: "cls-2",
+                  attrs: { cx: "60", cy: "60", r: "57" }
+                }),
+                _vm._v(" "),
+                _c("path", {
+                  staticClass: "cls-3",
+                  attrs: {
+                    d:
+                      "M123.83,113.19H137c7,0,10.13,4,10.13,9.2,0,6.15-3.78,9.57-10,9.57H127.8v12.51h-4Zm4,15.05h8.75c3.84,0,6.53-1.27,6.53-5.77,0-3.55-2.13-5.57-6.53-5.57H127.8Z",
+                    transform: "translate(-83.5 -80.5)"
+                  }
+                }),
+                _vm._v(" "),
+                _c("path", {
+                  staticClass: "cls-3",
+                  attrs: {
+                    d:
+                      "M143.29,136.88h14.28c6.36,0,9.67,2.83,9.67,7.45a6.37,6.37,0,0,1-4.81,6.32c2.68.72,6,2.63,6,7.2,0,5.93-4.89,8.68-10.64,8.68H143.29Zm13.23,12.23c4.27,0,6.34-1.53,6.34-4.4,0-3.41-2.74-4.43-6.18-4.43h-9.24v8.83Zm-9.08,14h9.43c3.5,0,7.15-1.06,7.15-5.28,0-3.56-2.81-5.35-7.55-5.35h-9Z",
+                    transform: "translate(-83.5 -80.5)"
+                  }
+                })
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "a",
+              {
+                attrs: {
+                  href: "https://blissful-sinoussi-d8e11c.netlify.com/",
+                  target: "_blank",
+                  className: "contact-info"
+                }
+              },
+              [_vm._v("Portfolio")]
+            )
+          ]),
+          _vm._v(" "),
+          _vm._m(2)
+        ]),
+        _vm._v(" "),
+        _vm._m(3)
+      ]),
+      _vm._v(" "),
+      _c("Footer")
+    ],
     1
   )
 }
@@ -6745,10 +6837,10 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container my-5" }, [
-      _c("h1", { staticClass: "display-4 text-center" }, [_vm._v("About")]),
-      _vm._v(" "),
-      _c("section", { staticClass: "mb-5 pb-3", attrs: { id: "theApp" } }, [
+    return _c(
+      "section",
+      { staticClass: "mb-5 pb-3", attrs: { id: "theApp" } },
+      [
         _c("h4", { staticClass: "mt-5" }, [_vm._v("The App")]),
         _vm._v(" "),
         _c("p", { staticClass: "py-2" }, [
@@ -6766,147 +6858,146 @@ var staticRenderFns = [
         _c("p", { staticClass: "py-2" }, [
           _vm._v("Much love, and good luck with your studies!")
         ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "icon-group" }, [
+      _c("i", { staticClass: "fab fa-github fa-3x pr-3" }),
+      _vm._v(" "),
+      _c(
+        "a",
+        {
+          attrs: {
+            href: "https://github.com/Greenpaulo",
+            target: "_blank",
+            className: "contact-info"
+          }
+        },
+        [_vm._v("https://github.com/Greenpaulo")]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "icon-group" }, [
+      _c("i", { staticClass: "far fa-envelope fa-3x pr-3" }),
+      _vm._v(" "),
+      _c(
+        "a",
+        {
+          staticClass: "contact-info",
+          attrs: { href: "mailto:greenpaulo@yahoo.co.uk" }
+        },
+        [_vm._v("greenpaulo@yahoo.co.uk")]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("section", { staticClass: "pb-5", attrs: { id: "credits" } }, [
+      _c("h4", { staticClass: "mt-5" }, [_vm._v("Credits")]),
+      _vm._v(" "),
+      _c("p", { staticClass: "py-2" }, [
+        _vm._v(
+          'The Stages for this curriculum are based on Brad Traversy\'s annual "Web Development" youtube video. Brad is a great teacher and I highly recommend his channel!'
+        )
       ]),
       _vm._v(" "),
-      _c("section", { staticClass: "pb-4", attrs: { id: "creator" } }, [
-        _c("h4", { staticClass: "mt-5" }, [_vm._v("Creator")]),
-        _vm._v(" "),
-        _c("p", { staticClass: "py-2" }, [_vm._v("I'm Paul Bingham")]),
-        _vm._v(" "),
-        _c("p", { staticClass: "py-2" }, [
-          _vm._v("Check out my Github profile and other links below:")
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "icon-group" }, [
-          _c("i", { staticClass: "far fa-envelope fa-3x pr-3" }),
-          _vm._v(" "),
-          _c(
-            "a",
-            {
-              staticClass: "contact-info",
-              attrs: { href: "mailto:greenpaulo@yahoo.co.uk" }
-            },
-            [_vm._v("greenpaulo@yahoo.co.uk")]
-          )
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "icon-group" }, [
-          _c("i", { staticClass: "fab fa-github fa-3x pr-3" }),
-          _vm._v(" "),
-          _c(
-            "a",
-            {
-              attrs: {
-                href: "https://github.com/Greenpaulo",
-                target: "_blank",
-                className: "contact-info"
-              }
-            },
-            [_vm._v("https://github.com/Greenpaulo")]
-          )
-        ])
-      ]),
+      _c(
+        "a",
+        {
+          staticClass: "btn btn-info",
+          attrs: {
+            href: "https://www.youtube.com/watch?v=0pThnRneDjw",
+            target: "_blank"
+          }
+        },
+        [_vm._v("Watch Brad's Video")]
+      ),
       _vm._v(" "),
-      _c("section", { staticClass: "pb-5", attrs: { id: "credits" } }, [
-        _c("h4", { staticClass: "mt-5" }, [_vm._v("Credits")]),
+      _c("div", { staticClass: "icons-svgs" }, [
+        _c("h5", { staticClass: "mt-4 py-3" }, [_vm._v("Icons")]),
         _vm._v(" "),
-        _c("p", { staticClass: "py-2" }, [
-          _vm._v(
-            'The Stages for this curriculum are based on Brad Traversy\'s annual "Web Development" youtube video. Brad is a great teacher and I highly recommend his channel!'
-          )
-        ]),
-        _vm._v(" "),
-        _c(
-          "a",
-          {
-            staticClass: "btn btn-info",
-            attrs: {
-              href: "https://www.youtube.com/watch?v=0pThnRneDjw",
-              target: "_blank"
-            }
-          },
-          [_vm._v("Watch Brad's Video")]
-        ),
-        _vm._v(" "),
-        _c("div", { staticClass: "icons-svgs" }, [
-          _c("h5", { staticClass: "mt-4 py-3" }, [_vm._v("Icons")]),
+        _c("ul", [
+          _c("li", [
+            _c(
+              "a",
+              {
+                attrs: {
+                  href:
+                    "https://thenounproject.com/search/?q=thought&i=1752082",
+                  target: "_blank"
+                }
+              },
+              [_vm._v("'Thought'")]
+            ),
+            _vm._v(" icon by Scott Dunlap from the Noun Project.\n          ")
+          ]),
           _vm._v(" "),
-          _c("ul", [
-            _c("li", [
-              _c(
-                "a",
-                {
-                  attrs: {
-                    href:
-                      "https://thenounproject.com/search/?q=thought&i=1752082",
-                    target: "_blank"
-                  }
-                },
-                [_vm._v("'Thought'")]
-              ),
-              _vm._v(" icon by Scott Dunlap from the Noun Project.\n          ")
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c(
-                "a",
-                {
-                  attrs: {
-                    href:
-                      "https://thenounproject.com/search/?q=thought&i=1912229",
-                    target: "_blank"
-                  }
-                },
-                [_vm._v("'Thought'")]
-              ),
-              _vm._v(
-                " icon by Adrien Coquet from the Noun Project.\n          "
-              )
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c(
-                "a",
-                {
-                  attrs: {
-                    href:
-                      "https://thenounproject.com/search/?q=arrow&creator=127828&i=95077",
-                    target: "_blank"
-                  }
-                },
-                [_vm._v("'Arrow'")]
-              ),
-              _vm._v(" icon by Sarah JOY from the Noun Project.\n          ")
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c(
-                "a",
-                {
-                  attrs: {
-                    href:
-                      "https://thenounproject.com/search/?q=study&i=2773376",
-                    target: "_blank"
-                  }
-                },
-                [_vm._v("'Study'")]
-              ),
-              _vm._v(" icon by Vectorstall from the Noun Project\n          ")
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c(
-                "a",
-                {
-                  attrs: {
-                    href: "https://thenounproject.com/search/?q=job&i=2533034",
-                    target: "_blank"
-                  }
-                },
-                [_vm._v("'Job'")]
-              ),
-              _vm._v(" icon by Flatart from the Noun Project.\n          ")
-            ])
+          _c("li", [
+            _c(
+              "a",
+              {
+                attrs: {
+                  href:
+                    "https://thenounproject.com/search/?q=thought&i=1912229",
+                  target: "_blank"
+                }
+              },
+              [_vm._v("'Thought'")]
+            ),
+            _vm._v(" icon by Adrien Coquet from the Noun Project.\n          ")
+          ]),
+          _vm._v(" "),
+          _c("li", [
+            _c(
+              "a",
+              {
+                attrs: {
+                  href:
+                    "https://thenounproject.com/search/?q=arrow&creator=127828&i=95077",
+                  target: "_blank"
+                }
+              },
+              [_vm._v("'Arrow'")]
+            ),
+            _vm._v(" icon by Sarah JOY from the Noun Project.\n          ")
+          ]),
+          _vm._v(" "),
+          _c("li", [
+            _c(
+              "a",
+              {
+                attrs: {
+                  href: "https://thenounproject.com/search/?q=study&i=2773376",
+                  target: "_blank"
+                }
+              },
+              [_vm._v("'Study'")]
+            ),
+            _vm._v(" icon by Vectorstall from the Noun Project\n          ")
+          ]),
+          _vm._v(" "),
+          _c("li", [
+            _c(
+              "a",
+              {
+                attrs: {
+                  href: "https://thenounproject.com/search/?q=job&i=2533034",
+                  target: "_blank"
+                }
+              },
+              [_vm._v("'Job'")]
+            ),
+            _vm._v(" icon by Flatart from the Noun Project.\n          ")
           ])
         ])
       ])
@@ -7743,7 +7834,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "p-5", attrs: { id: "footer" } }, [
+  return _c("div", { attrs: { id: "footer" } }, [
     _c("h5", [_vm._v("JourneyToDev ©" + _vm._s(_vm.getYear))]),
     _vm._v(" "),
     _c(

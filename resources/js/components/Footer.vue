@@ -1,5 +1,5 @@
 <template>
-  <div id="footer" class="p-5">
+  <div id="footer">
     <h5>JourneyToDev &copy;{{getYear}}</h5>
     <h6><router-link to="about">Contact</router-link></h6>
   </div>
@@ -25,6 +25,11 @@ export default {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  padding: 2.7rem 1rem 2rem 1rem;
+
+  h5 {
+    margin-bottom: 0.8rem;
+  }
 
   a {
     color: darken(white, 15%);

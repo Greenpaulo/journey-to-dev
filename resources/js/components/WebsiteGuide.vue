@@ -42,7 +42,8 @@ export default {
 
 h3 {
   text-align: center;
-  margin: 3rem 0;
+  font-size: 2.7rem;
+  margin: 3rem 0 2.7rem 0;
 }
 
 .icon-text-group {
@@ -68,43 +69,17 @@ img {
   box-shadow: -5px 5px 10px -2px darken($body-bg, 2%);
 }
 
-  
-
-
-
-
-
-
-section#intro {
-  border-bottom: 2px solid rgb(202, 195, 195);
-  padding: 1rem 1rem 2rem 1rem;
-
-  .important {
-    font-weight: bolder;
-    color: lighten(rgb(202, 195, 195), 30%);
-  }
-}
-
 p {
   font-size: 1.4rem !important;
   line-height: 2.2rem;
-  // color: rgb(202, 195, 195);
   color: darken(white, 15%);
-}
-
-
-
-
-// Ipad and large phone landscape
-@media (max-width: 900px){
-
 }
 
 // Smartphones with larger screens
 @media(max-width: 742px) {
 
-  h1 {
-    margin-bottom: 0 !important;
+  #website-guide {
+    padding: 1rem 1rem 4rem 1rem;
   }
 
   .icon-text-group {
@@ -119,7 +94,6 @@ p {
   p {
   font-size: 1.2rem !important;
   line-height: 2.2rem;
-  // color: rgb(202, 195, 195);
   color: darken(white, 15%);
   padding: 0 !important;
   }
@@ -136,23 +110,9 @@ p {
   img {
     margin: 1rem ;
     max-height: 230px;
-    // max-width: 80vw;
-  }
 
-
-}
-
-// Smartphones with width 360px
-@media (max-width: 360px){
-
-  .card-header {
-
-    &>h3 {
-      font-size: 2rem;
-    }
-
-    h5 {
-      font-size: 1.2rem;
+    &[src="/images/screenshot-1.png"] {
+      margin-bottom: 2.8rem;
     }
   }
 }
