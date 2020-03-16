@@ -43,7 +43,7 @@ export default {
 h3 {
   text-align: center;
   font-size: 2.7rem;
-  margin: 3rem 0 2.7rem 0;
+  margin: 3.6rem 0 2.7rem 0;
 }
 
 .icon-text-group {
