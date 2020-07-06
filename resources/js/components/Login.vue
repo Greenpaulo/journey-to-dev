@@ -1,5 +1,5 @@
 <template>
-  <div class="container my-5 animated fadeIn">
+  <div class="container my-5 animated fadeIn" id="login-form">
     <form @submit.prevent="login">
       <fieldset>
       <h2 class="mt-2 mb-4">Login</h2>
@@ -52,4 +52,26 @@ export default {
 </script>
 
 <style>
+  #login-form {
+    width: 35%;
+  }
+
+  @media (max-width: 1500px) {
+    #login-form {
+    width: 40%;
+    }
+  }
+
+  @media (max-width: 1300px) {
+    #login-form {
+    width: 60%;
+    }
+  }
+
+  @media (max-width: 900px) {
+    #login-form {
+    width: 100%;
+    }
+  }
+
 </style>

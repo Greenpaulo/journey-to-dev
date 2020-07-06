@@ -1,5 +1,5 @@
 <template>
-  <div class="container my-5 animated fadeIn">
+  <div class="container my-5 animated fadeIn" id="register-form">
     <form @submit.prevent="registerSubmit">
       <fieldset>
       <h2 class="mt-2 mb-4">Register</h2>
@@ -82,4 +82,25 @@ export default {
 </script>
 
 <style>
+  #register-form {
+    width: 35%;
+  }
+
+  @media (max-width: 1500px) {
+    #register-form {
+    width: 40%;
+    }
+  }
+
+  @media (max-width: 1300px) {
+    #register-form {
+    width: 60%;
+    }
+  }
+
+  @media (max-width: 900px) {
+    #register-form {
+    width: 100%;
+    }
+  }
 </style>
