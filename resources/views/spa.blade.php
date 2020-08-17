@@ -5,7 +5,7 @@
       <meta name="csrf-token" content="{{csrf_token()}}">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="icon" href="/images/favicon.ico">
-      <link rel="stylesheet" href="/css/app.css">
+      <link rel="stylesheet" href="/css/app.min.css">
       <!-- Bootswatch -->
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/cyborg/bootstrap.min.css">
       <!-- Animate.css -->
@@ -28,8 +28,8 @@
     <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.1/gsap.min.js"></script>
     
-    {{-- <script src="{{ asset('js/app.js') }}"></script> --}}
-    <script src="https://pure-cove-33505.herokuapp.com/js/app.js"></script>
+    {{-- <script src="{{ asset('js/app.min.js') }}"></script> --}}
+    <script src="https://pure-cove-33505.herokuapp.com/js/app.min.js"></script>
   </body>
 
 </html>
