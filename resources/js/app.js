@@ -15,6 +15,12 @@ import About from './components/About';
 import Register from './components/Register';
 import Login from './components/Login';
 
+if (process.env.MIX_ENV_MODE === 'production') {
+    Vue.config.devtools = false;
+    Vue.config.debug = false;
+    Vue.config.silent = true; 
+}
+
 export const router = new VueRouter({
   mode: 'history',
   routes: [
