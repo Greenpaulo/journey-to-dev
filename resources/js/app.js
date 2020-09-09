@@ -67,6 +67,8 @@ export const router = new VueRouter({
   ],
 });
 
+// Vue.config.productionTip = false;
+
 const app = new Vue({
   el: '#app',
   components: { App },
