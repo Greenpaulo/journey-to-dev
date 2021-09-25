@@ -62,7 +62,7 @@
                         href="https://paul-bingham.netlify.app/"
                         target="_blank"
                         className="contact-info"
-                        >Portfolio</a
+                        >My Portfolio</a
                     >
                 </div>
                 <div class="icon-group">
